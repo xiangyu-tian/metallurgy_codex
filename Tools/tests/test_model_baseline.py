@@ -52,7 +52,18 @@ class BaselineTests(unittest.TestCase):
                 self.assertFalse(required - card.keys())
                 self.assertTrue(set(card["error_codes"]) <= set(STANDARD_ERROR_CODES))
 
-    def test_seventeen_nominal_golden_cases(self):
+    def test_materialized_golden_matrix_contains_100_to_200_cases(self):
+        self.assertEqual(self.benchmark["case_count"], len(self.benchmark["cases"]))
+        self.assertGreaterEqual(len(self.benchmark["cases"]), 100)
+        self.assertLessEqual(len(self.benchmark["cases"]), 200)
+        for case in self.benchmark["cases"]:
+            with self.subTest(case=case["case_id"]):
+                self.assertIn("reference", case)
+                self.assertIn("applicable_conditions", case)
+                self.assertIn("should_reject", case)
+                self.assertIn("tolerance", case)
+
+    def test_all_materialized_golden_cases_match_reference_values(self):
         covered = set()
         # 黄金基线必须绑定确定的数据快照，不能随本地数据库内容漂移。
         with patch.object(repo, "find_correlation", return_value=None), \

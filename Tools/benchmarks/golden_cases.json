@@ -1,23 +1,2696 @@
 {
   "baseline_version": "2.0.0",
-  "reference_policy": "解析解、守恒关系与仓库内注明来源的 NIST-JANAF/Shomate 数据",
+  "reference_policy": "Independent analytical equations with frozen IUPAC 2021 and NIST-JANAF/Shomate constants",
+  "case_count": 138,
+  "model_coverage": {
+    "A001": 12,
+    "A002": 10,
+    "A003": 10,
+    "A004": 8,
+    "A005": 6,
+    "B001": 8,
+    "B002": 6,
+    "B003": 8,
+    "B004": 6,
+    "B005": 6,
+    "B006": 6,
+    "B007": 6,
+    "B008": 8,
+    "B009": 8,
+    "B019": 10,
+    "C001": 10,
+    "C002": 10
+  },
   "cases": [
-    {"case_id":"G-A001-001","model_code":"A001","input":{"value":1000,"source_unit":"kg","target_unit":"t"},"expected":{"path":"value","value":1.0},"tolerance":{"abs":1e-12},"reference":"SI 质量单位解析换算"},
-    {"case_id":"G-A002-001","model_code":"A002","input":{"formula":"Fe2O3"},"expected":{"path":"total_atoms","value":5.0},"tolerance":{"abs":0},"reference":"化学式计量解析"},
-    {"case_id":"G-A003-001","model_code":"A003","input":{"formula":"Fe2O3"},"expected":{"path":"molar_mass","value":159.687},"tolerance":{"abs":0.001},"reference":"IUPAC 2021 原子量"},
-    {"case_id":"G-A004-001","model_code":"A004","input":{"compositions":{"Fe":94,"C":4,"Si":2}},"expected":{"path":"sum_after","value":1.0},"tolerance":{"abs":1e-12},"reference":"组成归一化恒等式"},
-    {"case_id":"G-A005-001","model_code":"A005","input":{"input_streams":[{"name":"feed","mass":100,"elements":{"Fe":0.98,"C":0.02}}],"output_streams":[{"name":"product","mass":100,"elements":{"Fe":0.98,"C":0.02}}]},"expected":{"path":"mass_closure_rate","value":1.0},"tolerance":{"abs":1e-12},"reference":"质量守恒解析算例"},
-    {"case_id":"G-B001-001","model_code":"B001","input":{"species":"Fe(s)","temperature":1000},"expected":{"path":"Cp","value":35.47286},"tolerance":{"abs":0.00001},"reference":"NIST Shomate 系数"},
-    {"case_id":"G-B002-001","model_code":"B002","input":{"species":"O2(g)","temperature":1000},"expected":{"path":"Cp","value":34.863903},"tolerance":{"abs":0.00001},"reference":"NIST Shomate 系数"},
-    {"case_id":"G-B003-001","model_code":"B003","input":{"species":"Fe(s)","temperature_start":298.15,"temperature_end":1000},"expected":{"path":"delta_H","value":21.3868},"tolerance":{"abs":0.0001},"reference":"Shomate 焓增量差"},
-    {"case_id":"G-B004-001","model_code":"B004","input":{"species":"Fe(s)","temperature_start":298.15,"temperature_end":1000},"expected":{"path":"delta_S","value":35.5333},"tolerance":{"abs":0.0001},"reference":"Shomate 熵函数差"},
-    {"case_id":"G-B005-001","model_code":"B005","input":{"species":"Fe(s)","temperature":1000},"expected":{"path":"G","value":-35.2788},"tolerance":{"abs":0.0001},"reference":"G=H-TS"},
-    {"case_id":"G-B006-001","model_code":"B006","input":{"reaction":"C + O₂ → CO₂","temperature":298.15},"expected":{"path":"delta_H","value":-393.5},"tolerance":{"abs":0.1},"reference":"NIST-JANAF"},
-    {"case_id":"G-B007-001","model_code":"B007","input":{"reaction":"C + O₂ → CO₂","temperature":298.15},"expected":{"path":"delta_S","value":2.9},"tolerance":{"abs":0.1},"reference":"NIST-JANAF"},
-    {"case_id":"G-B008-001","model_code":"B008","input":{"reaction":"C + O₂ → CO₂","temperature":1000},"expected":{"path":"delta_G","value":-396.4},"tolerance":{"abs":0.1},"reference":"ΔG=ΔH-TΔS"},
-    {"case_id":"G-B009-001","model_code":"B009","input":{"reaction":"C + O₂ → CO₂","temperature":1000},"expected":{"path":"log10_K","value":20.7066},"tolerance":{"abs":0.0001},"reference":"lnK=-ΔG/RT"},
-    {"case_id":"G-B019-001","model_code":"B019","input":{"overall_composition":0.4,"phase1_composition":0.2,"phase2_composition":0.8},"expected":{"path":"phase2_fraction","value":0.333333},"tolerance":{"abs":0.000001},"reference":"二元杠杆规则"},
-    {"case_id":"G-C001-001","model_code":"C001","input":{"A":10000000,"Ea":80000,"temperature":1000,"Ea_unit":"J/mol"},"expected":{"path":"k","value":662.3352579967},"tolerance":{"rel":1e-9},"reference":"Arrhenius 解析解"},
-    {"case_id":"G-C002-001","model_code":"C002","input":{"D0":0.0001,"Q":100000,"temperature":1000,"Q_unit":"J/mol"},"expected":{"path":"D","value":5.98e-10},"tolerance":{"abs":1e-12},"reference":"扩散 Arrhenius 解析解"}
+    {
+      "case_id": "G-A001-001",
+      "model_code": "A001",
+      "input": {
+        "value": 1000,
+        "source_unit": "kg",
+        "target_unit": "t"
+      },
+      "expected": {
+        "path": "value",
+        "value": 1
+      },
+      "tolerance": {
+        "abs": 1e-09
+      },
+      "reference": "SI/NIST unit conversion",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A001-002",
+      "model_code": "A001",
+      "input": {
+        "value": 2.5,
+        "source_unit": "t",
+        "target_unit": "kg"
+      },
+      "expected": {
+        "path": "value",
+        "value": 2500
+      },
+      "tolerance": {
+        "abs": 1e-09
+      },
+      "reference": "SI/NIST unit conversion",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A001-003",
+      "model_code": "A001",
+      "input": {
+        "value": 750,
+        "source_unit": "g",
+        "target_unit": "kg"
+      },
+      "expected": {
+        "path": "value",
+        "value": 0.75
+      },
+      "tolerance": {
+        "abs": 1e-09
+      },
+      "reference": "SI/NIST unit conversion",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A001-004",
+      "model_code": "A001",
+      "input": {
+        "value": 1,
+        "source_unit": "km",
+        "target_unit": "m"
+      },
+      "expected": {
+        "path": "value",
+        "value": 1000
+      },
+      "tolerance": {
+        "abs": 1e-09
+      },
+      "reference": "SI/NIST unit conversion",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A001-005",
+      "model_code": "A001",
+      "input": {
+        "value": 250,
+        "source_unit": "cm",
+        "target_unit": "m"
+      },
+      "expected": {
+        "path": "value",
+        "value": 2.5
+      },
+      "tolerance": {
+        "abs": 1e-09
+      },
+      "reference": "SI/NIST unit conversion",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A001-006",
+      "model_code": "A001",
+      "input": {
+        "value": 25,
+        "source_unit": "mm",
+        "target_unit": "cm"
+      },
+      "expected": {
+        "path": "value",
+        "value": 2.5
+      },
+      "tolerance": {
+        "abs": 1e-09
+      },
+      "reference": "SI/NIST unit conversion",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A001-007",
+      "model_code": "A001",
+      "input": {
+        "value": 1,
+        "source_unit": "MPa",
+        "target_unit": "kPa"
+      },
+      "expected": {
+        "path": "value",
+        "value": 1000
+      },
+      "tolerance": {
+        "abs": 1e-09
+      },
+      "reference": "SI/NIST unit conversion",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A001-008",
+      "model_code": "A001",
+      "input": {
+        "value": 2,
+        "source_unit": "bar",
+        "target_unit": "Pa"
+      },
+      "expected": {
+        "path": "value",
+        "value": 200000
+      },
+      "tolerance": {
+        "abs": 1e-09
+      },
+      "reference": "SI/NIST unit conversion",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A001-009",
+      "model_code": "A001",
+      "input": {
+        "value": 1,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "expected": {
+        "path": "value",
+        "value": 101325
+      },
+      "tolerance": {
+        "abs": 1e-09
+      },
+      "reference": "SI/NIST unit conversion",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A001-010",
+      "model_code": "A001",
+      "input": {
+        "value": 25,
+        "source_unit": "°C",
+        "target_unit": "K"
+      },
+      "expected": {
+        "path": "value",
+        "value": 298.15
+      },
+      "tolerance": {
+        "abs": 1e-09
+      },
+      "reference": "SI/NIST unit conversion",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A001-011",
+      "model_code": "A001",
+      "input": {
+        "value": 373.15,
+        "source_unit": "K",
+        "target_unit": "°C"
+      },
+      "expected": {
+        "path": "value",
+        "value": 100
+      },
+      "tolerance": {
+        "abs": 1e-09
+      },
+      "reference": "SI/NIST unit conversion",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A001-012",
+      "model_code": "A001",
+      "input": {
+        "value": 2,
+        "source_unit": "h",
+        "target_unit": "min"
+      },
+      "expected": {
+        "path": "value",
+        "value": 120
+      },
+      "tolerance": {
+        "abs": 1e-09
+      },
+      "reference": "SI/NIST unit conversion",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A002-001",
+      "model_code": "A002",
+      "input": {
+        "formula": "Fe2O3"
+      },
+      "expected": {
+        "path": "total_atoms",
+        "value": 5
+      },
+      "tolerance": {},
+      "reference": "Chemical stoichiometry",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A002-002",
+      "model_code": "A002",
+      "input": {
+        "formula": "Fe3O4"
+      },
+      "expected": {
+        "path": "total_atoms",
+        "value": 7
+      },
+      "tolerance": {},
+      "reference": "Chemical stoichiometry",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A002-003",
+      "model_code": "A002",
+      "input": {
+        "formula": "CaCO3"
+      },
+      "expected": {
+        "path": "total_atoms",
+        "value": 5
+      },
+      "tolerance": {},
+      "reference": "Chemical stoichiometry",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A002-004",
+      "model_code": "A002",
+      "input": {
+        "formula": "Al2O3"
+      },
+      "expected": {
+        "path": "total_atoms",
+        "value": 5
+      },
+      "tolerance": {},
+      "reference": "Chemical stoichiometry",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A002-005",
+      "model_code": "A002",
+      "input": {
+        "formula": "SiO2"
+      },
+      "expected": {
+        "path": "total_atoms",
+        "value": 3
+      },
+      "tolerance": {},
+      "reference": "Chemical stoichiometry",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A002-006",
+      "model_code": "A002",
+      "input": {
+        "formula": "MgO"
+      },
+      "expected": {
+        "path": "total_atoms",
+        "value": 2
+      },
+      "tolerance": {},
+      "reference": "Chemical stoichiometry",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A002-007",
+      "model_code": "A002",
+      "input": {
+        "formula": "MnO"
+      },
+      "expected": {
+        "path": "total_atoms",
+        "value": 2
+      },
+      "tolerance": {},
+      "reference": "Chemical stoichiometry",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A002-008",
+      "model_code": "A002",
+      "input": {
+        "formula": "Si3N4"
+      },
+      "expected": {
+        "path": "total_atoms",
+        "value": 7
+      },
+      "tolerance": {},
+      "reference": "Chemical stoichiometry",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A002-009",
+      "model_code": "A002",
+      "input": {
+        "formula": "Ca(OH)2"
+      },
+      "expected": {
+        "path": "total_atoms",
+        "value": 5
+      },
+      "tolerance": {},
+      "reference": "Chemical stoichiometry",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A002-010",
+      "model_code": "A002",
+      "input": {
+        "formula": "Fe2(SO4)3"
+      },
+      "expected": {
+        "path": "total_atoms",
+        "value": 17
+      },
+      "tolerance": {},
+      "reference": "Chemical stoichiometry",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A003-001",
+      "model_code": "A003",
+      "input": {
+        "formula": "Fe2O3"
+      },
+      "expected": {
+        "path": "molar_mass",
+        "value": 159.687
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "IUPAC 2021 atomic weights",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A003-002",
+      "model_code": "A003",
+      "input": {
+        "formula": "Fe3O4"
+      },
+      "expected": {
+        "path": "molar_mass",
+        "value": 231.531
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "IUPAC 2021 atomic weights",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A003-003",
+      "model_code": "A003",
+      "input": {
+        "formula": "CaCO3"
+      },
+      "expected": {
+        "path": "molar_mass",
+        "value": 100.086
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "IUPAC 2021 atomic weights",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A003-004",
+      "model_code": "A003",
+      "input": {
+        "formula": "Al2O3"
+      },
+      "expected": {
+        "path": "molar_mass",
+        "value": 101.961
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "IUPAC 2021 atomic weights",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A003-005",
+      "model_code": "A003",
+      "input": {
+        "formula": "SiO2"
+      },
+      "expected": {
+        "path": "molar_mass",
+        "value": 60.083
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "IUPAC 2021 atomic weights",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A003-006",
+      "model_code": "A003",
+      "input": {
+        "formula": "MgO"
+      },
+      "expected": {
+        "path": "molar_mass",
+        "value": 40.304
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "IUPAC 2021 atomic weights",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A003-007",
+      "model_code": "A003",
+      "input": {
+        "formula": "MnO"
+      },
+      "expected": {
+        "path": "molar_mass",
+        "value": 70.937
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "IUPAC 2021 atomic weights",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A003-008",
+      "model_code": "A003",
+      "input": {
+        "formula": "Si3N4"
+      },
+      "expected": {
+        "path": "molar_mass",
+        "value": 140.283
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "IUPAC 2021 atomic weights",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A003-009",
+      "model_code": "A003",
+      "input": {
+        "formula": "Ca(OH)2"
+      },
+      "expected": {
+        "path": "molar_mass",
+        "value": 74.092
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "IUPAC 2021 atomic weights",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A003-010",
+      "model_code": "A003",
+      "input": {
+        "formula": "Fe2(SO4)3"
+      },
+      "expected": {
+        "path": "molar_mass",
+        "value": 399.858
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "IUPAC 2021 atomic weights",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A004-001",
+      "model_code": "A004",
+      "input": {
+        "compositions": {
+          "Fe": 94,
+          "C": 4,
+          "Si": 2
+        }
+      },
+      "expected": {
+        "path": "normalized.Fe",
+        "value": 0.94
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Composition normalization identity",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A004-002",
+      "model_code": "A004",
+      "input": {
+        "compositions": {
+          "Fe": 0.98,
+          "C": 0.02
+        }
+      },
+      "expected": {
+        "path": "normalized.Fe",
+        "value": 0.98
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Composition normalization identity",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A004-003",
+      "model_code": "A004",
+      "input": {
+        "compositions": {
+          "CaO": 45,
+          "SiO2": 35,
+          "Al2O3": 20
+        }
+      },
+      "expected": {
+        "path": "normalized.CaO",
+        "value": 0.45
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Composition normalization identity",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A004-004",
+      "model_code": "A004",
+      "input": {
+        "compositions": {
+          "CO": 2,
+          "CO2": 3
+        }
+      },
+      "expected": {
+        "path": "normalized.CO",
+        "value": 0.4
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Composition normalization identity",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A004-005",
+      "model_code": "A004",
+      "input": {
+        "compositions": {
+          "FeO": 72,
+          "Fe2O3": 18,
+          "SiO2": 10
+        }
+      },
+      "expected": {
+        "path": "normalized.FeO",
+        "value": 0.72
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Composition normalization identity",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A004-006",
+      "model_code": "A004",
+      "input": {
+        "compositions": {
+          "Ni": 8,
+          "Cr": 18,
+          "Fe": 74
+        }
+      },
+      "expected": {
+        "path": "normalized.Ni",
+        "value": 0.08
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Composition normalization identity",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A004-007",
+      "model_code": "A004",
+      "input": {
+        "compositions": {
+          "C": 1,
+          "O": 4
+        }
+      },
+      "expected": {
+        "path": "normalized.C",
+        "value": 0.2
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Composition normalization identity",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A004-008",
+      "model_code": "A004",
+      "input": {
+        "compositions": {
+          "H2": 3,
+          "N2": 1
+        }
+      },
+      "expected": {
+        "path": "normalized.H2",
+        "value": 0.75
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Composition normalization identity",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A005-001",
+      "model_code": "A005",
+      "input": {
+        "input_streams": [
+          {
+            "name": "feed-1",
+            "mass": 10,
+            "elements": {
+              "Fe": 0.96,
+              "C": 0.03,
+              "Si": 0.01
+            }
+          }
+        ],
+        "output_streams": [
+          {
+            "name": "product-1",
+            "mass": 10,
+            "elements": {
+              "Fe": 0.96,
+              "C": 0.03,
+              "Si": 0.01
+            }
+          }
+        ]
+      },
+      "expected": {
+        "path": "mass_closure_rate",
+        "value": 1.0
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Mass conservation identity",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A005-002",
+      "model_code": "A005",
+      "input": {
+        "input_streams": [
+          {
+            "name": "feed-2",
+            "mass": 25,
+            "elements": {
+              "Fe": 0.96,
+              "C": 0.03,
+              "Si": 0.01
+            }
+          }
+        ],
+        "output_streams": [
+          {
+            "name": "product-2",
+            "mass": 25,
+            "elements": {
+              "Fe": 0.96,
+              "C": 0.03,
+              "Si": 0.01
+            }
+          }
+        ]
+      },
+      "expected": {
+        "path": "mass_closure_rate",
+        "value": 1.0
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Mass conservation identity",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A005-003",
+      "model_code": "A005",
+      "input": {
+        "input_streams": [
+          {
+            "name": "feed-3",
+            "mass": 50,
+            "elements": {
+              "Fe": 0.96,
+              "C": 0.03,
+              "Si": 0.01
+            }
+          }
+        ],
+        "output_streams": [
+          {
+            "name": "product-3",
+            "mass": 50,
+            "elements": {
+              "Fe": 0.96,
+              "C": 0.03,
+              "Si": 0.01
+            }
+          }
+        ]
+      },
+      "expected": {
+        "path": "mass_closure_rate",
+        "value": 1.0
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Mass conservation identity",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A005-004",
+      "model_code": "A005",
+      "input": {
+        "input_streams": [
+          {
+            "name": "feed-4",
+            "mass": 100,
+            "elements": {
+              "Fe": 0.96,
+              "C": 0.03,
+              "Si": 0.01
+            }
+          }
+        ],
+        "output_streams": [
+          {
+            "name": "product-4",
+            "mass": 100,
+            "elements": {
+              "Fe": 0.96,
+              "C": 0.03,
+              "Si": 0.01
+            }
+          }
+        ]
+      },
+      "expected": {
+        "path": "mass_closure_rate",
+        "value": 1.0
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Mass conservation identity",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A005-005",
+      "model_code": "A005",
+      "input": {
+        "input_streams": [
+          {
+            "name": "feed-5",
+            "mass": 250,
+            "elements": {
+              "Fe": 0.96,
+              "C": 0.03,
+              "Si": 0.01
+            }
+          }
+        ],
+        "output_streams": [
+          {
+            "name": "product-5",
+            "mass": 250,
+            "elements": {
+              "Fe": 0.96,
+              "C": 0.03,
+              "Si": 0.01
+            }
+          }
+        ]
+      },
+      "expected": {
+        "path": "mass_closure_rate",
+        "value": 1.0
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Mass conservation identity",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-A005-006",
+      "model_code": "A005",
+      "input": {
+        "input_streams": [
+          {
+            "name": "feed-6",
+            "mass": 1000,
+            "elements": {
+              "Fe": 0.96,
+              "C": 0.03,
+              "Si": 0.01
+            }
+          }
+        ],
+        "output_streams": [
+          {
+            "name": "product-6",
+            "mass": 1000,
+            "elements": {
+              "Fe": 0.96,
+              "C": 0.03,
+              "Si": 0.01
+            }
+          }
+        ]
+      },
+      "expected": {
+        "path": "mass_closure_rate",
+        "value": 1.0
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Mass conservation identity",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B001-001",
+      "model_code": "B001",
+      "input": {
+        "species": "Fe(s)",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "Cp",
+        "value": 24.483566
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
+      "reference": "NIST Shomate equation",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B001-002",
+      "model_code": "B001",
+      "input": {
+        "species": "Fe(s)",
+        "temperature": 700
+      },
+      "expected": {
+        "path": "Cp",
+        "value": 31.514222
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
+      "reference": "NIST Shomate equation",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B001-003",
+      "model_code": "B001",
+      "input": {
+        "species": "Fe(s)",
+        "temperature": 1000
+      },
+      "expected": {
+        "path": "Cp",
+        "value": 35.47286
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
+      "reference": "NIST Shomate equation",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B001-004",
+      "model_code": "B001",
+      "input": {
+        "species": "O2(g)",
+        "temperature": 500
+      },
+      "expected": {
+        "path": "Cp",
+        "value": 30.553946
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
+      "reference": "NIST Shomate equation",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B001-005",
+      "model_code": "B001",
+      "input": {
+        "species": "O2(g)",
+        "temperature": 1000
+      },
+      "expected": {
+        "path": "Cp",
+        "value": 34.863903
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
+      "reference": "NIST Shomate equation",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B001-006",
+      "model_code": "B001",
+      "input": {
+        "species": "CO2(g)",
+        "temperature": 600
+      },
+      "expected": {
+        "path": "Cp",
+        "value": 47.317934
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
+      "reference": "NIST Shomate equation",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B001-007",
+      "model_code": "B001",
+      "input": {
+        "species": "FeO(s)",
+        "temperature": 900
+      },
+      "expected": {
+        "path": "Cp",
+        "value": 54.726228
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
+      "reference": "NIST Shomate equation",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B001-008",
+      "model_code": "B001",
+      "input": {
+        "species": "CaO(s)",
+        "temperature": 1200
+      },
+      "expected": {
+        "path": "Cp",
+        "value": 53.939205
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
+      "reference": "NIST Shomate equation",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B002-001",
+      "model_code": "B002",
+      "input": {
+        "species": "Fe(s)",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "Cp",
+        "value": 24.483566
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
+      "reference": "NIST Shomate equation used as NASA approximation",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B002-002",
+      "model_code": "B002",
+      "input": {
+        "species": "Fe(s)",
+        "temperature": 700
+      },
+      "expected": {
+        "path": "Cp",
+        "value": 31.514222
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
+      "reference": "NIST Shomate equation used as NASA approximation",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B002-003",
+      "model_code": "B002",
+      "input": {
+        "species": "Fe(s)",
+        "temperature": 1000
+      },
+      "expected": {
+        "path": "Cp",
+        "value": 35.47286
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
+      "reference": "NIST Shomate equation used as NASA approximation",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B002-004",
+      "model_code": "B002",
+      "input": {
+        "species": "O2(g)",
+        "temperature": 500
+      },
+      "expected": {
+        "path": "Cp",
+        "value": 30.553946
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
+      "reference": "NIST Shomate equation used as NASA approximation",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B002-005",
+      "model_code": "B002",
+      "input": {
+        "species": "O2(g)",
+        "temperature": 1000
+      },
+      "expected": {
+        "path": "Cp",
+        "value": 34.863903
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
+      "reference": "NIST Shomate equation used as NASA approximation",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B002-006",
+      "model_code": "B002",
+      "input": {
+        "species": "CO2(g)",
+        "temperature": 600
+      },
+      "expected": {
+        "path": "Cp",
+        "value": 47.317934
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
+      "reference": "NIST Shomate equation used as NASA approximation",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B003-001",
+      "model_code": "B003",
+      "input": {
+        "species": "Fe(s)",
+        "temperature_start": 298.15,
+        "temperature_end": 600
+      },
+      "expected": {
+        "path": "delta_H",
+        "value": 8.236
+      },
+      "tolerance": {
+        "abs": 0.002
+      },
+      "reference": "Analytical Shomate enthalpy difference",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B003-002",
+      "model_code": "B003",
+      "input": {
+        "species": "Fe(s)",
+        "temperature_start": 400,
+        "temperature_end": 1000
+      },
+      "expected": {
+        "path": "delta_H",
+        "value": 18.7941
+      },
+      "tolerance": {
+        "abs": 0.002
+      },
+      "reference": "Analytical Shomate enthalpy difference",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B003-003",
+      "model_code": "B003",
+      "input": {
+        "species": "O2(g)",
+        "temperature_start": 298.15,
+        "temperature_end": 800
+      },
+      "expected": {
+        "path": "delta_H",
+        "value": 15.3626
+      },
+      "tolerance": {
+        "abs": 0.002
+      },
+      "reference": "Analytical Shomate enthalpy difference",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B003-004",
+      "model_code": "B003",
+      "input": {
+        "species": "O2(g)",
+        "temperature_start": 500,
+        "temperature_end": 1500
+      },
+      "expected": {
+        "path": "delta_H",
+        "value": 34.4814
+      },
+      "tolerance": {
+        "abs": 0.002
+      },
+      "reference": "Analytical Shomate enthalpy difference",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B003-005",
+      "model_code": "B003",
+      "input": {
+        "species": "CO2(g)",
+        "temperature_start": 298.15,
+        "temperature_end": 700
+      },
+      "expected": {
+        "path": "delta_H",
+        "value": 17.757
+      },
+      "tolerance": {
+        "abs": 0.002
+      },
+      "reference": "Analytical Shomate enthalpy difference",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B003-006",
+      "model_code": "B003",
+      "input": {
+        "species": "FeO(s)",
+        "temperature_start": 400,
+        "temperature_end": 1200
+      },
+      "expected": {
+        "path": "delta_H",
+        "value": 42.4365
+      },
+      "tolerance": {
+        "abs": 0.002
+      },
+      "reference": "Analytical Shomate enthalpy difference",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B003-007",
+      "model_code": "B003",
+      "input": {
+        "species": "CaO(s)",
+        "temperature_start": 500,
+        "temperature_end": 1500
+      },
+      "expected": {
+        "path": "delta_H",
+        "value": 52.5154
+      },
+      "tolerance": {
+        "abs": 0.002
+      },
+      "reference": "Analytical Shomate enthalpy difference",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B003-008",
+      "model_code": "B003",
+      "input": {
+        "species": "Al2O3(s,alpha)",
+        "temperature_start": 600,
+        "temperature_end": 1800
+      },
+      "expected": {
+        "path": "delta_H",
+        "value": 152.3998
+      },
+      "tolerance": {
+        "abs": 0.002
+      },
+      "reference": "Analytical Shomate enthalpy difference",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B004-001",
+      "model_code": "B004",
+      "input": {
+        "species": "Fe(s)",
+        "temperature_start": 298.15,
+        "temperature_end": 600
+      },
+      "expected": {
+        "path": "delta_S",
+        "value": 18.8595
+      },
+      "tolerance": {
+        "abs": 0.0002
+      },
+      "reference": "Analytical Shomate entropy difference",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B004-002",
+      "model_code": "B004",
+      "input": {
+        "species": "Fe(s)",
+        "temperature_start": 400,
+        "temperature_end": 1000
+      },
+      "expected": {
+        "path": "delta_S",
+        "value": 28.0664
+      },
+      "tolerance": {
+        "abs": 0.0002
+      },
+      "reference": "Analytical Shomate entropy difference",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B004-003",
+      "model_code": "B004",
+      "input": {
+        "species": "O2(g)",
+        "temperature_start": 298.15,
+        "temperature_end": 800
+      },
+      "expected": {
+        "path": "delta_S",
+        "value": 29.4818
+      },
+      "tolerance": {
+        "abs": 0.0002
+      },
+      "reference": "Analytical Shomate entropy difference",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B004-004",
+      "model_code": "B004",
+      "input": {
+        "species": "O2(g)",
+        "temperature_start": 500,
+        "temperature_end": 1500
+      },
+      "expected": {
+        "path": "delta_S",
+        "value": 37.3144
+      },
+      "tolerance": {
+        "abs": 0.0002
+      },
+      "reference": "Analytical Shomate entropy difference",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B004-005",
+      "model_code": "B004",
+      "input": {
+        "species": "CO2(g)",
+        "temperature_start": 298.15,
+        "temperature_end": 700
+      },
+      "expected": {
+        "path": "delta_S",
+        "value": 36.9642
+      },
+      "tolerance": {
+        "abs": 0.0002
+      },
+      "reference": "Analytical Shomate entropy difference",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B004-006",
+      "model_code": "B004",
+      "input": {
+        "species": "FeO(s)",
+        "temperature_start": 400,
+        "temperature_end": 1200
+      },
+      "expected": {
+        "path": "delta_S",
+        "value": 57.2024
+      },
+      "tolerance": {
+        "abs": 0.0002
+      },
+      "reference": "Analytical Shomate entropy difference",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B005-001",
+      "model_code": "B005",
+      "input": {
+        "species": "Fe(s)",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "G",
+        "value": -2.1051
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "G = H - TS using NIST Shomate properties",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B005-002",
+      "model_code": "B005",
+      "input": {
+        "species": "Fe(s)",
+        "temperature": 700
+      },
+      "expected": {
+        "path": "G",
+        "value": -18.2057
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "G = H - TS using NIST Shomate properties",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B005-003",
+      "model_code": "B005",
+      "input": {
+        "species": "Fe(s)",
+        "temperature": 1000
+      },
+      "expected": {
+        "path": "G",
+        "value": -35.2788
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "G = H - TS using NIST Shomate properties",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B005-004",
+      "model_code": "B005",
+      "input": {
+        "species": "O2(g)",
+        "temperature": 500
+      },
+      "expected": {
+        "path": "G",
+        "value": -104.2592
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "G = H - TS using NIST Shomate properties",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B005-005",
+      "model_code": "B005",
+      "input": {
+        "species": "O2(g)",
+        "temperature": 1000
+      },
+      "expected": {
+        "path": "G",
+        "value": -220.8752
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "G = H - TS using NIST Shomate properties",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B005-006",
+      "model_code": "B005",
+      "input": {
+        "species": "CO2(g)",
+        "temperature": 600
+      },
+      "expected": {
+        "path": "G",
+        "value": -133.0637
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "G = H - TS using NIST Shomate properties",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B006-001",
+      "model_code": "B006",
+      "input": {
+        "reaction": "C + O₂ → CO₂",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "delta_H",
+        "value": -393.5
+      },
+      "tolerance": {
+        "abs": 0.1
+      },
+      "reference": "NIST-JANAF reaction enthalpy",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B007-001",
+      "model_code": "B007",
+      "input": {
+        "reaction": "C + O₂ → CO₂",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "delta_S",
+        "value": 2.9
+      },
+      "tolerance": {
+        "abs": 0.1
+      },
+      "reference": "NIST-JANAF reaction entropy",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B006-002",
+      "model_code": "B006",
+      "input": {
+        "reaction": "2C + O₂ → 2CO",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "delta_H",
+        "value": -221.0
+      },
+      "tolerance": {
+        "abs": 0.1
+      },
+      "reference": "NIST-JANAF reaction enthalpy",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B007-002",
+      "model_code": "B007",
+      "input": {
+        "reaction": "2C + O₂ → 2CO",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "delta_S",
+        "value": 179.2
+      },
+      "tolerance": {
+        "abs": 0.1
+      },
+      "reference": "NIST-JANAF reaction entropy",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B006-003",
+      "model_code": "B006",
+      "input": {
+        "reaction": "FeO + C → Fe + CO",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "delta_H",
+        "value": 158.0
+      },
+      "tolerance": {
+        "abs": 0.1
+      },
+      "reference": "NIST-JANAF reaction enthalpy",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B007-003",
+      "model_code": "B007",
+      "input": {
+        "reaction": "FeO + C → Fe + CO",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "delta_S",
+        "value": 150.0
+      },
+      "tolerance": {
+        "abs": 0.1
+      },
+      "reference": "NIST-JANAF reaction entropy",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B006-004",
+      "model_code": "B006",
+      "input": {
+        "reaction": "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "delta_H",
+        "value": -24.7
+      },
+      "tolerance": {
+        "abs": 0.1
+      },
+      "reference": "NIST-JANAF reaction enthalpy",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B007-004",
+      "model_code": "B007",
+      "input": {
+        "reaction": "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "delta_S",
+        "value": 15.6
+      },
+      "tolerance": {
+        "abs": 0.1
+      },
+      "reference": "NIST-JANAF reaction entropy",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B006-005",
+      "model_code": "B006",
+      "input": {
+        "reaction": "Fe₃O₄ + 4CO → 3Fe + 4CO₂",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "delta_H",
+        "value": -14.5
+      },
+      "tolerance": {
+        "abs": 0.1
+      },
+      "reference": "NIST-JANAF reaction enthalpy",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B007-005",
+      "model_code": "B007",
+      "input": {
+        "reaction": "Fe₃O₄ + 4CO → 3Fe + 4CO₂",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "delta_S",
+        "value": 10.2
+      },
+      "tolerance": {
+        "abs": 0.1
+      },
+      "reference": "NIST-JANAF reaction entropy",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B006-006",
+      "model_code": "B006",
+      "input": {
+        "reaction": "CaCO₃ → CaO + CO₂",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "delta_H",
+        "value": 178.3
+      },
+      "tolerance": {
+        "abs": 0.1
+      },
+      "reference": "NIST-JANAF reaction enthalpy",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B007-006",
+      "model_code": "B007",
+      "input": {
+        "reaction": "CaCO₃ → CaO + CO₂",
+        "temperature": 298.15
+      },
+      "expected": {
+        "path": "delta_S",
+        "value": 160.6
+      },
+      "tolerance": {
+        "abs": 0.1
+      },
+      "reference": "NIST-JANAF reaction entropy",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B008-001",
+      "model_code": "B008",
+      "input": {
+        "reaction": "C + O₂ → CO₂",
+        "temperature": 500
+      },
+      "expected": {
+        "path": "delta_G",
+        "value": -394.95
+      },
+      "tolerance": {
+        "abs": 0.01
+      },
+      "reference": "Delta G = Delta H - T Delta S",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B009-001",
+      "model_code": "B009",
+      "input": {
+        "reaction": "C + O₂ → CO₂",
+        "temperature": 500
+      },
+      "expected": {
+        "path": "log10_K",
+        "value": 41.2616
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "ln K = -Delta G/(RT)",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B008-002",
+      "model_code": "B008",
+      "input": {
+        "reaction": "C + O₂ → CO₂",
+        "temperature": 1000
+      },
+      "expected": {
+        "path": "delta_G",
+        "value": -396.4
+      },
+      "tolerance": {
+        "abs": 0.01
+      },
+      "reference": "Delta G = Delta H - T Delta S",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B009-002",
+      "model_code": "B009",
+      "input": {
+        "reaction": "C + O₂ → CO₂",
+        "temperature": 1000
+      },
+      "expected": {
+        "path": "log10_K",
+        "value": 20.7066
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "ln K = -Delta G/(RT)",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B008-003",
+      "model_code": "B008",
+      "input": {
+        "reaction": "2C + O₂ → 2CO",
+        "temperature": 800
+      },
+      "expected": {
+        "path": "delta_G",
+        "value": -364.36
+      },
+      "tolerance": {
+        "abs": 0.01
+      },
+      "reference": "Delta G = Delta H - T Delta S",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B009-003",
+      "model_code": "B009",
+      "input": {
+        "reaction": "2C + O₂ → 2CO",
+        "temperature": 800
+      },
+      "expected": {
+        "path": "log10_K",
+        "value": 23.7911
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "ln K = -Delta G/(RT)",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B008-004",
+      "model_code": "B008",
+      "input": {
+        "reaction": "FeO + C → Fe + CO",
+        "temperature": 1200
+      },
+      "expected": {
+        "path": "delta_G",
+        "value": -22.0
+      },
+      "tolerance": {
+        "abs": 0.01
+      },
+      "reference": "Delta G = Delta H - T Delta S",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B009-004",
+      "model_code": "B009",
+      "input": {
+        "reaction": "FeO + C → Fe + CO",
+        "temperature": 1200
+      },
+      "expected": {
+        "path": "log10_K",
+        "value": 0.9577
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "ln K = -Delta G/(RT)",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B008-005",
+      "model_code": "B008",
+      "input": {
+        "reaction": "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
+        "temperature": 900
+      },
+      "expected": {
+        "path": "delta_G",
+        "value": -38.74
+      },
+      "tolerance": {
+        "abs": 0.01
+      },
+      "reference": "Delta G = Delta H - T Delta S",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B009-005",
+      "model_code": "B009",
+      "input": {
+        "reaction": "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
+        "temperature": 900
+      },
+      "expected": {
+        "path": "log10_K",
+        "value": 2.2485
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "ln K = -Delta G/(RT)",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B008-006",
+      "model_code": "B008",
+      "input": {
+        "reaction": "Fe₃O₄ + 4CO → 3Fe + 4CO₂",
+        "temperature": 1100
+      },
+      "expected": {
+        "path": "delta_G",
+        "value": -25.72
+      },
+      "tolerance": {
+        "abs": 0.01
+      },
+      "reference": "Delta G = Delta H - T Delta S",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B009-006",
+      "model_code": "B009",
+      "input": {
+        "reaction": "Fe₃O₄ + 4CO → 3Fe + 4CO₂",
+        "temperature": 1100
+      },
+      "expected": {
+        "path": "log10_K",
+        "value": 1.2214
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "ln K = -Delta G/(RT)",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B008-007",
+      "model_code": "B008",
+      "input": {
+        "reaction": "CaCO₃ → CaO + CO₂",
+        "temperature": 900
+      },
+      "expected": {
+        "path": "delta_G",
+        "value": 33.76
+      },
+      "tolerance": {
+        "abs": 0.01
+      },
+      "reference": "Delta G = Delta H - T Delta S",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B009-007",
+      "model_code": "B009",
+      "input": {
+        "reaction": "CaCO₃ → CaO + CO₂",
+        "temperature": 900
+      },
+      "expected": {
+        "path": "log10_K",
+        "value": -1.9595
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "ln K = -Delta G/(RT)",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B008-008",
+      "model_code": "B008",
+      "input": {
+        "reaction": "CaCO₃ → CaO + CO₂",
+        "temperature": 1200
+      },
+      "expected": {
+        "path": "delta_G",
+        "value": -14.42
+      },
+      "tolerance": {
+        "abs": 0.01
+      },
+      "reference": "Delta G = Delta H - T Delta S",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B009-008",
+      "model_code": "B009",
+      "input": {
+        "reaction": "CaCO₃ → CaO + CO₂",
+        "temperature": 1200
+      },
+      "expected": {
+        "path": "log10_K",
+        "value": 0.6277
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
+      "reference": "ln K = -Delta G/(RT)",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B019-001",
+      "model_code": "B019",
+      "input": {
+        "overall_composition": 0.2,
+        "phase1_composition": 0.1,
+        "phase2_composition": 0.5
+      },
+      "expected": {
+        "path": "phase2_fraction",
+        "value": 0.25
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Binary lever rule",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B019-002",
+      "model_code": "B019",
+      "input": {
+        "overall_composition": 0.3,
+        "phase1_composition": 0.1,
+        "phase2_composition": 0.5
+      },
+      "expected": {
+        "path": "phase2_fraction",
+        "value": 0.5
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Binary lever rule",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B019-003",
+      "model_code": "B019",
+      "input": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.8
+      },
+      "expected": {
+        "path": "phase2_fraction",
+        "value": 0.333333
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Binary lever rule",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B019-004",
+      "model_code": "B019",
+      "input": {
+        "overall_composition": 0.5,
+        "phase1_composition": 0.0,
+        "phase2_composition": 1.0
+      },
+      "expected": {
+        "path": "phase2_fraction",
+        "value": 0.5
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Binary lever rule",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B019-005",
+      "model_code": "B019",
+      "input": {
+        "overall_composition": 0.6,
+        "phase1_composition": 0.4,
+        "phase2_composition": 0.9
+      },
+      "expected": {
+        "path": "phase2_fraction",
+        "value": 0.4
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Binary lever rule",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B019-006",
+      "model_code": "B019",
+      "input": {
+        "overall_composition": 0.7,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.8
+      },
+      "expected": {
+        "path": "phase2_fraction",
+        "value": 0.833333
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Binary lever rule",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B019-007",
+      "model_code": "B019",
+      "input": {
+        "overall_composition": 10,
+        "phase1_composition": 5,
+        "phase2_composition": 25
+      },
+      "expected": {
+        "path": "phase2_fraction",
+        "value": 0.25
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Binary lever rule",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B019-008",
+      "model_code": "B019",
+      "input": {
+        "overall_composition": 25,
+        "phase1_composition": 10,
+        "phase2_composition": 40
+      },
+      "expected": {
+        "path": "phase2_fraction",
+        "value": 0.5
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Binary lever rule",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B019-009",
+      "model_code": "B019",
+      "input": {
+        "overall_composition": 60,
+        "phase1_composition": 20,
+        "phase2_composition": 80
+      },
+      "expected": {
+        "path": "phase2_fraction",
+        "value": 0.666667
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Binary lever rule",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-B019-010",
+      "model_code": "B019",
+      "input": {
+        "overall_composition": 90,
+        "phase1_composition": 85,
+        "phase2_composition": 95
+      },
+      "expected": {
+        "path": "phase2_fraction",
+        "value": 0.5
+      },
+      "tolerance": {
+        "abs": 1e-06
+      },
+      "reference": "Binary lever rule",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C001-001",
+      "model_code": "C001",
+      "input": {
+        "A": 10000000.0,
+        "Ea": 80000,
+        "temperature": 800,
+        "Ea_unit": "J/mol"
+      },
+      "expected": {
+        "path": "k",
+        "value": 59.7512978529
+      },
+      "tolerance": {
+        "abs": 1e-10,
+        "rel": 1e-09
+      },
+      "reference": "Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C001-002",
+      "model_code": "C001",
+      "input": {
+        "A": 10000000.0,
+        "Ea": 80000,
+        "temperature": 1000,
+        "Ea_unit": "J/mol"
+      },
+      "expected": {
+        "path": "k",
+        "value": 662.3352579967
+      },
+      "tolerance": {
+        "abs": 1e-10,
+        "rel": 1e-09
+      },
+      "reference": "Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C001-003",
+      "model_code": "C001",
+      "input": {
+        "A": 2000000000.0,
+        "Ea": 120,
+        "temperature": 1200,
+        "Ea_unit": "kJ/mol"
+      },
+      "expected": {
+        "path": "k",
+        "value": 11950.2595705882
+      },
+      "tolerance": {
+        "abs": 1e-10,
+        "rel": 1e-09
+      },
+      "reference": "Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C001-004",
+      "model_code": "C001",
+      "input": {
+        "A": 5000000.0,
+        "Ea": 60,
+        "temperature": 900,
+        "Ea_unit": "kJ/mol"
+      },
+      "expected": {
+        "path": "k",
+        "value": 1646.3982646771
+      },
+      "tolerance": {
+        "abs": 1e-10,
+        "rel": 1e-09
+      },
+      "reference": "Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C001-005",
+      "model_code": "C001",
+      "input": {
+        "A": 1000000000000.0,
+        "Ea": 180000,
+        "temperature": 1500,
+        "Ea_unit": "J/mol"
+      },
+      "expected": {
+        "path": "k",
+        "value": 539034.8093365128
+      },
+      "tolerance": {
+        "abs": 1e-10,
+        "rel": 1e-09
+      },
+      "reference": "Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C001-006",
+      "model_code": "C001",
+      "input": {
+        "A": 300000000.0,
+        "Ea": 95,
+        "temperature": 1100,
+        "Ea_unit": "kJ/mol"
+      },
+      "expected": {
+        "path": "k",
+        "value": 9242.402315239
+      },
+      "tolerance": {
+        "abs": 1e-10,
+        "rel": 1e-09
+      },
+      "reference": "Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C001-007",
+      "model_code": "C001",
+      "input": {
+        "A": 900000.0,
+        "Ea": 40,
+        "temperature": 700,
+        "Ea_unit": "kJ/mol"
+      },
+      "expected": {
+        "path": "k",
+        "value": 931.7472808449
+      },
+      "tolerance": {
+        "abs": 1e-10,
+        "rel": 1e-09
+      },
+      "reference": "Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C001-008",
+      "model_code": "C001",
+      "input": {
+        "A": 70000000000.0,
+        "Ea": 140000,
+        "temperature": 1300,
+        "Ea_unit": "J/mol"
+      },
+      "expected": {
+        "path": "k",
+        "value": 165815.8142370114
+      },
+      "tolerance": {
+        "abs": 1e-10,
+        "rel": 1e-09
+      },
+      "reference": "Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C001-009",
+      "model_code": "C001",
+      "input": {
+        "A": 40000.0,
+        "Ea": 25,
+        "temperature": 600,
+        "Ea_unit": "kJ/mol"
+      },
+      "expected": {
+        "path": "k",
+        "value": 266.4023496181
+      },
+      "tolerance": {
+        "abs": 1e-10,
+        "rel": 1e-09
+      },
+      "reference": "Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C001-010",
+      "model_code": "C001",
+      "input": {
+        "A": 600000000000.0,
+        "Ea": 200,
+        "temperature": 1800,
+        "Ea_unit": "kJ/mol"
+      },
+      "expected": {
+        "path": "k",
+        "value": 942090.7563891327
+      },
+      "tolerance": {
+        "abs": 1e-10,
+        "rel": 1e-09
+      },
+      "reference": "Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C002-001",
+      "model_code": "C002",
+      "input": {
+        "D0": 0.0001,
+        "Q": 40000,
+        "temperature": 800,
+        "Q_unit": "J/mol"
+      },
+      "expected": {
+        "path": "D",
+        "value": 2.44441e-07
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Diffusion Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C002-002",
+      "model_code": "C002",
+      "input": {
+        "D0": 0.0001,
+        "Q": 60000,
+        "temperature": 1000,
+        "Q_unit": "J/mol"
+      },
+      "expected": {
+        "path": "D",
+        "value": 7.3419e-08
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Diffusion Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C002-003",
+      "model_code": "C002",
+      "input": {
+        "D0": 2e-05,
+        "Q": 50000,
+        "temperature": 1200,
+        "Q_unit": "J/mol"
+      },
+      "expected": {
+        "path": "D",
+        "value": 1.33201e-07
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Diffusion Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C002-004",
+      "model_code": "C002",
+      "input": {
+        "D0": 0.0005,
+        "Q": 80000,
+        "temperature": 1400,
+        "Q_unit": "J/mol"
+      },
+      "expected": {
+        "path": "D",
+        "value": 5.17637e-07
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Diffusion Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C002-005",
+      "model_code": "C002",
+      "input": {
+        "D0": 0.001,
+        "Q": 90000,
+        "temperature": 1600,
+        "Q_unit": "J/mol"
+      },
+      "expected": {
+        "path": "D",
+        "value": 1.152644e-06
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Diffusion Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C002-006",
+      "model_code": "C002",
+      "input": {
+        "D0": 8e-05,
+        "Q": 30000,
+        "temperature": 700,
+        "Q_unit": "J/mol"
+      },
+      "expected": {
+        "path": "D",
+        "value": 4.61723e-07
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Diffusion Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C002-007",
+      "model_code": "C002",
+      "input": {
+        "D0": 3e-06,
+        "Q": 45000,
+        "temperature": 900,
+        "Q_unit": "J/mol"
+      },
+      "expected": {
+        "path": "D",
+        "value": 7.333e-09
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Diffusion Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C002-008",
+      "model_code": "C002",
+      "input": {
+        "D0": 0.0002,
+        "Q": 70000,
+        "temperature": 1300,
+        "Q_unit": "J/mol"
+      },
+      "expected": {
+        "path": "D",
+        "value": 3.07818e-07
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Diffusion Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C002-009",
+      "model_code": "C002",
+      "input": {
+        "D0": 7e-05,
+        "Q": 55000,
+        "temperature": 1100,
+        "Q_unit": "J/mol"
+      },
+      "expected": {
+        "path": "D",
+        "value": 1.71109e-07
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Diffusion Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    },
+    {
+      "case_id": "G-C002-010",
+      "model_code": "C002",
+      "input": {
+        "D0": 0.0009,
+        "Q": 100000,
+        "temperature": 1800,
+        "Q_unit": "J/mol"
+      },
+      "expected": {
+        "path": "D",
+        "value": 1.127751e-06
+      },
+      "tolerance": {
+        "abs": 1e-12
+      },
+      "reference": "Diffusion Arrhenius analytical solution",
+      "applicable_conditions": "输入位于模型卡声明的适用域内",
+      "should_reject": false
+    }
   ]
 }
