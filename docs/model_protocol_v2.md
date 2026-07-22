@@ -135,6 +135,18 @@
 
 当前内置执行器是可复现的确定性编排基线，用于验证数据、接口和评分闭环；接入外部大模型时保持数据集和指标契约不变，只替换编排器名称、Prompt 版本及其调用决策。
 
+## 大模型服务配置
+
+现有 Node 后端聊天接口统一使用 DeepSeek 的 OpenAI 兼容格式，覆盖主聊天、小模型共享对话和独立工具对话三个入口。复制 `backend/.env.example` 为本机 `backend/.env` 后配置：
+
+- `DEEPSEEK_API_KEY`：仅保存在被 Git 忽略的本机文件；
+- `DEEPSEEK_OPENAI_BASE_URL`：Node 后端实际调用地址；
+- `DEEPSEEK_ANTHROPIC_BASE_URL`：供 Anthropic 兼容客户端使用；
+- `DEEPSEEK_MODEL`：当前实验模型；
+- `DEEPSEEK_THINKING`：`enabled` 或 `disabled`。
+
+`GET /api/health` 只返回提供商、模型、兼容地址和“密钥是否已配置”，不会返回密钥内容。聊天响应的 `data.llm` 保存实际模型、响应编号和 Token 用量，便于后续实验追踪。工具调用基准批处理目前仍使用确定性编排器；下一步再将同一 DeepSeek 客户端接入批量实验层。
+
 ## 轨迹存储配置
 
 数据库连接使用 libpq 标准环境变量：`PGHOST`、`PGPORT`、`PGDATABASE`、`PGUSER`、`PGPASSWORD`，也支持 `DATABASE_URL` 或 `POSTGRES_DSN`。源码不内置服务器地址。

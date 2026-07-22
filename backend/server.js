@@ -7,6 +7,8 @@ const path = require('path');
 const fs = require('fs');
 const os = require('os');
 const axios = require('axios');
+require('dotenv').config({ path: path.join(__dirname, '.env') });
+const { createDeepSeekClient } = require('./llm_client');
 
 // ========== 小模型注册表（大小模型协同） ==========
 const smallModelRegistry = [
@@ -422,35 +424,17 @@ async function callSmallModelChat(modelId, message) {
   const prompt = toolSystemPrompts[modelId];
   if (!prompt) throw new Error(`未知小模型: ${modelId}`);
 
-  const response = await axios.post(
-    QWEN_API_URL,
-    {
-      model: 'qwen-plus',
-      input: {
-        messages: [
-          { role: 'system', content: prompt },
-          { role: 'user', content: message }
-        ]
-      },
-      parameters: {
-        result_format: 'message',
-        temperature: 0.6,
-        top_p: 0.8,
-        repetition_penalty: 1.05,
-        max_tokens: 1024
-      }
-    },
-    {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${DASHSCOPE_API_KEY}`,
-        'X-DashScope-SSE': 'disable'
-      },
-      timeout: 30000
-    }
-  );
+  const response = await deepSeekClient.chat([
+    { role: 'system', content: prompt },
+    { role: 'user', content: message },
+  ], {
+    temperature: 0.6,
+    topP: 0.8,
+    maxTokens: 1024,
+    timeoutMs: 30000,
+  });
 
-  return response.data.output.choices[0].message.content;
+  return response.message.content;
 }
 
 /**
@@ -502,9 +486,8 @@ console.log('🚀 启动冶金平台', isServer ? '服务器版' : '本地开发
 
 const app = express();
 
-// ========== 通义千问API配置 ==========
-const DASHSCOPE_API_KEY = process.env.DASHSCOPE_API_KEY;
-const QWEN_API_URL = 'https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation';
+// ========== DeepSeek API配置 ==========
+const deepSeekClient = createDeepSeekClient();
 
 // ========== 静态文件路径配置 ==========
 let publicPath;
@@ -701,7 +684,8 @@ apiRouter.get('/health', (req, res) => {
         code: 200,
         status: 'ok',
         timestamp: new Date().toISOString(),
-        message: '服务器运行正常'
+        message: '服务器运行正常',
+        llm: deepSeekClient.configuration()
     });
 });
 
@@ -769,37 +753,15 @@ apiRouter.post('/chat/completion', async (req, res) => {
             }
         ];
 
-        // 调用通义千问API
-        const response = await axios.post(
-            QWEN_API_URL,
-            {
-                model: 'qwen-plus',
-                input: {
-                    messages: messages
-                },
-                parameters: {
-                    result_format: 'message',
-                    temperature: 0.8,
-                    top_p: 0.8,
-                    repetition_penalty: 1.05,
-                    max_tokens: 8192
-                }
-            },
-            {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${DASHSCOPE_API_KEY}`,
-                    'X-DashScope-SSE': 'disable'
-                },
-                timeout: 120000 // 120秒超时
-            }
-        );
+        // 调用 DeepSeek OpenAI 兼容接口
+        const response = await deepSeekClient.chat(messages, {
+            temperature: 0.8,
+            topP: 0.8,
+            maxTokens: 8192,
+            timeoutMs: 120000,
+        });
 
-        if (!response.data.output || !response.data.output.choices || response.data.output.choices.length === 0) {
-            throw new Error('API返回格式异常');
-        }
-
-        const assistantMessage = response.data.output.choices[0].message;
+        const assistantMessage = response.message;
         let finalContent = assistantMessage.content;
         let smallModelCalled = true; // 展示大小模型协同标识
 
@@ -840,6 +802,12 @@ apiRouter.post('/chat/completion', async (req, res) => {
                 role: assistantMessage.role,
                 content: finalContent,
                 smallModelCalled: smallModelCalled,
+                llm: {
+                    provider: 'deepseek',
+                    model: response.model,
+                    usage: response.usage,
+                    responseId: response.responseId
+                },
                 timestamp: new Date().toISOString()
             }
         });
@@ -970,35 +938,28 @@ apiRouter.post('/tools/:modelId/chat', async (req, res) => {
             { role: 'user', content: message }
         ];
 
-        const response = await axios.post(
-            QWEN_API_URL,
-            {
-                model: 'qwen-plus',
-                input: { messages },
-                parameters: {
-                    result_format: 'message',
-                    temperature: 0.6,
-                    top_p: 0.8,
-                    repetition_penalty: 1.05,
-                    max_tokens: 1024
-                }
-            },
-            {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${DASHSCOPE_API_KEY}`,
-                    'X-DashScope-SSE': 'disable'
-                },
-                timeout: 30000
-            }
-        );
+        const response = await deepSeekClient.chat(messages, {
+            temperature: 0.6,
+            topP: 0.8,
+            maxTokens: 1024,
+            timeoutMs: 30000,
+        });
 
-        const reply = response.data.output.choices[0].message.content;
+        const reply = response.message.content;
 
         res.json({
             code: 200,
             message: '成功',
-            data: { reply, result: null }
+            data: {
+                reply,
+                result: null,
+                llm: {
+                    provider: 'deepseek',
+                    model: response.model,
+                    usage: response.usage,
+                    responseId: response.responseId
+                }
+            }
         });
 
     } catch (error) {
