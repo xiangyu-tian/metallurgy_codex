@@ -101,6 +101,9 @@ class ExperimentService:
     MODE_FORCED = "forced"
     MODE_AUTONOMOUS = "autonomous"
     MODES = (MODE_DIRECT, MODE_FORCED, MODE_AUTONOMOUS)
+    uses_reference_arguments = True
+    engine_name = "deterministic"
+    default_llm_name = "deterministic-orchestrator"
 
     _KEYWORDS = {
         "A001": ("单位换算", "换算", "摄氏", "开尔文", "mpa", "kg"),
@@ -219,9 +222,21 @@ class ExperimentService:
             else:
                 final_answer = final_answer or "工具参数校验未通过，未执行计算。"
 
+        tool_call_chain = []
+        if selected_model:
+            tool_call_chain.append({
+                "index": 0,
+                "tool_call_id": None,
+                "model_code": selected_model,
+                "generated_arguments": deepcopy(arguments or {}),
+                "validation_result": deepcopy(validation_result),
+                "execution_result": deepcopy(execution_result),
+            })
+
         record = {
             "experiment_id": experiment_id,
             "trace_id": trace_id,
+            "engine": self.engine_name,
             "user_query": user_query,
             "mode": mode,
             "llm_name": llm_name,
@@ -232,12 +247,15 @@ class ExperimentService:
             "generated_arguments": deepcopy(arguments or {}),
             "validation_result": validation_result,
             "execution_result": execution_result,
+            "tool_call_chain": tool_call_chain,
+            "llm_trace": {},
             "retry_count": 0,
             "result_validation_enabled": result_validation_enabled,
             "benchmark_case_id": benchmark_case_id,
             "final_answer": final_answer,
             "latency_ms": round((time.perf_counter() - started) * 1000, 2),
             "token_usage": None,
+            "status": "completed",
             "created_at": time.time(),
         }
         self.store.save_experiment(record)

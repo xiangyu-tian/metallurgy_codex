@@ -1,4 +1,4 @@
-"""Opt-in integration test for migration 003 and PostgreSQL trace storage."""
+"""Opt-in integration test for migrations 003/004 and PostgreSQL trace storage."""
 
 import os
 import time
@@ -68,6 +68,8 @@ class PostgresTraceStoreIntegrationTests(unittest.TestCase):
         experiment = {
             "experiment_id": self.experiment_id,
             "trace_id": self.trace_id,
+            "benchmark_run_id": "BENCH-INTEGRATION",
+            "engine": "deepseek",
             "user_query": "计算 Fe2O3 的摩尔质量",
             "mode": "forced",
             "llm_name": "integration-test",
@@ -78,6 +80,14 @@ class PostgresTraceStoreIntegrationTests(unittest.TestCase):
             "generated_arguments": {"formula": "Fe2O3"},
             "validation_result": {"valid": True, "errors": []},
             "execution_result": execution,
+            "tool_call_chain": [{
+                "index": 0,
+                "model_code": "A003",
+                "generated_arguments": {"formula": "Fe2O3"},
+                "validation_result": {"valid": True, "errors": []},
+                "execution_result": execution,
+            }],
+            "llm_trace": {"decision_response": {"id": "chat-integration"}},
             "retry_count": 0,
             "result_validation_enabled": True,
             "final_answer": "159.687 g/mol",
@@ -89,3 +99,10 @@ class PostgresTraceStoreIntegrationTests(unittest.TestCase):
         loaded_experiment = self.store.get_experiment(self.experiment_id)
         self.assertEqual(loaded_experiment["selected_model"], "A003")
         self.assertEqual(loaded_experiment["execution_result"]["output"], execution["output"])
+        self.assertEqual(loaded_experiment["engine"], "deepseek")
+        self.assertEqual(loaded_experiment["benchmark_run_id"], "BENCH-INTEGRATION")
+        self.assertEqual(loaded_experiment["tool_call_chain"][0]["model_code"], "A003")
+        self.assertEqual(
+            loaded_experiment["llm_trace"]["decision_response"]["id"],
+            "chat-integration",
+        )

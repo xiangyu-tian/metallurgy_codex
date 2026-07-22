@@ -72,11 +72,12 @@
 ```json
 {
   "user_query": "请计算 Fe2O3 的摩尔质量",
+  "engine": "deepseek",
   "mode": "autonomous",
   "model_code": null,
-  "arguments": {"formula": "Fe2O3"},
-  "llm_name": "external-orchestrator",
-  "prompt_version": "v1",
+  "arguments": {},
+  "llm_name": "deepseek-v4-flash",
+  "prompt_version": "m4.5-v1",
   "result_validation_enabled": true
 }
 ```
@@ -87,7 +88,9 @@
 - `forced`：必须提供 `model_code`，校验通过后调用；
 - `autonomous`：按问题召回候选并决定是否调用，可用 `model_code` 固定候选以复现实验。
 
-响应保存 `user_query`、大模型与 Prompt 版本、候选模型、选中模型、选择原因、生成参数、校验和执行结果、重试次数、最终回答、延迟与 Token 用量占位。
+`engine` 取 `deterministic`（默认，可复现基线）或 `deepseek`（真实 Function Calling）。真实引擎不会读取基准数据的 `standard_arguments`：参数只能由 DeepSeek 从用户问题生成。`forced` 只暴露指定模型，`autonomous` 暴露全部 17 张模型卡，`direct` 不暴露工具。工具执行结果以 `role=tool` 回传给 DeepSeek 后再生成最终回答。
+
+响应保存 `user_query`、实验引擎、大模型与 Prompt 版本、候选模型、选中模型、生成参数、校验和执行结果、完整多工具调用链、脱敏的两阶段 LLM 轨迹、响应编号、最终回答、延迟与真实 Token 用量。迁移 `004_real_llm_experiments.sql` 为这些字段提供 PostgreSQL 持久化。
 
 ### `GET /api/v1/experiments/{experiment_id}`
 
@@ -120,20 +123,21 @@
 
 ```json
 {
+  "engine": "deepseek",
   "modes": ["direct", "forced", "autonomous"],
   "case_ids": ["TC-NO_TOOL-001", "TC-SINGLE_TOOL-001"],
   "categories": [],
   "difficulties": [],
   "max_cases": 120,
-  "llm_name": "deterministic-orchestrator",
-  "prompt_version": "benchmark-v1",
+  "llm_name": "deepseek-v4-flash",
+  "prompt_version": "m4.5-v1",
   "result_validation_enabled": true
 }
 ```
 
-响应包含批次编号、运行配置、全局/分模式/分类别汇总以及逐条实验记录号。自动指标包括是否调用判断、模型选择、参数精确匹配、单位处理、参数/适用域校验、期望处理结果、数值正确性、调用链召回率、单例通过率、无效调用率、平均调用次数和延迟。每条评分通过 `benchmark_case_id` 与实验轨迹关联，批次编号和数据集版本随评分写入 `experiment_run.metrics_json`。
+响应包含批次编号、运行配置、全局/分模式/分类别汇总以及逐条实验记录号。自动指标包括是否调用判断、模型选择、参数精确匹配、单位处理、参数/适用域校验、期望处理结果、数值正确性、调用链召回率、单例通过率、无效/重复调用率、平均调用次数、Token 和延迟。供应商请求失败单独计入 `failed_experiment_count`，不会被误判成“不调用工具”的正确决策。每条评分通过 `benchmark_case_id` 与实验轨迹关联，批次编号和数据集版本随评分写入 `experiment_run.metrics_json`。
 
-当前内置执行器是可复现的确定性编排基线，用于验证数据、接口和评分闭环；接入外部大模型时保持数据集和指标契约不变，只替换编排器名称、Prompt 版本及其调用决策。
+确定性编排基线与 DeepSeek 真实引擎共用同一数据集、执行器和指标契约，可通过 `engine` 切换后直接对比。
 
 ## 大模型服务配置
 
@@ -145,7 +149,9 @@
 - `DEEPSEEK_MODEL`：当前实验模型；
 - `DEEPSEEK_THINKING`：`enabled` 或 `disabled`。
 
-`GET /api/health` 只返回提供商、模型、兼容地址和“密钥是否已配置”，不会返回密钥内容。聊天响应的 `data.llm` 保存实际模型、响应编号和 Token 用量，便于后续实验追踪。工具调用基准批处理目前仍使用确定性编排器；下一步再将同一 DeepSeek 客户端接入批量实验层。
+`GET /api/health` 只返回提供商、模型、兼容地址和“密钥是否已配置”，不会返回密钥内容。聊天响应的 `data.llm` 保存实际模型、响应编号和 Token 用量，便于后续实验追踪。Python 模型服务从同一份本机配置读取 OpenAI 兼容地址，并已接入单次实验和批量评测接口。
+
+M4.5 真实小批量验证（`deepseek-v4-flash`、`autonomous`、六类各 1 条）完成 6/6 请求，5/6 样本完全通过；单工具和双工具链均成功执行，无无效或重复调用。唯一差异是超适用域样本被模型直接拒绝，而冻结基准要求调用 A001 后由执行器拒绝，因此按契约计为未通过。
 
 ## 轨迹存储配置
 

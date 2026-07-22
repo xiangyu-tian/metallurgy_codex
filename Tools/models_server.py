@@ -31,6 +31,8 @@ from models_core.services import (
 )
 from models_core.trace_store import create_trace_store
 from models_core.benchmarking import BenchmarkService, ToolCallingDataset
+from models_core.llm_adapters import DeepSeekOpenAIAdapter, LLMAdapterError
+from models_core.llm_experiments import DeepSeekExperimentService
 
 # ── 初始化注册表 ──
 registry = ModelRegistry()
@@ -39,8 +41,17 @@ print(f"已注册 {count} 个模型: {[m.model_id for m in registry._models.valu
 trace_store = create_trace_store()
 execution_service = ModelExecutionService(registry, trace_store)
 experiment_service = ExperimentService(registry, execution_service, trace_store)
+deepseek_adapter = DeepSeekOpenAIAdapter.from_environment()
+deepseek_experiment_service = DeepSeekExperimentService(
+    registry, execution_service, trace_store, deepseek_adapter
+)
 tool_calling_dataset = ToolCallingDataset()
-benchmark_service = BenchmarkService(tool_calling_dataset, experiment_service, trace_store)
+benchmark_service = BenchmarkService(
+    tool_calling_dataset,
+    experiment_service,
+    trace_store,
+    experiment_engines={"deepseek": deepseek_experiment_service},
+)
 
 # ── FastAPI 应用 ──
 app = FastAPI(
@@ -109,24 +120,26 @@ class ValidateRequest(BaseModel):
 
 class ExperimentRequest(BaseModel):
     user_query: str
+    engine: str = Field(default="deterministic", description="deterministic / deepseek")
     mode: str = Field(..., description="direct / forced / autonomous")
     model_code: Optional[str] = None
     arguments: dict = Field(default_factory=dict)
     baseline_answer: str = ""
-    llm_name: str = "external-orchestrator"
-    prompt_version: str = "v1"
+    llm_name: Optional[str] = None
+    prompt_version: Optional[str] = None
     result_validation_enabled: bool = True
     benchmark_case_id: Optional[str] = None
 
 
 class BenchmarkRunRequest(BaseModel):
+    engine: str = Field(default="deterministic", description="deterministic / deepseek")
     modes: List[str] = Field(default_factory=lambda: ["direct", "forced", "autonomous"])
     case_ids: List[str] = Field(default_factory=list)
     categories: List[str] = Field(default_factory=list)
     difficulties: List[str] = Field(default_factory=list)
     max_cases: int = Field(default=120, ge=1, le=120)
-    llm_name: str = "deterministic-orchestrator"
-    prompt_version: str = "benchmark-v1"
+    llm_name: Optional[str] = None
+    prompt_version: Optional[str] = None
     result_validation_enabled: bool = True
 
 
@@ -140,6 +153,10 @@ def health():
         "trace_store": trace_store.health(),
         "registered_models": len(registry._models),
         "model_ids": sorted(registry._models.keys()),
+        "experiment_engines": {
+            "deterministic": {"ready": True},
+            "deepseek": deepseek_experiment_service.configuration(),
+        },
     }
 
 
@@ -243,19 +260,34 @@ def get_execution(execution_id: str):
 def run_experiment(req: ExperimentRequest):
     """运行直接回答、强制调用或自主调用实验。"""
     try:
-        return experiment_service.run(
+        experiment_engines = {
+            "deterministic": experiment_service,
+            "deepseek": deepseek_experiment_service,
+        }
+        if req.engine not in experiment_engines:
+            raise ValueError(f"unsupported experiment engine: {req.engine}")
+        runner = experiment_engines[req.engine]
+        prompt_version = req.prompt_version or (
+            "m4.5-v1" if req.engine == "deepseek" else "v1"
+        )
+        llm_name = req.llm_name or getattr(
+            runner, "default_llm_name", "deterministic-orchestrator"
+        )
+        return runner.run(
             user_query=req.user_query,
             mode=req.mode,
             model_code=req.model_code,
             arguments=req.arguments,
             baseline_answer=req.baseline_answer,
-            llm_name=req.llm_name,
-            prompt_version=req.prompt_version,
+            llm_name=llm_name,
+            prompt_version=prompt_version,
             result_validation_enabled=req.result_validation_enabled,
             benchmark_case_id=req.benchmark_case_id,
         )
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except LLMAdapterError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
 
 
 @app.get("/api/experiments/{experiment_id}")
@@ -300,6 +332,7 @@ def run_tool_calling_benchmark(req: BenchmarkRunRequest):
     """Run selected cases across direct, forced, and autonomous modes."""
     try:
         return benchmark_service.run(
+            engine=req.engine,
             modes=req.modes,
             case_ids=req.case_ids,
             categories=req.categories,
@@ -311,6 +344,8 @@ def run_tool_calling_benchmark(req: BenchmarkRunRequest):
         )
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except LLMAdapterError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
 
 
 @app.get("/api/v1/scenarios")

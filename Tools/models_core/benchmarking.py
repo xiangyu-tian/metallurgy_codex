@@ -126,18 +126,27 @@ class BenchmarkService:
         dataset: ToolCallingDataset,
         experiments: ExperimentService,
         store: TraceStore,
+        experiment_engines: Optional[Dict[str, object]] = None,
     ):
         self.dataset = dataset
         self.experiments = experiments
         self.store = store
+        self.experiment_engines = {"deterministic": experiments}
+        self.experiment_engines.update(experiment_engines or {})
 
     @staticmethod
     def evaluate(case: dict, experiment: dict) -> dict:
+        experiment_completed = experiment.get("status", "completed") == "completed"
         selected = experiment.get("selected_model")
         called = selected is not None
         expected_models = case.get("expected_models", [])
         expected_sequence = case.get("expected_call_sequence", [])
-        actual_sequence = [selected] if selected else []
+        chain = experiment.get("tool_call_chain") or []
+        actual_sequence = [
+            item.get("model_code") for item in chain if item.get("model_code")
+        ]
+        if not actual_sequence and selected:
+            actual_sequence = [selected]
 
         tool_decision_correct = called == case["should_call_tool"]
         if case["should_call_tool"]:
@@ -200,6 +209,20 @@ class BenchmarkService:
             else:
                 numeric_result_correct = False
 
+        # Transport/provider failures are operational failures, not valid
+        # no-tool decisions.  Without this guard a failed request on a
+        # no-tool case would be scored as a semantic success.
+        if not experiment_completed:
+            tool_decision_correct = False
+            model_selection_correct = False
+            arguments_exact_match = False
+            unit_handling_correct = False if units else None
+            argument_validation_correct = False
+            outcome_correct = False
+            call_sequence_recall = 0.0
+            if expected_result:
+                numeric_result_correct = False
+
         required = [
             tool_decision_correct,
             model_selection_correct,
@@ -213,6 +236,7 @@ class BenchmarkService:
             required.append(math.isclose(call_sequence_recall, 1.0))
 
         return {
+            "experiment_completed": experiment_completed,
             "tool_decision_correct": tool_decision_correct,
             "model_selection_correct": model_selection_correct,
             "arguments_exact_match": arguments_exact_match,
@@ -223,6 +247,15 @@ class BenchmarkService:
             "call_sequence_recall": round(call_sequence_recall, 4),
             "case_passed": all(required),
             "actual_called": called,
+            "actual_call_count": len(actual_sequence),
+            "ineffective_call_count": sum(
+                1 for item in chain
+                if not item.get("execution_result")
+                or item["execution_result"].get("status") != "success"
+            ) if chain else (
+                1 if called and (not execution or execution.get("status") != "success") else 0
+            ),
+            "duplicate_call_count": len(actual_sequence) - len(set(actual_sequence)),
             "actual_model": selected,
             "execution_status": execution.get("status") if execution else None,
             "error_code": execution.get("error_code") if execution else None,
@@ -231,22 +264,33 @@ class BenchmarkService:
     @classmethod
     def _aggregate(cls, rows: List[dict]) -> dict:
         aggregate = {"experiment_count": len(rows)}
+        completed_count = sum(
+            bool(row["metrics"].get("experiment_completed")) for row in rows
+        )
+        aggregate["completed_experiment_count"] = completed_count
+        aggregate["failed_experiment_count"] = len(rows) - completed_count
+        aggregate["completion_rate"] = round(
+            completed_count / len(rows), 4
+        ) if rows else None
         for field in cls.METRIC_FIELDS:
             values = [row["metrics"][field] for row in rows if row["metrics"][field] is not None]
             aggregate[f"{field}_rate"] = round(sum(bool(v) for v in values) / len(values), 4) if values else None
         aggregate["average_call_sequence_recall"] = round(
             sum(row["metrics"]["call_sequence_recall"] for row in rows) / len(rows), 4
         ) if rows else None
+        total_calls = sum(row["metrics"]["actual_call_count"] for row in rows)
         aggregate["average_call_count"] = round(
-            sum(1 if row["metrics"]["actual_called"] else 0 for row in rows) / len(rows), 4
+            total_calls / len(rows), 4
         ) if rows else None
         aggregate["ineffective_call_rate"] = round(
-            sum(
-                1 for row in rows
-                if row["metrics"]["actual_called"]
-                and row["metrics"]["execution_status"] != "success"
-            ) / len(rows), 4
-        ) if rows else None
+            sum(row["metrics"]["ineffective_call_count"] for row in rows) / total_calls, 4
+        ) if total_calls else 0.0 if rows else None
+        aggregate["duplicate_call_rate"] = round(
+            sum(row["metrics"]["duplicate_call_count"] for row in rows) / total_calls, 4
+        ) if total_calls else 0.0 if rows else None
+        aggregate["total_tokens"] = sum(
+            (row.get("token_usage") or {}).get("total_tokens", 0) for row in rows
+        )
         aggregate["average_latency_ms"] = round(
             sum(row["latency_ms"] for row in rows) / len(rows), 3
         ) if rows else None
@@ -260,14 +304,17 @@ class BenchmarkService:
         categories: Optional[List[str]] = None,
         difficulties: Optional[List[str]] = None,
         max_cases: int = 120,
-        llm_name: str = "deterministic-orchestrator",
-        prompt_version: str = "benchmark-v1",
+        engine: str = "deterministic",
+        llm_name: Optional[str] = None,
+        prompt_version: Optional[str] = None,
         result_validation_enabled: bool = True,
     ) -> dict:
         modes = modes or list(ExperimentService.MODES)
         invalid_modes = set(modes) - set(ExperimentService.MODES)
         if invalid_modes:
             raise ValueError(f"unsupported benchmark modes: {sorted(invalid_modes)}")
+        if engine not in self.experiment_engines:
+            raise ValueError(f"unsupported experiment engine: {engine}")
         if not 1 <= max_cases <= self.dataset.document["case_count"]:
             raise ValueError(f"max_cases must be between 1 and {self.dataset.document['case_count']}")
 
@@ -280,20 +327,40 @@ class BenchmarkService:
         if not cases:
             raise ValueError("no benchmark cases matched the supplied filters")
 
+        experiment_runner = self.experiment_engines[engine]
+        if hasattr(experiment_runner, "ensure_ready"):
+            experiment_runner.ensure_ready()
+        effective_llm_name = llm_name or getattr(
+            experiment_runner, "default_llm_name", "deterministic-orchestrator"
+        )
+        effective_prompt_version = prompt_version or (
+            "m4.5-v1" if engine == "deepseek" else "benchmark-v1"
+        )
+
         run_id = _identifier("BENCH")
         started = time.perf_counter()
         rows = []
         for case in cases:
             for mode in modes:
                 forced_model = case["forced_model_code"] if mode == ExperimentService.MODE_FORCED else None
-                experiment = self.experiments.run(
+                reference_arguments = case.get("standard_arguments", {})
+                experiment_arguments = (
+                    reference_arguments
+                    if getattr(experiment_runner, "uses_reference_arguments", True)
+                    else {}
+                )
+                experiment = experiment_runner.run(
                     user_query=case["question"],
                     mode=mode,
                     model_code=forced_model,
-                    arguments=case.get("standard_arguments", {}),
-                    baseline_answer="直接回答基线未接入外部大模型评分。" if mode == ExperimentService.MODE_DIRECT else "",
-                    llm_name=llm_name,
-                    prompt_version=prompt_version,
+                    arguments=experiment_arguments,
+                    baseline_answer=(
+                        "直接回答基线未接入外部大模型评分。"
+                        if engine == "deterministic" and mode == ExperimentService.MODE_DIRECT
+                        else ""
+                    ),
+                    llm_name=effective_llm_name,
+                    prompt_version=effective_prompt_version,
                     result_validation_enabled=result_validation_enabled,
                     benchmark_case_id=case["case_id"],
                 )
@@ -301,6 +368,7 @@ class BenchmarkService:
                 metrics["benchmark_run_id"] = run_id
                 metrics["dataset_version"] = self.dataset.version
                 experiment["metrics"] = metrics
+                experiment["benchmark_run_id"] = run_id
                 self.store.save_experiment(experiment)
                 rows.append({
                     "run_id": run_id,
@@ -308,9 +376,11 @@ class BenchmarkService:
                     "category": case["category"],
                     "difficulty": case["difficulty"],
                     "mode": mode,
+                    "engine": engine,
                     "experiment_id": experiment["experiment_id"],
                     "selected_model": experiment.get("selected_model"),
                     "latency_ms": experiment["latency_ms"],
+                    "token_usage": experiment.get("token_usage"),
                     "metrics": metrics,
                 })
 
@@ -327,8 +397,9 @@ class BenchmarkService:
             "case_count": len(cases),
             "modes": modes,
             "configuration": {
-                "llm_name": llm_name,
-                "prompt_version": prompt_version,
+                "engine": engine,
+                "llm_name": effective_llm_name,
+                "prompt_version": effective_prompt_version,
                 "result_validation_enabled": result_validation_enabled,
             },
             "total_experiments": len(rows),

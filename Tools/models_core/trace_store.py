@@ -174,20 +174,25 @@ class PostgresTraceStore:
                         """
                         INSERT INTO metallurgy_v2.llm_tool_trace (
                             trace_id, user_query, llm_name, prompt_version, mode,
+                            experiment_engine,
                             candidate_models, selected_model, selection_reason,
                             generated_arguments, validation_result, execution_result,
-                            retry_count, final_answer, latency_ms, token_usage, created_at
+                            tool_call_chain, llm_trace, retry_count, final_answer,
+                            latency_ms, token_usage, created_at
                         ) VALUES (
                             %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
-                            %s, %s, %s, %s, %s
+                            %s, %s, %s, %s, %s, %s, %s, %s
                         )
                         ON CONFLICT (trace_id) DO UPDATE SET
+                            experiment_engine = EXCLUDED.experiment_engine,
                             candidate_models = EXCLUDED.candidate_models,
                             selected_model = EXCLUDED.selected_model,
                             selection_reason = EXCLUDED.selection_reason,
                             generated_arguments = EXCLUDED.generated_arguments,
                             validation_result = EXCLUDED.validation_result,
                             execution_result = EXCLUDED.execution_result,
+                            tool_call_chain = EXCLUDED.tool_call_chain,
+                            llm_trace = EXCLUDED.llm_trace,
                             retry_count = EXCLUDED.retry_count,
                             final_answer = EXCLUDED.final_answer,
                             latency_ms = EXCLUDED.latency_ms,
@@ -197,11 +202,14 @@ class PostgresTraceStore:
                             record["trace_id"], record["user_query"],
                             record.get("llm_name", "external-orchestrator"),
                             record.get("prompt_version", "v1"), record["mode"],
+                            record.get("engine", "deterministic"),
                             Json(record.get("candidate_models", [])),
                             record.get("selected_model"), record.get("selection_reason"),
                             Json(record.get("generated_arguments", {})),
                             Json(record.get("validation_result")),
                             Json(record.get("execution_result")),
+                            Json(record.get("tool_call_chain", [])),
+                            Json(record.get("llm_trace", {})),
                             record.get("retry_count", 0), record.get("final_answer"),
                             record.get("latency_ms"), Json(record.get("token_usage")),
                             _as_datetime(record.get("created_at")),
@@ -210,16 +218,19 @@ class PostgresTraceStore:
                     cur.execute(
                         """
                         INSERT INTO metallurgy_v2.experiment_run (
-                            experiment_id, trace_id, benchmark_case_id, mode,
+                            experiment_id, trace_id, benchmark_case_id,
+                            benchmark_run_id, mode,
                             result_validation_enabled, status, metrics_json, created_at
-                        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
                         ON CONFLICT (experiment_id) DO UPDATE SET
+                            benchmark_run_id = EXCLUDED.benchmark_run_id,
                             status = EXCLUDED.status,
                             metrics_json = EXCLUDED.metrics_json
                         """,
                         (
                             record["experiment_id"], record["trace_id"],
-                            record.get("benchmark_case_id"), record["mode"],
+                            record.get("benchmark_case_id"),
+                            record.get("benchmark_run_id"), record["mode"],
                             record.get("result_validation_enabled", True),
                             record.get("status", "completed"),
                             Json(record.get("metrics", {})),
@@ -237,7 +248,7 @@ class PostgresTraceStore:
             with conn.cursor(cursor_factory=RealDictCursor) as cur:
                 cur.execute(
                     """
-                    SELECT er.experiment_id, er.benchmark_case_id,
+                    SELECT er.experiment_id, er.benchmark_case_id, er.benchmark_run_id,
                            er.result_validation_enabled, er.status,
                            er.metrics_json, trace.*
                     FROM metallurgy_v2.experiment_run er
@@ -256,8 +267,10 @@ class PostgresTraceStore:
             "experiment_id": row["experiment_id"],
             "trace_id": row["trace_id"],
             "benchmark_case_id": row["benchmark_case_id"],
+            "benchmark_run_id": row["benchmark_run_id"],
             "user_query": row["user_query"],
             "mode": row["mode"],
+            "engine": row["experiment_engine"],
             "llm_name": row["llm_name"],
             "prompt_version": row["prompt_version"],
             "candidate_models": row["candidate_models"],
@@ -266,6 +279,8 @@ class PostgresTraceStore:
             "generated_arguments": row["generated_arguments"],
             "validation_result": row["validation_result"],
             "execution_result": row["execution_result"],
+            "tool_call_chain": row["tool_call_chain"],
+            "llm_trace": row["llm_trace"],
             "retry_count": row["retry_count"],
             "result_validation_enabled": row["result_validation_enabled"],
             "final_answer": row["final_answer"],

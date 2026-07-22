@@ -136,7 +136,7 @@ class B003_SensibleEnthalpy(BaseModelTool):
             t_k = temps / 1000.0
             A, B, C, D, E = (shomate_t[k] for k in ["A","B","C","D","E"])
             Cp = A + B*t_k + C*t_k**2 + D*t_k**3 + E/t_k**2
-            delta_H = float(np.trapz(Cp, temps) / 1000.0)  # J → kJ
+            delta_H = float(np.trapezoid(Cp, temps) / 1000.0)  # J → kJ
             return ModelResult(
                 success=True,
                 result={"delta_H": round(delta_H * mass, 4), "delta_H_unit": "kJ",
