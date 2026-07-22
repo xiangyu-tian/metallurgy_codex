@@ -63,7 +63,7 @@
 
 ### `GET /api/v1/executions/{execution_id}`
 
-读取本进程内已完成的执行轨迹。生产环境应通过迁移 `003_model_experiments.sql` 将同构记录持久化。
+读取已完成的执行轨迹。默认存储模式为 PostgreSQL 持久化并带进程内回退；执行迁移 `003_model_experiments.sql` 后，服务重启仍可读取历史记录。
 
 ### `POST /api/v1/experiments/run`
 
@@ -92,6 +92,18 @@
 ### `GET /api/v1/experiments/{experiment_id}`
 
 读取单次实验完整轨迹。
+
+## 轨迹存储配置
+
+数据库连接使用 libpq 标准环境变量：`PGHOST`、`PGPORT`、`PGDATABASE`、`PGUSER`、`PGPASSWORD`，也支持 `DATABASE_URL` 或 `POSTGRES_DSN`。源码不内置服务器地址。
+
+`MODEL_TRACE_STORE` 支持三种取值：
+
+- `auto`（默认）：写入 PostgreSQL，同时保留内存副本；数据库不可用时自动回退。
+- `postgres`：强制使用 PostgreSQL，持久化失败直接报错。
+- `memory`：仅进程内保存，适用于离线测试。
+
+健康检查 `GET /api/v1/health` 的 `trace_store` 字段会显示当前持久化状态及回退原因。
 
 以上接口同时提供不带 `/v1` 的兼容路径。
 

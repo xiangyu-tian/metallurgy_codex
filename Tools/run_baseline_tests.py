@@ -12,7 +12,7 @@ PROJECT_DIR = os.path.dirname(TOOLS_DIR)
 sys.path.insert(0, TOOLS_DIR)
 sys.path.insert(0, PROJECT_DIR)
 
-from tests import test_model_baseline, test_thermo_fallback
+from tests import test_model_baseline, test_thermo_fallback, test_trace_store
 
 
 def main() -> int:
@@ -20,6 +20,7 @@ def main() -> int:
     suite = unittest.TestSuite()
     suite.addTests(loader.loadTestsFromModule(test_model_baseline))
     suite.addTests(loader.loadTestsFromModule(test_thermo_fallback))
+    suite.addTests(loader.loadTestsFromModule(test_trace_store))
     result = unittest.TextTestRunner(verbosity=2).run(suite)
     return 0 if result.wasSuccessful() else 1
 

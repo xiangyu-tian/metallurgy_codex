@@ -11,6 +11,8 @@ import math
 from typing import Optional, Dict, List, Any
 from dataclasses import dataclass, field
 
+from ..db import connect_postgres
+
 
 # ── 返回类型 ──
 
@@ -47,12 +49,8 @@ class ThermodynamicRepository:
 
     def _get_db(self):
         if self._db is None:
-            import psycopg2
             import psycopg2.extras
-            self._db = psycopg2.connect(
-                host='127.0.0.1', port=5432, database='metallurgy',
-                user='postgres', password='', connect_timeout=3,
-            )
+            self._db = connect_postgres(connect_timeout=3)
         return self._db
 
     def find_correlation(self, species_id: str, phase: str,

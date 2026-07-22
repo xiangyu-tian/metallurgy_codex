@@ -19,5 +19,10 @@ from .registry import ModelRegistry
 from .chemical_data import THERMOCHEMICAL_DB, ELEMENT_ATOMIC_WEIGHTS
 from .errors import STANDARD_ERROR_CODES
 from .services import ExperimentService, InMemoryTraceStore, ModelExecutionService
+from .trace_store import (
+    PostgresTraceStore,
+    ResilientTraceStore,
+    create_trace_store,
+)
 
 __version__ = "0.1.0"

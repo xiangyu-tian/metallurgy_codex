@@ -27,15 +27,15 @@ from models_core import ModelRegistry
 from models_core.base import InvocationContext
 from models_core.services import (
     ExperimentService,
-    InMemoryTraceStore,
     ModelExecutionService,
 )
+from models_core.trace_store import create_trace_store
 
 # ── 初始化注册表 ──
 registry = ModelRegistry()
 count = registry.discover()
-print(f"✅ 已注册 {count} 个模型: {[m.model_id for m in registry._models.values()]}")
-trace_store = InMemoryTraceStore()
+print(f"已注册 {count} 个模型: {[m.model_id for m in registry._models.values()]}")
+trace_store = create_trace_store()
 execution_service = ModelExecutionService(registry, trace_store)
 experiment_service = ExperimentService(registry, execution_service, trace_store)
 
@@ -122,6 +122,7 @@ def health():
     return {
         "status": "ok",
         "service": "models-server",
+        "trace_store": trace_store.health(),
         "registered_models": len(registry._models),
         "model_ids": sorted(registry._models.keys()),
     }
@@ -264,21 +265,12 @@ def list_scenarios():
 # 数据查询 API — 从 PostgreSQL 读取
 # ═══════════════════════════════════════════════
 
-import psycopg2
 import psycopg2.extras
-
-DB_CONFIG = {
-    'host': '127.0.0.1',
-    'port': 5432,
-    'database': 'metallurgy',
-    'user': 'postgres',
-    'password': '',
-    'connect_timeout': 3,
-}
+from models_core.db import connect_postgres
 
 
 def _get_db():
-    return psycopg2.connect(**DB_CONFIG)
+    return connect_postgres()
 
 
 @app.get("/api/v1/data/sources")

@@ -3,15 +3,15 @@
 from __future__ import annotations
 
 import json
-import threading
 import time
 import uuid
 from copy import deepcopy
 from dataclasses import asdict
-from typing import Dict, List, Optional
+from typing import List, Optional
 
 from .base import InvocationContext
 from .registry import ModelRegistry
+from .trace_store import InMemoryTraceStore, TraceStore
 
 
 def _identifier(prefix: str) -> str:
@@ -28,37 +28,10 @@ def _result_payload(result) -> dict:
     return payload
 
 
-class InMemoryTraceStore:
-    """进程内追踪存储；数据库迁移提供同构的持久化表。"""
-
-    def __init__(self):
-        self._executions: Dict[str, dict] = {}
-        self._experiments: Dict[str, dict] = {}
-        self._lock = threading.RLock()
-
-    def save_execution(self, record: dict) -> None:
-        with self._lock:
-            self._executions[record["execution_id"]] = deepcopy(record)
-
-    def get_execution(self, execution_id: str) -> Optional[dict]:
-        with self._lock:
-            record = self._executions.get(execution_id)
-            return deepcopy(record) if record else None
-
-    def save_experiment(self, record: dict) -> None:
-        with self._lock:
-            self._experiments[record["experiment_id"]] = deepcopy(record)
-
-    def get_experiment(self, experiment_id: str) -> Optional[dict]:
-        with self._lock:
-            record = self._experiments.get(experiment_id)
-            return deepcopy(record) if record else None
-
-
 class ModelExecutionService:
     """模型协议的 validate / execute 垂直切片。"""
 
-    def __init__(self, registry: ModelRegistry, store: InMemoryTraceStore):
+    def __init__(self, registry: ModelRegistry, store: TraceStore):
         self.registry = registry
         self.store = store
 
@@ -140,7 +113,7 @@ class ExperimentService:
         self,
         registry: ModelRegistry,
         executor: ModelExecutionService,
-        store: InMemoryTraceStore,
+        store: TraceStore,
     ):
         self.registry = registry
         self.executor = executor

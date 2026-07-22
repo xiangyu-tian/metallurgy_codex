@@ -19,6 +19,7 @@ from .chemical_data import (
     SHOMATE_PARAMS, calc_shomate,
 )
 from .repositories.thermodynamic_repository import repo
+from .db import connect_postgres
 
 
 def _lookup_reaction(reaction_str: str, temperature: float = 298.15):
@@ -26,10 +27,7 @@ def _lookup_reaction(reaction_str: str, temperature: float = 298.15):
     # 1. 数据库
     try:
         import json
-        import psycopg2
-
-        conn = psycopg2.connect(host='127.0.0.1', port=5432, database='metallurgy',
-                                 user='postgres', password='', connect_timeout=2)
+        conn = connect_postgres(connect_timeout=2)
         cur = conn.cursor()
         cur.execute("""
             SELECT reaction_equation, name, reactants, products
