@@ -7,6 +7,7 @@ import time
 import uuid
 from copy import deepcopy
 from dataclasses import asdict
+from decimal import Decimal
 from typing import List, Optional
 
 from .base import InvocationContext
@@ -18,8 +19,19 @@ def _identifier(prefix: str) -> str:
     return f"{prefix}-{uuid.uuid4().hex[:16].upper()}"
 
 
+def _json_compatible(value):
+    """Normalize database-native numeric values at the JSON protocol boundary."""
+    if isinstance(value, Decimal):
+        return float(value)
+    if isinstance(value, dict):
+        return {key: _json_compatible(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_json_compatible(item) for item in value]
+    return value
+
+
 def _result_payload(result) -> dict:
-    payload = asdict(result)
+    payload = _json_compatible(asdict(result))
     payload["status"] = (
         "success" if result.success
         else "error" if result.error_code == "INTERNAL_ERROR"
@@ -152,6 +164,7 @@ class ExperimentService:
         llm_name: str = "external-orchestrator",
         prompt_version: str = "v1",
         result_validation_enabled: bool = True,
+        benchmark_case_id: Optional[str] = None,
     ) -> dict:
         if mode not in self.MODES:
             raise ValueError(f"mode 必须是 {self.MODES} 之一")
@@ -221,6 +234,7 @@ class ExperimentService:
             "execution_result": execution_result,
             "retry_count": 0,
             "result_validation_enabled": result_validation_enabled,
+            "benchmark_case_id": benchmark_case_id,
             "final_answer": final_answer,
             "latency_ms": round((time.perf_counter() - started) * 1000, 2),
             "token_usage": None,

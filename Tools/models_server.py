@@ -14,7 +14,7 @@ from __future__ import annotations
 import os
 import sys
 import uuid
-from typing import Optional
+from typing import List, Optional
 
 # 确保 models_core 可导入
 sys.path.insert(0, os.path.dirname(__file__))
@@ -30,6 +30,7 @@ from models_core.services import (
     ModelExecutionService,
 )
 from models_core.trace_store import create_trace_store
+from models_core.benchmarking import BenchmarkService, ToolCallingDataset
 
 # ── 初始化注册表 ──
 registry = ModelRegistry()
@@ -38,6 +39,8 @@ print(f"已注册 {count} 个模型: {[m.model_id for m in registry._models.valu
 trace_store = create_trace_store()
 execution_service = ModelExecutionService(registry, trace_store)
 experiment_service = ExperimentService(registry, execution_service, trace_store)
+tool_calling_dataset = ToolCallingDataset()
+benchmark_service = BenchmarkService(tool_calling_dataset, experiment_service, trace_store)
 
 # ── FastAPI 应用 ──
 app = FastAPI(
@@ -112,6 +115,18 @@ class ExperimentRequest(BaseModel):
     baseline_answer: str = ""
     llm_name: str = "external-orchestrator"
     prompt_version: str = "v1"
+    result_validation_enabled: bool = True
+    benchmark_case_id: Optional[str] = None
+
+
+class BenchmarkRunRequest(BaseModel):
+    modes: List[str] = Field(default_factory=lambda: ["direct", "forced", "autonomous"])
+    case_ids: List[str] = Field(default_factory=list)
+    categories: List[str] = Field(default_factory=list)
+    difficulties: List[str] = Field(default_factory=list)
+    max_cases: int = Field(default=120, ge=1, le=120)
+    llm_name: str = "deterministic-orchestrator"
+    prompt_version: str = "benchmark-v1"
     result_validation_enabled: bool = True
 
 
@@ -237,6 +252,7 @@ def run_experiment(req: ExperimentRequest):
             llm_name=req.llm_name,
             prompt_version=req.prompt_version,
             result_validation_enabled=req.result_validation_enabled,
+            benchmark_case_id=req.benchmark_case_id,
         )
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
@@ -249,6 +265,52 @@ def get_experiment(experiment_id: str):
     if not record:
         raise HTTPException(status_code=404, detail=f"未知实验记录: {experiment_id}")
     return record
+
+
+@app.get("/api/benchmarks/tool-calling")
+@app.get("/api/v1/benchmarks/tool-calling")
+def list_tool_calling_cases(
+    category: Optional[str] = None,
+    difficulty: Optional[str] = None,
+    limit: int = 120,
+):
+    """List the materialized six-category tool-calling dataset."""
+    if not 1 <= limit <= tool_calling_dataset.document["case_count"]:
+        raise HTTPException(status_code=400, detail="limit 必须在 1 到 120 之间")
+    cases = tool_calling_dataset.list_cases(
+        categories=[category] if category else None,
+        difficulties=[difficulty] if difficulty else None,
+        limit=limit,
+    )
+    return {**tool_calling_dataset.summary(), "returned": len(cases), "cases": cases}
+
+
+@app.get("/api/benchmarks/tool-calling/{case_id}")
+@app.get("/api/v1/benchmarks/tool-calling/{case_id}")
+def get_tool_calling_case(case_id: str):
+    case = tool_calling_dataset.get(case_id)
+    if not case:
+        raise HTTPException(status_code=404, detail=f"未知工具调用算例: {case_id}")
+    return case
+
+
+@app.post("/api/benchmarks/tool-calling/run")
+@app.post("/api/v1/benchmarks/tool-calling/run")
+def run_tool_calling_benchmark(req: BenchmarkRunRequest):
+    """Run selected cases across direct, forced, and autonomous modes."""
+    try:
+        return benchmark_service.run(
+            modes=req.modes,
+            case_ids=req.case_ids,
+            categories=req.categories,
+            difficulties=req.difficulties,
+            max_cases=req.max_cases,
+            llm_name=req.llm_name,
+            prompt_version=req.prompt_version,
+            result_validation_enabled=req.result_validation_enabled,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
 
 
 @app.get("/api/v1/scenarios")

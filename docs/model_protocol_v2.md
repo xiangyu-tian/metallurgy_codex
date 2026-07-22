@@ -93,6 +93,48 @@
 
 读取单次实验完整轨迹。
 
+## 工具调用基准数据集
+
+固化数据文件：`Tools/benchmarks/tool_calling_cases.json`；生成器：`Tools/benchmarks/build_tool_calling_dataset.py`。数据集版本为 `1.0.0`，共 120 条，覆盖：
+
+- 不调用工具 `no_tool`：15 条；
+- 单工具 `single_tool`：51 条；
+- 多工具 `multi_tool`：15 条；
+- 信息不足 `insufficient_info`：15 条；
+- 超适用域 `out_of_domain`：14 条；
+- 对抗问题 `adversarial`：10 条。
+
+每条样本包含自然语言问题、是否调用标签、候选与标准模型、标准参数及单位、多步参数与标准调用序列、标准答案、期望结果及容差、适用条件、难度、干扰因素、参考依据和期望处理结果。同一份数据不绑定具体大模型，可重复用于 `direct`、`forced`、`autonomous` 三种模式，以及不同大模型和 Prompt 版本。
+
+### `GET /api/v1/benchmarks/tool-calling`
+
+返回数据集摘要和算例列表。支持 `category`、`difficulty`、`limit` 查询参数。
+
+### `GET /api/v1/benchmarks/tool-calling/{case_id}`
+
+返回指定算例的完整标准标签。
+
+### `POST /api/v1/benchmarks/tool-calling/run`
+
+批量运行选定算例：
+
+```json
+{
+  "modes": ["direct", "forced", "autonomous"],
+  "case_ids": ["TC-NO_TOOL-001", "TC-SINGLE_TOOL-001"],
+  "categories": [],
+  "difficulties": [],
+  "max_cases": 120,
+  "llm_name": "deterministic-orchestrator",
+  "prompt_version": "benchmark-v1",
+  "result_validation_enabled": true
+}
+```
+
+响应包含批次编号、运行配置、全局/分模式/分类别汇总以及逐条实验记录号。自动指标包括是否调用判断、模型选择、参数精确匹配、单位处理、参数/适用域校验、期望处理结果、数值正确性、调用链召回率、单例通过率、无效调用率、平均调用次数和延迟。每条评分通过 `benchmark_case_id` 与实验轨迹关联，批次编号和数据集版本随评分写入 `experiment_run.metrics_json`。
+
+当前内置执行器是可复现的确定性编排基线，用于验证数据、接口和评分闭环；接入外部大模型时保持数据集和指标契约不变，只替换编排器名称、Prompt 版本及其调用决策。
+
 ## 轨迹存储配置
 
 数据库连接使用 libpq 标准环境变量：`PGHOST`、`PGPORT`、`PGDATABASE`、`PGUSER`、`PGPASSWORD`，也支持 `DATABASE_URL` 或 `POSTGRES_DSN`。源码不内置服务器地址。
@@ -121,7 +163,7 @@
 python Tools/run_baseline_tests.py
 ```
 
-测试包含 138 条实体黄金数值算例、完整模型卡检查、超过 100 个由协议自动生成的异常输入检查、数据库不可用兜底，以及三种实验模式的调用闭环。黄金算例覆盖全部 17 个模型，每条均保存参考依据、适用条件和数值容差。
+测试包含 138 条实体黄金数值算例、120 条六类工具调用算例、完整模型卡检查、超过 100 个由协议自动生成的异常输入检查、数据库不可用兜底，以及三种实验模式的调用与自动评分闭环。黄金算例覆盖全部 17 个模型，每条均保存参考依据、适用条件和数值容差。
 
 黄金算例源文件：`Tools/benchmarks/golden_cases.json`。
 生成器：`Tools/benchmarks/build_golden_cases.py`；生成器使用独立解析公式与冻结的 IUPAC/NIST 常数，不调用模型注册表计算期望值。

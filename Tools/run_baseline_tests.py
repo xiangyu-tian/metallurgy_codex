@@ -13,7 +13,12 @@ PROJECT_DIR = os.path.dirname(TOOLS_DIR)
 sys.path.insert(0, TOOLS_DIR)
 sys.path.insert(0, PROJECT_DIR)
 
-from tests import test_model_baseline, test_thermo_fallback, test_trace_store
+from tests import (
+    test_model_baseline,
+    test_thermo_fallback,
+    test_tool_calling_benchmark,
+    test_trace_store,
+)
 
 
 def main() -> int:
@@ -21,6 +26,7 @@ def main() -> int:
     suite = unittest.TestSuite()
     suite.addTests(loader.loadTestsFromModule(test_model_baseline))
     suite.addTests(loader.loadTestsFromModule(test_thermo_fallback))
+    suite.addTests(loader.loadTestsFromModule(test_tool_calling_benchmark))
     suite.addTests(loader.loadTestsFromModule(test_trace_store))
     result = unittest.TextTestRunner(verbosity=2).run(suite)
     benchmark_path = os.path.join(TOOLS_DIR, "benchmarks", "golden_cases.json")

@@ -19,6 +19,7 @@ from .registry import ModelRegistry
 from .chemical_data import THERMOCHEMICAL_DB, ELEMENT_ATOMIC_WEIGHTS
 from .errors import STANDARD_ERROR_CODES
 from .services import ExperimentService, InMemoryTraceStore, ModelExecutionService
+from .benchmarking import BenchmarkService, ToolCallingDataset
 from .trace_store import (
     PostgresTraceStore,
     ResilientTraceStore,
