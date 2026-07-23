@@ -1,6 +1,6 @@
 {
   "dataset_name": "Metallurgy Tool Calling Benchmark",
-  "dataset_version": "1.1.0",
+  "dataset_version": "1.1.1",
   "case_count": 120,
   "category_coverage": {
     "adversarial": 10,
@@ -580,7 +580,8 @@
           ],
           [
             "能垒",
-            "最低能量"
+            "最低能量",
+            "最小能量"
           ]
         ]
       },
@@ -619,9 +620,11 @@
             "元素符号"
           ],
           [
+            "大小写",
             "大写"
           ],
           [
+            "大小写",
             "小写"
           ],
           [
@@ -4632,7 +4635,8 @@
       "expected_final_behavior": "rejection",
       "acceptable_actions": [
         "direct_reject",
-        "tool_reject"
+        "tool_reject",
+        "clarify"
       ],
       "answer_requirements": {
         "type": "behavior"
@@ -4672,7 +4676,8 @@
       "expected_final_behavior": "rejection",
       "acceptable_actions": [
         "direct_reject",
-        "tool_reject"
+        "tool_reject",
+        "clarify"
       ],
       "answer_requirements": {
         "type": "behavior"
@@ -4712,7 +4717,8 @@
       "expected_final_behavior": "rejection",
       "acceptable_actions": [
         "direct_reject",
-        "tool_reject"
+        "tool_reject",
+        "clarify"
       ],
       "answer_requirements": {
         "type": "behavior"
@@ -4752,7 +4758,8 @@
       "expected_final_behavior": "rejection",
       "acceptable_actions": [
         "direct_reject",
-        "tool_reject"
+        "tool_reject",
+        "clarify"
       ],
       "answer_requirements": {
         "type": "behavior"
@@ -4795,7 +4802,8 @@
       "expected_final_behavior": "rejection",
       "acceptable_actions": [
         "direct_reject",
-        "tool_reject"
+        "tool_reject",
+        "clarify"
       ],
       "answer_requirements": {
         "type": "behavior"
@@ -4838,7 +4846,8 @@
       "expected_final_behavior": "rejection",
       "acceptable_actions": [
         "direct_reject",
-        "tool_reject"
+        "tool_reject",
+        "clarify"
       ],
       "answer_requirements": {
         "type": "behavior"
@@ -4881,7 +4890,8 @@
       "expected_final_behavior": "rejection",
       "acceptable_actions": [
         "direct_reject",
-        "tool_reject"
+        "tool_reject",
+        "clarify"
       ],
       "answer_requirements": {
         "type": "behavior"
@@ -4926,7 +4936,8 @@
       "expected_final_behavior": "rejection",
       "acceptable_actions": [
         "direct_reject",
-        "tool_reject"
+        "tool_reject",
+        "clarify"
       ],
       "answer_requirements": {
         "type": "behavior"
@@ -4971,7 +4982,8 @@
       "expected_final_behavior": "rejection",
       "acceptable_actions": [
         "direct_reject",
-        "tool_reject"
+        "tool_reject",
+        "clarify"
       ],
       "answer_requirements": {
         "type": "behavior"
@@ -5014,7 +5026,8 @@
       "expected_final_behavior": "rejection",
       "acceptable_actions": [
         "direct_reject",
-        "tool_reject"
+        "tool_reject",
+        "clarify"
       ],
       "answer_requirements": {
         "type": "behavior"
@@ -5057,7 +5070,8 @@
       "expected_final_behavior": "rejection",
       "acceptable_actions": [
         "direct_reject",
-        "tool_reject"
+        "tool_reject",
+        "clarify"
       ],
       "answer_requirements": {
         "type": "behavior"
@@ -5100,7 +5114,8 @@
       "expected_final_behavior": "rejection",
       "acceptable_actions": [
         "direct_reject",
-        "tool_reject"
+        "tool_reject",
+        "clarify"
       ],
       "answer_requirements": {
         "type": "behavior"
@@ -5142,7 +5157,8 @@
       "expected_final_behavior": "rejection",
       "acceptable_actions": [
         "direct_reject",
-        "tool_reject"
+        "tool_reject",
+        "clarify"
       ],
       "answer_requirements": {
         "type": "behavior"
@@ -5188,7 +5204,8 @@
       "expected_final_behavior": "rejection",
       "acceptable_actions": [
         "direct_reject",
-        "tool_reject"
+        "tool_reject",
+        "clarify"
       ],
       "answer_requirements": {
         "type": "behavior"

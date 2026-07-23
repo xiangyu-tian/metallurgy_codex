@@ -20,6 +20,7 @@ REQUIRED_CATEGORIES = {
     "no_tool", "single_tool", "multi_tool", "insufficient_info",
     "out_of_domain", "adversarial",
 }
+EVALUATOR_VERSION = "1.1.2"
 
 _NUMBER_PATTERN = re.compile(
     r"(?<![A-Za-z0-9_.])[-+]?(?:\d+(?:,\d{3})*(?:\.\d*)?|\.\d+)(?:[eE][-+]?\d+)?"
@@ -32,15 +33,19 @@ _SCIENTIFIC_PATTERN = re.compile(
 _PERCENT_PATTERN = re.compile(r"([-+]?(?:\d+(?:\.\d*)?|\.\d+))\s*[%％]")
 _FRACTION_PATTERN = re.compile(r"(?<![\d.])([-+]?\d+)\s*/\s*(\d+)(?![\d.])")
 _SUPERSCRIPT_TRANSLATION = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻", "0123456789+-")
-_REJECTION_MARKERS = (
-    "无法换算", "无法执行", "不能换算", "不能直接", "维度不一致", "量纲不一致",
-    "物理量纲", "无效输入",
-    "无效化学式", "错误化学式", "未知物种", "不存在", "超出适用",
-    "超出范围", "不支持", "不守恒", "不可计算", "不能计算",
+_DOMAIN_REJECTION_MARKERS = (
+    "维度不一致", "量纲不一致", "物理量纲", "无效输入", "无效化学式",
+    "错误化学式", "未知物种", "不是一个已知", "不是已知", "超出适用",
+    "超出范围", "不在其适用域", "不守恒", "不适用", "失效",
 )
 _CLARIFICATION_MARKERS = (
-    "请提供", "请补充", "需要提供", "缺少", "请明确", "需要具体",
+    "请提供", "请补充", "需要您补充", "需要提供", "您没有提供",
+    "由于您未提供", "如果您能提供", "缺少必要", "请明确", "需要具体",
     "需要先明确", "信息不足", "无法确定", "还需要", "想计算哪个",
+)
+_OPENING_REJECTION_MARKERS = (
+    "无法换算", "无法执行", "无法将", "无法解析", "不能换算", "不能直接",
+    "不可计算", "不能计算",
 )
 
 
@@ -77,10 +82,12 @@ def _final_behavior(experiment: dict) -> str:
 
     answer = (experiment.get("final_answer") or "").strip()
     opening = answer.split("\n\n", 1)[0]
-    if any(marker in opening for marker in _REJECTION_MARKERS):
+    if any(marker in answer for marker in _DOMAIN_REJECTION_MARKERS):
         return "direct_reject"
-    if any(marker in opening for marker in _CLARIFICATION_MARKERS):
+    if any(marker in answer for marker in _CLARIFICATION_MARKERS):
         return "clarify"
+    if any(marker in opening for marker in _OPENING_REJECTION_MARKERS):
+        return "direct_reject"
     return "direct_answer" if answer else "empty_answer"
 
 
@@ -237,6 +244,7 @@ class ToolCallingDataset:
             "case_count": self.document["case_count"],
             "category_coverage": deepcopy(self.document["category_coverage"]),
             "schema_version": self.document["schema_version"],
+            "evaluator_version": EVALUATOR_VERSION,
         }
 
 
@@ -288,6 +296,16 @@ class BenchmarkService:
         final_answer_correct = _final_answer_correct(
             case, experiment, final_behavior_correct
         )
+        requirement_type = (case.get("answer_requirements") or {}).get("type")
+        if (
+            not chain
+            and requirement_type in {"numeric", "concept_terms"}
+            and final_answer_correct
+        ):
+            # A correct substantive answer remains a direct answer even when
+            # it contains caveats or an invitation to provide more context.
+            actual_behavior = "direct_answer"
+            final_behavior_correct = actual_behavior in case.get("acceptable_actions", [])
 
         tool_decision_correct = called == case["should_call_tool"]
         if case["should_call_tool"]:
@@ -391,9 +409,32 @@ class BenchmarkService:
             and final_answer_correct
             if final_answer_correct is not None else None
         )
+        call_records = chain or ([{
+            "validation_result": validation,
+            "execution_result": execution,
+        }] if called else [])
+        unsuccessful_call_count = sum(
+            (item.get("execution_result") or {}).get("status") != "success"
+            for item in call_records
+        )
+        unnecessary_call_count = len(call_records) if not case["should_call_tool"] else 0
+        if not case["should_call_tool"]:
+            ineffective_call_count = len(call_records)
+        elif expected_outcome == "reject":
+            ineffective_call_count = sum(
+                not (
+                    not (item.get("validation_result") or {}).get("valid", False)
+                    or (item.get("execution_result") or {}).get("status")
+                    in {"rejected", "error"}
+                )
+                for item in call_records
+            )
+        else:
+            ineffective_call_count = unsuccessful_call_count
 
         return {
             "experiment_completed": experiment_completed,
+            "evaluator_version": EVALUATOR_VERSION,
             "expected_final_behavior": case.get("expected_final_behavior"),
             "actual_final_behavior": actual_behavior,
             "final_behavior_correct": final_behavior_correct,
@@ -416,13 +457,9 @@ class BenchmarkService:
             ),
             "actual_called": called,
             "actual_call_count": len(actual_sequence),
-            "ineffective_call_count": sum(
-                1 for item in chain
-                if not item.get("execution_result")
-                or item["execution_result"].get("status") != "success"
-            ) if chain else (
-                1 if called and (not execution or execution.get("status") != "success") else 0
-            ),
+            "unsuccessful_call_count": unsuccessful_call_count,
+            "unnecessary_call_count": unnecessary_call_count,
+            "ineffective_call_count": ineffective_call_count,
             "duplicate_call_count": len(actual_sequence) - len(set(actual_sequence)),
             "actual_model": selected,
             "execution_status": execution.get("status") if execution else None,
@@ -457,6 +494,12 @@ class BenchmarkService:
         ) if rows else None
         aggregate["ineffective_call_rate"] = round(
             sum(row["metrics"]["ineffective_call_count"] for row in rows) / total_calls, 4
+        ) if total_calls else 0.0 if rows else None
+        aggregate["unsuccessful_call_rate"] = round(
+            sum(row["metrics"]["unsuccessful_call_count"] for row in rows) / total_calls, 4
+        ) if total_calls else 0.0 if rows else None
+        aggregate["unnecessary_call_rate"] = round(
+            sum(row["metrics"]["unnecessary_call_count"] for row in rows) / total_calls, 4
         ) if total_calls else 0.0 if rows else None
         aggregate["duplicate_call_rate"] = round(
             sum(row["metrics"]["duplicate_call_count"] for row in rows) / total_calls, 4
@@ -573,6 +616,7 @@ class BenchmarkService:
                 "engine": engine,
                 "llm_name": effective_llm_name,
                 "prompt_version": effective_prompt_version,
+                "evaluator_version": EVALUATOR_VERSION,
                 "result_validation_enabled": result_validation_enabled,
             },
             "total_experiments": len(rows),

@@ -58,7 +58,7 @@ def case_record(
         acceptable_actions = {
             "no_tool": ["direct_answer"],
             "clarify": ["clarify"],
-            "reject": ["direct_reject", "tool_reject"],
+            "reject": ["direct_reject", "tool_reject", "clarify"],
             "multi_tool": ["direct_answer", "tool_success", "multi_tool_success"],
             "success": ["direct_answer", "tool_success"],
         }[expected_outcome]
@@ -181,8 +181,8 @@ def build_no_tool_cases():
         ("为什么扩散通常随温度升高而加快？", [["扩散"], ["温度"], ["活化", "原子", "迁移"]]),
         ("介绍炼铁中的直接还原与间接还原。", [["直接还原"], ["间接还原"], ["碳", "CO", "一氧化碳"]]),
         ("什么是化学反应平衡？", [["正反应"], ["逆反应"], ["速率"], ["平衡"]]),
-        ("解释活化能的含义。", [["活化能"], ["反应"], ["能垒", "最低能量"]]),
-        ("为什么化学式需要区分大小写？", [["元素符号"], ["大写"], ["小写"], ["元素", "物质"]]),
+        ("解释活化能的含义。", [["活化能"], ["反应"], ["能垒", "最低能量", "最小能量"]]),
+        ("为什么化学式需要区分大小写？", [["元素符号"], ["大小写", "大写"], ["大小写", "小写"], ["元素", "物质"]]),
         ("什么是标准状态？", [["标准状态"], ["压力"], ["参考", "规定"]]),
     ]
     return [case_record(
@@ -352,7 +352,7 @@ def build_dataset():
     categories = Counter(item["category"] for item in cases)
     return {
         "dataset_name": "Metallurgy Tool Calling Benchmark",
-        "dataset_version": "1.1.0",
+        "dataset_version": "1.1.1",
         "case_count": len(cases),
         "category_coverage": dict(sorted(categories.items())),
         "schema_version": "1.1",

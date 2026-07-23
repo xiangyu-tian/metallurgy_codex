@@ -30,7 +30,7 @@ class ToolCallingDatasetTests(unittest.TestCase):
     def test_materialized_dataset_has_fixed_six_category_coverage(self):
         self.assertEqual(self.dataset.summary(), {
             "dataset_name": "Metallurgy Tool Calling Benchmark",
-            "dataset_version": "1.1.0",
+            "dataset_version": "1.1.1",
             "case_count": 120,
             "category_coverage": {
                 "adversarial": 10,
@@ -41,6 +41,7 @@ class ToolCallingDatasetTests(unittest.TestCase):
                 "single_tool": 51,
             },
             "schema_version": "1.1",
+            "evaluator_version": "1.1.2",
         })
         self.assertEqual(
             {case["category"] for case in self.dataset.list_cases()},
@@ -117,7 +118,8 @@ class BenchmarkServiceTests(unittest.TestCase):
         self.assertEqual(stored["benchmark_case_id"], "TC-SINGLE_TOOL-001")
         self.assertEqual(stored["metrics"], forced_single["metrics"])
         self.assertEqual(stored["metrics"]["benchmark_run_id"], result["run_id"])
-        self.assertEqual(stored["metrics"]["dataset_version"], "1.1.0")
+        self.assertEqual(stored["metrics"]["dataset_version"], "1.1.1")
+        self.assertEqual(stored["metrics"]["evaluator_version"], "1.1.2")
 
     def test_semantic_answer_behavior_and_path_are_independent(self):
         numeric_case = self.service.dataset.get("TC-SINGLE_TOOL-001")
@@ -126,8 +128,9 @@ class BenchmarkServiceTests(unittest.TestCase):
             "status": "completed",
             "selected_model": None,
             "tool_call_chain": [],
-            "final_answer": f"计算结果为 {expected_value}",
+            "final_answer": f"计算结果为 {expected_value}。如需其他条件，请提供更多信息。",
         })
+        self.assertEqual(direct_numeric["actual_final_behavior"], "direct_answer")
         self.assertTrue(direct_numeric["final_answer_correct"])
         self.assertTrue(direct_numeric["final_behavior_correct"])
         self.assertTrue(direct_numeric["semantic_case_passed"])
@@ -243,6 +246,45 @@ class BenchmarkServiceTests(unittest.TestCase):
         })
         self.assertTrue(percentage["final_answer_correct"])
         self.assertTrue(fraction["final_answer_correct"])
+
+    def test_rejections_are_effective_and_unneeded_successes_are_ineffective(self):
+        reject_case = self.service.dataset.get("TC-OUT_OF_DOMAIN-001")
+        rejected = BenchmarkService.evaluate(reject_case, {
+            "status": "completed",
+            "selected_model": "A001",
+            "generated_arguments": reject_case["standard_arguments"],
+            "validation_result": {"valid": False, "errors": []},
+            "execution_result": None,
+            "tool_call_chain": [{
+                "model_code": "A001",
+                "generated_arguments": reject_case["standard_arguments"],
+                "validation_result": {"valid": False, "errors": []},
+                "execution_result": None,
+            }],
+            "final_answer": "kg 与 Pa 量纲不一致，不能换算。",
+        })
+        self.assertEqual(rejected["unsuccessful_call_count"], 1)
+        self.assertEqual(rejected["unnecessary_call_count"], 0)
+        self.assertEqual(rejected["ineffective_call_count"], 0)
+
+        concept_case = self.service.dataset.get("TC-NO_TOOL-001")
+        unnecessary = BenchmarkService.evaluate(concept_case, {
+            "status": "completed",
+            "selected_model": "A003",
+            "generated_arguments": {"formula": "Fe2O3"},
+            "validation_result": {"valid": True, "errors": []},
+            "execution_result": {"status": "success", "output": {}},
+            "tool_call_chain": [{
+                "model_code": "A003",
+                "generated_arguments": {"formula": "Fe2O3"},
+                "validation_result": {"valid": True, "errors": []},
+                "execution_result": {"status": "success", "output": {}},
+            }],
+            "final_answer": "Shomate 方程是描述热容的经验公式。",
+        })
+        self.assertEqual(unnecessary["unsuccessful_call_count"], 0)
+        self.assertEqual(unnecessary["unnecessary_call_count"], 1)
+        self.assertEqual(unnecessary["ineffective_call_count"], 1)
 
     def test_invalid_mode_is_rejected_before_execution(self):
         with self.assertRaises(ValueError):

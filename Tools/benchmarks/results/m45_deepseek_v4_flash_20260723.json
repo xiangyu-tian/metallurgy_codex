@@ -1,0 +1,141 @@
+{
+  "experiment": "M4.5.2 DeepSeek single-pass baseline",
+  "date": "2026-07-23",
+  "model": "deepseek-v4-flash",
+  "prompt_version": "m4.5-v1",
+  "dataset_version": "1.1.1",
+  "evaluator_version": "1.1.2",
+  "cases_per_mode": 120,
+  "automatically_scored_per_mode": 105,
+  "manual_review_per_mode": 15,
+  "totals": {
+    "experiments": 360,
+    "completed": 360,
+    "provider_failures": 0,
+    "tokens": 667258
+  },
+  "modes": {
+    "direct": {
+      "run_id": "BENCH-FB5528919925464B",
+      "started_at": "2026-07-23T10:06:12.250907+08:00",
+      "finished_at": "2026-07-23T10:13:50.670628+08:00",
+      "summary": {
+        "final_behavior_correct_rate": 0.8,
+        "final_answer_correct_rate": 0.581,
+        "semantic_case_passed_rate": 0.581,
+        "path_compliance_correct_rate": 0.2917,
+        "strict_case_passed_rate": 0.3238,
+        "tool_decision_correct_rate": 0.2917,
+        "model_selection_correct_rate": 0.2917,
+        "arguments_exact_match_rate": 0.2917,
+        "numeric_result_correct_rate": 0.0,
+        "average_call_count": 0.0,
+        "ineffective_call_rate": 0.0,
+        "unsuccessful_call_rate": 0.0,
+        "unnecessary_call_rate": 0.0,
+        "duplicate_call_rate": 0.0,
+        "total_tokens": 57027,
+        "average_latency_ms": 3644.511
+      },
+      "semantic_rate_by_category": {
+        "no_tool": 1.0,
+        "single_tool": 0.2941,
+        "multi_tool": null,
+        "insufficient_info": 0.9333,
+        "out_of_domain": 0.7143,
+        "adversarial": 0.7
+      },
+      "path_rate_by_category": {
+        "no_tool": 1.0,
+        "single_tool": 0.0,
+        "multi_tool": 0.0,
+        "insufficient_info": 1.0,
+        "out_of_domain": 0.0,
+        "adversarial": 0.5
+      }
+    },
+    "forced": {
+      "run_id": "BENCH-29353D02A5E7467C",
+      "started_at": "2026-07-23T10:20:22.269339+08:00",
+      "finished_at": "2026-07-23T10:28:24.015032+08:00",
+      "summary": {
+        "final_behavior_correct_rate": 0.6583,
+        "final_answer_correct_rate": 0.5714,
+        "semantic_case_passed_rate": 0.381,
+        "path_compliance_correct_rate": 0.425,
+        "strict_case_passed_rate": 0.2952,
+        "tool_decision_correct_rate": 0.7083,
+        "model_selection_correct_rate": 0.7083,
+        "arguments_exact_match_rate": 0.525,
+        "numeric_result_correct_rate": 0.6429,
+        "average_call_count": 1.0,
+        "ineffective_call_rate": 0.3417,
+        "unsuccessful_call_rate": 0.175,
+        "unnecessary_call_rate": 0.2917,
+        "duplicate_call_rate": 0.0,
+        "total_tokens": 162371,
+        "average_latency_ms": 3853.201
+      },
+      "semantic_rate_by_category": {
+        "no_tool": 0.0,
+        "single_tool": 0.4902,
+        "multi_tool": null,
+        "insufficient_info": 0.0,
+        "out_of_domain": 0.8571,
+        "adversarial": 0.3
+      },
+      "path_rate_by_category": {
+        "no_tool": 0.0,
+        "single_tool": 0.8039,
+        "multi_tool": 0.0,
+        "insufficient_info": 0.0,
+        "out_of_domain": 0.4286,
+        "adversarial": 0.4
+      }
+    },
+    "autonomous": {
+      "run_id": "BENCH-D799373827F84D43",
+      "started_at": "2026-07-23T10:29:03.943831+08:00",
+      "finished_at": "2026-07-23T10:36:19.857773+08:00",
+      "summary": {
+        "final_behavior_correct_rate": 0.7667,
+        "final_answer_correct_rate": 0.6571,
+        "semantic_case_passed_rate": 0.6381,
+        "path_compliance_correct_rate": 0.6083,
+        "strict_case_passed_rate": 0.5333,
+        "tool_decision_correct_rate": 0.8083,
+        "model_selection_correct_rate": 0.8083,
+        "arguments_exact_match_rate": 0.625,
+        "numeric_result_correct_rate": 0.6071,
+        "average_call_count": 0.6,
+        "ineffective_call_rate": 0.2222,
+        "unsuccessful_call_rate": 0.2639,
+        "unnecessary_call_rate": 0.0,
+        "duplicate_call_rate": 0.0139,
+        "total_tokens": 447860,
+        "average_latency_ms": 3462.82
+      },
+      "semantic_rate_by_category": {
+        "no_tool": 1.0,
+        "single_tool": 0.3922,
+        "multi_tool": null,
+        "insufficient_info": 0.8667,
+        "out_of_domain": 0.7857,
+        "adversarial": 0.8
+      },
+      "path_rate_by_category": {
+        "no_tool": 1.0,
+        "single_tool": 0.5686,
+        "multi_tool": 0.0667,
+        "insufficient_info": 1.0,
+        "out_of_domain": 0.2857,
+        "adversarial": 0.9
+      }
+    }
+  },
+  "notes": [
+    "Complex multi-tool final answers require manual review and are excluded from semantic accuracy denominators.",
+    "All per-experiment prompts, tool calls, responses, token usage and metrics are persisted in PostgreSQL under the listed run IDs.",
+    "This is one single-pass run per mode; model variance has not yet been estimated with repeated trials."
+  ]
+}

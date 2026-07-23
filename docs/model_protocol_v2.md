@@ -98,7 +98,7 @@
 
 ## 工具调用基准数据集
 
-固化数据文件：`Tools/benchmarks/tool_calling_cases.json`；生成器：`Tools/benchmarks/build_tool_calling_dataset.py`。数据集版本为 `1.1.0`，Schema 版本为 `1.1`，共 120 条，覆盖：
+固化数据文件：`Tools/benchmarks/tool_calling_cases.json`；生成器：`Tools/benchmarks/build_tool_calling_dataset.py`。数据集版本为 `1.1.1`，Schema 版本为 `1.1`，当前评分器版本为 `1.1.2`，共 120 条，覆盖：
 
 - 不调用工具 `no_tool`：15 条；
 - 单工具 `single_tool`：51 条；
@@ -112,7 +112,7 @@
 评价契约额外包含：
 
 - `expected_final_behavior`：期望的最终行为，如概念回答、澄清、拒绝或数值回答；
-- `acceptable_actions`：语义上允许的终止动作，例如超适用域同时允许直接拒绝和工具校验后拒绝；
+- `acceptable_actions`：语义上允许的终止动作，例如超适用域允许直接拒绝、请求更正输入或工具校验后拒绝；
 - `answer_requirements`：答案自动评价方式，支持数值容差、概念术语组和行为评价；复杂多工具答案标记为 `manual`。
 
 120 条中有 56 条数值答案、29 条澄清/拒绝行为、20 条概念答案可自动评价；15 条复杂多工具答案进入人工评价，不计入自动答案准确率分母。
@@ -149,7 +149,7 @@
 - `final_behavior_correct`：回答、澄清、直接拒绝、工具拒绝等终止行为是否合理；
 - `path_compliance_correct`：是否按冻结的标准工具、参数、顺序和执行结果完成调用。
 
-`strict_case_passed` 要求答案、行为和标准路径同时通过；`case_passed` 是 `semantic_case_passed` 的兼容别名。无法自动评价的复杂答案返回 `null`，并计入 `manual_review_experiment_count`，不会污染准确率分母。其他诊断指标继续包含是否调用判断、模型选择、参数精确匹配、单位处理、适用域校验、数值执行结果、调用链召回率、无效/重复调用率、平均调用次数、Token 和延迟。供应商请求失败单独计入 `failed_experiment_count`，不会被误判成“不调用工具”的正确决策。每条评分通过 `benchmark_case_id` 与实验轨迹关联，批次编号和数据集版本随评分写入 `experiment_run.metrics_json`。
+`strict_case_passed` 要求答案、行为和标准路径同时通过；`case_passed` 是 `semantic_case_passed` 的兼容别名。无法自动评价的复杂答案返回 `null`，并计入 `manual_review_experiment_count`，不会污染准确率分母。其他诊断指标继续包含是否调用判断、模型选择、参数精确匹配、单位处理、适用域校验、数值执行结果、调用链召回率、平均调用次数、Token 和延迟。调用效率拆分为执行未成功率、不必要调用率和综合无效调用率；符合预期的适用域拒绝属于有效调用，概念或信息不足问题上的多余成功调用属于无效调用。供应商请求失败单独计入 `failed_experiment_count`，不会被误判成“不调用工具”的正确决策。每条评分通过 `benchmark_case_id` 与实验轨迹关联，批次编号、数据集版本和评分器版本随评分写入 `experiment_run.metrics_json`。
 
 确定性编排基线与 DeepSeek 真实引擎共用同一数据集、执行器和指标契约，可通过 `engine` 切换后直接对比。
 
@@ -166,6 +166,8 @@
 `GET /api/health` 只返回提供商、模型、兼容地址和“密钥是否已配置”，不会返回密钥内容。聊天响应的 `data.llm` 保存实际模型、响应编号和 Token 用量，便于后续实验追踪。Python 模型服务从同一份本机配置读取 OpenAI 兼容地址，并已接入单次实验和批量评测接口。
 
 M4.5.1 真实小批量复验（`deepseek-v4-flash`、`autonomous`、六类各 1 条）完成 6/6 请求：5 条可自动评价样本的语义答案和最终行为全部通过，1 条复杂多工具答案进入人工评价；标准工具路径为 5/6。唯一的路径差异仍是超适用域样本被模型直接合理拒绝，而冻结路径要求调用 A001 后由执行器拒绝。新评价契约将该样本记录为“语义通过、路径不一致”，不再把两种结论混为一次失败。
+
+M4.5.2 已完成 120 条数据的三模式真实单轮基线，共 360 次 DeepSeek 请求，全部完成并持久化，供应商失败为 0。自动可评分样本的语义准确率分别为 direct 58.10%、forced 38.10%、autonomous 63.81%；autonomous 的工具决策准确率为 80.83%，但 Token 为 direct 的 7.85 倍，多工具完整路径仅命中 1/15。完整报告见 `docs/experiments/m45_deepseek_baseline_20260723.md`，机器可读摘要见 `Tools/benchmarks/results/m45_deepseek_v4_flash_20260723.json`。
 
 ## 轨迹存储配置
 
