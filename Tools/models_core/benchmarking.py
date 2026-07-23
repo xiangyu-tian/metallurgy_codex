@@ -549,8 +549,10 @@ class BenchmarkService:
         effective_llm_name = llm_name or getattr(
             experiment_runner, "default_llm_name", "deterministic-orchestrator"
         )
-        effective_prompt_version = prompt_version or (
-            "m4.5-v1" if engine == "deepseek" else "benchmark-v1"
+        effective_prompt_version = prompt_version or getattr(
+            experiment_runner,
+            "default_prompt_version",
+            "benchmark-v1",
         )
 
         run_id = _identifier("BENCH")

@@ -197,43 +197,165 @@ def build_no_tool_cases():
 
 def build_multi_tool_cases():
     definitions = [
-        ("计算 1000 kg Fe2O3 完全还原所需 CO 质量，并估算反应焓。", ["A002", "A003", "A005", "B006"]),
-        ("解析 CaCO3，计算摩尔质量并求 900 K 分解反应 Gibbs。", ["A002", "A003", "B008"]),
-        ("把 1200 摄氏度换算为开尔文，再计算 FeO 的定压热容。", ["A001", "B001"]),
-        ("计算 Fe2O3 的摩尔质量，并给出元素质量分数。", ["A002", "A003"]),
-        ("计算碳燃烧反应焓、反应 Gibbs 和平衡常数。", ["B006", "B008", "B009"]),
-        ("归一化炉渣成分后，用杠杆规则计算两相分数。", ["A004", "B019"]),
-        ("先换算活化能单位，再用 Arrhenius 公式求速率常数。", ["A001", "C001"]),
-        ("计算 Fe 从 400 K 到 1000 K 的焓积分和熵积分。", ["B003", "B004"]),
-        ("计算 O2 在 1000 K 的热容，并计算其物种 Gibbs。", ["B001", "B005"]),
-        ("核对输入输出物流质量守恒，再将产量从 kg 换算为 t。", ["A005", "A001"]),
-        ("计算 FeO 碳还原的反应熵、Gibbs 和反应方向。", ["B007", "B008"]),
-        ("计算扩散系数，并估算给定时间的扩散距离。", ["C002", "A001"]),
-        ("解析 Al2O3 并计算摩尔质量和铝元素质量分数。", ["A002", "A003"]),
-        ("把压力从 MPa 换算为 Pa，并判断是否位于模型适用压力范围。", ["A001", "B008"]),
-        ("计算石灰石分解反应焓和理论分解温度。", ["B006", "B008"]),
+        (
+            "先解析 Fe2O3，再用独立工具计算摩尔质量，最后将所得数值从 g 换算为 kg。",
+            [
+                ("A002", {"formula": "Fe2O3"}),
+                ("A003", {"formula": "Fe2O3"}),
+                ("A001", {"value": 159.687, "source_unit": "g", "target_unit": "kg"}),
+            ],
+        ),
+        (
+            "解析 CaCO3，并计算反应 CaCO₃ → CaO + CO₂ 在 900 K 的 Gibbs 自由能。",
+            [
+                ("A002", {"formula": "CaCO3"}),
+                ("B008", {"reaction": "CaCO₃ → CaO + CO₂", "temperature": 900}),
+            ],
+        ),
+        (
+            "把 1200 摄氏度换算为开尔文，再按换算温度计算 Fe(s) 的定压热容。",
+            [
+                ("A001", {"value": 1200, "source_unit": "°C", "target_unit": "K"}),
+                ("B001", {"species": "Fe(s)", "temperature": 1473.15}),
+            ],
+        ),
+        (
+            "分别解析 Fe2O3，并用独立的摩尔质量工具交叉核对其摩尔质量。",
+            [
+                ("A002", {"formula": "Fe2O3"}),
+                ("A003", {"formula": "Fe2O3"}),
+            ],
+        ),
+        (
+            "计算反应 C + O₂ → CO₂ 在 1000 K 的反应焓、反应 Gibbs 和平衡常数。",
+            [
+                ("B006", {"reaction": "C + O₂ → CO₂", "temperature": 1000}),
+                ("B008", {"reaction": "C + O₂ → CO₂", "temperature": 1000}),
+                ("B009", {"reaction": "C + O₂ → CO₂", "temperature": 1000}),
+            ],
+        ),
+        (
+            "先归一化炉渣成分 CaO=45、SiO2=35、Al2O3=20；"
+            "再对总体成分 0.4、两相边界 0.2 和 0.8 使用杠杆规则计算相分数。",
+            [
+                ("A004", {"compositions": {"CaO": 45, "SiO2": 35, "Al2O3": 20}}),
+                ("B019", {
+                    "overall_composition": 0.4,
+                    "phase1_composition": 0.2,
+                    "phase2_composition": 0.8,
+                }),
+            ],
+        ),
+        (
+            "先把 800 摄氏度换算为开尔文，再用换算温度、A=1e7、"
+            "Ea=80 kJ/mol 计算 Arrhenius 速率常数。",
+            [
+                ("A001", {"value": 800, "source_unit": "°C", "target_unit": "K"}),
+                ("C001", {
+                    "A": 1e7,
+                    "Ea": 80,
+                    "temperature": 1073.15,
+                    "Ea_unit": "kJ/mol",
+                }),
+            ],
+        ),
+        (
+            "分别计算 Fe(s) 从 400 K 到 1000 K 的焓积分和熵积分。",
+            [
+                ("B003", {
+                    "species": "Fe(s)",
+                    "temperature_start": 400,
+                    "temperature_end": 1000,
+                }),
+                ("B004", {
+                    "species": "Fe(s)",
+                    "temperature_start": 400,
+                    "temperature_end": 1000,
+                }),
+            ],
+        ),
+        (
+            "计算 O2(g) 在 1000 K 的定压热容和物种 Gibbs 自由能。",
+            [
+                ("B001", {"species": "O2(g)", "temperature": 1000}),
+                ("B005", {"species": "O2(g)", "temperature": 1000}),
+            ],
+        ),
+        (
+            "输入物流为 100 kg 纯 Fe，输出物流也为 100 kg 纯 Fe；"
+            "先核对元素质量守恒，再将输出质量从 kg 换算为 t。",
+            [
+                ("A005", {
+                    "input_streams": [{
+                        "name": "feed", "mass": 100, "elements": {"Fe": 1},
+                    }],
+                    "output_streams": [{
+                        "name": "product", "mass": 100, "elements": {"Fe": 1},
+                    }],
+                }),
+                ("A001", {"value": 100, "source_unit": "kg", "target_unit": "t"}),
+            ],
+        ),
+        (
+            "计算反应 FeO + C → Fe + CO 在 1000 K 的反应熵、Gibbs 和反应方向。",
+            [
+                ("B007", {"reaction": "FeO + C → Fe + CO", "temperature": 1000}),
+                ("B008", {"reaction": "FeO + C → Fe + CO", "temperature": 1000}),
+            ],
+        ),
+        (
+            "已知 D0=1e-4 m²/s、Q=60 kJ/mol、温度 1000 K；"
+            "计算 1 小时扩散距离，并将所得距离从 m 换算为 mm。",
+            [
+                ("C002", {
+                    "D0": 1e-4,
+                    "Q": 60,
+                    "temperature": 1000,
+                    "Q_unit": "kJ/mol",
+                }),
+                ("A001", {
+                    "value": 0.01625756,
+                    "source_unit": "m",
+                    "target_unit": "mm",
+                }),
+            ],
+        ),
+        (
+            "解析 Al2O3，并将解析所得摩尔质量数值从 g 换算为 kg。",
+            [
+                ("A002", {"formula": "Al2O3"}),
+                ("A001", {"value": 101.9601, "source_unit": "g", "target_unit": "kg"}),
+            ],
+        ),
+        (
+            "先把 1 t 纯 Fe 物料换算为 kg，再用换算后的质量构建相同的"
+            "输入、输出物流并校验元素质量守恒。",
+            [
+                ("A001", {"value": 1, "source_unit": "t", "target_unit": "kg"}),
+                ("A005", {
+                    "input_streams": [{
+                        "name": "feed", "mass": 1000, "elements": {"Fe": 1},
+                    }],
+                    "output_streams": [{
+                        "name": "product", "mass": 1000, "elements": {"Fe": 1},
+                    }],
+                }),
+            ],
+        ),
+        (
+            "计算反应 CaCO₃ → CaO + CO₂ 在 900 K 的反应焓和 Gibbs 自由能。",
+            [
+                ("B006", {"reaction": "CaCO₃ → CaO + CO₂", "temperature": 900}),
+                ("B008", {"reaction": "CaCO₃ → CaO + CO₂", "temperature": 900}),
+            ],
+        ),
     ]
-    default_arguments = {
-        "A001": {"value": 1200, "source_unit": "°C", "target_unit": "K"},
-        "A002": {"formula": "Fe2O3"},
-        "A003": {"formula": "Fe2O3"},
-        "A004": {"compositions": {"CaO": 45, "SiO2": 35, "Al2O3": 20}},
-        "A005": {"input_streams": [{"name": "feed", "mass": 100, "elements": {"Fe": 1}}], "output_streams": [{"name": "product", "mass": 100, "elements": {"Fe": 1}}]},
-        "B001": {"species": "Fe(s)", "temperature": 1000},
-        "B003": {"species": "Fe(s)", "temperature_start": 400, "temperature_end": 1000},
-        "B004": {"species": "Fe(s)", "temperature_start": 400, "temperature_end": 1000},
-        "B005": {"species": "O2(g)", "temperature": 1000},
-        "B006": {"reaction": "C + O₂ → CO₂", "temperature": 1000},
-        "B007": {"reaction": "FeO + C → Fe + CO", "temperature": 1000},
-        "B008": {"reaction": "CaCO₃ → CaO + CO₂", "temperature": 900},
-        "B009": {"reaction": "C + O₂ → CO₂", "temperature": 1000},
-        "B019": {"overall_composition": 0.4, "phase1_composition": 0.2, "phase2_composition": 0.8},
-        "C001": {"A": 1e7, "Ea": 80000, "temperature": 1000, "Ea_unit": "J/mol"},
-        "C002": {"D0": 1e-4, "Q": 60000, "temperature": 1000, "Q_unit": "J/mol"},
-    }
     cases = []
-    for index, (question, sequence) in enumerate(definitions, 1):
-        step_arguments = {code: default_arguments[code] for code in sequence}
+    for index, (question, steps) in enumerate(definitions, 1):
+        sequence = [code for code, _ in steps]
+        if len(sequence) != len(set(sequence)):
+            raise RuntimeError("multi-tool benchmark steps must have unique model codes")
+        step_arguments = dict(steps)
         step_argument_units = {
             code: units_for(code, arguments)
             for code, arguments in step_arguments.items()
@@ -352,7 +474,7 @@ def build_dataset():
     categories = Counter(item["category"] for item in cases)
     return {
         "dataset_name": "Metallurgy Tool Calling Benchmark",
-        "dataset_version": "1.1.1",
+        "dataset_version": "1.2.0",
         "case_count": len(cases),
         "category_coverage": dict(sorted(categories.items())),
         "schema_version": "1.1",

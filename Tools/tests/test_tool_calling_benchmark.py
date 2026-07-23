@@ -30,7 +30,7 @@ class ToolCallingDatasetTests(unittest.TestCase):
     def test_materialized_dataset_has_fixed_six_category_coverage(self):
         self.assertEqual(self.dataset.summary(), {
             "dataset_name": "Metallurgy Tool Calling Benchmark",
-            "dataset_version": "1.1.1",
+            "dataset_version": "1.2.0",
             "case_count": 120,
             "category_coverage": {
                 "adversarial": 10,
@@ -61,6 +61,66 @@ class ToolCallingDatasetTests(unittest.TestCase):
                 self.assertIn(case["answer_requirements"]["type"], {
                     "numeric", "concept_terms", "behavior", "manual",
                 })
+
+    def test_multi_tool_cases_use_scenario_specific_self_contained_inputs(self):
+        calcium = self.dataset.get("TC-MULTI_TOOL-002")
+        self.assertEqual(
+            calcium["step_arguments"]["A002"],
+            {"formula": "CaCO3"},
+        )
+        self.assertEqual(
+            calcium["step_arguments"]["B008"],
+            {"reaction": "CaCO₃ → CaO + CO₂", "temperature": 900},
+        )
+
+        phase = self.dataset.get("TC-MULTI_TOOL-006")
+        for value in ("45", "35", "20", "0.4", "0.2", "0.8"):
+            self.assertIn(value, phase["question"])
+
+        kinetics = self.dataset.get("TC-MULTI_TOOL-007")
+        self.assertEqual(
+            kinetics["step_arguments"]["A001"],
+            {"value": 800, "source_unit": "°C", "target_unit": "K"},
+        )
+        self.assertEqual(
+            kinetics["step_arguments"]["C001"]["temperature"],
+            1073.15,
+        )
+        for value in ("800", "1e7", "80 kJ/mol"):
+            self.assertIn(value, kinetics["question"])
+
+        balance = self.dataset.get("TC-MULTI_TOOL-010")
+        self.assertIn("100 kg", balance["question"])
+        self.assertEqual(
+            balance["step_arguments"]["A001"],
+            {"value": 100, "source_unit": "kg", "target_unit": "t"},
+        )
+
+        diffusion = self.dataset.get("TC-MULTI_TOOL-012")
+        for value in ("1e-4", "60 kJ/mol", "1000 K"):
+            self.assertIn(value, diffusion["question"])
+
+        converted_balance = self.dataset.get("TC-MULTI_TOOL-014")
+        self.assertEqual(
+            converted_balance["expected_call_sequence"],
+            ["A001", "A005"],
+        )
+        self.assertEqual(
+            converted_balance["step_arguments"]["A001"],
+            {"value": 1, "source_unit": "t", "target_unit": "kg"},
+        )
+
+    def test_every_frozen_multi_tool_step_is_executable(self):
+        registry = ModelRegistry()
+        registry.discover()
+        for case in self.dataset.list_cases(categories=["multi_tool"]):
+            for model_code in case["expected_call_sequence"]:
+                with self.subTest(case=case["case_id"], model=model_code):
+                    arguments = case["step_arguments"][model_code]
+                    validation = registry.validate(model_code, arguments)
+                    self.assertTrue(validation["valid"], validation["errors"])
+                    result = registry.invoke(model_code, arguments)
+                    self.assertTrue(result.success, result.error)
 
 
 class BenchmarkServiceTests(unittest.TestCase):
@@ -118,7 +178,7 @@ class BenchmarkServiceTests(unittest.TestCase):
         self.assertEqual(stored["benchmark_case_id"], "TC-SINGLE_TOOL-001")
         self.assertEqual(stored["metrics"], forced_single["metrics"])
         self.assertEqual(stored["metrics"]["benchmark_run_id"], result["run_id"])
-        self.assertEqual(stored["metrics"]["dataset_version"], "1.1.1")
+        self.assertEqual(stored["metrics"]["dataset_version"], "1.2.0")
         self.assertEqual(stored["metrics"]["evaluator_version"], "1.1.2")
 
     def test_semantic_answer_behavior_and_path_are_independent(self):

@@ -267,8 +267,10 @@ def run_experiment(req: ExperimentRequest):
         if req.engine not in experiment_engines:
             raise ValueError(f"unsupported experiment engine: {req.engine}")
         runner = experiment_engines[req.engine]
-        prompt_version = req.prompt_version or (
-            "m4.5-v1" if req.engine == "deepseek" else "v1"
+        prompt_version = req.prompt_version or getattr(
+            runner,
+            "default_prompt_version",
+            "v1",
         )
         llm_name = req.llm_name or getattr(
             runner, "default_llm_name", "deterministic-orchestrator"

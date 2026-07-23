@@ -73,7 +73,7 @@ class PostgresTraceStoreIntegrationTests(unittest.TestCase):
             "user_query": "计算 Fe2O3 的摩尔质量",
             "mode": "forced",
             "llm_name": "integration-test",
-            "prompt_version": "v1",
+            "prompt_version": "m4.6-v1",
             "candidate_models": [{"model_code": "A003", "score": 1}],
             "selected_model": "A003",
             "selection_reason": "integration test",
@@ -87,8 +87,12 @@ class PostgresTraceStoreIntegrationTests(unittest.TestCase):
                 "validation_result": {"valid": True, "errors": []},
                 "execution_result": execution,
             }],
-            "llm_trace": {"decision_response": {"id": "chat-integration"}},
-            "retry_count": 0,
+            "llm_trace": {
+                "decision_response": {"id": "chat-integration"},
+                "tool_round_count": 2,
+                "stop_reason": "assistant_final",
+            },
+            "retry_count": 1,
             "result_validation_enabled": True,
             "final_answer": "159.687 g/mol",
             "latency_ms": 2.5,
@@ -106,3 +110,6 @@ class PostgresTraceStoreIntegrationTests(unittest.TestCase):
             loaded_experiment["llm_trace"]["decision_response"]["id"],
             "chat-integration",
         )
+        self.assertEqual(loaded_experiment["tool_round_count"], 2)
+        self.assertEqual(loaded_experiment["retry_count"], 1)
+        self.assertEqual(loaded_experiment["stop_reason"], "assistant_final")

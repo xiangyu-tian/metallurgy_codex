@@ -177,6 +177,225 @@ class DeepSeekExperimentServiceTests(unittest.TestCase):
         self.assertIsNone(adapter.requests[0]["tools"])
         self.assertIn("Shomate", record["final_answer"])
 
+    def test_autonomous_mode_runs_dependent_tools_across_bounded_rounds(self):
+        adapter = FakeAdapter([
+            response({
+                "role": "assistant",
+                "content": "",
+                "tool_calls": [{
+                    "id": "call-molar-mass",
+                    "type": "function",
+                    "function": {"name": "A003", "arguments": '{"formula":"Fe2O3"}'},
+                }],
+            }, response_id="chat-round-1", finish_reason="tool_calls"),
+            response({
+                "role": "assistant",
+                "content": "",
+                "tool_calls": [{
+                    "id": "call-convert",
+                    "type": "function",
+                    "function": {
+                        "name": "A001",
+                        "arguments": (
+                            '{"value":159.687,"source_unit":"g","target_unit":"kg"}'
+                        ),
+                    },
+                }],
+            }, response_id="chat-round-2", finish_reason="tool_calls"),
+            response(
+                {"role": "assistant", "content": "Fe2O3 的摩尔质量为 0.159687 kg/mol。"},
+                response_id="chat-final",
+            ),
+        ])
+        service = DeepSeekExperimentService(
+            self.registry, self.executor, self.store, adapter
+        )
+
+        record = service.run(
+            user_query="计算 Fe2O3 的摩尔质量，并换算为 kg/mol",
+            mode="autonomous",
+            prompt_version="m4.6-v1",
+        )
+
+        self.assertEqual(len(record["tool_call_chain"]), 2)
+        self.assertEqual(
+            [call["round"] for call in record["tool_call_chain"]],
+            [1, 2],
+        )
+        self.assertEqual(record["tool_round_count"], 2)
+        self.assertEqual(record["retry_count"], 1)
+        self.assertEqual(record["stop_reason"], "assistant_final")
+        self.assertIn("0.159687", record["final_answer"])
+        self.assertEqual(len(adapter.requests), 3)
+        self.assertIsNotNone(adapter.requests[1]["tools"])
+        second_request = json.dumps(
+            adapter.requests[1]["messages"], ensure_ascii=False
+        )
+        self.assertIn("159.687", second_request)
+        self.assertEqual(len(record["llm_trace"]["rounds"]), 3)
+
+    def test_autonomous_mode_stops_duplicate_signature_and_synthesizes(self):
+        duplicate_call = {
+            "role": "assistant",
+            "content": "",
+            "tool_calls": [{
+                "id": "call-duplicate",
+                "type": "function",
+                "function": {"name": "A003", "arguments": '{"formula":"Fe2O3"}'},
+            }],
+        }
+        adapter = FakeAdapter([
+            response({
+                **duplicate_call,
+                "tool_calls": [{
+                    **duplicate_call["tool_calls"][0],
+                    "id": "call-original",
+                }],
+            }, response_id="chat-round-1", finish_reason="tool_calls"),
+            response(
+                duplicate_call,
+                response_id="chat-round-2",
+                finish_reason="tool_calls",
+            ),
+            response(
+                {"role": "assistant", "content": "已使用首次有效结果回答。"},
+                response_id="chat-synthesis",
+            ),
+        ])
+        service = DeepSeekExperimentService(
+            self.registry, self.executor, self.store, adapter
+        )
+
+        record = service.run(
+            user_query="计算 Fe2O3 的摩尔质量",
+            mode="autonomous",
+            prompt_version="m4.6-v1",
+        )
+
+        self.assertEqual(len(record["tool_call_chain"]), 2)
+        self.assertFalse(record["tool_call_chain"][0]["duplicate"])
+        self.assertTrue(record["tool_call_chain"][1]["duplicate"])
+        self.assertIsNone(record["tool_call_chain"][1]["execution_result"])
+        self.assertEqual(record["stop_reason"], "duplicate_tool_call")
+        self.assertEqual(len(adapter.requests), 3)
+        self.assertNotIn("tools", adapter.requests[-1])
+
+    def test_autonomous_mode_never_processes_more_than_five_tool_calls(self):
+        calls = [
+            {
+                "id": f"call-{index}",
+                "type": "function",
+                "function": {
+                    "name": "A003",
+                    "arguments": json.dumps({"formula": formula}),
+                },
+            }
+            for index, formula in enumerate(
+                ["Fe2O3", "FeO", "CO2", "H2O", "CaCO3", "MgO"],
+                start=1,
+            )
+        ]
+        adapter = FakeAdapter([
+            response(
+                {"role": "assistant", "content": "", "tool_calls": calls},
+                response_id="chat-too-many",
+                finish_reason="tool_calls",
+            ),
+            response(
+                {"role": "assistant", "content": "已根据前五次调用汇总结果。"},
+                response_id="chat-synthesis",
+            ),
+        ])
+        service = DeepSeekExperimentService(
+            self.registry, self.executor, self.store, adapter
+        )
+
+        record = service.run(
+            user_query="批量计算这些化合物的摩尔质量",
+            mode="autonomous",
+            prompt_version="m4.6-v1",
+        )
+
+        self.assertEqual(len(record["tool_call_chain"]), 5)
+        self.assertEqual(record["stop_reason"], "tool_call_limit")
+        first_round = record["llm_trace"]["rounds"][0]
+        self.assertEqual(first_round["received_tool_call_count"], 6)
+        self.assertEqual(first_round["processed_tool_call_count"], 5)
+        synthesis_messages = adapter.requests[-1]["messages"]
+        self.assertEqual(
+            len([message for message in synthesis_messages if message["role"] == "tool"]),
+            5,
+        )
+
+    def test_autonomous_mode_stops_after_three_tool_rounds(self):
+        adapter = FakeAdapter([
+            response({
+                "role": "assistant",
+                "content": "",
+                "tool_calls": [{
+                    "id": f"call-round-{index}",
+                    "type": "function",
+                    "function": {
+                        "name": "A003",
+                        "arguments": json.dumps({"formula": formula}),
+                    },
+                }],
+            }, response_id=f"chat-round-{index}", finish_reason="tool_calls")
+            for index, formula in enumerate(["Fe2O3", "CO2", "H2O"], start=1)
+        ] + [
+            response(
+                {"role": "assistant", "content": "三轮工具结果已经汇总。"},
+                response_id="chat-synthesis",
+            ),
+        ])
+        service = DeepSeekExperimentService(
+            self.registry, self.executor, self.store, adapter
+        )
+
+        record = service.run(
+            user_query="分三步完成计算",
+            mode="autonomous",
+            prompt_version="m4.6-v1",
+        )
+
+        self.assertEqual(record["tool_round_count"], 3)
+        self.assertEqual(record["retry_count"], 2)
+        self.assertEqual(record["stop_reason"], "tool_round_limit")
+        self.assertEqual(len(adapter.requests), 4)
+        self.assertNotIn("tools", adapter.requests[-1])
+
+    def test_m45_prompt_keeps_autonomous_single_round_control_policy(self):
+        adapter = FakeAdapter([
+            response({
+                "role": "assistant",
+                "content": "",
+                "tool_calls": [{
+                    "id": "call-control",
+                    "type": "function",
+                    "function": {"name": "A003", "arguments": '{"formula":"Fe2O3"}'},
+                }],
+            }, response_id="chat-control", finish_reason="tool_calls"),
+            response(
+                {"role": "assistant", "content": "单轮对照回答。"},
+                response_id="chat-control-final",
+            ),
+        ])
+        service = DeepSeekExperimentService(
+            self.registry, self.executor, self.store, adapter
+        )
+
+        record = service.run(
+            user_query="计算 Fe2O3 后继续下一步",
+            mode="autonomous",
+            prompt_version="m4.5-v1",
+        )
+
+        self.assertEqual(record["tool_round_count"], 1)
+        self.assertEqual(record["stop_reason"], "single_round_policy")
+        self.assertFalse(record["llm_trace"]["policy"]["multi_round_enabled"])
+        self.assertEqual(len(adapter.requests), 2)
+        self.assertNotIn("tools", adapter.requests[-1])
+
     def test_benchmark_routes_same_case_to_deepseek_without_reference_argument_leak(self):
         dataset = ToolCallingDataset()
         case = dataset.get("TC-SINGLE_TOOL-001")
@@ -215,6 +434,7 @@ class DeepSeekExperimentServiceTests(unittest.TestCase):
 
         self.assertEqual(result["configuration"]["engine"], "deepseek")
         self.assertEqual(result["configuration"]["llm_name"], "deepseek-v4-flash")
+        self.assertEqual(result["configuration"]["prompt_version"], "m4.6-v1")
         self.assertEqual(result["total_experiments"], 1)
         self.assertTrue(result["results"][0]["metrics"]["arguments_exact_match"])
         decision_messages = adapter.requests[0]["messages"]

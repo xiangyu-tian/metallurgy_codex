@@ -263,6 +263,7 @@ class PostgresTraceStore:
             conn.close()
         if not row:
             return None
+        llm_trace = row["llm_trace"] or {}
         return {
             "experiment_id": row["experiment_id"],
             "trace_id": row["trace_id"],
@@ -280,8 +281,10 @@ class PostgresTraceStore:
             "validation_result": row["validation_result"],
             "execution_result": row["execution_result"],
             "tool_call_chain": row["tool_call_chain"],
-            "llm_trace": row["llm_trace"],
+            "llm_trace": llm_trace,
+            "tool_round_count": llm_trace.get("tool_round_count", 0),
             "retry_count": row["retry_count"],
+            "stop_reason": llm_trace.get("stop_reason"),
             "result_validation_enabled": row["result_validation_enabled"],
             "final_answer": row["final_answer"],
             "latency_ms": float(row["latency_ms"] or 0),
