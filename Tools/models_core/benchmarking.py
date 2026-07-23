@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import math
 import os
+import re
 import time
 import uuid
 from collections import Counter
@@ -20,6 +21,28 @@ REQUIRED_CATEGORIES = {
     "out_of_domain", "adversarial",
 }
 
+_NUMBER_PATTERN = re.compile(
+    r"(?<![A-Za-z0-9_.])[-+]?(?:\d+(?:,\d{3})*(?:\.\d*)?|\.\d+)(?:[eE][-+]?\d+)?"
+)
+_SCIENTIFIC_PATTERN = re.compile(
+    r"([-+]?(?:\d+(?:\.\d*)?|\.\d+))\s*(?:×|x|\*|\\times)\s*"
+    r"10\s*(?:\^|\*\*)?\s*\{?\s*([-+]?\d+)\s*\}?",
+    re.IGNORECASE,
+)
+_PERCENT_PATTERN = re.compile(r"([-+]?(?:\d+(?:\.\d*)?|\.\d+))\s*[%％]")
+_FRACTION_PATTERN = re.compile(r"(?<![\d.])([-+]?\d+)\s*/\s*(\d+)(?![\d.])")
+_SUPERSCRIPT_TRANSLATION = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻", "0123456789+-")
+_REJECTION_MARKERS = (
+    "无法换算", "无法执行", "不能换算", "不能直接", "维度不一致", "量纲不一致",
+    "物理量纲", "无效输入",
+    "无效化学式", "错误化学式", "未知物种", "不存在", "超出适用",
+    "超出范围", "不支持", "不守恒", "不可计算", "不能计算",
+)
+_CLARIFICATION_MARKERS = (
+    "请提供", "请补充", "需要提供", "缺少", "请明确", "需要具体",
+    "需要先明确", "信息不足", "无法确定", "还需要", "想计算哪个",
+)
+
 
 def _identifier(prefix: str) -> str:
     return f"{prefix}-{uuid.uuid4().hex[:16].upper()}"
@@ -32,6 +55,107 @@ def _value_at_path(payload, path: str):
     return value
 
 
+def _final_behavior(experiment: dict) -> str:
+    if experiment.get("status", "completed") != "completed":
+        return "provider_failure"
+    chain = experiment.get("tool_call_chain") or []
+    if chain:
+        rejected = any(
+            not (item.get("validation_result") or {}).get("valid", False)
+            or (item.get("execution_result") or {}).get("status") in {"rejected", "error"}
+            for item in chain
+        )
+        if rejected:
+            return "tool_reject"
+        succeeded = all(
+            (item.get("execution_result") or {}).get("status") == "success"
+            for item in chain
+        )
+        if succeeded:
+            return "multi_tool_success" if len(chain) > 1 else "tool_success"
+        return "tool_failed"
+
+    answer = (experiment.get("final_answer") or "").strip()
+    opening = answer.split("\n\n", 1)[0]
+    if any(marker in opening for marker in _REJECTION_MARKERS):
+        return "direct_reject"
+    if any(marker in opening for marker in _CLARIFICATION_MARKERS):
+        return "clarify"
+    return "direct_answer" if answer else "empty_answer"
+
+
+def _numeric_answer_correct(answer: str, case: dict) -> bool:
+    expected_result = case.get("expected_result") or {}
+    expected = expected_result.get("value")
+    if not isinstance(expected, (int, float)):
+        return False
+    tolerance = case.get("tolerance", {})
+    normalized_answer = (answer or "").translate(_SUPERSCRIPT_TRANSLATION)
+    candidates = []
+    for coefficient, exponent in _SCIENTIFIC_PATTERN.findall(normalized_answer):
+        candidates.append(float(coefficient) * (10 ** int(exponent)))
+    for percentage in _PERCENT_PATTERN.findall(normalized_answer):
+        candidates.append(float(percentage) / 100.0)
+    for numerator, denominator in _FRACTION_PATTERN.findall(normalized_answer):
+        if int(denominator) != 0:
+            candidates.append(int(numerator) / int(denominator))
+    for match in _NUMBER_PATTERN.findall(normalized_answer):
+        try:
+            candidates.append(float(match.replace(",", "")))
+        except ValueError:
+            continue
+    for actual in candidates:
+        if math.isclose(
+            actual,
+            expected,
+            abs_tol=tolerance.get("abs", 0.0),
+            rel_tol=tolerance.get("rel", 0.0),
+        ):
+            return True
+    return False
+
+
+def _final_answer_correct(case: dict, experiment: dict, behavior_correct: bool):
+    if experiment.get("status", "completed") != "completed":
+        return False
+    requirements = case.get("answer_requirements") or {"type": "manual"}
+    requirement_type = requirements.get("type")
+    answer = (experiment.get("final_answer") or "").strip()
+    if requirement_type == "numeric":
+        return _numeric_answer_correct(answer, case)
+    if requirement_type == "concept_terms":
+        normalized = answer.casefold()
+        groups = requirements.get("required_term_groups") or []
+        return bool(groups) and all(
+            any(str(term).casefold() in normalized for term in group)
+            for group in groups
+        )
+    if requirement_type == "behavior":
+        return behavior_correct
+    if requirement_type == "presence":
+        return bool(answer)
+    if requirement_type == "manual":
+        return None
+    raise ValueError(f"unsupported answer requirement type: {requirement_type}")
+
+
+def _arguments_follow_reference(case: dict, chain: List[dict]) -> bool:
+    expected_sequence = case.get("expected_call_sequence", [])
+    if not expected_sequence:
+        return not chain
+    if [item.get("model_code") for item in chain] != expected_sequence:
+        return False
+    step_arguments = case.get("step_arguments") or {}
+    if step_arguments:
+        return all(
+            item.get("generated_arguments", {}) == step_arguments.get(model_code, {})
+            for item, model_code in zip(chain, expected_sequence)
+        )
+    return bool(chain) and chain[0].get("generated_arguments", {}) == case.get(
+        "standard_arguments", {}
+    )
+
+
 class ToolCallingDataset:
     REQUIRED_FIELDS = {
         "case_id", "question", "category", "should_call_tool",
@@ -40,6 +164,7 @@ class ToolCallingDataset:
         "expected_call_sequence", "step_arguments", "step_argument_units",
         "standard_answer", "applicability", "difficulty",
         "interference", "reference", "expected_outcome", "forced_model_code",
+        "expected_final_behavior", "acceptable_actions", "answer_requirements",
     }
 
     def __init__(self, path: Optional[str] = None):
@@ -68,6 +193,12 @@ class ToolCallingDataset:
             missing = self.REQUIRED_FIELDS - case.keys()
             if missing:
                 raise ValueError(f"{case.get('case_id', '<unknown>')} missing fields: {sorted(missing)}")
+            if not case["acceptable_actions"]:
+                raise ValueError(f"{case['case_id']} acceptable_actions must not be empty")
+            if case["answer_requirements"].get("type") not in {
+                "numeric", "concept_terms", "behavior", "presence", "manual",
+            }:
+                raise ValueError(f"{case['case_id']} has unsupported answer requirements")
 
     @property
     def version(self) -> str:
@@ -111,6 +242,11 @@ class ToolCallingDataset:
 
 class BenchmarkService:
     METRIC_FIELDS = (
+        "final_behavior_correct",
+        "final_answer_correct",
+        "semantic_case_passed",
+        "path_compliance_correct",
+        "strict_case_passed",
         "tool_decision_correct",
         "model_selection_correct",
         "arguments_exact_match",
@@ -147,6 +283,11 @@ class BenchmarkService:
         ]
         if not actual_sequence and selected:
             actual_sequence = [selected]
+        actual_behavior = _final_behavior(experiment)
+        final_behavior_correct = actual_behavior in case.get("acceptable_actions", [])
+        final_answer_correct = _final_answer_correct(
+            case, experiment, final_behavior_correct
+        )
 
         tool_decision_correct = called == case["should_call_tool"]
         if case["should_call_tool"]:
@@ -167,6 +308,8 @@ class BenchmarkService:
         )
         units = case.get("argument_units", {})
         unit_handling_correct = arguments_exact_match if units else None
+        call_sequence_exact_match = actual_sequence == expected_sequence
+        reference_arguments_match = _arguments_follow_reference(case, chain)
 
         validation = experiment.get("validation_result")
         execution = experiment.get("execution_result")
@@ -223,20 +366,41 @@ class BenchmarkService:
             if expected_result:
                 numeric_result_correct = False
 
-        required = [
-            tool_decision_correct,
-            model_selection_correct,
-            arguments_exact_match,
-            argument_validation_correct,
-            outcome_correct,
-        ]
-        if numeric_result_correct is not None:
-            required.append(numeric_result_correct)
-        if expected_outcome == "multi_tool":
-            required.append(math.isclose(call_sequence_recall, 1.0))
+        if not case["should_call_tool"]:
+            path_compliance_correct = not called
+        else:
+            path_compliance_correct = call_sequence_exact_match and reference_arguments_match
+            if expected_outcome == "reject":
+                path_compliance_correct = path_compliance_correct and rejected
+            elif expected_outcome == "multi_tool":
+                path_compliance_correct = path_compliance_correct and all(
+                    (item.get("execution_result") or {}).get("status") == "success"
+                    for item in chain
+                )
+            else:
+                path_compliance_correct = path_compliance_correct and succeeded
+        path_compliance_correct = experiment_completed and path_compliance_correct
+        semantic_case_passed = (
+            experiment_completed and final_behavior_correct and final_answer_correct
+            if final_answer_correct is not None else None
+        )
+        strict_case_passed = (
+            experiment_completed
+            and path_compliance_correct
+            and final_behavior_correct
+            and final_answer_correct
+            if final_answer_correct is not None else None
+        )
 
         return {
             "experiment_completed": experiment_completed,
+            "expected_final_behavior": case.get("expected_final_behavior"),
+            "actual_final_behavior": actual_behavior,
+            "final_behavior_correct": final_behavior_correct,
+            "final_answer_correct": final_answer_correct,
+            "semantic_case_passed": semantic_case_passed,
+            "path_compliance_correct": path_compliance_correct,
+            "strict_case_passed": strict_case_passed,
             "tool_decision_correct": tool_decision_correct,
             "model_selection_correct": model_selection_correct,
             "arguments_exact_match": arguments_exact_match,
@@ -245,7 +409,11 @@ class BenchmarkService:
             "outcome_correct": outcome_correct,
             "numeric_result_correct": numeric_result_correct,
             "call_sequence_recall": round(call_sequence_recall, 4),
-            "case_passed": all(required),
+            "call_sequence_exact_match": call_sequence_exact_match,
+            "case_passed": semantic_case_passed,
+            "case_passed_basis": (
+                "semantic" if semantic_case_passed is not None else "manual_required"
+            ),
             "actual_called": called,
             "actual_call_count": len(actual_sequence),
             "ineffective_call_count": sum(
@@ -272,6 +440,11 @@ class BenchmarkService:
         aggregate["completion_rate"] = round(
             completed_count / len(rows), 4
         ) if rows else None
+        automatically_scored_count = sum(
+            row["metrics"].get("semantic_case_passed") is not None for row in rows
+        )
+        aggregate["automatically_scored_experiment_count"] = automatically_scored_count
+        aggregate["manual_review_experiment_count"] = len(rows) - automatically_scored_count
         for field in cls.METRIC_FIELDS:
             values = [row["metrics"][field] for row in rows if row["metrics"][field] is not None]
             aggregate[f"{field}_rate"] = round(sum(bool(v) for v in values) / len(values), 4) if values else None

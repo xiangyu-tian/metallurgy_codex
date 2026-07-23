@@ -30,7 +30,7 @@ class ToolCallingDatasetTests(unittest.TestCase):
     def test_materialized_dataset_has_fixed_six_category_coverage(self):
         self.assertEqual(self.dataset.summary(), {
             "dataset_name": "Metallurgy Tool Calling Benchmark",
-            "dataset_version": "1.0.0",
+            "dataset_version": "1.1.0",
             "case_count": 120,
             "category_coverage": {
                 "adversarial": 10,
@@ -40,7 +40,7 @@ class ToolCallingDatasetTests(unittest.TestCase):
                 "out_of_domain": 14,
                 "single_tool": 51,
             },
-            "schema_version": "1.0",
+            "schema_version": "1.1",
         })
         self.assertEqual(
             {case["category"] for case in self.dataset.list_cases()},
@@ -55,6 +55,11 @@ class ToolCallingDatasetTests(unittest.TestCase):
                 self.assertIsInstance(case["standard_arguments"], dict)
                 self.assertIsInstance(case["expected_call_sequence"], list)
                 self.assertTrue(case["standard_answer"].strip())
+                self.assertTrue(case["expected_final_behavior"])
+                self.assertTrue(case["acceptable_actions"])
+                self.assertIn(case["answer_requirements"]["type"], {
+                    "numeric", "concept_terms", "behavior", "manual",
+                })
 
 
 class BenchmarkServiceTests(unittest.TestCase):
@@ -85,6 +90,8 @@ class BenchmarkServiceTests(unittest.TestCase):
 
         self.assertEqual(result["case_count"], 3)
         self.assertEqual(result["total_experiments"], 9)
+        self.assertEqual(result["summary"]["automatically_scored_experiment_count"], 9)
+        self.assertEqual(result["summary"]["manual_review_experiment_count"], 0)
         self.assertEqual(
             set(result["summary_by_mode"]),
             {"direct", "forced", "autonomous"},
@@ -103,13 +110,139 @@ class BenchmarkServiceTests(unittest.TestCase):
             if row["case_id"] == "TC-NO_TOOL-001" and row["mode"] == "autonomous"
         )
         self.assertFalse(autonomous_no_tool["metrics"]["actual_called"])
-        self.assertTrue(autonomous_no_tool["metrics"]["case_passed"])
+        self.assertTrue(autonomous_no_tool["metrics"]["path_compliance_correct"])
+        self.assertFalse(autonomous_no_tool["metrics"]["final_answer_correct"])
 
         stored = self.store.get_experiment(forced_single["experiment_id"])
         self.assertEqual(stored["benchmark_case_id"], "TC-SINGLE_TOOL-001")
         self.assertEqual(stored["metrics"], forced_single["metrics"])
         self.assertEqual(stored["metrics"]["benchmark_run_id"], result["run_id"])
-        self.assertEqual(stored["metrics"]["dataset_version"], "1.0.0")
+        self.assertEqual(stored["metrics"]["dataset_version"], "1.1.0")
+
+    def test_semantic_answer_behavior_and_path_are_independent(self):
+        numeric_case = self.service.dataset.get("TC-SINGLE_TOOL-001")
+        expected_value = numeric_case["expected_result"]["value"]
+        direct_numeric = BenchmarkService.evaluate(numeric_case, {
+            "status": "completed",
+            "selected_model": None,
+            "tool_call_chain": [],
+            "final_answer": f"计算结果为 {expected_value}",
+        })
+        self.assertTrue(direct_numeric["final_answer_correct"])
+        self.assertTrue(direct_numeric["final_behavior_correct"])
+        self.assertTrue(direct_numeric["semantic_case_passed"])
+        self.assertFalse(direct_numeric["path_compliance_correct"])
+
+        reject_case = self.service.dataset.get("TC-OUT_OF_DOMAIN-001")
+        direct_reject = BenchmarkService.evaluate(reject_case, {
+            "status": "completed",
+            "selected_model": None,
+            "tool_call_chain": [],
+            "final_answer": "kg 与 Pa 量纲不一致，无法换算。",
+        })
+        self.assertEqual(direct_reject["actual_final_behavior"], "direct_reject")
+        self.assertTrue(direct_reject["semantic_case_passed"])
+        self.assertFalse(direct_reject["path_compliance_correct"])
+
+    def test_concept_clarification_and_misleading_numeric_answers_are_scored(self):
+        concept_case = self.service.dataset.get("TC-NO_TOOL-001")
+        concept = BenchmarkService.evaluate(concept_case, {
+            "status": "completed",
+            "selected_model": None,
+            "tool_call_chain": [],
+            "final_answer": (
+                "Shomate 方程是描述热容等热力学性质的经验公式。"
+                "\n\n其限制是不支持相变区域。"
+            ),
+        })
+        self.assertEqual(concept["actual_final_behavior"], "direct_answer")
+        self.assertTrue(concept["final_answer_correct"])
+        self.assertTrue(concept["semantic_case_passed"])
+
+        clarify_case = self.service.dataset.get("TC-INSUFFICIENT_INFO-001")
+        clarification = BenchmarkService.evaluate(clarify_case, {
+            "status": "completed",
+            "selected_model": None,
+            "tool_call_chain": [],
+            "final_answer": "我需要先明确具体反应式。\n\n请提供反应温度。",
+        })
+        self.assertEqual(clarification["actual_final_behavior"], "clarify")
+        self.assertTrue(clarification["semantic_case_passed"])
+
+        reject_case = self.service.dataset.get("TC-OUT_OF_DOMAIN-001")
+        rejection = BenchmarkService.evaluate(reject_case, {
+            "status": "completed",
+            "selected_model": None,
+            "tool_call_chain": [],
+            "final_answer": (
+                "我无法执行这个换算，kg 与 Pa 属于不同的物理量纲，不能直接换算。"
+                "\n\n请补充更多信息。"
+            ),
+        })
+        self.assertEqual(rejection["actual_final_behavior"], "direct_reject")
+        self.assertTrue(rejection["semantic_case_passed"])
+
+        adversarial_case = self.service.dataset.get("TC-ADVERSARIAL-001")
+        wrong_answer = BenchmarkService.evaluate(adversarial_case, {
+            "status": "completed",
+            "selected_model": None,
+            "tool_call_chain": [],
+            "final_answer": "Fe2O3 的摩尔质量是 100 g/mol。",
+        })
+        self.assertFalse(wrong_answer["final_answer_correct"])
+        self.assertFalse(wrong_answer["semantic_case_passed"])
+
+    def test_manual_multi_tool_answers_do_not_pollute_semantic_accuracy(self):
+        case = self.service.dataset.get("TC-MULTI_TOOL-004")
+        chain = [
+            {
+                "model_code": model_code,
+                "generated_arguments": case["step_arguments"][model_code],
+                "validation_result": {"valid": True, "errors": []},
+                "execution_result": {"status": "success", "output": {}},
+            }
+            for model_code in case["expected_call_sequence"]
+        ]
+        metrics = BenchmarkService.evaluate(case, {
+            "status": "completed",
+            "selected_model": case["expected_call_sequence"][0],
+            "generated_arguments": case["standard_arguments"],
+            "validation_result": {"valid": True, "errors": []},
+            "execution_result": {"status": "success", "output": {}},
+            "tool_call_chain": chain,
+            "final_answer": "组合计算完成。",
+        })
+        self.assertTrue(metrics["path_compliance_correct"])
+        self.assertIsNone(metrics["final_answer_correct"])
+        self.assertIsNone(metrics["semantic_case_passed"])
+        self.assertIsNone(metrics["strict_case_passed"])
+        self.assertEqual(metrics["case_passed_basis"], "manual_required")
+
+    def test_numeric_answers_accept_scientific_percentage_and_fraction_forms(self):
+        diffusion_case = self.service.dataset.get("TC-SINGLE_TOOL-049")
+        scientific = BenchmarkService.evaluate(diffusion_case, {
+            "status": "completed",
+            "selected_model": None,
+            "tool_call_chain": [],
+            "final_answer": "扩散系数 D = 2.44441 \\times 10^{-7} m²/s。",
+        })
+        self.assertTrue(scientific["final_answer_correct"])
+
+        phase_case = self.service.dataset.get("TC-SINGLE_TOOL-043")
+        percentage = BenchmarkService.evaluate(phase_case, {
+            "status": "completed",
+            "selected_model": None,
+            "tool_call_chain": [],
+            "final_answer": "第二相分数为 25%。",
+        })
+        fraction = BenchmarkService.evaluate(phase_case, {
+            "status": "completed",
+            "selected_model": None,
+            "tool_call_chain": [],
+            "final_answer": "第二相约占 1/4。",
+        })
+        self.assertTrue(percentage["final_answer_correct"])
+        self.assertTrue(fraction["final_answer_correct"])
 
     def test_invalid_mode_is_rejected_before_execution(self):
         with self.assertRaises(ValueError):

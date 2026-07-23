@@ -1,6 +1,6 @@
 {
   "dataset_name": "Metallurgy Tool Calling Benchmark",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "case_count": 120,
   "category_coverage": {
     "adversarial": 10,
@@ -10,7 +10,7 @@
     "out_of_domain": 14,
     "single_tool": 51
   },
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "cases": [
     {
       "case_id": "TC-NO_TOOL-001",
@@ -34,6 +34,27 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "Shomate"
+          ],
+          [
+            "热容",
+            "焓",
+            "熵"
+          ],
+          [
+            "多项式",
+            "经验公式"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -58,6 +79,25 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "焓"
+          ],
+          [
+            "生成",
+            "形成"
+          ],
+          [
+            "标准状态"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -82,6 +122,26 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "温度"
+          ],
+          [
+            "平衡常数"
+          ],
+          [
+            "Gibbs",
+            "吉布斯",
+            "ΔG"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -106,6 +166,28 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "Arrhenius",
+            "阿伦尼乌斯"
+          ],
+          [
+            "速率"
+          ],
+          [
+            "活化能"
+          ],
+          [
+            "温度"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -130,6 +212,25 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "杠杆"
+          ],
+          [
+            "相"
+          ],
+          [
+            "比例",
+            "分数"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -154,6 +255,27 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "摩尔质量"
+          ],
+          [
+            "分子量",
+            "相对分子质量"
+          ],
+          [
+            "单位",
+            "g/mol",
+            "无量纲"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -178,6 +300,26 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "质量守恒"
+          ],
+          [
+            "输入",
+            "进入"
+          ],
+          [
+            "输出",
+            "流出"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -202,6 +344,27 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "Gibbs",
+            "吉布斯"
+          ],
+          [
+            "自发",
+            "平衡"
+          ],
+          [
+            "ΔG",
+            "变化"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -226,6 +389,25 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "定压"
+          ],
+          [
+            "热容"
+          ],
+          [
+            "温度",
+            "升高"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -250,6 +432,26 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "扩散"
+          ],
+          [
+            "温度"
+          ],
+          [
+            "活化",
+            "原子",
+            "迁移"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -274,6 +476,26 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "直接还原"
+          ],
+          [
+            "间接还原"
+          ],
+          [
+            "碳",
+            "CO",
+            "一氧化碳"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -298,6 +520,27 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "正反应"
+          ],
+          [
+            "逆反应"
+          ],
+          [
+            "速率"
+          ],
+          [
+            "平衡"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -322,6 +565,25 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "活化能"
+          ],
+          [
+            "反应"
+          ],
+          [
+            "能垒",
+            "最低能量"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -346,6 +608,28 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "元素符号"
+          ],
+          [
+            "大写"
+          ],
+          [
+            "小写"
+          ],
+          [
+            "元素",
+            "物质"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -370,6 +654,25 @@
       "interference": [],
       "reference": "Textbook conceptual knowledge",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "标准状态"
+          ],
+          [
+            "压力"
+          ],
+          [
+            "参考",
+            "规定"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     },
     {
@@ -410,6 +713,14 @@
       "interference": [],
       "reference": "SI/NIST unit conversion",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A001"
     },
     {
@@ -450,6 +761,14 @@
       "interference": [],
       "reference": "SI/NIST unit conversion",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A001"
     },
     {
@@ -490,6 +809,14 @@
       "interference": [],
       "reference": "SI/NIST unit conversion",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A001"
     },
     {
@@ -523,6 +850,14 @@
       "interference": [],
       "reference": "Chemical stoichiometry",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A002"
     },
     {
@@ -556,6 +891,14 @@
       "interference": [],
       "reference": "Chemical stoichiometry",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A002"
     },
     {
@@ -589,6 +932,14 @@
       "interference": [],
       "reference": "Chemical stoichiometry",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A002"
     },
     {
@@ -624,6 +975,14 @@
       "interference": [],
       "reference": "IUPAC 2021 atomic weights",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A003"
     },
     {
@@ -659,6 +1018,14 @@
       "interference": [],
       "reference": "IUPAC 2021 atomic weights",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A003"
     },
     {
@@ -694,6 +1061,14 @@
       "interference": [],
       "reference": "IUPAC 2021 atomic weights",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A003"
     },
     {
@@ -733,6 +1108,14 @@
       "interference": [],
       "reference": "Composition normalization identity",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A004"
     },
     {
@@ -771,6 +1154,14 @@
       "interference": [],
       "reference": "Composition normalization identity",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A004"
     },
     {
@@ -810,6 +1201,14 @@
       "interference": [],
       "reference": "Composition normalization identity",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A004"
     },
     {
@@ -868,6 +1267,14 @@
       "interference": [],
       "reference": "Mass conservation identity",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A005"
     },
     {
@@ -926,6 +1333,14 @@
       "interference": [],
       "reference": "Mass conservation identity",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A005"
     },
     {
@@ -984,6 +1399,14 @@
       "interference": [],
       "reference": "Mass conservation identity",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A005"
     },
     {
@@ -1022,6 +1445,14 @@
       "interference": [],
       "reference": "NIST Shomate equation",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B001"
     },
     {
@@ -1060,6 +1491,14 @@
       "interference": [],
       "reference": "NIST Shomate equation",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B001"
     },
     {
@@ -1098,6 +1537,14 @@
       "interference": [],
       "reference": "NIST Shomate equation",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B001"
     },
     {
@@ -1136,6 +1583,14 @@
       "interference": [],
       "reference": "NIST Shomate equation used as NASA approximation",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B002"
     },
     {
@@ -1174,6 +1629,14 @@
       "interference": [],
       "reference": "NIST Shomate equation used as NASA approximation",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B002"
     },
     {
@@ -1212,6 +1675,14 @@
       "interference": [],
       "reference": "NIST Shomate equation used as NASA approximation",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B002"
     },
     {
@@ -1252,6 +1723,14 @@
       "interference": [],
       "reference": "Analytical Shomate enthalpy difference",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B003"
     },
     {
@@ -1292,6 +1771,14 @@
       "interference": [],
       "reference": "Analytical Shomate enthalpy difference",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B003"
     },
     {
@@ -1332,6 +1819,14 @@
       "interference": [],
       "reference": "Analytical Shomate enthalpy difference",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B003"
     },
     {
@@ -1372,6 +1867,14 @@
       "interference": [],
       "reference": "Analytical Shomate entropy difference",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B004"
     },
     {
@@ -1412,6 +1915,14 @@
       "interference": [],
       "reference": "Analytical Shomate entropy difference",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B004"
     },
     {
@@ -1452,6 +1963,14 @@
       "interference": [],
       "reference": "Analytical Shomate entropy difference",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B004"
     },
     {
@@ -1490,6 +2009,14 @@
       "interference": [],
       "reference": "G = H - TS using NIST Shomate properties",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B005"
     },
     {
@@ -1528,6 +2055,14 @@
       "interference": [],
       "reference": "G = H - TS using NIST Shomate properties",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B005"
     },
     {
@@ -1566,6 +2101,14 @@
       "interference": [],
       "reference": "G = H - TS using NIST Shomate properties",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B005"
     },
     {
@@ -1604,6 +2147,14 @@
       "interference": [],
       "reference": "NIST-JANAF reaction enthalpy",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B006"
     },
     {
@@ -1642,6 +2193,14 @@
       "interference": [],
       "reference": "NIST-JANAF reaction enthalpy",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B006"
     },
     {
@@ -1680,6 +2239,14 @@
       "interference": [],
       "reference": "NIST-JANAF reaction enthalpy",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B006"
     },
     {
@@ -1718,6 +2285,14 @@
       "interference": [],
       "reference": "NIST-JANAF reaction entropy",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B007"
     },
     {
@@ -1756,6 +2331,14 @@
       "interference": [],
       "reference": "NIST-JANAF reaction entropy",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B007"
     },
     {
@@ -1794,6 +2377,14 @@
       "interference": [],
       "reference": "NIST-JANAF reaction entropy",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B007"
     },
     {
@@ -1832,6 +2423,14 @@
       "interference": [],
       "reference": "Delta G = Delta H - T Delta S",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B008"
     },
     {
@@ -1870,6 +2469,14 @@
       "interference": [],
       "reference": "Delta G = Delta H - T Delta S",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B008"
     },
     {
@@ -1908,6 +2515,14 @@
       "interference": [],
       "reference": "Delta G = Delta H - T Delta S",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B008"
     },
     {
@@ -1946,6 +2561,14 @@
       "interference": [],
       "reference": "ln K = -Delta G/(RT)",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B009"
     },
     {
@@ -1984,6 +2607,14 @@
       "interference": [],
       "reference": "ln K = -Delta G/(RT)",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B009"
     },
     {
@@ -2022,6 +2653,14 @@
       "interference": [],
       "reference": "ln K = -Delta G/(RT)",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B009"
     },
     {
@@ -2059,6 +2698,14 @@
       "interference": [],
       "reference": "Binary lever rule",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B019"
     },
     {
@@ -2096,6 +2743,14 @@
       "interference": [],
       "reference": "Binary lever rule",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B019"
     },
     {
@@ -2133,6 +2788,14 @@
       "interference": [],
       "reference": "Binary lever rule",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B019"
     },
     {
@@ -2175,6 +2838,14 @@
       "interference": [],
       "reference": "Arrhenius analytical solution",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "C001"
     },
     {
@@ -2217,6 +2888,14 @@
       "interference": [],
       "reference": "Arrhenius analytical solution",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "C001"
     },
     {
@@ -2259,6 +2938,14 @@
       "interference": [],
       "reference": "Arrhenius analytical solution",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "C001"
     },
     {
@@ -2301,6 +2988,14 @@
       "interference": [],
       "reference": "Diffusion Arrhenius analytical solution",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "C002"
     },
     {
@@ -2343,6 +3038,14 @@
       "interference": [],
       "reference": "Diffusion Arrhenius analytical solution",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "C002"
     },
     {
@@ -2385,6 +3088,14 @@
       "interference": [],
       "reference": "Diffusion Arrhenius analytical solution",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "C002"
     },
     {
@@ -2464,6 +3175,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "A002"
     },
     {
@@ -2517,6 +3237,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "A002"
     },
     {
@@ -2573,6 +3302,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "A001"
     },
     {
@@ -2616,6 +3354,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "A002"
     },
     {
@@ -2678,6 +3425,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "B006"
     },
     {
@@ -2731,6 +3487,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "A004"
     },
     {
@@ -2790,6 +3555,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "A001"
     },
     {
@@ -2848,6 +3622,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "B003"
     },
     {
@@ -2900,6 +3683,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "B001"
     },
     {
@@ -2986,6 +3778,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "A005"
     },
     {
@@ -3038,6 +3839,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "B007"
     },
     {
@@ -3100,6 +3910,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "C002"
     },
     {
@@ -3143,6 +3962,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "A002"
     },
     {
@@ -3199,6 +4027,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "A001"
     },
     {
@@ -3251,6 +4088,15 @@
       "interference": [],
       "reference": "Model composition task designed from v2 protocol",
       "expected_outcome": "multi_tool",
+      "expected_final_behavior": "composite_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success",
+        "multi_tool_success"
+      ],
+      "answer_requirements": {
+        "type": "manual"
+      },
       "forced_model_code": "B006"
     },
     {
@@ -3277,6 +4123,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B009"
     },
     {
@@ -3303,6 +4156,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B001"
     },
     {
@@ -3329,6 +4189,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B008"
     },
     {
@@ -3355,6 +4222,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "A003"
     },
     {
@@ -3381,6 +4255,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "A001"
     },
     {
@@ -3407,6 +4288,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "C002"
     },
     {
@@ -3433,6 +4321,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "C001"
     },
     {
@@ -3459,6 +4354,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "A005"
     },
     {
@@ -3485,6 +4387,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B019"
     },
     {
@@ -3511,6 +4420,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B006"
     },
     {
@@ -3537,6 +4453,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B005"
     },
     {
@@ -3563,6 +4486,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "A004"
     },
     {
@@ -3589,6 +4519,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B003"
     },
     {
@@ -3615,6 +4552,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B004"
     },
     {
@@ -3641,6 +4585,13 @@
       ],
       "reference": "Information sufficiency policy",
       "expected_outcome": "clarify",
+      "expected_final_behavior": "clarification",
+      "acceptable_actions": [
+        "clarify"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "A002"
     },
     {
@@ -3678,6 +4629,14 @@
       ],
       "reference": "Model card applicability boundary",
       "expected_outcome": "reject",
+      "expected_final_behavior": "rejection",
+      "acceptable_actions": [
+        "direct_reject",
+        "tool_reject"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "A001"
     },
     {
@@ -3710,6 +4669,14 @@
       ],
       "reference": "Model card applicability boundary",
       "expected_outcome": "reject",
+      "expected_final_behavior": "rejection",
+      "acceptable_actions": [
+        "direct_reject",
+        "tool_reject"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "A002"
     },
     {
@@ -3742,6 +4709,14 @@
       ],
       "reference": "Model card applicability boundary",
       "expected_outcome": "reject",
+      "expected_final_behavior": "rejection",
+      "acceptable_actions": [
+        "direct_reject",
+        "tool_reject"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "A003"
     },
     {
@@ -3774,6 +4749,14 @@
       ],
       "reference": "Model card applicability boundary",
       "expected_outcome": "reject",
+      "expected_final_behavior": "rejection",
+      "acceptable_actions": [
+        "direct_reject",
+        "tool_reject"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "A004"
     },
     {
@@ -3809,6 +4792,14 @@
       ],
       "reference": "Model card applicability boundary",
       "expected_outcome": "reject",
+      "expected_final_behavior": "rejection",
+      "acceptable_actions": [
+        "direct_reject",
+        "tool_reject"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "A005"
     },
     {
@@ -3844,6 +4835,14 @@
       ],
       "reference": "Model card applicability boundary",
       "expected_outcome": "reject",
+      "expected_final_behavior": "rejection",
+      "acceptable_actions": [
+        "direct_reject",
+        "tool_reject"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B001"
     },
     {
@@ -3879,6 +4878,14 @@
       ],
       "reference": "Model card applicability boundary",
       "expected_outcome": "reject",
+      "expected_final_behavior": "rejection",
+      "acceptable_actions": [
+        "direct_reject",
+        "tool_reject"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B002"
     },
     {
@@ -3916,6 +4923,14 @@
       ],
       "reference": "Model card applicability boundary",
       "expected_outcome": "reject",
+      "expected_final_behavior": "rejection",
+      "acceptable_actions": [
+        "direct_reject",
+        "tool_reject"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B003"
     },
     {
@@ -3953,6 +4968,14 @@
       ],
       "reference": "Model card applicability boundary",
       "expected_outcome": "reject",
+      "expected_final_behavior": "rejection",
+      "acceptable_actions": [
+        "direct_reject",
+        "tool_reject"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B004"
     },
     {
@@ -3988,6 +5011,14 @@
       ],
       "reference": "Model card applicability boundary",
       "expected_outcome": "reject",
+      "expected_final_behavior": "rejection",
+      "acceptable_actions": [
+        "direct_reject",
+        "tool_reject"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B005"
     },
     {
@@ -4023,6 +5054,14 @@
       ],
       "reference": "Model card applicability boundary",
       "expected_outcome": "reject",
+      "expected_final_behavior": "rejection",
+      "acceptable_actions": [
+        "direct_reject",
+        "tool_reject"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B006"
     },
     {
@@ -4058,6 +5097,14 @@
       ],
       "reference": "Model card applicability boundary",
       "expected_outcome": "reject",
+      "expected_final_behavior": "rejection",
+      "acceptable_actions": [
+        "direct_reject",
+        "tool_reject"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B008"
     },
     {
@@ -4092,6 +5139,14 @@
       ],
       "reference": "Model card applicability boundary",
       "expected_outcome": "reject",
+      "expected_final_behavior": "rejection",
+      "acceptable_actions": [
+        "direct_reject",
+        "tool_reject"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "B019"
     },
     {
@@ -4130,6 +5185,14 @@
       ],
       "reference": "Model card applicability boundary",
       "expected_outcome": "reject",
+      "expected_final_behavior": "rejection",
+      "acceptable_actions": [
+        "direct_reject",
+        "tool_reject"
+      ],
+      "answer_requirements": {
+        "type": "behavior"
+      },
       "forced_model_code": "C001"
     },
     {
@@ -4147,8 +5210,13 @@
         "formula": "Fe2O3"
       },
       "argument_units": {},
-      "expected_result": null,
-      "tolerance": {},
+      "expected_result": {
+        "path": "molar_mass",
+        "value": 159.687
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
       "expected_call_sequence": [
         "A003"
       ],
@@ -4163,6 +5231,14 @@
       ],
       "reference": "Adversarial tool-use evaluation design",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A003"
     },
     {
@@ -4185,8 +5261,13 @@
         "value": "°C",
         "result": "K"
       },
-      "expected_result": null,
-      "tolerance": {},
+      "expected_result": {
+        "path": "value",
+        "value": 373.15
+      },
+      "tolerance": {
+        "abs": 1e-09
+      },
       "expected_call_sequence": [
         "A001"
       ],
@@ -4201,6 +5282,14 @@
       ],
       "reference": "Adversarial tool-use evaluation design",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A001"
     },
     {
@@ -4221,8 +5310,13 @@
       "argument_units": {
         "temperature": "K"
       },
-      "expected_result": null,
-      "tolerance": {},
+      "expected_result": {
+        "path": "Cp",
+        "value": 35.47286
+      },
+      "tolerance": {
+        "abs": 1e-05
+      },
       "expected_call_sequence": [
         "B001"
       ],
@@ -4237,6 +5331,14 @@
       ],
       "reference": "Adversarial tool-use evaluation design",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B001"
     },
     {
@@ -4257,8 +5359,13 @@
       "argument_units": {
         "temperature": "K"
       },
-      "expected_result": null,
-      "tolerance": {},
+      "expected_result": {
+        "path": "log10_K",
+        "value": 20.7066
+      },
+      "tolerance": {
+        "abs": 0.0001
+      },
       "expected_call_sequence": [
         "B009"
       ],
@@ -4273,6 +5380,14 @@
       ],
       "reference": "Adversarial tool-use evaluation design",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "B009"
     },
     {
@@ -4295,8 +5410,13 @@
         "value": "MPa",
         "result": "Pa"
       },
-      "expected_result": null,
-      "tolerance": {},
+      "expected_result": {
+        "path": "value",
+        "value": 1000000
+      },
+      "tolerance": {
+        "abs": 1e-09
+      },
       "expected_call_sequence": [
         "A001"
       ],
@@ -4311,6 +5431,14 @@
       ],
       "reference": "Adversarial tool-use evaluation design",
       "expected_outcome": "success",
+      "expected_final_behavior": "numeric_answer",
+      "acceptable_actions": [
+        "direct_answer",
+        "tool_success"
+      ],
+      "answer_requirements": {
+        "type": "numeric"
+      },
       "forced_model_code": "A001"
     },
     {
@@ -4343,6 +5471,26 @@
       ],
       "reference": "Adversarial tool-use evaluation design",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "Gibbs",
+            "吉布斯"
+          ],
+          [
+            "自由能"
+          ],
+          [
+            "自发",
+            "平衡"
+          ]
+        ]
+      },
       "forced_model_code": "B005"
     },
     {
@@ -4377,6 +5525,28 @@
       ],
       "reference": "Adversarial tool-use evaluation design",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "Arrhenius",
+            "阿伦尼乌斯"
+          ],
+          [
+            "指数"
+          ],
+          [
+            "活化能"
+          ],
+          [
+            "温度"
+          ]
+        ]
+      },
       "forced_model_code": "C001"
     },
     {
@@ -4409,6 +5579,25 @@
       ],
       "reference": "Adversarial tool-use evaluation design",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "定压"
+          ],
+          [
+            "热容"
+          ],
+          [
+            "温度",
+            "热量"
+          ]
+        ]
+      },
       "forced_model_code": "B001"
     },
     {
@@ -4440,6 +5629,25 @@
       ],
       "reference": "Adversarial tool-use evaluation design",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "杠杆"
+          ],
+          [
+            "相"
+          ],
+          [
+            "比例",
+            "分数"
+          ]
+        ]
+      },
       "forced_model_code": "B019"
     },
     {
@@ -4469,6 +5677,29 @@
       ],
       "reference": "Adversarial tool-use evaluation design",
       "expected_outcome": "no_tool",
+      "expected_final_behavior": "concept_answer",
+      "acceptable_actions": [
+        "direct_answer"
+      ],
+      "answer_requirements": {
+        "type": "concept_terms",
+        "required_term_groups": [
+          [
+            "摩尔质量"
+          ],
+          [
+            "物质的量",
+            "摩尔"
+          ],
+          [
+            "质量"
+          ],
+          [
+            "g/mol",
+            "单位"
+          ]
+        ]
+      },
       "forced_model_code": "A003"
     }
   ]
