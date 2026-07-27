@@ -2,7 +2,7 @@
 
 ## 文档状态
 
-- 版本：`1.0-rc2`
+- 版本：`1.0-rc3`
 - 日期：2026-07-27
 - 状态：候选冻结版，待冶金专家与计算机方向成员联合审查
 - 关联协议：`docs/experiments/research_protocol_v1.0.md`
@@ -274,7 +274,10 @@ pool_family_id: string
 tool_pool_size: 17 | 50 | 100 | 120
 random_seed: integer
 tool_ids: []
-distractor_regime: irrelevant_only | lexical_only | functional_overlap_only | mixed_realistic
+pool_design: controlled_dose | pure_type_exploratory | mixed_realistic
+near_neighbor_type: none | lexical | functional_overlap | mixed
+near_neighbor_count: integer
+near_neighbor_ratio: number
 distractor_composition: object
 similarity_distribution: object
 schema_token_count: integer
@@ -300,6 +303,7 @@ selected_tool: string | null
 predicted_action: string
 retrieval_latency_ms: number
 model_latency_ms: number
+model_resource_time_ms: number
 end_to_end_latency_ms: number
 token_usage: object
 ```
@@ -337,15 +341,17 @@ token_usage: object
 
 功能相近，但适用体系、相态、温压范围、成分、数据库、模型假设或精度不同，不能在当前任务中互换。
 
-纯类型控制池分别只使用一种干扰类型：
+正式池设计：
 
 ```text
-irrelevant_only
-lexical_only
-functional_overlap_only
+controlled_dose
+pure_type_exploratory
+mixed_realistic
 ```
 
-`mixed_realistic`按照通过审核的真实工具库比例混合三类干扰，用于外部有效性验证。不能用单值`distractor_type`描述混合池。
+- `controlled_dose`：近邻类型为`lexical`或`functional_overlap`，近邻数量固定为0、4、8，其余位置由同一无关干扰基底补齐；
+- `pure_type_exploratory`：仅用于17、50或真实近邻上限内的小规模控制，不承担17→120主结论；
+- `mixed_realistic`：按通过审核的真实工具库比例混合三类干扰，用于外部有效性验证。
 
 ### 4.7 嵌套工具池
 
@@ -362,7 +368,9 @@ functional_overlap_only
 ```text
 task_id
 × tool_pool_size
-× distractor_regime
+× pool_design
+× near_neighbor_type
+× near_neighbor_count
 × pool_repeat(A—E)
 × model_run_repeat
 ```
@@ -370,7 +378,8 @@ task_id
 某个目标工具缺少足够高相似度近邻时：
 
 - 不得用无关工具补充并标为高相似度；
-- 该目标不进入对应纯类型池；
+- 该目标不进入无法满足的确认性剂量条件；
+- 只有同时具有至少8个词法近邻和8个功能近邻的目标，才进入两类近邻的确认性配对比较；
 - 可以进入`mixed_realistic`池；
 - 在工具池元数据中记录缺失原因；
 - 使用不平衡设计和混合效应模型处理。
@@ -511,19 +520,26 @@ validation_expected: pass | reject | clarify | escalate
 
 ## 7. 工具级准备度
 
-Track B或D中按候选工具逐项记录：
+工具级准备度使用独立关联表`task_tool_readiness`，主键为：
 
-```yaml
-tool_readiness:
-  - tool_id: string
-    status: ready | missing_parameter | out_of_domain | unsupported_system | unavailable
-    missing_parameters: []
-    violated_constraints: []
-    alternative_tools: []
-    decision_reason: string
+```text
+task_id + tool_id + tool_version
 ```
 
-一条任务可以同时记录可接受工具、近邻工具和替代工具的不同准备度。不得用一个单值代表整个候选集。
+字段为：
+
+```yaml
+task_id: string
+tool_id: string
+tool_version: string
+status: ready | missing_parameter | out_of_domain | unsupported_system | unavailable
+missing_parameters: []
+violated_constraints: []
+alternative_tools: []
+decision_reason: string
+```
+
+一条任务可以关联可接受工具、近邻工具和替代工具的不同准备度。发布JSON时可以导出为列表，但数据库金标准不得只保存为不可查询的嵌套JSON，也不得用一个单值代表整个候选集。
 
 ### 7.1 `ready`
 
@@ -574,6 +590,23 @@ approver: string | null
 - 只评价预测动作是否属于`allowed_actions`；
 - `optional + answerable`通常允许`answer`和`call`；
 - 专家可以增加多个合理动作，但必须写明理由。
+
+能力动作基准矩阵：
+
+| 科学状态 | 默认`allowed_actions` |
+|---|---|
+| `risk_status=review_required` | `[escalate]` |
+| `ambiguous_request`或`missing_task_information`且风险普通 | `[clarify]` |
+| `none + answerable` | `[answer]` |
+| `optional + answerable + sufficient + available/uncertain` | `[answer, call]` |
+| `optional + answerable + missing/ambiguous执行信息` | `[answer, clarify]` |
+| `optional + answerable + capability unavailable` | `[answer]` |
+| `required + answerable + sufficient + available/uncertain` | `[call]` |
+| `required + missing/ambiguous执行信息` | `[clarify]` |
+| `required + capability unavailable` | `[refuse]` |
+| 工具级明确超适用域且无替代工具 | `[refuse]` |
+
+矩阵用于提高双人标注一致性。专家可以覆盖默认集合，但必须记录原集合、覆盖集合和科学理由。`capability_status=uncertain`时的`call`表示允许进入候选检索，不表示已经执行具体工具。
 
 ### 8.3 平台政策模式
 
@@ -785,9 +818,19 @@ optional_inputs: []
 output_contract: object
 validation_rules: []
 reference_sources: []
+normalized_tool_name: string
+name_identifiability_score: integer
 ```
 
 标注者先判断任务科学条件，再与工具卡逐项核对。不得只根据工具名称判断适用性。
+
+工具名称必须：
+
+- 使用真实、稳定、规范化的科学语义名称；
+- 在Full Schema、Lexical、Dense、Hierarchical和Oracle条件中完全一致；
+- 不直接复制测试问题中的完整目标短语；
+- 不添加只对某一数据集有效的答案提示；
+- 与描述分别进行可辨识度审计。
 
 ---
 
@@ -1010,8 +1053,10 @@ approvers: []
 - `required + missing_execution_input`不生成`call`；
 - `review_required`工程模式生成`escalate`；
 - `acceptable_tools`属于对应工具池；
-- 目标工具存在于所有嵌套池；
-- 17/50/100/120池满足包含关系；
+- 目标工具存在于所有适用工具池；
+- `controlled_dose`和`mixed_realistic`的17/50/100/120池满足包含关系；
+- `controlled_dose`的近邻数量只能为0、4、8，剩余位置来自登记的无关干扰基底；
+- `pure_type_exploratory`记录真实近邻上限，不强制达到100或120；
 - Track B金标准不含`target_rank`、Token和延迟；
 - 工具池表不含任何模型预测结果；
 - 运行结果表不覆盖金标准和工具池元数据；
@@ -1041,7 +1086,8 @@ approvers: []
 - 目标工具是否科学上正确；
 - 是否遗漏等价工具；
 - 高相似度干扰是否确实不可替代；
-- 纯类型池与现实混合池是否分开；
+- 控制剂量池、探索性纯类型池与现实混合池是否分开；
+- 0/4/8近邻剂量是否使用同一无关干扰基底补齐；
 - 工具池是否嵌套；
 - Schema长度、顺序和位置是否受控；
 - 金标准、工具池元数据和运行结果是否分表；
@@ -1071,11 +1117,11 @@ approvers: []
 
 ### 23.1 Core Frozen
 
-本规范的主论文核心由`1.0-rc2`改为`1.0-core-frozen`前，必须完成：
+本规范的主论文核心由`1.0-rc3`改为`1.0-core-frozen`前，必须完成：
 
 - Track A、Track B及政策派生表联合审查；
 - 至少20个Track A样例双人试标；
-- 至少20个Track B样例、三类纯干扰池和现实混合池审查；
+- 至少20个Track B样例、0/4/8控制剂量池、探索性纯类型池和现实混合池审查；
 - 政策动作生成器通过自动测试；
 - Taxonomy人工泄漏审计；
 - 标注一致性达到候选门槛；
@@ -1084,6 +1130,7 @@ approvers: []
 - 17/50/100/120 Full Schema API可行性检查；
 - Track B金标准、工具池和运行结果分表检查；
 - 数据划分和来源比例确认；
+- 样本量附录明确各标签和工具池条件的最低样本量；
 - 数据版本清单和质量检查脚本接口确认。
 
 Core Frozen前不得使用正式测试结果修改标签定义或政策矩阵。

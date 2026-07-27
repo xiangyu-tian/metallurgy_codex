@@ -2,7 +2,7 @@
 
 ## 文档状态
 
-- 版本：`1.0-rc2`
+- 版本：`1.0-rc3`
 - 日期：2026-07-27
 - 状态：候选冻结版，待冶金专家与计算机方向成员联合审查
 - 适用范围：主论文 RQ1—RQ3
@@ -175,7 +175,7 @@ Schema 盲阶段可以看到：
 
 #### H2：双层边界门控
 
-与全量 Function Calling 和单一提示词规则相比，Schema 盲证据门控与双层准备度检查将降低工具绕过、过度调用、提前调用和越界调用的宏平均错误率，同时保持 `required + 执行信息充分 + 能力可用`任务的调用召回率。
+与全量 Function Calling 和单一提示词规则相比，Schema 盲证据门控与双层准备度检查将降低工具绕过、过度调用、提前调用和越界调用的宏平均错误率，同时保持 `required + answerable + information_status=sufficient + capability_status=available + risk_status=normal`任务的调用召回率。
 
 Full Boundary相对于预先固定的`Direct FC`基线，在上述任务上的调用召回率非劣界值为`-5`个百分点。使用“Full Boundary − Direct FC”差值的单侧95%置信区间；只有置信区间下界大于`-0.05`时才判定非劣。
 
@@ -193,7 +193,13 @@ Full Boundary相对于预先固定的`Direct FC`基线，在上述任务上的�
 
 与全量 Schema、词法 Top-K 和单纯向量 Top-K 相比，层次化路由在 120 工具条件下具有更小的工具选择性能下降，并减少 Schema Token和模型推理延迟；端到端延迟是否下降作为独立结果检验，不预设方向。
 
-H4 的主要检验对象是从 17 工具到 120 工具的性能下降斜率，而不是只比较某一个规模的单点最高分。
+H4的主要效应量固定为端点下降值：
+
+```text
+ΔAccuracy_method = Accuracy_method,120 − Accuracy_method,17
+```
+
+数值越接近0表示规模稳定性越好。正式统计检验使用`method × log(tool_pool_size)`交互项；工具规模作为分类变量的结果只用于检查非线性。
 
 ---
 
@@ -204,7 +210,7 @@ H4 的主要检验对象是从 17 工具到 120 工具的性能下降斜率，�
 | E1 Schema暴露 | RQ1/H1 | `evidence_requirement`三分类宏F1 | Balanced Accuracy、混淆矩阵、合法动作命中率、调用倾向、绕过率、过度调用率 |
 | E2 双层门控 | RQ2/H2 | 四类关键错误宏平均率 | 五类动作宏F1、政策一致率、正确追问率、调用召回率 |
 | E3a 规模与相似度 | RQ3/H3 | 可接受工具选择准确率 | 高相似度误选率；检索方法另报MRR、nDCG、Recall@5 |
-| E3b 层次化路由 | RQ3/H4 | 17→120工具选择准确率下降斜率 | Schema Token、总Token、检索延迟、模型延迟、端到端延迟 |
+| E3b 层次化路由 | RQ3/H4 | `ΔAccuracy = Accuracy120 − Accuracy17` | `method×log(pool_size)`交互、Schema Token、总Token、检索延迟、模型延迟、端到端延迟 |
 
 主要指标在协议冻结后不得变更。其他指标只能作为次要指标或探索性分析报告。
 
@@ -212,12 +218,13 @@ H4 的主要检验对象是从 17 工具到 120 工具的性能下降斜率，�
 
 E2主要指标定义为以下四项条件错误率的宏平均，越低越好：
 
-1. 工具绕过率：`required + answerable + 执行信息充分 + 能力可用`任务选择`answer`；
-2. 过度调用率：`none + answerable`任务选择`call`；
-3. 提前调用率：`ambiguous_request/missing_task_information`或必须调用但缺少执行信息时选择`call`；
-4. 越界调用率：明确超适用域或能力不可用时选择`call`。
+1. 工具绕过率：`required + answerable + sufficient + available + normal`任务选择`answer`；
+2. 过度调用率：`none + answerable + normal`任务选择`call`；
+3. 提前调用率：`risk_status=normal`且问题语义不完整，或必须调用但缺少执行信息时选择`call`；
+4. 越界调用率：`risk_status=normal`且明确超适用域或能力不可用时选择`call`。
 
 各错误率分别使用其适用样本作为分母，再取宏平均，避免多数类别掩盖高风险错误。
+`risk_status=review_required`任务不进入上述四类调用错误率和调用召回率分母，而单独评价`escalate`正确率。
 
 ---
 
@@ -282,6 +289,25 @@ E1主实验使用17工具以控制Schema内容和长度。另从核心最小差�
 
 ### 7.1 单变量消融链
 
+基线比较线：
+
+```text
+Direct FC
+Prompt Rule
+```
+
+`Prompt Rule`作为独立启发式基线参与最终比较，不属于相邻单变量方法消融链。
+
+方法消融线：
+
+```text
+Direct FC
+→ Blind Gate
+→ Blind + Coarse
+→ Blind + Coarse + Retrieval
+→ Full Boundary
+```
+
 | 方法 | 证据门控 | ②A粗判断 | 层次化检索 | ②B工具检查 |
 |---|---:|---:|---:|---:|
 | Direct FC | 否 | 否 | 否 | 否 |
@@ -291,7 +317,7 @@ E1主实验使用17工具以控制Schema内容和长度。另从核心最小差�
 | Blind + Coarse + Retrieval | 是 | 是 | 是 | 否 |
 | Full Boundary | 是 | 是 | 是 | 是 |
 
-每相邻两种方法只增加一个机制。除新增模块外，模型、提示内容、候选池、最大调用数和执行器保持一致。
+只对方法消融线中的相邻方法作单变量归因。除新增模块外，模型、提示内容、候选池、最大调用数和执行器保持一致。
 
 ### 7.2 方法解释
 
@@ -321,11 +347,12 @@ Oracle不参与普通方法排名，只用于回答：当边界判断完全正�
 ### 7.4 主要分析
 
 - 四类关键错误宏平均率；
-- Full Boundary相对固定`Direct FC`的`required + 执行信息充分 + 能力可用`调用召回率非劣性检查；
+- Full Boundary相对固定`Direct FC`的`required + answerable + sufficient + available + normal`调用召回率非劣性检查；
 - 使用单侧95%置信区间和`-5`个百分点非劣界；
 - Direct FC低于80%绝对召回时，同时检查Full Boundary是否达到80%绝对下限；
 - 合法动作集合命中率；
 - 政策一致率；
+- `review_required`任务的正确转人工率；
 - 错误按证据需求、准备度、风险和来源分层报告。
 
 ---
@@ -363,7 +390,10 @@ tool_pool_id
 pool_family_id
 random_seed
 tool_ids
-distractor_regime
+pool_design
+near_neighbor_type
+near_neighbor_count
+near_neighbor_ratio
 distractor_composition
 similarity_distribution
 schema_token_count
@@ -374,12 +404,11 @@ tool_order
 
 ### 8.3 干扰类型
 
-正式工具池分为两类：
+正式工具池分为三类：
 
-1. 纯类型控制池：`irrelevant_only`、`lexical_only`、`functional_overlap_only`；
-2. 现实混合池：`mixed_realistic`，按通过审计的真实工具库相似度分布构造。
-
-纯类型池用于H3因果分析，现实混合池用于外部有效性验证。
+1. `controlled_dose`：用于H3主要因果分析；
+2. `pure_type_exploratory`：纯类型池，只在17、50或实际近邻上限内构造；
+3. `mixed_realistic`：按真实工具库相似度分布构造，用于外部有效性。
 
 | 干扰层级 | 操作性定义 |
 |---|---|
@@ -389,12 +418,27 @@ tool_order
 
 高相似度工具必须由冶金专家确认其“功能相近但不能在当前任务中互换”。
 
+`controlled_dose`在17、50、100、120四个规模均使用固定近邻剂量：
+
+```text
+near_neighbor_count = 0、4、8
+near_neighbor_type = lexical或functional_overlap
+```
+
+除指定的0、4或8个近邻外，其余位置由同一版本的无关干扰基底补齐。这样总工具规模与高相似干扰数量可以独立控制，不要求构造不现实的120工具纯高相似度池。
+
+H3中“功能重叠比词法相似造成更大损失”的确认性比较，只使用同时拥有至少8个词法近邻和8个功能近邻的目标工具。近邻不足的目标可以进入4剂量或现实混合池，但不进入该确认性配对比较。
+
+`pure_type_exploratory`不强制达到100或120，其最大规模由真实可用近邻数量决定，不用于主论文的17→120规模效应结论。
+
 正式实验单元为：
 
 ```text
 目标任务
 × 工具规模
-× 干扰池类型
+× pool_design
+× near_neighbor_type
+× near_neighbor_count
 × 工具池重复A—E
 × 模型运行重复
 ```
@@ -402,7 +446,7 @@ tool_order
 如果某个目标工具没有足够多的词法或功能近邻：
 
 - 不得将无关工具改标为高相似度；
-- 该目标工具不进入对应纯类型控制池；
+- 该目标工具不进入无法满足的确认性剂量条件；
 - 仍可进入`mixed_realistic`工具池；
 - 由不平衡设计和混合效应模型处理不同目标工具的可用条件；
 - 缺失条件及原因必须在工具池清单中记录。
@@ -411,7 +455,10 @@ tool_order
 
 - 工具卡使用同一渲染模板；
 - 功能描述限制在统一长度区间；
-- 不通过工具名称直接泄漏正确答案；
+- 使用真实但规范化的语义名称；
+- 所有方法使用完全相同的工具名称；
+- 工具名不得直接复用任务样本中的完整目标短语；
+- 工具名称和描述的可辨识度分别记录并审计；
 - 参数数量和Schema Token作为协变量记录；
 - 工具顺序由登记种子随机化；
 - 正确工具的位置在不同池中平衡；
@@ -445,7 +492,8 @@ Oracle不参与普通方法的效率排名。
 ### 8.7 主要分析
 
 - E3a：工具规模、相似度及其交互对可接受工具选择准确率的影响；
-- E3b：不同方法从17到120工具的性能下降斜率；
+- E3b：计算每种方法的`ΔAccuracy = Accuracy120 − Accuracy17`并进行方法间比较；
+- 正式推断模型以`method × log(tool_pool_size)`交互项检验下降趋势差异；
 - 检索层只比较Lexical、Dense和Hierarchical，报告Recall@5、MRR、nDCG和候选数量；
 - Full Schema没有检索排序，不计算MRR；Oracle候选集也不参与MRR和nDCG排名；
 - 最终选择层比较所有方法，报告可接受工具选择准确率、高相似度误选率和拒绝/追问正确率；
@@ -561,6 +609,38 @@ Oracle不参与普通方法的效率排名。
 - `pass^k`或等价一致成功曲线；
 - 动作和工具选择在重复间的一致性。
 
+### 11.4 主要指标的重复汇总
+
+主要分析固定采用：
+
+1. 每个`run_repeat`在完整数据集上分别计算三分类宏F1、合法动作命中率、四类错误率和工具选择准确率；
+2. 报告各重复指标的均值、标准差和95%区间；
+3. 任务层Bootstrap时以问题组为簇，并在每个抽中的任务簇内保留该任务的全部运行重复；
+4. 方法间重复通过相同`run_repeat`、任务和工具池进行配对；
+5. 不使用多数投票作为主要结果；
+6. 多数投票和“至少一次成功”只作为探索性稳定化分析；
+7. 混合效应模型将`run_repeat`作为重复观测层，并加入随机截距。
+
+不得把“任务×运行”简单当作彼此独立的样本扩大有效样本量。
+
+### 11.5 延迟定义
+
+```text
+retrieval_latency
+= 本地或远程候选检索的总时间
+
+model_latency
+= 证据门控模型时间
++ 粗门控模型时间
++ 候选内选择模型时间
++ 其他属于该方法的模型调用时间
+
+end_to_end_latency
+= 从接收任务到产生最终动作或工具选择的墙钟时间
+```
+
+模型调用并行时，同时记录各调用耗时之和与关键路径墙钟时间；主延迟指标使用墙钟时间，耗时之和作为资源消耗指标。
+
 ---
 
 ## 12. 统计分析计划
@@ -574,7 +654,8 @@ Oracle不参与普通方法的效率排名。
 
 ### 12.2 配对检验
 
-- 配对二元结果：McNemar检验；
+- 重复二元结果的主要推断使用包含任务和`run_repeat`结构的混合效应逻辑回归；
+- McNemar仅作为敏感性分析，在每个预注册配对`run_repeat`上分别执行，并使用Holm方法校正；
 - 宏平均F1和合法动作集合命中率：配对Bootstrap或置换检验；
 - Token、检索延迟、模型延迟和端到端延迟：分别使用Wilcoxon配对符号秩检验；
 - 多重次要比较使用Holm方法校正。
@@ -586,13 +667,15 @@ Oracle不参与普通方法的效率排名。
 ```text
 结果
 ~ 方法
-+ 工具规模
-+ 相似度
-+ 方法×工具规模
-+ 方法×相似度
++ log(工具规模)
++ 近邻类型
++ 近邻数量
++ 方法×log(工具规模)
++ 方法×近邻类型
++ 方法×近邻数量
 + 任务复杂度
 + Schema Token
-+ 随机效应（问题组、目标工具、工具家族、工具池）
++ 随机效应（问题组、目标工具、工具家族、工具池、run_repeat）
 ```
 
 二元成功结果使用混合效应逻辑回归；MRR等连续或有界指标根据分布选择合适模型。
@@ -608,6 +691,14 @@ Oracle不参与普通方法的效率排名。
 5. 考虑问题组和工具家族造成的设计效应；
 6. 先导样本不得进入最终测试集；
 7. 功效分析脚本、参数和输出纳入版本控制。
+
+正式测试前必须生成：
+
+```text
+docs/experiments/sample_size_addendum_v1.0.md
+```
+
+该附录至少记录先导样本、效应量、设计效应、最终样本量、各类别最低样本量、重复次数，以及是否看过正式测试结果。
 
 ---
 
@@ -701,7 +792,7 @@ selected_tool ∈ acceptable_tools
 
 ### 16.1 Core Frozen
 
-以下条件全部满足后，主论文核心状态才能由`1.0-rc2`改为`1.0-core-frozen`：
+以下条件全部满足后，主论文核心状态才能由`1.0-rc3`改为`1.0-core-frozen`：
 
 - RQ1—RQ3和H1—H4完成联合审查；
 - 每个实验的主要指标确认；
@@ -715,6 +806,7 @@ selected_tool ∈ acceptable_tools
 - Track A、B字段和样例通过专家审查；
 - 现有120例完成首轮迁移审计；
 - 先导数据和功效分析方案确定；
+- `sample_size_addendum_v1.0.md`完成并确认未查看正式测试结果；
 - 统计脚本接口和结果报告模板确认。
 
 Core Frozen前暂停M4.6C及其他会改变正式实验条件的架构开发。
