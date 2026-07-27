@@ -1,8 +1,8 @@
-# H3/H4 统计分析实现接口 v1.0
+# H3/H4 统计分析实现接口 v1.0-rc1.1
 
 ## 文档状态
 
-- 版本：`1.0-rc1`
+- 版本：`1.0-rc1.1`
 - 日期：2026-07-27
 - 状态：实现规范候选版；用于先导实验和正式统计脚本
 - 上位协议：`research_protocol_v1.0.md`（`1.0-rc3.1`）
@@ -31,7 +31,8 @@
 | `model_run_repeat` | 同一条件下的模型运行重复 |
 | `selection_correct` | 派生字段；`selected_tool ∈ acceptable_tools`时为1，否则为0 |
 | `end_to_end_correct` | 派生字段；是否完成正确端到端结果，取0或1 |
-| `infrastructure_status` | 运行审计字段：`accepted`、`provider_failure`或`not_accepted` |
+| `request_status` | 请求状态：`accepted`或`not_accepted` |
+| `execution_status` | 执行状态：`success`、`model_failure`、`provider_failure`、`timeout`或`invalid_response`；请求未被接受时为`null` |
 
 `pool_repeat`由预注册的A—E种子表映射得到。`pool_family_id`必须保证比较条件除预先规定的工具规模、近邻类型或近邻数量外，其余构造因素一致。不能仅凭事后名称相似将不成对的工具池视为配对样本。
 
@@ -149,13 +150,28 @@ D_H4_method,mixed
 
 ## 4. 固定汇总顺序
 
-H3与H4统一采用以下顺序：
+H3与H4必须维护两条互相独立的数据流。
+
+### 4.1 描述性效应与Bootstrap
 
 1. **形成原始配对。** 在`task_id × pool_family_id × pool_repeat × model_run_repeat`内形成条件差值，任何聚合都不得先于配对。
 2. **汇总工具池重复。** 对同一`task_id × model_run_repeat`的A—E五个工具池重复取算术平均；同时保留每个池的原始结果。
 3. **汇总模型运行重复。** 分别计算每个`model_run_repeat`的全测试集指标，再对重复运行报告均值和标准差；主要分析不使用多数投票。
 4. **计算不确定性。** 以预先定义的问题组为最小抽样簇进行Bootstrap；同一簇内的所有任务、A—E工具池和模型重复必须整体保留。
 5. **形成正式报告。** 报告任务数、簇数、有效配对数、工具池重复数、运行重复数、点估计、置信区间和检验结果。
+
+### 4.2 混合效应模型
+
+混合效应模型直接读取未平均的原始运行行：
+
+```text
+原始运行结果
+→ 保留pool_repeat
+→ 保留model_run_repeat
+→ 通过固定效应和随机效应处理重复结构
+```
+
+不得把A—E均值或运行重复均值作为混合效应模型输入，否则会丢失工具池和运行重复层面的变异。
 
 主要Bootstrap簇固定为：
 
@@ -178,8 +194,8 @@ minimal_pair_group
 
 ## 5. 缺失、失败与重复运行
 
-- 已被供应商接受但执行失败的请求，主要端到端分析按失败计，并单独报告`provider_failure`；
-- 因平台级故障而从未被供应商接受的请求标记为`not_accepted`，不填造结果；
+- 已被供应商接受但执行失败的请求保持`request_status=accepted`，并在`execution_status`中区分模型失败、供应商失败、超时和无效响应；主要端到端分析按失败计；
+- 因平台级故障而从未被供应商接受的请求标记为`request_status=not_accepted`且`execution_status=null`，不填造结果；
 - 一个条件缺失时，对应配对不进入该项配对效应计算，并报告缺失数量、原因和受影响条件；
 - 不得只对表现不佳的方法或条件选择性重跑；
 - 若需恢复基础设施缺失，必须按预先记录的批次规则恢复该批次全部受影响条件，并保留原始失败记录。
@@ -192,28 +208,84 @@ minimal_pair_group
 
 ---
 
-## 6. 统计模型与计划对比
+## 6. H3确认性模型
 
-混合效应模型承担协议规定的正式推断；原始配对效应和簇级Bootstrap承担效应量展示与稳健性报告。模型至少考虑：
+H3模型只读取：
 
 ```text
-correct
+pool_design = controlled_dose
+tool_pool_size = 120
+```
+
+确认性模型为：
+
+```text
+selection_correct
 ~ method
-+ log(pool_size)
 + near_neighbor_type
 + near_neighbor_count
-+ method × log(pool_size)
 + near_neighbor_type × near_neighbor_count
++ 其他预注册协变量
 + 随机截距(minimal_pair_group)
 + 随机截距(target_tool_family)
 + 随机截距(pool_family)
++ 随机截距(model_run_repeat)
 ```
 
-H3必须从模型导出120工具、8近邻下的`functional_overlap − lexical`单侧计划对比；H4必须检验`method × log(tool_pool_size)`并同时报告`mixed_realistic`端点差值。如模型不收敛，应报告原模型、预先规定的简化顺序和最终模型，不得根据显著性任意增删固定效应。
+主要计划对比固定为8近邻条件下的`functional_overlap − lexical`，按预注册方法集合计算边际对比。方法特异性对比作为次要结果。
 
 ---
 
-## 7. 脚本接口与验收
+## 7. H4确认性模型
+
+H4模型只读取：
+
+```text
+pool_design = mixed_realistic
+```
+
+确认性模型为：
+
+```text
+selection_correct
+~ method
++ log(tool_pool_size)
++ method × log(tool_pool_size)
++ 其他预注册协变量
++ 随机截距(minimal_pair_group)
++ 随机截距(target_tool_family)
++ 随机截距(pool_family)
++ 随机截距(model_run_repeat)
+```
+
+H4预注册三个单侧计划对比：
+
+```text
+D_H4_hierarchical − D_H4_full_schema > 0
+D_H4_hierarchical − D_H4_lexical_top5 > 0
+D_H4_hierarchical − D_H4_dense_top5 > 0
+```
+
+三项检验构成同一个确认性家族，统一使用Holm方法校正。只有三项点估计均大于0且Holm校正后的单侧`p < 0.05`，才支持“层次化路由相对于三类基线均具有更好的规模稳定性”。每项同时报告未校正和校正后的`p`值、直接差值与双侧95%问题组簇级Bootstrap置信区间。
+
+如H3或H4模型不收敛，应报告原模型、预先规定的简化顺序和最终模型，不得根据显著性任意增删固定效应，也不得在两项假设之间混用工具池数据。
+
+---
+
+## 8. 脚本接口与验收
+
+### 8.1 最小实现包
+
+当前最小实现位于`Tools/core_freeze/`，包含输入Schema、状态校验、原始配对、描述性聚合、问题组簇级Bootstrap、H4三项Holm校正、合成测试和报告模板。
+
+最小实现中的配对符号检验只用于验证方向、配对和多重校正代码，不能替代第6、7节规定的正式混合效应模型。正式模型未运行时，报告必须写入：
+
+```text
+formal_mixed_effect_model.status = not_run
+cf11_status = in_progress
+```
+
+### 8.2 正式输出
 
 正式统计实现至少输出：
 

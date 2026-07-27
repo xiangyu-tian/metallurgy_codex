@@ -1,0 +1,50 @@
+{
+  "report_version": "1.0-rc1.1",
+  "protocol_version": "1.0-rc3.1",
+  "dataset_version": null,
+  "analysis_commit": null,
+  "input_hash": null,
+  "generated_at": null,
+  "hypothesis": null,
+  "analysis_scope": {},
+  "sample_accounting": {
+    "task_count": null,
+    "problem_group_count": null,
+    "target_tool_family_count": null,
+    "valid_pair_count": null,
+    "pool_repeat_count": null,
+    "model_run_repeat_count": null
+  },
+  "descriptive_effects": {},
+  "cluster_bootstrap": {
+    "cluster_definition": "minimal_pair_group_or_single_task",
+    "resamples": null,
+    "seed": null,
+    "estimate": null,
+    "confidence_interval_95": [null, null]
+  },
+  "formal_inference": {
+    "model": null,
+    "planned_contrasts": [],
+    "one_sided": null,
+    "multiplicity_correction": null,
+    "fit_status": null,
+    "convergence": null,
+    "estimates": []
+  },
+  "missingness_audit": {
+    "not_accepted": null,
+    "model_failure": null,
+    "provider_failure": null,
+    "timeout": null,
+    "invalid_response": null,
+    "incomplete_pairs": null
+  },
+  "deviations": [],
+  "cf11_status": "in_progress",
+  "approvals": {
+    "statistics_reviewer": null,
+    "review_date": null,
+    "decision": null
+  }
+}

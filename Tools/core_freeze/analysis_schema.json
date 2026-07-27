@@ -1,0 +1,121 @@
+{
+  "$id": "urn:metallurgy-codex:schemas:core-freeze-analysis:1.0-rc1.1",
+  "title": "Core Frozen H3/H4 analysis input",
+  "type": "object",
+  "required": ["schema_version", "metadata", "records"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0-rc1.1"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["dataset_version", "protocol_version", "generated_at"],
+      "additionalProperties": true,
+      "properties": {
+        "dataset_version": {"type": "string", "minLength": 1},
+        "protocol_version": {"const": "1.0-rc3.1"},
+        "generated_at": {"type": "string", "minLength": 1}
+      }
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/analysisRecord"
+      }
+    }
+  },
+  "$defs": {
+    "analysisRecord": {
+      "type": "object",
+      "required": [
+        "task_id",
+        "minimal_pair_group",
+        "target_tool_family",
+        "acceptable_tools",
+        "tool_pool_id",
+        "pool_family_id",
+        "pool_repeat",
+        "model_run_repeat",
+        "method",
+        "tool_pool_size",
+        "pool_design",
+        "near_neighbor_type",
+        "near_neighbor_count",
+        "selected_tool",
+        "end_to_end_correct",
+        "request_status",
+        "execution_status"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "task_id": {"type": "string", "minLength": 1},
+        "minimal_pair_group": {"type": ["string", "null"]},
+        "target_tool_family": {"type": "string", "minLength": 1},
+        "acceptable_tools": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "tool_pool_id": {"type": "string", "minLength": 1},
+        "pool_family_id": {"type": "string", "minLength": 1},
+        "pool_repeat": {"enum": ["A", "B", "C", "D", "E"]},
+        "model_run_repeat": {"type": "integer", "minimum": 1},
+        "method": {"type": "string", "minLength": 1},
+        "tool_pool_size": {"enum": [17, 50, 100, 120]},
+        "pool_design": {
+          "enum": [
+            "controlled_dose",
+            "pure_type_exploratory",
+            "mixed_realistic"
+          ]
+        },
+        "near_neighbor_type": {
+          "enum": ["none", "lexical", "functional_overlap", "mixed"]
+        },
+        "near_neighbor_count": {"type": "integer", "minimum": 0},
+        "selected_tool": {"type": ["string", "null"]},
+        "end_to_end_correct": {"type": ["boolean", "null"]},
+        "request_status": {"enum": ["accepted", "not_accepted"]},
+        "execution_status": {
+          "enum": [
+            "success",
+            "model_failure",
+            "provider_failure",
+            "timeout",
+            "invalid_response",
+            null
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {"request_status": {"const": "not_accepted"}},
+            "required": ["request_status"]
+          },
+          "then": {
+            "properties": {
+              "execution_status": {"type": "null"},
+              "selected_tool": {"type": "null"},
+              "end_to_end_correct": {"type": "null"}
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {"request_status": {"const": "accepted"}},
+            "required": ["request_status"]
+          },
+          "then": {
+            "properties": {
+              "execution_status": {"not": {"type": "null"}}
+            }
+          }
+        }
+      ]
+    }
+  }
+}
