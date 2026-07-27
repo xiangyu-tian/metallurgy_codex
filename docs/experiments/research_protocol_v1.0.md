@@ -2,7 +2,7 @@
 
 ## 文档状态
 
-- 版本：`1.0-rc3`
+- 版本：`1.0-rc3.1`
 - 日期：2026-07-27
 - 状态：候选冻结版，待冶金专家与计算机方向成员联合审查
 - 适用范围：主论文 RQ1—RQ3
@@ -189,17 +189,42 @@ Full Boundary相对于预先固定的`Direct FC`基线，在上述任务上的�
 
 若工具规模、干扰类型及其交互项均无稳定效应，则 H3 不成立。
 
+H3的主要确认性对比固定在120工具规模，并要求使用同一目标任务、同一无关干扰基底、同一工具池重复和同一模型运行重复：
+
+```text
+functional_overlap, near_neighbor_count=8
+vs
+lexical, near_neighbor_count=8
+vs
+none, near_neighbor_count=0
+```
+
+主要效应量定义为：
+
+```text
+Effect_functional
+= Accuracy(functional_overlap, 8) − Accuracy(none, 0)
+
+Effect_lexical
+= Accuracy(lexical, 8) − Accuracy(none, 0)
+```
+
+H3的方向性预测为`Effect_functional < Effect_lexical ≤ 0`。17、50、100工具条件用于趋势分析；`near_neighbor_type × near_neighbor_count`交互项作为跨规模正式统计检验。
+
 #### H4：层次化路由
 
 与全量 Schema、词法 Top-K 和单纯向量 Top-K 相比，层次化路由在 120 工具条件下具有更小的工具选择性能下降，并减少 Schema Token和模型推理延迟；端到端延迟是否下降作为独立结果检验，不预设方向。
 
-H4的主要效应量固定为端点下降值：
+H4的主要效应量只使用`mixed_realistic`工具池，并固定为端点下降值：
 
 ```text
-ΔAccuracy_method = Accuracy_method,120 − Accuracy_method,17
+ΔAccuracy_method,mixed
+= Accuracy_method,120,mixed − Accuracy_method,17,mixed
 ```
 
-数值越接近0表示规模稳定性越好。正式统计检验使用`method × log(tool_pool_size)`交互项；工具规模作为分类变量的结果只用于检查非线性。
+端点比较必须使用同一目标任务和配对的A—E工具池家族。数值越接近0表示规模稳定性越好。正式统计检验使用`method × log(tool_pool_size)`交互项；工具规模作为分类变量的结果只用于检查非线性。
+
+`controlled_dose`用于解释工具规模和近邻数量的机制效应，`pure_type_exploratory`只作探索性结果。两者均不得替代H4的`mixed_realistic`主要效应。
 
 ---
 
@@ -210,7 +235,7 @@ H4的主要效应量固定为端点下降值：
 | E1 Schema暴露 | RQ1/H1 | `evidence_requirement`三分类宏F1 | Balanced Accuracy、混淆矩阵、合法动作命中率、调用倾向、绕过率、过度调用率 |
 | E2 双层门控 | RQ2/H2 | 四类关键错误宏平均率 | 五类动作宏F1、政策一致率、正确追问率、调用召回率 |
 | E3a 规模与相似度 | RQ3/H3 | 可接受工具选择准确率 | 高相似度误选率；检索方法另报MRR、nDCG、Recall@5 |
-| E3b 层次化路由 | RQ3/H4 | `ΔAccuracy = Accuracy120 − Accuracy17` | `method×log(pool_size)`交互、Schema Token、总Token、检索延迟、模型延迟、端到端延迟 |
+| E3b 层次化路由 | RQ3/H4 | `mixed_realistic`上的`ΔAccuracy = Accuracy120 − Accuracy17` | `method×log(pool_size)`交互、Schema Token、总Token、检索延迟、模型延迟、端到端延迟 |
 
 主要指标在协议冻结后不得变更。其他指标只能作为次要指标或探索性分析报告。
 
@@ -491,8 +516,8 @@ Oracle不参与普通方法的效率排名。
 
 ### 8.7 主要分析
 
-- E3a：工具规模、相似度及其交互对可接受工具选择准确率的影响；
-- E3b：计算每种方法的`ΔAccuracy = Accuracy120 − Accuracy17`并进行方法间比较；
+- E3a：以120工具下`functional_overlap-8 vs lexical-8 vs none-0`作为主要确认性对比，其他规模用于趋势分析；
+- E3b：只在`mixed_realistic`池中计算每种方法的`ΔAccuracy = Accuracy120 − Accuracy17`并进行方法间比较；
 - 正式推断模型以`method × log(tool_pool_size)`交互项检验下降趋势差异；
 - 检索层只比较Lexical、Dense和Hierarchical，报告Recall@5、MRR、nDCG和候选数量；
 - Full Schema没有检索排序，不计算MRR；Oracle候选集也不参与MRR和nDCG排名；
@@ -792,7 +817,7 @@ selected_tool ∈ acceptable_tools
 
 ### 16.1 Core Frozen
 
-以下条件全部满足后，主论文核心状态才能由`1.0-rc3`改为`1.0-core-frozen`：
+以下条件全部满足后，主论文核心状态才能由`1.0-rc3.1`改为`1.0-core-frozen`：
 
 - RQ1—RQ3和H1—H4完成联合审查；
 - 每个实验的主要指标确认；
