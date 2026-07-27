@@ -8,6 +8,7 @@ import uuid
 from copy import deepcopy
 from typing import List, Optional
 
+from .candidate_retrieval import CandidateModelRetriever
 from .llm_adapters import DeepSeekOpenAIAdapter, LLMAdapterError, model_tools
 from .services import ExperimentService, ModelExecutionService
 from .trace_store import TraceStore
@@ -21,11 +22,14 @@ _BASE_SYSTEM_PROMPT = """你是冶金专业计算工具编排器。请遵守以�
 5. 工具可能拒绝超适用域、单位错误或缺失数据；收到拒绝结果后如实解释。
 6. 不要调用与问题无关的工具。"""
 
+_MULTI_ROUND_SYSTEM_PROMPT = _BASE_SYSTEM_PROMPT + """
+7. 多步任务中，如果后续工具参数依赖前一步结果，只调用当前参数已确定的工具；收到结果后再决定下一步。
+8. 已有结果足以回答时立即停止调用；禁止用完全相同的参数重复调用同一工具。"""
+
 SYSTEM_PROMPTS = {
     "m4.5-v1": _BASE_SYSTEM_PROMPT,
-    "m4.6-v1": _BASE_SYSTEM_PROMPT + """
-7. 多步任务中，如果后续工具参数依赖前一步结果，只调用当前参数已确定的工具；收到结果后再决定下一步。
-8. 已有结果足以回答时立即停止调用；禁止用完全相同的参数重复调用同一工具。""",
+    "m4.6-v1": _MULTI_ROUND_SYSTEM_PROMPT,
+    "m4.6b-v1": _MULTI_ROUND_SYSTEM_PROMPT,
 }
 
 
@@ -62,8 +66,9 @@ class DeepSeekExperimentService:
     MODES = ExperimentService.MODES
     uses_reference_arguments = False
     engine_name = "deepseek"
-    default_prompt_version = "m4.6-v1"
-    multi_round_prompt_versions = frozenset({"m4.6-v1"})
+    default_prompt_version = "m4.6b-v1"
+    multi_round_prompt_versions = frozenset({"m4.6-v1", "m4.6b-v1"})
+    retrieval_prompt_versions = frozenset({"m4.6b-v1"})
 
     def __init__(
         self,
@@ -74,17 +79,25 @@ class DeepSeekExperimentService:
         *,
         max_tool_rounds: int = 3,
         max_tool_calls: int = 5,
+        candidate_top_k: int = 5,
+        candidate_retriever=None,
     ):
         if max_tool_rounds < 1:
             raise ValueError("max_tool_rounds 必须大于等于 1")
         if max_tool_calls < 1:
             raise ValueError("max_tool_calls 必须大于等于 1")
+        if candidate_top_k < 1:
+            raise ValueError("candidate_top_k 必须大于等于 1")
         self.registry = registry
         self.executor = executor
         self.store = store
         self.adapter = adapter
         self.max_tool_rounds = max_tool_rounds
         self.max_tool_calls = max_tool_calls
+        self.candidate_top_k = candidate_top_k
+        self.candidate_retriever = (
+            candidate_retriever or CandidateModelRetriever(registry)
+        )
 
     @property
     def default_llm_name(self) -> str:
@@ -99,19 +112,75 @@ class DeepSeekExperimentService:
             "default_prompt_version": self.default_prompt_version,
             "max_tool_rounds": self.max_tool_rounds,
             "max_tool_calls": self.max_tool_calls,
+            "candidate_retrieval_strategy": self.candidate_retriever.strategy,
+            "candidate_top_k": self.candidate_top_k,
+            "retrieval_prompt_versions": sorted(self.retrieval_prompt_versions),
             **self.adapter.configuration(),
         }
 
-    def _offered_tools(self, mode: str, model_code: Optional[str]) -> List[dict]:
+    def _offered_tools(
+        self,
+        mode: str,
+        model_code: Optional[str],
+        user_query: str,
+        prompt_version: str,
+    ) -> tuple[List[dict], dict]:
         if mode == ExperimentService.MODE_DIRECT:
-            return []
+            return [], {
+                "strategy": "disabled-direct",
+                "top_k": 0,
+                "candidate_models": [],
+                "fallback_used": False,
+                "fallback_reason": "direct_mode",
+            }
         if mode == ExperimentService.MODE_FORCED:
             if not model_code:
                 raise ValueError("强制调用模式必须提供 model_code")
-            if not self.registry.get(model_code):
+            model = self.registry.get(model_code)
+            if not model:
                 raise ValueError(f"未知模型: {model_code}")
-            return model_tools(self.registry, [model_code])
-        return model_tools(self.registry)
+            candidates = [{
+                "rank": 1,
+                "model_code": model_code,
+                "model_name": model.name,
+                "score": None,
+                "matched_terms": [],
+                "reason": "强制调用实验指定模型",
+            }]
+            return model_tools(self.registry, [model_code]), {
+                "strategy": "forced-model-control",
+                "top_k": 1,
+                "candidate_models": candidates,
+                "fallback_used": False,
+                "fallback_reason": None,
+            }
+        if prompt_version in self.retrieval_prompt_versions:
+            retrieval = self.candidate_retriever.retrieve(
+                user_query,
+                top_k=self.candidate_top_k,
+            )
+            model_codes = [
+                item["model_code"]
+                for item in retrieval["candidate_models"]
+            ]
+            return model_tools(self.registry, model_codes), retrieval
+
+        tools = model_tools(self.registry)
+        candidates = [{
+            "rank": rank,
+            "model_code": tool["function"]["name"],
+            "model_name": self.registry.get(tool["function"]["name"]).name,
+            "score": None,
+            "matched_terms": [],
+            "reason": "M4.6 全量工具对照",
+        } for rank, tool in enumerate(tools, start=1)]
+        return tools, {
+            "strategy": "all-models-control",
+            "top_k": len(candidates),
+            "candidate_models": candidates,
+            "fallback_used": False,
+            "fallback_reason": None,
+        }
 
     def _prompt(self, prompt_version: str, mode: str) -> str:
         if prompt_version not in SYSTEM_PROMPTS:
@@ -233,7 +302,7 @@ class DeepSeekExperimentService:
         arguments: Optional[dict] = None,
         baseline_answer: str = "",
         llm_name: Optional[str] = None,
-        prompt_version: str = "m4.6-v1",
+        prompt_version: str = "m4.6b-v1",
         result_validation_enabled: bool = True,
         benchmark_case_id: Optional[str] = None,
     ) -> dict:
@@ -247,19 +316,22 @@ class DeepSeekExperimentService:
         experiment_id = _identifier("EXP")
         trace_id = _identifier("TRACE")
         started = time.perf_counter()
-        offered_tools = self._offered_tools(mode, model_code)
+        offered_tools, retrieval = self._offered_tools(
+            mode,
+            model_code,
+            user_query,
+            prompt_version,
+        )
         effective_llm_name = llm_name or self.default_llm_name
         multi_round_enabled = (
             mode == ExperimentService.MODE_AUTONOMOUS
             and prompt_version in self.multi_round_prompt_versions
         )
-        candidate_models = [
-            {
-                "model_code": tool["function"]["name"],
-                "model_name": self.registry.get(tool["function"]["name"]).name,
-            }
-            for tool in offered_tools
-        ]
+        retrieval_enabled = (
+            mode == ExperimentService.MODE_AUTONOMOUS
+            and prompt_version in self.retrieval_prompt_versions
+        )
+        candidate_models = deepcopy(retrieval["candidate_models"])
         messages = [
             {"role": "system", "content": self._prompt(prompt_version, mode)},
             {"role": "user", "content": user_query},
@@ -268,9 +340,12 @@ class DeepSeekExperimentService:
             "provider": "deepseek",
             "policy": {
                 "multi_round_enabled": multi_round_enabled,
+                "retrieval_enabled": retrieval_enabled,
                 "max_tool_rounds": self.max_tool_rounds,
                 "max_tool_calls": self.max_tool_calls,
+                "candidate_top_k": self.candidate_top_k,
             },
+            "retrieval": deepcopy(retrieval),
             "decision_request": {
                 "messages": deepcopy(messages),
                 "offered_models": [item["model_code"] for item in candidate_models],
@@ -427,7 +502,11 @@ class DeepSeekExperimentService:
         if mode == ExperimentService.MODE_DIRECT:
             selection_reason = "真实大模型直接回答，未提供工具定义"
         elif tool_call_chain:
-            selection_reason = "真实大模型通过 Function Calling 选择工具并生成参数"
+            selection_reason = (
+                "候选召回后由真实大模型通过 Function Calling 选择工具并生成参数"
+                if retrieval_enabled
+                else "真实大模型通过 Function Calling 选择工具并生成参数"
+            )
         else:
             selection_reason = "真实大模型未发起工具调用"
 
@@ -441,6 +520,7 @@ class DeepSeekExperimentService:
             "llm_name": effective_llm_name,
             "prompt_version": prompt_version,
             "candidate_models": candidate_models,
+            "candidate_retrieval": deepcopy(retrieval),
             "selected_model": selected_model,
             "selection_reason": selection_reason,
             "generated_arguments": generated_arguments,

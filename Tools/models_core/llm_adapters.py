@@ -118,11 +118,11 @@ def _schema_property(spec: dict) -> dict:
 
 def model_tools(registry, model_codes: Optional[Iterable[str]] = None) -> List[dict]:
     """Convert frozen model cards to OpenAI function-tool definitions."""
-    selected = set(model_codes or [])
+    selected = None if model_codes is None else set(model_codes)
     tools = []
     for card in sorted(registry.list_models(), key=lambda item: item["model_code"]):
         code = card["model_code"]
-        if selected and code not in selected:
+        if selected is not None and code not in selected:
             continue
         schema = card["input_schema"]
         parameters = {

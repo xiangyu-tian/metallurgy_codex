@@ -396,6 +396,83 @@ class DeepSeekExperimentServiceTests(unittest.TestCase):
         self.assertEqual(len(adapter.requests), 2)
         self.assertNotIn("tools", adapter.requests[-1])
 
+    def test_m46_control_still_offers_all_frozen_tools(self):
+        adapter = FakeAdapter([
+            response({"role": "assistant", "content": "无需继续调用。"}),
+        ])
+        service = DeepSeekExperimentService(
+            self.registry, self.executor, self.store, adapter
+        )
+
+        record = service.run(
+            user_query="先把 800 摄氏度换算为开尔文，再计算 Arrhenius 速率常数。",
+            mode="autonomous",
+            prompt_version="m4.6-v1",
+        )
+
+        self.assertEqual(len(adapter.requests[0]["tools"]), 17)
+        self.assertEqual(len(record["candidate_models"]), 17)
+        self.assertFalse(record["llm_trace"]["policy"]["retrieval_enabled"])
+        self.assertEqual(
+            record["llm_trace"]["retrieval"]["strategy"],
+            "all-models-control",
+        )
+
+    def test_m46b_only_offers_ranked_candidates_and_records_retrieval(self):
+        adapter = FakeAdapter([
+            response({"role": "assistant", "content": "参数不足，需要补充。"}),
+        ])
+        service = DeepSeekExperimentService(
+            self.registry, self.executor, self.store, adapter
+        )
+
+        record = service.run(
+            user_query="先把 800 摄氏度换算为开尔文，再计算 Arrhenius 速率常数。",
+            mode="autonomous",
+            prompt_version="m4.6b-v1",
+        )
+
+        offered_codes = {
+            item["function"]["name"] for item in adapter.requests[0]["tools"]
+        }
+        self.assertLessEqual(len(offered_codes), 5)
+        self.assertIn("A001", offered_codes)
+        self.assertIn("C001", offered_codes)
+        self.assertEqual(
+            offered_codes,
+            {item["model_code"] for item in record["candidate_models"]},
+        )
+        self.assertTrue(all(
+            item["score"] > 0 and item["matched_terms"]
+            for item in record["candidate_models"]
+        ))
+        self.assertTrue(record["llm_trace"]["policy"]["retrieval_enabled"])
+        self.assertEqual(
+            record["llm_trace"]["retrieval"]["strategy"],
+            "lexical-card-v1",
+        )
+
+    def test_m46b_no_tool_signal_offers_an_empty_tool_set(self):
+        adapter = FakeAdapter([
+            response({"role": "assistant", "content": "钢铁工业经历了长期发展。"}),
+        ])
+        service = DeepSeekExperimentService(
+            self.registry, self.executor, self.store, adapter
+        )
+
+        record = service.run(
+            user_query="介绍钢铁工业的发展历史。",
+            mode="autonomous",
+            prompt_version="m4.6b-v1",
+        )
+
+        self.assertIsNone(adapter.requests[0]["tools"])
+        self.assertEqual(record["candidate_models"], [])
+        self.assertEqual(
+            record["candidate_retrieval"]["fallback_reason"],
+            "no_tool_signal",
+        )
+
     def test_benchmark_routes_same_case_to_deepseek_without_reference_argument_leak(self):
         dataset = ToolCallingDataset()
         case = dataset.get("TC-SINGLE_TOOL-001")
@@ -434,8 +511,16 @@ class DeepSeekExperimentServiceTests(unittest.TestCase):
 
         self.assertEqual(result["configuration"]["engine"], "deepseek")
         self.assertEqual(result["configuration"]["llm_name"], "deepseek-v4-flash")
-        self.assertEqual(result["configuration"]["prompt_version"], "m4.6-v1")
+        self.assertEqual(result["configuration"]["prompt_version"], "m4.6b-v1")
         self.assertEqual(result["total_experiments"], 1)
+        self.assertEqual(
+            result["summary_by_mode"]["forced"]["average_candidate_count"],
+            1.0,
+        )
+        self.assertEqual(
+            result["summary_by_mode"]["forced"]["retrieval_fallback_rate"],
+            0.0,
+        )
         self.assertTrue(result["results"][0]["metrics"]["arguments_exact_match"])
         decision_messages = adapter.requests[0]["messages"]
         self.assertNotIn("standard_arguments", json.dumps(decision_messages, ensure_ascii=False))

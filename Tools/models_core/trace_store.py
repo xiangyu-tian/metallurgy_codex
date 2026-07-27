@@ -282,6 +282,7 @@ class PostgresTraceStore:
             "execution_result": row["execution_result"],
             "tool_call_chain": row["tool_call_chain"],
             "llm_trace": llm_trace,
+            "candidate_retrieval": llm_trace.get("retrieval"),
             "tool_round_count": llm_trace.get("tool_round_count", 0),
             "retry_count": row["retry_count"],
             "stop_reason": llm_trace.get("stop_reason"),

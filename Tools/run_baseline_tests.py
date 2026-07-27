@@ -14,6 +14,7 @@ sys.path.insert(0, TOOLS_DIR)
 sys.path.insert(0, PROJECT_DIR)
 
 from tests import (
+    test_candidate_retrieval,
     test_model_baseline,
     test_llm_experiments,
     test_thermo_fallback,
@@ -25,6 +26,7 @@ from tests import (
 def main() -> int:
     loader = unittest.TestLoader()
     suite = unittest.TestSuite()
+    suite.addTests(loader.loadTestsFromModule(test_candidate_retrieval))
     suite.addTests(loader.loadTestsFromModule(test_model_baseline))
     suite.addTests(loader.loadTestsFromModule(test_llm_experiments))
     suite.addTests(loader.loadTestsFromModule(test_thermo_fallback))

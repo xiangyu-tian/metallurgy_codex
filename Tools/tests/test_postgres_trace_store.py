@@ -89,6 +89,11 @@ class PostgresTraceStoreIntegrationTests(unittest.TestCase):
             }],
             "llm_trace": {
                 "decision_response": {"id": "chat-integration"},
+                "retrieval": {
+                    "strategy": "lexical-card-v1",
+                    "top_k": 5,
+                    "fallback_used": False,
+                },
                 "tool_round_count": 2,
                 "stop_reason": "assistant_final",
             },
@@ -113,3 +118,7 @@ class PostgresTraceStoreIntegrationTests(unittest.TestCase):
         self.assertEqual(loaded_experiment["tool_round_count"], 2)
         self.assertEqual(loaded_experiment["retry_count"], 1)
         self.assertEqual(loaded_experiment["stop_reason"], "assistant_final")
+        self.assertEqual(
+            loaded_experiment["candidate_retrieval"]["strategy"],
+            "lexical-card-v1",
+        )

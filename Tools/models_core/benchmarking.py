@@ -504,6 +504,19 @@ class BenchmarkService:
         aggregate["duplicate_call_rate"] = round(
             sum(row["metrics"]["duplicate_call_count"] for row in rows) / total_calls, 4
         ) if total_calls else 0.0 if rows else None
+        aggregate["average_candidate_count"] = round(
+            sum(row.get("candidate_count", 0) for row in rows) / len(rows),
+            4,
+        ) if rows else None
+        aggregate["retrieval_fallback_rate"] = round(
+            sum(bool(row.get("retrieval_fallback_used")) for row in rows)
+            / len(rows),
+            4,
+        ) if rows else None
+        aggregate["empty_candidate_rate"] = round(
+            sum(row.get("candidate_count", 0) == 0 for row in rows) / len(rows),
+            4,
+        ) if rows else None
         aggregate["total_tokens"] = sum(
             (row.get("token_usage") or {}).get("total_tokens", 0) for row in rows
         )
@@ -588,6 +601,12 @@ class BenchmarkService:
                 experiment["metrics"] = metrics
                 experiment["benchmark_run_id"] = run_id
                 self.store.save_experiment(experiment)
+                retrieval = (
+                    experiment.get("candidate_retrieval")
+                    or (experiment.get("llm_trace") or {}).get("retrieval")
+                    or {}
+                )
+                candidate_models = experiment.get("candidate_models") or []
                 rows.append({
                     "run_id": run_id,
                     "case_id": case["case_id"],
@@ -597,6 +616,19 @@ class BenchmarkService:
                     "engine": engine,
                     "experiment_id": experiment["experiment_id"],
                     "selected_model": experiment.get("selected_model"),
+                    "candidate_models": [
+                        item.get("model_code") for item in candidate_models
+                        if item.get("model_code")
+                    ],
+                    "candidate_count": len(candidate_models),
+                    "retrieval_strategy": retrieval.get("strategy"),
+                    "retrieval_fallback_used": retrieval.get(
+                        "fallback_used",
+                        False,
+                    ),
+                    "retrieval_fallback_reason": retrieval.get(
+                        "fallback_reason"
+                    ),
                     "latency_ms": experiment["latency_ms"],
                     "token_usage": experiment.get("token_usage"),
                     "metrics": metrics,

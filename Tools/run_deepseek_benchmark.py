@@ -33,7 +33,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--categories", nargs="+")
     parser.add_argument("--max-cases", type=int, default=120)
-    parser.add_argument("--prompt-version", default="m4.6-v1")
+    parser.add_argument("--prompt-version", default="m4.6b-v1")
     parser.add_argument("--output", type=Path)
     return parser.parse_args()
 

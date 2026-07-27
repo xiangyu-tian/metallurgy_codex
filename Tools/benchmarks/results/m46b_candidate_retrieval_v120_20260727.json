@@ -1,0 +1,2146 @@
+{
+  "strategy": "lexical-card-v1",
+  "dataset_version": "1.2.0",
+  "top_k": 5,
+  "summary": {
+    "case_count": 120,
+    "tool_required_case_count": 85,
+    "micro_candidate_recall": 1.0,
+    "tool_required_complete_recall": 1.0,
+    "single_required_complete_recall": 1.0,
+    "multi_tool_complete_recall": 1.0,
+    "average_candidate_precision": 0.9960784313725489,
+    "average_candidate_count": 1.225,
+    "fallback_rate": 0.008333333333333333
+  },
+  "results": [
+    {
+      "case_id": "TC-NO_TOOL-001",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-NO_TOOL-002",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B006"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-NO_TOOL-003",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B009"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-NO_TOOL-004",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "C001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-NO_TOOL-005",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B019"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-NO_TOOL-006",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "A003"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-NO_TOOL-007",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "A005"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-NO_TOOL-008",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [],
+      "candidate_count": 0,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": "no_tool_signal"
+    },
+    {
+      "case_id": "TC-NO_TOOL-009",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-NO_TOOL-010",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [],
+      "candidate_count": 0,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": "no_tool_signal"
+    },
+    {
+      "case_id": "TC-NO_TOOL-011",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [],
+      "candidate_count": 0,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": "no_tool_signal"
+    },
+    {
+      "case_id": "TC-NO_TOOL-012",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [],
+      "candidate_count": 0,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": "no_tool_signal"
+    },
+    {
+      "case_id": "TC-NO_TOOL-013",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [],
+      "candidate_count": 0,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": "no_tool_signal"
+    },
+    {
+      "case_id": "TC-NO_TOOL-014",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [],
+      "candidate_count": 0,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": "no_tool_signal"
+    },
+    {
+      "case_id": "TC-NO_TOOL-015",
+      "category": "no_tool",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [],
+      "candidate_count": 0,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": "no_tool_signal"
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-001",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A001"
+      ],
+      "candidate_models": [
+        "A001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-002",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A001"
+      ],
+      "candidate_models": [
+        "A001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-003",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A001"
+      ],
+      "candidate_models": [
+        "A001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-004",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A002"
+      ],
+      "candidate_models": [
+        "A002"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-005",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A002"
+      ],
+      "candidate_models": [
+        "A002"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-006",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A002"
+      ],
+      "candidate_models": [
+        "A002"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-007",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A003"
+      ],
+      "candidate_models": [
+        "A003"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-008",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A003"
+      ],
+      "candidate_models": [
+        "A003"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-009",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A003"
+      ],
+      "candidate_models": [
+        "A003"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-010",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A004"
+      ],
+      "candidate_models": [
+        "A004"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-011",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A004"
+      ],
+      "candidate_models": [
+        "A004"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-012",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A004"
+      ],
+      "candidate_models": [
+        "A004"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-013",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A005"
+      ],
+      "candidate_models": [
+        "A005"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-014",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A005"
+      ],
+      "candidate_models": [
+        "A005"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-015",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A005"
+      ],
+      "candidate_models": [
+        "A005"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-016",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B001"
+      ],
+      "candidate_models": [
+        "B001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-017",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B001"
+      ],
+      "candidate_models": [
+        "B001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-018",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B001"
+      ],
+      "candidate_models": [
+        "B001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-019",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B002"
+      ],
+      "candidate_models": [
+        "B002"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-020",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B002"
+      ],
+      "candidate_models": [
+        "B002"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-021",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B002"
+      ],
+      "candidate_models": [
+        "B002"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-022",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B003"
+      ],
+      "candidate_models": [
+        "B003"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-023",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B003"
+      ],
+      "candidate_models": [
+        "B003"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-024",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B003"
+      ],
+      "candidate_models": [
+        "B003"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-025",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B004"
+      ],
+      "candidate_models": [
+        "B004"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-026",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B004"
+      ],
+      "candidate_models": [
+        "B004"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-027",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B004"
+      ],
+      "candidate_models": [
+        "B004"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-028",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B005"
+      ],
+      "candidate_models": [
+        "B005"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-029",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B005"
+      ],
+      "candidate_models": [
+        "B005"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-030",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B005"
+      ],
+      "candidate_models": [
+        "B005"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-031",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B006"
+      ],
+      "candidate_models": [
+        "B006"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-032",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B006"
+      ],
+      "candidate_models": [
+        "B006"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-033",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B006"
+      ],
+      "candidate_models": [
+        "B006"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-034",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B007"
+      ],
+      "candidate_models": [
+        "B007"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-035",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B007"
+      ],
+      "candidate_models": [
+        "B007"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-036",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B007"
+      ],
+      "candidate_models": [
+        "B007"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-037",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B008"
+      ],
+      "candidate_models": [
+        "B008"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-038",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B008"
+      ],
+      "candidate_models": [
+        "B008"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-039",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B008"
+      ],
+      "candidate_models": [
+        "B008"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-040",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B009"
+      ],
+      "candidate_models": [
+        "B009"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-041",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B009"
+      ],
+      "candidate_models": [
+        "B009"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-042",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B009"
+      ],
+      "candidate_models": [
+        "B009"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-043",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B019"
+      ],
+      "candidate_models": [
+        "B019"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-044",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B019"
+      ],
+      "candidate_models": [
+        "B019"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-045",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B019"
+      ],
+      "candidate_models": [
+        "B019"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-046",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "C001"
+      ],
+      "candidate_models": [
+        "C001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-047",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "C001"
+      ],
+      "candidate_models": [
+        "C001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-048",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "C001"
+      ],
+      "candidate_models": [
+        "C001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-049",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "C002"
+      ],
+      "candidate_models": [
+        "C002"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-050",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "C002"
+      ],
+      "candidate_models": [
+        "C002"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-SINGLE_TOOL-051",
+      "category": "single_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "C002"
+      ],
+      "candidate_models": [
+        "C002"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-001",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A002",
+        "A003",
+        "A001"
+      ],
+      "candidate_models": [
+        "A001",
+        "A003",
+        "A002"
+      ],
+      "candidate_count": 3,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-002",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A002",
+        "B008"
+      ],
+      "candidate_models": [
+        "B008",
+        "A002"
+      ],
+      "candidate_count": 2,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-003",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A001",
+        "B001"
+      ],
+      "candidate_models": [
+        "A001",
+        "B001"
+      ],
+      "candidate_count": 2,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-004",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A002",
+        "A003"
+      ],
+      "candidate_models": [
+        "A003",
+        "A002"
+      ],
+      "candidate_count": 2,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-005",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B006",
+        "B008",
+        "B009"
+      ],
+      "candidate_models": [
+        "B008",
+        "B006",
+        "B009"
+      ],
+      "candidate_count": 3,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-006",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A004",
+        "B019"
+      ],
+      "candidate_models": [
+        "B019",
+        "A004"
+      ],
+      "candidate_count": 2,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-007",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A001",
+        "C001"
+      ],
+      "candidate_models": [
+        "C001",
+        "A001"
+      ],
+      "candidate_count": 2,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-008",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B003",
+        "B004"
+      ],
+      "candidate_models": [
+        "B004",
+        "B003"
+      ],
+      "candidate_count": 2,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-009",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B001",
+        "B005"
+      ],
+      "candidate_models": [
+        "B001",
+        "B005"
+      ],
+      "candidate_count": 2,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-010",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A005",
+        "A001"
+      ],
+      "candidate_models": [
+        "A005",
+        "A001"
+      ],
+      "candidate_count": 2,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-011",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B007",
+        "B008"
+      ],
+      "candidate_models": [
+        "B008",
+        "B007"
+      ],
+      "candidate_count": 2,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-012",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "C002",
+        "A001"
+      ],
+      "candidate_models": [
+        "C002",
+        "A001"
+      ],
+      "candidate_count": 2,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-013",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A002",
+        "A001"
+      ],
+      "candidate_models": [
+        "A001",
+        "A003",
+        "A002"
+      ],
+      "candidate_count": 3,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 0.6666666666666666,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-014",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "A001",
+        "A005"
+      ],
+      "candidate_models": [
+        "A005",
+        "A001"
+      ],
+      "candidate_count": 2,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-MULTI_TOOL-015",
+      "category": "multi_tool",
+      "should_call_tool": true,
+      "required_models": [
+        "B006",
+        "B008"
+      ],
+      "candidate_models": [
+        "B006",
+        "B008"
+      ],
+      "candidate_count": 2,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-001",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B009"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-002",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-003",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B008"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-004",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "A003"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-005",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "A001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-006",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "C002"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-007",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "C001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-008",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "A005"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-009",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B019"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-010",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B006"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-011",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B005"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-012",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "A004"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-013",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B003"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-014",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B004"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-INSUFFICIENT_INFO-015",
+      "category": "insufficient_info",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "A002"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-OUT_OF_DOMAIN-001",
+      "category": "out_of_domain",
+      "should_call_tool": true,
+      "required_models": [
+        "A001"
+      ],
+      "candidate_models": [
+        "A001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-OUT_OF_DOMAIN-002",
+      "category": "out_of_domain",
+      "should_call_tool": true,
+      "required_models": [
+        "A002"
+      ],
+      "candidate_models": [
+        "A002"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-OUT_OF_DOMAIN-003",
+      "category": "out_of_domain",
+      "should_call_tool": true,
+      "required_models": [
+        "A003"
+      ],
+      "candidate_models": [
+        "A003"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-OUT_OF_DOMAIN-004",
+      "category": "out_of_domain",
+      "should_call_tool": true,
+      "required_models": [
+        "A004"
+      ],
+      "candidate_models": [
+        "A004"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-OUT_OF_DOMAIN-005",
+      "category": "out_of_domain",
+      "should_call_tool": true,
+      "required_models": [
+        "A005"
+      ],
+      "candidate_models": [
+        "A005"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-OUT_OF_DOMAIN-006",
+      "category": "out_of_domain",
+      "should_call_tool": true,
+      "required_models": [
+        "B001"
+      ],
+      "candidate_models": [
+        "B001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-OUT_OF_DOMAIN-007",
+      "category": "out_of_domain",
+      "should_call_tool": true,
+      "required_models": [
+        "B002"
+      ],
+      "candidate_models": [
+        "B002"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-OUT_OF_DOMAIN-008",
+      "category": "out_of_domain",
+      "should_call_tool": true,
+      "required_models": [
+        "B003"
+      ],
+      "candidate_models": [
+        "B003"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-OUT_OF_DOMAIN-009",
+      "category": "out_of_domain",
+      "should_call_tool": true,
+      "required_models": [
+        "B004"
+      ],
+      "candidate_models": [
+        "B004"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-OUT_OF_DOMAIN-010",
+      "category": "out_of_domain",
+      "should_call_tool": true,
+      "required_models": [
+        "B005"
+      ],
+      "candidate_models": [
+        "B005"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-OUT_OF_DOMAIN-011",
+      "category": "out_of_domain",
+      "should_call_tool": true,
+      "required_models": [
+        "B006"
+      ],
+      "candidate_models": [
+        "B006"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-OUT_OF_DOMAIN-012",
+      "category": "out_of_domain",
+      "should_call_tool": true,
+      "required_models": [
+        "B008"
+      ],
+      "candidate_models": [
+        "B008"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-OUT_OF_DOMAIN-013",
+      "category": "out_of_domain",
+      "should_call_tool": true,
+      "required_models": [
+        "B019"
+      ],
+      "candidate_models": [
+        "B019"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-OUT_OF_DOMAIN-014",
+      "category": "out_of_domain",
+      "should_call_tool": true,
+      "required_models": [
+        "C001"
+      ],
+      "candidate_models": [
+        "C001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-ADVERSARIAL-001",
+      "category": "adversarial",
+      "should_call_tool": true,
+      "required_models": [
+        "A003"
+      ],
+      "candidate_models": [
+        "A003"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-ADVERSARIAL-002",
+      "category": "adversarial",
+      "should_call_tool": true,
+      "required_models": [
+        "A001"
+      ],
+      "candidate_models": [
+        "A001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-ADVERSARIAL-003",
+      "category": "adversarial",
+      "should_call_tool": true,
+      "required_models": [
+        "B001"
+      ],
+      "candidate_models": [
+        "B001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-ADVERSARIAL-004",
+      "category": "adversarial",
+      "should_call_tool": true,
+      "required_models": [
+        "B009"
+      ],
+      "candidate_models": [
+        "B009"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-ADVERSARIAL-005",
+      "category": "adversarial",
+      "should_call_tool": true,
+      "required_models": [
+        "A001"
+      ],
+      "candidate_models": [
+        "A001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": 1.0,
+      "complete_recall": true,
+      "candidate_precision": 1.0,
+      "best_required_rank": 1,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-ADVERSARIAL-006",
+      "category": "adversarial",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "A001",
+        "A002",
+        "A003",
+        "A004",
+        "A005",
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "B005",
+        "B006",
+        "B007",
+        "B008",
+        "B009",
+        "B019",
+        "C001",
+        "C002"
+      ],
+      "candidate_count": 17,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": true,
+      "fallback_reason": "calculation_intent_without_match"
+    },
+    {
+      "case_id": "TC-ADVERSARIAL-007",
+      "category": "adversarial",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "C001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-ADVERSARIAL-008",
+      "category": "adversarial",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B001"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-ADVERSARIAL-009",
+      "category": "adversarial",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "B019"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    {
+      "case_id": "TC-ADVERSARIAL-010",
+      "category": "adversarial",
+      "should_call_tool": false,
+      "required_models": [],
+      "candidate_models": [
+        "A003"
+      ],
+      "candidate_count": 1,
+      "candidate_recall": null,
+      "complete_recall": null,
+      "candidate_precision": null,
+      "best_required_rank": null,
+      "fallback_used": false,
+      "fallback_reason": null
+    }
+  ],
+  "generated_at": "2026-07-27T15:23:13.858455+08:00"
+}

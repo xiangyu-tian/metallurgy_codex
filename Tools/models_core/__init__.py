@@ -22,6 +22,10 @@ from .services import ExperimentService, InMemoryTraceStore, ModelExecutionServi
 from .benchmarking import BenchmarkService, ToolCallingDataset
 from .llm_adapters import DeepSeekOpenAIAdapter, LLMAdapterError, model_tools
 from .llm_experiments import DeepSeekExperimentService
+from .candidate_retrieval import (
+    CandidateModelRetriever,
+    evaluate_candidate_retrieval,
+)
 from .trace_store import (
     PostgresTraceStore,
     ResilientTraceStore,
