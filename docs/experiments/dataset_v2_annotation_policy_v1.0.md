@@ -2,7 +2,7 @@
 
 ## 文档状态
 
-- 版本：`1.0-rc1`
+- 版本：`1.0-rc2`
 - 日期：2026-07-27
 - 状态：候选冻结版，待冶金专家与计算机方向成员联合审查
 - 关联协议：`docs/experiments/research_protocol_v1.0.md`
@@ -27,9 +27,10 @@
 ### 1.2 能力合理性与平台政策分开
 
 - `allowed_actions`表示科学和交互上可以接受的动作集合；
-- `policy_expected_action`表示特定平台政策下要求执行的单一动作。
+- 政策派生表中的`policy_expected_action`表示特定平台政策下要求执行的单一动作。
 
 能力测试按集合评分，政策测试按单一动作评分。
+`policy_mode`不属于任务科学标签；同一个`task_id`可以关联多个政策记录，不复制科学任务。
 
 ### 1.3 底层状态允许多标签
 
@@ -80,6 +81,7 @@ language: zh | en | mixed
 minimal_pair_group: string | null
 template_group: string | null
 difficulty: easy | medium | hard
+difficulty_score: 0 | 1 | 2 | 3 | 4 | 5
 construction_flags: []
 split: train | dev | test | generalization
 annotation_status: draft | double_annotated | adjudicated | audited
@@ -96,6 +98,26 @@ updated_at: datetime
 - Track C、D必须引用公共`task_id`；
 - 不允许为填满字段而生成无意义的空标签。
 
+### 2.3 难度的操作性定义
+
+以下条件每满足一项计1分：
+
+1. 需要识别三个及以上科学条件；
+2. 存在三个及以上可接受工具或高相似度近邻；
+3. 必须区分具体科学适用域；
+4. 需要多步骤依赖推理；
+5. 含歧义、对抗诱导或冲突要求。
+
+映射规则：
+
+```text
+0—1分：easy
+2—3分：medium
+4—5分：hard
+```
+
+人工覆盖难度等级必须保存覆盖理由。
+
 ---
 
 ## 3. Track A：调用边界集
@@ -105,12 +127,12 @@ updated_at: datetime
 ```yaml
 task_id: string
 evidence_requirement: none | optional | required
-coarse_readiness: ready | missing_basic_info | capability_unavailable | risk_review
+answerability: answerable | ambiguous_request | missing_task_information
+information_status: sufficient | missing_execution_input | ambiguous_execution_input
+capability_status: available | unavailable | uncertain
+risk_status: normal | review_required
 boundary_flags: []
-risk_level: normal | high
 allowed_actions: []
-policy_mode: capability | conversational | reproducible_research | engineering
-policy_expected_action: answer | call | clarify | refuse | escalate | null
 required_inputs: []
 missing_inputs: []
 coarse_capability: string | null
@@ -158,42 +180,60 @@ disagreement_notes: string | null
 - 结果用于科研复现、工程决策或高风险操作；
 - 大模型无法在回答中完整、透明、可靠地复核全过程。
 
-### 3.3 `coarse_readiness`
+### 3.3 `answerability`
 
-#### `ready`
+该字段判断问题本身是否足以产生有意义响应，不涉及具体工具参数。
 
-仅从问题表面和粗粒度能力看：
+#### `answerable`
 
-- 科学对象明确；
-- 完成目标所需的基本条件已给出；
-- 平台存在对应一级能力类别；
-- 没有明显高风险门控。
+对象、目标和语义完整，可以直接回答、判断是否调用或进入后续门控。
 
-`ready`不代表某个具体工具一定适用。
+#### `ambiguous_request`
 
-#### `missing_basic_info`
+存在多个合理意图或对象，需要用户选择。例如“分析这个氧化铁”可能指FeO、Fe₂O₃或Fe₃O₄。
 
-在不知道具体工具Schema的情况下也能判断基本信息不足，例如：
+#### `missing_task_information`
 
-- “计算某种氧化铁的摩尔质量”，但未说明具体氧化物；
-- “计算反应吉布斯自由能”，但没有给出反应式；
-- “计算热平衡”，但没有给出物料或工况。
+缺少问题对象、指代或任务目标，即使不调用工具也无法可靠回答。例如“解释这个反应为什么发生”，但上下文中没有反应。
 
-#### `capability_unavailable`
+### 3.4 `information_status`
 
-任务所需一级科学能力不在冻结的能力目录中。不得因为大模型可以编造一个近似答案而视为能力存在。
+该字段只描述粗粒度工具执行所需信息，不等同于问题可回答性。
 
-#### `risk_review`
+#### `sufficient`
 
-任务涉及高风险工程调整、安全临界条件、受控工艺或可能造成显著现实损失，需要人工确认。
+从一级能力角度看，执行所需的基本科学对象和工况已经给出。它不代表某个具体工具一定适用。
 
-### 3.4 `boundary_flags`
+#### `missing_execution_input`
+
+问题可以具有明确语义，但工具执行明显缺少必要工况。例如可以解释算法原理，但没有给出运行算法需要的温度、成分或边界条件。
+
+#### `ambiguous_execution_input`
+
+提供了执行输入，但单位、相态、材料身份或条件解释存在歧义，需要确认后才能安全调用。
+
+### 3.5 `capability_status`
+
+- `available`：冻结的一级能力目录中存在对应能力；
+- `unavailable`：对应一级能力明确不存在；
+- `uncertain`：仅凭粗粒度能力目录无法确定，需要检索或人工确认。
+
+不得因为大模型可以编造近似答案而把不存在的能力标为`available`。
+
+### 3.6 `risk_status`
+
+- `normal`：不触发额外人工审核；
+- `review_required`：涉及高风险工程调整、安全临界条件、受控工艺或可能造成显著现实损失。
+
+### 3.7 `boundary_flags`
 
 允许值包括：
 
 ```text
 missing_object
 missing_parameter
+missing_task_info
+missing_execution_info
 ambiguous_material
 ambiguous_phase
 ambiguous_condition
@@ -214,32 +254,65 @@ conflicting_requirements
 
 ## 4. Track B：工具路由集
 
-### 4.1 字段
+### 4.1 Track B任务金标准表
 
 ```yaml
 task_id: string
 target_tool_family: string
 acceptable_tools: []
 unacceptable_near_neighbors: []
-tool_pool_id: string
-tool_pool_size: 17 | 50 | 100 | 120
-random_seed: integer
-distractor_type: irrelevant | lexical | functional_overlap
-similarity_level: low | medium | high
-target_tool_rank: integer | null
-distractor_composition: object
-schema_token_count: integer
-tool_order_hash: string
 routing_reason: string
 ```
 
-### 4.2 `acceptable_tools`
+金标准表只存放与任务科学语义有关、不会随方法和随机工具池改变的字段。
+
+### 4.2 工具池元数据表
+
+```yaml
+tool_pool_id: string
+pool_family_id: string
+tool_pool_size: 17 | 50 | 100 | 120
+random_seed: integer
+tool_ids: []
+distractor_regime: irrelevant_only | lexical_only | functional_overlap_only | mixed_realistic
+distractor_composition: object
+similarity_distribution: object
+schema_token_count: integer
+tool_order: []
+tool_order_hash: string
+construction_status: draft | audited | frozen
+```
+
+工具池表记录实验条件，不复制任务科学标签。一个`task_id`通过关联表绑定多个`tool_pool_id`。
+
+### 4.3 实验运行结果表
+
+以下字段属于实验结果，不进入标注金标准：
+
+```yaml
+run_id: string
+task_id: string
+tool_pool_id: string
+method: string
+retrieved_tools: []
+target_rank: integer | null
+selected_tool: string | null
+predicted_action: string
+retrieval_latency_ms: number
+model_latency_ms: number
+end_to_end_latency_ms: number
+token_usage: object
+```
+
+`target_rank`只能出现在运行结果中，因为它取决于具体检索方法。不得把运行结果回写并覆盖任务金标准或工具池元数据。
+
+### 4.4 `acceptable_tools`
 
 包含在当前任务、当前输入和当前适用域下科学上可接受的工具集合。多个工具都能正确完成任务时必须全部记录。
 
 不得因为项目希望测试某一个工具，就排除科学上等价的工具。
 
-### 4.3 `unacceptable_near_neighbors`
+### 4.5 `unacceptable_near_neighbors`
 
 记录功能相似但在当前条件下不可使用的工具，并说明原因：
 
@@ -250,7 +323,7 @@ routing_reason: string
 
 该字段用于研究“功能重叠但适用域不同”的专业混淆。
 
-### 4.4 干扰工具类型
+### 4.6 干扰工具类型与工具池
 
 #### `irrelevant`
 
@@ -264,7 +337,17 @@ routing_reason: string
 
 功能相近，但适用体系、相态、温压范围、成分、数据库、模型假设或精度不同，不能在当前任务中互换。
 
-### 4.5 嵌套工具池
+纯类型控制池分别只使用一种干扰类型：
+
+```text
+irrelevant_only
+lexical_only
+functional_overlap_only
+```
+
+`mixed_realistic`按照通过审核的真实工具库比例混合三类干扰，用于外部有效性验证。不能用单值`distractor_type`描述混合池。
+
+### 4.7 嵌套工具池
 
 每个目标任务必须构造：
 
@@ -273,6 +356,45 @@ routing_reason: string
 ```
 
 每个规模至少有A—E五套预注册工具池。扩大规模时不得替换目标工具或删除已有干扰工具。
+
+正式实验单元为：
+
+```text
+task_id
+× tool_pool_size
+× distractor_regime
+× pool_repeat(A—E)
+× model_run_repeat
+```
+
+某个目标工具缺少足够高相似度近邻时：
+
+- 不得用无关工具补充并标为高相似度；
+- 该目标不进入对应纯类型池；
+- 可以进入`mixed_realistic`池；
+- 在工具池元数据中记录缺失原因；
+- 使用不平衡设计和混合效应模型处理。
+
+### 4.8 相似度评分表
+
+目标工具与干扰工具分别判断：
+
+1. 是否属于同一一级领域；
+2. 是否具有相同科学目标；
+3. 是否处理相同输入对象；
+4. 是否输出相同物理量；
+5. 适用域是否重叠；
+6. 仅凭名称是否难以区分。
+
+每项`是=1`、`否=0`，形成0—6分辅助分数：
+
+```text
+0—1：low
+2—3：medium
+4—6：high
+```
+
+`functional_overlap`除总分外，还必须满足“科学目标或输出量相同，但当前任务因适用域差异不可互换”。相似度标签由两名标注者独立完成并报告一致性，辅助分数不能替代冶金专家的功能判断。
 
 ---
 
@@ -389,17 +511,19 @@ validation_expected: pass | reject | clarify | escalate
 
 ## 7. 工具级准备度
 
-Track B或D中增加：
+Track B或D中按候选工具逐项记录：
 
 ```yaml
 tool_readiness:
-  status: ready | missing_parameter | out_of_domain | unsupported_system | unavailable
-  tool_id: string
-  missing_parameters: []
-  violated_constraints: []
-  alternative_tools: []
-  decision_reason: string
+  - tool_id: string
+    status: ready | missing_parameter | out_of_domain | unsupported_system | unavailable
+    missing_parameters: []
+    violated_constraints: []
+    alternative_tools: []
+    decision_reason: string
 ```
+
+一条任务可以同时记录可接受工具、近邻工具和替代工具的不同准备度。不得用一个单值代表整个候选集。
 
 ### 7.1 `ready`
 
@@ -425,34 +549,52 @@ tool_readiness:
 
 ## 8. 动作集合与政策矩阵
 
-### 8.1 能力模式
+### 8.1 科学标签与政策派生分表
+
+Track A科学标签只保存一次。政策动作保存在独立派生表：
+
+```yaml
+task_id: string
+policy_mode: capability | conversational | reproducible_research | engineering
+policy_expected_action: answer | call | clarify | refuse | escalate | null
+policy_version: string
+generated_at: datetime
+override_reason: string | null
+original_generated_action: string | null
+approver: string | null
+```
+
+同一个`task_id`可以对应四条政策记录，但仍只计为一个唯一语义任务。禁止为不同政策复制公共任务和科学标签。
+
+### 8.2 能力模式
 
 `policy_mode=capability`时：
 
 - `policy_expected_action=null`；
 - 只评价预测动作是否属于`allowed_actions`；
-- `optional + ready`通常允许`answer`和`call`；
+- `optional + answerable`通常允许`answer`和`call`；
 - 专家可以增加多个合理动作，但必须写明理由。
 
-### 8.2 平台政策模式
+### 8.3 平台政策模式
 
-| 证据需求 | 边界状态 | 风险 | conversational | reproducible_research | engineering |
+| 可回答性/证据需求 | 执行信息/能力 | 风险 | conversational | reproducible_research | engineering |
 |---|---|---|---|---|---|
-| none | 任意普通状态 | normal | answer | answer | answer |
-| optional | ready | normal | answer | call | call |
-| optional | missing信息 | normal | answer | clarify | clarify |
-| optional | 能力不可用或明确超适用域 | normal | answer | refuse | refuse |
-| required | ready | normal | call | call | call |
-| required | missing信息 | normal | clarify | clarify | clarify |
-| required | 能力不可用 | normal | refuse | refuse | refuse |
-| required | 明确超适用域 | normal | refuse | refuse | refuse |
-| optional/required | 任意 | high | escalate | escalate | escalate |
+| ambiguous_request或missing_task_information | 任意 | normal | clarify | clarify | clarify |
+| answerable + none | 任意 | normal | answer | answer | answer |
+| answerable + optional | sufficient + available或uncertain | normal | answer | call | call |
+| answerable + optional | missing/ambiguous执行信息 | normal | answer | clarify | clarify |
+| answerable + optional | capability unavailable | normal | answer | refuse | refuse |
+| answerable + required | sufficient + available或uncertain | normal | call | call | call |
+| answerable + required | missing/ambiguous执行信息 | normal | clarify | clarify | clarify |
+| answerable + required | capability unavailable | normal | refuse | refuse | refuse |
+| optional/required | 工具级明确超适用域且无替代工具 | normal | refuse | refuse | refuse |
+| answerable的optional/required任务 | 任意 | review_required | escalate | escalate | escalate |
 
-能力测试中的`allowed_actions`仍独立存在。例如`optional + ready`可以允许`[answer, call]`，即使科研政策要求`call`。
+能力测试中的`allowed_actions`仍独立存在。例如`optional + answerable`可以允许`[answer, call]`，即使科研政策要求`call`。
 
-### 8.3 政策动作生成
+### 8.4 政策动作生成
 
-`policy_expected_action`原则上由版本化规则程序生成，不由标注者逐条自由填写。人工覆盖必须记录：
+`policy_expected_action`由版本化规则程序批量生成，不由标注者逐条自由填写。人工覆盖必须记录：
 
 ```text
 override_reason
@@ -482,20 +624,22 @@ boundary_flags:
 
 ```text
 高风险审核
+> 问题语义不可回答
 > 能力或工具不可用
 > 明确超适用域
-> 缺少必要参数
+> 缺少或歧义的执行信息
 > 条件完备
 ```
 
 对应动作：
 
 ```text
-high_risk → escalate
-capability/tool_unavailable → refuse
+review_required → escalate
+ambiguous_request/missing_task_information → clarify
+capability/tool_unavailable且证据为optional或required → refuse
 out_of_domain → refuse
-missing_parameter → clarify
-ready → 根据evidence_requirement和policy_mode决定
+missing_execution_input/ambiguous_execution_input → 根据evidence_requirement和policy_mode决定
+sufficient → 根据evidence_requirement和policy_mode决定
 ```
 
 如果存在已注册且适用的替代工具，则不标记为最终能力不可用；应在`alternative_tools`中记录，并继续执行替代工具的准备度检查。
@@ -544,14 +688,14 @@ missing_parameter
 
 ### 11.2 Fe₂O₃示例
 
-| 问题 | 证据需求 | 准备度 | 能力合法动作 |
-|---|---|---|---|
-| 什么是摩尔质量？ | none | ready | answer |
-| Fe₂O₃的摩尔质量大约是多少？ | optional | ready | answer/call |
-| 使用IUPAC 2021原子量计算Fe₂O₃摩尔质量，保留四位小数并记录来源。 | required | ready | call |
-| 计算某种氧化铁的摩尔质量。 | required | missing_basic_info | clarify |
-| 将Fe₂O₃摩尔质量作为正式物料衡算输入并保存审计记录。 | required | ready | call |
-| 解释摩尔质量概念，Fe₂O₃=0只是干扰信息。 | none | ready | answer |
+| 问题 | 证据需求 | 可回答性 | 执行信息 | 能力合法动作 |
+|---|---|---|---|---|
+| 什么是摩尔质量？ | none | answerable | sufficient | answer |
+| Fe₂O₃的摩尔质量大约是多少？ | optional | answerable | sufficient | answer/call |
+| 使用IUPAC 2021原子量计算Fe₂O₃摩尔质量，保留四位小数并记录来源。 | required | answerable | sufficient | call |
+| 计算某种氧化铁的摩尔质量。 | required | ambiguous_request | ambiguous_execution_input | clarify |
+| 将Fe₂O₃摩尔质量作为正式物料衡算输入并保存审计记录。 | required | answerable | sufficient | call |
+| 解释摩尔质量概念，Fe₂O₃=0只是干扰信息。 | none | answerable | sufficient | answer |
 
 示例结构：
 
@@ -560,13 +704,26 @@ task_id: BOUNDARY-MOLAR-002
 minimal_pair_group: MPG-MOLAR-MASS-001
 problem_text: Fe₂O₃的摩尔质量大约是多少？
 evidence_requirement: optional
-coarse_readiness: ready
+answerability: answerable
+information_status: sufficient
+capability_status: available
+risk_status: normal
 boundary_flags: []
-risk_level: normal
 allowed_actions: [answer, call]
-policy_mode: capability
-policy_expected_action: null
 action_reason: 公式封闭、常数稳定、过程可透明复核；工具可提高来源一致性。
+```
+
+对应政策动作另存于派生表：
+
+```yaml
+- task_id: BOUNDARY-MOLAR-002
+  policy_mode: conversational
+  policy_expected_action: answer
+  policy_version: policy-1.0
+- task_id: BOUNDARY-MOLAR-002
+  policy_mode: reproducible_research
+  policy_expected_action: call
+  policy_version: policy-1.0
 ```
 
 ### 11.3 划分要求
@@ -652,6 +809,8 @@ reference_sources: []
 
 `minimal_pair`和`adversarial`属于构造标记，可以叠加在任一来源上，不与来源比例互斥。
 
+所有来源比例均按唯一语义`task_id`计算。同一任务展开为多种政策、工具规模、工具池、提示条件或模型重复时，仍只计一次；不得用实验条件展开数量膨胀某一来源占比。
+
 ### 14.3 来源可追溯
 
 公开算例记录引用和改写方式；真实日志完成脱敏并记录授权状态；不得将含个人或企业敏感信息的原始日志纳入仓库。
@@ -673,16 +832,18 @@ reference_sources: []
 
 1. 阅读问题和来源，不看模型输出；
 2. 标注证据需求；
-3. 标注粗准备度和风险；
+3. 分别标注可回答性、执行信息、能力和风险四个轴；
 4. 标注全部边界Flags；
 5. 生成能力合法动作集合；
-6. 通过政策矩阵生成政策动作；
-7. Track B任务再核对可接受工具和近邻工具；
-8. Track C任务构建依赖图；
-9. Track D任务编写可执行验证规则；
-10. 双标比较和专家裁决；
-11. 自动一致性检查；
-12. 版本化入库。
+6. 将科学标签入Track A，不复制政策任务；
+7. 通过政策程序批量生成独立政策派生表；
+8. Track B任务再核对可接受工具和近邻工具；
+9. 独立构造工具池元数据，不写入运行结果；
+10. Track C任务构建依赖图；
+11. Track D任务编写可执行验证规则；
+12. 双标比较和专家裁决；
+13. 自动一致性检查；
+14. 版本化入库。
 
 禁止根据某个大模型是否答对来反向修改标签。
 
@@ -707,11 +868,14 @@ adjudicator:
 至少报告：
 
 - `evidence_requirement`：Cohen's kappa；
-- `coarse_readiness`：Cohen's kappa；
-- `risk_level`：Cohen's kappa；
+- `answerability`：Cohen's kappa；
+- `information_status`：Cohen's kappa；
+- `capability_status`：Cohen's kappa；
+- `risk_status`：Cohen's kappa；
 - `boundary_flags`：集合Jaccard和多标签F1；
 - `allowed_actions`：集合完全一致率和Jaccard；
 - `acceptable_tools`：集合完全一致率和Jaccard；
+- 工具相似度等级：加权kappa；
 - 政策动作：生成前后完全一致率。
 
 候选冻结门槛：
@@ -759,14 +923,15 @@ adjudicator:
 
 1. 创建新的`task_id`并保留`legacy_case_id`；
 2. 不覆盖旧JSON；
-3. 将`should_call_tool`拆解为证据需求、准备度和合法动作；
+3. 将`should_call_tool`拆解为证据需求、可回答性、执行信息、能力状态、风险状态和合法动作；
 4. 重新审查所有简单数值计算；
 5. 重新审查`acceptable_actions`与路径要求的冲突；
 6. 将信息不足和适用域外样本改为边界Flags；
 7. 将多工具固定序列转换为依赖图；
-8. 将模型代码转换为可接受工具集合；
-9. 补充来源、参考版本和适用域；
-10. 由两名标注者重新独立标注，不直接继承旧结论。
+8. 将模型代码转换为可接受工具集合，并将运行排名从金标准中移除；
+9. 将政策模式和政策动作迁移到独立派生表；
+10. 补充来源、参考版本和适用域；
+11. 由两名标注者重新独立标注，不直接继承旧结论。
 
 ### 18.1 优先审计样本
 
@@ -837,14 +1002,19 @@ approvers: []
 数据发布前至少检查：
 
 - `allowed_actions`非空；
-- `policy_expected_action`符合政策矩阵；
-- `required + ready + normal`不生成`answer`政策动作；
-- `none + normal`不生成`call`政策动作；
-- `missing_parameter`不生成`call`；
-- `high_risk`工程模式生成`escalate`；
+- 科学任务表不含`policy_mode`和`policy_expected_action`；
+- 政策派生表的`policy_expected_action`符合政策矩阵；
+- `ambiguous_request/missing_task_information`生成`clarify`；
+- `required + sufficient + available + normal`不生成`answer`政策动作；
+- `none + answerable + normal`不生成`call`政策动作；
+- `required + missing_execution_input`不生成`call`；
+- `review_required`工程模式生成`escalate`；
 - `acceptable_tools`属于对应工具池；
 - 目标工具存在于所有嵌套池；
 - 17/50/100/120池满足包含关系；
+- Track B金标准不含`target_rank`、Token和延迟；
+- 工具池表不含任何模型预测结果；
+- 运行结果表不覆盖金标准和工具池元数据；
 - `dependency_graph`无环；
 - 每个依赖节点有能力或工具映射；
 - 每个验证规则可执行或明确标记为专家复核；
@@ -861,7 +1031,8 @@ approvers: []
 - 证据需求是否与工具可用性解耦；
 - `optional`是否允许多个合理动作；
 - 是否错误地按“计算”关键词标注；
-- 信息不足是否被误标为无需调用；
+- 问题不可回答与工具执行缺参数是否已经分开；
+- 可回答性、执行信息、能力和风险是否分别标注；
 - 高风险是否有明确现实依据；
 - 政策动作是否由矩阵生成。
 
@@ -870,8 +1041,11 @@ approvers: []
 - 目标工具是否科学上正确；
 - 是否遗漏等价工具；
 - 高相似度干扰是否确实不可替代；
+- 纯类型池与现实混合池是否分开；
 - 工具池是否嵌套；
 - Schema长度、顺序和位置是否受控；
+- 金标准、工具池元数据和运行结果是否分表；
+- 工具级准备度是否覆盖每个候选工具；
 - 测试池是否被用于调词法或工具描述。
 
 ### 22.3 Track C
@@ -893,21 +1067,32 @@ approvers: []
 
 ---
 
-## 23. 冻结条件
+## 23. 两级冻结条件
 
-本规范由`1.0-rc1`改为`1.0-frozen`前，必须完成：
+### 23.1 Core Frozen
 
-- 四Track字段联合审查；
+本规范的主论文核心由`1.0-rc2`改为`1.0-core-frozen`前，必须完成：
+
+- Track A、Track B及政策派生表联合审查；
 - 至少20个Track A样例双人试标；
-- 至少20个Track B样例和三类干扰工具审查；
-- 至少5个Track C依赖图审查；
-- 至少10个Track D可执行规则审查；
+- 至少20个Track B样例、三类纯干扰池和现实混合池审查；
 - 政策动作生成器通过自动测试；
 - Taxonomy人工泄漏审计；
 - 标注一致性达到候选门槛；
 - 现有120例首轮迁移审计；
 - 120工具独立计数初审；
+- 17/50/100/120 Full Schema API可行性检查；
+- Track B金标准、工具池和运行结果分表检查；
 - 数据划分和来源比例确认；
 - 数据版本清单和质量检查脚本接口确认。
 
-冻结前不得使用正式测试结果修改标签定义或政策矩阵。
+Core Frozen前不得使用正式测试结果修改标签定义或政策矩阵。
+
+### 23.2 Extension RC/Frozen
+
+Track C和Track D保持`extension-rc`，不阻塞RQ1—RQ3。扩展冻结另需：
+
+- 至少5个Track C依赖图审查；
+- 至少10个Track D可执行规则审查；
+- 轨迹和物理验证评分接口确认；
+- Extension数据泄漏与一致性审计。
