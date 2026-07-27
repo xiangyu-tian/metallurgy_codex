@@ -191,6 +191,19 @@ def _validate_record(record: Any, index: int) -> list[str]:
             f"{prefix}: failed execution cannot have end_to_end_correct=true"
         )
 
+    if "difficulty_score" in record and (
+        not isinstance(record["difficulty_score"], int)
+        or isinstance(record["difficulty_score"], bool)
+        or not 0 <= record["difficulty_score"] <= 5
+    ):
+        errors.append(f"{prefix}.difficulty_score: must be an integer from 0 to 5")
+    if "schema_token_count" in record and (
+        not isinstance(record["schema_token_count"], int)
+        or isinstance(record["schema_token_count"], bool)
+        or record["schema_token_count"] < 0
+    ):
+        errors.append(f"{prefix}.schema_token_count: must be an integer >= 0")
+
     pool_design = record["pool_design"]
     neighbor_type = record["near_neighbor_type"]
     neighbor_count = record["near_neighbor_count"]

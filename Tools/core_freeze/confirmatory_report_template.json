@@ -24,14 +24,21 @@
     "confidence_interval_95": [null, null]
   },
   "formal_inference": {
+    "engine_lock": "Tools/core_freeze/r_engine_lock.json",
+    "engine_metadata_file": "engine_metadata.csv",
     "model": null,
     "planned_contrasts": [],
     "one_sided": null,
     "multiplicity_correction": null,
     "fit_status": null,
     "convergence": null,
+    "attempts_file": "model_attempts.csv",
+    "fixed_effects_file": null,
+    "random_effects_file": null,
     "estimates": []
   },
+  "h4_support_classification": null,
+  "artifact_files": [],
   "missingness_audit": {
     "not_accepted": null,
     "model_failure": null,

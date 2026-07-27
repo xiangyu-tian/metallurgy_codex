@@ -1,0 +1,30 @@
+{
+  "lock_version": "1.0",
+  "r_version": "4.6.1",
+  "packages": {
+    "rbibutils": "2.4.1",
+    "Rcpp": "1.1.2",
+    "RcppEigen": "0.3.4.0.2",
+    "minqa": "1.2.8",
+    "nloptr": "2.2.1",
+    "Rdpack": "2.6.6",
+    "reformulas": "0.4.4",
+    "estimability": "2.0.0",
+    "mvtnorm": "1.4.2",
+    "numDeriv": "2016.8.1.1",
+    "rlang": "1.3.0",
+    "lme4": "2.0.6",
+    "emmeans": "2.0.4"
+  },
+  "model": {
+    "family": "binomial",
+    "link": "logit",
+    "nAGQ": 1,
+    "primary_optimizer": "bobyqa",
+    "secondary_optimizer": "Nelder_Mead",
+    "maxfun": 200000,
+    "gradient_tolerance": 0.002,
+    "hessian_tolerance": 0.000001,
+    "singular_tolerance": 0.0001
+  }
+}

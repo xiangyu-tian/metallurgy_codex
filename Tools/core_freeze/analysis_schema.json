@@ -88,6 +88,15 @@
             "invalid_response",
             null
           ]
+        },
+        "difficulty_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "schema_token_count": {
+          "type": "integer",
+          "minimum": 0
         }
       },
       "allOf": [
