@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "pilot_id": "CF02-PILOT-V1",
+  "frozen_at": "2026-07-28T00:00:00+08:00",
+  "task_count": 20,
+  "tasks": [
+    {
+      "task_id": "TB-PILOT-001",
+      "question": "请将 1000 kg 换算为 t。",
+      "provided_inputs": {
+        "value": 1000,
+        "source_unit": "kg",
+        "target_unit": "t"
+      }
+    },
+    {
+      "task_id": "TB-PILOT-002",
+      "question": "解析化学式 Fe2O3 的元素组成和原子数。",
+      "provided_inputs": {
+        "formula": "Fe2O3"
+      }
+    },
+    {
+      "task_id": "TB-PILOT-003",
+      "question": "计算 Fe2O3 的摩尔质量。",
+      "provided_inputs": {
+        "formula": "Fe2O3"
+      }
+    },
+    {
+      "task_id": "TB-PILOT-004",
+      "question": "请计算这组冶金成分的组成归一化：{'Fe': 94, 'C': 4, 'Si': 2}。",
+      "provided_inputs": {
+        "compositions": {
+          "Fe": 94,
+          "C": 4,
+          "Si": 2
+        }
+      }
+    },
+    {
+      "task_id": "TB-PILOT-005",
+      "question": "请对给定输入输出物流进行质量守恒计算。",
+      "provided_inputs": {
+        "input_streams": [
+          {
+            "name": "feed-1",
+            "mass": 10,
+            "elements": {
+              "Fe": 0.96,
+              "C": 0.03,
+              "Si": 0.01
+            }
+          }
+        ],
+        "output_streams": [
+          {
+            "name": "product-1",
+            "mass": 10,
+            "elements": {
+              "Fe": 0.96,
+              "C": 0.03,
+              "Si": 0.01
+            }
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "TB-PILOT-006",
+      "question": "使用 Shomate 方程计算 298.15 K 时 Fe(s) 的定压热容 Cp。",
+      "provided_inputs": {
+        "species": "Fe(s)",
+        "temperature": 298.15
+      }
+    },
+    {
+      "task_id": "TB-PILOT-007",
+      "question": "使用 NASA 多项式近似计算 298.15 K 时 Fe(s) 的热物性。",
+      "provided_inputs": {
+        "species": "Fe(s)",
+        "temperature": 298.15
+      }
+    },
+    {
+      "task_id": "TB-PILOT-008",
+      "question": "计算 Fe(s) 从 298.15 K 到 600 K 的显热和焓积分。",
+      "provided_inputs": {
+        "species": "Fe(s)",
+        "temperature_start": 298.15,
+        "temperature_end": 600
+      }
+    },
+    {
+      "task_id": "TB-PILOT-009",
+      "question": "计算 Fe(s) 从 298.15 K 到 600 K 的熵积分。",
+      "provided_inputs": {
+        "species": "Fe(s)",
+        "temperature_start": 298.15,
+        "temperature_end": 600
+      }
+    },
+    {
+      "task_id": "TB-PILOT-010",
+      "question": "计算 298.15 K 时 Fe(s) 的物种 Gibbs 自由能。",
+      "provided_inputs": {
+        "species": "Fe(s)",
+        "temperature": 298.15
+      }
+    },
+    {
+      "task_id": "TB-PILOT-011",
+      "question": "计算反应 C + O₂ → CO₂ 在 298.15 K 的反应焓。",
+      "provided_inputs": {
+        "reaction": "C + O₂ → CO₂",
+        "temperature": 298.15
+      }
+    },
+    {
+      "task_id": "TB-PILOT-012",
+      "question": "计算反应 C + O₂ → CO₂ 在 298.15 K 的反应熵。",
+      "provided_inputs": {
+        "reaction": "C + O₂ → CO₂",
+        "temperature": 298.15
+      }
+    },
+    {
+      "task_id": "TB-PILOT-013",
+      "question": "计算反应 C + O₂ → CO₂ 在 500 K 的反应 Gibbs 并判断反应方向。",
+      "provided_inputs": {
+        "reaction": "C + O₂ → CO₂",
+        "temperature": 500
+      }
+    },
+    {
+      "task_id": "TB-PILOT-014",
+      "question": "计算反应 C + O₂ → CO₂ 在 500 K 的平衡常数。",
+      "provided_inputs": {
+        "reaction": "C + O₂ → CO₂",
+        "temperature": 500
+      }
+    },
+    {
+      "task_id": "TB-PILOT-015",
+      "question": "用杠杆规则计算总体成分 0.2、两相边界 0.1 和 0.5 时的相分数。",
+      "provided_inputs": {
+        "overall_composition": 0.2,
+        "phase1_composition": 0.1,
+        "phase2_composition": 0.5
+      }
+    },
+    {
+      "task_id": "TB-PILOT-016",
+      "question": "用 Arrhenius 公式计算 800 K 时的速率常数。",
+      "provided_inputs": {
+        "A": 10000000.0,
+        "Ea": 80000,
+        "temperature": 800,
+        "Ea_unit": "J/mol"
+      }
+    },
+    {
+      "task_id": "TB-PILOT-017",
+      "question": "计算 800 K 时的扩散系数和扩散距离。",
+      "provided_inputs": {
+        "D0": 0.0001,
+        "Q": 40000,
+        "temperature": 800,
+        "Q_unit": "J/mol"
+      }
+    },
+    {
+      "task_id": "TB-PILOT-018",
+      "question": "使用 Shomate 方程计算 1000 K 时 Fe(s) 的定压热容 Cp。",
+      "provided_inputs": {
+        "species": "Fe(s)",
+        "temperature": 1000
+      }
+    },
+    {
+      "task_id": "TB-PILOT-019",
+      "question": "计算反应 FeO + C → Fe + CO 在 298.15 K 的反应焓。",
+      "provided_inputs": {
+        "reaction": "FeO + C → Fe + CO",
+        "temperature": 298.15
+      }
+    },
+    {
+      "task_id": "TB-PILOT-020",
+      "question": "计算反应 C + O₂ → CO₂ 在 1000 K 的平衡常数。",
+      "provided_inputs": {
+        "reaction": "C + O₂ → CO₂",
+        "temperature": 1000
+      }
+    }
+  ]
+}

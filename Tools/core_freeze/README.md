@@ -32,6 +32,9 @@ cf11_status = in_progress
 | `finalize_cf11.py` | 校验不可变产物与受治理审批记录并生成独立CF-11最终化记录 |
 | `finalization_evidence_template.json` | 真实干跑、统计审查、报告审查和项目审批证据模板 |
 | `confirmatory_report_template.json` | 确认性报告字段模板 |
+| `prepare_cf01_cf02_pilot.py` | 从现有120例和17工具快照生成CF-01/CF-02首轮准备包 |
+| `validate_cf01_cf02_pilot.py` | 校验准备态、双人标注一致性和Track B完整工具池 |
+| `pilot_v1/` | 冻结的20例Track A、20任务Track B及隔离模板 |
 | `tests/` | 合成数据契约和GLMM集成测试 |
 
 主要确认性模型估计包含Schema暴露机制在内的方法总效应，不控制可能作为中介变量的`schema_token_count_z`。正式管线同时生成Schema调整敏感性模型；H3还生成`method × neighbor_condition`方法异质性敏感性模型。敏感性结果不改变主要H3检验或H4支持等级。
@@ -135,6 +138,20 @@ $env:R_LIBS_USER = (Resolve-Path '.\.r-runtime\library').Path
 & '.\.venv\Scripts\python.exe' -m unittest discover `
   -s 'Tools\core_freeze\tests' -t . -v
 ```
+
+生成并校验CF-01/CF-02首轮准备包：
+
+```powershell
+& '.\.venv\Scripts\python.exe' `
+  'Tools\core_freeze\prepare_cf01_cf02_pilot.py'
+
+& '.\.venv\Scripts\python.exe' `
+  'Tools\core_freeze\validate_cf01_cf02_pilot.py' `
+  'Tools\core_freeze\pilot_v1' `
+  --stage prepared
+```
+
+准备态通过只表示样本清单、字段隔离和构造契约可执行，不表示人工标注、工具池构造或CF-01/CF-02验收已经通过。具体交接规则见`pilot_v1/README.md`。
 
 正式分析默认要求每个任务和模型运行重复都具有A—E五个工具池重复。描述性脚本的`--allow-incomplete`只能用于开发诊断，不能用于正式确认性报告。
 

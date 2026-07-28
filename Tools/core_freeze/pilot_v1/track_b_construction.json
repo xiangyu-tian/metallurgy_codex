@@ -1,0 +1,646 @@
+{
+  "schema_version": "1.0",
+  "pilot_id": "CF02-PILOT-V1",
+  "construction_status": "not_started",
+  "required_pool_sizes": [
+    17,
+    50,
+    100,
+    120
+  ],
+  "required_pool_repeats": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "required_controlled_conditions": [
+    {
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0
+    },
+    {
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4
+    },
+    {
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8
+    },
+    {
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 4
+    },
+    {
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8
+    }
+  ],
+  "required_mixed_condition": {
+    "pool_design": "mixed_realistic",
+    "near_neighbor_type": "mixed"
+  },
+  "tasks": [
+    {
+      "task_id": "TB-PILOT-001",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-002",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-003",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-004",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-005",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-006",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-007",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-008",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-009",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-010",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-011",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-012",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-013",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-014",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-015",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-016",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-017",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-018",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-019",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    },
+    {
+      "task_id": "TB-PILOT-020",
+      "review_a": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "review_b": {
+        "reviewer": null,
+        "reviewer_role": null,
+        "completed_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null,
+        "similarity_ratings": null
+      },
+      "adjudicated_gold": {
+        "adjudicator": null,
+        "adjudicated_at": null,
+        "acceptable_tools": null,
+        "unacceptable_near_neighbors": null,
+        "routing_reason": null
+      },
+      "pool_records": [],
+      "missing_condition_log": []
+    }
+  ]
+}

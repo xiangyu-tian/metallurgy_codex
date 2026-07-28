@@ -1,0 +1,520 @@
+{
+  "schema_version": "1.0",
+  "pilot_id": "CF01-PILOT-V1",
+  "visibility": "administrator_only_do_not_share_during_independent_annotation",
+  "source_dataset": {
+    "path": "Tools/benchmarks/tool_calling_cases.json",
+    "dataset_name": "Metallurgy Tool Calling Benchmark",
+    "dataset_version": "1.2.0",
+    "case_count": 120,
+    "sha256": "2b35323157b8438f8e25fe80271347029097072074336024acac32674ea4ad73"
+  },
+  "selection_policy": "Coverage fields are design targets, not gold labels. Disagreement between targets and independent annotations must be retained.",
+  "tasks": [
+    {
+      "task_id": "TA-PILOT-001",
+      "source": {
+        "type": "authored_minimal_pair",
+        "legacy_case_id": null
+      },
+      "minimal_difference_group": "molar_mass_evidence",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "none"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "sufficient"
+        ],
+        "capability_status": [
+          "available"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-002",
+      "source": {
+        "type": "adapted_legacy",
+        "legacy_case_id": "TC-SINGLE_TOOL-007"
+      },
+      "minimal_difference_group": "molar_mass_evidence",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "optional"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "sufficient"
+        ],
+        "capability_status": [
+          "available"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-003",
+      "source": {
+        "type": "authored_minimal_pair",
+        "legacy_case_id": null
+      },
+      "minimal_difference_group": "molar_mass_evidence",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "required"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "sufficient"
+        ],
+        "capability_status": [
+          "available"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-004",
+      "source": {
+        "type": "authored_boundary_case",
+        "legacy_case_id": null
+      },
+      "minimal_difference_group": "molar_mass_evidence",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "required"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "missing_execution_input"
+        ],
+        "capability_status": [
+          "available"
+        ],
+        "risk_status": [
+          "review_required"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-005",
+      "source": {
+        "type": "adapted_legacy",
+        "legacy_case_id": "TC-NO_TOOL-008"
+      },
+      "minimal_difference_group": "gibbs_readiness",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "none"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "sufficient"
+        ],
+        "capability_status": [
+          "available"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-006",
+      "source": {
+        "type": "adapted_legacy",
+        "legacy_case_id": "TC-SINGLE_TOOL-038"
+      },
+      "minimal_difference_group": "gibbs_readiness",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "required"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "sufficient"
+        ],
+        "capability_status": [
+          "available"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-007",
+      "source": {
+        "type": "adapted_legacy",
+        "legacy_case_id": "TC-INSUFFICIENT_INFO-003"
+      },
+      "minimal_difference_group": "gibbs_readiness",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "required"
+        ],
+        "answerability": [
+          "missing_task_information"
+        ],
+        "information_status": [
+          "missing_execution_input"
+        ],
+        "capability_status": [
+          "available"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-008",
+      "source": {
+        "type": "authored_minimal_pair",
+        "legacy_case_id": null
+      },
+      "minimal_difference_group": "gibbs_readiness",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "required"
+        ],
+        "answerability": [
+          "missing_task_information"
+        ],
+        "information_status": [
+          "missing_execution_input"
+        ],
+        "capability_status": [
+          "available"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-009",
+      "source": {
+        "type": "adapted_legacy",
+        "legacy_case_id": "TC-NO_TOOL-009"
+      },
+      "minimal_difference_group": "heat_capacity_readiness",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "none"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "sufficient"
+        ],
+        "capability_status": [
+          "available"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-010",
+      "source": {
+        "type": "legacy_exact",
+        "legacy_case_id": "TC-SINGLE_TOOL-018"
+      },
+      "minimal_difference_group": "heat_capacity_readiness",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "required"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "sufficient"
+        ],
+        "capability_status": [
+          "available"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-011",
+      "source": {
+        "type": "legacy_exact",
+        "legacy_case_id": "TC-INSUFFICIENT_INFO-002"
+      },
+      "minimal_difference_group": "heat_capacity_readiness",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "required"
+        ],
+        "answerability": [
+          "missing_task_information"
+        ],
+        "information_status": [
+          "missing_execution_input"
+        ],
+        "capability_status": [
+          "available"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-012",
+      "source": {
+        "type": "authored_boundary_case",
+        "legacy_case_id": null
+      },
+      "minimal_difference_group": "heat_capacity_readiness",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "required"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "ambiguous_execution_input"
+        ],
+        "capability_status": [
+          "available"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-013",
+      "source": {
+        "type": "authored_capability_boundary",
+        "legacy_case_id": null
+      },
+      "minimal_difference_group": "capability_boundary",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "required"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "missing_execution_input"
+        ],
+        "capability_status": [
+          "unavailable"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-014",
+      "source": {
+        "type": "authored_capability_boundary",
+        "legacy_case_id": null
+      },
+      "minimal_difference_group": "capability_boundary",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "optional",
+          "required"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "missing_execution_input"
+        ],
+        "capability_status": [
+          "uncertain"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-015",
+      "source": {
+        "type": "authored_risk_pair",
+        "legacy_case_id": null
+      },
+      "minimal_difference_group": "oxygen_enrichment_risk",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "required"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "missing_execution_input"
+        ],
+        "capability_status": [
+          "uncertain"
+        ],
+        "risk_status": [
+          "review_required"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-016",
+      "source": {
+        "type": "authored_risk_pair",
+        "legacy_case_id": null
+      },
+      "minimal_difference_group": "oxygen_enrichment_risk",
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "none"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "sufficient"
+        ],
+        "capability_status": [
+          "available",
+          "uncertain"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-017",
+      "source": {
+        "type": "authored_ambiguity_case",
+        "legacy_case_id": null
+      },
+      "minimal_difference_group": null,
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "optional",
+          "required"
+        ],
+        "answerability": [
+          "ambiguous_request"
+        ],
+        "information_status": [
+          "ambiguous_execution_input"
+        ],
+        "capability_status": [
+          "available",
+          "uncertain"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-018",
+      "source": {
+        "type": "adapted_legacy",
+        "legacy_case_id": "TC-INSUFFICIENT_INFO-005"
+      },
+      "minimal_difference_group": null,
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "optional"
+        ],
+        "answerability": [
+          "missing_task_information"
+        ],
+        "information_status": [
+          "missing_execution_input"
+        ],
+        "capability_status": [
+          "available"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-019",
+      "source": {
+        "type": "authored_tool_boundary",
+        "legacy_case_id": null
+      },
+      "minimal_difference_group": null,
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "required"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "missing_execution_input"
+        ],
+        "capability_status": [
+          "available",
+          "uncertain"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    },
+    {
+      "task_id": "TA-PILOT-020",
+      "source": {
+        "type": "legacy_exact",
+        "legacy_case_id": "TC-OUT_OF_DOMAIN-014"
+      },
+      "minimal_difference_group": null,
+      "anticipated_coverage": {
+        "evidence_requirement": [
+          "required"
+        ],
+        "answerability": [
+          "answerable"
+        ],
+        "information_status": [
+          "sufficient"
+        ],
+        "capability_status": [
+          "available"
+        ],
+        "risk_status": [
+          "normal"
+        ]
+      }
+    }
+  ]
+}

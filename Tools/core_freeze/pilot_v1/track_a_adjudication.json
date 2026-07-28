@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "pilot_id": "CF01-PILOT-V1",
+  "status": "not_started",
+  "adjudicator": null,
+  "adjudicated_at": null,
+  "decisions": [],
+  "guideline_change_recommendations": [],
+  "changes_label_semantics": null
+}

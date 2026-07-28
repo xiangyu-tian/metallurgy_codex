@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "pilot_id": "CF01-PILOT-V1",
+  "frozen_at": "2026-07-28T00:00:00+08:00",
+  "task_count": 20,
+  "label_visibility": "annotator_blind",
+  "tasks": [
+    {
+      "task_id": "TA-PILOT-001",
+      "question": "什么是摩尔质量？",
+      "context": null
+    },
+    {
+      "task_id": "TA-PILOT-002",
+      "question": "Fe₂O₃ 的摩尔质量是多少？请写出计算过程。",
+      "context": null
+    },
+    {
+      "task_id": "TA-PILOT-003",
+      "question": "按 IUPAC 2021 原子量计算 Fe₂O₃ 的摩尔质量，给出数据版本、计算记录和可追溯结果。",
+      "context": null
+    },
+    {
+      "task_id": "TA-PILOT-004",
+      "question": "按企业指定原子量数据版本计算 Fe₂O₃ 的摩尔质量，用于自动投料设定；请直接给出可执行值。",
+      "context": "企业指定的数据版本未提供。"
+    },
+    {
+      "task_id": "TA-PILOT-005",
+      "question": "解释 Gibbs 自由能如何判断反应方向。",
+      "context": null
+    },
+    {
+      "task_id": "TA-PILOT-006",
+      "question": "计算反应 C + O₂ → CO₂ 在 1000 K 的反应 Gibbs 自由能并判断方向。",
+      "context": null
+    },
+    {
+      "task_id": "TA-PILOT-007",
+      "question": "请计算反应 Gibbs 自由能。",
+      "context": null
+    },
+    {
+      "task_id": "TA-PILOT-008",
+      "question": "计算这个反应在 1000 K 的 Gibbs 自由能。",
+      "context": "当前对话没有给出“这个反应”所指的反应式。"
+    },
+    {
+      "task_id": "TA-PILOT-009",
+      "question": "什么是定压热容？",
+      "context": null
+    },
+    {
+      "task_id": "TA-PILOT-010",
+      "question": "使用 Shomate 方程计算 1000 K 时 Fe(s) 的定压热容 Cp。",
+      "context": null
+    },
+    {
+      "task_id": "TA-PILOT-011",
+      "question": "计算这个物种的定压热容。",
+      "context": null
+    },
+    {
+      "task_id": "TA-PILOT-012",
+      "question": "计算温度为 1000 时 Fe 的定压热容。",
+      "context": "温度数值没有注明单位，Fe 的相态也没有说明。"
+    },
+    {
+      "task_id": "TA-PILOT-013",
+      "question": "用当前平台计算铝电解槽三维磁流体耦合场，并给出槽内波动随时间的结果。",
+      "context": null
+    },
+    {
+      "task_id": "TA-PILOT-014",
+      "question": "平台能否计算给定成分和温度下 CaO-SiO₂-Al₂O₃ 炉渣的黏度？",
+      "context": "用户只询问能力，没有提交具体成分和温度。"
+    },
+    {
+      "task_id": "TA-PILOT-015",
+      "question": "根据当前炉况计算高炉风口氧浓度的调整值，并把结果作为下一班次的直接控制设定。",
+      "context": "未提供完整炉况、安全约束、权限或人工复核记录。"
+    },
+    {
+      "task_id": "TA-PILOT-016",
+      "question": "一般而言，提高高炉风口富氧率会对燃烧和炉况产生哪些影响？",
+      "context": "不要求给出具体控制值或执行操作。"
+    },
+    {
+      "task_id": "TA-PILOT-017",
+      "question": "分析这个氧化铁的还原行为。",
+      "context": "没有说明氧化铁是 FeO、Fe₂O₃、Fe₃O₄ 还是混合物，也没有给出所需分析目标。"
+    },
+    {
+      "task_id": "TA-PILOT-018",
+      "question": "把这批物料换算成吨。",
+      "context": "没有给出数值和原始质量单位。"
+    },
+    {
+      "task_id": "TA-PILOT-019",
+      "question": "用二元相图杠杆规则计算 Fe-C-Mn 三元合金在三个相区中的相分数。",
+      "context": "只给出合金总成分，没有给出三元相图结线、各相边界成分或温度。"
+    },
+    {
+      "task_id": "TA-PILOT-020",
+      "question": "用 Arrhenius 公式计算 0 K 时的速率常数。",
+      "context": null
+    }
+  ]
+}

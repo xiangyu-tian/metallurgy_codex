@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-28T00:00:00+08:00",
+  "core_frozen": false,
+  "cf01": {
+    "overall": "in_progress",
+    "task_list": "prepared",
+    "dual_annotation": "pending",
+    "agreement_analysis": "pending",
+    "adjudication": "pending"
+  },
+  "cf02": {
+    "overall": "in_progress",
+    "task_list": "prepared",
+    "independent_routing_review": "pending",
+    "pool_construction": "blocked",
+    "blocking_reason": "Only 17 implemented tools are present and none has completed the CF-05 joint audit; 50/100/120 pools cannot yet be constructed.",
+    "implemented_tool_count": 17,
+    "required_tool_count": 120,
+    "tool_count_gap": 103
+  }
+}

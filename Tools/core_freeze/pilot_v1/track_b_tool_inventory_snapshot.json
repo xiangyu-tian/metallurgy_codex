@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0",
+  "captured_at": "2026-07-28T00:00:00+08:00",
+  "implemented_tool_count": 17,
+  "cf05_accepted_tool_count": 0,
+  "inventory_status": "implementation_snapshot_not_cf05_audit",
+  "tools": [
+    {
+      "tool_id": "A001",
+      "name": "单位换算",
+      "category": "通用数据与校验",
+      "description": "支持线性换算和温度偏移换算；超界返回警告",
+      "applicable_boundary": "支持线性换算和温度偏移换算；超界返回警告",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "A002",
+      "name": "化学式解析",
+      "category": "通用数据与校验",
+      "description": "支持含括号的化学式；不支持同位素标记",
+      "applicable_boundary": "支持含括号的化学式；不支持同位素标记",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "A003",
+      "name": "摩尔质量计算",
+      "category": "通用数据与校验",
+      "description": "基于 IUPAC 2021 原子量",
+      "applicable_boundary": "基于 IUPAC 2021 原子量",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "A004",
+      "name": "成分归一化",
+      "category": "通用数据与校验",
+      "description": "输入各组分分数（质量或摩尔），总和可不等于1",
+      "applicable_boundary": "输入各组分分数（质量或摩尔），总和可不等于1",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "A005",
+      "name": "元素质量守恒校验",
+      "category": "通用数据与校验",
+      "description": "输入输出物料流中各元素质量分数",
+      "applicable_boundary": "输入输出物料流中各元素质量分数",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "B001",
+      "name": "Shomate 热容计算",
+      "category": "热力学与相平衡",
+      "description": "Cp = A + B·t + C·t² + D·t³ + E/t² (t=T/1000)；温度受 Shomate 参数有效区间限制",
+      "applicable_boundary": "Cp = A + B·t + C·t² + D·t³ + E/t² (t=T/1000)；温度受 Shomate 参数有效区间限制",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "B002",
+      "name": "NASA 多项式热物性计算",
+      "category": "热力学与相平衡",
+      "description": "Cp/R = a₁ + a₂·T + a₃·T² + a₄·T³ + a₅·T⁴；当前使用 Shomate 参数近似",
+      "applicable_boundary": "Cp/R = a₁ + a₂·T + a₃·T² + a₄·T³ + a₅·T⁴；当前使用 Shomate 参数近似",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "B003",
+      "name": "显热与焓积分",
+      "category": "热力学与相平衡",
+      "description": "温度范围受 Shomate 参数有效区间限制；不支持相变潜热",
+      "applicable_boundary": "温度范围受 Shomate 参数有效区间限制；不支持相变潜热",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "B004",
+      "name": "熵积分",
+      "category": "热力学与相平衡",
+      "description": "ΔS = ∫(Cp/T)dT；使用 Shomate 热容数值积分",
+      "applicable_boundary": "ΔS = ∫(Cp/T)dT；使用 Shomate 热容数值积分",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "B005",
+      "name": "物种 Gibbs 自由能计算",
+      "category": "热力学与相平衡",
+      "description": "G = H - T·S；使用 Shomate 参数计算单物种热力学性质",
+      "applicable_boundary": "G = H - T·S；使用 Shomate 参数计算单物种热力学性质",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "B006",
+      "name": "反应焓计算",
+      "category": "热力学与相平衡",
+      "description": "使用标准生成焓数据；默认温度 298.15K",
+      "applicable_boundary": "使用标准生成焓数据；默认温度 298.15K",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "B007",
+      "name": "反应熵计算",
+      "category": "热力学与相平衡",
+      "description": "ΔS = ΣS°(产物) − ΣS°(反应物)；基于内置热化学数据库",
+      "applicable_boundary": "ΔS = ΣS°(产物) − ΣS°(反应物)；基于内置热化学数据库",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "B008",
+      "name": "反应 Gibbs 自由能计算",
+      "category": "热力学与相平衡",
+      "description": "使用标准生成焓/熵数据；ΔG = ΔH - TΔS",
+      "applicable_boundary": "使用标准生成焓/熵数据；ΔG = ΔH - TΔS",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "B009",
+      "name": "平衡常数计算",
+      "category": "热力学与相平衡",
+      "description": "K = exp(-ΔG°/RT)；ΔG° 基于内置热化学数据库",
+      "applicable_boundary": "K = exp(-ΔG°/RT)；ΔG° 基于内置热化学数据库",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "B019",
+      "name": "杠杆规则计算",
+      "category": "热力学与相平衡",
+      "description": "仅适用于二元系两相区",
+      "applicable_boundary": "仅适用于二元系两相区",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "C001",
+      "name": "Arrhenius 速率常数",
+      "category": "动力学与传递",
+      "description": "k = A·exp(-Ea/RT)；适用 Arrhenius 行为反应",
+      "applicable_boundary": "k = A·exp(-Ea/RT)；适用 Arrhenius 行为反应",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    },
+    {
+      "tool_id": "C002",
+      "name": "扩散系数计算",
+      "category": "动力学与传递",
+      "description": "D = D₀·exp(-Q/RT)；支持 Arrhenius 扩散行为",
+      "applicable_boundary": "D = D₀·exp(-Q/RT)；支持 Arrhenius 扩散行为",
+      "version": "1.0.0",
+      "implementation_status": "baseline",
+      "cf05_audit_status": "unreviewed"
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "pilot_id": "CF02-PILOT-V1",
+  "visibility": "administrator_and_reviewers_only",
+  "source_dataset": {
+    "path": "Tools/benchmarks/tool_calling_cases.json",
+    "dataset_name": "Metallurgy Tool Calling Benchmark",
+    "dataset_version": "1.2.0",
+    "case_count": 120,
+    "sha256": "2b35323157b8438f8e25fe80271347029097072074336024acac32674ea4ad73"
+  },
+  "warning": "Legacy expected tools are not acceptable_tools gold labels and must not be copied without independent scientific review.",
+  "tasks": [
+    {
+      "task_id": "TB-PILOT-001",
+      "legacy_case_id": "TC-SINGLE_TOOL-001",
+      "legacy_expected_tools_unverified": [
+        "A001"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-002",
+      "legacy_case_id": "TC-SINGLE_TOOL-004",
+      "legacy_expected_tools_unverified": [
+        "A002"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-003",
+      "legacy_case_id": "TC-SINGLE_TOOL-007",
+      "legacy_expected_tools_unverified": [
+        "A003"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-004",
+      "legacy_case_id": "TC-SINGLE_TOOL-010",
+      "legacy_expected_tools_unverified": [
+        "A004"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-005",
+      "legacy_case_id": "TC-SINGLE_TOOL-013",
+      "legacy_expected_tools_unverified": [
+        "A005"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-006",
+      "legacy_case_id": "TC-SINGLE_TOOL-016",
+      "legacy_expected_tools_unverified": [
+        "B001"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-007",
+      "legacy_case_id": "TC-SINGLE_TOOL-019",
+      "legacy_expected_tools_unverified": [
+        "B002"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-008",
+      "legacy_case_id": "TC-SINGLE_TOOL-022",
+      "legacy_expected_tools_unverified": [
+        "B003"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-009",
+      "legacy_case_id": "TC-SINGLE_TOOL-025",
+      "legacy_expected_tools_unverified": [
+        "B004"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-010",
+      "legacy_case_id": "TC-SINGLE_TOOL-028",
+      "legacy_expected_tools_unverified": [
+        "B005"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-011",
+      "legacy_case_id": "TC-SINGLE_TOOL-031",
+      "legacy_expected_tools_unverified": [
+        "B006"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-012",
+      "legacy_case_id": "TC-SINGLE_TOOL-034",
+      "legacy_expected_tools_unverified": [
+        "B007"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-013",
+      "legacy_case_id": "TC-SINGLE_TOOL-037",
+      "legacy_expected_tools_unverified": [
+        "B008"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-014",
+      "legacy_case_id": "TC-SINGLE_TOOL-040",
+      "legacy_expected_tools_unverified": [
+        "B009"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-015",
+      "legacy_case_id": "TC-SINGLE_TOOL-043",
+      "legacy_expected_tools_unverified": [
+        "B019"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-016",
+      "legacy_case_id": "TC-SINGLE_TOOL-046",
+      "legacy_expected_tools_unverified": [
+        "C001"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-017",
+      "legacy_case_id": "TC-SINGLE_TOOL-049",
+      "legacy_expected_tools_unverified": [
+        "C002"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-018",
+      "legacy_case_id": "TC-SINGLE_TOOL-018",
+      "legacy_expected_tools_unverified": [
+        "B001"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-019",
+      "legacy_case_id": "TC-SINGLE_TOOL-033",
+      "legacy_expected_tools_unverified": [
+        "B006"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    },
+    {
+      "task_id": "TB-PILOT-020",
+      "legacy_case_id": "TC-SINGLE_TOOL-041",
+      "legacy_expected_tools_unverified": [
+        "B009"
+      ],
+      "legacy_category": "single_tool",
+      "migration_policy": "review_hint_only_not_dataset_2_gold; reviewers must independently establish acceptable_tools and exclusions"
+    }
+  ]
+}
