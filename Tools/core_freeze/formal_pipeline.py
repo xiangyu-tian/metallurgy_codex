@@ -6,6 +6,7 @@ import argparse
 import csv
 import hashlib
 import json
+import subprocess
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
@@ -21,7 +22,7 @@ try:
         build_h4_scale_pairs,
         run_repeat_summary,
     )
-    from .r_engine import check_engine, export_glmm_input, run_glmm
+    from .r_engine import ENGINE_LOCK, check_engine, export_glmm_input, run_glmm
 except ImportError:  # pragma: no cover - supports direct script execution
     from analysis_core import load_json, require_valid_document, write_json
     from bootstrap_clusters import cluster_bootstrap
@@ -32,7 +33,7 @@ except ImportError:  # pragma: no cover - supports direct script execution
         build_h4_scale_pairs,
         run_repeat_summary,
     )
-    from r_engine import check_engine, export_glmm_input, run_glmm
+    from r_engine import ENGINE_LOCK, check_engine, export_glmm_input, run_glmm
 
 
 FORMAL_OUTPUTS = (
@@ -44,11 +45,18 @@ FORMAL_OUTPUTS = (
     "missingness_audit.csv",
     "h3_glmm_fixed_effects.csv",
     "h3_glmm_planned_contrasts.csv",
+    "h3_schema_adjusted_sensitivity_glmm_fixed_effects.csv",
+    "h3_schema_adjusted_sensitivity_contrasts.csv",
+    "h3_method_interaction_sensitivity_glmm_fixed_effects.csv",
+    "h3_method_interaction_sensitivity_contrasts.csv",
     "h4_glmm_fixed_effects.csv",
     "h4_glmm_planned_contrasts.csv",
+    "h4_schema_adjusted_sensitivity_glmm_fixed_effects.csv",
+    "h4_schema_adjusted_sensitivity_contrasts.csv",
     "model_attempts.csv",
     "engine_metadata.csv",
     "confirmatory_report.json",
+    "artifact_manifest.csv",
 )
 
 
@@ -82,6 +90,40 @@ def write_csv_rows(path: str | Path, rows: Iterable[dict[str, Any]]) -> None:
 def read_csv_rows(path: str | Path) -> list[dict[str, str]]:
     with Path(path).open(encoding="utf-8-sig", newline="") as handle:
         return list(csv.DictReader(handle))
+
+
+def _sha256(path: str | Path) -> str:
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def _git_state() -> dict[str, Any]:
+    project_root = Path(__file__).resolve().parents[2]
+    commit = subprocess.run(
+        ["git", "rev-parse", "HEAD"],
+        cwd=project_root,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        check=False,
+    )
+    status = subprocess.run(
+        ["git", "status", "--porcelain", "--untracked-files=no"],
+        cwd=project_root,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        check=False,
+    )
+    return {
+        "analysis_commit": (
+            commit.stdout.strip() if commit.returncode == 0 else None
+        ),
+        "tracked_worktree_clean": (
+            status.returncode == 0 and not status.stdout.strip()
+        ),
+    }
 
 
 def _require_complete_pool_repeats(
@@ -131,22 +173,57 @@ def _bootstrap_row(
 def _merge_r_outputs(output_dir: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     attempts: list[dict[str, Any]] = []
     metadata: list[dict[str, Any]] = []
-    for hypothesis in ("h3", "h4"):
+    model_prefixes = {
+        "h3": (
+            "h3",
+            "h3_schema_adjusted_sensitivity",
+            "h3_method_interaction_sensitivity",
+        ),
+        "h4": (
+            "h4",
+            "h4_schema_adjusted_sensitivity",
+        ),
+    }
+    contrast_files = {
+        "h3": (
+            "h3_glmm_planned_contrasts.csv",
+            "h3_schema_adjusted_sensitivity_contrasts.csv",
+            "h3_method_interaction_sensitivity_contrasts.csv",
+        ),
+        "h4": (
+            "h4_glmm_planned_contrasts.csv",
+            "h4_schema_adjusted_sensitivity_contrasts.csv",
+        ),
+    }
+    for hypothesis, prefixes in model_prefixes.items():
         hypothesis_dir = output_dir / hypothesis
-        for row in read_csv_rows(
-            hypothesis_dir / f"{hypothesis}_model_attempts.csv"
-        ):
-            attempts.append({"hypothesis": hypothesis.upper(), **row})
         for row in read_csv_rows(
             hypothesis_dir / f"{hypothesis}_engine_metadata.csv"
         ):
             metadata.append({"hypothesis": hypothesis.upper(), **row})
-        for filename in (
-            f"{hypothesis}_glmm_fixed_effects.csv",
-            f"{hypothesis}_glmm_planned_contrasts.csv",
-            f"{hypothesis}_glmm_random_effects.csv",
-            f"{hypothesis}_standardization.csv",
-        ):
+        standardization = f"{hypothesis}_standardization.csv"
+        (output_dir / standardization).write_bytes(
+            (hypothesis_dir / standardization).read_bytes()
+        )
+        for prefix in prefixes:
+            for row in read_csv_rows(
+                hypothesis_dir / f"{prefix}_model_attempts.csv"
+            ):
+                attempts.append(
+                    {
+                        "hypothesis": hypothesis.upper(),
+                        "analysis_model": prefix,
+                        **row,
+                    }
+                )
+            for filename in (
+                f"{prefix}_glmm_fixed_effects.csv",
+                f"{prefix}_glmm_random_effects.csv",
+            ):
+                source = hypothesis_dir / filename
+                destination = output_dir / filename
+                destination.write_bytes(source.read_bytes())
+        for filename in contrast_files[hypothesis]:
             source = hypothesis_dir / filename
             destination = output_dir / filename
             destination.write_bytes(source.read_bytes())
@@ -334,26 +411,52 @@ def run_formal_pipeline(
     }
     if len(support_values) != 1:
         raise ValueError("H4 support classification is inconsistent across contrasts")
+    repository_state = _git_state()
     report = {
         "report_version": "1.0-rc1.1",
         "protocol_version": document["metadata"]["protocol_version"],
         "dataset_version": document["metadata"]["dataset_version"],
         "input_hash": input_hash,
+        "analysis_commit": repository_state["analysis_commit"],
+        "tracked_worktree_clean": repository_state["tracked_worktree_clean"],
+        "r_engine_lock_hash": _sha256(ENGINE_LOCK),
         "generated_at": datetime.now().astimezone().isoformat(),
         "engine": {
             "status": "frozen",
             "versions": versions,
-            "specification": "glmm_engine_spec_v1.0-rc1.md",
+            "specification": "glmm_engine_spec_v1.0-rc1.1.md",
         },
         "formal_models": {
             "H3": h3_glmm,
             "H4": h4_glmm,
+        },
+        "estimands": {
+            "primary": {
+                "effect": "total_method_effect",
+                "schema_token_count_adjusted": False,
+                "h3_interpretation": "equal-weighted average interference effect across four methods",
+            },
+            "sensitivity": {
+                "schema_token_count_adjusted": True,
+                "h3_method_by_neighbor_interaction": True,
+                "changes_primary_support_classification": False,
+            },
         },
         "h4_support_classification": next(iter(support_values)),
         "artifact_files": list(FORMAL_OUTPUTS),
         "missingness_record_count": len(missingness),
         "deviations": [],
         "cf11_status": "in_progress",
+        "cf11_components": {
+            "design_specification": "passed",
+            "engine_implementation": "passed",
+            "synthetic_integration": "passed",
+            "real_candidate_dry_run": "pending",
+            "statistical_review": "pending",
+            "report_review": "pending",
+            "approval": "pending",
+            "overall": "in_progress",
+        },
         "cf11_open_items": [
             "real_candidate_data_dry_run",
             "statistics_reviewer_approval",
@@ -361,6 +464,15 @@ def run_formal_pipeline(
         ],
     }
     write_json(output / "confirmatory_report.json", report)
+    manifest_rows = [
+        {
+            "filename": filename,
+            "sha256": _sha256(output / filename),
+        }
+        for filename in FORMAL_OUTPUTS
+        if filename != "artifact_manifest.csv"
+    ]
+    write_csv_rows(output / "artifact_manifest.csv", manifest_rows)
     missing_outputs = [
         filename for filename in FORMAL_OUTPUTS if not (output / filename).is_file()
     ]

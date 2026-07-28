@@ -3,7 +3,9 @@
   "protocol_version": "1.0-rc3.1",
   "dataset_version": null,
   "analysis_commit": null,
+  "tracked_worktree_clean": null,
   "input_hash": null,
+  "r_engine_lock_hash": null,
   "generated_at": null,
   "hypothesis": null,
   "analysis_scope": {},
@@ -37,6 +39,18 @@
     "random_effects_file": null,
     "estimates": []
   },
+  "estimands": {
+    "primary": {
+      "effect": "total_method_effect",
+      "schema_token_count_adjusted": false,
+      "h3_interpretation": "equal-weighted average interference effect across four methods"
+    },
+    "sensitivity": {
+      "schema_token_count_adjusted": true,
+      "h3_method_by_neighbor_interaction": true,
+      "changes_primary_support_classification": false
+    }
+  },
   "h4_support_classification": null,
   "artifact_files": [],
   "missingness_audit": {
@@ -49,6 +63,16 @@
   },
   "deviations": [],
   "cf11_status": "in_progress",
+  "cf11_components": {
+    "design_specification": "passed",
+    "engine_implementation": "passed",
+    "synthetic_integration": "passed",
+    "real_candidate_dry_run": "pending",
+    "statistical_review": "pending",
+    "report_review": "pending",
+    "approval": "pending",
+    "overall": "in_progress"
+  },
   "approvals": {
     "statistics_reviewer": null,
     "review_date": null,

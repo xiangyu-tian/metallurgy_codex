@@ -65,9 +65,22 @@ H3、H4在`rc3.1`中的修订只固定统计比较，不改变数据表结构和
 | CF-08 | 政策动作生成器测试 | 能力模式`allowed_actions`基准矩阵的所有规则均有自动测试；冲突优先级与多标签组合可复现 | `pending` | 待生成 |
 | CF-09 | 先导实验与功效分析 | 估计类别分布、标注难度、Schema初步效应、重复波动、规模效应和设计效应 | `pending` | 待生成 |
 | CF-10 | 样本量附录 | 生成并审批`sample_size_addendum_v1.0.md`，固定正式样本数及依据 | `pending` | 待生成 |
-| CF-11 | 统计接口与报告模板 | H3/H4统计接口、输入校验、聚合测试和报告模板通过审查 | `in_progress` | `docs/experiments/statistical_analysis_interface_v1.0-rc1.1.md`；`docs/experiments/glmm_engine_spec_v1.0-rc1.md`；`Tools/core_freeze/`；`docs/experiments/cf11_minimum_test_evidence_20260727.md`；`docs/experiments/cf11_glmm_test_evidence_20260727.md` |
+| CF-11 | 统计接口与报告模板 | H3/H4统计接口、输入校验、聚合测试和报告模板通过审查 | `in_progress` | `docs/experiments/statistical_analysis_interface_v1.0-rc1.1.md`；`docs/experiments/glmm_engine_spec_v1.0-rc1.1.md`；`Tools/core_freeze/`；`docs/experiments/cf11_minimum_test_evidence_20260727.md`；`docs/experiments/cf11_glmm_test_evidence_20260727.md`；`docs/experiments/cf11_estimand_sensitivity_evidence_20260728.md` |
 
 只有CF-01至CF-11全部为`passed`或具有正式联合审批的`waived`时，才能申请`1.0-core-frozen`。
+
+CF-11内部状态：
+
+```yaml
+design_specification: passed
+engine_implementation: passed
+synthetic_integration: passed
+real_candidate_dry_run: pending
+statistical_review: pending
+report_review: pending
+approval: pending
+overall: in_progress
+```
 
 ---
 

@@ -417,41 +417,7 @@ write_model_tables <- function(result, output_dir, prefix) {
 }
 
 
-run_h3 <- function(data, output_dir) {
-  if (!all(c(
-    "near_neighbor_type",
-    "near_neighbor_count"
-  ) %in% names(data))) {
-    stop("H3 input is missing neighbor fields")
-  }
-  data$neighbor_condition <- paste(
-    data$near_neighbor_type,
-    data$near_neighbor_count,
-    sep = "_"
-  )
-  unexpected <- setdiff(unique(data$neighbor_condition), NEIGHBOR_LEVELS)
-  missing <- setdiff(NEIGHBOR_LEVELS, unique(data$neighbor_condition))
-  if (length(unexpected) > 0L || length(missing) > 0L) {
-    stop(sprintf(
-      "H3 neighbor condition mismatch; missing=[%s], unexpected=[%s]",
-      paste(missing, collapse = ","),
-      paste(unexpected, collapse = ",")
-    ))
-  }
-  data$neighbor_condition <- factor(
-    data$neighbor_condition,
-    levels = NEIGHBOR_LEVELS
-  )
-  result <- fit_with_chain(
-    data,
-    paste(
-      "selection_correct ~ method + neighbor_condition",
-      "+ difficulty_score_z + schema_token_count_z"
-    )
-  )
-  write_model_tables(result, output_dir, "h3")
-  fit <- result$fit
-
+make_h3_planned_contrasts <- function(fit) {
   marginal_means <- emmeans(
     fit,
     ~ neighbor_condition,
@@ -491,34 +457,34 @@ run_h3 <- function(data, output_dir) {
   )
   two_sided$alternative[direct_index] <- "less"
   two_sided$p_value_one_sided[direct_index] <- direct_one_sided$p.value[[1]]
-  write.csv(
-    two_sided,
-    file.path(output_dir, "h3_glmm_planned_contrasts.csv"),
-    row.names = FALSE,
-    na = ""
-  )
-  result
+  two_sided
 }
 
 
-run_h4 <- function(data, output_dir) {
-  if (!"tool_pool_size" %in% names(data)) {
-    stop("H4 input is missing tool_pool_size")
-  }
-  if (!all(data$tool_pool_size %in% c(17, 50, 100, 120))) {
-    stop("H4 tool_pool_size contains unsupported values")
-  }
-  data$log_tool_pool_size <- log(data$tool_pool_size)
-  result <- fit_with_chain(
-    data,
-    paste(
-      "selection_correct ~ method * log_tool_pool_size",
-      "+ difficulty_score_z + schema_token_count_z"
-    )
+make_h3_method_interaction_contrasts <- function(fit) {
+  method_means <- emmeans(
+    fit,
+    ~ neighbor_condition | method,
+    weights = "equal"
   )
-  write_model_tables(result, output_dir, "h4")
-  fit <- result$fit
+  method_contrasts <- contrast(
+    method_means,
+    method = list(
+      functional_overlap_8_minus_lexical_8 = c(0, 0, -1, 0, 1)
+    ),
+    by = "method",
+    adjust = "none"
+  )
+  as.data.frame(summary(
+    method_contrasts,
+    infer = c(TRUE, TRUE),
+    side = "<",
+    adjust = "none"
+  ))
+}
 
+
+make_h4_planned_contrasts <- function(fit) {
   response_grid <- regrid(
     emmeans(
       fit,
@@ -582,9 +548,140 @@ run_h4 <- function(data, output_dir) {
     "not_supported"
   }
   comparison_table$support_classification <- support
+  comparison_table
+}
+
+
+run_h3 <- function(data, output_dir) {
+  if (!all(c(
+    "near_neighbor_type",
+    "near_neighbor_count"
+  ) %in% names(data))) {
+    stop("H3 input is missing neighbor fields")
+  }
+  data$neighbor_condition <- paste(
+    data$near_neighbor_type,
+    data$near_neighbor_count,
+    sep = "_"
+  )
+  unexpected <- setdiff(unique(data$neighbor_condition), NEIGHBOR_LEVELS)
+  missing <- setdiff(NEIGHBOR_LEVELS, unique(data$neighbor_condition))
+  if (length(unexpected) > 0L || length(missing) > 0L) {
+    stop(sprintf(
+      "H3 neighbor condition mismatch; missing=[%s], unexpected=[%s]",
+      paste(missing, collapse = ","),
+      paste(unexpected, collapse = ",")
+    ))
+  }
+  data$neighbor_condition <- factor(
+    data$neighbor_condition,
+    levels = NEIGHBOR_LEVELS
+  )
+  result <- fit_with_chain(
+    data,
+    paste(
+      "selection_correct ~ method + neighbor_condition",
+      "+ difficulty_score_z"
+    )
+  )
+  write_model_tables(result, output_dir, "h3")
+  fit <- result$fit
   write.csv(
-    comparison_table,
+    make_h3_planned_contrasts(fit),
+    file.path(output_dir, "h3_glmm_planned_contrasts.csv"),
+    row.names = FALSE,
+    na = ""
+  )
+
+  schema_sensitivity <- fit_with_chain(
+    data,
+    paste(
+      "selection_correct ~ method + neighbor_condition",
+      "+ difficulty_score_z + schema_token_count_z"
+    )
+  )
+  write_model_tables(
+    schema_sensitivity,
+    output_dir,
+    "h3_schema_adjusted_sensitivity"
+  )
+  write.csv(
+    make_h3_planned_contrasts(schema_sensitivity$fit),
+    file.path(
+      output_dir,
+      "h3_schema_adjusted_sensitivity_contrasts.csv"
+    ),
+    row.names = FALSE,
+    na = ""
+  )
+
+  interaction_sensitivity <- fit_with_chain(
+    data,
+    paste(
+      "selection_correct ~ method * neighbor_condition",
+      "+ difficulty_score_z"
+    )
+  )
+  write_model_tables(
+    interaction_sensitivity,
+    output_dir,
+    "h3_method_interaction_sensitivity"
+  )
+  write.csv(
+    make_h3_method_interaction_contrasts(interaction_sensitivity$fit),
+    file.path(
+      output_dir,
+      "h3_method_interaction_sensitivity_contrasts.csv"
+    ),
+    row.names = FALSE,
+    na = ""
+  )
+  result
+}
+
+
+run_h4 <- function(data, output_dir) {
+  if (!"tool_pool_size" %in% names(data)) {
+    stop("H4 input is missing tool_pool_size")
+  }
+  if (!all(data$tool_pool_size %in% c(17, 50, 100, 120))) {
+    stop("H4 tool_pool_size contains unsupported values")
+  }
+  data$log_tool_pool_size <- log(data$tool_pool_size)
+  result <- fit_with_chain(
+    data,
+    paste(
+      "selection_correct ~ method * log_tool_pool_size",
+      "+ difficulty_score_z"
+    )
+  )
+  write_model_tables(result, output_dir, "h4")
+  fit <- result$fit
+  write.csv(
+    make_h4_planned_contrasts(fit),
     file.path(output_dir, "h4_glmm_planned_contrasts.csv"),
+    row.names = FALSE,
+    na = ""
+  )
+
+  schema_sensitivity <- fit_with_chain(
+    data,
+    paste(
+      "selection_correct ~ method * log_tool_pool_size",
+      "+ difficulty_score_z + schema_token_count_z"
+    )
+  )
+  write_model_tables(
+    schema_sensitivity,
+    output_dir,
+    "h4_schema_adjusted_sensitivity"
+  )
+  write.csv(
+    make_h4_planned_contrasts(schema_sensitivity$fit),
+    file.path(
+      output_dir,
+      "h4_schema_adjusted_sensitivity_contrasts.csv"
+    ),
     row.names = FALSE,
     na = ""
   )
@@ -637,7 +734,11 @@ engine_metadata <- data.frame(
     "link",
     "nAGQ",
     "maxfun",
-    "singular_tolerance"
+    "singular_tolerance",
+    "primary_estimand",
+    "primary_adjusts_schema_token_count",
+    "schema_token_sensitivity",
+    "h3_method_neighbor_interaction_sensitivity"
   ),
   value = c(
     as.character(getRversion()),
@@ -647,7 +748,11 @@ engine_metadata <- data.frame(
     "logit",
     "1",
     as.character(MAXFUN),
-    as.character(SINGULAR_TOLERANCE)
+    as.character(SINGULAR_TOLERANCE),
+    "total_method_effect",
+    "false",
+    "true",
+    "true"
   )
 )
 write.csv(

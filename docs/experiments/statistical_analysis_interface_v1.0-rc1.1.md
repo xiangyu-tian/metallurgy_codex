@@ -7,7 +7,7 @@
 - 状态：实现规范候选版；用于先导实验和正式统计脚本
 - 上位协议：`research_protocol_v1.0.md`（`1.0-rc3.1`）
 - 数据规范：`dataset_v2_annotation_policy_v1.0.md`（`1.0-rc3`）
-- GLMM实现规范：`glmm_engine_spec_v1.0-rc1.md`
+- GLMM实现规范：`glmm_engine_spec_v1.0-rc1.1.md`
 
 本文只固定 H3、H4 的确认性对比、配对单位和汇总顺序，不改变研究问题、假设、数据标签或工具池设计。正式实验前，统计脚本、数据表和报告模板必须共同遵守本文。
 
@@ -292,11 +292,15 @@ cf11_status = in_progress
 
 - `h3_direct_contrast.csv`：功能重叠8与词法8的逐配对差值；
 - `h3_baseline_contrasts.csv`：两类近邻相对`none, 0`的辅助效应；
+- `h3_schema_adjusted_sensitivity_*`：加入Schema Token后的H3直接效应敏感性结果；
+- `h3_method_interaction_sensitivity_*`：H3逐方法异质性敏感性结果；
 - `h4_scale_stability_mixed.csv`：各方法17→120的逐配对差值；
+- `h4_schema_adjusted_sensitivity_*`：加入Schema Token后的H4直接效应敏感性结果；
 - `run_repeat_summary.csv`：逐运行重复汇总；
 - `cluster_bootstrap_summary.csv`：簇级Bootstrap结果；
 - `missingness_audit.csv`：缺失、供应商失败和恢复记录；
 - `confirmatory_report.json`：样本数、估计量、置信区间、检验方向和版本元数据。
+- `artifact_manifest.csv`：正式产物SHA-256清单。
 
 统计脚本验收必须覆盖：
 

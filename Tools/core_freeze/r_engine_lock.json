@@ -1,5 +1,5 @@
 {
-  "lock_version": "1.0",
+  "lock_version": "1.1",
   "r_version": "4.6.1",
   "packages": {
     "rbibutils": "2.4.1",
@@ -25,6 +25,10 @@
     "maxfun": 200000,
     "gradient_tolerance": 0.002,
     "hessian_tolerance": 0.000001,
-    "singular_tolerance": 0.0001
+    "singular_tolerance": 0.0001,
+    "primary_estimand": "total_method_effect",
+    "primary_adjusts_schema_token_count": false,
+    "schema_token_sensitivity": true,
+    "h3_method_neighbor_interaction_sensitivity": true
   }
 }

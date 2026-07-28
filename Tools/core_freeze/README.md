@@ -5,7 +5,7 @@
 正式模型的引擎、版本、优化器、收敛阈值和简化链已冻结在：
 
 - `r_engine_lock.json`
-- `docs/experiments/glmm_engine_spec_v1.0-rc1.md`
+- `docs/experiments/glmm_engine_spec_v1.0-rc1.1.md`
 
 当前实现已通过合成交叉效应数据测试，但真实`rc1.1`候选数据尚未形成，统计审查与项目审批也未完成。因此正式报告仍必须记录：
 
@@ -31,6 +31,10 @@ cf11_status = in_progress
 | `formal_pipeline.py` | 正式CSV/JSON结果全集的一次性生成入口 |
 | `confirmatory_report_template.json` | 确认性报告字段模板 |
 | `tests/` | 合成数据契约和GLMM集成测试 |
+
+主要确认性模型估计包含Schema暴露机制在内的方法总效应，不控制可能作为中介变量的`schema_token_count_z`。正式管线同时生成Schema调整敏感性模型；H3还生成`method × neighbor_condition`方法异质性敏感性模型。敏感性结果不改变主要H3检验或H4支持等级。
+
+正式运行还生成`artifact_manifest.csv`，记录产物SHA-256；最终报告记录输入哈希、R锁文件哈希、分析Git提交和已跟踪工作区清洁状态。
 
 ## 隔离运行环境
 
