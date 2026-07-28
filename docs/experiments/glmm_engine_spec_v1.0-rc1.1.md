@@ -260,6 +260,19 @@ cf11_status = in_progress
 
 真实候选干跑后，独立`finalize_cf11.py`必须重新验证产物集合与哈希，并读取绑定同一输入、提交和manifest的真实干跑证据、统计审查、报告审查及项目审批。只有该程序生成的独立最终化记录可以把CF-11组件状态记为`passed`；它不修改原始分析报告，也不代表CF-01至CF-10通过。
 
+最终化采用`protected_repository_review`内部审批记录模式，不把普通JSON内容哈希称为密码学数字签名。记录必须包含`reviewer_role`、`organization_or_team`、`review_scope`和带时区的`recorded_at`，并满足：
+
+```text
+analysis.generated_at
+≤ candidate_evidence.recorded_at
+≤ statistics_review/report_review.recorded_at
+≤ project_approval.recorded_at
+```
+
+统计审查人与项目审批人必须不同。manifest文件名必须是解析后仍位于分析目录内的相对路径；拒绝绝对路径、驱动器路径、`..`和符号链接逃逸。最终化记录只能独占创建，禁止覆盖已有记录，并包含由分析报告、manifest和四份证据哈希导出的确定性`finalization_id`。
+
+证据文件和最终化记录必须通过受保护分支、角色审批和Git签名提交纳入仓库。`finalize_cf11.py`只验证文件内容与流程约束，不验证Git托管平台权限或提交签名本身。
+
 ---
 
 ## 8. 内容级验收

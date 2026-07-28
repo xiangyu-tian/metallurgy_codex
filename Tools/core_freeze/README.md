@@ -29,7 +29,7 @@ cf11_status = in_progress
 | `glmm_engine.R` | H3/H4正式GLMM、计划对比及收敛审计 |
 | `r_engine.py` | Python到冻结R引擎的输入导出与调用层 |
 | `formal_pipeline.py` | 正式CSV/JSON结果全集的一次性生成入口 |
-| `finalize_cf11.py` | 校验不可变产物与签署证据并生成独立CF-11审批记录 |
+| `finalize_cf11.py` | 校验不可变产物与受治理审批记录并生成独立CF-11最终化记录 |
 | `finalization_evidence_template.json` | 真实干跑、统计审查、报告审查和项目审批证据模板 |
 | `confirmatory_report_template.json` | 确认性报告字段模板 |
 | `tests/` | 合成数据契约和GLMM集成测试 |
@@ -114,7 +114,20 @@ $env:R_LIBS_USER = (Resolve-Path '.\.r-runtime\library').Path
   --output evidence\cf11_finalization_record.json
 ```
 
-最终化程序重新校验全部产物哈希，并要求四份证据绑定相同的输入哈希、分析提交和manifest哈希。它只生成独立审批记录，不修改原始分析报告。即使CF-11通过，也不代表CF-01至CF-10已经通过。
+最终化程序重新校验全部产物哈希，并要求四份记录绑定相同的输入哈希、分析提交和manifest哈希。每份记录必须包含角色、团队、审查范围和带时区的`recorded_at`，且满足：
+
+```text
+分析生成
+≤ 真实候选干跑记录
+≤ 统计审查/报告审查记录
+≤ 项目审批记录
+```
+
+统计审查人不得同时作为项目审批人。manifest只允许解析后仍位于分析目录内的相对路径；绝对路径、`..`和符号链接逃逸都会被拒绝。
+
+最终化记录使用独占创建，已有输出不会被覆盖，并包含确定性的`finalization_id`。它只生成独立记录，不修改原始分析报告。即使CF-11通过，也不代表CF-01至CF-10已经通过。
+
+当前采用`protected_repository_review`内部审批模式。这些JSON是审批记录而非密码学数字签名；内容哈希只能验证一致性，不能证明人员身份。证据和最终化记录必须通过受保护分支、角色权限和Git签名提交纳入仓库。脚本不声称验证了Git托管平台权限或提交签名。
 
 运行测试：
 
@@ -129,4 +142,4 @@ $env:R_LIBS_USER = (Resolve-Path '.\.r-runtime\library').Path
 
 - 用真实`rc1.1`候选数据完成输入校验和正式管线干跑；
 - 形成统计审查记录和报告模板审查记录；
-- 完成统计审查人与项目负责人的审批签署。
+- 完成统计审查、报告审查和项目负责人的受治理审批记录。

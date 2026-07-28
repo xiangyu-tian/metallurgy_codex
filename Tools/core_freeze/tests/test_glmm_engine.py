@@ -59,6 +59,10 @@ class GlmmEngineIntegrationTests(unittest.TestCase):
                 report["cf11_components"]["real_candidate_dry_run"],
                 "pending",
             )
+            self.assertEqual(
+                report["cf11_components"]["finalization_implementation"],
+                "passed",
+            )
             self.assertFalse(
                 report["estimands"]["sensitivity"][
                     "allowed_to_change_primary_support_classification"

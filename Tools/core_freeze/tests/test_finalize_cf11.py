@@ -9,6 +9,7 @@ from pathlib import Path
 
 from Tools.core_freeze.finalize_cf11 import (
     FinalizationError,
+    _resolve_artifact,
     finalize_cf11,
 )
 
@@ -35,6 +36,7 @@ class FinalizeCf11Tests(unittest.TestCase):
             "input_hash": "a" * 64,
             "r_engine_lock_hash": "b" * 64,
             "analysis_commit": "c" * 40,
+            "generated_at": "2026-07-28T10:00:00+08:00",
             "tracked_worktree_clean": True,
             "cf11_status": "in_progress",
             "cf11_components": {
@@ -44,6 +46,7 @@ class FinalizeCf11Tests(unittest.TestCase):
                 "engine_implementation": "passed",
                 "synthetic_integration": "passed",
                 "artifact_contract": "passed",
+                "finalization_implementation": "passed",
             },
             "model_statuses": {
                 "h3": "converged",
@@ -72,29 +75,42 @@ class FinalizeCf11Tests(unittest.TestCase):
             "input_hash": report["input_hash"],
             "analysis_commit": report["analysis_commit"],
             "artifact_manifest_hash": manifest_hash,
-            "reviewer": "reviewer",
-            "signed_at": "2026-07-28T12:00:00+08:00",
+            "governance_mode": "protected_repository_review",
+            "organization_or_team": "project-team",
+            "review_scope": "CF-11",
         }
         records = {
             "candidate_evidence": {
                 **common,
                 "record_type": "real_candidate_dry_run",
                 "status": "passed",
+                "reviewer": "experimenter",
+                "reviewer_role": "experiment_executor",
+                "recorded_at": "2026-07-28T11:00:00+08:00",
             },
             "statistics_review": {
                 **common,
                 "record_type": "statistical_review",
                 "decision": "approved",
+                "reviewer": "statistician",
+                "reviewer_role": "statistics_reviewer",
+                "recorded_at": "2026-07-28T12:00:00+08:00",
             },
             "report_review": {
                 **common,
                 "record_type": "report_review",
                 "decision": "approved",
+                "reviewer": "report-reviewer",
+                "reviewer_role": "report_reviewer",
+                "recorded_at": "2026-07-28T12:30:00+08:00",
             },
             "approval": {
                 **common,
                 "record_type": "project_approval",
                 "decision": "approved",
+                "reviewer": "project-owner",
+                "reviewer_role": "project_approver",
+                "recorded_at": "2026-07-28T13:00:00+08:00",
             },
         }
         paths = {}
@@ -107,7 +123,7 @@ class FinalizeCf11Tests(unittest.TestCase):
             paths[name] = path
         return analysis, paths, data_path
 
-    def test_finalization_requires_bound_signed_evidence(self):
+    def test_finalization_requires_bound_governed_records(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             analysis, evidence, _ = self.build_fixture(root)
@@ -119,11 +135,28 @@ class FinalizeCf11Tests(unittest.TestCase):
             )
             self.assertEqual(record["cf11_status"], "passed")
             self.assertFalse(record["core_frozen"])
+            self.assertTrue(record["finalization_id"].startswith("CF11-"))
+            self.assertEqual(
+                record["evidence_assurance"],
+                "repository_governed_records_not_cryptographic_signatures",
+            )
             self.assertEqual(
                 record["cf11_components"]["real_candidate_dry_run"],
                 "passed",
             )
             self.assertTrue(output.is_file())
+
+    def test_finalization_refuses_to_overwrite_existing_record(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            analysis, evidence, _ = self.build_fixture(root)
+            output = root / "cf11_finalization_record.json"
+            finalize_cf11(analysis, **evidence, output=output)
+            with self.assertRaisesRegex(
+                FinalizationError,
+                "already exists",
+            ):
+                finalize_cf11(analysis, **evidence, output=output)
 
     def test_finalization_rejects_tampered_analysis_artifact(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -133,6 +166,83 @@ class FinalizeCf11Tests(unittest.TestCase):
             with self.assertRaisesRegex(
                 FinalizationError,
                 "artifact hash mismatch",
+            ):
+                finalize_cf11(
+                    analysis,
+                    **evidence,
+                    output=root / "record.json",
+                )
+
+    def test_manifest_rejects_absolute_and_parent_paths(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary).resolve()
+            analysis = root / "analysis"
+            analysis.mkdir()
+            with self.assertRaisesRegex(FinalizationError, "escapes"):
+                _resolve_artifact(analysis, "../outside.csv")
+            with self.assertRaisesRegex(FinalizationError, "escapes"):
+                _resolve_artifact(analysis, "C:\\outside.csv")
+            with self.assertRaisesRegex(FinalizationError, "escapes"):
+                _resolve_artifact(analysis, "/outside.csv")
+
+    def test_review_times_require_timezone_and_order(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            analysis, evidence, _ = self.build_fixture(root)
+            approval = json.loads(
+                evidence["approval"].read_text(encoding="utf-8")
+            )
+            approval["recorded_at"] = "2026-07-28T11:30:00+08:00"
+            evidence["approval"].write_text(
+                json.dumps(approval, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(
+                FinalizationError,
+                "project approval must follow",
+            ):
+                finalize_cf11(
+                    analysis,
+                    **evidence,
+                    output=root / "record.json",
+                )
+
+            second_root = root / "second"
+            second_root.mkdir()
+            analysis, evidence, _ = self.build_fixture(second_root)
+            candidate = json.loads(
+                evidence["candidate_evidence"].read_text(encoding="utf-8")
+            )
+            candidate["recorded_at"] = "2026-07-28T11:00:00"
+            evidence["candidate_evidence"].write_text(
+                json.dumps(candidate, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(
+                FinalizationError,
+                "timezone offset",
+            ):
+                finalize_cf11(
+                    analysis,
+                    **evidence,
+                    output=root / "second-record.json",
+                )
+
+    def test_statistics_reviewer_must_differ_from_project_approver(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            analysis, evidence, _ = self.build_fixture(root)
+            approval = json.loads(
+                evidence["approval"].read_text(encoding="utf-8")
+            )
+            approval["reviewer"] = "STATISTICIAN"
+            evidence["approval"].write_text(
+                json.dumps(approval, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(
+                FinalizationError,
+                "must be different people",
             ):
                 finalize_cf11(
                     analysis,

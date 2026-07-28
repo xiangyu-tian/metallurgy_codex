@@ -666,6 +666,7 @@ def run_formal_pipeline(
             "engine_implementation": "passed",
             "synthetic_integration": "passed",
             "artifact_contract": "passed",
+            "finalization_implementation": "passed",
             "real_candidate_dry_run": "pending",
             "statistical_review": "pending",
             "report_review": "pending",
