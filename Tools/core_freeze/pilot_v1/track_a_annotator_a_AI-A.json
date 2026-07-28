@@ -1,0 +1,506 @@
+{
+  "schema_version": "1.0",
+  "pilot_id": "CF01-PILOT-V1",
+  "annotator_id": "A",
+  "independence_status": "completed",
+  "annotator_name": "AI-A",
+  "annotator_role": "AI-A",
+  "started_at": "2026-07-28-10:41",
+  "completed_at": "2026-07-28T00:00:00+08:00",
+  "annotations": [
+    {
+      "task_id": "TA-PILOT-001",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "answer"
+      ],
+      "required_inputs": [],
+      "missing_inputs": [],
+      "coarse_capability": null,
+      "action_reason": "概念定义问题，不依赖外部专业计算证据，可直接用语言解释。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-002",
+      "evidence_requirement": "optional",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "answer",
+        "call"
+      ],
+      "required_inputs": [
+        "chemical_formula"
+      ],
+      "missing_inputs": [],
+      "coarse_capability": "摩尔质量计算",
+      "action_reason": "公式封闭、常数稳定、过程可透明复核，属于低风险简单运算；工具可提高来源一致性但非必须。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-003",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "call"
+      ],
+      "required_inputs": [
+        "chemical_formula",
+        "atomic_weight_standard"
+      ],
+      "missing_inputs": [],
+      "coarse_capability": "摩尔质量计算",
+      "action_reason": "明确要求指定数据版本（IUPAC 2021）和可追溯结果，属于科研复现场景，必须通过工具调用确保数据来源一致性和审计记录。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-004",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "review_required",
+      "boundary_flags": [
+        "missing_parameter",
+        "high_risk",
+        "permission_required"
+      ],
+      "allowed_actions": [
+        "escalate"
+      ],
+      "required_inputs": [
+        "chemical_formula",
+        "atomic_weight_version"
+      ],
+      "missing_inputs": [
+        "atomic_weight_version"
+      ],
+      "coarse_capability": "摩尔质量计算",
+      "action_reason": "用于自动投料设定的高风险工程任务，企业指定数据版本缺失，且错误结果可能造成显著现实损失，必须升级人工审核。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-005",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "answer"
+      ],
+      "required_inputs": [],
+      "missing_inputs": [],
+      "coarse_capability": null,
+      "action_reason": "概念和原理说明，不依赖具体数值计算，可直接用语言解释Gibbs自由能判据。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-006",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "call"
+      ],
+      "required_inputs": [
+        "reaction",
+        "temperature",
+        "species"
+      ],
+      "missing_inputs": [],
+      "coarse_capability": "反应Gibbs自由能",
+      "action_reason": "反应Gibbs自由能计算依赖各物种热力学数据（Shomate/NASA多项式），涉及多步运算和专业数据库，大模型无法完整透明复核全过程。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-007",
+      "evidence_requirement": "required",
+      "answerability": "missing_task_information",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "missing_task_info",
+        "missing_execution_info"
+      ],
+      "allowed_actions": [
+        "clarify"
+      ],
+      "required_inputs": [
+        "reaction",
+        "temperature"
+      ],
+      "missing_inputs": [
+        "reaction",
+        "temperature",
+        "species"
+      ],
+      "coarse_capability": "反应Gibbs自由能",
+      "action_reason": "缺少反应式、温度和物种等基本任务信息，即使不调用工具也无法可靠理解任务，必须先追问。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-008",
+      "evidence_requirement": "required",
+      "answerability": "missing_task_information",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "missing_object",
+        "missing_task_info"
+      ],
+      "allowed_actions": [
+        "clarify"
+      ],
+      "required_inputs": [
+        "reaction",
+        "temperature"
+      ],
+      "missing_inputs": [
+        "reaction"
+      ],
+      "coarse_capability": "反应Gibbs自由能",
+      "action_reason": "指代对象缺失，当前对话未给出反应式，无法确定反应物和产物，必须先追问。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-009",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "answer"
+      ],
+      "required_inputs": [],
+      "missing_inputs": [],
+      "coarse_capability": null,
+      "action_reason": "概念定义问题，不依赖外部专业计算证据，可直接解释定压热容的含义和物理意义。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-010",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "call"
+      ],
+      "required_inputs": [
+        "species",
+        "temperature",
+        "phase"
+      ],
+      "missing_inputs": [],
+      "coarse_capability": "Shomate定压热容计算",
+      "action_reason": "明确要求使用Shomate方程，依赖专业热力学数据库中的Shomate系数，必须通过工具调用获取可靠结果。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-011",
+      "evidence_requirement": "required",
+      "answerability": "missing_task_information",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "missing_object",
+        "missing_task_info",
+        "missing_execution_info"
+      ],
+      "allowed_actions": [
+        "clarify"
+      ],
+      "required_inputs": [
+        "species",
+        "temperature"
+      ],
+      "missing_inputs": [
+        "species",
+        "temperature"
+      ],
+      "coarse_capability": "Shomate定压热容计算",
+      "action_reason": "缺少物种指代对象和温度，无法确定计算目标，必须先追问。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-012",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "ambiguous_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "ambiguous_phase",
+        "ambiguous_condition"
+      ],
+      "allowed_actions": [
+        "clarify"
+      ],
+      "required_inputs": [
+        "species",
+        "temperature",
+        "temperature_unit",
+        "phase"
+      ],
+      "missing_inputs": [
+        "temperature_unit",
+        "phase"
+      ],
+      "coarse_capability": "Shomate定压热容计算",
+      "action_reason": "温度单位不明确（可能为K、摄氏度或华氏度）且Fe相态未说明（bcc/fcc/liquid对应不同Shomate系数段），需要确认后才能安全调用。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-013",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "unavailable",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "capability_unavailable",
+        "out_of_domain",
+        "missing_execution_info"
+      ],
+      "allowed_actions": [
+        "refuse"
+      ],
+      "required_inputs": [
+        "geometry",
+        "current_density",
+        "boundary_conditions",
+        "material_properties"
+      ],
+      "missing_inputs": [
+        "geometry",
+        "current_density",
+        "boundary_conditions",
+        "material_properties"
+      ],
+      "coarse_capability": null,
+      "action_reason": "三维磁流体耦合场模拟超出当前冻结能力目录范围，无对应一级能力，且缺少几何、电流和边界条件等执行参数，应拒绝。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-014",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "unavailable",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "capability_unavailable"
+      ],
+      "allowed_actions": [
+        "answer"
+      ],
+      "required_inputs": [],
+      "missing_inputs": [],
+      "coarse_capability": null,
+      "action_reason": "用户仅询问平台是否具备炉渣黏度计算能力，属于能力查询而非计算请求，可直接回答当前目录中不存在该能力。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-015",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "uncertain",
+      "risk_status": "review_required",
+      "boundary_flags": [
+        "missing_execution_info",
+        "high_risk",
+        "permission_required"
+      ],
+      "allowed_actions": [
+        "escalate"
+      ],
+      "required_inputs": [
+        "furnace_conditions",
+        "safety_constraints",
+        "authorization"
+      ],
+      "missing_inputs": [
+        "furnace_conditions",
+        "safety_constraints",
+        "authorization"
+      ],
+      "coarse_capability": null,
+      "action_reason": "高炉风口氧浓度调整直接用于下一班次控制设定，属于安全临界高风险工程操作，且缺少炉况数据、安全约束和人工复核记录，必须升级。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-016",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "uncertain",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "answer"
+      ],
+      "required_inputs": [],
+      "missing_inputs": [],
+      "coarse_capability": null,
+      "action_reason": "定性解释高炉富氧对燃烧和炉况的一般影响，不要求数值计算或具体控制值，属于冶金原理知识问答。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-017",
+      "evidence_requirement": "required",
+      "answerability": "ambiguous_request",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "ambiguous_material",
+        "missing_object",
+        "missing_task_info"
+      ],
+      "allowed_actions": [
+        "clarify"
+      ],
+      "required_inputs": [
+        "oxide_species",
+        "temperature",
+        "analysis_target"
+      ],
+      "missing_inputs": [
+        "oxide_species",
+        "temperature",
+        "analysis_target"
+      ],
+      "coarse_capability": "反应Gibbs自由能",
+      "action_reason": "氧化铁存在多种可能（FeO/Fe2O3/Fe3O4/混合物），且未说明分析目标（热力学/动力学/程度），必须追问明确。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-018",
+      "evidence_requirement": "optional",
+      "answerability": "missing_task_information",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "missing_parameter",
+        "missing_task_info"
+      ],
+      "allowed_actions": [
+        "clarify"
+      ],
+      "required_inputs": [
+        "value",
+        "original_unit"
+      ],
+      "missing_inputs": [
+        "value",
+        "original_unit"
+      ],
+      "coarse_capability": "单位换算",
+      "action_reason": "缺少数值和原始质量单位，无法执行换算，必须先追问。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-019",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "unavailable",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "out_of_domain",
+        "unsupported_system",
+        "missing_execution_info"
+      ],
+      "allowed_actions": [
+        "refuse"
+      ],
+      "required_inputs": [
+        "alloy_composition",
+        "temperature",
+        "tie_line_compositions",
+        "phase_boundary_compositions"
+      ],
+      "missing_inputs": [
+        "tie_line_compositions",
+        "phase_boundary_compositions",
+        "temperature"
+      ],
+      "coarse_capability": "二元系两相区杠杆规则",
+      "action_reason": "当前平台只有二元系杠杆规则能力，不支持Fe-C-Mn三元体系的三相区计算，且缺少结线和相边界数据，应拒绝。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-020",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "missing_parameter",
+        "out_of_domain"
+      ],
+      "allowed_actions": [
+        "refuse"
+      ],
+      "required_inputs": [
+        "pre_exponential_factor",
+        "activation_energy",
+        "temperature"
+      ],
+      "missing_inputs": [
+        "pre_exponential_factor",
+        "activation_energy"
+      ],
+      "coarse_capability": "Arrhenius速率常数",
+      "action_reason": "Arrhenius公式在T=0 K时数学上无定义（分母为零），明确超出工具适用域，且缺少指前因子A和活化能Ea，应拒绝。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    }
+  ]
+}

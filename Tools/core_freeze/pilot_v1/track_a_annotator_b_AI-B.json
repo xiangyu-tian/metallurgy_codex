@@ -1,0 +1,539 @@
+{
+  "annotations": [
+    {
+      "task_id": "TA-PILOT-001",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "answer"
+      ],
+      "required_inputs": [],
+      "missing_inputs": [],
+      "coarse_capability": "摩尔质量计算",
+      "action_reason": "这是摩尔质量概念的定义性问题，不依赖外部专业计算证据。问题语义完整，可直接回答。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-002",
+      "evidence_requirement": "optional",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "answer",
+        "call"
+      ],
+      "required_inputs": [
+        "化学式",
+        "所采用的原子量"
+      ],
+      "missing_inputs": [],
+      "coarse_capability": "摩尔质量计算",
+      "action_reason": "该任务公式封闭、运算简单，可在回答中透明推导，也可调用摩尔质量能力核算。题目未指定数据版本、审计要求或工程用途。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-003",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "uncertain",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "call"
+      ],
+      "required_inputs": [
+        "化学式",
+        "原子量数据版本"
+      ],
+      "missing_inputs": [],
+      "coarse_capability": "摩尔质量计算",
+      "action_reason": "任务指定IUPAC 2021数据版本并要求计算记录和可追溯结果，必须依赖版本化数据与可审计证据。一级目录存在摩尔质量计算，但未说明对指定版本的支持情况，因此能力状态为uncertain。",
+      "annotation_confidence": "medium",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-004",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "uncertain",
+      "risk_status": "review_required",
+      "boundary_flags": [
+        "missing_parameter",
+        "missing_execution_info",
+        "high_risk",
+        "permission_required"
+      ],
+      "allowed_actions": [
+        "escalate"
+      ],
+      "required_inputs": [
+        "化学式",
+        "企业指定原子量数据版本",
+        "投料设定精度与舍入规则",
+        "控制权限",
+        "人工复核记录"
+      ],
+      "missing_inputs": [
+        "企业指定原子量数据版本",
+        "投料设定精度与舍入规则",
+        "控制权限",
+        "人工复核记录"
+      ],
+      "coarse_capability": "摩尔质量计算",
+      "action_reason": "任务缺少企业指定的数据版本，并要求把结果直接用于自动投料设定，属于受控现实操作。高风险和权限复核优先，因此只能升级人工审核。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-005",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "answer"
+      ],
+      "required_inputs": [],
+      "missing_inputs": [],
+      "coarse_capability": "反应Gibbs自由能",
+      "action_reason": "这是Gibbs自由能判断反应方向的原理解释，不要求具体数值或外部计算证据。问题语义完整，可直接回答。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-006",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "call"
+      ],
+      "required_inputs": [
+        "反应式",
+        "温度"
+      ],
+      "missing_inputs": [],
+      "coarse_capability": "反应Gibbs自由能",
+      "action_reason": "指定温度下的反应Gibbs自由能需要热力学物种数据和专业模型证据。反应式与温度已经给出，冻结目录中存在对应能力。",
+      "annotation_confidence": "medium",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-007",
+      "evidence_requirement": "required",
+      "answerability": "missing_task_information",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "missing_object",
+        "missing_parameter",
+        "missing_task_info",
+        "missing_execution_info"
+      ],
+      "allowed_actions": [
+        "clarify"
+      ],
+      "required_inputs": [
+        "反应式",
+        "温度"
+      ],
+      "missing_inputs": [
+        "反应式",
+        "温度"
+      ],
+      "coarse_capability": "反应Gibbs自由能",
+      "action_reason": "题目没有给出具体反应或计算温度，计算对象本身无法确定。应先追问反应式和必要工况。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-008",
+      "evidence_requirement": "required",
+      "answerability": "missing_task_information",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "missing_object",
+        "missing_task_info",
+        "missing_execution_info"
+      ],
+      "allowed_actions": [
+        "clarify"
+      ],
+      "required_inputs": [
+        "反应式",
+        "温度"
+      ],
+      "missing_inputs": [
+        "反应式"
+      ],
+      "coarse_capability": "反应Gibbs自由能",
+      "action_reason": "温度已经给出，但当前对话中没有“这个反应”的指代对象。问题缺少反应式，必须先澄清。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-009",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "answer"
+      ],
+      "required_inputs": [],
+      "missing_inputs": [],
+      "coarse_capability": null,
+      "action_reason": "这是定压热容的定义性问题，不需要执行热物性计算。目录中存在相关热容能力，但题目未指定Shomate或NASA模型，因此不绑定单一一级能力名称。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-010",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [],
+      "allowed_actions": [
+        "call"
+      ],
+      "required_inputs": [
+        "物种",
+        "相态",
+        "温度"
+      ],
+      "missing_inputs": [],
+      "coarse_capability": "Shomate定压热容计算",
+      "action_reason": "任务明确指定Shomate方程、Fe固相和温度，需要对应系数数据与模型计算。冻结目录中明确存在Shomate定压热容计算能力。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-011",
+      "evidence_requirement": "required",
+      "answerability": "missing_task_information",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "missing_object",
+        "missing_parameter",
+        "missing_task_info",
+        "missing_execution_info"
+      ],
+      "allowed_actions": [
+        "clarify"
+      ],
+      "required_inputs": [
+        "物种",
+        "相态",
+        "温度"
+      ],
+      "missing_inputs": [
+        "物种",
+        "相态",
+        "温度"
+      ],
+      "coarse_capability": null,
+      "action_reason": "“这个物种”没有可解析的指代，且没有给出相态和温度。相关热容能力存在，但必须先澄清计算对象与工况。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-012",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "ambiguous_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "ambiguous_phase",
+        "ambiguous_condition",
+        "missing_execution_info"
+      ],
+      "allowed_actions": [
+        "clarify"
+      ],
+      "required_inputs": [
+        "物种",
+        "相态",
+        "带单位的温度"
+      ],
+      "missing_inputs": [
+        "Fe相态",
+        "温度单位"
+      ],
+      "coarse_capability": null,
+      "action_reason": "计算目标明确，但温度数值没有单位，Fe的相态也未说明，执行输入存在歧义。平台具有相关热容能力，但调用前需要澄清。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-013",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "unavailable",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "missing_parameter",
+        "missing_execution_info",
+        "capability_unavailable",
+        "out_of_domain",
+        "unsupported_system"
+      ],
+      "allowed_actions": [
+        "clarify"
+      ],
+      "required_inputs": [
+        "槽体三维几何",
+        "材料物性",
+        "电磁边界条件",
+        "流体边界条件",
+        "初始条件",
+        "时间步长",
+        "求解时域"
+      ],
+      "missing_inputs": [
+        "槽体三维几何",
+        "材料物性",
+        "电磁边界条件",
+        "流体边界条件",
+        "初始条件",
+        "时间步长",
+        "求解时域"
+      ],
+      "coarse_capability": null,
+      "action_reason": "三维磁流体耦合瞬态计算需要完整几何、物性和边界条件，当前输入不足，且冻结目录没有相应多物理场能力。按给定优先级，执行信息不足先触发澄清，不允许直接调用。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-014",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "unavailable",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "capability_unavailable"
+      ],
+      "allowed_actions": [
+        "answer"
+      ],
+      "required_inputs": [],
+      "missing_inputs": [],
+      "coarse_capability": null,
+      "action_reason": "用户只询问平台是否具有炉渣黏度计算能力，不要求实际执行，因此无需提交具体成分和温度。冻结能力目录不包含黏度计算，可直接回答能力状态。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-015",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "unavailable",
+      "risk_status": "review_required",
+      "boundary_flags": [
+        "missing_parameter",
+        "missing_execution_info",
+        "capability_unavailable",
+        "high_risk",
+        "permission_required"
+      ],
+      "allowed_actions": [
+        "escalate"
+      ],
+      "required_inputs": [
+        "完整炉况数据",
+        "控制目标",
+        "设备与安全约束",
+        "经验证的控制模型",
+        "操作权限",
+        "人工复核记录"
+      ],
+      "missing_inputs": [
+        "完整炉况数据",
+        "控制目标",
+        "设备与安全约束",
+        "经验证的控制模型",
+        "操作权限",
+        "人工复核记录"
+      ],
+      "coarse_capability": null,
+      "action_reason": "任务要求把计算结果作为下一班次的直接控制设定，且缺少炉况、安全约束、权限和人工复核。现实生产高风险优先，必须升级人工审核。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-016",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "unavailable",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "capability_unavailable"
+      ],
+      "allowed_actions": [
+        "answer"
+      ],
+      "required_inputs": [],
+      "missing_inputs": [],
+      "coarse_capability": null,
+      "action_reason": "问题只要求一般性解释富氧率对燃烧和炉况的影响，不要求具体控制值或现实操作。冻结目录没有对应高炉工况计算能力，但概念性回答不依赖该能力。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-017",
+      "evidence_requirement": "required",
+      "answerability": "ambiguous_request",
+      "information_status": "ambiguous_execution_input",
+      "capability_status": "uncertain",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "ambiguous_material",
+        "missing_parameter",
+        "missing_task_info",
+        "missing_execution_info"
+      ],
+      "allowed_actions": [
+        "clarify"
+      ],
+      "required_inputs": [
+        "氧化铁具体物相或组成",
+        "分析目标",
+        "温度",
+        "还原气氛与组成",
+        "其他必要边界条件"
+      ],
+      "missing_inputs": [
+        "氧化铁具体物相或组成",
+        "分析目标",
+        "温度",
+        "还原气氛与组成",
+        "其他必要边界条件"
+      ],
+      "coarse_capability": null,
+      "action_reason": "氧化铁可能是多种物相或混合物，“还原行为”也可能指热力学、动力学或相变目标。对象和目标均不唯一，应先澄清，具体能力需随分析目标进一步判断。",
+      "annotation_confidence": "medium",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-018",
+      "evidence_requirement": "optional",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "missing_parameter",
+        "missing_execution_info"
+      ],
+      "allowed_actions": [
+        "answer",
+        "clarify"
+      ],
+      "required_inputs": [
+        "质量数值",
+        "原始质量单位"
+      ],
+      "missing_inputs": [
+        "质量数值",
+        "原始质量单位"
+      ],
+      "coarse_capability": "单位换算",
+      "action_reason": "换算为吨属于低风险、公式封闭的单位换算，可回答方法或调用工具。当前缺少质量数值和原始单位，因此不能执行具体换算，可直接说明所需信息或追问。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-019",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "unavailable",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "missing_parameter",
+        "missing_execution_info",
+        "capability_unavailable",
+        "out_of_domain",
+        "unsupported_system",
+        "unsupported_phase",
+        "conflicting_requirements"
+      ],
+      "allowed_actions": [
+        "clarify"
+      ],
+      "required_inputs": [
+        "合金总成分",
+        "温度",
+        "三元相图三相结线或结三角",
+        "各平衡相组成"
+      ],
+      "missing_inputs": [
+        "温度",
+        "三元相图三相结线或结三角",
+        "各平衡相组成"
+      ],
+      "coarse_capability": "二元系两相区杠杆规则",
+      "action_reason": "任务缺少三元三相分数计算必需的温度、结线或结三角及各相组成，同时冻结能力仅覆盖二元两相区。按给定优先级，当前先澄清执行输入，并明确不得调用现有二元能力替代。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    },
+    {
+      "task_id": "TA-PILOT-020",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "boundary_flags": [
+        "missing_parameter",
+        "missing_execution_info",
+        "out_of_domain"
+      ],
+      "allowed_actions": [
+        "clarify"
+      ],
+      "required_inputs": [
+        "指前因子",
+        "活化能",
+        "绝对温度"
+      ],
+      "missing_inputs": [
+        "指前因子",
+        "活化能"
+      ],
+      "coarse_capability": "Arrhenius速率常数",
+      "action_reason": "题目缺少指前因子和活化能，且0 K使Arrhenius表达式处于奇异、不可直接执行的边界。按给定优先级，当前先澄清缺失输入，同时不得调用工具计算。",
+      "annotation_confidence": "high",
+      "disagreement_notes": null
+    }
+  ]
+}

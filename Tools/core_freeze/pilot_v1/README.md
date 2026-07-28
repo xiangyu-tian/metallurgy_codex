@@ -68,3 +68,28 @@ Track B的`track_b_legacy_review_hints.json`只用于迁移审计。其中的
 - 目标工具存在、近邻剂量准确、工具ID合法且工具池严格嵌套。
 
 在当前17工具快照下，`--stage constructed`应当失败。这是设计要求，不是程序故障。
+
+## 单专家＋双AI辅助的Excel流程
+
+人手不足时，使用两个相互隔离的AI生成辅助标注，但AI不能冒充第二名人类标注者。当前原始记录为：
+
+- `track_a_annotator_a_AI-A.json`
+- `track_a_annotator_b_AI-B.json`
+
+配套Excel文件位于`outputs/cf01_annotation_20260728/`：
+
+- `track_a_human_blind_annotation.xlsx`：唯一人类标注者先填写；不包含AI答案；
+- `track_a_ai_comparison_review.xlsx`：人类盲标完成并保存后再打开，用于查看AI-A/AI-B原始记录、逐字段一致性和分歧。
+
+固定顺序：
+
+```text
+人类完成盲标Excel
+→ 保存不可变原始版本
+→ 打开AI比较复核Excel
+→ 人类审查分歧
+→ 生成最终裁决
+→ 转换为正式JSON并运行标注态校验
+```
+
+AI—AI的Cohen's kappa和Jaccard只作为诊断值，不能写成双人类标注一致性。
