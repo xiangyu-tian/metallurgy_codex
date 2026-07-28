@@ -29,6 +29,7 @@
     "primary_estimand": "total_method_effect",
     "primary_adjusts_schema_token_count": false,
     "schema_token_sensitivity": true,
-    "h3_method_neighbor_interaction_sensitivity": true
+    "h3_method_neighbor_interaction_sensitivity": true,
+    "sensitivity_allowed_to_change_primary_support": false
   }
 }

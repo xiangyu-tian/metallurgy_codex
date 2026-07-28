@@ -48,7 +48,8 @@
     "sensitivity": {
       "schema_token_count_adjusted": true,
       "h3_method_by_neighbor_interaction": true,
-      "changes_primary_support_classification": false
+      "allowed_to_change_primary_support_classification": false,
+      "observed_conclusion_differs_from_primary": null
     }
   },
   "h4_support_classification": null,
@@ -65,8 +66,11 @@
   "cf11_status": "in_progress",
   "cf11_components": {
     "design_specification": "passed",
+    "estimand_definition": "passed",
+    "sensitivity_specification": "passed",
     "engine_implementation": "passed",
     "synthetic_integration": "passed",
+    "artifact_contract": "passed",
     "real_candidate_dry_run": "pending",
     "statistical_review": "pending",
     "report_review": "pending",

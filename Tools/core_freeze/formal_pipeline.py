@@ -6,6 +6,7 @@ import argparse
 import csv
 import hashlib
 import json
+import math
 import subprocess
 from collections import Counter
 from datetime import datetime
@@ -43,21 +44,49 @@ FORMAL_OUTPUTS = (
     "run_repeat_summary.csv",
     "cluster_bootstrap_summary.csv",
     "missingness_audit.csv",
+    "h3_glmm_input.csv",
+    "h4_glmm_input.csv",
+    "h3_standardization.csv",
+    "h4_standardization.csv",
     "h3_glmm_fixed_effects.csv",
+    "h3_glmm_random_effects.csv",
     "h3_glmm_planned_contrasts.csv",
     "h3_schema_adjusted_sensitivity_glmm_fixed_effects.csv",
+    "h3_schema_adjusted_sensitivity_glmm_random_effects.csv",
     "h3_schema_adjusted_sensitivity_contrasts.csv",
     "h3_method_interaction_sensitivity_glmm_fixed_effects.csv",
+    "h3_method_interaction_sensitivity_glmm_random_effects.csv",
     "h3_method_interaction_sensitivity_contrasts.csv",
     "h4_glmm_fixed_effects.csv",
+    "h4_glmm_random_effects.csv",
     "h4_glmm_planned_contrasts.csv",
     "h4_schema_adjusted_sensitivity_glmm_fixed_effects.csv",
+    "h4_schema_adjusted_sensitivity_glmm_random_effects.csv",
     "h4_schema_adjusted_sensitivity_contrasts.csv",
+    "model_status.csv",
     "model_attempts.csv",
     "engine_metadata.csv",
     "confirmatory_report.json",
     "artifact_manifest.csv",
 )
+
+EXPECTED_MODEL_STATUSES = {
+    "h3",
+    "h3_schema_adjusted_sensitivity",
+    "h3_method_interaction_sensitivity",
+    "h4",
+    "h4_schema_adjusted_sensitivity",
+}
+EXPECTED_H3_CONTRASTS = {
+    "functional_overlap_8_minus_lexical_8",
+    "functional_overlap_8_minus_none_0",
+    "lexical_8_minus_none_0",
+}
+EXPECTED_H4_CONTRASTS = {
+    "hierarchical_vs_full_schema",
+    "hierarchical_vs_lexical_top5",
+    "hierarchical_vs_dense_top5",
+}
 
 
 def _csv_value(value: Any) -> Any:
@@ -126,6 +155,172 @@ def _git_state() -> dict[str, Any]:
     }
 
 
+def _require_finite(
+    rows: Iterable[dict[str, Any]],
+    fields: Iterable[str],
+    label: str,
+) -> None:
+    rows = list(rows)
+    if not rows:
+        raise ValueError(f"{label} must not be empty")
+    for row_index, row in enumerate(rows):
+        for field in fields:
+            try:
+                value = float(row[field])
+            except (KeyError, TypeError, ValueError) as error:
+                raise ValueError(
+                    f"{label}[{row_index}].{field} must be numeric"
+                ) from error
+            if not math.isfinite(value):
+                raise ValueError(
+                    f"{label}[{row_index}].{field} must be finite"
+                )
+
+
+def _holm_adjust(p_values: list[float]) -> list[float]:
+    count = len(p_values)
+    adjusted = [0.0] * count
+    running_max = 0.0
+    for rank, index in enumerate(
+        sorted(range(count), key=lambda item: p_values[item])
+    ):
+        candidate = min(1.0, (count - rank) * p_values[index])
+        running_max = max(running_max, candidate)
+        adjusted[index] = running_max
+    return adjusted
+
+
+def _validate_semantic_outputs(
+    output_dir: Path,
+    model_statuses: list[dict[str, Any]],
+) -> None:
+    status_map = {
+        row["analysis_model"]: row["status"] for row in model_statuses
+    }
+    if set(status_map) != EXPECTED_MODEL_STATUSES:
+        raise ValueError(
+            "model status set mismatch: "
+            f"expected={sorted(EXPECTED_MODEL_STATUSES)}, "
+            f"actual={sorted(status_map)}"
+        )
+    for primary in ("h3", "h4"):
+        if status_map[primary] != "converged":
+            raise ValueError(f"primary model {primary} did not converge")
+    for sensitivity in EXPECTED_MODEL_STATUSES - {"h3", "h4"}:
+        if status_map[sensitivity] not in {"converged", "failed"}:
+            raise ValueError(
+                f"sensitivity model {sensitivity} has invalid status"
+            )
+
+    h3_rows = read_csv_rows(output_dir / "h3_glmm_planned_contrasts.csv")
+    if {row["contrast"] for row in h3_rows} != EXPECTED_H3_CONTRASTS:
+        raise ValueError("H3 planned contrast set does not match preregistration")
+    _require_finite(
+        h3_rows,
+        ("estimate", "SE", "ci_lower", "ci_upper", "p.value"),
+        "H3 planned contrasts",
+    )
+
+    h4_rows = read_csv_rows(output_dir / "h4_glmm_planned_contrasts.csv")
+    if {row["contrast"] for row in h4_rows} != EXPECTED_H4_CONTRASTS:
+        raise ValueError("H4 planned contrast set does not match preregistration")
+    _require_finite(
+        h4_rows,
+        (
+            "estimate",
+            "SE",
+            "ci_lower",
+            "ci_upper",
+            "p_value_raw",
+            "p_value_holm",
+        ),
+        "H4 planned contrasts",
+    )
+    raw_p = [float(row["p_value_raw"]) for row in h4_rows]
+    expected_holm = _holm_adjust(raw_p)
+    actual_holm = [float(row["p_value_holm"]) for row in h4_rows]
+    if any(
+        abs(expected - actual) > 1e-7
+        for expected, actual in zip(expected_holm, actual_holm)
+    ):
+        raise ValueError("H4 Holm adjustment cannot be reproduced")
+
+    sensitivity_contracts = {
+        "h3_schema_adjusted_sensitivity": (
+            "h3_schema_adjusted_sensitivity_contrasts.csv",
+            EXPECTED_H3_CONTRASTS,
+            ("estimate", "SE", "ci_lower", "ci_upper", "p.value"),
+        ),
+        "h3_method_interaction_sensitivity": (
+            "h3_method_interaction_sensitivity_contrasts.csv",
+            {"functional_overlap_8_minus_lexical_8"},
+            (
+                "estimate",
+                "SE",
+                "ci_lower",
+                "ci_upper",
+                "p_value_two_sided",
+                "p_value_one_sided",
+            ),
+        ),
+        "h4_schema_adjusted_sensitivity": (
+            "h4_schema_adjusted_sensitivity_contrasts.csv",
+            EXPECTED_H4_CONTRASTS,
+            (
+                "estimate",
+                "SE",
+                "ci_lower",
+                "ci_upper",
+                "p_value_raw",
+                "p_value_holm",
+            ),
+        ),
+    }
+    for model_name, (
+        filename,
+        expected_contrasts,
+        numeric_fields,
+    ) in sensitivity_contracts.items():
+        rows = read_csv_rows(output_dir / filename)
+        if status_map[model_name] == "failed":
+            if len(rows) != 1 or rows[0].get("status") != "failed":
+                raise ValueError(
+                    f"{model_name} failure was not explicitly disclosed"
+                )
+            continue
+        if {row["contrast"] for row in rows} != expected_contrasts:
+            raise ValueError(
+                f"{model_name} contrast set does not match preregistration"
+            )
+        _require_finite(rows, numeric_fields, model_name)
+        if model_name == "h3_method_interaction_sensitivity" and {
+            row["method"] for row in rows
+        } != {
+            "full_schema",
+            "lexical_top5",
+            "dense_top5",
+            "hierarchical",
+        }:
+            raise ValueError("H3 interaction sensitivity method set is incomplete")
+
+
+def _validate_manifest(output_dir: Path) -> None:
+    rows = read_csv_rows(output_dir / "artifact_manifest.csv")
+    expected_files = set(FORMAL_OUTPUTS) - {"artifact_manifest.csv"}
+    actual_files = {row["filename"] for row in rows}
+    if actual_files != expected_files:
+        raise ValueError(
+            "artifact manifest file set mismatch: "
+            f"missing={sorted(expected_files - actual_files)}, "
+            f"unexpected={sorted(actual_files - expected_files)}"
+        )
+    for row in rows:
+        if _sha256(output_dir / row["filename"]) != row["sha256"]:
+            raise ValueError(
+                f"artifact manifest hash mismatch: {row['filename']}"
+            )
+
+
 def _require_complete_pool_repeats(
     rows: Iterable[dict[str, Any]],
     label: str,
@@ -170,9 +365,16 @@ def _bootstrap_row(
     }
 
 
-def _merge_r_outputs(output_dir: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+def _merge_r_outputs(
+    output_dir: Path,
+) -> tuple[
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+]:
     attempts: list[dict[str, Any]] = []
     metadata: list[dict[str, Any]] = []
+    statuses: list[dict[str, Any]] = []
     model_prefixes = {
         "h3": (
             "h3",
@@ -207,6 +409,10 @@ def _merge_r_outputs(output_dir: Path) -> tuple[list[dict[str, Any]], list[dict[
         )
         for prefix in prefixes:
             for row in read_csv_rows(
+                hypothesis_dir / f"{prefix}_model_status.csv"
+            ):
+                statuses.append({"hypothesis": hypothesis.upper(), **row})
+            for row in read_csv_rows(
                 hypothesis_dir / f"{prefix}_model_attempts.csv"
             ):
                 attempts.append(
@@ -227,7 +433,7 @@ def _merge_r_outputs(output_dir: Path) -> tuple[list[dict[str, Any]], list[dict[
             source = hypothesis_dir / filename
             destination = output_dir / filename
             destination.write_bytes(source.read_bytes())
-    return attempts, metadata
+    return attempts, metadata, statuses
 
 
 def _missingness_rows(
@@ -401,9 +607,11 @@ def run_formal_pipeline(
         output / "h4",
         timeout=glmm_timeout,
     )
-    attempts, metadata = _merge_r_outputs(output)
+    attempts, metadata, model_statuses = _merge_r_outputs(output)
+    write_csv_rows(output / "model_status.csv", model_statuses)
     write_csv_rows(output / "model_attempts.csv", attempts)
     write_csv_rows(output / "engine_metadata.csv", metadata)
+    _validate_semantic_outputs(output, model_statuses)
 
     h4_planned = read_csv_rows(output / "h4_glmm_planned_contrasts.csv")
     support_values = {
@@ -430,6 +638,9 @@ def run_formal_pipeline(
             "H3": h3_glmm,
             "H4": h4_glmm,
         },
+        "model_statuses": {
+            row["analysis_model"]: row["status"] for row in model_statuses
+        },
         "estimands": {
             "primary": {
                 "effect": "total_method_effect",
@@ -439,7 +650,8 @@ def run_formal_pipeline(
             "sensitivity": {
                 "schema_token_count_adjusted": True,
                 "h3_method_by_neighbor_interaction": True,
-                "changes_primary_support_classification": False,
+                "allowed_to_change_primary_support_classification": False,
+                "observed_conclusion_differs_from_primary": None,
             },
         },
         "h4_support_classification": next(iter(support_values)),
@@ -449,8 +661,11 @@ def run_formal_pipeline(
         "cf11_status": "in_progress",
         "cf11_components": {
             "design_specification": "passed",
+            "estimand_definition": "passed",
+            "sensitivity_specification": "passed",
             "engine_implementation": "passed",
             "synthetic_integration": "passed",
+            "artifact_contract": "passed",
             "real_candidate_dry_run": "pending",
             "statistical_review": "pending",
             "report_review": "pending",
@@ -473,6 +688,7 @@ def run_formal_pipeline(
         if filename != "artifact_manifest.csv"
     ]
     write_csv_rows(output / "artifact_manifest.csv", manifest_rows)
+    _validate_manifest(output)
     missing_outputs = [
         filename for filename in FORMAL_OUTPUTS if not (output / filename).is_file()
     ]

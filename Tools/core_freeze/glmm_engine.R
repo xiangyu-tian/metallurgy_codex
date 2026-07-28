@@ -370,7 +370,26 @@ fit_with_chain <- function(data, fixed_formula) {
 }
 
 
-write_model_tables <- function(result, output_dir, prefix) {
+write_failed_table <- function(path, table_type) {
+  write.csv(
+    data.frame(
+      status = "failed",
+      table_type = table_type,
+      stringsAsFactors = FALSE
+    ),
+    path,
+    row.names = FALSE,
+    na = ""
+  )
+}
+
+
+write_model_tables <- function(
+  result,
+  output_dir,
+  prefix,
+  required = TRUE
+) {
   dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
   write.csv(
     result$attempts,
@@ -378,8 +397,32 @@ write_model_tables <- function(result, output_dir, prefix) {
     row.names = FALSE,
     na = ""
   )
+  write.csv(
+    data.frame(
+      analysis_model = prefix,
+      status = result$status,
+      required = required,
+      optimizer = result$optimizer,
+      random_groups = paste(result$random_groups, collapse = ","),
+      stringsAsFactors = FALSE
+    ),
+    file.path(output_dir, paste0(prefix, "_model_status.csv")),
+    row.names = FALSE,
+    na = ""
+  )
   if (result$status != "converged") {
-    stop(sprintf("%s GLMM failed the convergence chain", toupper(prefix)))
+    write_failed_table(
+      file.path(output_dir, paste0(prefix, "_glmm_fixed_effects.csv")),
+      "fixed_effects"
+    )
+    write_failed_table(
+      file.path(output_dir, paste0(prefix, "_glmm_random_effects.csv")),
+      "random_effects"
+    )
+    if (required) {
+      stop(sprintf("%s GLMM failed the convergence chain", toupper(prefix)))
+    }
+    return(FALSE)
   }
 
   fit <- result$fit
@@ -414,6 +457,19 @@ write_model_tables <- function(result, output_dir, prefix) {
     row.names = FALSE,
     na = ""
   )
+  TRUE
+}
+
+
+normalize_inference_columns <- function(table) {
+  lower_name <- intersect(c("lower.CL", "asymp.LCL"), names(table))
+  upper_name <- intersect(c("upper.CL", "asymp.UCL"), names(table))
+  if (length(lower_name) != 1L || length(upper_name) != 1L) {
+    stop("Inference table does not contain a unique confidence interval")
+  }
+  names(table)[names(table) == lower_name[[1]]] <- "ci_lower"
+  names(table)[names(table) == upper_name[[1]]] <- "ci_upper"
+  table
 }
 
 
@@ -433,11 +489,11 @@ make_h3_planned_contrasts <- function(fit) {
     method = coefficients,
     adjust = "none"
   )
-  two_sided <- as.data.frame(summary(
+  two_sided <- normalize_inference_columns(as.data.frame(summary(
     contrasts,
     infer = c(TRUE, TRUE),
     adjust = "none"
-  ))
+  )))
   direct_one_sided <- as.data.frame(test(
     contrast(
       marginal_means,
@@ -475,12 +531,20 @@ make_h3_method_interaction_contrasts <- function(fit) {
     by = "method",
     adjust = "none"
   )
-  as.data.frame(summary(
+  two_sided <- normalize_inference_columns(as.data.frame(summary(
     method_contrasts,
     infer = c(TRUE, TRUE),
+    adjust = "none"
+  )))
+  one_sided <- as.data.frame(test(
+    method_contrasts,
     side = "<",
     adjust = "none"
   ))
+  two_sided$p_value_two_sided <- two_sided$p.value
+  two_sided$p_value_one_sided <- one_sided$p.value
+  two_sided$alternative <- "less"
+  two_sided
 }
 
 
@@ -523,13 +587,19 @@ make_h4_planned_contrasts <- function(fit) {
     method = comparison_coefficients,
     adjust = "none"
   )
-  comparison_table <- as.data.frame(summary(
+  comparison_table <- normalize_inference_columns(as.data.frame(summary(
     comparisons,
     infer = c(TRUE, TRUE),
+    adjust = "none"
+  )))
+  one_sided <- as.data.frame(test(
+    comparisons,
     side = ">",
     adjust = "none"
   ))
-  comparison_table$p_value_raw <- comparison_table$p.value
+  comparison_table$p_value_two_sided <- comparison_table$p.value
+  comparison_table$p_value_raw <- one_sided$p.value
+  comparison_table$alternative <- "greater"
   comparison_table$p_value_holm <- p.adjust(
     comparison_table$p_value_raw,
     method = "holm"
@@ -600,20 +670,26 @@ run_h3 <- function(data, output_dir) {
       "+ difficulty_score_z + schema_token_count_z"
     )
   )
-  write_model_tables(
+  schema_sensitivity_passed <- write_model_tables(
     schema_sensitivity,
     output_dir,
-    "h3_schema_adjusted_sensitivity"
+    "h3_schema_adjusted_sensitivity",
+    required = FALSE
   )
-  write.csv(
-    make_h3_planned_contrasts(schema_sensitivity$fit),
-    file.path(
-      output_dir,
-      "h3_schema_adjusted_sensitivity_contrasts.csv"
-    ),
-    row.names = FALSE,
-    na = ""
+  schema_contrast_path <- file.path(
+    output_dir,
+    "h3_schema_adjusted_sensitivity_contrasts.csv"
   )
+  if (schema_sensitivity_passed) {
+    write.csv(
+      make_h3_planned_contrasts(schema_sensitivity$fit),
+      schema_contrast_path,
+      row.names = FALSE,
+      na = ""
+    )
+  } else {
+    write_failed_table(schema_contrast_path, "planned_contrasts")
+  }
 
   interaction_sensitivity <- fit_with_chain(
     data,
@@ -622,20 +698,26 @@ run_h3 <- function(data, output_dir) {
       "+ difficulty_score_z"
     )
   )
-  write_model_tables(
+  interaction_sensitivity_passed <- write_model_tables(
     interaction_sensitivity,
     output_dir,
-    "h3_method_interaction_sensitivity"
+    "h3_method_interaction_sensitivity",
+    required = FALSE
   )
-  write.csv(
-    make_h3_method_interaction_contrasts(interaction_sensitivity$fit),
-    file.path(
-      output_dir,
-      "h3_method_interaction_sensitivity_contrasts.csv"
-    ),
-    row.names = FALSE,
-    na = ""
+  interaction_contrast_path <- file.path(
+    output_dir,
+    "h3_method_interaction_sensitivity_contrasts.csv"
   )
+  if (interaction_sensitivity_passed) {
+    write.csv(
+      make_h3_method_interaction_contrasts(interaction_sensitivity$fit),
+      interaction_contrast_path,
+      row.names = FALSE,
+      na = ""
+    )
+  } else {
+    write_failed_table(interaction_contrast_path, "planned_contrasts")
+  }
   result
 }
 
@@ -671,20 +753,26 @@ run_h4 <- function(data, output_dir) {
       "+ difficulty_score_z + schema_token_count_z"
     )
   )
-  write_model_tables(
+  schema_sensitivity_passed <- write_model_tables(
     schema_sensitivity,
     output_dir,
-    "h4_schema_adjusted_sensitivity"
+    "h4_schema_adjusted_sensitivity",
+    required = FALSE
   )
-  write.csv(
-    make_h4_planned_contrasts(schema_sensitivity$fit),
-    file.path(
-      output_dir,
-      "h4_schema_adjusted_sensitivity_contrasts.csv"
-    ),
-    row.names = FALSE,
-    na = ""
+  schema_contrast_path <- file.path(
+    output_dir,
+    "h4_schema_adjusted_sensitivity_contrasts.csv"
   )
+  if (schema_sensitivity_passed) {
+    write.csv(
+      make_h4_planned_contrasts(schema_sensitivity$fit),
+      schema_contrast_path,
+      row.names = FALSE,
+      na = ""
+    )
+  } else {
+    write_failed_table(schema_contrast_path, "planned_contrasts")
+  }
   result
 }
 
@@ -738,7 +826,8 @@ engine_metadata <- data.frame(
     "primary_estimand",
     "primary_adjusts_schema_token_count",
     "schema_token_sensitivity",
-    "h3_method_neighbor_interaction_sensitivity"
+    "h3_method_neighbor_interaction_sensitivity",
+    "sensitivity_allowed_to_change_primary_support"
   ),
   value = c(
     as.character(getRversion()),
@@ -752,7 +841,8 @@ engine_metadata <- data.frame(
     "total_method_effect",
     "false",
     "true",
-    "true"
+    "true",
+    "false"
   )
 )
 write.csv(

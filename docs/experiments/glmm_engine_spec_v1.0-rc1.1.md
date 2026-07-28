@@ -223,27 +223,54 @@ isSingular tolerance = 1e-4
 - `run_repeat_summary.csv`
 - `cluster_bootstrap_summary.csv`
 - `missingness_audit.csv`
+- `h3_glmm_input.csv`
+- `h4_glmm_input.csv`
+- `h3_standardization.csv`
+- `h4_standardization.csv`
 - `h3_glmm_fixed_effects.csv`
+- `h3_glmm_random_effects.csv`
 - `h3_glmm_planned_contrasts.csv`
 - `h3_schema_adjusted_sensitivity_glmm_fixed_effects.csv`
+- `h3_schema_adjusted_sensitivity_glmm_random_effects.csv`
 - `h3_schema_adjusted_sensitivity_contrasts.csv`
 - `h3_method_interaction_sensitivity_glmm_fixed_effects.csv`
+- `h3_method_interaction_sensitivity_glmm_random_effects.csv`
 - `h3_method_interaction_sensitivity_contrasts.csv`
 - `h4_glmm_fixed_effects.csv`
+- `h4_glmm_random_effects.csv`
 - `h4_glmm_planned_contrasts.csv`
 - `h4_schema_adjusted_sensitivity_glmm_fixed_effects.csv`
+- `h4_schema_adjusted_sensitivity_glmm_random_effects.csv`
 - `h4_schema_adjusted_sensitivity_contrasts.csv`
+- `model_status.csv`
 - `model_attempts.csv`
 - `engine_metadata.csv`
 - `confirmatory_report.json`
 - `artifact_manifest.csv`
 
-`artifact_manifest.csv`记录除自身外全部正式产物的SHA-256。最终报告同时记录输入文件哈希、`r_engine_lock.json`哈希、分析Git提交和已跟踪工作区清洁状态；真实数据正式验收不得省略这些可复现字段。
+`artifact_manifest.csv`记录除自身外全部正式产物的SHA-256。正式契约共30类文件，必须覆盖GLMM实际输入、标准化参数和5套随机效应。最终报告同时记录输入文件哈希、`r_engine_lock.json`哈希、分析Git提交和已跟踪工作区清洁状态；真实数据正式验收不得省略这些可复现字段。
 
-只要任一正式GLMM为`not_run`或`failed`，报告必须保持：
+H3或H4主要模型失败时正式管线失败。敏感性模型失败时允许继续生成主要结果，但必须在`model_status.csv`、模型尝试和报告中明确记录；失败的敏感性模型不能改变主要支持等级。
+
+正式管线无权自行把CF-11改为`passed`，报告始终保持：
 
 ```text
 cf11_status = in_progress
 ```
 
-CF-11只有在真实候选数据干跑、全部输出验收和正式审批完成后才能申请`passed`。
+真实候选干跑后，独立`finalize_cf11.py`必须重新验证产物集合与哈希，并读取绑定同一输入、提交和manifest的真实干跑证据、统计审查、报告审查及项目审批。只有该程序生成的独立最终化记录可以把CF-11组件状态记为`passed`；它不修改原始分析报告，也不代表CF-01至CF-10通过。
+
+---
+
+## 8. 内容级验收
+
+除文件存在性外，正式管线必须验证：
+
+- H3主要计划对比集合与预注册完全一致；
+- H4恰好包含三个预注册方法对比；
+- 5个模型均有唯一且明确的`converged`或`failed`状态；
+- 主要模型必须收敛，敏感性失败必须显式披露；
+- 收敛模型的估计量、双侧95%置信区间和p值均为有限数；
+- H4单侧原始p值的Holm校正能够独立复算；
+- H3方法异质性结果覆盖全部四种正式方法；
+- manifest文件集合与正式契约完全一致且哈希可复算。

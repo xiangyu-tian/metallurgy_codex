@@ -302,6 +302,8 @@ cf11_status = in_progress
 - `confirmatory_report.json`：样本数、估计量、置信区间、检验方向和版本元数据。
 - `artifact_manifest.csv`：正式产物SHA-256清单。
 
+GLMM实际输入、H3/H4标准化参数、五个模型的随机效应和统一`model_status.csv`均属于正式产物，不得只保留在临时子目录。
+
 统计脚本验收必须覆盖：
 
 - 人工构造的正、负、零差值；
@@ -311,3 +313,8 @@ cf11_status = in_progress
 - 缺少任一配对条件时能够识别并审计；
 - H3只能读取120工具`controlled_dose`确认性条件；
 - H4只能读取`mixed_realistic`的17与120工具条件。
+- H3/H4计划对比集合与预注册完全一致且非空；
+- 收敛模型的估计量、双侧95%置信区间和p值均为有限数；
+- H4 Holm校正可由原始单侧p值复算；
+- 敏感性失败显式披露且不改变主要支持等级；
+- manifest文件集合、正式契约和实际文件哈希完全一致。

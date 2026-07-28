@@ -1,0 +1,38 @@
+{
+  "candidate_evidence": {
+    "record_type": "real_candidate_dry_run",
+    "status": "passed",
+    "input_hash": null,
+    "analysis_commit": null,
+    "artifact_manifest_hash": null,
+    "reviewer": null,
+    "signed_at": null
+  },
+  "statistics_review": {
+    "record_type": "statistical_review",
+    "decision": "approved",
+    "input_hash": null,
+    "analysis_commit": null,
+    "artifact_manifest_hash": null,
+    "reviewer": null,
+    "signed_at": null
+  },
+  "report_review": {
+    "record_type": "report_review",
+    "decision": "approved",
+    "input_hash": null,
+    "analysis_commit": null,
+    "artifact_manifest_hash": null,
+    "reviewer": null,
+    "signed_at": null
+  },
+  "approval": {
+    "record_type": "project_approval",
+    "decision": "approved",
+    "input_hash": null,
+    "analysis_commit": null,
+    "artifact_manifest_hash": null,
+    "reviewer": null,
+    "signed_at": null
+  }
+}

@@ -29,12 +29,16 @@ cf11_status = in_progress
 | `glmm_engine.R` | H3/H4正式GLMM、计划对比及收敛审计 |
 | `r_engine.py` | Python到冻结R引擎的输入导出与调用层 |
 | `formal_pipeline.py` | 正式CSV/JSON结果全集的一次性生成入口 |
+| `finalize_cf11.py` | 校验不可变产物与签署证据并生成独立CF-11审批记录 |
+| `finalization_evidence_template.json` | 真实干跑、统计审查、报告审查和项目审批证据模板 |
 | `confirmatory_report_template.json` | 确认性报告字段模板 |
 | `tests/` | 合成数据契约和GLMM集成测试 |
 
 主要确认性模型估计包含Schema暴露机制在内的方法总效应，不控制可能作为中介变量的`schema_token_count_z`。正式管线同时生成Schema调整敏感性模型；H3还生成`method × neighbor_condition`方法异质性敏感性模型。敏感性结果不改变主要H3检验或H4支持等级。
 
-正式运行还生成`artifact_manifest.csv`，记录产物SHA-256；最终报告记录输入哈希、R锁文件哈希、分析Git提交和已跟踪工作区清洁状态。
+正式契约包含30类文件。GLMM实际输入、标准化参数、5套随机效应和模型状态均进入`artifact_manifest.csv`；最终报告记录输入哈希、R锁文件哈希、分析Git提交和已跟踪工作区清洁状态。
+
+管线会进行内容级验收：计划对比集合、有限估计量与双侧95%置信区间、单侧p值、H4 Holm复算、模型状态和manifest文件集合必须一致。敏感性模型允许明确记录为`failed`，但不得改变主要支持等级；H3或H4主要模型失败时正式管线直接失败。
 
 ## 隔离运行环境
 
@@ -97,6 +101,20 @@ $env:R_LIBS_USER = (Resolve-Path '.\.r-runtime\library').Path
   --n-resamples 2000 `
   --seed 20260727
 ```
+
+真实候选干跑完成后，统计脚本本身仍不能把CF-11改为`passed`。填写四份独立证据后执行：
+
+```powershell
+& '.\.venv\Scripts\python.exe' `
+  'Tools\core_freeze\finalize_cf11.py' output\cf11 `
+  --candidate-evidence evidence\candidate_dry_run.json `
+  --statistics-review evidence\statistics_review.json `
+  --report-review evidence\report_review.json `
+  --approval evidence\project_approval.json `
+  --output evidence\cf11_finalization_record.json
+```
+
+最终化程序重新校验全部产物哈希，并要求四份证据绑定相同的输入哈希、分析提交和manifest哈希。它只生成独立审批记录，不修改原始分析报告。即使CF-11通过，也不代表CF-01至CF-10已经通过。
 
 运行测试：
 

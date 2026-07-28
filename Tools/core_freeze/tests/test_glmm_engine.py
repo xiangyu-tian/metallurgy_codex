@@ -59,8 +59,19 @@ class GlmmEngineIntegrationTests(unittest.TestCase):
                 report["cf11_components"]["real_candidate_dry_run"],
                 "pending",
             )
+            self.assertFalse(
+                report["estimands"]["sensitivity"][
+                    "allowed_to_change_primary_support_classification"
+                ]
+            )
+            self.assertIsNone(
+                report["estimands"]["sensitivity"][
+                    "observed_conclusion_differs_from_primary"
+                ]
+            )
             self.assertEqual(len(report["r_engine_lock_hash"]), 64)
             self.assertIsNotNone(report["analysis_commit"])
+            self.assertEqual(len(FORMAL_OUTPUTS), 30)
             self.assertTrue(
                 all((root / filename).is_file() for filename in FORMAL_OUTPUTS)
             )
@@ -72,6 +83,22 @@ class GlmmEngineIntegrationTests(unittest.TestCase):
             self.assertEqual(len(manifest_rows), len(FORMAL_OUTPUTS) - 1)
             self.assertTrue(
                 all(len(row["sha256"]) == 64 for row in manifest_rows)
+            )
+            with (root / "model_status.csv").open(
+                encoding="utf-8-sig",
+                newline="",
+            ) as handle:
+                status_rows = list(csv.DictReader(handle))
+            self.assertEqual(len(status_rows), 5)
+            self.assertEqual(
+                {row["analysis_model"] for row in status_rows},
+                {
+                    "h3",
+                    "h3_schema_adjusted_sensitivity",
+                    "h3_method_interaction_sensitivity",
+                    "h4",
+                    "h4_schema_adjusted_sensitivity",
+                },
             )
             with (root / "model_attempts.csv").open(
                 encoding="utf-8-sig",
