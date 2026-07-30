@@ -3,7 +3,7 @@
   "pilot_id": "CF01-PILOT-V1",
   "annotator_id": "A",
   "independence_status": "completed",
-  "annotator_name": "AI-A",
+  "annotator_name": "deepseek-v4-pro",
   "annotator_role": "AI-A",
   "started_at": "2026-07-28-10:41",
   "completed_at": "2026-07-28T00:00:00+08:00",

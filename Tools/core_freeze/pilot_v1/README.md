@@ -78,18 +78,27 @@ Track B的`track_b_legacy_review_hints.json`只用于迁移审计。其中的
 
 配套Excel文件位于`outputs/cf01_annotation_20260728/`：
 
-- `track_a_human_blind_annotation.xlsx`：唯一人类标注者先填写；不包含AI答案；
-- `track_a_ai_comparison_review.xlsx`：人类盲标完成并保存后再打开，用于查看AI-A/AI-B原始记录、逐字段一致性和分歧。
+- `track_a_human_blind_annotation.xlsx`：保留的完整人工盲标方案，不包含AI答案；
+- `track_a_ai_comparison_review.xlsx`：20题AI-A/AI-B逐字段比较和诊断性一致性；
+- `track_a_ai_consensus_human_adjudication.xlsx`：当前采用的精简裁决方案，包含9题实质性分歧和3题分层一致性抽查。
 
-固定顺序：
+当前首轮试验采用：
 
 ```text
-人类完成盲标Excel
-→ 保存不可变原始版本
-→ 打开AI比较复核Excel
-→ 人类审查分歧
-→ 生成最终裁决
+AI-A/AI-B核心标签一致
+→ 暂定AI共识预标
+→ 人工裁决9题实质性分歧
+→ 人工抽查3题全字段一致样本
+→ 标记需专业复核的任务
+→ 生成provisional silver裁决结果
 → 转换为正式JSON并运行标注态校验
 ```
 
+三道抽查使用固定种子`CF01-AUDIT-V1`，在AI全字段一致样本中按
+`none / optional / required`分层选择，固定为`TA-PILOT-001`、
+`TA-PILOT-002`和`TA-PILOT-006`。
+
+`boundary_flags`是解释性多标签，不使用完全一致率作为通过门槛。
 AI—AI的Cohen's kappa和Jaccard只作为诊断值，不能写成双人类标注一致性。
+该流程没有人工盲标，输出只能标记为`provisional_silver`，不能据此宣布
+CF-01、CF-03或Core Frozen通过。

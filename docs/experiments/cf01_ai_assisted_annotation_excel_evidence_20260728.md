@@ -1,4 +1,6 @@
-# CF-01 单专家＋双AI辅助标注Excel证据
+# CF-01 双AI共识预标＋人工精简裁决Excel证据
+
+最后更新：2026-07-30
 
 ## 1. 当前状态
 
@@ -14,9 +16,10 @@
 ```yaml
 cf01:
   ai_a_annotation: received
-  ai_b_annotation: received_with_metadata_gap
-  human_blind_annotation: pending
+  ai_b_annotation: received_metadata_supplemented
+  human_blind_annotation: skipped_by_pilot_deviation
   human_adjudication: pending
+  label_tier: provisional_silver
   overall: in_progress
 
 cf03:
@@ -31,10 +34,11 @@ core_frozen: false
 
 | 文件 | 任务数 | 结构 | 元数据 | SHA-256 |
 | --- | ---: | --- | --- | --- |
-| AI-A | 20 | 通过 | 完整 | `B2D0EFA04C2FBEF120B32D7512DC3E023F2910EFF3C2BC6064D466A6496917DC` |
-| AI-B | 20 | 通过 | 缺少模型/角色/起止时间等顶层元数据 | `5839907305FA061E84BA1448F2878C5CAA2016F6234BF51508A7F9C118575416` |
+| AI-A | 20 | 通过 | 模型确认为`deepseek-v4-pro` | `DD2567C1CBE7ECEBF54E2DF23B889845E5333AD2BC90C9A5B1175EB3FAB44EEB` |
+| AI-B | 20 | 通过 | 模型身份和角色已补录；标注内容未改变 | `62CB40AB3ACBE0630876ACB277062CB204692D28F35B0E06E8559526ABDC3310` |
 
-AI-B的缺失元数据不得由实现者猜测填写，应由实际调用者根据运行记录补录。
+AI辅助试标不以时间字段作为准入门槛。两份记录中的时间值仅保留为来源记录，
+不用于证明标签正确性，也不强制补造无法确认的时间。
 
 ## 3. AI—AI诊断性一致性
 
@@ -48,15 +52,19 @@ AI-B的缺失元数据不得由实现者猜测填写，应由实际调用者根�
 | `allowed_actions` | 16/20完全一致 | 0.800 | 平均Jaccard=0.825 |
 | `boundary_flags` | 8/20完全一致 | 0.400 | 平均Jaccard=0.718 |
 
-共有13个任务在核心单标签、动作集合或边界标志中至少存在一项分歧。
+共有13个任务至少存在一项差异，其中：
+
+- 9题在核心单标签或`allowed_actions`中存在实质性分歧；
+- 4题仅`boundary_flags`不同；
+- `boundary_flags`是解释性多标签，不要求完全一致。
 
 结果表明：
 
 - 两个AI对证据需求和风险判断高度稳定；
 - 能力状态一致性不足，不能直接合并；
-- 边界标志分歧较多；
+- 边界标志存在多角度解释，应报告Jaccard而非把完全一致率作为门槛；
 - AI-A把20题全部标为`high`置信度，需要人类检查其置信度校准；
-- 人类首轮盲标和最终裁决不可省略。
+- 当前首轮试验经流程偏离记录，跳过人工盲标，只保留实质性分歧裁决和分层抽查。
 
 这些数值不能表述为双人类标注一致性，也不能直接用于通过CF-03。
 
@@ -73,7 +81,7 @@ outputs/cf01_annotation_20260728/track_a_human_blind_annotation.xlsx
 SHA-256：
 
 ```text
-CB9FF1CEB04BB167E56780AE058C1E949DCB4F5FB85EE683D82CE645CEACCAA5
+11A0EFB397204617F8F7D221E29D78D2A8937708FE6F5DD0EAEB8537A12FBA9C
 ```
 
 包含：
@@ -96,7 +104,7 @@ outputs/cf01_annotation_20260728/track_a_ai_comparison_review.xlsx
 SHA-256：
 
 ```text
-D7FC1BEF44B14E4B658374777D8D99E194D650BA93FC0C725E621AFE60CD6E7D
+7E3EF9A26A8A07ED2D211BE731AEC35512A938F88A7550A3CEE1BC04F51E92FB
 ```
 
 包含：
@@ -108,23 +116,47 @@ D7FC1BEF44B14E4B658374777D8D99E194D650BA93FC0C725E621AFE60CD6E7D
 - AI-B完整原始表；
 - 供人类填写的最终决定和裁决理由列。
 
+### AI共识＋人工精简裁决工作簿
+
+路径：
+
+```text
+outputs/cf01_annotation_20260728/track_a_ai_consensus_human_adjudication.xlsx
+```
+
+SHA-256：
+
+```text
+5A61AD878FFED4E4D650131F70B35797B85D30D1792EA6E603B1EA715C6644F4
+```
+
+包含：
+
+- 9道核心标签或动作标签实质性分歧；
+- 3道按证据需求分层、固定种子选取的AI全字段一致抽查；
+- AI-A、AI-B逐题核心结论和理由；
+- 共识标签预填、分歧单元格留空；
+- 最终裁决理由、置信度和专业复核标记；
+- 字段级差异和两份AI来源明细。
+
 ## 5. 验证
 
-两个工作簿均使用固定源JSON生成，并完成：
+三个工作簿均使用固定源JSON生成，并完成：
 
 - 输入任务数、唯一ID和核心枚举校验；
+- 9题实质性分歧和3题固定抽查契约校验；
 - 关键区域值与公式检查；
 - 公式错误扫描；
-- 所有8个工作表的视觉渲染检查；
+- 所有14个工作表的视觉渲染检查；
 - 导出后文件哈希记录。
 
 ## 6. 下一步
 
-1. 唯一人类标注者只打开`track_a_human_blind_annotation.xlsx`；
-2. 完成20题并保存不可变原始版本；
-3. 人类首轮完成前不得打开AI复核工作簿；
-4. 首轮保存后打开`track_a_ai_comparison_review.xlsx`；
-5. 优先审查能力状态、边界标志及13个分歧任务；
-6. 人类确认最终标签和裁决理由；
-7. 将Excel转换为正式JSON，再执行`--stage annotated`校验；
-8. 以协议偏离形式说明采用单专家＋双AI辅助，而非双人类标注。
+1. 人工打开`track_a_ai_consensus_human_adjudication.xlsx`；
+2. 查看“裁决任务”中的问题、分歧字段和两份AI理由；
+3. 在“最终标签”中填写橙色空白分歧单元格并核对预填共识值；
+4. 对无法确认的冶金适用域选择“需专业复核”；
+5. 完成9道实质性分歧和3道一致性抽查；
+6. 保存不可变原始Excel；
+7. 将Excel转换为裁决JSON并执行专用完整性校验；
+8. 将结果标记为`provisional_silver`，不得冒充双人类盲标金标准。
