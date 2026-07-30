@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "CF05A-20260730",
+  "status": "passed",
+  "checked_at": "2026-07-30T07:07:51.317Z",
+  "checks": {
+    "source_row_count_120": true,
+    "unique_model_ids_120": true,
+    "unique_source_api_names_120": true,
+    "implemented_count_17": true,
+    "planned_count_103": true,
+    "formal_acceptance_count_zero": true,
+    "family_groups_9": true,
+    "family_members_25": true
+  },
+  "source_inventory_sha256": "7cc30fce08dc93125f265cf22d15da3f99200d9128198d1fb68e0f489cc207ab",
+  "artifacts": {
+    "workbook": {
+      "filename": "cf05a_tool_inventory_audit.xlsx",
+      "sha256": "138fc6346c04be13f8014640c949dc466581d028ec04c904d74f054ebff221fc"
+    },
+    "precheck_json": {
+      "filename": "cf05a_tool_inventory_precheck.json",
+      "sha256": "015fd749ce08dafe913b3b3c822e9b120c4c8d92d75f7910b38670a68ee2ca60"
+    }
+  }
+}
