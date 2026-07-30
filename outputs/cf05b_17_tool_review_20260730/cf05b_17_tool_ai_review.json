@@ -1,0 +1,2235 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "CF05B-17-TOOL-REVIEW-20260730",
+  "status": "ai_pre_review_complete_human_confirmation_pending",
+  "formal_cf05_accepted_count": 0,
+  "summary": {
+    "tool_count": 17,
+    "disposition_counts": {
+      "revision_required_before_acceptance": 14,
+      "candidate_after_minor_clarification": 3
+    },
+    "risk_counts": {
+      "high": 9,
+      "medium": 2,
+      "critical": 5,
+      "low": 1
+    },
+    "human_confirmed_count": 0,
+    "naming_mapping_status": "proposed_not_frozen"
+  },
+  "primary_references": {
+    "nist_shomate": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Mask=35",
+    "nasa_polynomial": "https://ntrs.nasa.gov/citations/20020085330",
+    "ciaaw_atomic_weights": "https://www.ciaaw.org/atomic-weights.htm",
+    "iupac_equilibrium": "https://goldbook.iupac.org/terms/view/S05915",
+    "iupac_gibbs": "https://goldbook.iupac.org/terms/view/G02629",
+    "iupac_arrhenius": "https://goldbook.iupac.org/terms/view/A00446",
+    "nist_constants": "https://www.physics.nist.gov/cgi-bin/cuu/Info/Constants/ArchiveASCII/allascii_2010.txt"
+  },
+  "tools": [
+    {
+      "model_id": "A001",
+      "model_name": "单位换算",
+      "category": "通用数据与校验",
+      "version": "1.0.0",
+      "description": "支持线性换算和温度偏移换算；超界返回警告",
+      "applicable_conditions": "支持线性换算和温度偏移换算；超界返回警告",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "name": "value",
+            "label": "数值",
+            "type": "number",
+            "required": true,
+            "description": "待换算的数值"
+          },
+          "source_unit": {
+            "name": "source_unit",
+            "label": "源单位",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "placeholder": "如 °C, kg, MPa"
+          },
+          "target_unit": {
+            "name": "target_unit",
+            "label": "目标单位",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "placeholder": "如 K, g, psi"
+          }
+        },
+        "required": [
+          "value",
+          "source_unit",
+          "target_unit"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "name": "value",
+            "label": "换算值",
+            "type": "number",
+            "description": ""
+          },
+          "source_unit": {
+            "name": "source_unit",
+            "label": "源单位",
+            "type": "string",
+            "description": ""
+          },
+          "target_unit": {
+            "name": "target_unit",
+            "label": "目标单位",
+            "type": "string",
+            "description": ""
+          },
+          "conversion_factor": {
+            "name": "conversion_factor",
+            "label": "换算因子",
+            "type": "number",
+            "description": ""
+          },
+          "category": {
+            "name": "category",
+            "label": "单位类别",
+            "type": "string",
+            "description": ""
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {},
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_a.py",
+      "golden_case_count": 12,
+      "required_field_count": 3,
+      "generated_invalid_input_case_count": 15,
+      "diagnostic": {
+        "diagnostic": "跨量纲换算应拒绝",
+        "observed": {
+          "success": true,
+          "error": null,
+          "error_code": null,
+          "result": {
+            "value": 1.0,
+            "source_unit": "kg",
+            "target_unit": "m",
+            "conversion_factor": 1.0,
+            "category": "mass"
+          },
+          "boundary_check": {
+            "passed": false,
+            "warnings": [
+              {
+                "field": "dimension_mismatch",
+                "message": "量纲不匹配: [M] → [L]，结果可能无物理意义",
+                "level": "error"
+              }
+            ]
+          }
+        },
+        "finding": "defect_if_success"
+      },
+      "ai_disposition": "revision_required_before_acceptance",
+      "risk_level": "high",
+      "scientific_scope": "线性单位换算和有限的温标偏移换算。",
+      "key_risk": "委托路径使用strict=False，实测1 kg→m仍返回success和数值1.0；维度错误没有成为调用失败。",
+      "required_action": "跨量纲必须返回失败；冻结支持单位表和温标边界，并明确仿射温标不能只用conversion_factor表达。",
+      "reference_keys": [],
+      "reference_urls": [],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "A002",
+      "model_name": "化学式解析",
+      "category": "通用数据与校验",
+      "version": "1.0.0",
+      "description": "支持含括号的化学式；不支持同位素标记",
+      "applicable_conditions": "支持含括号的化学式；不支持同位素标记",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "name": "formula",
+            "label": "化学式",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "placeholder": "如 Fe2(SO4)3, CaCO3, Mg(OH)2"
+          }
+        },
+        "required": [
+          "formula"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "elements": {
+            "name": "elements",
+            "label": "元素组成",
+            "type": "object",
+            "description": ""
+          },
+          "molar_mass": {
+            "name": "molar_mass",
+            "label": "摩尔质量 (g/mol)",
+            "type": "number",
+            "description": ""
+          },
+          "formula_display": {
+            "name": "formula_display",
+            "label": "显示格式",
+            "type": "string",
+            "description": ""
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {},
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_a.py",
+      "golden_case_count": 10,
+      "required_field_count": 1,
+      "generated_invalid_input_case_count": 5,
+      "diagnostic": {
+        "diagnostic": "尾随非法字符应拒绝",
+        "observed": {
+          "success": true,
+          "error": null,
+          "error_code": null,
+          "result": {
+            "elements": {
+              "Fe": 2.0,
+              "O": 3.0
+            },
+            "element_count": 2,
+            "total_atoms": 5.0,
+            "molar_mass": 159.687,
+            "mass_fractions": {
+              "Fe": 0.699431,
+              "O": 0.300569
+            },
+            "formula_display": "Fe2O3abc",
+            "is_stoichiometric": true
+          },
+          "boundary_check": {
+            "passed": true,
+            "warnings": []
+          }
+        },
+        "finding": "defect_if_success"
+      },
+      "ai_disposition": "revision_required_before_acceptance",
+      "risk_level": "high",
+      "scientific_scope": "普通化学式、括号与化学计量数解析。",
+      "key_risk": "解析器没有验证输入字符串被完整消费，尾随非法字符可被静默忽略。",
+      "required_action": "改为完整词法解析；遇到任何未消费字符、非法小数或水合物/电荷等未支持语法必须显式拒绝。",
+      "reference_keys": [],
+      "reference_urls": [],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "A003",
+      "model_name": "摩尔质量计算",
+      "category": "通用数据与校验",
+      "version": "1.0.0",
+      "description": "基于 IUPAC 2021 原子量",
+      "applicable_conditions": "基于 IUPAC 2021 原子量",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "name": "formula",
+            "label": "化学式",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "placeholder": "如 Fe2O3, H2SO4, CaCO3"
+          }
+        },
+        "required": [
+          "formula"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "molar_mass": {
+            "name": "molar_mass",
+            "label": "摩尔质量 (g/mol)",
+            "type": "number",
+            "description": ""
+          },
+          "formula": {
+            "name": "formula",
+            "label": "化学式",
+            "type": "string",
+            "description": ""
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {},
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_a.py",
+      "golden_case_count": 10,
+      "required_field_count": 1,
+      "generated_invalid_input_case_count": 5,
+      "diagnostic": {
+        "diagnostic": "摩尔质量计算不应忽略非法尾随字符",
+        "observed": {
+          "success": true,
+          "error": null,
+          "error_code": null,
+          "result": {
+            "molar_mass": 159.687,
+            "formula": "Fe2O3abc",
+            "unit": "g/mol"
+          },
+          "boundary_check": {
+            "passed": true,
+            "warnings": []
+          }
+        },
+        "finding": "defect_if_success"
+      },
+      "ai_disposition": "revision_required_before_acceptance",
+      "risk_level": "high",
+      "scientific_scope": "基于标准原子量的化学式摩尔质量计算。",
+      "key_risk": "依赖A002解析器，非法尾随字符会被忽略；原子量版本需要可追溯冻结。",
+      "required_action": "先修复A002完整解析，再冻结CIAAW/IUPAC原子量版本、例外元素和不确定度说明。",
+      "reference_keys": [
+        "ciaaw_atomic_weights"
+      ],
+      "reference_urls": [
+        "https://www.ciaaw.org/atomic-weights.htm"
+      ],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "A004",
+      "model_name": "成分归一化",
+      "category": "通用数据与校验",
+      "version": "1.0.0",
+      "description": "输入各组分分数（质量或摩尔），总和可不等于1",
+      "applicable_conditions": "输入各组分分数（质量或摩尔），总和可不等于1",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "compositions": {
+            "name": "compositions",
+            "label": "组成",
+            "type": "object",
+            "required": true,
+            "description": "如 {\"Fe\": 0.94, \"C\": 0.005, \"Si\": 0.003}"
+          },
+          "tolerance": {
+            "name": "tolerance",
+            "label": "容差",
+            "type": "number",
+            "required": false,
+            "description": "归一化偏差容差",
+            "default": 0.001
+          }
+        },
+        "required": [
+          "compositions"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "normalized": {
+            "name": "normalized",
+            "label": "归一化组成",
+            "type": "object",
+            "description": ""
+          },
+          "sum_before": {
+            "name": "sum_before",
+            "label": "归一化前总和",
+            "type": "number",
+            "description": ""
+          },
+          "deviation": {
+            "name": "deviation",
+            "label": "偏差",
+            "type": "number",
+            "description": ""
+          },
+          "passed": {
+            "name": "passed",
+            "label": "是否通过",
+            "type": "boolean",
+            "description": ""
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {},
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_a.py",
+      "golden_case_count": 8,
+      "required_field_count": 1,
+      "generated_invalid_input_case_count": 5,
+      "diagnostic": {
+        "diagnostic": "负组分应拒绝",
+        "observed": {
+          "success": true,
+          "error": null,
+          "error_code": null,
+          "result": {
+            "normalized": {
+              "Fe": 1.1,
+              "C": -0.1
+            },
+            "sum_before": 1.0,
+            "sum_after": 1.0,
+            "deviation": 0.0,
+            "passed": true
+          },
+          "boundary_check": {
+            "passed": true,
+            "warnings": []
+          }
+        },
+        "finding": "defect_if_success"
+      },
+      "ai_disposition": "revision_required_before_acceptance",
+      "risk_level": "high",
+      "scientific_scope": "质量分数或摩尔分数的归一化。",
+      "key_risk": "当前允许负组分和非有限值，且未显式记录质量/摩尔基准。",
+      "required_action": "拒绝负数、NaN和无穷值；增加composition_basis并规定容差语义。",
+      "reference_keys": [],
+      "reference_urls": [],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "A005",
+      "model_name": "元素质量守恒校验",
+      "category": "通用数据与校验",
+      "version": "1.0.0",
+      "description": "输入输出物料流中各元素质量分数",
+      "applicable_conditions": "输入输出物料流中各元素质量分数",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "input_streams": {
+            "name": "input_streams",
+            "label": "输入物流",
+            "type": "object",
+            "required": true,
+            "description": "[{\"name\":\"铁水\",\"mass\":100,\"elements\":{\"Fe\":0.94,\"C\":0.04}}, ...]"
+          },
+          "output_streams": {
+            "name": "output_streams",
+            "label": "输出物流",
+            "type": "object",
+            "required": true,
+            "description": "[{\"name\":\"钢水\",\"mass\":92,\"elements\":{\"Fe\":0.98,\"C\":0.001}}, ...]"
+          },
+          "tolerance": {
+            "name": "tolerance",
+            "label": "容差",
+            "type": "number",
+            "required": false,
+            "description": "",
+            "default": 0.001
+          }
+        },
+        "required": [
+          "input_streams",
+          "output_streams"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "element_balances": {
+            "name": "element_balances",
+            "label": "元素平衡",
+            "type": "object",
+            "description": ""
+          },
+          "closure_rate": {
+            "name": "closure_rate",
+            "label": "闭合率",
+            "type": "number",
+            "description": ""
+          },
+          "passed": {
+            "name": "passed",
+            "label": "是否通过",
+            "type": "boolean",
+            "description": ""
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {},
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_a.py",
+      "golden_case_count": 6,
+      "required_field_count": 2,
+      "generated_invalid_input_case_count": 10,
+      "diagnostic": {
+        "diagnostic": "负质量物流应拒绝",
+        "observed": {
+          "success": true,
+          "error": null,
+          "error_code": null,
+          "result": {
+            "element_balances": {
+              "Fe": {
+                "input": -100.0,
+                "output": -100.0,
+                "residual": 0.0,
+                "closure": 1.0
+              }
+            },
+            "total_input_mass": -100.0,
+            "total_output_mass": -100.0,
+            "mass_closure_rate": 1.0,
+            "max_element_residual": 0,
+            "passed": true
+          },
+          "boundary_check": {
+            "passed": true,
+            "warnings": []
+          }
+        },
+        "finding": "defect_if_success"
+      },
+      "ai_disposition": "revision_required_before_acceptance",
+      "risk_level": "high",
+      "scientific_scope": "按物料流计算元素输入、输出和守恒残差。",
+      "key_risk": "当前允许负质量/负分数；tolerance按绝对质量残差比较但未声明单位，输出Schema与实际closure字段也需对齐。",
+      "required_action": "校验质量和分数非负、分数基准与总和；把绝对/相对容差分开，并对齐输出契约。",
+      "reference_keys": [],
+      "reference_urls": [],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B001",
+      "model_name": "Shomate 热容计算",
+      "category": "热力学与相平衡",
+      "version": "1.0.0",
+      "description": "Cp = A + B·t + C·t² + D·t³ + E/t² (t=T/1000)；温度受 Shomate 参数有效区间限制",
+      "applicable_conditions": "Cp = A + B·t + C·t² + D·t³ + E/t² (t=T/1000)；温度受 Shomate 参数有效区间限制",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "name": "species",
+            "label": "物种",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "placeholder": "如 Fe(s), O2(g), CO2(g)"
+          },
+          "temperature": {
+            "name": "temperature",
+            "label": "温度 (K)",
+            "type": "number",
+            "required": true,
+            "description": "",
+            "default": 298.15
+          }
+        },
+        "required": [
+          "species",
+          "temperature"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "Cp": {
+            "name": "Cp",
+            "label": "热容 Cp",
+            "type": "number",
+            "description": "",
+            "unit": "J/(mol·K)"
+          },
+          "H_minus_H298": {
+            "name": "H_minus_H298",
+            "label": "H°-H°298",
+            "type": "number",
+            "description": "",
+            "unit": "kJ/mol"
+          },
+          "S": {
+            "name": "S",
+            "label": "熵 S°",
+            "type": "number",
+            "description": "",
+            "unit": "J/(mol·K)"
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {
+        "Cp": "J/(mol·K)",
+        "H_minus_H298": "kJ/mol",
+        "S": "J/(mol·K)"
+      },
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_b.py",
+      "golden_case_count": 8,
+      "required_field_count": 2,
+      "generated_invalid_input_case_count": 10,
+      "diagnostic": {
+        "diagnostic": "超出Shomate有效温区应拒绝",
+        "observed": {
+          "success": false,
+          "error": "不支持或温度超出范围: Fe(s)。可用物种: ['Fe(s)', 'Fe(l)', 'C(s,graphite)', 'O2(g)', 'CO2(g)', 'CO(g)', 'H2O(g)', 'FeO(s)', 'SiO2(s,alpha)', 'Al2O3(s,alpha)', 'Fe2O3(s)', 'Fe3O4(s)', 'CaO(s)', 'CaCO3(s)', 'MgO(s)', 'MnO(s)', 'H2(g)', 'N2(g)', 'Cu(s)', 'Ni(s)', 'Cr(s)', 'Si(s)', 'CH4(g)', 'SO2(g)', 'H2S(g)', 'Cl2(g)', 'CuO(s)', 'Cu2O(s)', 'TiO2(s)', 'Cr2O3(s)', 'V2O5(s)', 'AlN(s)', 'SiC(s)', 'Si3N4(s)', 'CaS(s)', 'CaF2(s)']",
+          "error_code": "MISSING_DATA",
+          "result": null,
+          "boundary_check": {
+            "passed": true,
+            "warnings": []
+          }
+        },
+        "finding": "pass_if_rejected"
+      },
+      "ai_disposition": "candidate_after_minor_clarification",
+      "risk_level": "medium",
+      "scientific_scope": "在给定物种、相态和有效温区内计算Shomate Cp、H°−H°298.15和S°。",
+      "key_risk": "必须严格绑定相态、系数来源和温区；H字段是焓增量，不是绝对焓。",
+      "required_action": "在Schema和结果中固定相态、有效温区、系数版本及H_minus_H298语义。",
+      "reference_keys": [
+        "nist_shomate"
+      ],
+      "reference_urls": [
+        "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Mask=35"
+      ],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B002",
+      "model_name": "NASA 多项式热物性计算",
+      "category": "热力学与相平衡",
+      "version": "1.0.0",
+      "description": "Cp/R = a₁ + a₂·T + a₃·T² + a₄·T³ + a₅·T⁴；当前使用 Shomate 参数近似",
+      "applicable_conditions": "Cp/R = a₁ + a₂·T + a₃·T² + a₄·T³ + a₅·T⁴；当前使用 Shomate 参数近似",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "name": "species",
+            "label": "物种",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "placeholder": "如 Fe(s), O2(g)"
+          },
+          "temperature": {
+            "name": "temperature",
+            "label": "温度 (K)",
+            "type": "number",
+            "required": true,
+            "description": "",
+            "default": 298.15
+          }
+        },
+        "required": [
+          "species",
+          "temperature"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "Cp": {
+            "name": "Cp",
+            "label": "定压热容 Cp",
+            "type": "number",
+            "description": "",
+            "unit": "J/(mol·K)"
+          },
+          "H_minus_H298": {
+            "name": "H_minus_H298",
+            "label": "H°-H°298",
+            "type": "number",
+            "description": "",
+            "unit": "kJ/mol"
+          },
+          "S": {
+            "name": "S",
+            "label": "熵 S°",
+            "type": "number",
+            "description": "",
+            "unit": "J/(mol·K)"
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {
+        "Cp": "J/(mol·K)",
+        "H_minus_H298": "kJ/mol",
+        "S": "J/(mol·K)"
+      },
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_b.py",
+      "golden_case_count": 6,
+      "required_field_count": 2,
+      "generated_invalid_input_case_count": 10,
+      "diagnostic": {
+        "diagnostic": "NASA工具是否实际使用NASA系数",
+        "observed": {
+          "success": true,
+          "error": null,
+          "error_code": null,
+          "result": {
+            "species": "Fe(s)",
+            "temperature": 1000.0,
+            "Cp": 35.47286,
+            "Cp_unit": "J/(mol·K)",
+            "H_minus_H298": 27.3646,
+            "H_unit": "kJ/mol",
+            "S": 62.6434,
+            "S_unit": "J/(mol·K)",
+            "T_min": 298,
+            "T_max": 1812,
+            "in_range": true,
+            "method": "Shomate 多项式（NASA 近似）",
+            "data_source": "builtin_fallback"
+          },
+          "boundary_check": {
+            "passed": true,
+            "warnings": []
+          }
+        },
+        "finding": "defect_if_method_contains_shomate"
+      },
+      "ai_disposition": "revision_required_before_acceptance",
+      "risk_level": "high",
+      "scientific_scope": "名义上是NASA多项式热物性计算。",
+      "key_risk": "当前实际调用Shomate并明确标注“NASA近似”，不构成独立NASA多项式实现。",
+      "required_action": "实现真正NASA 7/9项系数和温区，或与B001合并并更名，不能按独立NASA工具接受。",
+      "reference_keys": [
+        "nasa_polynomial",
+        "nist_shomate"
+      ],
+      "reference_urls": [
+        "https://ntrs.nasa.gov/citations/20020085330",
+        "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Mask=35"
+      ],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B003",
+      "model_name": "显热与焓积分",
+      "category": "热力学与相平衡",
+      "version": "1.0.0",
+      "description": "温度范围受 Shomate 参数有效区间限制；不支持相变潜热",
+      "applicable_conditions": "温度范围受 Shomate 参数有效区间限制；不支持相变潜热",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "name": "species",
+            "label": "物种",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "placeholder": "如 Fe(s), O2(g), CO2(g)"
+          },
+          "temperature_start": {
+            "name": "temperature_start",
+            "label": "起始温度 (K)",
+            "type": "number",
+            "required": true,
+            "description": "",
+            "default": 298.15
+          },
+          "temperature_end": {
+            "name": "temperature_end",
+            "label": "终止温度 (K)",
+            "type": "number",
+            "required": true,
+            "description": "",
+            "default": 1873
+          },
+          "mass": {
+            "name": "mass",
+            "label": "质量 (g)",
+            "type": "number",
+            "required": false,
+            "description": "如果不为1，结果乘以该质量",
+            "default": 1
+          }
+        },
+        "required": [
+          "species",
+          "temperature_start",
+          "temperature_end"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "delta_H": {
+            "name": "delta_H",
+            "label": "焓变 (kJ)",
+            "type": "number",
+            "description": ""
+          },
+          "temperature_start": {
+            "name": "temperature_start",
+            "label": "起始温度 (K)",
+            "type": "number",
+            "description": ""
+          },
+          "temperature_end": {
+            "name": "temperature_end",
+            "label": "终止温度 (K)",
+            "type": "number",
+            "description": ""
+          },
+          "species": {
+            "name": "species",
+            "label": "物种",
+            "type": "string",
+            "description": ""
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {},
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_b.py",
+      "golden_case_count": 8,
+      "required_field_count": 3,
+      "generated_invalid_input_case_count": 15,
+      "diagnostic": {
+        "diagnostic": "mass(g)缩放是否具有物质的量换算",
+        "observed": {
+          "mass_1g": {
+            "success": true,
+            "error": null,
+            "error_code": null,
+            "result": {
+              "delta_H": 18.7941,
+              "delta_H_unit": "kJ",
+              "temperature_start": 400.0,
+              "temperature_end": 1000.0,
+              "species": "Fe(s)",
+              "data_source": "builtin_fallback"
+            },
+            "boundary_check": {
+              "passed": true,
+              "warnings": []
+            }
+          },
+          "mass_2g": {
+            "success": true,
+            "error": null,
+            "error_code": null,
+            "result": {
+              "delta_H": 37.5882,
+              "delta_H_unit": "kJ",
+              "temperature_start": 400.0,
+              "temperature_end": 1000.0,
+              "species": "Fe(s)",
+              "data_source": "builtin_fallback"
+            },
+            "boundary_check": {
+              "passed": true,
+              "warnings": []
+            }
+          },
+          "ratio": 2.0
+        },
+        "finding": "dimension_defect_if_ratio_is_2_without_molar_mass"
+      },
+      "ai_disposition": "revision_required_before_acceptance",
+      "risk_level": "critical",
+      "scientific_scope": "由Shomate焓函数计算两温度间显热。",
+      "key_risk": "结果为摩尔焓差，却直接乘以mass(g)，存在量纲错误；同时不含相变潜热。",
+      "required_action": "输入改为amount_mol，或使用摩尔质量把质量换算为物质的量；跨相变时拒绝或加入潜热。",
+      "reference_keys": [
+        "nist_shomate"
+      ],
+      "reference_urls": [
+        "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Mask=35"
+      ],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B004",
+      "model_name": "熵积分",
+      "category": "热力学与相平衡",
+      "version": "1.0.0",
+      "description": "ΔS = ∫(Cp/T)dT；使用 Shomate 热容数值积分",
+      "applicable_conditions": "ΔS = ∫(Cp/T)dT；使用 Shomate 热容数值积分",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "name": "species",
+            "label": "物种",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "placeholder": "如 Fe(s)"
+          },
+          "temperature_start": {
+            "name": "temperature_start",
+            "label": "起始温度 (K)",
+            "type": "number",
+            "required": true,
+            "description": "",
+            "default": 298.15
+          },
+          "temperature_end": {
+            "name": "temperature_end",
+            "label": "终止温度 (K)",
+            "type": "number",
+            "required": true,
+            "description": "",
+            "default": 1873
+          }
+        },
+        "required": [
+          "species",
+          "temperature_start",
+          "temperature_end"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "delta_S": {
+            "name": "delta_S",
+            "label": "熵变 ΔS",
+            "type": "number",
+            "description": "",
+            "unit": "J/(mol·K)"
+          },
+          "S_start": {
+            "name": "S_start",
+            "label": "起始熵",
+            "type": "number",
+            "description": "",
+            "unit": "J/(mol·K)"
+          },
+          "S_end": {
+            "name": "S_end",
+            "label": "终止熵",
+            "type": "number",
+            "description": "",
+            "unit": "J/(mol·K)"
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {
+        "delta_S": "J/(mol·K)",
+        "S_start": "J/(mol·K)",
+        "S_end": "J/(mol·K)"
+      },
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_b.py",
+      "golden_case_count": 6,
+      "required_field_count": 3,
+      "generated_invalid_input_case_count": 15,
+      "diagnostic": {
+        "diagnostic": "起始温度不小于终止温度应拒绝",
+        "observed": {
+          "success": false,
+          "error": "起始温度必须小于终止温度",
+          "error_code": "INVALID_INPUT",
+          "result": null,
+          "boundary_check": {
+            "passed": true,
+            "warnings": []
+          }
+        },
+        "finding": "pass_if_rejected"
+      },
+      "ai_disposition": "candidate_after_minor_clarification",
+      "risk_level": "medium",
+      "scientific_scope": "同一相态和有效温区内的S(T2)−S(T1)。",
+      "key_risk": "跨相变不包含相变熵；名称写“数值积分”，实现实际上使用Shomate解析熵差。",
+      "required_action": "限制同相态有效温区，并把方法描述改为解析熵差或加入分段积分。",
+      "reference_keys": [
+        "nist_shomate"
+      ],
+      "reference_urls": [
+        "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Mask=35"
+      ],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B005",
+      "model_name": "物种 Gibbs 自由能计算",
+      "category": "热力学与相平衡",
+      "version": "1.0.0",
+      "description": "G = H - T·S；使用 Shomate 参数计算单物种热力学性质",
+      "applicable_conditions": "G = H - T·S；使用 Shomate 参数计算单物种热力学性质",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "name": "species",
+            "label": "物种",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "placeholder": "如 Fe(s), O2(g)"
+          },
+          "temperature": {
+            "name": "temperature",
+            "label": "温度 (K)",
+            "type": "number",
+            "required": true,
+            "description": "",
+            "default": 1873
+          }
+        },
+        "required": [
+          "species",
+          "temperature"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "G": {
+            "name": "G",
+            "label": "Gibbs自由能 G",
+            "type": "number",
+            "description": "",
+            "unit": "kJ/mol"
+          },
+          "H": {
+            "name": "H",
+            "label": "焓 H",
+            "type": "number",
+            "description": "",
+            "unit": "kJ/mol"
+          },
+          "S": {
+            "name": "S",
+            "label": "熵 S",
+            "type": "number",
+            "description": "",
+            "unit": "J/(mol·K)"
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {
+        "G": "kJ/mol",
+        "H": "kJ/mol",
+        "S": "J/(mol·K)"
+      },
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_b.py",
+      "golden_case_count": 6,
+      "required_field_count": 2,
+      "generated_invalid_input_case_count": 10,
+      "diagnostic": {
+        "diagnostic": "结果是否包含一致的标准参考焓",
+        "observed": {
+          "success": true,
+          "error": null,
+          "error_code": null,
+          "result": {
+            "G": -2.1052,
+            "G_unit": "kJ/mol",
+            "H": 5.9777,
+            "H_unit": "kJ/mol",
+            "S": 27.1101,
+            "S_unit": "J/(mol·K)",
+            "species": "Fe(s)",
+            "temperature": 298.15,
+            "temperature_unit": "K",
+            "data_source": "builtin_fallback"
+          },
+          "boundary_check": {
+            "passed": true,
+            "warnings": []
+          }
+        },
+        "finding": "reference_state_review_required"
+      },
+      "ai_disposition": "revision_required_before_acceptance",
+      "risk_level": "critical",
+      "scientific_scope": "由焓和熵构造单物种Gibbs能。",
+      "key_risk": "当前用H°−H°298.15与绝对S°直接计算G，参考态不一致，结果不是完整标准摩尔Gibbs能。",
+      "required_action": "加入标准生成焓/一致参考态，或把工具明确改名为热Gibbs函数增量。",
+      "reference_keys": [
+        "nist_shomate",
+        "iupac_gibbs"
+      ],
+      "reference_urls": [
+        "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Mask=35",
+        "https://goldbook.iupac.org/terms/view/G02629"
+      ],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B006",
+      "model_name": "反应焓计算",
+      "category": "热力学与相平衡",
+      "version": "1.0.0",
+      "description": "使用标准生成焓数据；默认温度 298.15K",
+      "applicable_conditions": "使用标准生成焓数据；默认温度 298.15K",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "reaction": {
+            "name": "reaction",
+            "label": "反应式",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "placeholder": "如 FeO + C → Fe + CO"
+          },
+          "temperature": {
+            "name": "temperature",
+            "label": "温度 (K)",
+            "type": "number",
+            "required": false,
+            "description": "",
+            "default": 298.15
+          }
+        },
+        "required": [
+          "reaction"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "delta_H": {
+            "name": "delta_H",
+            "label": "反应焓 ΔH (kJ/mol)",
+            "type": "number",
+            "description": ""
+          },
+          "reaction": {
+            "name": "reaction",
+            "label": "反应式",
+            "type": "string",
+            "description": ""
+          },
+          "reaction_type": {
+            "name": "reaction_type",
+            "label": "反应类型",
+            "type": "string",
+            "description": ""
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {},
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_b.py",
+      "golden_case_count": 6,
+      "required_field_count": 1,
+      "generated_invalid_input_case_count": 5,
+      "diagnostic": {
+        "diagnostic": "内置兜底ΔH是否随温度修正",
+        "observed": {
+          "T298": {
+            "success": true,
+            "error": null,
+            "error_code": null,
+            "result": {
+              "delta_H": -393.5,
+              "delta_H_unit": "kJ/mol",
+              "delta_S": 2.9,
+              "delta_S_unit": "J/(mol·K)",
+              "delta_G": -394.36,
+              "delta_G_unit": "kJ/mol",
+              "temperature": 298.15,
+              "reaction": "C + O₂ → CO₂",
+              "name": "碳完全燃烧",
+              "reaction_type": "放热反应",
+              "note": "放热反应，碳素发热的主要来源"
+            },
+            "boundary_check": {
+              "passed": true,
+              "warnings": []
+            }
+          },
+          "T1200": {
+            "success": true,
+            "error": null,
+            "error_code": null,
+            "result": {
+              "delta_H": -393.5,
+              "delta_H_unit": "kJ/mol",
+              "delta_S": 2.9,
+              "delta_S_unit": "J/(mol·K)",
+              "delta_G": -396.98,
+              "delta_G_unit": "kJ/mol",
+              "temperature": 1200.0,
+              "reaction": "C + O₂ → CO₂",
+              "name": "碳完全燃烧",
+              "reaction_type": "放热反应",
+              "note": "放热反应，碳素发热的主要来源"
+            },
+            "boundary_check": {
+              "passed": true,
+              "warnings": []
+            }
+          }
+        },
+        "finding": "defect_if_delta_H_identical"
+      },
+      "ai_disposition": "revision_required_before_acceptance",
+      "risk_level": "high",
+      "scientific_scope": "由各物种热化学数据计算反应焓。",
+      "key_risk": "内置兜底对任意温度返回同一298.15 K反应焓；数据库路径也未完整加入各物种显热修正。",
+      "required_action": "明确仅支持298.15 K，或使用一致的Cp/焓函数计算ΔrH(T)。",
+      "reference_keys": [
+        "nist_shomate"
+      ],
+      "reference_urls": [
+        "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Mask=35"
+      ],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B007",
+      "model_name": "反应熵计算",
+      "category": "热力学与相平衡",
+      "version": "1.0.0",
+      "description": "ΔS = ΣS°(产物) − ΣS°(反应物)；基于内置热化学数据库",
+      "applicable_conditions": "ΔS = ΣS°(产物) − ΣS°(反应物)；基于内置热化学数据库",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "reaction": {
+            "name": "reaction",
+            "label": "反应式",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "placeholder": "如 FeO + C → Fe + CO"
+          },
+          "temperature": {
+            "name": "temperature",
+            "label": "温度 (K)",
+            "type": "number",
+            "required": false,
+            "description": "",
+            "default": 298.15
+          }
+        },
+        "required": [
+          "reaction"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "delta_S": {
+            "name": "delta_S",
+            "label": "反应熵 ΔS",
+            "type": "number",
+            "description": "",
+            "unit": "J/(mol·K)"
+          },
+          "delta_H": {
+            "name": "delta_H",
+            "label": "反应焓 ΔH",
+            "type": "number",
+            "description": "",
+            "unit": "kJ/mol"
+          },
+          "reaction": {
+            "name": "reaction",
+            "label": "反应式",
+            "type": "string",
+            "description": ""
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {
+        "delta_S": "J/(mol·K)",
+        "delta_H": "kJ/mol"
+      },
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_b.py",
+      "golden_case_count": 6,
+      "required_field_count": 1,
+      "generated_invalid_input_case_count": 5,
+      "diagnostic": {
+        "diagnostic": "内置兜底ΔS是否随温度修正",
+        "observed": {
+          "T298": {
+            "success": true,
+            "error": null,
+            "error_code": null,
+            "result": {
+              "delta_S": 2.9,
+              "delta_S_unit": "J/(mol·K)",
+              "delta_H": -393.5,
+              "delta_H_unit": "kJ/mol",
+              "temperature": 298.15,
+              "temperature_unit": "K",
+              "reaction": "C + O₂ → CO₂",
+              "name": "碳完全燃烧",
+              "method": "ΔS = ΣS°(产物) − ΣS°(反应物)"
+            },
+            "boundary_check": {
+              "passed": true,
+              "warnings": []
+            }
+          },
+          "T1200": {
+            "success": true,
+            "error": null,
+            "error_code": null,
+            "result": {
+              "delta_S": 2.9,
+              "delta_S_unit": "J/(mol·K)",
+              "delta_H": -393.5,
+              "delta_H_unit": "kJ/mol",
+              "temperature": 1200.0,
+              "temperature_unit": "K",
+              "reaction": "C + O₂ → CO₂",
+              "name": "碳完全燃烧",
+              "method": "ΔS = ΣS°(产物) − ΣS°(反应物)"
+            },
+            "boundary_check": {
+              "passed": true,
+              "warnings": []
+            }
+          }
+        },
+        "finding": "defect_if_delta_S_identical"
+      },
+      "ai_disposition": "revision_required_before_acceptance",
+      "risk_level": "high",
+      "scientific_scope": "由各物种标准熵计算反应熵。",
+      "key_risk": "内置兜底对任意温度返回同一ΔS；数据库与兜底的温度语义不一致。",
+      "required_action": "明确298.15 K限定，或逐物种计算S°(T)并统一数据库/兜底行为。",
+      "reference_keys": [
+        "nist_shomate"
+      ],
+      "reference_urls": [
+        "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Mask=35"
+      ],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B008",
+      "model_name": "反应 Gibbs 自由能计算",
+      "category": "热力学与相平衡",
+      "version": "1.0.0",
+      "description": "使用标准生成焓/熵数据；ΔG = ΔH - TΔS",
+      "applicable_conditions": "使用标准生成焓/熵数据；ΔG = ΔH - TΔS",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "reaction": {
+            "name": "reaction",
+            "label": "反应式",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "placeholder": "如 2Fe + O2 → 2FeO"
+          },
+          "temperature": {
+            "name": "temperature",
+            "label": "温度 (K)",
+            "type": "number",
+            "required": false,
+            "description": "",
+            "default": 1873
+          },
+          "pressure": {
+            "name": "pressure",
+            "label": "压力 (Pa)",
+            "type": "number",
+            "required": false,
+            "description": "",
+            "default": 101325
+          }
+        },
+        "required": [
+          "reaction"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "delta_G": {
+            "name": "delta_G",
+            "label": "Gibbs自由能 (kJ/mol)",
+            "type": "number",
+            "description": ""
+          },
+          "direction": {
+            "name": "direction",
+            "label": "反应方向",
+            "type": "string",
+            "description": ""
+          },
+          "reaction": {
+            "name": "reaction",
+            "label": "反应式",
+            "type": "string",
+            "description": ""
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {},
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_b.py",
+      "golden_case_count": 8,
+      "required_field_count": 1,
+      "generated_invalid_input_case_count": 5,
+      "diagnostic": {
+        "diagnostic": "pressure输入是否实际参与计算",
+        "observed": {
+          "low_pressure": {
+            "success": true,
+            "error": null,
+            "error_code": null,
+            "result": {
+              "delta_G": -396.4,
+              "delta_G_unit": "kJ/mol",
+              "delta_H": -393.5,
+              "delta_H_unit": "kJ/mol",
+              "delta_S": 2.9,
+              "delta_S_unit": "J/(mol·K)",
+              "temperature": 1000.0,
+              "temperature_unit": "K",
+              "reaction": "C + O₂ → CO₂",
+              "name": "碳完全燃烧",
+              "direction": "正向强烈自发",
+              "note": ""
+            },
+            "boundary_check": {
+              "passed": true,
+              "warnings": []
+            }
+          },
+          "high_pressure": {
+            "success": true,
+            "error": null,
+            "error_code": null,
+            "result": {
+              "delta_G": -396.4,
+              "delta_G_unit": "kJ/mol",
+              "delta_H": -393.5,
+              "delta_H_unit": "kJ/mol",
+              "delta_S": 2.9,
+              "delta_S_unit": "J/(mol·K)",
+              "temperature": 1000.0,
+              "temperature_unit": "K",
+              "reaction": "C + O₂ → CO₂",
+              "name": "碳完全燃烧",
+              "direction": "正向强烈自发",
+              "note": ""
+            },
+            "boundary_check": {
+              "passed": true,
+              "warnings": []
+            }
+          }
+        },
+        "finding": "defect_if_outputs_identical"
+      },
+      "ai_disposition": "revision_required_before_acceptance",
+      "risk_level": "critical",
+      "scientific_scope": "由ΔH和ΔS估算标准反应Gibbs能。",
+      "key_risk": "继承B006/B007温度问题；pressure输入完全未参与计算，却输出反应方向判断。",
+      "required_action": "删除无效pressure参数或引入活度/分压项；使用一致的ΔrG°(T)，区分标准态与实际反应商。",
+      "reference_keys": [
+        "iupac_gibbs",
+        "iupac_equilibrium"
+      ],
+      "reference_urls": [
+        "https://goldbook.iupac.org/terms/view/G02629",
+        "https://goldbook.iupac.org/terms/view/S05915"
+      ],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B009",
+      "model_name": "平衡常数计算",
+      "category": "热力学与相平衡",
+      "version": "1.0.0",
+      "description": "K = exp(-ΔG°/RT)；ΔG° 基于内置热化学数据库",
+      "applicable_conditions": "K = exp(-ΔG°/RT)；ΔG° 基于内置热化学数据库",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "reaction": {
+            "name": "reaction",
+            "label": "反应式",
+            "type": "string",
+            "required": true,
+            "description": "",
+            "placeholder": "如 FeO + C → Fe + CO"
+          },
+          "temperature": {
+            "name": "temperature",
+            "label": "温度 (K)",
+            "type": "number",
+            "required": false,
+            "description": "",
+            "default": 1600
+          }
+        },
+        "required": [
+          "reaction"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "K": {
+            "name": "K",
+            "label": "平衡常数",
+            "type": "number",
+            "description": ""
+          },
+          "delta_G": {
+            "name": "delta_G",
+            "label": "Gibbs自由能 (kJ/mol)",
+            "type": "number",
+            "description": ""
+          },
+          "direction": {
+            "name": "direction",
+            "label": "反应方向",
+            "type": "string",
+            "description": ""
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {},
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_b.py",
+      "golden_case_count": 8,
+      "required_field_count": 1,
+      "generated_invalid_input_case_count": 5,
+      "diagnostic": {
+        "diagnostic": "T=0应由前置边界校验拒绝",
+        "observed": {
+          "success": false,
+          "error": "float division by zero",
+          "error_code": "INTERNAL_ERROR",
+          "result": null,
+          "boundary_check": {
+            "passed": true,
+            "warnings": []
+          }
+        },
+        "finding": "defect_if_internal_error"
+      },
+      "ai_disposition": "revision_required_before_acceptance",
+      "risk_level": "critical",
+      "scientific_scope": "由标准反应Gibbs能计算热力学平衡常数。",
+      "key_risk": "公式本身正确，但上游ΔG°温度处理不完整；T≤0没有前置校验，指数可能溢出。",
+      "required_action": "先修复ΔrG°(T)，再增加T>0、指数稳定计算和无量纲标准态说明。",
+      "reference_keys": [
+        "iupac_equilibrium"
+      ],
+      "reference_urls": [
+        "https://goldbook.iupac.org/terms/view/S05915"
+      ],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B019",
+      "model_name": "杠杆规则计算",
+      "category": "热力学与相平衡",
+      "version": "1.0.0",
+      "description": "仅适用于二元系两相区",
+      "applicable_conditions": "仅适用于二元系两相区",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "overall_composition": {
+            "name": "overall_composition",
+            "label": "总体成分",
+            "type": "number",
+            "required": true,
+            "description": "总体成分 (质量/摩尔分数)"
+          },
+          "phase1_composition": {
+            "name": "phase1_composition",
+            "label": "相1成分",
+            "type": "number",
+            "required": true,
+            "description": "相1边界成分"
+          },
+          "phase2_composition": {
+            "name": "phase2_composition",
+            "label": "相2成分",
+            "type": "number",
+            "required": true,
+            "description": "相2边界成分"
+          },
+          "component": {
+            "name": "component",
+            "label": "组元",
+            "type": "string",
+            "required": false,
+            "description": "组元名称",
+            "default": "B"
+          }
+        },
+        "required": [
+          "overall_composition",
+          "phase1_composition",
+          "phase2_composition"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "phase1_fraction": {
+            "name": "phase1_fraction",
+            "label": "相1分数",
+            "type": "number",
+            "description": ""
+          },
+          "phase2_fraction": {
+            "name": "phase2_fraction",
+            "label": "相2分数",
+            "type": "number",
+            "description": ""
+          },
+          "conservation_residual": {
+            "name": "conservation_residual",
+            "label": "守恒残差",
+            "type": "number",
+            "description": ""
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {},
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_b.py",
+      "golden_case_count": 10,
+      "required_field_count": 3,
+      "generated_invalid_input_case_count": 15,
+      "diagnostic": {
+        "diagnostic": "总体成分超出两相端点应拒绝",
+        "observed": {
+          "success": false,
+          "error": "总体成分 0.9 不在两相边界 [0.1, 0.8] 之间",
+          "error_code": "OUT_OF_DOMAIN",
+          "result": null,
+          "boundary_check": {
+            "passed": true,
+            "warnings": []
+          }
+        },
+        "finding": "pass_if_rejected"
+      },
+      "ai_disposition": "candidate_after_minor_clarification",
+      "risk_level": "low",
+      "scientific_scope": "二元系两相区的杠杆规则相分数计算。",
+      "key_risk": "需要明确质量/摩尔分数基准，并禁止把结果外推到多元系或多相区。",
+      "required_action": "增加composition_basis枚举并保留总体成分必须位于两端点之间的校验。",
+      "reference_keys": [],
+      "reference_urls": [],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "C001",
+      "model_name": "Arrhenius 速率常数",
+      "category": "动力学与传递",
+      "version": "1.0.0",
+      "description": "k = A·exp(-Ea/RT)；适用 Arrhenius 行为反应",
+      "applicable_conditions": "k = A·exp(-Ea/RT)；适用 Arrhenius 行为反应",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "A": {
+            "name": "A",
+            "label": "指前因子 A",
+            "type": "number",
+            "required": true,
+            "description": "指前因子，单位与 k 一致"
+          },
+          "Ea": {
+            "name": "Ea",
+            "label": "活化能 Ea",
+            "type": "number",
+            "required": true,
+            "description": "活化能 (J/mol 或 kJ/mol)"
+          },
+          "temperature": {
+            "name": "temperature",
+            "label": "温度 T",
+            "type": "number",
+            "required": true,
+            "description": "反应温度 (K)"
+          },
+          "Ea_unit": {
+            "name": "Ea_unit",
+            "label": "活化能单位",
+            "type": "select",
+            "required": false,
+            "description": "",
+            "default": "J/mol",
+            "enum": [
+              "J/mol",
+              "kJ/mol"
+            ]
+          },
+          "R": {
+            "name": "R",
+            "label": "气体常数",
+            "type": "number",
+            "required": false,
+            "description": "气体常数 (J/(mol·K))",
+            "default": 8.314
+          }
+        },
+        "required": [
+          "A",
+          "Ea",
+          "temperature"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "k": {
+            "name": "k",
+            "label": "速率常数",
+            "type": "number",
+            "description": ""
+          },
+          "ln_k": {
+            "name": "ln_k",
+            "label": "ln(k)",
+            "type": "number",
+            "description": ""
+          },
+          "temperature": {
+            "name": "temperature",
+            "label": "温度 (K)",
+            "type": "number",
+            "description": ""
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {},
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_c.py",
+      "golden_case_count": 10,
+      "required_field_count": 3,
+      "generated_invalid_input_case_count": 15,
+      "diagnostic": {
+        "diagnostic": "负指前因子A应拒绝",
+        "observed": {
+          "success": true,
+          "error": null,
+          "error_code": null,
+          "result": {
+            "k": -0.0024444079,
+            "k_scientific": "-2.444408e-03",
+            "ln_k": "-inf",
+            "A": -1.0,
+            "Ea": 50000.0,
+            "Ea_unit": "J/mol",
+            "Ea_J_per_mol": 50000.0,
+            "temperature": 1000.0,
+            "temperature_unit": "K",
+            "R": 8.314,
+            "method": "k = A·exp(-Ea/RT)"
+          },
+          "boundary_check": {
+            "passed": true,
+            "warnings": []
+          }
+        },
+        "finding": "defect_if_success"
+      },
+      "ai_disposition": "revision_required_before_acceptance",
+      "risk_level": "high",
+      "scientific_scope": "经典Arrhenius速率常数。",
+      "key_risk": "未校验A>0、R>0和参数有限性；负A可返回success及-ln无穷值。",
+      "required_action": "增加A>0、R>0、T>0、有限值检查，并明确A的单位随反应级数变化。",
+      "reference_keys": [
+        "iupac_arrhenius"
+      ],
+      "reference_urls": [
+        "https://goldbook.iupac.org/terms/view/A00446"
+      ],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "C002",
+      "model_name": "扩散系数计算",
+      "category": "动力学与传递",
+      "version": "1.0.0",
+      "description": "D = D₀·exp(-Q/RT)；支持 Arrhenius 扩散行为",
+      "applicable_conditions": "D = D₀·exp(-Q/RT)；支持 Arrhenius 扩散行为",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "D0": {
+            "name": "D0",
+            "label": "指前因子 D₀",
+            "type": "number",
+            "required": true,
+            "description": "扩散常数 (m²/s)"
+          },
+          "Q": {
+            "name": "Q",
+            "label": "激活能 Q",
+            "type": "number",
+            "required": true,
+            "description": "扩散激活能"
+          },
+          "temperature": {
+            "name": "temperature",
+            "label": "温度 T",
+            "type": "number",
+            "required": true,
+            "description": "温度 (K)"
+          },
+          "Q_unit": {
+            "name": "Q_unit",
+            "label": "激活能单位",
+            "type": "select",
+            "required": false,
+            "description": "",
+            "default": "J/mol",
+            "enum": [
+              "J/mol",
+              "kJ/mol",
+              "eV"
+            ]
+          }
+        },
+        "required": [
+          "D0",
+          "Q",
+          "temperature"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "D": {
+            "name": "D",
+            "label": "扩散系数 D",
+            "type": "number",
+            "description": "",
+            "unit": "m²/s"
+          },
+          "ln_D": {
+            "name": "ln_D",
+            "label": "ln(D)",
+            "type": "number",
+            "description": ""
+          },
+          "sqrt_Dt_1h": {
+            "name": "sqrt_Dt_1h",
+            "label": "1h 扩散距离 √(Dt)",
+            "type": "number",
+            "description": "",
+            "unit": "m"
+          }
+        }
+      },
+      "input_units": {},
+      "output_units": {
+        "D": "m²/s",
+        "sqrt_Dt_1h": "m"
+      },
+      "formula_reference": "",
+      "required_data": [],
+      "data_source": [],
+      "dependencies": [],
+      "source_file": "Tools/models_core/models_c.py",
+      "golden_case_count": 10,
+      "required_field_count": 3,
+      "generated_invalid_input_case_count": 15,
+      "diagnostic": {
+        "diagnostic": "1 eV激活能是否按每摩尔能量处理",
+        "observed": {
+          "success": true,
+          "error": null,
+          "error_code": null,
+          "result": {
+            "D": 1.0,
+            "D_scientific": "1.000000e+00",
+            "ln_D": 0.0,
+            "sqrt_Dt_1h": 60.0,
+            "sqrt_Dt_1h_unit": "m",
+            "D0": 1.0,
+            "Q": 1.0,
+            "Q_unit": "eV",
+            "Q_J_per_mol": 0.0,
+            "temperature": 1000.0,
+            "temperature_unit": "K",
+            "method": "D = D₀·exp(-Q/RT)"
+          },
+          "boundary_check": {
+            "passed": true,
+            "warnings": []
+          }
+        },
+        "expected_D_over_D0_approximately": 9.124767654268085e-06,
+        "finding": "defect_if_observed_near_1"
+      },
+      "ai_disposition": "revision_required_before_acceptance",
+      "risk_level": "critical",
+      "scientific_scope": "Arrhenius型扩散系数。",
+      "key_risk": "eV分支把单粒子eV转成J后仍除以摩尔气体常数R，量纲错误；应使用kB或转成J/mol。",
+      "required_action": "eV输入乘以Faraday常数转为J/mol，或改用Boltzmann常数；同时校验D0>0与T>0。",
+      "reference_keys": [
+        "nist_constants",
+        "iupac_arrhenius"
+      ],
+      "reference_urls": [
+        "https://www.physics.nist.gov/cgi-bin/cuu/Info/Constants/ArchiveASCII/allascii_2010.txt",
+        "https://goldbook.iupac.org/terms/view/A00446"
+      ],
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    }
+  ],
+  "naming_map": [
+    {
+      "model_id": "A001",
+      "canonical_tool_id": "A001",
+      "planned_semantic_alias": "convert_units",
+      "registry_api_name": "model_a001",
+      "runtime_openai_tool_name": "A001",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "A002",
+      "canonical_tool_id": "A002",
+      "planned_semantic_alias": "parse_chemical_formula",
+      "registry_api_name": "model_a002",
+      "runtime_openai_tool_name": "A002",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "A003",
+      "canonical_tool_id": "A003",
+      "planned_semantic_alias": "calc_molar_mass",
+      "registry_api_name": "model_a003",
+      "runtime_openai_tool_name": "A003",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "A004",
+      "canonical_tool_id": "A004",
+      "planned_semantic_alias": "normalize_composition",
+      "registry_api_name": "model_a004",
+      "runtime_openai_tool_name": "A004",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "A005",
+      "canonical_tool_id": "A005",
+      "planned_semantic_alias": "check_element_mass_balance",
+      "registry_api_name": "model_a005",
+      "runtime_openai_tool_name": "A005",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B001",
+      "canonical_tool_id": "B001",
+      "planned_semantic_alias": "calc_shomate_properties",
+      "registry_api_name": "model_b001",
+      "runtime_openai_tool_name": "B001",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B002",
+      "canonical_tool_id": "B002",
+      "planned_semantic_alias": "calc_nasa_properties",
+      "registry_api_name": "model_b002",
+      "runtime_openai_tool_name": "B002",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B003",
+      "canonical_tool_id": "B003",
+      "planned_semantic_alias": "integrate_sensible_enthalpy",
+      "registry_api_name": "model_b003",
+      "runtime_openai_tool_name": "B003",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B004",
+      "canonical_tool_id": "B004",
+      "planned_semantic_alias": "integrate_entropy",
+      "registry_api_name": "model_b004",
+      "runtime_openai_tool_name": "B004",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B005",
+      "canonical_tool_id": "B005",
+      "planned_semantic_alias": "calc_gibbs_energy",
+      "registry_api_name": "model_b005",
+      "runtime_openai_tool_name": "B005",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B006",
+      "canonical_tool_id": "B006",
+      "planned_semantic_alias": "calc_reaction_enthalpy",
+      "registry_api_name": "model_b006",
+      "runtime_openai_tool_name": "B006",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B007",
+      "canonical_tool_id": "B007",
+      "planned_semantic_alias": "calc_reaction_entropy",
+      "registry_api_name": "model_b007",
+      "runtime_openai_tool_name": "B007",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B008",
+      "canonical_tool_id": "B008",
+      "planned_semantic_alias": "calc_reaction_gibbs",
+      "registry_api_name": "model_b008",
+      "runtime_openai_tool_name": "B008",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B009",
+      "canonical_tool_id": "B009",
+      "planned_semantic_alias": "calc_equilibrium_constant",
+      "registry_api_name": "model_b009",
+      "runtime_openai_tool_name": "B009",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "B019",
+      "canonical_tool_id": "B019",
+      "planned_semantic_alias": "calc_lever_rule",
+      "registry_api_name": "model_b019",
+      "runtime_openai_tool_name": "B019",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "C001",
+      "canonical_tool_id": "C001",
+      "planned_semantic_alias": "calc_arrhenius_rate",
+      "registry_api_name": "model_c001",
+      "runtime_openai_tool_name": "C001",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    },
+    {
+      "model_id": "C002",
+      "canonical_tool_id": "C002",
+      "planned_semantic_alias": "calc_diffusion_coefficient",
+      "registry_api_name": "model_c002",
+      "runtime_openai_tool_name": "C002",
+      "recommended_policy": "保留model_id为稳定主键和当前LLM函数名；保留规划API函数名为semantic_alias；日志同时记录三者，不在本阶段破坏性重命名。",
+      "mapping_status": "proposed_not_frozen",
+      "human_decision": null,
+      "human_reviewer": null,
+      "reviewed_at": null,
+      "human_note": null
+    }
+  ],
+  "governance_note": "AI预审用于缩小人工复核范围；不得自动写入CF-05 accepted。人工至少需要确认所有revision_required_before_acceptance项和命名映射政策。"
+}

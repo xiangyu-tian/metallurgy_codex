@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "CF05B-17-TOOL-REVIEW-20260730",
+  "status": "passed",
+  "checks": {
+    "tool_count_17": true,
+    "revision_required_14": true,
+    "candidate_3": true,
+    "critical_5": true,
+    "naming_rows_17": true,
+    "formal_accepted_zero": true
+  },
+  "artifacts": {
+    "workbook": {
+      "filename": "cf05b_17_tool_human_confirmation.xlsx",
+      "sha256": "42bab24f138f9ad447fe3e5c03235d68abec4467ddf2a7ae3317920fec4a0557"
+    },
+    "ai_review_json": {
+      "filename": "cf05b_17_tool_ai_review.json",
+      "sha256": "46f37dd619e5c0051d9238d869deabc9be2594ed0254f1026e100c39b1e01d54"
+    },
+    "naming_map_json": {
+      "filename": "cf05b_17_tool_naming_map.json",
+      "sha256": "2d698b07ba1124b5a49017c933596fd04eb22ee7d0f457b98bb76e8e09bfef68"
+    }
+  }
+}
