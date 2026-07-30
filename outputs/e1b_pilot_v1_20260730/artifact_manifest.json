@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1B-PILOT-V1-20260730",
+  "artifacts": [
+    {
+      "filename": "e1b_tasks.json",
+      "sha256": "fa1a6509064dee10fe17ad26bb45ecd466cb225a157da98028edae1fd7fcf5ce"
+    },
+    {
+      "filename": "generation_report.json",
+      "sha256": "867c0084d0c02cc712524b3c312dd1b68ecaa00719fa003778058796b13fc621"
+    },
+    {
+      "filename": "Tools/core_freeze/verified_core/contracts_v1.json",
+      "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"
+    },
+    {
+      "filename": "Tools/core_freeze/verified_core/reference_cases_v1.json",
+      "sha256": "8efabe718a67e34d471921735461f654d5541559dbe5e322b7172d0250367d1f"
+    },
+    {
+      "filename": "Tools/core_freeze/e1b_pilot/templates_v1.json",
+      "sha256": "399a5d4aede50413fa44dcad8317f84f546b4d14ff92b603d38b466a4461e92b"
+    }
+  ]
+}

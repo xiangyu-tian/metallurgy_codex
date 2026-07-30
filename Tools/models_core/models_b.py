@@ -688,11 +688,26 @@ class B019_LeverRule(BaseModelTool):
 
     input_fields = [
         InputField("overall_composition", "总体成分", type="number", required=True,
-                    description="总体成分 (质量/摩尔分数)"),
+                    min_value=0.0, max_value=100.0,
+                    description="总体成分；三个成分值必须使用同一标度"),
         InputField("phase1_composition", "相1成分", type="number", required=True,
-                    description="相1边界成分"),
+                    min_value=0.0, max_value=100.0,
+                    description="相1边界成分；与总体成分使用同一标度"),
         InputField("phase2_composition", "相2成分", type="number", required=True,
-                    description="相2边界成分"),
+                    min_value=0.0, max_value=100.0,
+                    description="相2边界成分；与总体成分使用同一标度"),
+        InputField(
+            "composition_basis",
+            "成分标度",
+            type="select",
+            required=False,
+            default="auto",
+            enum=["fraction", "percent", "auto"],
+            description=(
+                "fraction 表示 0—1；percent 表示 0—100；"
+                "auto 仅为历史调用兼容，确认性实验必须显式指定"
+            ),
+        ),
         InputField("component", "组元", type="string", required=False, default="B",
                     description="组元名称"),
     ]
@@ -702,6 +717,25 @@ class B019_LeverRule(BaseModelTool):
         OutputField("phase2_fraction", "相2分数", type="number"),
         OutputField("conservation_residual", "守恒残差", type="number"),
     ]
+
+    def validate_input(self, params: dict) -> List[str]:
+        errors = super().validate_input(params)
+        if errors:
+            return errors
+
+        basis = params.get("composition_basis", "auto")
+        if basis == "fraction":
+            for field_name in (
+                "overall_composition",
+                "phase1_composition",
+                "phase2_composition",
+            ):
+                value = float(params[field_name])
+                if value > 1.0:
+                    errors.append(
+                        f"{field_name} ({value}) 超过 fraction 标度上限 1.0"
+                    )
+        return errors
 
     def invoke(self, params: dict, context: Optional[InvocationContext] = None) -> ModelResult:
         C0 = float(params["overall_composition"])
@@ -739,6 +773,7 @@ class B019_LeverRule(BaseModelTool):
                 "overall_composition": C0,
                 "conservation_residual": round(residual, 10),
                 "conservation_passed": residual < 1e-8,
+                "composition_basis": params.get("composition_basis", "auto"),
                 "component": params.get("component", "B"),
                 "method": "杠杆规则 (Lever Rule)",
             },

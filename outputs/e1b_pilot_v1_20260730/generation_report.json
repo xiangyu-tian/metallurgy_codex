@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1B-PILOT-V1-20260730",
+  "status": "passed",
+  "task_count": 14,
+  "condition_run_cells_before_repeats": 28,
+  "task_count_by_tool": {
+    "A001": 4,
+    "A002": 2,
+    "A003": 3,
+    "A004": 2,
+    "B019": 3
+  },
+  "validation_errors": [],
+  "limitations": [
+    "prepared表示任务与评分接口通过，不表示模型实验已经运行",
+    "任务仅覆盖verified_core v1合同范围",
+    "正式重复次数、模型清单和功效分析尚未冻结"
+  ],
+  "core_frozen": false
+}

@@ -130,8 +130,9 @@ def convert_units(
                 error=msg,
             )
 
-    # ── 计算换算因子（用 1.0 做参考值） ──
-    factor_ref = _convert_linear(1.0, src, tgt)
+    # target = source × factor + offset。偏移温标不能只用 convert(1) 表示因子。
+    factor_ref = src.to_si_factor / tgt.to_si_factor
+    offset_ref = _convert_linear(0.0, src, tgt)
 
     # ── 执行换算 ──
     result_value = _convert_linear(value, src, tgt)
@@ -176,6 +177,7 @@ def convert_units(
         source_unit=src.symbol,
         target_unit=tgt.symbol,
         conversion_factor=factor_ref,
+        conversion_offset=offset_ref,
         category=cat_str,
         dimension=dimension_symbol(src.dimension),
         warnings=warnings,

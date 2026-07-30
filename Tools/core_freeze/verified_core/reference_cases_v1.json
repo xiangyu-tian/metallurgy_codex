@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0",
+  "oracle_version": "independent-curated-cases-v1",
+  "generated_at": "2026-07-30T00:00:00+08:00",
+  "independence_statement": "Expected values are frozen in this file and are not computed by production tool implementations.",
+  "cases": [
+    {
+      "case_id": "VC-A001-N01",
+      "tool_id": "A001",
+      "case_type": "normal",
+      "input": {"value": 1, "source_unit": "kg", "target_unit": "g"},
+      "expected": {"success": true, "checks": [{"path": "value", "op": "approx", "value": 1000, "abs_tol": 1e-10}, {"path": "conversion_factor", "op": "approx", "value": 1000, "abs_tol": 1e-12}, {"path": "conversion_offset", "op": "approx", "value": 0, "abs_tol": 1e-12}]},
+      "oracle_basis": "SI prefix definition"
+    },
+    {
+      "case_id": "VC-A001-N02",
+      "tool_id": "A001",
+      "case_type": "normal",
+      "input": {"value": 2.5, "source_unit": "MPa", "target_unit": "Pa"},
+      "expected": {"success": true, "checks": [{"path": "value", "op": "approx", "value": 2500000, "abs_tol": 1e-6}]},
+      "oracle_basis": "SI prefix definition"
+    },
+    {
+      "case_id": "VC-A001-B01",
+      "tool_id": "A001",
+      "case_type": "boundary",
+      "input": {"value": 0, "source_unit": "°C", "target_unit": "K"},
+      "expected": {"success": true, "checks": [{"path": "value", "op": "approx", "value": 273.15, "abs_tol": 1e-12}, {"path": "conversion_factor", "op": "approx", "value": 1, "abs_tol": 1e-12}, {"path": "conversion_offset", "op": "approx", "value": 273.15, "abs_tol": 1e-12}]},
+      "oracle_basis": "BIPM SI Brochure Celsius relation"
+    },
+    {
+      "case_id": "VC-A001-B02",
+      "tool_id": "A001",
+      "case_type": "boundary",
+      "input": {"value": 32, "source_unit": "°F", "target_unit": "°C"},
+      "expected": {"success": true, "checks": [{"path": "value", "op": "approx", "value": 0, "abs_tol": 1e-12}, {"path": "conversion_factor", "op": "approx", "value": 0.5555555555555556, "abs_tol": 1e-12}, {"path": "conversion_offset", "op": "approx", "value": -17.77777777777778, "abs_tol": 1e-12}]},
+      "oracle_basis": "Exact Fahrenheit-Celsius affine relation"
+    },
+    {
+      "case_id": "VC-A001-D01",
+      "tool_id": "A001",
+      "case_type": "dimension",
+      "input": {"value": 1, "source_unit": "kg", "target_unit": "m"},
+      "expected": {"success": false, "error_code": "UNIT_MISMATCH"},
+      "oracle_basis": "Base-dimension mismatch"
+    },
+    {
+      "case_id": "VC-A001-D02",
+      "tool_id": "A001",
+      "case_type": "dimension",
+      "input": {"value": 1, "source_unit": "not_a_unit", "target_unit": "m"},
+      "expected": {"success": false, "error_code": "INVALID_INPUT"},
+      "oracle_basis": "Unit is absent from verified registry"
+    },
+    {
+      "case_id": "VC-A002-N01",
+      "tool_id": "A002",
+      "case_type": "normal",
+      "input": {"formula": "Fe2(SO4)3"},
+      "expected": {"success": true, "checks": [{"path": "elements", "op": "equal", "value": {"Fe": 2.0, "S": 3.0, "O": 12.0}}, {"path": "total_atoms", "op": "approx", "value": 17, "abs_tol": 0}]},
+      "oracle_basis": "Manual expansion of grouped stoichiometry"
+    },
+    {
+      "case_id": "VC-A002-N02",
+      "tool_id": "A002",
+      "case_type": "normal",
+      "input": {"formula": "[Cu(NH3)4]SO4"},
+      "expected": {"success": true, "checks": [{"path": "elements", "op": "equal", "value": {"Cu": 1.0, "N": 4.0, "H": 12.0, "S": 1.0, "O": 4.0}}]},
+      "oracle_basis": "Manual nested-group expansion"
+    },
+    {
+      "case_id": "VC-A002-B01",
+      "tool_id": "A002",
+      "case_type": "boundary",
+      "input": {"formula": "Fe2O3abc"},
+      "expected": {"success": false, "error_code": "INVALID_INPUT"},
+      "oracle_basis": "Grammar requires complete token consumption"
+    },
+    {
+      "case_id": "VC-A002-B02",
+      "tool_id": "A002",
+      "case_type": "boundary",
+      "input": {"formula": "()2"},
+      "expected": {"success": false, "error_code": "INVALID_INPUT"},
+      "oracle_basis": "Grammar rejects empty group"
+    },
+    {
+      "case_id": "VC-A002-B03",
+      "tool_id": "A002",
+      "case_type": "boundary",
+      "input": {"formula": "Fe0"},
+      "expected": {"success": false, "error_code": "INVALID_INPUT"},
+      "oracle_basis": "Stoichiometric multipliers must be positive"
+    },
+    {
+      "case_id": "VC-A003-N01",
+      "tool_id": "A003",
+      "case_type": "normal",
+      "input": {"formula": "Fe2O3"},
+      "expected": {"success": true, "checks": [{"path": "molar_mass", "op": "approx", "value": 159.687, "abs_tol": 0.0001}, {"path": "unit", "op": "equal", "value": "g/mol"}]},
+      "oracle_basis": "2×55.845 + 3×15.999"
+    },
+    {
+      "case_id": "VC-A003-N02",
+      "tool_id": "A003",
+      "case_type": "normal",
+      "input": {"formula": "H2SO4"},
+      "expected": {"success": true, "checks": [{"path": "molar_mass", "op": "approx", "value": 98.072, "abs_tol": 0.0001}]},
+      "oracle_basis": "2×1.008 + 32.06 + 4×15.999"
+    },
+    {
+      "case_id": "VC-A003-N03",
+      "tool_id": "A003",
+      "case_type": "normal",
+      "input": {"formula": "CaCO3"},
+      "expected": {"success": true, "checks": [{"path": "molar_mass", "op": "approx", "value": 100.086, "abs_tol": 0.0001}]},
+      "oracle_basis": "40.078 + 12.011 + 3×15.999"
+    },
+    {
+      "case_id": "VC-A003-B01",
+      "tool_id": "A003",
+      "case_type": "boundary",
+      "input": {"formula": "Xx2"},
+      "expected": {"success": false, "error_code": "INVALID_INPUT"},
+      "oracle_basis": "Unknown element symbol"
+    },
+    {
+      "case_id": "VC-A004-N01",
+      "tool_id": "A004",
+      "case_type": "normal",
+      "input": {"compositions": {"Fe": 94, "C": 4, "Si": 2}},
+      "expected": {"success": true, "checks": [{"path": "normalized", "op": "equal", "value": {"Fe": 0.94, "C": 0.04, "Si": 0.02}}, {"path": "sum_before", "op": "approx", "value": 100, "abs_tol": 1e-12}, {"path": "sum_after", "op": "approx", "value": 1, "abs_tol": 1e-12}]},
+      "oracle_basis": "Independent division by total"
+    },
+    {
+      "case_id": "VC-A004-M01",
+      "tool_id": "A004",
+      "case_type": "metamorphic",
+      "input": {"compositions": {"Fe": 188, "C": 8, "Si": 4}},
+      "expected": {"success": true, "checks": [{"path": "normalized", "op": "equal", "value": {"Fe": 0.94, "C": 0.04, "Si": 0.02}}]},
+      "oracle_basis": "Positive scale invariance"
+    },
+    {
+      "case_id": "VC-A004-B01",
+      "tool_id": "A004",
+      "case_type": "boundary",
+      "input": {"compositions": {"Fe": 0, "C": 0}},
+      "expected": {"success": false, "error_code": "INVALID_INPUT"},
+      "oracle_basis": "Normalization denominator is zero"
+    },
+    {
+      "case_id": "VC-A004-B02",
+      "tool_id": "A004",
+      "case_type": "boundary",
+      "input": {"compositions": {"Fe": -0.1, "C": 1.1}},
+      "expected": {"success": false, "error_code": "INVALID_INPUT"},
+      "oracle_basis": "Contract prohibits negative weights"
+    },
+    {
+      "case_id": "VC-A004-B03",
+      "tool_id": "A004",
+      "case_type": "boundary",
+      "input": {"compositions": ["Fe", "C"]},
+      "expected": {"success": false, "error_code": "INVALID_INPUT"},
+      "oracle_basis": "Contract requires a component-to-weight mapping"
+    },
+    {
+      "case_id": "VC-A004-B04",
+      "tool_id": "A004",
+      "case_type": "boundary",
+      "input": {"compositions": {"Fe": "not-a-number", "C": 1}},
+      "expected": {"success": false, "error_code": "INVALID_INPUT"},
+      "oracle_basis": "Contract requires numeric weights"
+    },
+    {
+      "case_id": "VC-B019-N01",
+      "tool_id": "B019",
+      "case_type": "normal",
+      "input": {"overall_composition": 0.4, "phase1_composition": 0.2, "phase2_composition": 0.7, "composition_basis": "fraction"},
+      "expected": {"success": true, "checks": [{"path": "phase1_fraction", "op": "approx", "value": 0.6, "abs_tol": 1e-12}, {"path": "phase2_fraction", "op": "approx", "value": 0.4, "abs_tol": 1e-12}, {"path": "conservation_residual", "op": "less_equal", "value": 1e-10}]},
+      "oracle_basis": "Independent solution of mass-balance equations"
+    },
+    {
+      "case_id": "VC-B019-M01",
+      "tool_id": "B019",
+      "case_type": "metamorphic",
+      "input": {"overall_composition": 40, "phase1_composition": 20, "phase2_composition": 70, "composition_basis": "percent"},
+      "expected": {"success": true, "checks": [{"path": "phase1_fraction", "op": "approx", "value": 0.6, "abs_tol": 1e-12}, {"path": "phase2_fraction", "op": "approx", "value": 0.4, "abs_tol": 1e-12}, {"path": "composition_basis", "op": "equal", "value": "percent"}]},
+      "oracle_basis": "Common-scale invariance"
+    },
+    {
+      "case_id": "VC-B019-B01",
+      "tool_id": "B019",
+      "case_type": "boundary",
+      "input": {"overall_composition": 0.2, "phase1_composition": 0.2, "phase2_composition": 0.7, "composition_basis": "fraction"},
+      "expected": {"success": true, "checks": [{"path": "phase1_fraction", "op": "approx", "value": 1, "abs_tol": 1e-12}, {"path": "phase2_fraction", "op": "approx", "value": 0, "abs_tol": 1e-12}]},
+      "oracle_basis": "Tie-line endpoint"
+    },
+    {
+      "case_id": "VC-B019-B02",
+      "tool_id": "B019",
+      "case_type": "boundary",
+      "input": {"overall_composition": 0.9, "phase1_composition": 0.2, "phase2_composition": 0.7, "composition_basis": "fraction"},
+      "expected": {"success": false, "error_code": "OUT_OF_DOMAIN"},
+      "oracle_basis": "Overall composition is outside tie-line endpoints"
+    },
+    {
+      "case_id": "VC-B019-B03",
+      "tool_id": "B019",
+      "case_type": "boundary",
+      "input": {"overall_composition": 0.4, "phase1_composition": 0.4, "phase2_composition": 0.4, "composition_basis": "fraction"},
+      "expected": {"success": false, "error_code": "INVALID_INPUT"},
+      "oracle_basis": "Degenerate tie line"
+    },
+    {
+      "case_id": "VC-B019-B04",
+      "tool_id": "B019",
+      "case_type": "boundary",
+      "input": {"overall_composition": 0.5, "phase1_composition": 0.2, "phase2_composition": 1.2, "composition_basis": "fraction"},
+      "expected": {"success": false, "error_code": "INVALID_INPUT"},
+      "oracle_basis": "Explicit fraction basis upper bound"
+    }
+  ]
+}

@@ -1,5 +1,9 @@
 # Core Frozen CF-11统计实现包
 
+> 研究主线已升级到`research_protocol_v1.1-rc1`。首批无需专家逐题标注的
+> 可执行工具合同与独立参考验证位于`verified_core/`；本目录其余CF-11文件仍是
+> 历史`v1.0-rc3.1`统计实现，不能单独证明新版Core Frozen完成。
+
 本目录实现`statistical_analysis_interface_v1.0-rc1.1.md`的数据契约、配对构造、描述性聚合、问题组簇级Bootstrap、H3/H4正式广义线性混合效应模型（GLMM）和正式结果文件输出。
 
 正式模型的引擎、版本、优化器、收敛阈值和简化链已冻结在：

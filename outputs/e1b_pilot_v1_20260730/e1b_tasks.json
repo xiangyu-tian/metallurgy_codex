@@ -1,0 +1,1231 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1B-PILOT-V1-20260730",
+  "dataset_status": "prepared",
+  "protocol_version": "research_protocol_v1.1-rc1",
+  "generator_version": "e1b-pilot-generator-v1.0.0",
+  "generated_at": "2026-07-30T00:00:00+08:00",
+  "primary_contrast": [
+    "forced_verified_oracle_parameters",
+    "no_tool"
+  ],
+  "task_count": 14,
+  "tasks": [
+    {
+      "task_id": "E1B-A001-001",
+      "task_family_id": "E1B-A001",
+      "task_pair_id": "PAIR-E1B-A001-001",
+      "data_layer": "controlled_confirmatory_pilot",
+      "source_type": "contract_generated",
+      "source_reference_case_id": "VC-A001-N01",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "generator_version": "e1b-pilot-generator-v1.0.0",
+      "random_seed": 2453358890,
+      "problem_text": "请将 1 kg 换算为 g。返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 1,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "expected_parameters": {
+        "value": 1,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "acceptable_tools": [
+        "A001"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "properties": {
+          "value": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 1000,
+            "abs_tol": 1e-10
+          }
+        ]
+      },
+      "reference_execution": {
+        "reference_case_id": "VC-A001-N01",
+        "oracle_version": "independent-curated-cases-v1",
+        "oracle_basis": "SI prefix definition",
+        "expected_checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 1000,
+            "abs_tol": 1e-10
+          }
+        ]
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A001",
+          "oracle_parameters": {
+            "value": 1,
+            "source_unit": "kg",
+            "target_unit": "g"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "pilot_candidate"
+    },
+    {
+      "task_id": "E1B-A001-002",
+      "task_family_id": "E1B-A001",
+      "task_pair_id": "PAIR-E1B-A001-002",
+      "data_layer": "controlled_confirmatory_pilot",
+      "source_type": "contract_generated",
+      "source_reference_case_id": "VC-A001-N02",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "generator_version": "e1b-pilot-generator-v1.0.0",
+      "random_seed": 4167375868,
+      "problem_text": "请将 2.5 MPa 换算为 Pa。返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 2.5,
+        "source_unit": "MPa",
+        "target_unit": "Pa"
+      },
+      "expected_parameters": {
+        "value": 2.5,
+        "source_unit": "MPa",
+        "target_unit": "Pa"
+      },
+      "acceptable_tools": [
+        "A001"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "properties": {
+          "value": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 2500000,
+            "abs_tol": 1e-06
+          }
+        ]
+      },
+      "reference_execution": {
+        "reference_case_id": "VC-A001-N02",
+        "oracle_version": "independent-curated-cases-v1",
+        "oracle_basis": "SI prefix definition",
+        "expected_checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 2500000,
+            "abs_tol": 1e-06
+          }
+        ]
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A001",
+          "oracle_parameters": {
+            "value": 2.5,
+            "source_unit": "MPa",
+            "target_unit": "Pa"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "pilot_candidate"
+    },
+    {
+      "task_id": "E1B-A001-003",
+      "task_family_id": "E1B-A001",
+      "task_pair_id": "PAIR-E1B-A001-003",
+      "data_layer": "controlled_confirmatory_pilot",
+      "source_type": "contract_generated",
+      "source_reference_case_id": "VC-A001-B01",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "generator_version": "e1b-pilot-generator-v1.0.0",
+      "random_seed": 3022508922,
+      "problem_text": "请将 0 °C 换算为 K。返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 0,
+        "source_unit": "°C",
+        "target_unit": "K"
+      },
+      "expected_parameters": {
+        "value": 0,
+        "source_unit": "°C",
+        "target_unit": "K"
+      },
+      "acceptable_tools": [
+        "A001"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "properties": {
+          "value": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 273.15,
+            "abs_tol": 1e-12
+          }
+        ]
+      },
+      "reference_execution": {
+        "reference_case_id": "VC-A001-B01",
+        "oracle_version": "independent-curated-cases-v1",
+        "oracle_basis": "BIPM SI Brochure Celsius relation",
+        "expected_checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 273.15,
+            "abs_tol": 1e-12
+          }
+        ]
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A001",
+          "oracle_parameters": {
+            "value": 0,
+            "source_unit": "°C",
+            "target_unit": "K"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "pilot_candidate"
+    },
+    {
+      "task_id": "E1B-A001-004",
+      "task_family_id": "E1B-A001",
+      "task_pair_id": "PAIR-E1B-A001-004",
+      "data_layer": "controlled_confirmatory_pilot",
+      "source_type": "contract_generated",
+      "source_reference_case_id": "VC-A001-B02",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "generator_version": "e1b-pilot-generator-v1.0.0",
+      "random_seed": 2306437722,
+      "problem_text": "请将 32 °F 换算为 °C。返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 32,
+        "source_unit": "°F",
+        "target_unit": "°C"
+      },
+      "expected_parameters": {
+        "value": 32,
+        "source_unit": "°F",
+        "target_unit": "°C"
+      },
+      "acceptable_tools": [
+        "A001"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "properties": {
+          "value": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 0,
+            "abs_tol": 1e-12
+          }
+        ]
+      },
+      "reference_execution": {
+        "reference_case_id": "VC-A001-B02",
+        "oracle_version": "independent-curated-cases-v1",
+        "oracle_basis": "Exact Fahrenheit-Celsius affine relation",
+        "expected_checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 0,
+            "abs_tol": 1e-12
+          }
+        ]
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A001",
+          "oracle_parameters": {
+            "value": 32,
+            "source_unit": "°F",
+            "target_unit": "°C"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "pilot_candidate"
+    },
+    {
+      "task_id": "E1B-A002-005",
+      "task_family_id": "E1B-A002",
+      "task_pair_id": "PAIR-E1B-A002-005",
+      "data_layer": "controlled_confirmatory_pilot",
+      "source_type": "contract_generated",
+      "source_reference_case_id": "VC-A002-N01",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "generator_version": "e1b-pilot-generator-v1.0.0",
+      "random_seed": 3860612326,
+      "problem_text": "请解析化学式 Fe2(SO4)3，返回每种元素及其计量数。",
+      "canonical_inputs": {
+        "formula": "Fe2(SO4)3"
+      },
+      "expected_parameters": {
+        "formula": "Fe2(SO4)3"
+      },
+      "acceptable_tools": [
+        "A002"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "elements"
+        ],
+        "properties": {
+          "elements": {
+            "type": "object"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A002-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "Fe": 2.0,
+              "S": 3.0,
+              "O": 12.0
+            }
+          }
+        ]
+      },
+      "reference_execution": {
+        "reference_case_id": "VC-A002-N01",
+        "oracle_version": "independent-curated-cases-v1",
+        "oracle_basis": "Manual expansion of grouped stoichiometry",
+        "expected_checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "Fe": 2.0,
+              "S": 3.0,
+              "O": 12.0
+            }
+          }
+        ]
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A002",
+          "oracle_parameters": {
+            "formula": "Fe2(SO4)3"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "pilot_candidate"
+    },
+    {
+      "task_id": "E1B-A002-006",
+      "task_family_id": "E1B-A002",
+      "task_pair_id": "PAIR-E1B-A002-006",
+      "data_layer": "controlled_confirmatory_pilot",
+      "source_type": "contract_generated",
+      "source_reference_case_id": "VC-A002-N02",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "generator_version": "e1b-pilot-generator-v1.0.0",
+      "random_seed": 1813149108,
+      "problem_text": "请解析化学式 [Cu(NH3)4]SO4，返回每种元素及其计量数。",
+      "canonical_inputs": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "expected_parameters": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "acceptable_tools": [
+        "A002"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "elements"
+        ],
+        "properties": {
+          "elements": {
+            "type": "object"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A002-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "Cu": 1.0,
+              "N": 4.0,
+              "H": 12.0,
+              "S": 1.0,
+              "O": 4.0
+            }
+          }
+        ]
+      },
+      "reference_execution": {
+        "reference_case_id": "VC-A002-N02",
+        "oracle_version": "independent-curated-cases-v1",
+        "oracle_basis": "Manual nested-group expansion",
+        "expected_checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "Cu": 1.0,
+              "N": 4.0,
+              "H": 12.0,
+              "S": 1.0,
+              "O": 4.0
+            }
+          }
+        ]
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A002",
+          "oracle_parameters": {
+            "formula": "[Cu(NH3)4]SO4"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "pilot_candidate"
+    },
+    {
+      "task_id": "E1B-A003-007",
+      "task_family_id": "E1B-A003",
+      "task_pair_id": "PAIR-E1B-A003-007",
+      "data_layer": "controlled_confirmatory_pilot",
+      "source_type": "contract_generated",
+      "source_reference_case_id": "VC-A003-N01",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "generator_version": "e1b-pilot-generator-v1.0.0",
+      "random_seed": 43176687,
+      "problem_text": "按本实验冻结的IUPAC/CIAAW 2021简化原子量表，计算 Fe2O3 的摩尔质量，单位为g/mol。",
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "expected_parameters": {
+        "formula": "Fe2O3"
+      },
+      "acceptable_tools": [
+        "A003"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "molar_mass"
+        ],
+        "properties": {
+          "molar_mass": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 159.687,
+            "abs_tol": 0.0001
+          }
+        ]
+      },
+      "reference_execution": {
+        "reference_case_id": "VC-A003-N01",
+        "oracle_version": "independent-curated-cases-v1",
+        "oracle_basis": "2×55.845 + 3×15.999",
+        "expected_checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 159.687,
+            "abs_tol": 0.0001
+          }
+        ]
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A003",
+          "oracle_parameters": {
+            "formula": "Fe2O3"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "pilot_candidate"
+    },
+    {
+      "task_id": "E1B-A003-008",
+      "task_family_id": "E1B-A003",
+      "task_pair_id": "PAIR-E1B-A003-008",
+      "data_layer": "controlled_confirmatory_pilot",
+      "source_type": "contract_generated",
+      "source_reference_case_id": "VC-A003-N02",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "generator_version": "e1b-pilot-generator-v1.0.0",
+      "random_seed": 3878922415,
+      "problem_text": "按本实验冻结的IUPAC/CIAAW 2021简化原子量表，计算 H2SO4 的摩尔质量，单位为g/mol。",
+      "canonical_inputs": {
+        "formula": "H2SO4"
+      },
+      "expected_parameters": {
+        "formula": "H2SO4"
+      },
+      "acceptable_tools": [
+        "A003"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "molar_mass"
+        ],
+        "properties": {
+          "molar_mass": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 98.072,
+            "abs_tol": 0.0001
+          }
+        ]
+      },
+      "reference_execution": {
+        "reference_case_id": "VC-A003-N02",
+        "oracle_version": "independent-curated-cases-v1",
+        "oracle_basis": "2×1.008 + 32.06 + 4×15.999",
+        "expected_checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 98.072,
+            "abs_tol": 0.0001
+          }
+        ]
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A003",
+          "oracle_parameters": {
+            "formula": "H2SO4"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "pilot_candidate"
+    },
+    {
+      "task_id": "E1B-A003-009",
+      "task_family_id": "E1B-A003",
+      "task_pair_id": "PAIR-E1B-A003-009",
+      "data_layer": "controlled_confirmatory_pilot",
+      "source_type": "contract_generated",
+      "source_reference_case_id": "VC-A003-N03",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "generator_version": "e1b-pilot-generator-v1.0.0",
+      "random_seed": 1304431084,
+      "problem_text": "按本实验冻结的IUPAC/CIAAW 2021简化原子量表，计算 CaCO3 的摩尔质量，单位为g/mol。",
+      "canonical_inputs": {
+        "formula": "CaCO3"
+      },
+      "expected_parameters": {
+        "formula": "CaCO3"
+      },
+      "acceptable_tools": [
+        "A003"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "molar_mass"
+        ],
+        "properties": {
+          "molar_mass": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 100.086,
+            "abs_tol": 0.0001
+          }
+        ]
+      },
+      "reference_execution": {
+        "reference_case_id": "VC-A003-N03",
+        "oracle_version": "independent-curated-cases-v1",
+        "oracle_basis": "40.078 + 12.011 + 3×15.999",
+        "expected_checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 100.086,
+            "abs_tol": 0.0001
+          }
+        ]
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A003",
+          "oracle_parameters": {
+            "formula": "CaCO3"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "pilot_candidate"
+    },
+    {
+      "task_id": "E1B-A004-010",
+      "task_family_id": "E1B-A004",
+      "task_pair_id": "PAIR-E1B-A004-010",
+      "data_layer": "controlled_confirmatory_pilot",
+      "source_type": "contract_generated",
+      "source_reference_case_id": "VC-A004-N01",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "generator_version": "e1b-pilot-generator-v1.0.0",
+      "random_seed": 3199069695,
+      "problem_text": "以下组分值使用同一基准：{\"C\":4,\"Fe\":94,\"Si\":2}。请将它们归一化，使总和为1。",
+      "canonical_inputs": {
+        "compositions": {
+          "Fe": 94,
+          "C": 4,
+          "Si": 2
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "Fe": 94,
+          "C": 4,
+          "Si": 2
+        }
+      },
+      "acceptable_tools": [
+        "A004"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "normalized"
+        ],
+        "properties": {
+          "normalized": {
+            "type": "object"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A004-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "Fe": 0.94,
+              "C": 0.04,
+              "Si": 0.02
+            }
+          }
+        ]
+      },
+      "reference_execution": {
+        "reference_case_id": "VC-A004-N01",
+        "oracle_version": "independent-curated-cases-v1",
+        "oracle_basis": "Independent division by total",
+        "expected_checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "Fe": 0.94,
+              "C": 0.04,
+              "Si": 0.02
+            }
+          }
+        ]
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A004",
+          "oracle_parameters": {
+            "compositions": {
+              "Fe": 94,
+              "C": 4,
+              "Si": 2
+            }
+          }
+        }
+      ],
+      "confirmatory_eligibility": "pilot_candidate"
+    },
+    {
+      "task_id": "E1B-A004-011",
+      "task_family_id": "E1B-A004",
+      "task_pair_id": "PAIR-E1B-A004-011",
+      "data_layer": "controlled_confirmatory_pilot",
+      "source_type": "contract_generated",
+      "source_reference_case_id": "VC-A004-M01",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "generator_version": "e1b-pilot-generator-v1.0.0",
+      "random_seed": 1603002081,
+      "problem_text": "以下组分值使用同一基准：{\"C\":8,\"Fe\":188,\"Si\":4}。请将它们归一化，使总和为1。",
+      "canonical_inputs": {
+        "compositions": {
+          "Fe": 188,
+          "C": 8,
+          "Si": 4
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "Fe": 188,
+          "C": 8,
+          "Si": 4
+        }
+      },
+      "acceptable_tools": [
+        "A004"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "normalized"
+        ],
+        "properties": {
+          "normalized": {
+            "type": "object"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A004-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "Fe": 0.94,
+              "C": 0.04,
+              "Si": 0.02
+            }
+          }
+        ]
+      },
+      "reference_execution": {
+        "reference_case_id": "VC-A004-M01",
+        "oracle_version": "independent-curated-cases-v1",
+        "oracle_basis": "Positive scale invariance",
+        "expected_checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "Fe": 0.94,
+              "C": 0.04,
+              "Si": 0.02
+            }
+          }
+        ]
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A004",
+          "oracle_parameters": {
+            "compositions": {
+              "Fe": 188,
+              "C": 8,
+              "Si": 4
+            }
+          }
+        }
+      ],
+      "confirmatory_eligibility": "pilot_candidate"
+    },
+    {
+      "task_id": "E1B-B019-012",
+      "task_family_id": "E1B-B019",
+      "task_pair_id": "PAIR-E1B-B019-012",
+      "data_layer": "controlled_confirmatory_pilot",
+      "source_type": "contract_generated",
+      "source_reference_case_id": "VC-B019-N01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "generator_version": "e1b-pilot-generator-v1.0.0",
+      "random_seed": 3285475469,
+      "problem_text": "在二元两相区的一条已知等温连线上，总体成分为 0.4，相1边界成分为 0.2，相2边界成分为 0.7，三者均使用 fraction 标度。请计算相1和相2的相分数。",
+      "canonical_inputs": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "expected_parameters": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "acceptable_tools": [
+        "B019"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "phase1_fraction",
+          "phase2_fraction"
+        ],
+        "properties": {
+          "phase1_fraction": {
+            "type": "number"
+          },
+          "phase2_fraction": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-B019-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.6,
+            "abs_tol": 1e-12
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.4,
+            "abs_tol": 1e-12
+          }
+        ]
+      },
+      "reference_execution": {
+        "reference_case_id": "VC-B019-N01",
+        "oracle_version": "independent-curated-cases-v1",
+        "oracle_basis": "Independent solution of mass-balance equations",
+        "expected_checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.6,
+            "abs_tol": 1e-12
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.4,
+            "abs_tol": 1e-12
+          }
+        ]
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "B019",
+          "oracle_parameters": {
+            "overall_composition": 0.4,
+            "phase1_composition": 0.2,
+            "phase2_composition": 0.7,
+            "composition_basis": "fraction"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "pilot_candidate"
+    },
+    {
+      "task_id": "E1B-B019-013",
+      "task_family_id": "E1B-B019",
+      "task_pair_id": "PAIR-E1B-B019-013",
+      "data_layer": "controlled_confirmatory_pilot",
+      "source_type": "contract_generated",
+      "source_reference_case_id": "VC-B019-M01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "generator_version": "e1b-pilot-generator-v1.0.0",
+      "random_seed": 911523301,
+      "problem_text": "在二元两相区的一条已知等温连线上，总体成分为 40，相1边界成分为 20，相2边界成分为 70，三者均使用 percent 标度。请计算相1和相2的相分数。",
+      "canonical_inputs": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "expected_parameters": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "acceptable_tools": [
+        "B019"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "phase1_fraction",
+          "phase2_fraction"
+        ],
+        "properties": {
+          "phase1_fraction": {
+            "type": "number"
+          },
+          "phase2_fraction": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-B019-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.6,
+            "abs_tol": 1e-12
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.4,
+            "abs_tol": 1e-12
+          }
+        ]
+      },
+      "reference_execution": {
+        "reference_case_id": "VC-B019-M01",
+        "oracle_version": "independent-curated-cases-v1",
+        "oracle_basis": "Common-scale invariance",
+        "expected_checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.6,
+            "abs_tol": 1e-12
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.4,
+            "abs_tol": 1e-12
+          }
+        ]
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "B019",
+          "oracle_parameters": {
+            "overall_composition": 40,
+            "phase1_composition": 20,
+            "phase2_composition": 70,
+            "composition_basis": "percent"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "pilot_candidate"
+    },
+    {
+      "task_id": "E1B-B019-014",
+      "task_family_id": "E1B-B019",
+      "task_pair_id": "PAIR-E1B-B019-014",
+      "data_layer": "controlled_confirmatory_pilot",
+      "source_type": "contract_generated",
+      "source_reference_case_id": "VC-B019-B01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "generator_version": "e1b-pilot-generator-v1.0.0",
+      "random_seed": 4013170529,
+      "problem_text": "在二元两相区的一条已知等温连线上，总体成分为 0.2，相1边界成分为 0.2，相2边界成分为 0.7，三者均使用 fraction 标度。请计算相1和相2的相分数。",
+      "canonical_inputs": {
+        "overall_composition": 0.2,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "expected_parameters": {
+        "overall_composition": 0.2,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "acceptable_tools": [
+        "B019"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "phase1_fraction",
+          "phase2_fraction"
+        ],
+        "properties": {
+          "phase1_fraction": {
+            "type": "number"
+          },
+          "phase2_fraction": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-B019-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 1,
+            "abs_tol": 1e-12
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0,
+            "abs_tol": 1e-12
+          }
+        ]
+      },
+      "reference_execution": {
+        "reference_case_id": "VC-B019-B01",
+        "oracle_version": "independent-curated-cases-v1",
+        "oracle_basis": "Tie-line endpoint",
+        "expected_checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 1,
+            "abs_tol": 1e-12
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0,
+            "abs_tol": 1e-12
+          }
+        ]
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "B019",
+          "oracle_parameters": {
+            "overall_composition": 0.2,
+            "phase1_composition": 0.2,
+            "phase2_composition": 0.7,
+            "composition_basis": "fraction"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "pilot_candidate"
+    }
+  ],
+  "core_frozen": false
+}

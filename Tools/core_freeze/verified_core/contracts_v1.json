@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.0",
+  "protocol_version": "research_protocol_v1.1-rc1",
+  "generated_at": "2026-07-30T00:00:00+08:00",
+  "contracts": [
+    {
+      "contract_id": "VC-A001-1.0.0",
+      "tool_id": "A001",
+      "tool_version": "1.0.0",
+      "tool_status": "verified_core",
+      "scientific_family": "通用数据与校验",
+      "scientific_function": "同量纲标量单位换算",
+      "required_inputs": ["value", "source_unit", "target_unit"],
+      "optional_inputs": [],
+      "input_units": {"value": "由 source_unit 声明"},
+      "output_contract": {
+        "value": "target = source × conversion_factor + conversion_offset",
+        "conversion_factor": "源单位 SI 因子 / 目标单位 SI 因子",
+        "conversion_offset": "源值为 0 时的目标值",
+        "category": "注册表量纲类别"
+      },
+      "supported_systems": ["SI", "contract_verified_non_SI_subset"],
+      "composition_constraints": [],
+      "model_assumptions": ["输入为有限标量", "源单位和目标单位量纲一致"],
+      "data_or_model_version": "a001-unit-registry-1.0.0",
+      "service_status": "available",
+      "validation_rules": [
+        "只在 verification_scope.unit_pairs 内生成确认性任务",
+        "量纲不一致必须失败",
+        "未知单位必须失败",
+        "仿射温标必须同时返回乘法因子和偏移量"
+      ],
+      "reference_sources": [
+        {
+          "source_id": "BIPM-SI-9",
+          "title": "The International System of Units, 9th edition",
+          "url": "https://www.bipm.org/en/publications/si-brochure"
+        },
+        {
+          "source_id": "NIST-SP811",
+          "title": "NIST Guide for the Use of the International System of Units",
+          "url": "https://www.nist.gov/pml/special-publication-811"
+        }
+      ],
+      "verification_scope": {
+        "unit_pairs": [
+          ["kg", "g"],
+          ["t", "kg"],
+          ["m", "mm"],
+          ["MPa", "Pa"],
+          ["atm", "Pa"],
+          ["kJ", "J"],
+          ["°C", "K"],
+          ["°F", "°C"]
+        ],
+        "numeric_domain": "finite IEEE-754 values that do not overflow the target representation"
+      },
+      "known_limitations": [
+        "注册表中的其他单位尚未进入本批独立参考覆盖",
+        "合理值边界告警不是数值正确性的证明"
+      ],
+      "contract_version": "1.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29"
+    },
+    {
+      "contract_id": "VC-A002-1.0.0",
+      "tool_id": "A002",
+      "tool_version": "1.0.0",
+      "tool_status": "verified_core",
+      "scientific_family": "通用数据与校验",
+      "scientific_function": "受限中性化学式的元素计量解析",
+      "required_inputs": ["formula"],
+      "optional_inputs": [],
+      "input_units": {},
+      "output_contract": {
+        "elements": "元素符号到正计量数的映射",
+        "molar_mass": "按冻结原子量快照计算的 g/mol 数值",
+        "mass_fractions": "各元素质量贡献 / 总摩尔质量"
+      },
+      "supported_systems": ["neutral_formula_grammar_v1"],
+      "composition_constraints": ["所有显式计量数必须大于 0"],
+      "model_assumptions": ["元素符号使用 IUPAC 大小写", "括号必须成对且非空"],
+      "data_or_model_version": "neutral-formula-grammar-v1",
+      "service_status": "available",
+      "validation_rules": [
+        "词法分析必须完整消费输入",
+        "支持圆括号、方括号和花括号嵌套",
+        "拒绝未知元素、前置系数、空括号、零或负计量数"
+      ],
+      "reference_sources": [
+        {
+          "source_id": "IUPAC-ELEMENTS",
+          "title": "IUPAC Periodic Table of Elements",
+          "url": "https://iupac.org/what-we-do/periodic-table-of-elements/"
+        }
+      ],
+      "verification_scope": {
+        "grammar": "sequence := (element [positive_number] | bracketed_group [positive_number])+",
+        "brackets": ["()", "[]", "{}"],
+        "number_format": "positive integer or unsigned decimal",
+        "elements": "symbols present in the frozen atomic-weight table"
+      },
+      "known_limitations": [
+        "不支持水合物点号、离子电荷、同位素、相态、反应系数和加合物语法",
+        "语法可解析不等于化合物在物理上存在"
+      ],
+      "contract_version": "1.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d"
+    },
+    {
+      "contract_id": "VC-A003-1.0.0",
+      "tool_id": "A003",
+      "tool_version": "1.0.0",
+      "tool_status": "verified_core",
+      "scientific_family": "通用数据与校验",
+      "scientific_function": "受限元素集化学式的摩尔质量计算",
+      "required_inputs": ["formula"],
+      "optional_inputs": [],
+      "input_units": {},
+      "output_contract": {
+        "molar_mass": "各元素计量数与冻结原子量乘积之和，四舍五入到 4 位小数",
+        "unit": "g/mol"
+      },
+      "supported_systems": ["neutral_formula_grammar_v1"],
+      "composition_constraints": ["确认性任务只使用 verification_scope.elements"],
+      "model_assumptions": ["采用冻结的 abridged standard atomic weight 单值"],
+      "data_or_model_version": "IUPAC-CIAAW-2021-abridged-subset-v1",
+      "service_status": "available",
+      "validation_rules": [
+        "先按 A002 合同解析，再按冻结原子量加权求和",
+        "确认性比较绝对容差为 0.0001 g/mol",
+        "超出受验证元素子集的公式不得生成确认性任务"
+      ],
+      "reference_sources": [
+        {
+          "source_id": "CIAAW-2021",
+          "title": "Standard Atomic Weights based on the Atomic Weights 2021 report",
+          "url": "https://ciaaw.org/atomic-weights.htm"
+        },
+        {
+          "source_id": "IUPAC-PT-2022",
+          "title": "IUPAC Periodic Table release using 2021 abridged standard atomic weights",
+          "url": "https://iupac.org/what-we-do/periodic-table-of-elements/"
+        }
+      ],
+      "verification_scope": {
+        "elements": {
+          "H": 1.008,
+          "C": 12.011,
+          "N": 14.007,
+          "O": 15.999,
+          "S": 32.06,
+          "Ca": 40.078,
+          "Fe": 55.845,
+          "Cu": 63.546
+        },
+        "grammar_contract": "VC-A002-1.0.0"
+      },
+      "known_limitations": [
+        "天然同位素丰度可使真实样品摩尔质量偏离所用代表值",
+        "受验证范围之外的元素虽可被实现接受，但不属于 verified_core 任务域"
+      ],
+      "contract_version": "1.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e"
+    },
+    {
+      "contract_id": "VC-A004-1.0.0",
+      "tool_id": "A004",
+      "tool_version": "1.0.0",
+      "tool_status": "verified_core",
+      "scientific_family": "通用数据与校验",
+      "scientific_function": "非负有限组分权重归一化",
+      "required_inputs": ["compositions"],
+      "optional_inputs": ["tolerance"],
+      "input_units": {"compositions": "共同任意线性标度"},
+      "output_contract": {
+        "normalized": "每个输入值除以全部输入值之和，保留 6 位小数",
+        "sum_before": "输入值之和",
+        "sum_after": 1.0,
+        "passed": "abs(sum_before - 1) <= tolerance"
+      },
+      "supported_systems": ["nonnegative_weight_vectors"],
+      "composition_constraints": ["至少一个分量", "所有值有限且非负", "总和严格大于 0"],
+      "model_assumptions": ["各分量使用同一标度和同一种基准"],
+      "data_or_model_version": null,
+      "service_status": "available",
+      "validation_rules": [
+        "拒绝负值、NaN、Infinity、空对象和全零向量",
+        "正比例缩放输入不改变归一化结果",
+        "tolerance 必须为有限非负数"
+      ],
+      "reference_sources": [
+        {
+          "source_id": "IUPAC-AMOUNT-FRACTION",
+          "title": "IUPAC Gold Book: amount fraction",
+          "url": "https://goldbook.iupac.org/terms/view/A00296"
+        }
+      ],
+      "verification_scope": {
+        "component_count": "1 or more",
+        "value_domain": "finite nonnegative numbers with a positive finite sum",
+        "scales": ["fraction", "percent", "arbitrary common positive scale"]
+      },
+      "known_limitations": [
+        "不判断组分名称、质量基准或摩尔基准是否具有科学意义",
+        "输出逐项保留 6 位小数，因此舍入后求和可能与 1 有微小差异"
+      ],
+      "contract_version": "1.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc"
+    },
+    {
+      "contract_id": "VC-B019-1.0.0",
+      "tool_id": "B019",
+      "tool_version": "1.0.0",
+      "tool_status": "verified_core",
+      "scientific_family": "热力学与相平衡",
+      "scientific_function": "二元两相区杠杆规则",
+      "required_inputs": [
+        "overall_composition",
+        "phase1_composition",
+        "phase2_composition",
+        "composition_basis"
+      ],
+      "optional_inputs": ["component"],
+      "input_units": {
+        "overall_composition": "fraction 或 percent",
+        "phase1_composition": "与 overall_composition 相同",
+        "phase2_composition": "与 overall_composition 相同"
+      },
+      "output_contract": {
+        "phase1_fraction": "(C2 - C0) / (C2 - C1)",
+        "phase2_fraction": "(C0 - C1) / (C2 - C1)",
+        "conservation_residual": "abs(f1*C1 + f2*C2 - C0)"
+      },
+      "supported_systems": ["binary_two_phase_tie_line"],
+      "composition_constraints": [
+        "C0 位于 C1 与 C2 之间（含端点）",
+        "C1 与 C2 不相等",
+        "composition_basis 必须在确认性任务中显式为 fraction 或 percent"
+      ],
+      "model_assumptions": [
+        "输入是同一组元在同一温度压力下同一基准的总体及两相平衡成分",
+        "系统位于二元两相区且相边界值已由独立来源给定"
+      ],
+      "data_or_model_version": "lever-rule-algebra-v1",
+      "service_status": "available",
+      "validation_rules": [
+        "fraction 标度范围为 0—1，percent 标度范围为 0—100",
+        "两个相分数之和必须为 1",
+        "相分数加权成分必须重构总体成分",
+        "auto 仅为旧调用兼容，不得用于确认性任务生成"
+      ],
+      "reference_sources": [
+        {
+          "source_id": "LEVER-RULE-DERIVATION",
+          "title": "Algebraic solution of f1+f2=1 and C0=f1*C1+f2*C2",
+          "url": "metallurgy://local/independent-reference/lever-rule-v1"
+        }
+      ],
+      "verification_scope": {
+        "component_count": 2,
+        "phase_count": 2,
+        "composition_basis": ["fraction", "percent"],
+        "tie_line_endpoints": "externally supplied; their scientific validity is outside this calculator"
+      },
+      "known_limitations": [
+        "工具不验证输入是否确实来自相图同一条等温连线",
+        "不适用于多元系、多于两相、亚稳态或非平衡问题",
+        "auto 标度不能检测调用方混用小数和百分数"
+      ],
+      "contract_version": "1.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d"
+    }
+  ]
+}

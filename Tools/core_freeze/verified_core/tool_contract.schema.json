@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "metallurgy://verified-core/tool-contract-v1",
+  "title": "Verified core metallurgy tool contract",
+  "type": "object",
+  "required": [
+    "contract_id",
+    "tool_id",
+    "tool_version",
+    "tool_status",
+    "scientific_family",
+    "scientific_function",
+    "required_inputs",
+    "optional_inputs",
+    "output_contract",
+    "validation_rules",
+    "reference_sources",
+    "verification_scope",
+    "known_limitations",
+    "contract_version",
+    "contract_hash"
+  ],
+  "properties": {
+    "contract_id": {"type": "string", "minLength": 1},
+    "tool_id": {"type": "string", "pattern": "^[A-Z][0-9]{3}$"},
+    "tool_version": {"type": "string", "minLength": 1},
+    "tool_status": {
+      "enum": [
+        "verified_core",
+        "conditionally_verified",
+        "unverified",
+        "known_defect"
+      ]
+    },
+    "scientific_family": {"type": "string", "minLength": 1},
+    "scientific_function": {"type": "string", "minLength": 1},
+    "required_inputs": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "optional_inputs": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "input_units": {"type": "object"},
+    "output_contract": {"type": "object", "minProperties": 1},
+    "supported_systems": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "composition_constraints": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "model_assumptions": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "data_or_model_version": {"type": ["string", "null"]},
+    "service_status": {"enum": ["available", "unavailable"]},
+    "validation_rules": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1
+    },
+    "reference_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_id", "title", "url"],
+        "properties": {
+          "source_id": {"type": "string"},
+          "title": {"type": "string"},
+          "url": {"type": "string"}
+        }
+      },
+      "minItems": 1
+    },
+    "verification_scope": {"type": "object", "minProperties": 1},
+    "known_limitations": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "contract_version": {"type": "string", "minLength": 1},
+    "contract_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": true
+}

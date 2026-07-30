@@ -57,6 +57,10 @@ class ConversionResult(BaseModel):
     source_unit: str = Field(..., description="源单位")
     target_unit: str = Field(..., description="目标单位")
     conversion_factor: float = Field(..., description="从源到目标的换算因子")
+    conversion_offset: float = Field(
+        default=0.0,
+        description="仿射换算偏移量，满足 target = source × factor + offset",
+    )
     category: str = Field("", description="物理量类别（如 length, pressure, temperature 等）")
     dimension: str = Field("", description="量纲表示（如 L, M·T⁻²）")
 

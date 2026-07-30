@@ -39,6 +39,7 @@ class A001_UnitConversion(BaseModelTool):
         OutputField("source_unit", "源单位", type="string"),
         OutputField("target_unit", "目标单位", type="string"),
         OutputField("conversion_factor", "换算因子", type="number"),
+        OutputField("conversion_offset", "换算偏移量", type="number"),
         OutputField("category", "单位类别", type="string"),
     ]
 
@@ -48,8 +49,21 @@ class A001_UnitConversion(BaseModelTool):
             from a001_unit_conversion import convert_units
             r = convert_units(
                 params["value"], params["source_unit"],
-                params["target_unit"], strict=False
+                params["target_unit"], strict=True
             )
+            if not r.success:
+                error = r.error or "单位换算失败"
+                error_code = (
+                    "UNIT_MISMATCH"
+                    if "量纲不匹配" in error
+                    else "INVALID_INPUT"
+                )
+                return ModelResult(
+                    success=False,
+                    error=error,
+                    error_code=error_code,
+                )
+
             warnings = []
             if hasattr(r, 'warnings') and r.warnings:
                 for w in r.warnings:
@@ -66,6 +80,7 @@ class A001_UnitConversion(BaseModelTool):
                     "source_unit": r.source_unit,
                     "target_unit": r.target_unit,
                     "conversion_factor": getattr(r, 'conversion_factor', r.value / params['value'] if params['value'] else 0),
+                    "conversion_offset": getattr(r, 'conversion_offset', 0.0),
                     "category": getattr(r, 'category', ''),
                 },
                 boundary_check=BoundaryCheck(
@@ -98,6 +113,7 @@ class A001_UnitConversion(BaseModelTool):
                     "source_unit": src,
                     "target_unit": tgt,
                     "conversion_factor": factor,
+                    "conversion_offset": fn(0.0),
                     "category": "温度",
                 },
             )
@@ -130,6 +146,7 @@ class A001_UnitConversion(BaseModelTool):
                     "source_unit": src,
                     "target_unit": tgt,
                     "conversion_factor": round(factor_src / factor_tgt, 10),
+                    "conversion_offset": 0.0,
                     "category": cat_src,
                 },
             )
@@ -142,10 +159,10 @@ class A001_UnitConversion(BaseModelTool):
 
 # ── 化学式解析辅助 ──
 
-# 元素符号正则：大写字母开头，后跟可选小写字母
-_ELEM_RE = re.compile(r'([A-Z][a-z]?)(\d*(?:\.\d+)?)')
-_BRACKET_RE = re.compile(r'[\(\[{]')
+# 元素符号、正计量数和括号。解析必须完整消费输入。
+_FORMULA_TOKEN_RE = re.compile(r'[A-Z][a-z]?|\d+(?:\.\d+)?|[()\[\]{}]')
 _BRACKET_CLOSE = {'(': ')', '[': ']', '{': '}'}
+_BRACKET_OPEN = {value: key for key, value in _BRACKET_CLOSE.items()}
 
 def parse_formula(formula: str) -> Tuple[Optional[Dict[str, float]], Optional[str]]:
     """
@@ -156,18 +173,13 @@ def parse_formula(formula: str) -> Tuple[Optional[Dict[str, float]], Optional[st
     if not formula:
         return None, "化学式为空"
 
-    # 词法分析：括号 + 元素 + 数字
-    # 先展开所有括号
     try:
-        expanded = _expand_brackets(formula)
+        tokens = _tokenize_formula(formula)
+        counts, next_index = _parse_formula_group(tokens, 0, None)
+        if next_index != len(tokens):
+            return None, f"化学式包含未解析内容: {tokens[next_index]}"
     except ValueError as e:
         return None, str(e)
-
-    # 解析展开后的元素
-    counts: Dict[str, float] = {}
-    for elem, num_str in _ELEM_RE.findall(expanded):
-        num = float(num_str) if num_str else 1
-        counts[elem] = counts.get(elem, 0) + num
 
     # 验证元素存在
     for elem in counts:
@@ -177,50 +189,83 @@ def parse_formula(formula: str) -> Tuple[Optional[Dict[str, float]], Optional[st
     return counts, None
 
 
-def _expand_brackets(s: str) -> str:
-    """递归展开括号：Fe2(SO4)3 → Fe2S3O12"""
-    # 找到最内层括号
-    stack = []
-    for i, ch in enumerate(s):
-        if ch in _BRACKET_CLOSE:
-            stack.append((i, ch))
-        elif ch in ')]}':
-            if not stack:
-                raise ValueError(f"括号不匹配: 多余的 '{ch}'")
-            start, open_ch = stack.pop()
-            expected_close = _BRACKET_CLOSE[open_ch]
-            if ch != expected_close:
-                raise ValueError(f"括号不匹配: '{open_ch}' 期望 '{expected_close}' 但收到 '{ch}'")
-            # 提取括号内容
-            inner = s[start+1:i]
-            # 提取括号后的数字
-            j = i + 1
-            while j < len(s) and (s[j].isdigit() or s[j] == '.'):
-                j += 1
-            multiplier = float(s[i+1:j]) if j > i + 1 else 1
-            # 展开括号内每个元素
-            expanded_inner = _multiply_elements(inner, multiplier)
-            s = s[:start] + expanded_inner + s[j:]
-            # 递归处理外层括号
-            return _expand_brackets(s)
-
-    if stack:
-        raise ValueError("括号不匹配: 有未闭合的括号")
-
-    return s
+def _tokenize_formula(formula: str) -> List[str]:
+    """完整词法分析；任何未消费字符都视为非法输入。"""
+    tokens = []
+    position = 0
+    while position < len(formula):
+        match = _FORMULA_TOKEN_RE.match(formula, position)
+        if match is None:
+            raise ValueError(
+                f"化学式含非法字符或语法，位置 {position}: {formula[position]!r}"
+            )
+        tokens.append(match.group(0))
+        position = match.end()
+    return tokens
 
 
-def _multiply_elements(s: str, multiplier: float) -> str:
-    """将化学式中的每个元素数量乘以系数"""
-    result = []
-    for elem, num_str in _ELEM_RE.findall(s):
-        num = float(num_str) if num_str else 1
-        new_num = num * multiplier
-        if new_num == int(new_num):
-            result.append(f"{elem}{int(new_num)}")
-        else:
-            result.append(f"{elem}{new_num}")
-    return ''.join(result)
+def _positive_multiplier(token: str) -> float:
+    multiplier = float(token)
+    if not math.isfinite(multiplier) or multiplier <= 0:
+        raise ValueError(f"化学计量数必须为正数: {token}")
+    return multiplier
+
+
+def _parse_formula_group(
+    tokens: List[str],
+    index: int,
+    expected_close: Optional[str],
+) -> Tuple[Dict[str, float], int]:
+    """递归下降解析化学式分组，并保留全部元素计量。"""
+    counts: Dict[str, float] = {}
+    item_count = 0
+
+    while index < len(tokens):
+        token = tokens[index]
+
+        if token in _BRACKET_CLOSE:
+            child, index = _parse_formula_group(
+                tokens,
+                index + 1,
+                _BRACKET_CLOSE[token],
+            )
+            multiplier = 1.0
+            if index < len(tokens) and tokens[index][0].isdigit():
+                multiplier = _positive_multiplier(tokens[index])
+                index += 1
+            for elem, count in child.items():
+                counts[elem] = counts.get(elem, 0.0) + count * multiplier
+            item_count += 1
+            continue
+
+        if token in _BRACKET_OPEN:
+            if expected_close is None:
+                raise ValueError(f"括号不匹配: 多余的 '{token}'")
+            if token != expected_close:
+                raise ValueError(
+                    f"括号不匹配: 期望 '{expected_close}' 但收到 '{token}'"
+                )
+            if item_count == 0:
+                raise ValueError("括号内不能为空")
+            return counts, index + 1
+
+        if token[0].isdigit():
+            raise ValueError(f"计量数位置非法: {token}")
+
+        elem = token
+        index += 1
+        multiplier = 1.0
+        if index < len(tokens) and tokens[index][0].isdigit():
+            multiplier = _positive_multiplier(tokens[index])
+            index += 1
+        counts[elem] = counts.get(elem, 0.0) + multiplier
+        item_count += 1
+
+    if expected_close is not None:
+        raise ValueError(f"括号不匹配: 缺少 '{expected_close}'")
+    if item_count == 0:
+        raise ValueError("化学式为空")
+    return counts, index
 
 
 def calc_molar_mass_from_elements(elements: Dict[str, float]) -> float:
@@ -328,6 +373,7 @@ class A004_CompositionNormalizer(BaseModelTool):
         InputField("compositions", "组成", type="object", required=True,
                     description='如 {"Fe": 0.94, "C": 0.005, "Si": 0.003}'),
         InputField("tolerance", "容差", type="number", required=False, default=0.001,
+                    min_value=0.0,
                     description="归一化偏差容差"),
     ]
 
@@ -338,6 +384,41 @@ class A004_CompositionNormalizer(BaseModelTool):
         OutputField("passed", "是否通过", type="boolean"),
     ]
 
+    def validate_input(self, params: dict) -> List[str]:
+        errors = super().validate_input(params)
+        if errors:
+            return errors
+
+        comps = params.get("compositions")
+        if not isinstance(comps, dict):
+            return ["compositions 必须是组分名称到数值的对象"]
+        if not comps:
+            return ["compositions 不能为空"]
+
+        values = []
+        for name, raw_value in comps.items():
+            if isinstance(raw_value, bool):
+                errors.append(f"compositions.{name} 必须是数值")
+                continue
+            try:
+                value = float(raw_value)
+            except (TypeError, ValueError):
+                errors.append(f"compositions.{name} 必须是数值")
+                continue
+            if not math.isfinite(value):
+                errors.append(f"compositions.{name} 必须是有限数值")
+            elif value < 0:
+                errors.append(f"compositions.{name} 不能为负数")
+            values.append(value)
+
+        if not errors:
+            total = sum(values)
+            if not math.isfinite(total):
+                errors.append("compositions 总和必须是有限数值")
+            elif total <= 0:
+                errors.append("compositions 总和必须大于0")
+        return errors
+
     def invoke(self, params: dict, context: Optional[InvocationContext] = None) -> ModelResult:
         comps = params.get("compositions", {})
         tol = float(params.get("tolerance", 0.001))
@@ -346,6 +427,24 @@ class A004_CompositionNormalizer(BaseModelTool):
             return ModelResult(success=False, error="组成不能为空", error_code="INVALID_INPUT")
 
         values = [float(v) for v in comps.values()]
+        if any(not math.isfinite(value) for value in values):
+            return ModelResult(
+                success=False,
+                error="组成必须为有限数值",
+                error_code="INVALID_INPUT",
+            )
+        if any(value < 0 for value in values):
+            return ModelResult(
+                success=False,
+                error="组成不能为负数",
+                error_code="INVALID_INPUT",
+            )
+        if not math.isfinite(tol) or tol < 0:
+            return ModelResult(
+                success=False,
+                error="容差必须为有限非负数",
+                error_code="INVALID_INPUT",
+            )
         total = sum(values)
 
         if total == 0:

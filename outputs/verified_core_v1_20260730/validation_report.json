@@ -1,0 +1,334 @@
+{
+  "schema_version": "1.0",
+  "validation_id": "VERIFIED-CORE-V1-20260730",
+  "validation_status": "passed",
+  "validated_at": "2026-07-30T08:36:52.437555+00:00",
+  "independent_oracle": "Expected values are frozen in this file and are not computed by production tool implementations.",
+  "global_errors": [],
+  "summary": {
+    "contract_count": 5,
+    "case_count": 27,
+    "passed_case_count": 27,
+    "failed_case_count": 0
+  },
+  "contract_results": [
+    {
+      "contract_id": "VC-A001-1.0.0",
+      "tool_id": "A001",
+      "status": "passed",
+      "errors": [],
+      "computed_contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29"
+    },
+    {
+      "contract_id": "VC-A002-1.0.0",
+      "tool_id": "A002",
+      "status": "passed",
+      "errors": [],
+      "computed_contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d"
+    },
+    {
+      "contract_id": "VC-A003-1.0.0",
+      "tool_id": "A003",
+      "status": "passed",
+      "errors": [],
+      "computed_contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e"
+    },
+    {
+      "contract_id": "VC-A004-1.0.0",
+      "tool_id": "A004",
+      "status": "passed",
+      "errors": [],
+      "computed_contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc"
+    },
+    {
+      "contract_id": "VC-B019-1.0.0",
+      "tool_id": "B019",
+      "status": "passed",
+      "errors": [],
+      "computed_contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d"
+    }
+  ],
+  "coverage_results": [
+    {
+      "tool_id": "A001",
+      "case_count": 6,
+      "case_type_counts": {
+        "boundary": 2,
+        "dimension": 2,
+        "normal": 2
+      },
+      "status": "passed",
+      "missing_required_case_types": []
+    },
+    {
+      "tool_id": "A002",
+      "case_count": 5,
+      "case_type_counts": {
+        "boundary": 3,
+        "normal": 2
+      },
+      "status": "passed",
+      "missing_required_case_types": []
+    },
+    {
+      "tool_id": "A003",
+      "case_count": 4,
+      "case_type_counts": {
+        "boundary": 1,
+        "normal": 3
+      },
+      "status": "passed",
+      "missing_required_case_types": []
+    },
+    {
+      "tool_id": "A004",
+      "case_count": 6,
+      "case_type_counts": {
+        "boundary": 4,
+        "metamorphic": 1,
+        "normal": 1
+      },
+      "status": "passed",
+      "missing_required_case_types": []
+    },
+    {
+      "tool_id": "B019",
+      "case_count": 6,
+      "case_type_counts": {
+        "boundary": 4,
+        "metamorphic": 1,
+        "normal": 1
+      },
+      "status": "passed",
+      "missing_required_case_types": []
+    }
+  ],
+  "case_results": [
+    {
+      "case_id": "VC-A001-N01",
+      "tool_id": "A001",
+      "case_type": "normal",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 105.04
+    },
+    {
+      "case_id": "VC-A001-N02",
+      "tool_id": "A001",
+      "case_type": "normal",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.03
+    },
+    {
+      "case_id": "VC-A001-B01",
+      "tool_id": "A001",
+      "case_type": "boundary",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.02
+    },
+    {
+      "case_id": "VC-A001-B02",
+      "tool_id": "A001",
+      "case_type": "boundary",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.02
+    },
+    {
+      "case_id": "VC-A001-D01",
+      "tool_id": "A001",
+      "case_type": "dimension",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.01
+    },
+    {
+      "case_id": "VC-A001-D02",
+      "tool_id": "A001",
+      "case_type": "dimension",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.04
+    },
+    {
+      "case_id": "VC-A002-N01",
+      "tool_id": "A002",
+      "case_type": "normal",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.03
+    },
+    {
+      "case_id": "VC-A002-N02",
+      "tool_id": "A002",
+      "case_type": "normal",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.02
+    },
+    {
+      "case_id": "VC-A002-B01",
+      "tool_id": "A002",
+      "case_type": "boundary",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.01
+    },
+    {
+      "case_id": "VC-A002-B02",
+      "tool_id": "A002",
+      "case_type": "boundary",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.0
+    },
+    {
+      "case_id": "VC-A002-B03",
+      "tool_id": "A002",
+      "case_type": "boundary",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.0
+    },
+    {
+      "case_id": "VC-A003-N01",
+      "tool_id": "A003",
+      "case_type": "normal",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.01
+    },
+    {
+      "case_id": "VC-A003-N02",
+      "tool_id": "A003",
+      "case_type": "normal",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.01
+    },
+    {
+      "case_id": "VC-A003-N03",
+      "tool_id": "A003",
+      "case_type": "normal",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.01
+    },
+    {
+      "case_id": "VC-A003-B01",
+      "tool_id": "A003",
+      "case_type": "boundary",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.0
+    },
+    {
+      "case_id": "VC-A004-N01",
+      "tool_id": "A004",
+      "case_type": "normal",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.01
+    },
+    {
+      "case_id": "VC-A004-M01",
+      "tool_id": "A004",
+      "case_type": "metamorphic",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.01
+    },
+    {
+      "case_id": "VC-A004-B01",
+      "tool_id": "A004",
+      "case_type": "boundary",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.0
+    },
+    {
+      "case_id": "VC-A004-B02",
+      "tool_id": "A004",
+      "case_type": "boundary",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.0
+    },
+    {
+      "case_id": "VC-A004-B03",
+      "tool_id": "A004",
+      "case_type": "boundary",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.0
+    },
+    {
+      "case_id": "VC-A004-B04",
+      "tool_id": "A004",
+      "case_type": "boundary",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.0
+    },
+    {
+      "case_id": "VC-B019-N01",
+      "tool_id": "B019",
+      "case_type": "normal",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.0
+    },
+    {
+      "case_id": "VC-B019-M01",
+      "tool_id": "B019",
+      "case_type": "metamorphic",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.0
+    },
+    {
+      "case_id": "VC-B019-B01",
+      "tool_id": "B019",
+      "case_type": "boundary",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.0
+    },
+    {
+      "case_id": "VC-B019-B02",
+      "tool_id": "B019",
+      "case_type": "boundary",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.0
+    },
+    {
+      "case_id": "VC-B019-B03",
+      "tool_id": "B019",
+      "case_type": "boundary",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.0
+    },
+    {
+      "case_id": "VC-B019-B04",
+      "tool_id": "B019",
+      "case_type": "boundary",
+      "status": "passed",
+      "failures": [],
+      "runtime_ms": 0.0
+    }
+  ],
+  "evidence_hashes": {
+    "contracts_source_sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec",
+    "reference_cases_sha256": "8efabe718a67e34d471921735461f654d5541559dbe5e322b7172d0250367d1f"
+  },
+  "known_limitations": [
+    "通过仅适用于各合同 verification_scope 明确列出的范围",
+    "本验证不证明相图端点、真实材料状态或开放域问题描述正确",
+    "确认性任务生成器仍须强制执行合同范围和版本"
+  ],
+  "core_frozen": false
+}

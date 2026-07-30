@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "generator_version": "e1b-pilot-generator-v1.0.0",
+  "generated_at": "2026-07-30T00:00:00+08:00",
+  "templates": {
+    "A001": {
+      "problem_template": "请将 {value} {source_unit} 换算为 {target_unit}。返回换算后的数值。",
+      "answer_schema": {
+        "type": "object",
+        "required": ["value"],
+        "properties": {"value": {"type": "number"}}
+      },
+      "primary_result_paths": ["value"]
+    },
+    "A002": {
+      "problem_template": "请解析化学式 {formula}，返回每种元素及其计量数。",
+      "answer_schema": {
+        "type": "object",
+        "required": ["elements"],
+        "properties": {"elements": {"type": "object"}}
+      },
+      "primary_result_paths": ["elements"]
+    },
+    "A003": {
+      "problem_template": "按本实验冻结的IUPAC/CIAAW 2021简化原子量表，计算 {formula} 的摩尔质量，单位为g/mol。",
+      "answer_schema": {
+        "type": "object",
+        "required": ["molar_mass"],
+        "properties": {"molar_mass": {"type": "number"}}
+      },
+      "primary_result_paths": ["molar_mass"]
+    },
+    "A004": {
+      "problem_template": "以下组分值使用同一基准：{compositions_json}。请将它们归一化，使总和为1。",
+      "answer_schema": {
+        "type": "object",
+        "required": ["normalized"],
+        "properties": {"normalized": {"type": "object"}}
+      },
+      "primary_result_paths": ["normalized"]
+    },
+    "B019": {
+      "problem_template": "在二元两相区的一条已知等温连线上，总体成分为 {overall_composition}，相1边界成分为 {phase1_composition}，相2边界成分为 {phase2_composition}，三者均使用 {composition_basis} 标度。请计算相1和相2的相分数。",
+      "answer_schema": {
+        "type": "object",
+        "required": ["phase1_fraction", "phase2_fraction"],
+        "properties": {
+          "phase1_fraction": {"type": "number"},
+          "phase2_fraction": {"type": "number"}
+        }
+      },
+      "primary_result_paths": ["phase1_fraction", "phase2_fraction"]
+    }
+  }
+}
