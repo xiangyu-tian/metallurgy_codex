@@ -1,0 +1,27 @@
+{
+  "schema_version": "2.0",
+  "dataset_id": "E1B-TASKSET-V2-20260730",
+  "validation_status": "passed",
+  "artifacts": [
+    {
+      "filename": "e1b_tasks_v2.json",
+      "sha256": "1193b238ac20ae131f6c97398f5ae4dcdcdc6f937c57973986368f8363afdf03"
+    },
+    {
+      "filename": "generation_report.json",
+      "sha256": "d957f89ec671318b588fe8bbca4b9be5e3473dc47cfd8c1477589d13b750a0a3"
+    },
+    {
+      "filename": "validation_report.json",
+      "sha256": "87139c1c0f54a40d0a5078780a389ecb3c60e07beeed60c5eaa813f2cffbd2b5"
+    },
+    {
+      "filename": "Tools/core_freeze/e1b_v2/task_seeds_v2.json",
+      "sha256": "d1d9d0ded0d5dd0084a0b2af443ba7c189d7a623e21fff4da79f2e9ce4486f6b"
+    },
+    {
+      "filename": "Tools/core_freeze/verified_core/contracts_v1.json",
+      "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"
+    }
+  ]
+}

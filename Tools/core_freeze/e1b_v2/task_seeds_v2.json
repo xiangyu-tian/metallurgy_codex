@@ -1,0 +1,137 @@
+{
+  "schema_version": "2.0",
+  "generator_version": "e1b-controlled-generator-v2.0.0",
+  "generated_at": "2026-07-30T00:00:00+08:00",
+  "split_policy": {
+    "version": "tool_stratified_group_holdout_v1",
+    "benefit_estimation": "前置预注册组",
+    "gate_evaluation": "后置预注册组",
+    "rule": "同一base_task_group_id及其精度/尺度变体只能进入同一split"
+  },
+  "atomic_weights": {
+    "H": 1.008,
+    "C": 12.011,
+    "N": 14.007,
+    "O": 15.999,
+    "S": 32.06,
+    "Ca": 40.078,
+    "Fe": 55.845,
+    "Cu": 63.546
+  },
+  "a001_groups": [
+    {
+      "group_id": "A001-KG-G",
+      "split": "benefit_estimation",
+      "source_unit": "kg",
+      "target_unit": "g",
+      "factor": 1000.0,
+      "offset": 0.0,
+      "values": [0.25, 12.5]
+    },
+    {
+      "group_id": "A001-T-KG",
+      "split": "benefit_estimation",
+      "source_unit": "t",
+      "target_unit": "kg",
+      "factor": 1000.0,
+      "offset": 0.0,
+      "values": [0.75, 3.2]
+    },
+    {
+      "group_id": "A001-M-MM",
+      "split": "benefit_estimation",
+      "source_unit": "m",
+      "target_unit": "mm",
+      "factor": 1000.0,
+      "offset": 0.0,
+      "values": [0.0125, 2.75]
+    },
+    {
+      "group_id": "A001-MPA-PA",
+      "split": "benefit_estimation",
+      "source_unit": "MPa",
+      "target_unit": "Pa",
+      "factor": 1000000.0,
+      "offset": 0.0,
+      "values": [0.0012, 3.45]
+    },
+    {
+      "group_id": "A001-ATM-PA",
+      "split": "benefit_estimation",
+      "source_unit": "atm",
+      "target_unit": "Pa",
+      "factor": 101325.0,
+      "offset": 0.0,
+      "values": [0.5, 1.2]
+    },
+    {
+      "group_id": "A001-KJ-J",
+      "split": "gate_evaluation",
+      "source_unit": "kJ",
+      "target_unit": "J",
+      "factor": 1000.0,
+      "offset": 0.0,
+      "values": [0.125, 42.5]
+    },
+    {
+      "group_id": "A001-C-K",
+      "split": "gate_evaluation",
+      "source_unit": "°C",
+      "target_unit": "K",
+      "factor": 1.0,
+      "offset": 273.15,
+      "values": [-40.0, 850.0]
+    },
+    {
+      "group_id": "A001-F-C",
+      "split": "gate_evaluation",
+      "source_unit": "°F",
+      "target_unit": "°C",
+      "factor": 0.5555555555555556,
+      "offset": -17.77777777777778,
+      "values": [-40.0, 212.0]
+    }
+  ],
+  "a002_groups": [
+    {"group_id": "A002-01", "split": "benefit_estimation", "formula": "Fe2O3", "elements": {"Fe": 2.0, "O": 3.0}},
+    {"group_id": "A002-02", "split": "benefit_estimation", "formula": "Fe2(SO4)3", "elements": {"Fe": 2.0, "S": 3.0, "O": 12.0}},
+    {"group_id": "A002-03", "split": "benefit_estimation", "formula": "[Cu(NH3)4]SO4", "elements": {"Cu": 1.0, "N": 4.0, "H": 12.0, "S": 1.0, "O": 4.0}},
+    {"group_id": "A002-04", "split": "benefit_estimation", "formula": "Ca(OH)2", "elements": {"Ca": 1.0, "O": 2.0, "H": 2.0}},
+    {"group_id": "A002-05", "split": "benefit_estimation", "formula": "(NH4)2SO4", "elements": {"N": 2.0, "H": 8.0, "S": 1.0, "O": 4.0}},
+    {"group_id": "A002-06", "split": "benefit_estimation", "formula": "K4[Fe(CN)6]", "elements": {"K": 4.0, "Fe": 1.0, "C": 6.0, "N": 6.0}},
+    {"group_id": "A002-07", "split": "benefit_estimation", "formula": "Ca3(PO4)2", "elements": {"Ca": 3.0, "P": 2.0, "O": 8.0}},
+    {"group_id": "A002-08", "split": "gate_evaluation", "formula": "Al2(SO4)3", "elements": {"Al": 2.0, "S": 3.0, "O": 12.0}},
+    {"group_id": "A002-09", "split": "gate_evaluation", "formula": "Mg(OH)2", "elements": {"Mg": 1.0, "O": 2.0, "H": 2.0}},
+    {"group_id": "A002-10", "split": "gate_evaluation", "formula": "Cu(NO3)2", "elements": {"Cu": 1.0, "N": 2.0, "O": 6.0}},
+    {"group_id": "A002-11", "split": "gate_evaluation", "formula": "Fe3O4", "elements": {"Fe": 3.0, "O": 4.0}},
+    {"group_id": "A002-12", "split": "gate_evaluation", "formula": "C6H12O6", "elements": {"C": 6.0, "H": 12.0, "O": 6.0}}
+  ],
+  "a003_groups": [
+    {"group_id": "A003-01", "split": "benefit_estimation", "formula": "Fe2O3", "elements": {"Fe": 2.0, "O": 3.0}},
+    {"group_id": "A003-02", "split": "benefit_estimation", "formula": "H2SO4", "elements": {"H": 2.0, "S": 1.0, "O": 4.0}},
+    {"group_id": "A003-03", "split": "benefit_estimation", "formula": "CaCO3", "elements": {"Ca": 1.0, "C": 1.0, "O": 3.0}},
+    {"group_id": "A003-04", "split": "benefit_estimation", "formula": "Fe3O4", "elements": {"Fe": 3.0, "O": 4.0}},
+    {"group_id": "A003-05", "split": "benefit_estimation", "formula": "CuSO4", "elements": {"Cu": 1.0, "S": 1.0, "O": 4.0}},
+    {"group_id": "A003-06", "split": "benefit_estimation", "formula": "(NH4)2SO4", "elements": {"N": 2.0, "H": 8.0, "S": 1.0, "O": 4.0}},
+    {"group_id": "A003-07", "split": "gate_evaluation", "formula": "Ca(OH)2", "elements": {"Ca": 1.0, "O": 2.0, "H": 2.0}},
+    {"group_id": "A003-08", "split": "gate_evaluation", "formula": "FeSO4", "elements": {"Fe": 1.0, "S": 1.0, "O": 4.0}},
+    {"group_id": "A003-09", "split": "gate_evaluation", "formula": "CuO", "elements": {"Cu": 1.0, "O": 1.0}},
+    {"group_id": "A003-10", "split": "gate_evaluation", "formula": "NH3", "elements": {"N": 1.0, "H": 3.0}}
+  ],
+  "a004_groups": [
+    {"group_id": "A004-STEEL", "split": "benefit_estimation", "variants": [{"Fe": 94.0, "C": 4.0, "Si": 2.0}, {"Fe": 188.0, "C": 8.0, "Si": 4.0}]},
+    {"group_id": "A004-BINARY", "split": "benefit_estimation", "variants": [{"A": 2.0, "B": 3.0}, {"A": 20.0, "B": 30.0}]},
+    {"group_id": "A004-TERNARY", "split": "benefit_estimation", "variants": [{"A": 1.0, "B": 1.0, "C": 2.0}, {"A": 0.25, "B": 0.25, "C": 0.5}]},
+    {"group_id": "A004-TRACE", "split": "benefit_estimation", "variants": [{"matrix": 999.0, "trace": 1.0}, {"matrix": 0.999, "trace": 0.001}]},
+    {"group_id": "A004-QUATERNARY", "split": "gate_evaluation", "variants": [{"A": 5.0, "B": 10.0, "C": 15.0, "D": 20.0}, {"A": 0.5, "B": 1.0, "C": 1.5, "D": 2.0}]},
+    {"group_id": "A004-SINGLE", "split": "gate_evaluation", "variants": [{"Fe": 7.0}, {"Fe": 0.07}]}
+  ],
+  "b019_groups": [
+    {"group_id": "B019-01", "split": "benefit_estimation", "overall": 0.4, "phase1": 0.2, "phase2": 0.7},
+    {"group_id": "B019-02", "split": "benefit_estimation", "overall": 0.55, "phase1": 0.1, "phase2": 0.9},
+    {"group_id": "B019-03", "split": "benefit_estimation", "overall": 0.25, "phase1": 0.25, "phase2": 0.8},
+    {"group_id": "B019-04", "split": "benefit_estimation", "overall": 0.6, "phase1": 0.85, "phase2": 0.35},
+    {"group_id": "B019-05", "split": "gate_evaluation", "overall": 0.33, "phase1": 0.05, "phase2": 0.75},
+    {"group_id": "B019-06", "split": "gate_evaluation", "overall": 0.72, "phase1": 0.4, "phase2": 0.8}
+  ]
+}

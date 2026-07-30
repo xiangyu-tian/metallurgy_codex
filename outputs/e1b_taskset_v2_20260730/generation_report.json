@@ -1,0 +1,34 @@
+{
+  "schema_version": "2.0",
+  "dataset_id": "E1B-TASKSET-V2-20260730",
+  "status": "passed",
+  "task_count": 72,
+  "condition_run_cells_before_repeats": 144,
+  "task_count_by_tool": {
+    "A001": 16,
+    "A002": 12,
+    "A003": 20,
+    "A004": 12,
+    "B019": 12
+  },
+  "task_count_by_split": {
+    "benefit_estimation": 45,
+    "gate_evaluation": 27
+  },
+  "a003_count_by_precision_policy": {
+    "approximate_educational": 10,
+    "strict_versioned": 10
+  },
+  "reference_generation": {
+    "production_tool_code_imported": false,
+    "basis": "frozen facts plus independent elementary equations"
+  },
+  "structural_validation_errors": [],
+  "production_validation_status": "passed",
+  "limitations": [
+    "prepared means task construction passed; it does not mean model API runs were performed",
+    "gate_evaluation is held out from benefit-estimation decisions",
+    "development_candidate is not equivalent to confirmatory gold"
+  ],
+  "core_frozen": false
+}
