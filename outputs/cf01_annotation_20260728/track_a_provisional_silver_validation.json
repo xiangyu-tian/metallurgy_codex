@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "pilot_id": "CF01-PILOT-V1",
+  "generated_at": "2026-07-30T06:47:43.319Z",
+  "status": "passed",
+  "checks": {
+    "expected_task_count": true,
+    "expected_human_adjudicated_count": true,
+    "expected_human_audit_count": true,
+    "expected_ai_consensus_count": true,
+    "one_adjudicator": true,
+    "enums_valid": true,
+    "policy_actions_valid": true,
+    "source_hashes_recorded": true
+  },
+  "counts": {
+    "tasks": 20,
+    "human_adjudicated": 9,
+    "human_audit_confirmed": 3,
+    "ai_consensus_unreviewed": 8,
+    "explicit_policy_overrides": 1,
+    "errors": 0,
+    "warnings": 4
+  },
+  "errors": [],
+  "warnings": [
+    "boundary_flags were optional in the adjudication workbook and remain not_adjudicated when blank",
+    "required_inputs, missing_inputs, and coarse_capability were not adjudicated",
+    "the workbook uses Chinese-sheet COUNTIF formulas that the artifact-tool evaluator reports as #NAME? after Excel save; cached Excel values are not used by this conversion",
+    "this output is provisional silver and is not eligible to pass CF-01 or CF-03"
+  ],
+  "source_hashes": {
+    "task_file_sha256": "118333ED7212EAAF3C52A6D577FC3FE8CA7114877E62AF94DB47D2A5C7AE2CF8",
+    "ai_a_file_sha256": "DD2567C1CBE7ECEBF54E2DF23B889845E5333AD2BC90C9A5B1175EB3FAB44EEB",
+    "ai_b_file_sha256": "62CB40AB3ACBE0630876ACB277062CB204692D28F35B0E06E8559526ABDC3310",
+    "adjudication_workbook_sha256": "0727B9E2074312C02B6FD46699539CEAF959752D83D2635DA432CBCE9EBFFCC7",
+    "annotation_policy_sha256": "29ECF7BC24D83B902B6C3F1BE26A0023570A0D5E669A9B21FC666A4193265CE8"
+  },
+  "output_file": "Tools/core_freeze/pilot_v1/track_a_provisional_silver.json"
+}

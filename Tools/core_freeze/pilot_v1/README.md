@@ -4,7 +4,7 @@
 
 当前状态：
 
-- CF-01：20例任务清单和两份隔离标注模板已准备，双人标注、一致性统计和裁决尚未执行；
+- CF-01：双AI共识＋人工精简裁决已形成20例`provisional_silver`候选集；由于没有双人类独立标注，CF-01仍为`in_progress`；
 - CF-02：20个目标任务和构造契约已准备；当前只有17个已实现工具，且尚无工具完成CF-05联合审核，因此50/100/120工具池不得构造；
 - `core_frozen=false`。
 
@@ -91,7 +91,7 @@ AI-A/AI-B核心标签一致
 → 人工抽查3题全字段一致样本
 → 标记需专业复核的任务
 → 生成provisional silver裁决结果
-→ 转换为正式JSON并运行标注态校验
+→ 转换为银标准JSON并运行专用完整性校验
 ```
 
 三道抽查使用固定种子`CF01-AUDIT-V1`，在AI全字段一致样本中按
@@ -102,3 +102,8 @@ AI-A/AI-B核心标签一致
 AI—AI的Cohen's kappa和Jaccard只作为诊断值，不能写成双人类标注一致性。
 该流程没有人工盲标，输出只能标记为`provisional_silver`，不能据此宣布
 CF-01、CF-03或Core Frozen通过。
+
+当前已生成：
+
+- `track_a_provisional_silver.json`：20题银标准候选标签；
+- `outputs/cf01_annotation_20260728/track_a_provisional_silver_validation.json`：转换与政策校验报告。

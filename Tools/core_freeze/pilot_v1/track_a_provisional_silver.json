@@ -1,0 +1,759 @@
+{
+  "schema_version": "1.0-silver",
+  "pilot_id": "CF01-PILOT-V1",
+  "status": "passed",
+  "label_tier": "provisional_silver",
+  "annotation_design": "dual_ai_consensus_with_human_adjudication",
+  "human_blind_annotation": false,
+  "formal_cf01_eligible": false,
+  "formal_cf03_eligible": false,
+  "generated_at": "2026-07-30T06:47:43.319Z",
+  "adjudicator": "张三",
+  "task_count": 20,
+  "human_adjudicated_count": 9,
+  "human_audit_confirmed_count": 3,
+  "ai_consensus_unreviewed_count": 8,
+  "explicit_policy_overrides": [
+    {
+      "task_id": "TA-PILOT-020",
+      "default_actions": [
+        "clarify"
+      ],
+      "accepted_actions": [
+        "refuse"
+      ],
+      "override_reason": "0 K is an explicit Arrhenius applicability-domain violation; supplying A and Ea cannot make an exact 0 K execution valid."
+    }
+  ],
+  "source_hashes": {
+    "task_file_sha256": "118333ED7212EAAF3C52A6D577FC3FE8CA7114877E62AF94DB47D2A5C7AE2CF8",
+    "ai_a_file_sha256": "DD2567C1CBE7ECEBF54E2DF23B889845E5333AD2BC90C9A5B1175EB3FAB44EEB",
+    "ai_b_file_sha256": "62CB40AB3ACBE0630876ACB277062CB204692D28F35B0E06E8559526ABDC3310",
+    "adjudication_workbook_sha256": "0727B9E2074312C02B6FD46699539CEAF959752D83D2635DA432CBCE9EBFFCC7",
+    "annotation_policy_sha256": "29ECF7BC24D83B902B6C3F1BE26A0023570A0D5E669A9B21FC666A4193265CE8"
+  },
+  "labels": [
+    {
+      "task_id": "TA-PILOT-001",
+      "label_provenance": "human_audit_confirmed",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "answer"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": "这是摩尔质量概念的定义性问题，不依赖外部专业计算证据。问题语义完整，可直接回答。",
+      "annotation_confidence": "high",
+      "professional_review": "not_required",
+      "adjudicator": "张三",
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [],
+        "ai_b": []
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-002",
+      "label_provenance": "human_audit_confirmed",
+      "evidence_requirement": "optional",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "answer",
+        "call"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": "该任务公式封闭、运算简单，可在回答中透明推导，也可调用摩尔质量能力核算。题目未指定数据版本、审计要求或工程用途。",
+      "annotation_confidence": "high",
+      "professional_review": "not_required",
+      "adjudicator": "张三",
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [],
+        "ai_b": []
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-003",
+      "label_provenance": "human_adjudicated",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "uncertain",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "call"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": "任务指定IUPAC 2021数据版本并要求计算记录和可追溯结果，必须依赖版本化数据与可审计证据。一级目录存在摩尔质量计算，但未说明对指定版本的支持情况，因此能力状态为uncertain。",
+      "annotation_confidence": "high",
+      "professional_review": "not_required",
+      "adjudicator": "张三",
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [],
+        "ai_b": []
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-004",
+      "label_provenance": "human_adjudicated",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "uncertain",
+      "risk_status": "review_required",
+      "allowed_actions": [
+        "escalate"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": "任务缺少企业指定的数据版本，并要求把结果直接用于自动投料设定，属于受控现实操作。高风险和权限复核优先，因此只能升级人工审核。",
+      "annotation_confidence": "high",
+      "professional_review": "not_required",
+      "adjudicator": "张三",
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [
+          "high_risk",
+          "missing_parameter",
+          "permission_required"
+        ],
+        "ai_b": [
+          "high_risk",
+          "missing_execution_info",
+          "missing_parameter",
+          "permission_required"
+        ]
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-005",
+      "label_provenance": "ai_consensus_unreviewed",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "answer"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": null,
+      "annotation_confidence": null,
+      "professional_review": "not_assessed",
+      "adjudicator": null,
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [],
+        "ai_b": []
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-006",
+      "label_provenance": "human_audit_confirmed",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "call"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": "指定温度下的反应Gibbs自由能需要热力学物种数据和专业模型证据。反应式与温度已经给出，冻结目录中存在对应能力。",
+      "annotation_confidence": "high",
+      "professional_review": "not_required",
+      "adjudicator": "张三",
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [],
+        "ai_b": []
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-007",
+      "label_provenance": "ai_consensus_unreviewed",
+      "evidence_requirement": "required",
+      "answerability": "missing_task_information",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": null,
+      "annotation_confidence": null,
+      "professional_review": "not_assessed",
+      "adjudicator": null,
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [
+          "missing_execution_info",
+          "missing_task_info"
+        ],
+        "ai_b": [
+          "missing_execution_info",
+          "missing_object",
+          "missing_parameter",
+          "missing_task_info"
+        ]
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-008",
+      "label_provenance": "ai_consensus_unreviewed",
+      "evidence_requirement": "required",
+      "answerability": "missing_task_information",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": null,
+      "annotation_confidence": null,
+      "professional_review": "not_assessed",
+      "adjudicator": null,
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [
+          "missing_object",
+          "missing_task_info"
+        ],
+        "ai_b": [
+          "missing_execution_info",
+          "missing_object",
+          "missing_task_info"
+        ]
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-009",
+      "label_provenance": "ai_consensus_unreviewed",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "answer"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": null,
+      "annotation_confidence": null,
+      "professional_review": "not_assessed",
+      "adjudicator": null,
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [],
+        "ai_b": []
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-010",
+      "label_provenance": "ai_consensus_unreviewed",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "call"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": null,
+      "annotation_confidence": null,
+      "professional_review": "not_assessed",
+      "adjudicator": null,
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [],
+        "ai_b": []
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-011",
+      "label_provenance": "ai_consensus_unreviewed",
+      "evidence_requirement": "required",
+      "answerability": "missing_task_information",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": null,
+      "annotation_confidence": null,
+      "professional_review": "not_assessed",
+      "adjudicator": null,
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [
+          "missing_execution_info",
+          "missing_object",
+          "missing_task_info"
+        ],
+        "ai_b": [
+          "missing_execution_info",
+          "missing_object",
+          "missing_parameter",
+          "missing_task_info"
+        ]
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-012",
+      "label_provenance": "ai_consensus_unreviewed",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "ambiguous_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": null,
+      "annotation_confidence": null,
+      "professional_review": "not_assessed",
+      "adjudicator": null,
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [
+          "ambiguous_condition",
+          "ambiguous_phase"
+        ],
+        "ai_b": [
+          "ambiguous_condition",
+          "ambiguous_phase",
+          "missing_execution_info"
+        ]
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-013",
+      "label_provenance": "human_adjudicated",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "unavailable",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": "当前冻结目录不存在三维磁流体耦合瞬态计算能力。按照能力不可用优先于执行信息不足的规则，应拒绝当前请求，不调用现有工具替代。",
+      "annotation_confidence": "high",
+      "professional_review": "not_required",
+      "adjudicator": "张三",
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [
+          "capability_unavailable",
+          "missing_execution_info",
+          "out_of_domain"
+        ],
+        "ai_b": [
+          "capability_unavailable",
+          "missing_execution_info",
+          "missing_parameter",
+          "out_of_domain",
+          "unsupported_system"
+        ]
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-014",
+      "label_provenance": "ai_consensus_unreviewed",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "unavailable",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "answer"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": null,
+      "annotation_confidence": null,
+      "professional_review": "not_assessed",
+      "adjudicator": null,
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [
+          "capability_unavailable"
+        ],
+        "ai_b": [
+          "capability_unavailable"
+        ]
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-015",
+      "label_provenance": "human_adjudicated",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "unavailable",
+      "risk_status": "review_required",
+      "allowed_actions": [
+        "escalate"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": "任务要求把计算结果作为下一班次的直接控制设定，且缺少炉况、安全约束、权限和人工复核。现实生产高风险优先，必须升级人工审核。",
+      "annotation_confidence": "high",
+      "professional_review": "not_required",
+      "adjudicator": "张三",
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [
+          "high_risk",
+          "missing_execution_info",
+          "permission_required"
+        ],
+        "ai_b": [
+          "capability_unavailable",
+          "high_risk",
+          "missing_execution_info",
+          "missing_parameter",
+          "permission_required"
+        ]
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-016",
+      "label_provenance": "human_adjudicated",
+      "evidence_requirement": "none",
+      "answerability": "answerable",
+      "information_status": "sufficient",
+      "capability_status": "unavailable",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "answer"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": "问题只要求一般性解释富氧率对燃烧和炉况的影响，不要求具体控制值或现实操作。冻结目录没有对应高炉工况计算能力，但概念性回答不依赖该能力。",
+      "annotation_confidence": "high",
+      "professional_review": "not_required",
+      "adjudicator": "张三",
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [],
+        "ai_b": [
+          "capability_unavailable"
+        ]
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-017",
+      "label_provenance": "human_adjudicated",
+      "evidence_requirement": "required",
+      "answerability": "ambiguous_request",
+      "information_status": "ambiguous_execution_input",
+      "capability_status": "uncertain",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": "氧化铁可能是多种物相或混合物，“还原行为”也可能指热力学、动力学或相变目标。对象和目标均不唯一，应先澄清，具体能力需随分析目标进一步判断。",
+      "annotation_confidence": "high",
+      "professional_review": "not_required",
+      "adjudicator": "张三",
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [
+          "ambiguous_material",
+          "missing_object",
+          "missing_task_info"
+        ],
+        "ai_b": [
+          "ambiguous_material",
+          "missing_execution_info",
+          "missing_parameter",
+          "missing_task_info"
+        ]
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-018",
+      "label_provenance": "human_adjudicated",
+      "evidence_requirement": "optional",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "answer",
+        "clarify"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": "换算为吨属于低风险、公式封闭的单位换算，可回答方法或调用工具。当前缺少质量数值和原始单位，因此不能执行具体换算，可直接说明所需信息或追问。",
+      "annotation_confidence": "high",
+      "professional_review": "not_required",
+      "adjudicator": "张三",
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [
+          "missing_parameter",
+          "missing_task_info"
+        ],
+        "ai_b": [
+          "missing_execution_info",
+          "missing_parameter"
+        ]
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-019",
+      "label_provenance": "human_adjudicated",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "unavailable",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": "当前冻结能力仅覆盖二元两相区，不支持三元三相区计算。能力不可用和超适用域优先于输入不足，因此应拒绝当前请求。",
+      "annotation_confidence": "high",
+      "professional_review": "not_required",
+      "adjudicator": "张三",
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [
+          "missing_execution_info",
+          "out_of_domain",
+          "unsupported_system"
+        ],
+        "ai_b": [
+          "capability_unavailable",
+          "conflicting_requirements",
+          "missing_execution_info",
+          "missing_parameter",
+          "out_of_domain",
+          "unsupported_phase",
+          "unsupported_system"
+        ]
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    },
+    {
+      "task_id": "TA-PILOT-020",
+      "label_provenance": "human_adjudicated",
+      "evidence_requirement": "required",
+      "answerability": "answerable",
+      "information_status": "missing_execution_input",
+      "capability_status": "available",
+      "risk_status": "normal",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "boundary_flags": [],
+      "boundary_flags_status": "not_adjudicated",
+      "action_reason": "0 K明确超出Arrhenius计算的适用域，即使补充指前因子和活化能也不能在0 K直接执行计算，因此应拒绝当前请求。",
+      "annotation_confidence": "high",
+      "professional_review": "not_required",
+      "adjudicator": "张三",
+      "source_ai_models": {
+        "ai_a": "deepseek-v4-pro",
+        "ai_b": "OpenAI GPT-5.6-Sol"
+      },
+      "source_ai_boundary_flags": {
+        "ai_a": [
+          "missing_parameter",
+          "out_of_domain"
+        ],
+        "ai_b": [
+          "missing_execution_info",
+          "missing_parameter",
+          "out_of_domain"
+        ]
+      },
+      "non_adjudicated_fields": [
+        "required_inputs",
+        "missing_inputs",
+        "coarse_capability"
+      ]
+    }
+  ]
+}

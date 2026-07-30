@@ -18,7 +18,8 @@ cf01:
   ai_a_annotation: received
   ai_b_annotation: received_metadata_supplemented
   human_blind_annotation: skipped_by_pilot_deviation
-  human_adjudication: pending
+  human_adjudication: completed_9_disagreements_plus_3_audits
+  silver_conversion: passed
   label_tier: provisional_silver
   overall: in_progress
 
@@ -127,7 +128,7 @@ outputs/cf01_annotation_20260728/track_a_ai_consensus_human_adjudication.xlsx
 SHA-256：
 
 ```text
-5A61AD878FFED4E4D650131F70B35797B85D30D1792EA6E603B1EA715C6644F4
+0727B9E2074312C02B6FD46699539CEAF959752D83D2635DA432CBCE9EBFFCC7
 ```
 
 包含：
@@ -139,24 +140,64 @@ SHA-256：
 - 最终裁决理由、置信度和专业复核标记；
 - 字段级差异和两份AI来源明细。
 
+### 银标准JSON与验证报告
+
+银标准候选集：
+
+```text
+Tools/core_freeze/pilot_v1/track_a_provisional_silver.json
+SHA-256: B1EFF8D46B1BB34AC7C52D34C051AD641102237AD94154927B1935A08F6C9F24
+```
+
+验证报告：
+
+```text
+outputs/cf01_annotation_20260728/track_a_provisional_silver_validation.json
+SHA-256: 21D03BDCC2BFF8D4E4FCE32949A6204C1E0D2BEF00FEA3854FDEC89650B8FB88
+```
+
+转换结果：
+
+```yaml
+status: passed
+task_count: 20
+human_adjudicated: 9
+human_audit_confirmed: 3
+ai_consensus_unreviewed: 8
+adjudicator: 张三
+policy_action_validation: passed
+formal_cf01_eligible: false
+formal_cf03_eligible: false
+```
+
+TA-PILOT-020因`0 K`明确超出Arrhenius适用域，记录了一项从默认
+`clarify`到`refuse`的显式政策覆盖。覆盖理由随JSON保存，未静默修改。
+
 ## 5. 验证
 
 三个工作簿均使用固定源JSON生成，并完成：
 
 - 输入任务数、唯一ID和核心枚举校验；
 - 9题实质性分歧和3题固定抽查契约校验；
+- 20题银标准来源覆盖和唯一ID校验；
+- 核心枚举、动作枚举和政策矩阵校验；
+- 单一裁决者与来源文件SHA-256校验；
 - 关键区域值与公式检查；
 - 公式错误扫描；
 - 所有14个工作表的视觉渲染检查；
 - 导出后文件哈希记录。
 
+银标准验证报告有0个错误和4项预注册限制说明：
+
+- 空白`boundary_flags`保持`not_adjudicated`；
+- `required_inputs`、`missing_inputs`和`coarse_capability`尚未裁决；
+- 中文工作表`COUNTIF`在artifact-tool重新计算时显示`#NAME?`，转换不依赖这些摘要公式；
+- 银标准不能替代正式双人类标注。
+
 ## 6. 下一步
 
-1. 人工打开`track_a_ai_consensus_human_adjudication.xlsx`；
-2. 查看“裁决任务”中的问题、分歧字段和两份AI理由；
-3. 在“最终标签”中填写橙色空白分歧单元格并核对预填共识值；
-4. 对无法确认的冶金适用域选择“需专业复核”；
-5. 完成9道实质性分歧和3道一致性抽查；
-6. 保存不可变原始Excel；
-7. 将Excel转换为裁决JSON并执行专用完整性校验；
-8. 将结果标记为`provisional_silver`，不得冒充双人类盲标金标准。
+1. 保留当前Excel、银标准JSON和验证报告的哈希绑定；
+2. 使用银标准数据验证后续工程流程和先导实验；
+3. 不使用本数据宣布CF-01、CF-03或Core Frozen通过；
+4. 后续获得冶金专家资源时，优先复核9道分歧题和8道未人工审查的AI共识题；
+5. 完成专业复核后另生成正式候选金标准，不覆盖当前银标准版本。
