@@ -44,3 +44,24 @@ outputs/e1b_taskset_v2_20260730/
 ```
 
 验证器会检查任务数量、合同哈希、分区隔离、A003精度配对、条件配对，并逐条调用生产工具验证72个独立参考答案。该步骤不调用外部大模型API。
+
+## 真实API冒烟
+
+先生成只包含7条 `benefit_estimation` 任务的冻结快照：
+
+```powershell
+& '.\.venv\Scripts\python.exe' 'Tools\core_freeze\e1b_v2\prepare_e1b_v2_smoke.py'
+```
+
+再使用v2冒烟配置运行：
+
+```powershell
+& '.\.venv\Scripts\python.exe' `
+  'Tools\core_freeze\e1b_pilot\run_e1b_pilot.py' `
+  --tasks 'outputs\e1b_smoke_taskset_v2_20260730\e1b_smoke_tasks_v2.json' `
+  --config 'Tools\core_freeze\e1b_v2\run_config_smoke_v2.json' `
+  --output-dir 'outputs\e1b_v2_api_smoke_r1_20260730' `
+  --repeats 1
+```
+
+配置明确设置 `gate_evaluation_opened=false`。运行器发现快照中含有任何 `gate_evaluation` 任务时会在API调用前拒绝执行。

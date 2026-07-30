@@ -1,4 +1,5 @@
 import json
+import copy
 import sys
 import tempfile
 import unittest
@@ -18,6 +19,33 @@ from core_freeze.e1b_v2.generate_e1b_v2 import (  # noqa: E402
     structural_errors,
 )
 from core_freeze.e1b_v2.validate_e1b_v2 import validate_package  # noqa: E402
+from core_freeze.e1b_v2.prepare_e1b_v2_smoke import (  # noqa: E402
+    prepare_smoke_subset,
+)
+
+E1B_PILOT_DIR = TOOLS_DIR / "core_freeze" / "e1b_pilot"
+if str(E1B_PILOT_DIR) not in sys.path:
+    sys.path.insert(0, str(E1B_PILOT_DIR))
+
+from core_freeze.e1b_pilot.run_e1b_pilot import (  # noqa: E402
+    run_experiment,
+    validate_run_scope,
+)
+from models_core import ModelRegistry  # noqa: E402
+
+
+class _SmokeFakeAdapter:
+    def __init__(self, content):
+        self.content = content
+
+    def complete(self, messages, **kwargs):
+        return {
+            "id": "smoke-fake",
+            "model": "deepseek-v4-flash",
+            "message": {"role": "assistant", "content": self.content},
+            "finish_reason": "stop",
+            "usage": {"prompt_tokens": 1, "completion_tokens": 1},
+        }
 
 
 class E1bV2Tests(unittest.TestCase):
@@ -168,6 +196,79 @@ class E1bV2Tests(unittest.TestCase):
             self.assertFalse(tasks_doc["core_frozen"])
             self.assertFalse(report["api_model_runs_performed"])
             self.assertFalse(report["core_frozen"])
+
+    def test_smoke_subset_is_frozen_to_benefit_estimation(self):
+        source_tasks_path = (
+            TOOLS_DIR.parent
+            / "outputs"
+            / "e1b_taskset_v2_20260730"
+            / "e1b_tasks_v2.json"
+        )
+        selection_path = self.v2_dir / "smoke_selection_v2.json"
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output_dir = Path(temp_dir)
+            report = prepare_smoke_subset(
+                source_tasks_path,
+                selection_path,
+                output_dir,
+            )
+            self.assertEqual(report["status"], "passed")
+            self.assertEqual(report["task_count"], 7)
+            self.assertEqual(report["condition_run_cells_at_one_repeat"], 14)
+            self.assertEqual(report["selected_splits"], ["benefit_estimation"])
+            self.assertEqual(report["gate_evaluation_task_count"], 0)
+            tasks_doc = load_json(output_dir / "e1b_smoke_tasks_v2.json")
+            self.assertEqual(
+                {task["source_tool_id"] for task in tasks_doc["tasks"]},
+                {"A001", "A002", "A003", "A004", "B019"},
+            )
+            self.assertFalse(tasks_doc["gate_evaluation_opened"])
+
+    def test_v2_smoke_scope_runs_offline_and_rejects_gate_tasks(self):
+        source_tasks_path = (
+            TOOLS_DIR.parent
+            / "outputs"
+            / "e1b_taskset_v2_20260730"
+            / "e1b_tasks_v2.json"
+        )
+        selection_path = self.v2_dir / "smoke_selection_v2.json"
+        run_config = load_json(self.v2_dir / "run_config_smoke_v2.json")
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output_dir = Path(temp_dir)
+            prepare_smoke_subset(
+                source_tasks_path,
+                selection_path,
+                output_dir,
+            )
+            smoke_doc = load_json(output_dir / "e1b_smoke_tasks_v2.json")
+            registry = ModelRegistry()
+            registry.discover()
+            adapter = _SmokeFakeAdapter('{"value":50662.5}')
+            records, summary = run_experiment(
+                tasks_doc=smoke_doc,
+                run_config=run_config,
+                registry=registry,
+                adapter=adapter,
+                repeats=1,
+                max_tasks=1,
+            )
+            self.assertEqual(len(records), 2)
+            self.assertEqual(summary["paired_complete_count"], 1)
+            self.assertTrue(all(row["split"] == "benefit_estimation" for row in records))
+            self.assertTrue(all(row["base_task_group_id"] for row in records))
+            self.assertTrue(all(row["precision_policy"] for row in records))
+
+            contaminated = copy.deepcopy(smoke_doc)
+            full_doc = load_json(source_tasks_path)
+            gate_task = next(
+                task
+                for task in full_doc["tasks"]
+                if task["split"] == "gate_evaluation"
+            )
+            contaminated["tasks"].append(gate_task)
+            contaminated["task_count"] += 1
+            with self.assertRaisesRegex(ValueError, "selected_split|sealed"):
+                validate_run_scope(contaminated, run_config)
 
 
 if __name__ == "__main__":

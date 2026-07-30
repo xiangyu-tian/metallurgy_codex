@@ -24,7 +24,7 @@ from run_e1b_pilot import (  # noqa: E402
     run_experiment,
     write_outputs,
 )
-from analyze_e1b_pilot import analyze_records  # noqa: E402
+from analyze_e1b_pilot import analyze_records, write_analysis  # noqa: E402
 
 
 class FakeAdapter:
@@ -200,7 +200,9 @@ class E1bRunnerTests(unittest.TestCase):
             repeats=1,
             max_tasks=1,
         )
-        with tempfile.TemporaryDirectory() as temp_dir:
+        with tempfile.TemporaryDirectory(
+            dir=TOOLS_DIR.parent / "outputs"
+        ) as temp_dir:
             output_dir = Path(temp_dir) / "run"
             report = write_outputs(
                 output_dir=output_dir,
@@ -245,6 +247,23 @@ class E1bRunnerTests(unittest.TestCase):
                     not Path(row["filename"]).is_absolute()
                     for row in manifest["artifacts"]
                 )
+            )
+            analysis_dir = Path(temp_dir) / "analysis"
+            analysis_report = write_analysis(output_dir, analysis_dir)
+            self.assertEqual(
+                analysis_report["analyzer_source_sha256"],
+                next(
+                    row["sha256"]
+                    for row in json.loads(
+                        (analysis_dir / "artifact_manifest.json").read_text(
+                            encoding="utf-8"
+                        )
+                    )["artifacts"]
+                    if row["filename"] == "analyzer_source_snapshot.py"
+                ),
+            )
+            self.assertTrue(
+                (analysis_dir / "analyzer_source_snapshot.py").is_file()
             )
 
 

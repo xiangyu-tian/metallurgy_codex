@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "run_id": "E1B-RUN-B430034D48274888",
+  "dataset_id": "E1B-TASKSET-V2-SMOKE-20260730",
+  "run_config_id": "E1B-V2-REAL-API-SMOKE-20260730",
+  "generated_at": "2026-07-30T09:24:25.349895+00:00",
+  "task_source_sha256": "23082db970b1ff33781a7847fcac59f85e4e79d4c2782740fb06ea94b1fa63ec",
+  "run_config_sha256": "bf717380f97bf57deff0c3e4135e274334561aacb0a8513f1b553ffabca0a466",
+  "source_snapshots": {
+    "tasks": "task_source_snapshot.json",
+    "run_config": "run_config_snapshot.json",
+    "runner": "runner_source_snapshot.py",
+    "scoring": "scoring_source_snapshot.py"
+  },
+  "adapter_configuration": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "openai_base_url": "https://api.deepseek.com",
+    "thinking": "disabled",
+    "api_key_configured": true
+  },
+  "task_selection": {
+    "source_task_count": 7,
+    "executed_task_count": 7,
+    "executed_task_ids": [
+      "E1B2-A001-009",
+      "E1B2-A002-003",
+      "E1B2-A003-001",
+      "E1B2-A003-002",
+      "E1B2-A004-007",
+      "E1B2-B019-007",
+      "E1B2-B019-008"
+    ],
+    "executed_splits": [
+      "benefit_estimation"
+    ]
+  },
+  "summary": {
+    "cell_count": 14,
+    "by_condition": {
+      "forced_verified_oracle_parameters": {
+        "cell_count": 7,
+        "completed_count": 7,
+        "correct_count": 7,
+        "accuracy": 1.0,
+        "parse_failure_count": 0,
+        "status_counts": {
+          "completed": 7
+        }
+      },
+      "no_tool": {
+        "cell_count": 7,
+        "completed_count": 7,
+        "correct_count": 6,
+        "accuracy": 0.8571428571428571,
+        "parse_failure_count": 0,
+        "status_counts": {
+          "completed": 7
+        }
+      }
+    },
+    "scheduled_pair_count": 7,
+    "paired_complete_count": 7,
+    "incomplete_pair_count": 0,
+    "descriptive_accuracy_gain": 0.14285714285714285,
+    "status": "completed",
+    "confirmatory_inference_allowed": false
+  },
+  "formal_repeats_frozen": false,
+  "core_frozen": false
+}

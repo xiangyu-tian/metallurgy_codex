@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1B-TASKSET-V2-SMOKE-20260730",
+  "artifacts": [
+    {
+      "filename": "e1b_smoke_tasks_v2.json",
+      "sha256": "23082db970b1ff33781a7847fcac59f85e4e79d4c2782740fb06ea94b1fa63ec"
+    },
+    {
+      "filename": "preparation_report.json",
+      "sha256": "2aa2db7196aa9ce342a4448fc281fb5a1fcc3b55d7a39e6ed4045b50072b57d8"
+    },
+    {
+      "filename": "outputs/e1b_taskset_v2_20260730/e1b_tasks_v2.json",
+      "sha256": "1193b238ac20ae131f6c97398f5ae4dcdcdc6f937c57973986368f8363afdf03"
+    },
+    {
+      "filename": "Tools/core_freeze/e1b_v2/smoke_selection_v2.json",
+      "sha256": "6b21f2d3342a01cf81052c3dd3a73333c21cf340d64ab10f8cf6e65effc5d4d9"
+    }
+  ]
+}

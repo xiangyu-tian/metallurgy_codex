@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "E1B-DEVELOPMENT-ANALYSIS-V2",
+  "artifacts": [
+    {
+      "filename": "analysis_report.json",
+      "sha256": "8af7f2db0ab549ad205bb88c3cc7d417eaa2c9175862ef7ce1e8e69960913fc4"
+    },
+    {
+      "filename": "analyzer_source_snapshot.py",
+      "sha256": "9bffa9e4f86c024fe6d270efafb6276510cc8da8859e9b815abd1058c5db7090"
+    }
+  ],
+  "source_evidence": [
+    {
+      "filename": "outputs/e1b_v2_api_smoke_r1_20260730/artifact_manifest.json",
+      "sha256": "025e3124906aca03166ac51d198af4b46c767e2bf9d6ba1d77007fb5691636ed"
+    },
+    {
+      "filename": "outputs/e1b_v2_api_smoke_r1_20260730/run_records.jsonl",
+      "sha256": "7f2b661e0bec32d4c324b5ac3d0d11535c9f8763df9b4d6c6368d819015f571b"
+    }
+  ]
+}

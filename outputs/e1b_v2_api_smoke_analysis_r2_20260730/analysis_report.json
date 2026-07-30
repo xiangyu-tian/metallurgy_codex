@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "E1B-DEVELOPMENT-ANALYSIS-V2",
+  "generated_at": "2026-07-30T09:27:51.015022+00:00",
+  "source_run_id": "E1B-RUN-B430034D48274888",
+  "source_dataset_id": "E1B-TASKSET-V2-SMOKE-20260730",
+  "source_run_config_id": "E1B-V2-REAL-API-SMOKE-20260730",
+  "analyzer_source_sha256": "9bffa9e4f86c024fe6d270efafb6276510cc8da8859e9b815abd1058c5db7090",
+  "source_manifest_sha256": "025e3124906aca03166ac51d198af4b46c767e2bf9d6ba1d77007fb5691636ed",
+  "source_records_sha256": "7f2b661e0bec32d4c324b5ac3d0d11535c9f8763df9b4d6c6368d819015f571b",
+  "source_manifest_artifact_count": 6,
+  "cell_count": 14,
+  "condition_summary": {
+    "no_tool": {
+      "cell_count": 7,
+      "completed_count": 7,
+      "correct_count": 6,
+      "accuracy": 0.8571428571428571,
+      "parse_failure_count": 0,
+      "status_counts": {
+        "completed": 7
+      },
+      "usage_totals": {
+        "prompt_tokens": 935,
+        "completion_tokens": 110,
+        "total_tokens": 1045
+      },
+      "mean_latency_ms": 872.7035714285714
+    },
+    "forced_verified_oracle_parameters": {
+      "cell_count": 7,
+      "completed_count": 7,
+      "correct_count": 7,
+      "accuracy": 1.0,
+      "parse_failure_count": 0,
+      "status_counts": {
+        "completed": 7
+      },
+      "usage_totals": {
+        "prompt_tokens": 1913,
+        "completion_tokens": 115,
+        "total_tokens": 2028
+      },
+      "mean_latency_ms": 972.6411428571429
+    }
+  },
+  "scheduled_pair_count": 7,
+  "complete_pair_count": 7,
+  "incomplete_pair_count": 0,
+  "paired_cell_accuracy_gain": 0.14285714285714285,
+  "task_count": 7,
+  "task_level_mean_accuracy_gain": 0.14285714285714285,
+  "positive_gain_task_count": 1,
+  "zero_gain_task_count": 6,
+  "negative_gain_task_count": 0,
+  "task_results": [
+    {
+      "task_id": "E1B2-A001-009",
+      "task_family_id": "E1B-A001",
+      "source_tool_id": "A001",
+      "base_task_group_id": "A001-ATM-PA",
+      "split": "benefit_estimation",
+      "precision_policy": "contract_numeric",
+      "condition_accuracy": {
+        "no_tool": 1.0,
+        "forced_verified_oracle_parameters": 1.0
+      },
+      "accuracy_difference": 0.0
+    },
+    {
+      "task_id": "E1B2-A002-003",
+      "task_family_id": "E1B-A002",
+      "source_tool_id": "A002",
+      "base_task_group_id": "A002-03",
+      "split": "benefit_estimation",
+      "precision_policy": "exact_stoichiometric_counts",
+      "condition_accuracy": {
+        "no_tool": 1.0,
+        "forced_verified_oracle_parameters": 1.0
+      },
+      "accuracy_difference": 0.0
+    },
+    {
+      "task_id": "E1B2-A003-001",
+      "task_family_id": "E1B-A003",
+      "source_tool_id": "A003",
+      "base_task_group_id": "A003-01",
+      "split": "benefit_estimation",
+      "precision_policy": "strict_versioned",
+      "condition_accuracy": {
+        "no_tool": 1.0,
+        "forced_verified_oracle_parameters": 1.0
+      },
+      "accuracy_difference": 0.0
+    },
+    {
+      "task_id": "E1B2-A003-002",
+      "task_family_id": "E1B-A003",
+      "source_tool_id": "A003",
+      "base_task_group_id": "A003-01",
+      "split": "benefit_estimation",
+      "precision_policy": "approximate_educational",
+      "condition_accuracy": {
+        "no_tool": 1.0,
+        "forced_verified_oracle_parameters": 1.0
+      },
+      "accuracy_difference": 0.0
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "task_family_id": "E1B-A004",
+      "source_tool_id": "A004",
+      "base_task_group_id": "A004-TRACE",
+      "split": "benefit_estimation",
+      "precision_policy": "six_decimal_components",
+      "condition_accuracy": {
+        "no_tool": 0.0,
+        "forced_verified_oracle_parameters": 1.0
+      },
+      "accuracy_difference": 1.0
+    },
+    {
+      "task_id": "E1B2-B019-007",
+      "task_family_id": "E1B-B019",
+      "source_tool_id": "B019",
+      "base_task_group_id": "B019-04",
+      "split": "benefit_estimation",
+      "precision_policy": "fraction_explicit_six_decimal",
+      "condition_accuracy": {
+        "no_tool": 1.0,
+        "forced_verified_oracle_parameters": 1.0
+      },
+      "accuracy_difference": 0.0
+    },
+    {
+      "task_id": "E1B2-B019-008",
+      "task_family_id": "E1B-B019",
+      "source_tool_id": "B019",
+      "base_task_group_id": "B019-04",
+      "split": "benefit_estimation",
+      "precision_policy": "percent_explicit_six_decimal",
+      "condition_accuracy": {
+        "no_tool": 1.0,
+        "forced_verified_oracle_parameters": 1.0
+      },
+      "accuracy_difference": 0.0
+    }
+  ],
+  "family_results": [
+    {
+      "task_family_id": "E1B-A001",
+      "source_tool_id": "A001",
+      "task_count": 1,
+      "mean_task_accuracy_no_tool": 1.0,
+      "mean_task_accuracy_forced": 1.0,
+      "mean_task_accuracy_difference": 0.0
+    },
+    {
+      "task_family_id": "E1B-A002",
+      "source_tool_id": "A002",
+      "task_count": 1,
+      "mean_task_accuracy_no_tool": 1.0,
+      "mean_task_accuracy_forced": 1.0,
+      "mean_task_accuracy_difference": 0.0
+    },
+    {
+      "task_family_id": "E1B-A003",
+      "source_tool_id": "A003",
+      "task_count": 2,
+      "mean_task_accuracy_no_tool": 1.0,
+      "mean_task_accuracy_forced": 1.0,
+      "mean_task_accuracy_difference": 0.0
+    },
+    {
+      "task_family_id": "E1B-A004",
+      "source_tool_id": "A004",
+      "task_count": 1,
+      "mean_task_accuracy_no_tool": 0.0,
+      "mean_task_accuracy_forced": 1.0,
+      "mean_task_accuracy_difference": 1.0
+    },
+    {
+      "task_family_id": "E1B-B019",
+      "source_tool_id": "B019",
+      "task_count": 2,
+      "mean_task_accuracy_no_tool": 1.0,
+      "mean_task_accuracy_forced": 1.0,
+      "mean_task_accuracy_difference": 0.0
+    }
+  ],
+  "precision_policy_results": [
+    {
+      "precision_policy": "approximate_educational",
+      "task_count": 1,
+      "mean_task_accuracy_no_tool": 1.0,
+      "mean_task_accuracy_forced": 1.0,
+      "mean_task_accuracy_difference": 0.0
+    },
+    {
+      "precision_policy": "contract_numeric",
+      "task_count": 1,
+      "mean_task_accuracy_no_tool": 1.0,
+      "mean_task_accuracy_forced": 1.0,
+      "mean_task_accuracy_difference": 0.0
+    },
+    {
+      "precision_policy": "exact_stoichiometric_counts",
+      "task_count": 1,
+      "mean_task_accuracy_no_tool": 1.0,
+      "mean_task_accuracy_forced": 1.0,
+      "mean_task_accuracy_difference": 0.0
+    },
+    {
+      "precision_policy": "fraction_explicit_six_decimal",
+      "task_count": 1,
+      "mean_task_accuracy_no_tool": 1.0,
+      "mean_task_accuracy_forced": 1.0,
+      "mean_task_accuracy_difference": 0.0
+    },
+    {
+      "precision_policy": "percent_explicit_six_decimal",
+      "task_count": 1,
+      "mean_task_accuracy_no_tool": 1.0,
+      "mean_task_accuracy_forced": 1.0,
+      "mean_task_accuracy_difference": 0.0
+    },
+    {
+      "precision_policy": "six_decimal_components",
+      "task_count": 1,
+      "mean_task_accuracy_no_tool": 0.0,
+      "mean_task_accuracy_forced": 1.0,
+      "mean_task_accuracy_difference": 1.0
+    },
+    {
+      "precision_policy": "strict_versioned",
+      "task_count": 1,
+      "mean_task_accuracy_no_tool": 1.0,
+      "mean_task_accuracy_forced": 1.0,
+      "mean_task_accuracy_difference": 0.0
+    }
+  ],
+  "incomplete_pairs": [],
+  "analysis_status": "descriptive_development_only",
+  "confirmatory_inference_allowed": false,
+  "limitations": [
+    "本报告只描述当前任务快照与单一模型",
+    "重复运行不视为独立任务样本",
+    "未进行正式功效分析或确认性假设检验"
+  ],
+  "core_frozen": false
+}

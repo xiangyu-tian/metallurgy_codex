@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "selection_id": "E1B-V2-SMOKE-SELECTION-20260730",
+  "source_dataset_id": "E1B-TASKSET-V2-20260730",
+  "required_split": "benefit_estimation",
+  "task_ids": [
+    "E1B2-A001-009",
+    "E1B2-A002-003",
+    "E1B2-A003-001",
+    "E1B2-A003-002",
+    "E1B2-A004-007",
+    "E1B2-B019-007",
+    "E1B2-B019-008"
+  ],
+  "selection_rationale": {
+    "A001": "non-prefix atm to Pa conversion",
+    "A002": "nested bracketed chemical formula",
+    "A003": "same Fe2O3 group under strict and approximate precision policies",
+    "A004": "trace component normalization",
+    "B019": "reversed tie-line endpoints under explicit fraction and percent scales"
+  },
+  "selection_frozen": true,
+  "gate_evaluation_opened": false
+}

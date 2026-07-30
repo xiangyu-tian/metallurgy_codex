@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1B-TASKSET-V2-SMOKE-20260730",
+  "status": "passed",
+  "task_count": 7,
+  "condition_run_cells_at_one_repeat": 14,
+  "task_count_by_tool": {
+    "A001": 1,
+    "A002": 1,
+    "A003": 2,
+    "A004": 1,
+    "B019": 2
+  },
+  "precision_policy_counts": {
+    "approximate_educational": 1,
+    "contract_numeric": 1,
+    "exact_stoichiometric_counts": 1,
+    "fraction_explicit_six_decimal": 1,
+    "percent_explicit_six_decimal": 1,
+    "six_decimal_components": 1,
+    "strict_versioned": 1
+  },
+  "selected_splits": [
+    "benefit_estimation"
+  ],
+  "gate_evaluation_task_count": 0,
+  "api_model_runs_performed": false,
+  "core_frozen": false
+}

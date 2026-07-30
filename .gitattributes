@@ -1,0 +1,6 @@
+# Research evidence contains byte-level SHA-256 manifests.
+outputs/** -text -diff
+
+# Source JSON referenced by evidence manifests must remain LF on Windows.
+Tools/core_freeze/verified_core/*.json text eol=lf
+Tools/core_freeze/e1b_v2/*.json text eol=lf
