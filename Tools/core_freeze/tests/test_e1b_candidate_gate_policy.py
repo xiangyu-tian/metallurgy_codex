@@ -21,6 +21,9 @@ from core_freeze.e1b_v2.apply_candidate_gate_policy import (  # noqa: E402
 from core_freeze.e1b_v2.prepare_e1b_v2_gate import (  # noqa: E402
     prepare_gate_snapshot,
 )
+from core_freeze.e1b_v2.analyze_e1b_v2_gate import (  # noqa: E402
+    analyze_gate,
+)
 
 
 class E1bCandidateGatePolicyTests(unittest.TestCase):
@@ -213,6 +216,52 @@ class E1bCandidateGatePolicyTests(unittest.TestCase):
                 output_dir / "pre_run_policy_assignments.csv"
             ).open(encoding="utf-8") as handle:
                 self.assertEqual(sum(1 for _ in handle) - 1, 27)
+
+    def test_independent_gate_analysis_uses_pre_run_assignments(self):
+        run_dir = PROJECT_ROOT / "outputs" / "e1b_v2_gate_r3_20260730"
+        gate_snapshot_dir = (
+            PROJECT_ROOT / "outputs" / "e1b_gate_taskset_v2_20260730"
+        )
+        with tempfile.TemporaryDirectory() as temp_dir:
+            report = analyze_gate(
+                run_dir,
+                gate_snapshot_dir,
+                Path(temp_dir),
+            )
+        self.assertEqual(
+            report["analysis_status"],
+            "independent_gate_evaluation_completed",
+        )
+        self.assertEqual(report["task_count"], 27)
+        self.assertEqual(report["paired_repeat_cell_count"], 81)
+        self.assertEqual(report["provider_attempt_count"], 162)
+        self.assertEqual(report["retried_cell_count"], 0)
+        self.assertAlmostEqual(report["no_tool_accuracy"], 78 / 81)
+        self.assertAlmostEqual(report["forced_accuracy"], 1.0)
+        self.assertAlmostEqual(report["candidate_policy_accuracy"], 1.0)
+        self.assertAlmostEqual(
+            report["candidate_policy_call_rate"],
+            12 / 81,
+        )
+        self.assertEqual(
+            report["captured_positive_gain_cell_count"],
+            3,
+        )
+        self.assertEqual(
+            report["rule_transfer_status"][
+                "CGP-V1-STRICT-VERSIONED"
+            ],
+            "positive_transfer_observed",
+        )
+        self.assertEqual(
+            report["rule_transfer_status"][
+                "CGP-V1-CONDITIONED-NORMALIZATION"
+            ],
+            "not_evaluated_no_matching_gate_tasks",
+        )
+        self.assertFalse(
+            report["interpretation"]["policy_revision_during_evaluation"]
+        )
 
 
 if __name__ == "__main__":

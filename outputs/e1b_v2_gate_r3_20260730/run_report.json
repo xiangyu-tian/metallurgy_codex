@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "run_id": "E1B-RUN-9052A8F9CBA54962",
+  "dataset_id": "E1B-TASKSET-V2-GATE-20260730",
+  "run_config_id": "E1B-V2-GATE-EVALUATION-R3-20260730",
+  "generated_at": "2026-07-30T10:08:01.939595+00:00",
+  "task_source_sha256": "c97cb254dfffcfec6cddd1c161a4a609fb9cdcc780c546264c812f9101e2e45d",
+  "run_config_sha256": "d4012bac8abf89be6f7382776c6b63734117e33d02f5cec686e66be0536f2d7c",
+  "source_snapshots": {
+    "tasks": "task_source_snapshot.json",
+    "run_config": "run_config_snapshot.json",
+    "runner": "runner_source_snapshot.py",
+    "scoring": "scoring_source_snapshot.py"
+  },
+  "adapter_configuration": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "openai_base_url": "https://api.deepseek.com",
+    "thinking": "disabled",
+    "api_key_configured": true
+  },
+  "task_selection": {
+    "source_task_count": 27,
+    "executed_task_count": 27,
+    "executed_task_ids": [
+      "E1B2-A001-011",
+      "E1B2-A001-012",
+      "E1B2-A001-013",
+      "E1B2-A001-014",
+      "E1B2-A001-015",
+      "E1B2-A001-016",
+      "E1B2-A002-008",
+      "E1B2-A002-009",
+      "E1B2-A002-010",
+      "E1B2-A002-011",
+      "E1B2-A002-012",
+      "E1B2-A003-013",
+      "E1B2-A003-014",
+      "E1B2-A003-015",
+      "E1B2-A003-016",
+      "E1B2-A003-017",
+      "E1B2-A003-018",
+      "E1B2-A003-019",
+      "E1B2-A003-020",
+      "E1B2-A004-009",
+      "E1B2-A004-010",
+      "E1B2-A004-011",
+      "E1B2-A004-012",
+      "E1B2-B019-009",
+      "E1B2-B019-010",
+      "E1B2-B019-011",
+      "E1B2-B019-012"
+    ],
+    "executed_splits": [
+      "gate_evaluation"
+    ]
+  },
+  "summary": {
+    "cell_count": 162,
+    "by_condition": {
+      "forced_verified_oracle_parameters": {
+        "cell_count": 81,
+        "completed_count": 81,
+        "correct_count": 81,
+        "accuracy": 1.0,
+        "parse_failure_count": 0,
+        "provider_attempt_count": 81,
+        "retried_cell_count": 0,
+        "status_counts": {
+          "completed": 81
+        }
+      },
+      "no_tool": {
+        "cell_count": 81,
+        "completed_count": 81,
+        "correct_count": 78,
+        "accuracy": 0.9629629629629629,
+        "parse_failure_count": 0,
+        "provider_attempt_count": 81,
+        "retried_cell_count": 0,
+        "status_counts": {
+          "completed": 81
+        }
+      }
+    },
+    "scheduled_pair_count": 81,
+    "paired_complete_count": 81,
+    "incomplete_pair_count": 0,
+    "provider_attempt_count": 162,
+    "retried_cell_count": 0,
+    "descriptive_accuracy_gain": 0.037037037037037035,
+    "status": "completed",
+    "confirmatory_inference_allowed": false
+  },
+  "formal_repeats_frozen": false,
+  "core_frozen": false
+}

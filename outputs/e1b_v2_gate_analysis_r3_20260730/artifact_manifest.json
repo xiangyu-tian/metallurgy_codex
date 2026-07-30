@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "E1B-V2-GATE-POLICY-V1-ANALYSIS-R3-20260730",
+  "artifacts": [
+    {
+      "filename": "gate_task_effects.csv",
+      "sha256": "19ca602a2e5d47deadc91af20aa80ab8b24b7355c16c19350696cd8de5810713"
+    },
+    {
+      "filename": "gate_error_audit.csv",
+      "sha256": "79698a07e83c3a6dd14791661545bc2a3dfd6fa52f08aa1b9bb40065fe9e6153"
+    },
+    {
+      "filename": "gate_rule_summary.csv",
+      "sha256": "9cbf7f885550981df5d3d6bdc06e5563151faab635c4272a66607a027cbbfc6b"
+    },
+    {
+      "filename": "gate_policy_report.json",
+      "sha256": "025170cf2db48ffd453d29e001b0fad696f0960bc89e6994706a4a32c31a045a"
+    },
+    {
+      "filename": "analyzer_source_snapshot.py",
+      "sha256": "bb299c7e4d6e5c5a2748ceda622d4921b520f6328a0556b8613a04664bae15b2"
+    }
+  ],
+  "source_artifacts": {
+    "run_manifest": "1a27d11491b50163653d68cf5a29d17948bf487541ab517c95a8f60cba1aaa4a",
+    "run_records": "e8c1d858fe7268c4eb2deef43fe43e31752c132ffe358126de1f5543dac2ca6d",
+    "gate_manifest": "780f779fe2588d41823fb26c18818b5c76a1389568b1962c0595fa27ed584832",
+    "pre_run_policy_assignments": "3dbd1d643b84448ecaf6b1905654f3d00a1f4b3b882a1a015ecb783b02bfd362",
+    "frozen_policy": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5"
+  },
+  "source_run_manifest_artifact_count": 6,
+  "source_gate_manifest_artifact_count": 6,
+  "policy_revision_during_evaluation": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

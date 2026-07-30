@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "E1B-V2-GATE-POLICY-V1-ANALYSIS-R3-20260730",
+  "analysis_status": "independent_gate_evaluation_completed",
+  "source_run_id": "E1B-RUN-9052A8F9CBA54962",
+  "source_dataset_id": "E1B-TASKSET-V2-GATE-20260730",
+  "source_run_manifest_sha256": "1a27d11491b50163653d68cf5a29d17948bf487541ab517c95a8f60cba1aaa4a",
+  "source_gate_manifest_sha256": "780f779fe2588d41823fb26c18818b5c76a1389568b1962c0595fa27ed584832",
+  "frozen_policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+  "frozen_policy_git_commit": "1ee098e",
+  "task_count": 27,
+  "base_task_group_count": 16,
+  "paired_repeat_cell_count": 81,
+  "provider_attempt_count": 162,
+  "retried_cell_count": 0,
+  "no_tool_accuracy": 0.9629629629629629,
+  "forced_accuracy": 1.0,
+  "candidate_policy_accuracy": 1.0,
+  "candidate_policy_call_rate": 0.14814814814814814,
+  "candidate_policy_call_cell_count": 12,
+  "avoided_call_count_vs_always_forced": 69,
+  "candidate_gain_vs_always_no_tool": 0.037037037037037035,
+  "candidate_loss_vs_always_forced": 0.0,
+  "positive_gain_cell_count": 3,
+  "captured_positive_gain_cell_count": 3,
+  "captured_positive_gain_fraction": 1.0,
+  "action_task_counts": {
+    "ANSWER_WITHOUT_TOOL": 23,
+    "CALL_VERIFIED_TOOL": 4
+  },
+  "rule_task_counts": {
+    "CGP-V1-STRICT-VERSIONED": 4,
+    "DEFAULT": 23
+  },
+  "rule_transfer_status": {
+    "CGP-V1-STRICT-VERSIONED": "positive_transfer_observed",
+    "CGP-V1-CONDITIONED-NORMALIZATION": "not_evaluated_no_matching_gate_tasks",
+    "DEFAULT": "no_missed_benefit_observed"
+  },
+  "condition_costs": {
+    "forced_verified_oracle_parameters": {
+      "cell_count": 81,
+      "usage_totals": {
+        "prompt_tokens": 20691,
+        "completion_tokens": 1133,
+        "total_tokens": 21824,
+        "prompt_cache_hit_tokens": 10240,
+        "prompt_cache_miss_tokens": 10451
+      },
+      "mean_latency_ms": 815.323074074074
+    },
+    "no_tool": {
+      "cell_count": 81,
+      "usage_totals": {
+        "prompt_tokens": 10155,
+        "completion_tokens": 1071,
+        "total_tokens": 11226,
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 7083
+      },
+      "mean_latency_ms": 778.8777654320988
+    }
+  },
+  "error_cell_count": 3,
+  "interpretation": {
+    "evaluation_type": "independent_held_out_gate",
+    "policy_revision_during_evaluation": false,
+    "strict_versioned_rule_transfer_observed": true,
+    "conditioned_normalization_rule_evaluated": false,
+    "confirmatory_inference_allowed": false,
+    "core_freeze_status_changed": false
+  },
+  "core_frozen": false
+}

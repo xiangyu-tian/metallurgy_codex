@@ -133,3 +133,27 @@ outputs/e1b_gate_taskset_v2_20260730/
 ```
 
 该步骤将策略、运行配置、27题快照、预运行动作和准备器源码一并写入哈希清单。只有该准备包通过校验后，才可使用`run_config_gate_v2.json`进行真实API运行。
+
+执行三次重复的Gate运行：
+
+```powershell
+& '.\.venv\Scripts\python.exe' `
+  'Tools\core_freeze\e1b_pilot\run_e1b_pilot.py' `
+  --tasks 'outputs\e1b_gate_taskset_v2_20260730\e1b_gate_tasks_v2.json' `
+  --config 'Tools\core_freeze\e1b_v2\run_config_gate_v2.json' `
+  --output-dir 'outputs\e1b_v2_gate_r3_20260730' `
+  --repeats 3
+```
+
+按API运行前动作清单评价策略v1：
+
+```powershell
+& '.\.venv\Scripts\python.exe' `
+  'Tools\core_freeze\e1b_v2\analyze_e1b_v2_gate.py'
+```
+
+分析输出：
+
+```text
+outputs/e1b_v2_gate_analysis_r3_20260730/
+```

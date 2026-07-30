@@ -1,0 +1,4 @@
+rule_id,task_count,repeat_cell_count,no_tool_correct_count,forced_correct_count,selected_correct_count,positive_gain_cell_count,transfer_status
+CGP-V1-STRICT-VERSIONED,4,12,9,12,12,3,positive_transfer_observed
+CGP-V1-CONDITIONED-NORMALIZATION,0,0,0,0,0,0,not_evaluated_no_matching_gate_tasks
+DEFAULT,23,69,69,69,69,0,no_missed_benefit_observed

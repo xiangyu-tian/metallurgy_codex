@@ -1,0 +1,4 @@
+task_id,source_tool_id,base_task_group_id,precision_policy,action,rule_id,condition,model_run_repeat,parse_status,raw_answer,expected,actual,error_type
+E1B2-A003-015,A003,A003-08,strict_versioned,CALL_VERIFIED_TOOL,CGP-V1-STRICT-VERSIONED,no_tool,1,parsed,"{""molar_mass"":151.904}",151.901,151.904,
+E1B2-A003-015,A003,A003-08,strict_versioned,CALL_VERIFIED_TOOL,CGP-V1-STRICT-VERSIONED,no_tool,2,parsed,"{""molar_mass"":151.904}",151.901,151.904,
+E1B2-A003-015,A003,A003-08,strict_versioned,CALL_VERIFIED_TOOL,CGP-V1-STRICT-VERSIONED,no_tool,3,parsed,"{""molar_mass"":151.904}",151.901,151.904,
