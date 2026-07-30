@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+  "policy_status": "candidate_frozen_pre_gate",
+  "artifacts": [
+    {
+      "filename": "candidate_gate_policy_v1.json",
+      "sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5"
+    },
+    {
+      "filename": "policy_evaluator_source_snapshot.py",
+      "sha256": "90d0fd7ed0e0ae0ba3bd30f8c18d914b8a075c700cc84692b77c18c1da3b7ceb"
+    },
+    {
+      "filename": "development_policy_assignments.csv",
+      "sha256": "11897d3497b93ae35cea1ffc3301b7d26c9a26365a164e5b6171dbccdd8129d2"
+    },
+    {
+      "filename": "development_fit_report.json",
+      "sha256": "f1a3e84499b58d44e60b573fe6eba0784cf690bdcd4dab835ba1f5cac1722044"
+    }
+  ],
+  "development_source_hashes": {
+    "benefit_tasks": "81d90e7f9cb638ff18614a6f49d09fafc391bbe304c9917674beab307cef43c8",
+    "analysis_report": "8d2df48203c7ec6da8179a0d3ac4c9678cefe21e62527c1672bb340b0b3792aa",
+    "task_effects": "203f13a0b7e55228142bde755b952e9f851dc609698b95288be8c81a76a7451b"
+  },
+  "gate_evaluation_opened": false,
+  "core_frozen": false
+}

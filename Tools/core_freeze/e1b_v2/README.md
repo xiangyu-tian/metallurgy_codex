@@ -93,3 +93,26 @@ outputs/e1b_taskset_v2_20260730/
   'outputs\e1b_v2_benefit_r3_20260730' `
   --output-dir 'outputs\e1b_v2_benefit_analysis_r3_20260730'
 ```
+
+## 候选门控策略冻结
+
+在打开 `gate_evaluation` 之前，将开发集结论固化为机器可执行策略并生成回顾性拟合审计：
+
+```powershell
+& '.\.venv\Scripts\python.exe' `
+  'Tools\core_freeze\e1b_v2\apply_candidate_gate_policy.py'
+```
+
+策略文件：
+
+```text
+Tools/core_freeze/e1b_v2/candidate_gate_policy_v1.json
+```
+
+默认审计输出：
+
+```text
+outputs/e1b_v2_candidate_gate_policy_v1_20260730/
+```
+
+策略只读取 `source_tool_id`、`precision_policy` 以及由输入数值直接派生的动态范围和是否需要归一化，不读取题号、题组、题面、化学式或期望答案。策略版本冻结后，`gate_evaluation` 结果不得回写或调整该版本；任何修改都必须产生新的策略版本，并且不能替代v1的独立后置评测结果。

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "E1B-CANDIDATE-GATE-POLICY-V1-DEVELOPMENT-FIT",
+  "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+  "policy_version": "1.0.0",
+  "policy_status": "candidate_frozen_pre_gate",
+  "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+  "source_dataset_id": "E1B-TASKSET-V2-BENEFIT-20260730",
+  "source_analysis_id": "E1B-V2-BENEFIT-DEVELOPMENT-ANALYSIS-R3-20260730",
+  "task_count": 45,
+  "repeat_cell_count": 135,
+  "action_task_counts": {
+    "ANSWER_WITHOUT_TOOL": 38,
+    "CALL_VERIFIED_TOOL": 7
+  },
+  "rule_task_counts": {
+    "CGP-V1-CONDITIONED-NORMALIZATION": 1,
+    "CGP-V1-STRICT-VERSIONED": 6,
+    "DEFAULT": 38
+  },
+  "call_cell_count": 21,
+  "call_rate": 0.15555555555555556,
+  "avoided_call_count_vs_always_forced": 114,
+  "always_no_tool_accuracy": 0.8666666666666667,
+  "always_forced_accuracy": 1.0,
+  "candidate_policy_accuracy": 0.9925925925925926,
+  "candidate_gain_vs_always_no_tool": 0.1259259259259259,
+  "candidate_loss_vs_always_forced": -0.007407407407407408,
+  "positive_gain_cell_count": 18,
+  "captured_positive_gain_cell_count": 17,
+  "captured_positive_gain_fraction": 0.9444444444444444,
+  "interpretation": {
+    "analysis_type": "retrospective_development_fit",
+    "confirmatory_inference_allowed": false,
+    "gate_evaluation_opened": false,
+    "policy_may_be_revised_from_this_fit": false,
+    "next_allowed_step": "freeze_artifacts_then_open_gate_evaluation"
+  },
+  "core_frozen": false
+}

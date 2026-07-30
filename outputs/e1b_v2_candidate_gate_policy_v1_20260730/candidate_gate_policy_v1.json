@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+  "policy_version": "1.0.0",
+  "policy_status": "candidate_frozen_pre_gate",
+  "frozen_at": "2026-07-30T00:00:00+08:00",
+  "protocol_version": "research_protocol_v1.1-rc1",
+  "scope": {
+    "verified_tool_ids": [
+      "A001",
+      "A002",
+      "A003",
+      "A004",
+      "B019"
+    ],
+    "ready_in_domain_tasks_only": true,
+    "allowed_actions": [
+      "CALL_VERIFIED_TOOL",
+      "ANSWER_WITHOUT_TOOL"
+    ]
+  },
+  "development_evidence": {
+    "dataset_id": "E1B-TASKSET-V2-BENEFIT-20260730",
+    "benefit_tasks_sha256": "81d90e7f9cb638ff18614a6f49d09fafc391bbe304c9917674beab307cef43c8",
+    "analysis_id": "E1B-V2-BENEFIT-DEVELOPMENT-ANALYSIS-R3-20260730",
+    "analysis_report_sha256": "8d2df48203c7ec6da8179a0d3ac4c9678cefe21e62527c1672bb340b0b3792aa",
+    "task_effects_sha256": "203f13a0b7e55228142bde755b952e9f851dc609698b95288be8c81a76a7451b",
+    "gate_evaluation_effects_observed": false
+  },
+  "feature_contract": {
+    "direct_fields": [
+      "source_tool_id",
+      "precision_policy"
+    ],
+    "derived_fields": {
+      "composition_dynamic_range": "max(abs(nonzero composition values)) / min(abs(nonzero composition values))",
+      "composition_requires_rescaling": "abs(sum(composition values) - 1.0) > 1e-12"
+    },
+    "forbidden_features": [
+      "task_id",
+      "base_task_group_id",
+      "problem_text",
+      "chemical_formula",
+      "expected_answer",
+      "gate_evaluation_outcome"
+    ]
+  },
+  "rules": [
+    {
+      "rule_id": "CGP-V1-STRICT-VERSIONED",
+      "priority": 10,
+      "when": {
+        "all": [
+          {
+            "field": "precision_policy",
+            "op": "eq",
+            "value": "strict_versioned"
+          }
+        ]
+      },
+      "action": "CALL_VERIFIED_TOOL",
+      "reason_code": "VERSION_BOUND_NUMERIC_EVIDENCE",
+      "rationale": "The requested result is bound to frozen versioned constants and a narrow tolerance; unaided recall may use different constants."
+    },
+    {
+      "rule_id": "CGP-V1-CONDITIONED-NORMALIZATION",
+      "priority": 20,
+      "when": {
+        "all": [
+          {
+            "field": "source_tool_id",
+            "op": "eq",
+            "value": "A004"
+          },
+          {
+            "field": "composition_dynamic_range",
+            "op": "gte",
+            "value": 100.0
+          },
+          {
+            "field": "composition_requires_rescaling",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "action": "CALL_VERIFIED_TOOL",
+      "reason_code": "HIGH_DYNAMIC_RANGE_RESCALING",
+      "rationale": "A composition spans at least two orders of magnitude and must be rescaled before six-decimal reporting."
+    }
+  ],
+  "default_decision": {
+    "action": "ANSWER_WITHOUT_TOOL",
+    "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED",
+    "rationale": "No pre-gate development rule demonstrated enough benefit to force a verified tool call."
+  },
+  "freeze_constraints": {
+    "rule_order": "ascending_priority_first_match",
+    "thresholds_are_not_optimized_on_gate": true,
+    "formula_specific_rules_allowed": false,
+    "gate_evaluation_may_not_modify_this_version": true,
+    "post_gate_changes_require_new_policy_version": true,
+    "development_fit_is_not_confirmatory_evidence": true,
+    "core_frozen": false
+  }
+}
