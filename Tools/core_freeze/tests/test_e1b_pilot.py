@@ -49,6 +49,20 @@ class E1bPilotGenerationTests(unittest.TestCase):
             )
         )
 
+    def test_a003_tasks_state_the_scored_precision(self):
+        tasks = build_tasks(self.contracts, self.cases, self.templates)
+        a003_tasks = [task for task in tasks if task["source_tool_id"] == "A003"]
+        self.assertTrue(a003_tasks)
+        self.assertTrue(
+            all(
+                "保留4位小数" in task["problem_text"]
+                and "H=1.008" in task["problem_text"]
+                and "Fe=55.845" in task["problem_text"]
+                and "O=15.999" in task["problem_text"]
+                for task in a003_tasks
+            )
+        )
+
     def test_generated_package_is_prepared_not_executed(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             report = generate(

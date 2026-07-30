@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "run_config_id": "E1B-DEVELOPMENT-RUN-V1",
+  "protocol_version": "research_protocol_v1.1-rc1",
+  "dataset_id": "E1B-PILOT-V1-20260730",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "openai_base_url": "https://api.deepseek.com",
+  "openai_base_url_env": "DEEPSEEK_OPENAI_BASE_URL",
+  "api_key_env": "DEEPSEEK_API_KEY",
+  "thinking": "disabled",
+  "temperature": 0.0,
+  "max_tokens": 512,
+  "timeout_seconds": 120,
+  "prompt_version": "e1b-json-v1",
+  "development_repeats": 3,
+  "primary_conditions": [
+    "no_tool",
+    "forced_verified_oracle_parameters"
+  ],
+  "formal_repeats_frozen": false,
+  "core_frozen": false
+}

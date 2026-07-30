@@ -4,7 +4,7 @@
   "artifacts": [
     {
       "filename": "e1b_tasks.json",
-      "sha256": "fa1a6509064dee10fe17ad26bb45ecd466cb225a157da98028edae1fd7fcf5ce"
+      "sha256": "eb02e6d6360735909353c40423e0e8b962d86504d92adf18d43ce72f73604cb9"
     },
     {
       "filename": "generation_report.json",
@@ -20,7 +20,7 @@
     },
     {
       "filename": "Tools/core_freeze/e1b_pilot/templates_v1.json",
-      "sha256": "399a5d4aede50413fa44dcad8317f84f546b4d14ff92b603d38b466a4461e92b"
+      "sha256": "903b78aac0c711012ee69c9e1c16836df97ff12b1dbe5ca8a62d5b3698522fe6"
     }
   ]
 }

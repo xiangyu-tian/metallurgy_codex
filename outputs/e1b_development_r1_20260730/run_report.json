@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "run_id": "E1B-RUN-FBA1B457011F4388",
+  "dataset_id": "E1B-PILOT-V1-20260730",
+  "run_config_id": "E1B-DEVELOPMENT-RUN-V1",
+  "generated_at": "2026-07-30T08:51:26.677378+00:00",
+  "task_source_sha256": "fa1a6509064dee10fe17ad26bb45ecd466cb225a157da98028edae1fd7fcf5ce",
+  "run_config_sha256": "6672a75f05ef5c974637a652c07e64940af1c11d88de73509a4558abe3c2ac5a",
+  "adapter_configuration": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "openai_base_url": "https://api.deepseek.com",
+    "thinking": "disabled",
+    "api_key_configured": true
+  },
+  "summary": {
+    "cell_count": 28,
+    "by_condition": {
+      "forced_verified_oracle_parameters": {
+        "cell_count": 14,
+        "completed_count": 14,
+        "correct_count": 14,
+        "accuracy": 1.0,
+        "parse_failure_count": 0,
+        "status_counts": {
+          "completed": 14
+        }
+      },
+      "no_tool": {
+        "cell_count": 14,
+        "completed_count": 14,
+        "correct_count": 11,
+        "accuracy": 0.7857142857142857,
+        "parse_failure_count": 0,
+        "status_counts": {
+          "completed": 14
+        }
+      }
+    },
+    "scheduled_pair_count": 14,
+    "paired_complete_count": 14,
+    "incomplete_pair_count": 0,
+    "descriptive_accuracy_gain": 0.21428571428571427,
+    "status": "completed",
+    "confirmatory_inference_allowed": false
+  },
+  "formal_repeats_frozen": false,
+  "core_frozen": false,
+  "source_snapshots": {
+    "tasks": "task_source_snapshot.json",
+    "run_config": "run_config_snapshot.json"
+  },
+  "sealing": {
+    "sealed_at": "2026-07-30T08:53:07.964271+00:00",
+    "reason": "embed immutable sources before pilot task revision",
+    "previous_manifest_sha256": "ddb88abf6ca57f63ad3c69b911f53ec8574d2e7929ba488be2d7055fef227e7f"
+  }
+}

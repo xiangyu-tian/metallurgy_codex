@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generator_version": "e1b-pilot-generator-v1.0.0",
+  "generator_version": "e1b-pilot-generator-v1.0.2",
   "generated_at": "2026-07-30T00:00:00+08:00",
   "templates": {
     "A001": {
@@ -22,7 +22,7 @@
       "primary_result_paths": ["elements"]
     },
     "A003": {
-      "problem_template": "按本实验冻结的IUPAC/CIAAW 2021简化原子量表，计算 {formula} 的摩尔质量，单位为g/mol。",
+      "problem_template": "按本实验冻结的原子量 H=1.008、C=12.011、N=14.007、O=15.999、S=32.06、Ca=40.078、Fe=55.845、Cu=63.546，计算 {formula} 的摩尔质量，单位为g/mol，结果保留4位小数。",
       "answer_schema": {
         "type": "object",
         "required": ["molar_mass"],

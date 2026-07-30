@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "E1B-DEVELOPMENT-ANALYSIS-V1",
+  "artifacts": [
+    {
+      "filename": "analysis_report.json",
+      "sha256": "19fb1118be2c1da9070e09efde6a7e9de0f19e120ec764122af9051eb95d5ff8"
+    }
+  ],
+  "source_evidence": [
+    {
+      "filename": "outputs/e1b_development_r3_v102_20260730/artifact_manifest.json",
+      "sha256": "a5b60b33298f233bc54974fb2b9cfaec6e3649dad44e4f1b6f84e92033a98aad"
+    },
+    {
+      "filename": "outputs/e1b_development_r3_v102_20260730/run_records.jsonl",
+      "sha256": "315e64e2b1753868f739d36a78ffea90d5f77f5dae6d6a119a42a6c6e3b243b4"
+    }
+  ]
+}
