@@ -82,6 +82,12 @@ def _condition_summary(rows: list[dict[str, Any]]) -> dict[str, Any]:
         "parse_failure_count": sum(
             row.get("parse_status") != "parsed" for row in rows
         ),
+        "provider_attempt_count": sum(
+            int(row.get("provider_attempt_count", 0)) for row in rows
+        ),
+        "retried_cell_count": sum(
+            int(row.get("provider_attempt_count", 0)) > 1 for row in rows
+        ),
         "status_counts": dict(
             sorted(Counter(row["status"] for row in rows).items())
         ),

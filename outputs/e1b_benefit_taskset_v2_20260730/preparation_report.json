@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1B-TASKSET-V2-BENEFIT-20260730",
+  "status": "passed",
+  "task_count": 45,
+  "condition_run_cells_per_repeat": 90,
+  "condition_run_cells_at_three_repeats": 270,
+  "task_count_by_tool": {
+    "A001": 10,
+    "A002": 7,
+    "A003": 12,
+    "A004": 8,
+    "B019": 8
+  },
+  "base_task_group_count": 26,
+  "selected_splits": [
+    "benefit_estimation"
+  ],
+  "gate_evaluation_task_count": 0,
+  "api_model_runs_performed": false,
+  "core_frozen": false
+}

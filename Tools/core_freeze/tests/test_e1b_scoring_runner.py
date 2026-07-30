@@ -1,3 +1,4 @@
+import copy
 import json
 import sys
 import tempfile
@@ -187,6 +188,34 @@ class E1bRunnerTests(unittest.TestCase):
         self.assertEqual(records[0]["status"], "provider_error")
         self.assertEqual(summary["paired_complete_count"], 0)
         self.assertIsNone(summary["descriptive_accuracy_gain"])
+
+    def test_fixed_provider_retry_policy_is_audited(self):
+        registry = ModelRegistry()
+        registry.discover()
+        adapter = FakeAdapter(
+            [
+                LLMAdapterError("temporary network failure"),
+                '{"value":1000}',
+                '{"value":1000}',
+            ]
+        )
+        run_config = copy.deepcopy(self.run_config)
+        run_config["provider_max_attempts"] = 2
+        run_config["retry_backoff_seconds"] = 0
+        records, summary = run_experiment(
+            tasks_doc=self.tasks_doc,
+            run_config=run_config,
+            registry=registry,
+            adapter=adapter,
+            repeats=1,
+            max_tasks=1,
+        )
+        self.assertEqual([row["status"] for row in records], ["completed"] * 2)
+        self.assertEqual(records[0]["provider_attempt_count"], 2)
+        self.assertEqual(records[1]["provider_attempt_count"], 1)
+        self.assertEqual(records[0]["provider_attempts"][0]["status"], "provider_error")
+        self.assertEqual(summary["provider_attempt_count"], 3)
+        self.assertEqual(summary["retried_cell_count"], 1)
 
     def test_output_package_has_hashes_and_no_secrets(self):
         registry = ModelRegistry()

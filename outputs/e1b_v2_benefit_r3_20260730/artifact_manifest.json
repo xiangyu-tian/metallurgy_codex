@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "run_id": "E1B-RUN-92E5D7291A2C4337",
+  "artifacts": [
+    {
+      "filename": "run_records.jsonl",
+      "sha256": "868f9c6e6d84f0dd3647277a8fe718de04ed1708bb95994405f609d3d2f36dde"
+    },
+    {
+      "filename": "run_report.json",
+      "sha256": "2336d1480414a205678ff7902db4c93f4f4e28278d198318e435d3c55055b9f3"
+    },
+    {
+      "filename": "task_source_snapshot.json",
+      "sha256": "81d90e7f9cb638ff18614a6f49d09fafc391bbe304c9917674beab307cef43c8"
+    },
+    {
+      "filename": "run_config_snapshot.json",
+      "sha256": "41f6ad26151bb6b542188f07e341c4b9db0eea369213499127c23e3c3bd1e2d6"
+    },
+    {
+      "filename": "runner_source_snapshot.py",
+      "sha256": "15d0507aebe7484edce0fe877953222d3b7b4bc121fa05d1f37133960735f36c"
+    },
+    {
+      "filename": "scoring_source_snapshot.py",
+      "sha256": "c33e48c188c31a743e234a3b6e6cdbaed221d582e8d5b74ee430959033685190"
+    }
+  ]
+}

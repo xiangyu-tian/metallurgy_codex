@@ -22,6 +22,12 @@ from core_freeze.e1b_v2.validate_e1b_v2 import validate_package  # noqa: E402
 from core_freeze.e1b_v2.prepare_e1b_v2_smoke import (  # noqa: E402
     prepare_smoke_subset,
 )
+from core_freeze.e1b_v2.prepare_e1b_v2_benefit import (  # noqa: E402
+    prepare_benefit_subset,
+)
+from core_freeze.e1b_v2.analyze_e1b_v2_benefit import (  # noqa: E402
+    cluster_bootstrap,
+)
 
 E1B_PILOT_DIR = TOOLS_DIR / "core_freeze" / "e1b_pilot"
 if str(E1B_PILOT_DIR) not in sys.path:
@@ -269,6 +275,57 @@ class E1bV2Tests(unittest.TestCase):
             contaminated["task_count"] += 1
             with self.assertRaisesRegex(ValueError, "selected_split|sealed"):
                 validate_run_scope(contaminated, run_config)
+
+    def test_complete_benefit_snapshot_contains_only_45_front_tasks(self):
+        source_tasks_path = (
+            TOOLS_DIR.parent
+            / "outputs"
+            / "e1b_taskset_v2_20260730"
+            / "e1b_tasks_v2.json"
+        )
+        run_config = load_json(self.v2_dir / "run_config_benefit_v2.json")
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output_dir = Path(temp_dir)
+            report = prepare_benefit_subset(source_tasks_path, output_dir)
+            self.assertEqual(report["status"], "passed")
+            self.assertEqual(report["task_count"], 45)
+            self.assertEqual(report["condition_run_cells_at_three_repeats"], 270)
+            self.assertEqual(report["selected_splits"], ["benefit_estimation"])
+            self.assertEqual(report["gate_evaluation_task_count"], 0)
+            benefit_doc = load_json(output_dir / "e1b_benefit_tasks_v2.json")
+            validate_run_scope(benefit_doc, run_config)
+            self.assertEqual(
+                Counter(task["source_tool_id"] for task in benefit_doc["tasks"]),
+                Counter(
+                    {
+                        "A001": 10,
+                        "A002": 7,
+                        "A003": 12,
+                        "A004": 8,
+                        "B019": 8,
+                    }
+                ),
+            )
+            self.assertTrue(
+                all(
+                    task["split"] == "benefit_estimation"
+                    for task in benefit_doc["tasks"]
+                )
+            )
+
+    def test_group_cluster_bootstrap_is_deterministic(self):
+        groups = {
+            "G1": [1.0, 1.0],
+            "G2": [0.0],
+            "G3": [0.0, 0.0, 0.0],
+        }
+        first = cluster_bootstrap(groups, seed=7, iterations=1000)
+        second = cluster_bootstrap(groups, seed=7, iterations=1000)
+        self.assertEqual(first, second)
+        self.assertEqual(first["cluster_unit"], "base_task_group_id")
+        self.assertAlmostEqual(first["task_weighted"]["estimate"], 2 / 6)
+        self.assertAlmostEqual(first["group_equal"]["estimate"], 1 / 3)
+        self.assertFalse(first["confirmatory_inference_allowed"])
 
 
 if __name__ == "__main__":

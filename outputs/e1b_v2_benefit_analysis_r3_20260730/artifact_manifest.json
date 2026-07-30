@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "E1B-V2-BENEFIT-DEVELOPMENT-ANALYSIS-R3-20260730",
+  "artifacts": [
+    {
+      "filename": "benefit_analysis_report.json",
+      "sha256": "8d2df48203c7ec6da8179a0d3ac4c9678cefe21e62527c1672bb340b0b3792aa"
+    },
+    {
+      "filename": "task_effects.csv",
+      "sha256": "203f13a0b7e55228142bde755b952e9f851dc609698b95288be8c81a76a7451b"
+    },
+    {
+      "filename": "group_effects.csv",
+      "sha256": "977e1e97f6abecd69959a0f4ef15090728cca97c8fc0522fba3f096a69df4102"
+    },
+    {
+      "filename": "error_audit.csv",
+      "sha256": "e46b57788103d066982f9e3b7958df5444abe8391e0f5e60fff5170a10237626"
+    },
+    {
+      "filename": "analyzer_source_snapshot.py",
+      "sha256": "ec16154bcc2f8eb2cce6aa2f854371d1d6322ea05cdb484a08dbf710ab67e513"
+    }
+  ],
+  "source_evidence": [
+    {
+      "filename": "outputs/e1b_v2_benefit_r3_20260730/artifact_manifest.json",
+      "sha256": "bc5added86e3a12d8a4bb18ad70d73ad9814467434117799b99b9ac9fac300d1"
+    },
+    {
+      "filename": "outputs/e1b_v2_benefit_r3_20260730/run_records.jsonl",
+      "sha256": "868f9c6e6d84f0dd3647277a8fe718de04ed1708bb95994405f609d3d2f36dde"
+    }
+  ]
+}

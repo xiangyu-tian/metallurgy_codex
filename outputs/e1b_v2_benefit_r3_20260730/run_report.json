@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "run_id": "E1B-RUN-92E5D7291A2C4337",
+  "dataset_id": "E1B-TASKSET-V2-BENEFIT-20260730",
+  "run_config_id": "E1B-V2-BENEFIT-DEVELOPMENT-R3-20260730",
+  "generated_at": "2026-07-30T09:42:28.115343+00:00",
+  "task_source_sha256": "81d90e7f9cb638ff18614a6f49d09fafc391bbe304c9917674beab307cef43c8",
+  "run_config_sha256": "41f6ad26151bb6b542188f07e341c4b9db0eea369213499127c23e3c3bd1e2d6",
+  "source_snapshots": {
+    "tasks": "task_source_snapshot.json",
+    "run_config": "run_config_snapshot.json",
+    "runner": "runner_source_snapshot.py",
+    "scoring": "scoring_source_snapshot.py"
+  },
+  "adapter_configuration": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "openai_base_url": "https://api.deepseek.com",
+    "thinking": "disabled",
+    "api_key_configured": true
+  },
+  "task_selection": {
+    "source_task_count": 45,
+    "executed_task_count": 45,
+    "executed_task_ids": [
+      "E1B2-A001-001",
+      "E1B2-A001-002",
+      "E1B2-A001-003",
+      "E1B2-A001-004",
+      "E1B2-A001-005",
+      "E1B2-A001-006",
+      "E1B2-A001-007",
+      "E1B2-A001-008",
+      "E1B2-A001-009",
+      "E1B2-A001-010",
+      "E1B2-A002-001",
+      "E1B2-A002-002",
+      "E1B2-A002-003",
+      "E1B2-A002-004",
+      "E1B2-A002-005",
+      "E1B2-A002-006",
+      "E1B2-A002-007",
+      "E1B2-A003-001",
+      "E1B2-A003-002",
+      "E1B2-A003-003",
+      "E1B2-A003-004",
+      "E1B2-A003-005",
+      "E1B2-A003-006",
+      "E1B2-A003-007",
+      "E1B2-A003-008",
+      "E1B2-A003-009",
+      "E1B2-A003-010",
+      "E1B2-A003-011",
+      "E1B2-A003-012",
+      "E1B2-A004-001",
+      "E1B2-A004-002",
+      "E1B2-A004-003",
+      "E1B2-A004-004",
+      "E1B2-A004-005",
+      "E1B2-A004-006",
+      "E1B2-A004-007",
+      "E1B2-A004-008",
+      "E1B2-B019-001",
+      "E1B2-B019-002",
+      "E1B2-B019-003",
+      "E1B2-B019-004",
+      "E1B2-B019-005",
+      "E1B2-B019-006",
+      "E1B2-B019-007",
+      "E1B2-B019-008"
+    ],
+    "executed_splits": [
+      "benefit_estimation"
+    ]
+  },
+  "summary": {
+    "cell_count": 270,
+    "by_condition": {
+      "forced_verified_oracle_parameters": {
+        "cell_count": 135,
+        "completed_count": 135,
+        "correct_count": 135,
+        "accuracy": 1.0,
+        "parse_failure_count": 0,
+        "provider_attempt_count": 135,
+        "retried_cell_count": 0,
+        "status_counts": {
+          "completed": 135
+        }
+      },
+      "no_tool": {
+        "cell_count": 135,
+        "completed_count": 135,
+        "correct_count": 117,
+        "accuracy": 0.8666666666666667,
+        "parse_failure_count": 1,
+        "provider_attempt_count": 135,
+        "retried_cell_count": 0,
+        "status_counts": {
+          "completed": 135
+        }
+      }
+    },
+    "scheduled_pair_count": 135,
+    "paired_complete_count": 135,
+    "incomplete_pair_count": 0,
+    "provider_attempt_count": 270,
+    "retried_cell_count": 0,
+    "descriptive_accuracy_gain": 0.13333333333333333,
+    "status": "completed",
+    "confirmatory_inference_allowed": false
+  },
+  "formal_repeats_frozen": false,
+  "core_frozen": false
+}

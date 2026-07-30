@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "E1B-V2-BENEFIT-DEVELOPMENT-ANALYSIS-R3-20260730",
+  "generated_at": "2026-07-30T09:45:43.994186+00:00",
+  "source_run_id": "E1B-RUN-92E5D7291A2C4337",
+  "source_dataset_id": "E1B-TASKSET-V2-BENEFIT-20260730",
+  "source_run_config_id": "E1B-V2-BENEFIT-DEVELOPMENT-R3-20260730",
+  "source_manifest_sha256": "bc5added86e3a12d8a4bb18ad70d73ad9814467434117799b99b9ac9fac300d1",
+  "source_records_sha256": "868f9c6e6d84f0dd3647277a8fe718de04ed1708bb95994405f609d3d2f36dde",
+  "source_manifest_artifact_count": 6,
+  "analyzer_source_sha256": "ec16154bcc2f8eb2cce6aa2f854371d1d6322ea05cdb484a08dbf710ab67e513",
+  "cell_count": 270,
+  "task_count": 45,
+  "base_task_group_count": 26,
+  "paired_cell_count": 135,
+  "no_tool_accuracy": 0.8666666666666667,
+  "forced_accuracy": 1.0,
+  "paired_accuracy_gain": 0.13333333333333333,
+  "positive_pair_count": 18,
+  "zero_pair_count": 117,
+  "negative_pair_count": 0,
+  "no_tool_parse_failure_count": 1,
+  "forced_parse_failure_count": 0,
+  "provider_attempt_count": 270,
+  "retried_cell_count": 0,
+  "condition_costs": {
+    "no_tool": {
+      "cell_count": 135,
+      "usage_totals": {
+        "prompt_tokens": 17358,
+        "completion_tokens": 1904,
+        "total_tokens": 19262
+      },
+      "mean_latency_ms": 868.9518592592593
+    },
+    "forced_verified_oracle_parameters": {
+      "cell_count": 135,
+      "usage_totals": {
+        "prompt_tokens": 35157,
+        "completion_tokens": 2013,
+        "total_tokens": 37170
+      },
+      "mean_latency_ms": 866.9797925925926
+    }
+  },
+  "tool_effects": [
+    {
+      "source_tool_id": "A001",
+      "paired_cell_count": 30,
+      "no_tool_accuracy": 1.0,
+      "forced_accuracy": 1.0,
+      "accuracy_gain": 0.0
+    },
+    {
+      "source_tool_id": "A002",
+      "paired_cell_count": 21,
+      "no_tool_accuracy": 1.0,
+      "forced_accuracy": 1.0,
+      "accuracy_gain": 0.0
+    },
+    {
+      "source_tool_id": "A003",
+      "paired_cell_count": 36,
+      "no_tool_accuracy": 0.5833333333333334,
+      "forced_accuracy": 1.0,
+      "accuracy_gain": 0.4166666666666667
+    },
+    {
+      "source_tool_id": "A004",
+      "paired_cell_count": 24,
+      "no_tool_accuracy": 0.9166666666666666,
+      "forced_accuracy": 1.0,
+      "accuracy_gain": 0.08333333333333333
+    },
+    {
+      "source_tool_id": "B019",
+      "paired_cell_count": 24,
+      "no_tool_accuracy": 0.9583333333333334,
+      "forced_accuracy": 1.0,
+      "accuracy_gain": 0.041666666666666664
+    }
+  ],
+  "precision_policy_effects": [
+    {
+      "precision_policy": "approximate_educational",
+      "paired_cell_count": 18,
+      "no_tool_accuracy": 1.0,
+      "forced_accuracy": 1.0,
+      "accuracy_gain": 0.0
+    },
+    {
+      "precision_policy": "contract_numeric",
+      "paired_cell_count": 30,
+      "no_tool_accuracy": 1.0,
+      "forced_accuracy": 1.0,
+      "accuracy_gain": 0.0
+    },
+    {
+      "precision_policy": "exact_stoichiometric_counts",
+      "paired_cell_count": 21,
+      "no_tool_accuracy": 1.0,
+      "forced_accuracy": 1.0,
+      "accuracy_gain": 0.0
+    },
+    {
+      "precision_policy": "fraction_explicit_six_decimal",
+      "paired_cell_count": 12,
+      "no_tool_accuracy": 1.0,
+      "forced_accuracy": 1.0,
+      "accuracy_gain": 0.0
+    },
+    {
+      "precision_policy": "percent_explicit_six_decimal",
+      "paired_cell_count": 12,
+      "no_tool_accuracy": 0.9166666666666666,
+      "forced_accuracy": 1.0,
+      "accuracy_gain": 0.08333333333333333
+    },
+    {
+      "precision_policy": "six_decimal_components",
+      "paired_cell_count": 24,
+      "no_tool_accuracy": 0.9166666666666666,
+      "forced_accuracy": 1.0,
+      "accuracy_gain": 0.08333333333333333
+    },
+    {
+      "precision_policy": "strict_versioned",
+      "paired_cell_count": 18,
+      "no_tool_accuracy": 0.16666666666666666,
+      "forced_accuracy": 1.0,
+      "accuracy_gain": 0.8333333333333334
+    }
+  ],
+  "a003_precision_pairs": [
+    {
+      "base_task_group_id": "A003-01",
+      "strict_gain": 0.0,
+      "approximate_gain": 0.0,
+      "strict_minus_approximate_gain": 0.0
+    },
+    {
+      "base_task_group_id": "A003-02",
+      "strict_gain": 1.0,
+      "approximate_gain": 0.0,
+      "strict_minus_approximate_gain": 1.0
+    },
+    {
+      "base_task_group_id": "A003-03",
+      "strict_gain": 1.0,
+      "approximate_gain": 0.0,
+      "strict_minus_approximate_gain": 1.0
+    },
+    {
+      "base_task_group_id": "A003-04",
+      "strict_gain": 1.0,
+      "approximate_gain": 0.0,
+      "strict_minus_approximate_gain": 1.0
+    },
+    {
+      "base_task_group_id": "A003-05",
+      "strict_gain": 1.0,
+      "approximate_gain": 0.0,
+      "strict_minus_approximate_gain": 1.0
+    },
+    {
+      "base_task_group_id": "A003-06",
+      "strict_gain": 1.0,
+      "approximate_gain": 0.0,
+      "strict_minus_approximate_gain": 1.0
+    }
+  ],
+  "a003_mean_strict_minus_approximate_gain": 0.8333333333333334,
+  "cluster_bootstrap": {
+    "seed": 20260730,
+    "iterations": 10000,
+    "cluster_unit": "base_task_group_id",
+    "task_weighted": {
+      "estimate": 0.13333333333333333,
+      "ci95": [
+        0.05185185185185185,
+        0.21985815602836878
+      ]
+    },
+    "group_equal": {
+      "estimate": 0.11538461538461539,
+      "ci95": [
+        0.044871794871794865,
+        0.19871794871794873
+      ]
+    },
+    "confirmatory_inference_allowed": false
+  },
+  "no_observed_benefit_scopes": [
+    "A001",
+    "A002"
+  ],
+  "high_observed_benefit_policies": [
+    "strict_versioned"
+  ],
+  "intermittent_observed_benefit_policies": [
+    "percent_explicit_six_decimal",
+    "six_decimal_components"
+  ],
+  "analysis_status": "descriptive_development_only",
+  "gate_evaluation_opened": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

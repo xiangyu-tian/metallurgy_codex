@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1B-TASKSET-V2-BENEFIT-20260730",
+  "artifacts": [
+    {
+      "filename": "e1b_benefit_tasks_v2.json",
+      "sha256": "81d90e7f9cb638ff18614a6f49d09fafc391bbe304c9917674beab307cef43c8"
+    },
+    {
+      "filename": "preparation_report.json",
+      "sha256": "71535b3298b2df2c301c229e8224c50f55691302bc935ec2eb0b97c6837e0eee"
+    },
+    {
+      "filename": "outputs/e1b_taskset_v2_20260730/e1b_tasks_v2.json",
+      "sha256": "1193b238ac20ae131f6c97398f5ae4dcdcdc6f937c57973986368f8363afdf03"
+    }
+  ]
+}

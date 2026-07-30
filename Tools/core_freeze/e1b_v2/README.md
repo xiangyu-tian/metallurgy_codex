@@ -65,3 +65,31 @@ outputs/e1b_taskset_v2_20260730/
 ```
 
 配置明确设置 `gate_evaluation_opened=false`。运行器发现快照中含有任何 `gate_evaluation` 任务时会在API调用前拒绝执行。
+
+## 完整收益估计运行
+
+生成45条前置任务快照：
+
+```powershell
+& '.\.venv\Scripts\python.exe' 'Tools\core_freeze\e1b_v2\prepare_e1b_v2_benefit.py'
+```
+
+运行三次重复：
+
+```powershell
+& '.\.venv\Scripts\python.exe' `
+  'Tools\core_freeze\e1b_pilot\run_e1b_pilot.py' `
+  --tasks 'outputs\e1b_benefit_taskset_v2_20260730\e1b_benefit_tasks_v2.json' `
+  --config 'Tools\core_freeze\e1b_v2\run_config_benefit_v2.json' `
+  --output-dir 'outputs\e1b_v2_benefit_r3_20260730' `
+  --repeats 3
+```
+
+执行按问题组聚类的专项分析：
+
+```powershell
+& '.\.venv\Scripts\python.exe' `
+  'Tools\core_freeze\e1b_v2\analyze_e1b_v2_benefit.py' `
+  'outputs\e1b_v2_benefit_r3_20260730' `
+  --output-dir 'outputs\e1b_v2_benefit_analysis_r3_20260730'
+```
