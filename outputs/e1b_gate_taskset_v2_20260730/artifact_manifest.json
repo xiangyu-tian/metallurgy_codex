@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1B-TASKSET-V2-GATE-20260730",
+  "artifacts": [
+    {
+      "filename": "e1b_gate_tasks_v2.json",
+      "sha256": "c97cb254dfffcfec6cddd1c161a4a609fb9cdcc780c546264c812f9101e2e45d"
+    },
+    {
+      "filename": "pre_run_policy_assignments.csv",
+      "sha256": "3dbd1d643b84448ecaf6b1905654f3d00a1f4b3b882a1a015ecb783b02bfd362"
+    },
+    {
+      "filename": "candidate_gate_policy_v1.json",
+      "sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5"
+    },
+    {
+      "filename": "run_config_gate_v2.json",
+      "sha256": "d4012bac8abf89be6f7382776c6b63734117e33d02f5cec686e66be0536f2d7c"
+    },
+    {
+      "filename": "gate_preparer_source_snapshot.py",
+      "sha256": "063ec646109d3910c7a195f5ab360c4f7ec2f1b10891c2640a43cd2cd6da48a6"
+    },
+    {
+      "filename": "gate_opening_report.json",
+      "sha256": "e09d472940bda01444f8780857876a2aa2963575d18a25acd0577fb099ac10b7"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "filename": "outputs/e1b_taskset_v2_20260730/e1b_tasks_v2.json",
+      "sha256": "1193b238ac20ae131f6c97398f5ae4dcdcdc6f937c57973986368f8363afdf03"
+    },
+    {
+      "filename": "Tools/core_freeze/e1b_v2/candidate_gate_policy_v1.json",
+      "sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5"
+    },
+    {
+      "filename": "Tools/core_freeze/e1b_v2/run_config_gate_v2.json",
+      "sha256": "d4012bac8abf89be6f7382776c6b63734117e33d02f5cec686e66be0536f2d7c"
+    }
+  ],
+  "gate_evaluation_opened": true,
+  "policy_revision_allowed": false,
+  "core_frozen": false
+}

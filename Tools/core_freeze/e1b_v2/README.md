@@ -116,3 +116,20 @@ outputs/e1b_v2_candidate_gate_policy_v1_20260730/
 ```
 
 策略只读取 `source_tool_id`、`precision_policy` 以及由输入数值直接派生的动态范围和是否需要归一化，不读取题号、题组、题面、化学式或期望答案。策略版本冻结后，`gate_evaluation` 结果不得回写或调整该版本；任何修改都必须产生新的策略版本，并且不能替代v1的独立后置评测结果。
+
+## 独立Gate解封
+
+策略v1已在Git提交`1ee098e`中冻结。生成27题Gate快照和API运行前动作清单：
+
+```powershell
+& '.\.venv\Scripts\python.exe' `
+  'Tools\core_freeze\e1b_v2\prepare_e1b_v2_gate.py'
+```
+
+输出目录为：
+
+```text
+outputs/e1b_gate_taskset_v2_20260730/
+```
+
+该步骤将策略、运行配置、27题快照、预运行动作和准备器源码一并写入哈希清单。只有该准备包通过校验后，才可使用`run_config_gate_v2.json`进行真实API运行。

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1B-TASKSET-V2-GATE-20260730",
+  "status": "passed",
+  "gate_evaluation_opened": true,
+  "task_count": 27,
+  "condition_run_cells_per_repeat": 54,
+  "condition_run_cells_at_three_repeats": 162,
+  "task_count_by_tool": {
+    "A001": 6,
+    "A002": 5,
+    "A003": 8,
+    "A004": 4,
+    "B019": 4
+  },
+  "base_task_group_count": 16,
+  "benefit_gate_group_overlap_count": 0,
+  "policy_action_task_counts": {
+    "ANSWER_WITHOUT_TOOL": 23,
+    "CALL_VERIFIED_TOOL": 4
+  },
+  "policy_rule_task_counts": {
+    "CGP-V1-STRICT-VERSIONED": 4,
+    "DEFAULT": 23
+  },
+  "frozen_policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+  "frozen_policy_git_commit": "1ee098e",
+  "run_config_sha256": "d4012bac8abf89be6f7382776c6b63734117e33d02f5cec686e66be0536f2d7c",
+  "policy_assignments_created_before_api_run": true,
+  "api_model_runs_performed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

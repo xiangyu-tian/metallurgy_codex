@@ -4,4 +4,4 @@ outputs/** -text -diff
 # Source JSON referenced by evidence manifests must remain LF on Windows.
 Tools/core_freeze/verified_core/*.json text eol=lf
 Tools/core_freeze/e1b_v2/*.json text eol=lf
-Tools/core_freeze/e1b_v2/apply_candidate_gate_policy.py text eol=lf
+Tools/core_freeze/e1b_v2/*.py text eol=lf

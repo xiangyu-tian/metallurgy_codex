@@ -18,6 +18,9 @@ from core_freeze.e1b_v2.apply_candidate_gate_policy import (  # noqa: E402
     load_json,
     validate_policy,
 )
+from core_freeze.e1b_v2.prepare_e1b_v2_gate import (  # noqa: E402
+    prepare_gate_snapshot,
+)
 
 
 class E1bCandidateGatePolicyTests(unittest.TestCase):
@@ -173,6 +176,43 @@ class E1bCandidateGatePolicyTests(unittest.TestCase):
             self.assertFalse(
                 report["interpretation"]["gate_evaluation_opened"]
             )
+
+    def test_gate_snapshot_binds_frozen_policy_before_api_run(self):
+        source_tasks = (
+            PROJECT_ROOT
+            / "outputs"
+            / "e1b_taskset_v2_20260730"
+            / "e1b_tasks_v2.json"
+        )
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output_dir = Path(temp_dir)
+            report = prepare_gate_snapshot(
+                source_tasks,
+                self.policy_path,
+                self.v2_dir / "run_config_gate_v2.json",
+                output_dir,
+            )
+            self.assertEqual(report["task_count"], 27)
+            self.assertEqual(
+                report["condition_run_cells_at_three_repeats"],
+                162,
+            )
+            self.assertEqual(report["benefit_gate_group_overlap_count"], 0)
+            self.assertTrue(
+                report["policy_assignments_created_before_api_run"]
+            )
+            self.assertFalse(report["api_model_runs_performed"])
+            gate_doc = load_json(output_dir / "e1b_gate_tasks_v2.json")
+            self.assertTrue(gate_doc["gate_evaluation_opened"])
+            self.assertFalse(gate_doc["policy_revision_allowed"])
+            self.assertEqual(
+                gate_doc["frozen_policy_sha256"],
+                file_hash(self.policy_path),
+            )
+            with (
+                output_dir / "pre_run_policy_assignments.csv"
+            ).open(encoding="utf-8") as handle:
+                self.assertEqual(sum(1 for _ in handle) - 1, 27)
 
 
 if __name__ == "__main__":
