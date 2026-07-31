@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0-candidate",
+  "overlay_id": "E2-OBSERVABLE-MUTATION-OVERLAY-V2",
+  "base_policy_id": "E2-CONTRACT-BOUNDARY-POLICY-V1",
+  "base_policy_sha256": "a16c7c359e7ade35965edeb1fe036cf11cb91c01f1ca1b43d7b04b6b0544e519",
+  "mutation_rule_version": "e2-contract-mutation-v2.0.0-candidate",
+  "observability_invariant_version": "e2-label-observability-v1.0.0",
+  "joint_mutation": [
+    "make_parameter_ambiguous",
+    "contract_out_of_domain"
+  ],
+  "joint_mutation_specs": {
+    "A001": {
+      "final_state_patch": {
+        "parameters": {
+          "source_unit": "kg",
+          "target_unit": {
+            "status": "ambiguous",
+            "candidates": ["m", "s"]
+          }
+        }
+      },
+      "observability_rationale": "target unit is unresolved and every candidate is dimensionally incompatible with kg"
+    },
+    "A002": {
+      "final_state_patch": {
+        "parameters": {
+          "formula": {
+            "status": "ambiguous",
+            "candidates": ["Fe2O3·H2O", "Fe3O4·H2O"]
+          }
+        }
+      },
+      "observability_rationale": "formula is unresolved and every candidate violates neutral_formula_grammar_v1"
+    },
+    "A003": {
+      "final_state_patch": {
+        "parameters": {
+          "formula": {
+            "status": "ambiguous",
+            "candidates": ["SiO2", "Al2O3"]
+          }
+        }
+      },
+      "observability_rationale": "formula is unresolved and every candidate uses elements outside the verified atomic-weight subset"
+    },
+    "A004": {
+      "final_state_patch": {
+        "parameters": {
+          "compositions": {
+            "status": "ambiguous",
+            "candidates": [
+              {"Fe": 0.8, "C": -0.1},
+              {"Fe": 1.2, "C": -0.2}
+            ]
+          }
+        }
+      },
+      "observability_rationale": "composition is unresolved and every candidate violates the nonnegative-value contract"
+    },
+    "B019": {
+      "final_state_patch": {
+        "parameters": {
+          "overall_composition": {
+            "status": "ambiguous",
+            "candidates": [0.9, 1.1]
+          },
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        }
+      },
+      "observability_rationale": "overall composition is unresolved and every candidate lies outside the verified tie-line or fraction domain"
+    }
+  },
+  "invariants": [
+    "expected structural flags must be recomputable from the final model-visible structured_state",
+    "joint mutations must not overwrite evidence for an earlier flag",
+    "all ambiguous candidates in the joint ambiguity-plus-OOD task must remain outside the relevant contract boundary",
+    "mutation history is audit evidence and must not be required to infer the model-facing gold label"
+  ],
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

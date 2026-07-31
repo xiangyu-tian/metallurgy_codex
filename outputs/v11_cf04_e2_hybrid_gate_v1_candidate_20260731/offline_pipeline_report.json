@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0-candidate",
+  "analysis_type": "offline_oracle_semantic_pipeline_test",
+  "task_count": 55,
+  "structural_exact_count": 55,
+  "structural_exact_accuracy": 1.0,
+  "merged_exact_count": 55,
+  "merged_exact_accuracy": 1.0,
+  "action_correct_count": 55,
+  "action_accuracy": 1.0,
+  "oracle_semantic_flags_used": true,
+  "external_api_calls": 0,
+  "model_performance_claim_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0-candidate",
+  "candidate_id": "E2-HYBRID-BOUNDARY-GATE-V1-20260731",
+  "source_bindings": {
+    "v1_tasks_sha256": "4e8b89043fee0faddd8f2ed34c258b5e8531cff9c744c66a56a32568ec622a34",
+    "v2_tasks_sha256": "935ad56c507eded50e824fdfd5bd1e672bbe74e67a52359de5b4be4eba2daebb",
+    "v2_manifest_sha256": "53002a6929ea78fce18bed02e8ca93ab97e55750c57ea5a9a38a72fb29a03305",
+    "contracts_sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec",
+    "base_policy_sha256": "a16c7c359e7ade35965edeb1fe036cf11cb91c01f1ca1b43d7b04b6b0544e519",
+    "builder_sha256": "644914db7d856fe6dfc5ce827345e0ead390980f2883ec1291ce21b7cef26122"
+  },
+  "artifacts": [
+    {
+      "filename": "hybrid_policy_snapshot.json",
+      "sha256": "93cf8f82e2db750cabf87aa14f98759b0818ab5652ec7c8a3f63ce7e4e03bb65"
+    },
+    {
+      "filename": "semantic_prompt_snapshot.json",
+      "sha256": "4488c137c40d67c7d92fe73cea536d41166ded26d317a3c4dc66803661c78b2e"
+    },
+    {
+      "filename": "semantic_schema_snapshot.json",
+      "sha256": "9d20ae571abc0a7ccb98b64c217b6fe6304028b2159c1d7ed10e50a92186c5cb"
+    },
+    {
+      "filename": "hybrid_gate_snapshot.py",
+      "sha256": "5e733afde1edfe7d3e3e188694d9b037a1037e225446e2934d419b5db8d6b1e7"
+    },
+    {
+      "filename": "v1_observability_defect_report.json",
+      "sha256": "5fa76f5255a9385731cce1f66ac2a6d816b2528b70b51507136ae505d3ca3af3"
+    },
+    {
+      "filename": "offline_pipeline_records.jsonl",
+      "sha256": "2a8dc024f33e8ed6eac8804ffa207e63059ca26b51250ed397bf809e602e93aa"
+    },
+    {
+      "filename": "offline_pipeline_report.json",
+      "sha256": "797dc210d7e0a02eea55955b126aa36615fd89877d6b35a05483ff7bcbfbd750"
+    },
+    {
+      "filename": "candidate_report.json",
+      "sha256": "e230a6d914a01506d65b4ebd0a5c5cc674a29b18a79041836a8e451ec386c26a"
+    }
+  ],
+  "external_api_calls": 0,
+  "external_api_execution_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

@@ -1,0 +1,814 @@
+{
+  "schema_version": "2.0-candidate",
+  "audit_id": "V11-CF04-E2-PILOT-V2-OBSERVABILITY-20260731",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731",
+  "status": "candidate_passed",
+  "summary": {
+    "task_count": 55,
+    "mutation_event_count": 65,
+    "joint_task_count": 5,
+    "structural_observability_mismatch_count": 0,
+    "semantic_observability_mismatch_count": 0,
+    "action_counts": {
+      "call": 5,
+      "clarify": 24,
+      "refuse": 26
+    }
+  },
+  "checks": [
+    {
+      "check_id": "CF04-V2-STRUCTURAL-LABEL-OBSERVABILITY",
+      "passed": true,
+      "evidence": {
+        "task_count": 55,
+        "mismatch_count": 0
+      }
+    },
+    {
+      "check_id": "CF04-V2-SEMANTIC-LABEL-OBSERVABILITY",
+      "passed": true,
+      "evidence": {
+        "task_count": 55,
+        "mismatch_count": 0
+      }
+    },
+    {
+      "check_id": "CF04-V2-JOINT-MUTATION-OBSERVABILITY",
+      "passed": true,
+      "evidence": {
+        "joint_task_count": 5,
+        "tools": [
+          "A001",
+          "A002",
+          "A003",
+          "A004",
+          "B019"
+        ]
+      }
+    },
+    {
+      "check_id": "CF04-V2-RULE-DERIVATION",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "check_id": "CF04-V2-NONCONFIRMATORY",
+      "passed": true,
+      "evidence": "all tasks remain candidate-only"
+    }
+  ],
+  "task_observability": [
+    {
+      "task_id": "E2V2-A001-01",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A001-02",
+      "expected_structural_flags": [
+        "missing_parameter"
+      ],
+      "observed_structural_flags": [
+        "missing_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A001-03",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A001-04",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A001-05",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A001-06",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A001-07",
+      "expected_structural_flags": [
+        "version_mismatch"
+      ],
+      "observed_structural_flags": [
+        "version_mismatch"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A001-08",
+      "expected_structural_flags": [
+        "missing_parameter"
+      ],
+      "observed_structural_flags": [
+        "missing_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A001-09",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A001-10",
+      "expected_structural_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A001-11",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A001-12",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A002-01",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A002-02",
+      "expected_structural_flags": [
+        "missing_parameter"
+      ],
+      "observed_structural_flags": [
+        "missing_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A002-03",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A002-04",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A002-05",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A002-06",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A002-07",
+      "expected_structural_flags": [
+        "version_mismatch"
+      ],
+      "observed_structural_flags": [
+        "version_mismatch"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A002-08",
+      "expected_structural_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A002-09",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A002-10",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A003-01",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A003-02",
+      "expected_structural_flags": [
+        "missing_parameter"
+      ],
+      "observed_structural_flags": [
+        "missing_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A003-03",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A003-04",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A003-05",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A003-06",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A003-07",
+      "expected_structural_flags": [
+        "version_mismatch"
+      ],
+      "observed_structural_flags": [
+        "version_mismatch"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A003-08",
+      "expected_structural_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A003-09",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A003-10",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A004-01",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A004-02",
+      "expected_structural_flags": [
+        "missing_parameter"
+      ],
+      "observed_structural_flags": [
+        "missing_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A004-03",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A004-04",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A004-05",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A004-06",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A004-07",
+      "expected_structural_flags": [
+        "version_mismatch"
+      ],
+      "observed_structural_flags": [
+        "version_mismatch"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A004-08",
+      "expected_structural_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A004-09",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-A004-10",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-B019-01",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-B019-02",
+      "expected_structural_flags": [
+        "missing_parameter"
+      ],
+      "observed_structural_flags": [
+        "missing_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-B019-03",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-B019-04",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-B019-05",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-B019-06",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-B019-07",
+      "expected_structural_flags": [
+        "version_mismatch"
+      ],
+      "observed_structural_flags": [
+        "version_mismatch"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-B019-08",
+      "expected_structural_flags": [
+        "missing_parameter"
+      ],
+      "observed_structural_flags": [
+        "missing_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-B019-09",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-B019-10",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-B019-11",
+      "expected_structural_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": [],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-B019-12",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    },
+    {
+      "task_id": "E2V2-B019-13",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "structural_observability_match": true,
+      "semantic_observability_match": true
+    }
+  ],
+  "base_policy_sha256": "a16c7c359e7ade35965edeb1fe036cf11cb91c01f1ca1b43d7b04b6b0544e519",
+  "overlay_sha256": "b036fa357d5b35c0bf5fef48eb66eb1d8105a59a33c94e3a45e7ff6066504ee3",
+  "observability_invariant_version": "e2-label-observability-v1.0.0",
+  "human_per_task_labels_used": false,
+  "external_api_calls": 0,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

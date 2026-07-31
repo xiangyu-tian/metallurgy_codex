@@ -1,5 +1,31 @@
 # v1.1 CF-04 E2 flags-only策略开发复核结果
 
+## 后续可观察性更正
+
+在开发双层门控时，对55条任务执行了“金标签能否由最终模型可见输入推出”的新增审计。审计发现以下4条`ambiguous + OOD`任务中，后执行的OOD补丁覆盖了先前的歧义标记：
+
+```text
+E2P-A001-11
+E2P-A002-09
+E2P-A003-09
+E2P-B019-12
+```
+
+因此，本文件记录的原始API响应、严格分数和配对统计继续保留，但将这4条归因为“模型遗漏ambiguous_parameter”的解释已被后续证据推翻。它们属于数据生成器的标签可观察性缺陷，不能用于评价模型。
+
+在仅作开发诊断、排除这4条不可评分任务时：
+
+```text
+flags完全匹配率 = 48 / 51 = 94.12%
+派生action准确率 = 49 / 51 = 96.08%
+```
+
+这两个数字也不能替代预注册结果，只用于说明原任务缺陷对表面性能的影响。正式修复见：
+
+```text
+docs/experiments/v11_cf04_e2_hybrid_gate_v1_candidate_20260731.md
+```
+
 ## 结论
 
 E2 flags-only策略v1.1的独立API开发复核已经完成：
@@ -158,7 +184,7 @@ derived_action = refuse
 
 ### 6.3 歧义与超域组合
 
-以下四条均只保留`contract_defined_out_of_domain`，遗漏`ambiguous_parameter`：
+以下四条原始响应均只包含`contract_defined_out_of_domain`：
 
 ```text
 E2P-A001-11
@@ -174,7 +200,7 @@ expected_action = clarify
 derived_action = refuse
 ```
 
-这说明仅在提示词中声明“保留全部flags”仍不足以稳定解决多标签遮蔽。
+后续可观察性审计证明，这四条最终输入中的歧义标记已被OOD变换覆盖，因此不能用于判断提示词是否解决多标签遮蔽。
 
 ### 6.4 超域与不可用组合
 

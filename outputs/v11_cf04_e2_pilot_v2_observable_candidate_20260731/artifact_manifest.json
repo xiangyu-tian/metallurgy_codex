@@ -1,0 +1,28 @@
+{
+  "schema_version": "2.0-candidate",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731",
+  "source_bindings": {
+    "base_policy_sha256": "a16c7c359e7ade35965edeb1fe036cf11cb91c01f1ca1b43d7b04b6b0544e519",
+    "overlay_sha256": "b036fa357d5b35c0bf5fef48eb66eb1d8105a59a33c94e3a45e7ff6066504ee3",
+    "hybrid_policy_sha256": "93cf8f82e2db750cabf87aa14f98759b0818ab5652ec7c8a3f63ce7e4e03bb65",
+    "contracts_sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec",
+    "builder_sha256": "5e23b73b4e2552e6de5d3ad39dc08d8d84ae5a9bd026034583ed5c13d18871f1"
+  },
+  "artifacts": [
+    {
+      "filename": "e2_pilot_tasks_v2.json",
+      "sha256": "935ad56c507eded50e824fdfd5bd1e672bbe74e67a52359de5b4be4eba2daebb"
+    },
+    {
+      "filename": "mutation_events_v2.json",
+      "sha256": "51420cea7da4696a4058a0c16d624c2c3b4d1f0e0ba1f5b9dd830c6b3152ae80"
+    },
+    {
+      "filename": "observability_audit.json",
+      "sha256": "19be1392a729ae7192ba6f37fc44392afb6663dce84b864e3673f5058c86981a"
+    }
+  ],
+  "external_api_calls": 0,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

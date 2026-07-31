@@ -39,7 +39,7 @@ v1.1 的 CF 编号重新绑定到可执行真值冻结门槛：
 | CF-01 | 协议与数据规范兼容性 | v1.1研究问题、G1/G2/C1真值、S1限制、数据生产和`core_frozen=false`一致 | `passed` | `outputs/v11_cf01_cf02_audit_20260731/`；8项兼容性检查全部通过 |
 | CF-02 | `verified_core`工具及独立参考 | 至少3个工具；契约字段、来源、适用域、限制、哈希、正常/边界案例和独立参考均通过 | `passed` | A001、A002、A003、A004、B019共5工具；27/27参考案例通过；11项审计检查通过 |
 | CF-03 | E1b基础任务与收益先导 | 基础任务、独立参考、No Tool/Forced Tool对照、重复和防循环划分可复现 | `passed` | 候选证据审计通过；E1b的120基础任务组、240任务和3次重复设计已审批冻结 |
-| CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `in_progress` | v1.1独立开发复核55/55完成：Schema 100%、flags准确率87.27%、Macro-F1 94.58%；unsupported-system已改善，但clarify准确率降至75%并出现1条提前调用，覆盖和独立验证仍待补 |
+| CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `in_progress` | 后续审计确认v1有4条不可观察多标签；v2可观察候选已修复且55条结构/语义审计零错配；双层门控离线功能链通过，但LLM语义层尚未运行 |
 | CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 五工具端到端选择已验证；17/50/100/120契约目录与近邻生成仍未完成 |
 | CF-06 | 17/50/100/120 Schema API可行性 | 实测函数数量、Token、上下文、延迟、错误、`tool_choice=none`和供应商限制 | `pending` | 尚未按v1.1 Schema-only目录口径执行 |
 | CF-07 | 数据层级与泄漏审计 | `controlled_confirmatory`、`naturalistic_validation`、`exploratory_domain_cases`分层；家族划分和收益校准/评价隔离通过 | `in_progress` | E1b/E1c受控集已分区；自然验证层和探索层尚未冻结 |
@@ -266,7 +266,8 @@ pending:
   - 引入声明温度范围的verified_core契约
   - 引入声明压力范围的verified_core契约
   - 引入带模型卡OOD边界的verified神经网络工具
-  - 构建确定性结构检查与LLM语义检查组合的双层门控候选
+  - 复审并冻结E2任务v2可观察候选
+  - 执行双层门控LLM语义层开发复核
   - 使用新任务验证多标签优先级并估计模型重复波动
 model_pilot:
   execution_status: completed
@@ -304,6 +305,38 @@ policy_v1_1_candidate:
     unsupported_system_recall_improved: passed
     multilabel_exact_accuracy_improved: passed
     clarify_action_accuracy_improved: failed
+  confirmatory_inference_allowed: false
+label_observability_correction:
+  source_dataset: E2-CONTRACT-BOUNDARY-PILOT-V1-20260731
+  defect_status: confirmed
+  unobservable_gold_task_count: 4
+  affected_tasks:
+    - E2P-A001-11
+    - E2P-A002-09
+    - E2P-A003-09
+    - E2P-B019-12
+  corrected_dataset: E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731
+  corrected_structural_observability_mismatch_count: 0
+  corrected_semantic_observability_mismatch_count: 0
+hybrid_gate_v1_candidate:
+  status: local_candidate_prepared_not_authorized
+  deterministic_structural_flags:
+    - missing_parameter
+    - ambiguous_parameter
+    - unavailable
+    - version_mismatch
+  llm_semantic_flags:
+    - contract_defined_out_of_domain
+    - contract_defined_unsupported_system
+    - model_card_defined_ood
+  offline_oracle_pipeline:
+    structural_exact_accuracy: 1.0
+    merged_exact_accuracy: 1.0
+    action_accuracy: 1.0
+    oracle_semantic_flags_used: true
+    model_performance_claim_allowed: false
+  external_api_calls: 0
+  external_api_execution_authorized: false
   confirmatory_inference_allowed: false
 core_frozen: false
 ```

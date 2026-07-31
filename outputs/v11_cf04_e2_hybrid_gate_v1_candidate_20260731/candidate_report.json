@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0-candidate",
+  "candidate_id": "E2-HYBRID-BOUNDARY-GATE-V1-20260731",
+  "generated_at": "2026-07-31T06:49:35.317174+00:00",
+  "status": "local_candidate_prepared_not_authorized",
+  "source_dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731",
+  "v1_observability_defect_count": 4,
+  "offline_pipeline": {
+    "schema_version": "1.0-candidate",
+    "analysis_type": "offline_oracle_semantic_pipeline_test",
+    "task_count": 55,
+    "structural_exact_count": 55,
+    "structural_exact_accuracy": 1.0,
+    "merged_exact_count": 55,
+    "merged_exact_accuracy": 1.0,
+    "action_correct_count": 55,
+    "action_accuracy": 1.0,
+    "oracle_semantic_flags_used": true,
+    "external_api_calls": 0,
+    "model_performance_claim_allowed": false,
+    "confirmatory_inference_allowed": false,
+    "core_frozen": false
+  },
+  "responsibility_split": {
+    "deterministic_structural_layer": [
+      "missing_parameter",
+      "ambiguous_parameter",
+      "unavailable",
+      "version_mismatch"
+    ],
+    "llm_semantic_layer": [
+      "contract_defined_out_of_domain",
+      "contract_defined_unsupported_system",
+      "model_card_defined_ood"
+    ],
+    "merge": "ordered set union of deterministic structural flags and LLM semantic flags",
+    "decision": "derive primary_status and action with e2-readiness-policy-v1.0.0 after merge"
+  },
+  "limitations": [
+    "semantic flags are oracle inputs in the offline pipeline test",
+    "no model performance has been measured on v2 tasks",
+    "v2 tasks are development candidates, not a held-out set",
+    "temperature, pressure and model-card OOD remain uncovered"
+  ],
+  "external_api_calls": 0,
+  "external_api_execution_authorized": false,
+  "model_performance_claim_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

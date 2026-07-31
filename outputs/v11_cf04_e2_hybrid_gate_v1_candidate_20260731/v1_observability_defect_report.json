@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "E2-V1-LABEL-OBSERVABILITY-DEFECT-20260731",
+  "source_dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V1-20260731",
+  "task_count": 55,
+  "mismatch_count": 4,
+  "mismatches": [
+    {
+      "task_id": "E2P-A001-11",
+      "mutation_types": [
+        "make_parameter_ambiguous",
+        "contract_out_of_domain"
+      ],
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observable_structural_flags": [],
+      "defect": "gold structural flag is not derivable from the final model-visible structured_state"
+    },
+    {
+      "task_id": "E2P-A002-09",
+      "mutation_types": [
+        "make_parameter_ambiguous",
+        "contract_out_of_domain"
+      ],
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observable_structural_flags": [],
+      "defect": "gold structural flag is not derivable from the final model-visible structured_state"
+    },
+    {
+      "task_id": "E2P-A003-09",
+      "mutation_types": [
+        "make_parameter_ambiguous",
+        "contract_out_of_domain"
+      ],
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observable_structural_flags": [],
+      "defect": "gold structural flag is not derivable from the final model-visible structured_state"
+    },
+    {
+      "task_id": "E2P-B019-12",
+      "mutation_types": [
+        "make_parameter_ambiguous",
+        "contract_out_of_domain"
+      ],
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observable_structural_flags": [],
+      "defect": "gold structural flag is not derivable from the final model-visible structured_state"
+    }
+  ],
+  "status": "defect_confirmed",
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}
