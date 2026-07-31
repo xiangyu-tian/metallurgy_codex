@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.3-candidate",
+  "request_id": "E2-HYBRID-SEMANTIC-DEV-V1.3-AUTH-REQUEST-20260731",
+  "status": "awaiting_explicit_user_authorization",
+  "requested_decision": "authorized_to_execute_hybrid_semantic_development_v1_3",
+  "run_config_id": "E2-HYBRID-SEMANTIC-DEVELOPMENT-V1.3-20260731",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731",
+  "requested_task_count": 55,
+  "requested_repeats": 1,
+  "external_data_scope": [
+    "55 synthetic observable E2 v2 development tasks",
+    "corresponding five versioned tool contract views",
+    "revised E2 hybrid semantic-only v1.3 prompt"
+  ],
+  "excluded_external_data_scope": [
+    "40-task independent E2 validation candidate",
+    "gold labels and mutation histories",
+    "API credentials",
+    "metallurgical tool outputs"
+  ],
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "tool_access": "disabled",
+  "advancement_gate_id": "E2-HYBRID-SEMANTIC-DEVELOPMENT-GATE-V1",
+  "advancement_gate_sha256": "8dfc9601dd0cb816aaa2b400690bea6182934ae35ed39b74ccffa760f438165d",
+  "execution_authorization_file": "execution_authorization_hybrid_semantic_development_v1_3.json",
+  "execution_authorization_file_exists": false,
+  "external_api_execution_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

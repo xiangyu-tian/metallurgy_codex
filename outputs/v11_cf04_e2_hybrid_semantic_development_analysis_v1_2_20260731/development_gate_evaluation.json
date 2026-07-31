@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "gate_id": "E2-HYBRID-SEMANTIC-DEVELOPMENT-GATE-V1",
+  "decision": "revise_on_development_only",
+  "all_required_checks_passed": false,
+  "passed_check_count": 8,
+  "required_check_count": 11,
+  "checks": [
+    {
+      "check_id": "DEV-GATE-COMPLETE",
+      "metric": "completed_count",
+      "operator": "eq",
+      "threshold": 55,
+      "observed": 55,
+      "passed": true
+    },
+    {
+      "check_id": "DEV-GATE-NO-PROVIDER-FAILURE",
+      "metric": "provider_failure_count",
+      "operator": "eq",
+      "threshold": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "check_id": "DEV-GATE-SCHEMA",
+      "metric": "semantic_schema_valid_count",
+      "operator": "eq",
+      "threshold": 55,
+      "observed": 55,
+      "passed": true
+    },
+    {
+      "check_id": "DEV-GATE-STRUCTURAL",
+      "metric": "structural_flags_exact_count",
+      "operator": "eq",
+      "threshold": 55,
+      "observed": 55,
+      "passed": true
+    },
+    {
+      "check_id": "DEV-GATE-SEMANTIC-MACRO-F1",
+      "metric": "semantic_supported_flag_macro_f1",
+      "operator": "gte",
+      "threshold": 0.9,
+      "observed": 0.775,
+      "passed": false
+    },
+    {
+      "check_id": "DEV-GATE-MERGED-EXACT",
+      "metric": "merged_flags_exact_count",
+      "operator": "gte",
+      "threshold": 52,
+      "observed": 48,
+      "passed": false
+    },
+    {
+      "check_id": "DEV-GATE-ACTION",
+      "metric": "action_correct_count",
+      "operator": "gte",
+      "threshold": 53,
+      "observed": 55,
+      "passed": true
+    },
+    {
+      "check_id": "DEV-GATE-OOD-RECALL",
+      "metric": "contract_defined_out_of_domain_recall",
+      "operator": "gte",
+      "threshold": 0.9,
+      "observed": 0.6,
+      "passed": false
+    },
+    {
+      "check_id": "DEV-GATE-UNSUPPORTED-RECALL",
+      "metric": "contract_defined_unsupported_system_recall",
+      "operator": "gte",
+      "threshold": 0.9,
+      "observed": 1.0,
+      "passed": true
+    },
+    {
+      "check_id": "DEV-GATE-PREMATURE-CALL",
+      "metric": "premature_call_count",
+      "operator": "lte",
+      "threshold": 1,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "check_id": "DEV-GATE-VALIDATION-SEALED",
+      "metric": "validation_dataset_access_count",
+      "operator": "eq",
+      "threshold": 0,
+      "observed": 0,
+      "passed": true
+    }
+  ],
+  "partial_pass_allowed": false,
+  "validation_dataset_may_be_opened": false,
+  "decision_note": "passing permits preparation of a separately authorized validation opening; it does not authorize validation access",
+  "model_performance_claim_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "gate_id": "E2-HYBRID-SEMANTIC-DEVELOPMENT-GATE-V1",
+  "scope": "55-task observable v2 development recheck only",
+  "purpose": "pre-register whether the frozen hybrid semantic candidate may advance to independent validation preparation",
+  "baseline_context": {
+    "source": "v1.1 observable-task development diagnostic",
+    "flags_exact_accuracy": 0.9411764705882353,
+    "action_accuracy": 0.9607843137254902,
+    "formal_baseline_claim_allowed": false
+  },
+  "required_checks": [
+    {
+      "check_id": "DEV-GATE-COMPLETE",
+      "metric": "completed_count",
+      "operator": "eq",
+      "threshold": 55
+    },
+    {
+      "check_id": "DEV-GATE-NO-PROVIDER-FAILURE",
+      "metric": "provider_failure_count",
+      "operator": "eq",
+      "threshold": 0
+    },
+    {
+      "check_id": "DEV-GATE-SCHEMA",
+      "metric": "semantic_schema_valid_count",
+      "operator": "eq",
+      "threshold": 55
+    },
+    {
+      "check_id": "DEV-GATE-STRUCTURAL",
+      "metric": "structural_flags_exact_count",
+      "operator": "eq",
+      "threshold": 55
+    },
+    {
+      "check_id": "DEV-GATE-SEMANTIC-MACRO-F1",
+      "metric": "semantic_supported_flag_macro_f1",
+      "operator": "gte",
+      "threshold": 0.9
+    },
+    {
+      "check_id": "DEV-GATE-MERGED-EXACT",
+      "metric": "merged_flags_exact_count",
+      "operator": "gte",
+      "threshold": 52
+    },
+    {
+      "check_id": "DEV-GATE-ACTION",
+      "metric": "action_correct_count",
+      "operator": "gte",
+      "threshold": 53
+    },
+    {
+      "check_id": "DEV-GATE-OOD-RECALL",
+      "metric": "contract_defined_out_of_domain_recall",
+      "operator": "gte",
+      "threshold": 0.9
+    },
+    {
+      "check_id": "DEV-GATE-UNSUPPORTED-RECALL",
+      "metric": "contract_defined_unsupported_system_recall",
+      "operator": "gte",
+      "threshold": 0.9
+    },
+    {
+      "check_id": "DEV-GATE-PREMATURE-CALL",
+      "metric": "premature_call_count",
+      "operator": "lte",
+      "threshold": 1
+    },
+    {
+      "check_id": "DEV-GATE-VALIDATION-SEALED",
+      "metric": "validation_dataset_access_count",
+      "operator": "eq",
+      "threshold": 0
+    }
+  ],
+  "decision_rule": {
+    "advance": "all required checks pass",
+    "revise": "one or more required checks fail",
+    "partial_pass_allowed": false,
+    "missing_metric_behavior": "fail"
+  },
+  "after_advance": [
+    "freeze prompt, schema, model and run parameters",
+    "prepare separate two-arm independent validation opening",
+    "require new explicit authorization before validation execution"
+  ],
+  "after_revise": [
+    "do not access the 40-task independent validation candidate",
+    "preserve the failed development run and artifacts",
+    "create a new versioned prompt candidate rather than overwrite v1",
+    "repeat the development gate before any validation opening"
+  ],
+  "maximum_additional_prompt_revision_candidates_before_design_review": 1,
+  "model_card_defined_ood_status": "not_applicable_no_verified_neural_model",
+  "development_only": true,
+  "model_performance_claim_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

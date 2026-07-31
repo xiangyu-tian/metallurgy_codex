@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0-development",
+  "gate_id": "E2-HYBRID-SEMANTIC-DEVELOPMENT-GATE-V1",
+  "source_bindings": {
+    "run_manifest_sha256": "e1277f579effdfd9ee4c62b0a7d4bf8ee359b76eeecba656451cecd85723ef13",
+    "advancement_gate_sha256": "8dfc9601dd0cb816aaa2b400690bea6182934ae35ed39b74ccffa760f438165d",
+    "hybrid_policy_sha256": "93cf8f82e2db750cabf87aa14f98759b0818ab5652ec7c8a3f63ce7e4e03bb65",
+    "analyzer_sha256": "0139228deed8c9d74ce0fed700801cdb01a50fd0595ada5f9e0182b3b33d3719"
+  },
+  "artifacts": [
+    {
+      "filename": "development_gate_metrics.json",
+      "sha256": "552fb2f14d7342e77acfab6e686f73e9cd898cb336c975f049b0ccc9aa564eec"
+    },
+    {
+      "filename": "development_gate_evaluation.json",
+      "sha256": "6c81f5e4736bf4f2cd4bfcdff8ea705eba147e050c41aa54ff7a0d2a3005f65c"
+    },
+    {
+      "filename": "advancement_gate_snapshot.json",
+      "sha256": "8dfc9601dd0cb816aaa2b400690bea6182934ae35ed39b74ccffa760f438165d"
+    }
+  ],
+  "decision": "revise_on_development_only",
+  "validation_execution_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

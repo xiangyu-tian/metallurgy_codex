@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0-candidate",
+  "policy_id": "E2-HYBRID-BOUNDARY-GATE-V1-CANDIDATE",
+  "base_readiness_policy_id": "E2-CONTRACT-BOUNDARY-POLICY-V1",
+  "base_readiness_policy_sha256": "a16c7c359e7ade35965edeb1fe036cf11cb91c01f1ca1b43d7b04b6b0544e519",
+  "structural_flags": [
+    "missing_parameter",
+    "ambiguous_parameter",
+    "unavailable",
+    "version_mismatch"
+  ],
+  "semantic_flags": [
+    "contract_defined_out_of_domain",
+    "contract_defined_unsupported_system",
+    "model_card_defined_ood"
+  ],
+  "flag_order": [
+    "missing_parameter",
+    "ambiguous_parameter",
+    "contract_defined_out_of_domain",
+    "contract_defined_unsupported_system",
+    "unavailable",
+    "model_card_defined_ood",
+    "version_mismatch"
+  ],
+  "structural_rules": {
+    "missing_parameter": "any contract required_input is absent from structured_state.parameters",
+    "ambiguous_parameter": "a recursive value under structured_state.parameters has status=ambiguous and a non-empty candidates array",
+    "unavailable": "structured_state.service_status equals unavailable",
+    "version_mismatch": "requested_tool_version and contract tool_version are both present and unequal"
+  },
+  "merge_rule": "ordered set union of deterministic structural flags and LLM semantic flags",
+  "decision_rule": "derive primary_status and action with e2-readiness-policy-v1.0.0 after merge",
+  "model_must_not_output_structural_flags": true,
+  "execution_status": "local_candidate_only",
+  "external_api_execution_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

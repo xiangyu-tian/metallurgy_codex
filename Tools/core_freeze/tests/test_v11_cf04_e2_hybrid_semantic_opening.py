@@ -38,7 +38,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 OUTPUT_DIR = (
     PROJECT_ROOT
     / "outputs"
-    / "v11_cf04_e2_hybrid_semantic_dev_opening_v1_2_20260731"
+    / "v11_cf04_e2_hybrid_semantic_dev_opening_v1_3_20260731"
 )
 
 
@@ -136,7 +136,7 @@ class V11Cf04E2HybridSemanticOpeningTests(unittest.TestCase):
         prompts = load_json(PROMPTS_PATH)
         system = prompts["system"]
         self.assertIn(
-            "缺失或显式歧义的参数只属于结构层",
+            "结构型flags与语义型flags相互独立且可以同时成立",
             system,
         )
         self.assertIn(
@@ -144,7 +144,23 @@ class V11Cf04E2HybridSemanticOpeningTests(unittest.TestCase):
             system,
         )
         self.assertIn(
-            "相数、组元数或requested_system的显式不匹配",
+            "字段缺失本身不提供该字段的语义越界证据",
+            system,
+        )
+        self.assertIn(
+            "显式歧义候选若全部违反同一契约边界",
+            system,
+        )
+        self.assertIn(
+            "服务不可用或版本错配不得停止语义判断",
+            system,
+        )
+        self.assertIn(
+            "只有request_context中的requested_system、requested_phase_count或requested_component_count",
+            system,
+        )
+        self.assertIn(
+            "参数值、单位对、语法、元素集、组成范围或verification_scope违反仍是contract_defined_out_of_domain",
             system,
         )
 
