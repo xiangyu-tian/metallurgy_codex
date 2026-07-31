@@ -360,5 +360,19 @@ independent_semantic_validation_v1:
   external_api_execution_authorized: false
   model_performance_claim_allowed: false
   confirmatory_inference_allowed: false
+hybrid_semantic_development_opening_v1:
+  candidate_id: E2-HYBRID-SEMANTIC-DEV-OPENING-V1-20260731
+  status: prepared_not_authorized
+  source_dataset: E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731
+  task_count: 55
+  model_output_fields:
+    - semantic_flags
+  model_payload_leakage_error_count: 0
+  gold_labels_sent: false
+  mutation_history_sent: false
+  validation_dataset_sent: false
+  external_api_calls: 0
+  external_api_execution_authorized: false
+  confirmatory_inference_allowed: false
 core_frozen: false
 ```
