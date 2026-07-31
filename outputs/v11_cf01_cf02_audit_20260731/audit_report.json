@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF01-CF02-AUDIT-20260731",
+  "protocol_version": "1.1-rc1",
+  "status": "passed",
+  "checks": {
+    "cf01": {
+      "check_id": "CF-01",
+      "title": "v1.1协议与可执行数据规范兼容性",
+      "status": "passed",
+      "checks": [
+        {
+          "check_id": "CF01-PROTOCOL-VERSION",
+          "passed": true,
+          "evidence": "research_protocol_v1.1-rc1.md declares version 1.1-rc1"
+        },
+        {
+          "check_id": "CF01-DATA-POLICY-VERSION",
+          "passed": true,
+          "evidence": "dataset policy identifies its version and companion protocol"
+        },
+        {
+          "check_id": "CF01-EXPERT-FREE-CRITICAL-PATH",
+          "passed": true,
+          "evidence": "revision rationale explicitly removes per-item expert labels"
+        },
+        {
+          "check_id": "CF01-TRUTH-TIERS",
+          "passed": true,
+          "evidence": "revision rationale defines G1/G2/C1/S1 truth tiers"
+        },
+        {
+          "check_id": "CF01-CONFIRMATORY-TRUTH-SCOPE",
+          "passed": true,
+          "evidence": "formal conclusions are limited to externally or executably verified truth"
+        },
+        {
+          "check_id": "CF01-SILVER-NOT-GOLD",
+          "passed": true,
+          "evidence": "AI-assisted labels remain provisional silver"
+        },
+        {
+          "check_id": "CF01-DATA-PRODUCTION-PIPELINE",
+          "passed": true,
+          "evidence": "data policy fixes contract-first, independent-reference production"
+        },
+        {
+          "check_id": "CF01-NOT-FROZEN",
+          "passed": true,
+          "evidence": "both candidate documents preserve Core Frozen=false"
+        }
+      ],
+      "source_hashes": {
+        "docs/experiments/research_protocol_v1.1-rc1.md": "14e219ddd9b9891f338845376d46f9442794b474421bda9d18fa1e8796712d25",
+        "docs/experiments/dataset_executable_reference_policy_v1.0-rc1.md": "4984dc17e65bda9d0250b8e8c199573bfc2abdee70091258c858d0be9ca01d8d",
+        "docs/experiments/research_protocol_revision_rationale_20260730.md": "264e6acf9a382982dc6b42a7d8e6d6cb47c652f82aecda5a65b2fbf19dbc900c"
+      },
+      "acceptance_scope": "Compatibility and truth-governance only; this does not validate all later experiments or make Core Frozen true."
+    },
+    "cf02": {
+      "check_id": "CF-02",
+      "title": "至少3个verified_core工具及独立参考验证",
+      "status": "passed",
+      "checks": [
+        {
+          "check_id": "CF02-MINIMUM-TOOL-COUNT",
+          "passed": true,
+          "evidence": "verified contract count=5, required>=3"
+        },
+        {
+          "check_id": "CF02-UNIQUE-TOOLS",
+          "passed": true,
+          "evidence": "tool ids=['A001', 'A002', 'A003', 'A004', 'B019']"
+        },
+        {
+          "check_id": "CF02-VERIFIED-STATUS",
+          "passed": true,
+          "evidence": "all accepted contracts declare verified_core"
+        },
+        {
+          "check_id": "CF02-CONTRACT-SHAPE-HASH",
+          "passed": true,
+          "evidence": "{\"A001\": [], \"A002\": [], \"A003\": [], \"A004\": [], \"B019\": []}"
+        },
+        {
+          "check_id": "CF02-SOURCES-AND-SCOPE",
+          "passed": true,
+          "evidence": "each contract has references, verification scope and limitations"
+        },
+        {
+          "check_id": "CF02-RUNTIME-REVALIDATION",
+          "passed": true,
+          "evidence": "{\"contract_count\": 5, \"case_count\": 27, \"passed_case_count\": 27, \"failed_case_count\": 0}"
+        },
+        {
+          "check_id": "CF02-NORMAL-BOUNDARY-COVERAGE",
+          "passed": true,
+          "evidence": "all five tools contain required normal and boundary coverage"
+        },
+        {
+          "check_id": "CF02-PUBLISHED-EVIDENCE",
+          "passed": true,
+          "evidence": "{\"contract_count\": 5, \"case_count\": 27, \"passed_case_count\": 27, \"failed_case_count\": 0}"
+        },
+        {
+          "check_id": "CF02-PUBLISHED-MANIFEST",
+          "passed": true,
+          "evidence": "published manifest hashes verified"
+        },
+        {
+          "check_id": "CF02-INDEPENDENT-REFERENCE",
+          "passed": true,
+          "evidence": "Expected values are frozen in this file and are not computed by production tool implementations."
+        },
+        {
+          "check_id": "CF02-NOT-FROZEN",
+          "passed": true,
+          "evidence": "verified core acceptance does not set Core Frozen=true"
+        }
+      ],
+      "verified_tool_ids": [
+        "A001",
+        "A002",
+        "A003",
+        "A004",
+        "B019"
+      ],
+      "verified_tool_count": 5,
+      "reference_case_count": 27,
+      "passed_reference_case_count": 27,
+      "source_hashes": {
+        "Tools/core_freeze/verified_core/tool_contract.schema.json": "349ac1033c8d2e03a297ef3e88ccacf7ad05e5d8f66fc1bd2ae73df90afcd3ca",
+        "Tools/core_freeze/verified_core/contracts_v1.json": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec",
+        "Tools/core_freeze/verified_core/reference_cases_v1.json": "8efabe718a67e34d471921735461f654d5541559dbe5e322b7172d0250367d1f",
+        "Tools/core_freeze/verified_core/validate_verified_core.py": "6b0a342bb7a53876b849d76fca3bf1243a8436d2a58d70965a8cfe6cad16cd4c",
+        "outputs/verified_core_v1_20260730/validation_report.json": "9b50c51f79370316544ef0c226ea88e98c3c0eda76a03919afb1b77a0b657341",
+        "outputs/verified_core_v1_20260730/artifact_manifest.json": "e61f0f909fda929c4fd5b59031c046009aa2c797e52ab102e97bf7d0e6fa7058"
+      },
+      "acceptance_scope": "Only the five contract verification scopes are accepted. This does not validate the remaining 12 implemented or 103 planned tools."
+    }
+  },
+  "legacy_cf01_cf02_reused_as_formal_gold": false,
+  "provisional_silver_promoted": false,
+  "core_frozen": false
+}

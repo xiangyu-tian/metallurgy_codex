@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF01-CF02-AUDIT-20260731",
+  "artifacts": [
+    {
+      "filename": "audit_report.json",
+      "sha256": "959c6e429c54e4ecfbfe2940d2e753758345b9e508a652a29bafb46206758c88"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "filename": "docs/experiments/research_protocol_v1.1-rc1.md",
+      "sha256": "14e219ddd9b9891f338845376d46f9442794b474421bda9d18fa1e8796712d25"
+    },
+    {
+      "filename": "docs/experiments/dataset_executable_reference_policy_v1.0-rc1.md",
+      "sha256": "4984dc17e65bda9d0250b8e8c199573bfc2abdee70091258c858d0be9ca01d8d"
+    },
+    {
+      "filename": "docs/experiments/research_protocol_revision_rationale_20260730.md",
+      "sha256": "264e6acf9a382982dc6b42a7d8e6d6cb47c652f82aecda5a65b2fbf19dbc900c"
+    },
+    {
+      "filename": "Tools/core_freeze/verified_core/tool_contract.schema.json",
+      "sha256": "349ac1033c8d2e03a297ef3e88ccacf7ad05e5d8f66fc1bd2ae73df90afcd3ca"
+    },
+    {
+      "filename": "Tools/core_freeze/verified_core/contracts_v1.json",
+      "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"
+    },
+    {
+      "filename": "Tools/core_freeze/verified_core/reference_cases_v1.json",
+      "sha256": "8efabe718a67e34d471921735461f654d5541559dbe5e322b7172d0250367d1f"
+    },
+    {
+      "filename": "Tools/core_freeze/verified_core/validate_verified_core.py",
+      "sha256": "6b0a342bb7a53876b849d76fca3bf1243a8436d2a58d70965a8cfe6cad16cd4c"
+    },
+    {
+      "filename": "outputs/verified_core_v1_20260730/validation_report.json",
+      "sha256": "9b50c51f79370316544ef0c226ea88e98c3c0eda76a03919afb1b77a0b657341"
+    },
+    {
+      "filename": "outputs/verified_core_v1_20260730/artifact_manifest.json",
+      "sha256": "e61f0f909fda929c4fd5b59031c046009aa2c797e52ab102e97bf7d0e6fa7058"
+    },
+    {
+      "filename": "Tools/core_freeze/audit_v11_cf01_cf02.py",
+      "sha256": "9a7aba65b9a1ce85472fc4b49cb19f948112d771c74c58d5216194e33fafd292"
+    }
+  ],
+  "core_frozen": false
+}
