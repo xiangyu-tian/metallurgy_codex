@@ -1,0 +1,1756 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V1-20260731",
+  "mutation_event_count": 65,
+  "mutation_events": [
+    {
+      "mutation_id": "MUT-E2P-A001-02-01",
+      "base_task_id": "E1B2-A001-001",
+      "mutated_task_id": "E2P-A001-02",
+      "mutation_type": "remove_required_parameter",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.value": {
+          "before": 0.25,
+          "after": "__MISSING__"
+        }
+      },
+      "expected_flag_effects": [
+        "missing_parameter"
+      ],
+      "random_seed": 3383554120
+    },
+    {
+      "mutation_id": "MUT-E2P-A001-03-01",
+      "base_task_id": "E1B2-A001-001",
+      "mutated_task_id": "E2P-A001-03",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.source_unit": {
+          "before": "kg",
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              "kg",
+              "g"
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 3395529925
+    },
+    {
+      "mutation_id": "MUT-E2P-A001-04-01",
+      "base_task_id": "E1B2-A001-001",
+      "mutated_task_id": "E2P-A001-04",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "value": 0.25,
+              "source_unit": "kg",
+              "target_unit": "g"
+            },
+            "request_context": {
+              "requested_tool_id": "A001",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "SI"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "value": 0.25,
+              "source_unit": "kg",
+              "target_unit": "m"
+            },
+            "request_context": {
+              "requested_tool_id": "A001",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "SI"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 2155326778
+    },
+    {
+      "mutation_id": "MUT-E2P-A001-05-01",
+      "base_task_id": "E1B2-A001-001",
+      "mutated_task_id": "E2P-A001-05",
+      "mutation_type": "unsupported_system",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "value": 0.25,
+              "source_unit": "kg",
+              "target_unit": "g"
+            },
+            "request_context": {
+              "requested_tool_id": "A001",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "SI"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "value": 0.25,
+              "source_unit": "kg",
+              "target_unit": "g"
+            },
+            "request_context": {
+              "requested_tool_id": "A001",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "currency_exchange"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_unsupported_system"
+      ],
+      "random_seed": 2195709390
+    },
+    {
+      "mutation_id": "MUT-E2P-A001-06-01",
+      "base_task_id": "E1B2-A001-001",
+      "mutated_task_id": "E2P-A001-06",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 127012332
+    },
+    {
+      "mutation_id": "MUT-E2P-A001-07-01",
+      "base_task_id": "E1B2-A001-001",
+      "mutated_task_id": "E2P-A001-07",
+      "mutation_type": "version_mismatch",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "request_context.requested_tool_version": {
+          "before": "1.0.0",
+          "after": "1.0.0-mismatch"
+        }
+      },
+      "expected_flag_effects": [
+        "version_mismatch"
+      ],
+      "random_seed": 1630141496
+    },
+    {
+      "mutation_id": "MUT-E2P-A001-08-01",
+      "base_task_id": "E1B2-A001-001",
+      "mutated_task_id": "E2P-A001-08",
+      "mutation_type": "remove_unit",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.target_unit": {
+          "before": "g",
+          "after": "__MISSING__"
+        }
+      },
+      "expected_flag_effects": [
+        "missing_parameter"
+      ],
+      "random_seed": 379853865
+    },
+    {
+      "mutation_id": "MUT-E2P-A001-09-01",
+      "base_task_id": "E1B2-A001-001",
+      "mutated_task_id": "E2P-A001-09",
+      "mutation_type": "make_unit_ambiguous",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.target_unit": {
+          "before": "g",
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              "g",
+              "kg"
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 292186692
+    },
+    {
+      "mutation_id": "MUT-E2P-A001-10-01",
+      "base_task_id": "E1B2-A001-001",
+      "mutated_task_id": "E2P-A001-10",
+      "mutation_type": "remove_required_parameter",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.value": {
+          "before": 0.25,
+          "after": "__MISSING__"
+        }
+      },
+      "expected_flag_effects": [
+        "missing_parameter"
+      ],
+      "random_seed": 3493559542
+    },
+    {
+      "mutation_id": "MUT-E2P-A001-10-02",
+      "base_task_id": "E1B2-A001-001",
+      "mutated_task_id": "E2P-A001-10",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 4144289366
+    },
+    {
+      "mutation_id": "MUT-E2P-A001-11-01",
+      "base_task_id": "E1B2-A001-001",
+      "mutated_task_id": "E2P-A001-11",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.source_unit": {
+          "before": "kg",
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              "kg",
+              "g"
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 4141845299
+    },
+    {
+      "mutation_id": "MUT-E2P-A001-11-02",
+      "base_task_id": "E1B2-A001-001",
+      "mutated_task_id": "E2P-A001-11",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "value": 0.25,
+              "source_unit": {
+                "status": "ambiguous",
+                "candidates": [
+                  "kg",
+                  "g"
+                ]
+              },
+              "target_unit": "g"
+            },
+            "request_context": {
+              "requested_tool_id": "A001",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "SI"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "value": 0.25,
+              "source_unit": "kg",
+              "target_unit": "m"
+            },
+            "request_context": {
+              "requested_tool_id": "A001",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "SI"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 4169298415
+    },
+    {
+      "mutation_id": "MUT-E2P-A001-12-01",
+      "base_task_id": "E1B2-A001-001",
+      "mutated_task_id": "E2P-A001-12",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "value": 0.25,
+              "source_unit": "kg",
+              "target_unit": "g"
+            },
+            "request_context": {
+              "requested_tool_id": "A001",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "SI"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "value": 0.25,
+              "source_unit": "kg",
+              "target_unit": "m"
+            },
+            "request_context": {
+              "requested_tool_id": "A001",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "SI"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 1111000599
+    },
+    {
+      "mutation_id": "MUT-E2P-A001-12-02",
+      "base_task_id": "E1B2-A001-001",
+      "mutated_task_id": "E2P-A001-12",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 3706422491
+    },
+    {
+      "mutation_id": "MUT-E2P-A002-02-01",
+      "base_task_id": "E1B2-A002-001",
+      "mutated_task_id": "E2P-A002-02",
+      "mutation_type": "remove_required_parameter",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.formula": {
+          "before": "Fe2O3",
+          "after": "__MISSING__"
+        }
+      },
+      "expected_flag_effects": [
+        "missing_parameter"
+      ],
+      "random_seed": 190274345
+    },
+    {
+      "mutation_id": "MUT-E2P-A002-03-01",
+      "base_task_id": "E1B2-A002-001",
+      "mutated_task_id": "E2P-A002-03",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.formula": {
+          "before": "Fe2O3",
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              "Fe2O3",
+              "Fe3O4"
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 267953817
+    },
+    {
+      "mutation_id": "MUT-E2P-A002-04-01",
+      "base_task_id": "E1B2-A002-001",
+      "mutated_task_id": "E2P-A002-04",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "formula": "Fe2O3"
+            },
+            "request_context": {
+              "requested_tool_id": "A002",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "formula": "Fe2O3·H2O"
+            },
+            "request_context": {
+              "requested_tool_id": "A002",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 3830339687
+    },
+    {
+      "mutation_id": "MUT-E2P-A002-05-01",
+      "base_task_id": "E1B2-A002-001",
+      "mutated_task_id": "E2P-A002-05",
+      "mutation_type": "unsupported_system",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "formula": "Fe2O3"
+            },
+            "request_context": {
+              "requested_tool_id": "A002",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "formula": "Fe2O3"
+            },
+            "request_context": {
+              "requested_tool_id": "A002",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "ionic_reaction_equation"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_unsupported_system"
+      ],
+      "random_seed": 633094302
+    },
+    {
+      "mutation_id": "MUT-E2P-A002-06-01",
+      "base_task_id": "E1B2-A002-001",
+      "mutated_task_id": "E2P-A002-06",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 887919841
+    },
+    {
+      "mutation_id": "MUT-E2P-A002-07-01",
+      "base_task_id": "E1B2-A002-001",
+      "mutated_task_id": "E2P-A002-07",
+      "mutation_type": "version_mismatch",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "request_context.requested_tool_version": {
+          "before": "1.0.0",
+          "after": "1.0.0-mismatch"
+        }
+      },
+      "expected_flag_effects": [
+        "version_mismatch"
+      ],
+      "random_seed": 1435116276
+    },
+    {
+      "mutation_id": "MUT-E2P-A002-08-01",
+      "base_task_id": "E1B2-A002-001",
+      "mutated_task_id": "E2P-A002-08",
+      "mutation_type": "remove_required_parameter",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.formula": {
+          "before": "Fe2O3",
+          "after": "__MISSING__"
+        }
+      },
+      "expected_flag_effects": [
+        "missing_parameter"
+      ],
+      "random_seed": 2988797525
+    },
+    {
+      "mutation_id": "MUT-E2P-A002-08-02",
+      "base_task_id": "E1B2-A002-001",
+      "mutated_task_id": "E2P-A002-08",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 182092047
+    },
+    {
+      "mutation_id": "MUT-E2P-A002-09-01",
+      "base_task_id": "E1B2-A002-001",
+      "mutated_task_id": "E2P-A002-09",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.formula": {
+          "before": "Fe2O3",
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              "Fe2O3",
+              "Fe3O4"
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 2944528500
+    },
+    {
+      "mutation_id": "MUT-E2P-A002-09-02",
+      "base_task_id": "E1B2-A002-001",
+      "mutated_task_id": "E2P-A002-09",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "formula": {
+                "status": "ambiguous",
+                "candidates": [
+                  "Fe2O3",
+                  "Fe3O4"
+                ]
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A002",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "formula": "Fe2O3·H2O"
+            },
+            "request_context": {
+              "requested_tool_id": "A002",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 278832162
+    },
+    {
+      "mutation_id": "MUT-E2P-A002-10-01",
+      "base_task_id": "E1B2-A002-001",
+      "mutated_task_id": "E2P-A002-10",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "formula": "Fe2O3"
+            },
+            "request_context": {
+              "requested_tool_id": "A002",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "formula": "Fe2O3·H2O"
+            },
+            "request_context": {
+              "requested_tool_id": "A002",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 3238089996
+    },
+    {
+      "mutation_id": "MUT-E2P-A002-10-02",
+      "base_task_id": "E1B2-A002-001",
+      "mutated_task_id": "E2P-A002-10",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 3345963506
+    },
+    {
+      "mutation_id": "MUT-E2P-A003-02-01",
+      "base_task_id": "E1B2-A003-001",
+      "mutated_task_id": "E2P-A003-02",
+      "mutation_type": "remove_required_parameter",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.formula": {
+          "before": "Fe2O3",
+          "after": "__MISSING__"
+        }
+      },
+      "expected_flag_effects": [
+        "missing_parameter"
+      ],
+      "random_seed": 1070470006
+    },
+    {
+      "mutation_id": "MUT-E2P-A003-03-01",
+      "base_task_id": "E1B2-A003-001",
+      "mutated_task_id": "E2P-A003-03",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.formula": {
+          "before": "Fe2O3",
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              "Fe2O3",
+              "Fe3O4"
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 3570392210
+    },
+    {
+      "mutation_id": "MUT-E2P-A003-04-01",
+      "base_task_id": "E1B2-A003-001",
+      "mutated_task_id": "E2P-A003-04",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "formula": "Fe2O3"
+            },
+            "request_context": {
+              "requested_tool_id": "A003",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "formula": "SiO2"
+            },
+            "request_context": {
+              "requested_tool_id": "A003",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 1456232207
+    },
+    {
+      "mutation_id": "MUT-E2P-A003-05-01",
+      "base_task_id": "E1B2-A003-001",
+      "mutated_task_id": "E2P-A003-05",
+      "mutation_type": "unsupported_system",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "formula": "Fe2O3"
+            },
+            "request_context": {
+              "requested_tool_id": "A003",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "formula": "Fe2O3"
+            },
+            "request_context": {
+              "requested_tool_id": "A003",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "isotopically_resolved_formula"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_unsupported_system"
+      ],
+      "random_seed": 1087669851
+    },
+    {
+      "mutation_id": "MUT-E2P-A003-06-01",
+      "base_task_id": "E1B2-A003-001",
+      "mutated_task_id": "E2P-A003-06",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 2131609086
+    },
+    {
+      "mutation_id": "MUT-E2P-A003-07-01",
+      "base_task_id": "E1B2-A003-001",
+      "mutated_task_id": "E2P-A003-07",
+      "mutation_type": "version_mismatch",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "request_context.requested_tool_version": {
+          "before": "1.0.0",
+          "after": "1.0.0-mismatch"
+        }
+      },
+      "expected_flag_effects": [
+        "version_mismatch"
+      ],
+      "random_seed": 449068458
+    },
+    {
+      "mutation_id": "MUT-E2P-A003-08-01",
+      "base_task_id": "E1B2-A003-001",
+      "mutated_task_id": "E2P-A003-08",
+      "mutation_type": "remove_required_parameter",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.formula": {
+          "before": "Fe2O3",
+          "after": "__MISSING__"
+        }
+      },
+      "expected_flag_effects": [
+        "missing_parameter"
+      ],
+      "random_seed": 1102707680
+    },
+    {
+      "mutation_id": "MUT-E2P-A003-08-02",
+      "base_task_id": "E1B2-A003-001",
+      "mutated_task_id": "E2P-A003-08",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 2197963012
+    },
+    {
+      "mutation_id": "MUT-E2P-A003-09-01",
+      "base_task_id": "E1B2-A003-001",
+      "mutated_task_id": "E2P-A003-09",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.formula": {
+          "before": "Fe2O3",
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              "Fe2O3",
+              "Fe3O4"
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 3168017510
+    },
+    {
+      "mutation_id": "MUT-E2P-A003-09-02",
+      "base_task_id": "E1B2-A003-001",
+      "mutated_task_id": "E2P-A003-09",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "formula": {
+                "status": "ambiguous",
+                "candidates": [
+                  "Fe2O3",
+                  "Fe3O4"
+                ]
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A003",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "formula": "SiO2"
+            },
+            "request_context": {
+              "requested_tool_id": "A003",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 3598726561
+    },
+    {
+      "mutation_id": "MUT-E2P-A003-10-01",
+      "base_task_id": "E1B2-A003-001",
+      "mutated_task_id": "E2P-A003-10",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "formula": "Fe2O3"
+            },
+            "request_context": {
+              "requested_tool_id": "A003",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "formula": "SiO2"
+            },
+            "request_context": {
+              "requested_tool_id": "A003",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 4148879038
+    },
+    {
+      "mutation_id": "MUT-E2P-A003-10-02",
+      "base_task_id": "E1B2-A003-001",
+      "mutated_task_id": "E2P-A003-10",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 1078329736
+    },
+    {
+      "mutation_id": "MUT-E2P-A004-02-01",
+      "base_task_id": "E1B2-A004-001",
+      "mutated_task_id": "E2P-A004-02",
+      "mutation_type": "remove_required_parameter",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.compositions": {
+          "before": {
+            "Fe": 94.0,
+            "C": 4.0,
+            "Si": 2.0
+          },
+          "after": "__MISSING__"
+        }
+      },
+      "expected_flag_effects": [
+        "missing_parameter"
+      ],
+      "random_seed": 1090645697
+    },
+    {
+      "mutation_id": "MUT-E2P-A004-03-01",
+      "base_task_id": "E1B2-A004-001",
+      "mutated_task_id": "E2P-A004-03",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.compositions": {
+          "before": {
+            "Fe": 94.0,
+            "C": 4.0,
+            "Si": 2.0
+          },
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "Fe": 70,
+                "C": 30
+              },
+              {
+                "Fe": 0.7,
+                "C": 0.3
+              }
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 3852864552
+    },
+    {
+      "mutation_id": "MUT-E2P-A004-04-01",
+      "base_task_id": "E1B2-A004-001",
+      "mutated_task_id": "E2P-A004-04",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "compositions": {
+                "Fe": 94.0,
+                "C": 4.0,
+                "Si": 2.0
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A004",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "nonnegative_weight_vectors"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "compositions": {
+                "Fe": 0.8,
+                "C": -0.1,
+                "Si": 2.0
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A004",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "nonnegative_weight_vectors"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 1325135540
+    },
+    {
+      "mutation_id": "MUT-E2P-A004-05-01",
+      "base_task_id": "E1B2-A004-001",
+      "mutated_task_id": "E2P-A004-05",
+      "mutation_type": "unsupported_system",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "compositions": {
+                "Fe": 94.0,
+                "C": 4.0,
+                "Si": 2.0
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A004",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "nonnegative_weight_vectors"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "compositions": {
+                "Fe": 94.0,
+                "C": 4.0,
+                "Si": 2.0
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A004",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "mixed_mass_and_mole_basis"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_unsupported_system"
+      ],
+      "random_seed": 1079146722
+    },
+    {
+      "mutation_id": "MUT-E2P-A004-06-01",
+      "base_task_id": "E1B2-A004-001",
+      "mutated_task_id": "E2P-A004-06",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 2257825699
+    },
+    {
+      "mutation_id": "MUT-E2P-A004-07-01",
+      "base_task_id": "E1B2-A004-001",
+      "mutated_task_id": "E2P-A004-07",
+      "mutation_type": "version_mismatch",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "request_context.requested_tool_version": {
+          "before": "1.0.0",
+          "after": "1.0.0-mismatch"
+        }
+      },
+      "expected_flag_effects": [
+        "version_mismatch"
+      ],
+      "random_seed": 1027277706
+    },
+    {
+      "mutation_id": "MUT-E2P-A004-08-01",
+      "base_task_id": "E1B2-A004-001",
+      "mutated_task_id": "E2P-A004-08",
+      "mutation_type": "remove_required_parameter",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.compositions": {
+          "before": {
+            "Fe": 94.0,
+            "C": 4.0,
+            "Si": 2.0
+          },
+          "after": "__MISSING__"
+        }
+      },
+      "expected_flag_effects": [
+        "missing_parameter"
+      ],
+      "random_seed": 225435237
+    },
+    {
+      "mutation_id": "MUT-E2P-A004-08-02",
+      "base_task_id": "E1B2-A004-001",
+      "mutated_task_id": "E2P-A004-08",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 325832894
+    },
+    {
+      "mutation_id": "MUT-E2P-A004-09-01",
+      "base_task_id": "E1B2-A004-001",
+      "mutated_task_id": "E2P-A004-09",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.compositions": {
+          "before": {
+            "Fe": 94.0,
+            "C": 4.0,
+            "Si": 2.0
+          },
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "Fe": 70,
+                "C": 30
+              },
+              {
+                "Fe": 0.7,
+                "C": 0.3
+              }
+            ],
+            "Fe": 0.8,
+            "C": -0.1
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 43264166
+    },
+    {
+      "mutation_id": "MUT-E2P-A004-09-02",
+      "base_task_id": "E1B2-A004-001",
+      "mutated_task_id": "E2P-A004-09",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "compositions": {
+                "status": "ambiguous",
+                "candidates": [
+                  {
+                    "Fe": 70,
+                    "C": 30
+                  },
+                  {
+                    "Fe": 0.7,
+                    "C": 0.3
+                  }
+                ]
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A004",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "nonnegative_weight_vectors"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "compositions": {
+                "status": "ambiguous",
+                "candidates": [
+                  {
+                    "Fe": 70,
+                    "C": 30
+                  },
+                  {
+                    "Fe": 0.7,
+                    "C": 0.3
+                  }
+                ],
+                "Fe": 0.8,
+                "C": -0.1
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A004",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "nonnegative_weight_vectors"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 552567830
+    },
+    {
+      "mutation_id": "MUT-E2P-A004-10-01",
+      "base_task_id": "E1B2-A004-001",
+      "mutated_task_id": "E2P-A004-10",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "compositions": {
+                "Fe": 94.0,
+                "C": 4.0,
+                "Si": 2.0
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A004",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "nonnegative_weight_vectors"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "compositions": {
+                "Fe": 0.8,
+                "C": -0.1,
+                "Si": 2.0
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A004",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "nonnegative_weight_vectors"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 287184816
+    },
+    {
+      "mutation_id": "MUT-E2P-A004-10-02",
+      "base_task_id": "E1B2-A004-001",
+      "mutated_task_id": "E2P-A004-10",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 1895838364
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-02-01",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-02",
+      "mutation_type": "remove_required_parameter",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.overall_composition": {
+          "before": 0.4,
+          "after": "__MISSING__"
+        }
+      },
+      "expected_flag_effects": [
+        "missing_parameter"
+      ],
+      "random_seed": 1665811769
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-03-01",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-03",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.overall_composition": {
+          "before": 0.4,
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              0.4,
+              40.0
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 398956686
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-04-01",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-04",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "overall_composition": 0.4,
+              "phase1_composition": 0.2,
+              "phase2_composition": 0.7,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_two_phase_tie_line"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "overall_composition": 0.9,
+              "phase1_composition": 0.2,
+              "phase2_composition": 0.7,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_two_phase_tie_line"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 594834107
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-05-01",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-05",
+      "mutation_type": "unsupported_system",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "overall_composition": 0.4,
+              "phase1_composition": 0.2,
+              "phase2_composition": 0.7,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_two_phase_tie_line"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "overall_composition": 0.4,
+              "phase1_composition": 0.2,
+              "phase2_composition": 0.7,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "ternary_three_phase_equilibrium"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_unsupported_system"
+      ],
+      "random_seed": 1551345334
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-06-01",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-06",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 3175919526
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-07-01",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-07",
+      "mutation_type": "version_mismatch",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "request_context.requested_tool_version": {
+          "before": "1.0.0",
+          "after": "1.0.0-mismatch"
+        }
+      },
+      "expected_flag_effects": [
+        "version_mismatch"
+      ],
+      "random_seed": 1569359268
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-08-01",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-08",
+      "mutation_type": "remove_unit",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.composition_basis": {
+          "before": "fraction",
+          "after": "__MISSING__"
+        }
+      },
+      "expected_flag_effects": [
+        "missing_parameter"
+      ],
+      "random_seed": 2573380668
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-09-01",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-09",
+      "mutation_type": "make_unit_ambiguous",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.composition_basis": {
+          "before": "fraction",
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              "fraction",
+              "percent"
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 723267884
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-10-01",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-10",
+      "mutation_type": "unsupported_phase",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "overall_composition": 0.4,
+              "phase1_composition": 0.2,
+              "phase2_composition": 0.7,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_two_phase_tie_line"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "overall_composition": 0.4,
+              "phase1_composition": 0.2,
+              "phase2_composition": 0.7,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_two_phase_tie_line",
+              "requested_phase_count": 3
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_unsupported_system"
+      ],
+      "random_seed": 3614939131
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-11-01",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-11",
+      "mutation_type": "remove_required_parameter",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.overall_composition": {
+          "before": 0.4,
+          "after": "__MISSING__"
+        }
+      },
+      "expected_flag_effects": [
+        "missing_parameter"
+      ],
+      "random_seed": 1336211682
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-11-02",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-11",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 1624116213
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-12-01",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-12",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "parameters.overall_composition": {
+          "before": 0.4,
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              0.4,
+              40.0
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 3955282437
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-12-02",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-12",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "overall_composition": {
+                "status": "ambiguous",
+                "candidates": [
+                  0.4,
+                  40.0
+                ]
+              },
+              "phase1_composition": 0.2,
+              "phase2_composition": 0.7,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_two_phase_tie_line"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "overall_composition": 0.9,
+              "phase1_composition": 0.2,
+              "phase2_composition": 0.7,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_two_phase_tie_line"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 1245279244
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-13-01",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-13",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "overall_composition": 0.4,
+              "phase1_composition": 0.2,
+              "phase2_composition": 0.7,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_two_phase_tie_line"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "overall_composition": 0.9,
+              "phase1_composition": 0.2,
+              "phase2_composition": 0.7,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_two_phase_tie_line"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 3959786463
+    },
+    {
+      "mutation_id": "MUT-E2P-B019-13-02",
+      "base_task_id": "E1B2-B019-001",
+      "mutated_task_id": "E2P-B019-13",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 1771764224
+    }
+  ],
+  "core_frozen": false
+}

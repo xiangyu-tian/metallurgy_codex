@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V1-20260731",
+  "covered_mutation_types": [
+    "contract_out_of_domain",
+    "make_parameter_ambiguous",
+    "make_unit_ambiguous",
+    "remove_required_parameter",
+    "remove_unit",
+    "unavailable_tool",
+    "unsupported_phase",
+    "unsupported_system",
+    "version_mismatch"
+  ],
+  "coverage_gaps": [
+    {
+      "mutation_type": "out_of_temperature_range",
+      "status": "not_applicable_no_verified_contract_field",
+      "eligible_tool_count": 0
+    },
+    {
+      "mutation_type": "out_of_pressure_range",
+      "status": "not_applicable_no_verified_contract_field",
+      "eligible_tool_count": 0
+    },
+    {
+      "mutation_type": "model_card_defined_ood",
+      "status": "not_applicable_no_verified_neural_model",
+      "eligible_tool_count": 0
+    }
+  ],
+  "cf04_status": "in_progress",
+  "core_frozen": false
+}

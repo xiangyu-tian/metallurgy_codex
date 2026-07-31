@@ -39,7 +39,7 @@ v1.1 的 CF 编号重新绑定到可执行真值冻结门槛：
 | CF-01 | 协议与数据规范兼容性 | v1.1研究问题、G1/G2/C1真值、S1限制、数据生产和`core_frozen=false`一致 | `passed` | `outputs/v11_cf01_cf02_audit_20260731/`；8项兼容性检查全部通过 |
 | CF-02 | `verified_core`工具及独立参考 | 至少3个工具；契约字段、来源、适用域、限制、哈希、正常/边界案例和独立参考均通过 | `passed` | A001、A002、A003、A004、B019共5工具；27/27参考案例通过；11项审计检查通过 |
 | CF-03 | E1b基础任务与收益先导 | 基础任务、独立参考、No Tool/Forced Tool对照、重复和防循环划分可复现 | `passed` | 候选证据审计通过；E1b的120基础任务组、240任务和3次重复设计已审批冻结 |
-| CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `pending` | 尚未形成v1.1正式变换集 |
+| CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `in_progress` | 55任务/65变换事件先导审计通过，含15个多标签任务；温度、压力和模型卡OOD因当前无适用verified_core契约而待补，E2模型策略运行未执行 |
 | CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 五工具端到端选择已验证；17/50/100/120契约目录与近邻生成仍未完成 |
 | CF-06 | 17/50/100/120 Schema API可行性 | 实测函数数量、Token、上下文、延迟、错误、`tool_choice=none`和供应商限制 | `pending` | 尚未按v1.1 Schema-only目录口径执行 |
 | CF-07 | 数据层级与泄漏审计 | `controlled_confirmatory`、`naturalistic_validation`、`exploratory_domain_cases`分层；家族划分和收益校准/评价隔离通过 | `in_progress` | E1b/E1c受控集已分区；自然验证层和探索层尚未冻结 |
@@ -229,3 +229,43 @@ CF-09的E1b章节已冻结，但全项目附录仍缺E1a、E2和E3。下一执�
 3. 固定E1a正式条件并执行Schema暴露先导；
 4. 将E1a、E2和E3功效结果补入样本量附录；
 5. 全部章节审批后再把CF-08、CF-09改为`passed`。
+
+## 10. CF-04候选证据记录
+
+```yaml
+check_id: CF-04
+audit_id: V11-CF04-E2-PILOT-AUDIT-20260731
+status: in_progress
+candidate_evidence_status: passed
+dataset_id: E2-CONTRACT-BOUNDARY-PILOT-V1-20260731
+evidence:
+  - Tools/core_freeze/e2_contract_boundaries/policy_v1.json
+  - Tools/core_freeze/e2_contract_boundaries/build_e2_pilot.py
+  - outputs/v11_cf04_e2_pilot_20260731/e2_pilot_tasks.json
+  - outputs/v11_cf04_e2_pilot_20260731/mutation_events.json
+  - outputs/v11_cf04_e2_pilot_20260731/coverage_report.json
+  - outputs/v11_cf04_e2_pilot_20260731/audit_report.json
+  - outputs/v11_cf04_e2_pilot_20260731/artifact_manifest.json
+summary:
+  tool_count: 5
+  task_count: 55
+  ready_task_count: 5
+  mutated_task_count: 50
+  multi_label_task_count: 15
+  mutation_event_count: 65
+  action_counts:
+    call: 5
+    clarify: 24
+    refuse: 26
+human_per_task_labels_used: false
+coverage_gaps:
+  - out_of_temperature_range
+  - out_of_pressure_range
+  - model_card_defined_ood
+pending:
+  - 引入声明温度范围的verified_core契约
+  - 引入声明压力范围的verified_core契约
+  - 引入带模型卡OOD边界的verified神经网络工具
+  - 执行E2模型策略先导
+core_frozen: false
+```

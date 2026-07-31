@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF04-E2-PILOT-AUDIT-20260731",
+  "check_id": "CF-04",
+  "status": "in_progress",
+  "candidate_evidence_status": "passed",
+  "summary": {
+    "task_count": 55,
+    "ready_task_count": 5,
+    "mutated_task_count": 50,
+    "multi_label_task_count": 15,
+    "mutation_event_count": 65,
+    "tool_count": 5,
+    "mutation_type_counts": {
+      "contract_out_of_domain": 15,
+      "make_parameter_ambiguous": 10,
+      "make_unit_ambiguous": 2,
+      "remove_required_parameter": 10,
+      "remove_unit": 2,
+      "unavailable_tool": 15,
+      "unsupported_phase": 1,
+      "unsupported_system": 5,
+      "version_mismatch": 5
+    },
+    "flag_counts": {
+      "ambiguous_parameter": 12,
+      "contract_defined_out_of_domain": 15,
+      "contract_defined_unsupported_system": 6,
+      "missing_parameter": 12,
+      "unavailable": 15,
+      "version_mismatch": 5
+    },
+    "action_counts": {
+      "call": 5,
+      "clarify": 24,
+      "refuse": 26
+    }
+  },
+  "checks": [
+    {
+      "check_id": "CF04-UNIQUE-TASKS",
+      "passed": true,
+      "evidence": "task_count=55"
+    },
+    {
+      "check_id": "CF04-UNIQUE-MUTATIONS",
+      "passed": true,
+      "evidence": "mutation_event_count=65"
+    },
+    {
+      "check_id": "CF04-CORE-TYPE-COVERAGE",
+      "passed": true,
+      "evidence": {
+        "contract_out_of_domain": 15,
+        "make_parameter_ambiguous": 10,
+        "make_unit_ambiguous": 2,
+        "remove_required_parameter": 10,
+        "remove_unit": 2,
+        "unavailable_tool": 15,
+        "unsupported_phase": 1,
+        "unsupported_system": 5,
+        "version_mismatch": 5
+      }
+    },
+    {
+      "check_id": "CF04-FIVE-TOOL-COVERAGE",
+      "passed": true,
+      "evidence": [
+        "A001",
+        "A002",
+        "A003",
+        "A004",
+        "B019"
+      ]
+    },
+    {
+      "check_id": "CF04-MULTI-LABEL-COVERAGE",
+      "passed": true,
+      "evidence": {
+        "multi_label_task_count": 15
+      }
+    },
+    {
+      "check_id": "CF04-ACTION-COVERAGE",
+      "passed": true,
+      "evidence": {
+        "call": 5,
+        "clarify": 24,
+        "refuse": 26
+      }
+    },
+    {
+      "check_id": "CF04-RULE-RECOMPUTATION",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "check_id": "CF04-NO-HUMAN-PER-TASK-LABELS",
+      "passed": true,
+      "evidence": "e2-readiness-policy-v1.0.0"
+    },
+    {
+      "check_id": "CF04-NOT-CONFIRMATORY",
+      "passed": true,
+      "evidence": "all pilot tasks preserve candidate status"
+    }
+  ],
+  "coverage_gaps": [
+    {
+      "mutation_type": "out_of_temperature_range",
+      "status": "not_applicable_no_verified_contract_field",
+      "eligible_tool_count": 0
+    },
+    {
+      "mutation_type": "out_of_pressure_range",
+      "status": "not_applicable_no_verified_contract_field",
+      "eligible_tool_count": 0
+    },
+    {
+      "mutation_type": "model_card_defined_ood",
+      "status": "not_applicable_no_verified_neural_model",
+      "eligible_tool_count": 0
+    }
+  ],
+  "pending_requirements": [
+    "add a verified contract with temperature range",
+    "add a verified contract with pressure range",
+    "add a verified neural model with model-card OOD boundary",
+    "execute E2 model-policy pilot after task package review"
+  ],
+  "human_free_truth_derivation": true,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}
