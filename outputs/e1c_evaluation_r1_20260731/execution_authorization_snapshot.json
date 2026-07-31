@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "authorization_id": "E1C-EVALUATION-EXECUTION-AUTH-V1-20260731",
+  "request_id": "E1C-EVALUATION-EXECUTION-REQUEST-V1-20260731",
+  "request_sha256": "48ed6fb2f58ad6d779654ae39b3ad43fcb16be708d3ea13c90ceac7db1325849",
+  "decision": "authorized_to_execute_evaluation",
+  "authorization_basis": "Explicit user instruction: 同意推送开启包并执行后置评测",
+  "authorized_at": "2026-07-31T10:08:33.2760372+08:00",
+  "opening_package_git_commit": "15f95dd536915d471b176900badc89f75efcddf2",
+  "dataset_id": "E1C-TASKSET-V1-EVALUATION-20260731",
+  "run_config_id": "E1C-EVALUATION-V1-20260731",
+  "task_snapshot_sha256": "0449dcd13340dfd8c39256263f2b56a6f4af7c2297a654c5c6e0f8a57444ee41",
+  "prompt_sha256": "7868874805e6f119d9f53875b9b713fd1af432d29bec2293fbd2b4a810f322d9",
+  "run_config_sha256": "71127dbdd9764eddf4e3d9666bb374aa84d59705688f1caae6bd8e944cc93540",
+  "runner_sha256": "4d36d239b42b7feef89fb823b32befc00d998ff29291515afd791a40be8df435",
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "authorized_task_count": 36,
+  "scheduled_cells": 216,
+  "authorized_payload_types": [
+    "36 evaluation task texts",
+    "frozen E1c prompt text",
+    "five verified tool schemas",
+    "derived tool execution results"
+  ],
+  "evaluation_split_opened": true,
+  "external_api_execution_authorized": true,
+  "api_model_runs_performed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

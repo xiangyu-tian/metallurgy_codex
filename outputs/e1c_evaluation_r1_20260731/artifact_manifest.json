@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "run_id": "E1C-RUN-9FDC7D48AD154CE1",
+  "artifacts": [
+    {
+      "filename": "task_source_snapshot.json",
+      "sha256": "0449dcd13340dfd8c39256263f2b56a6f4af7c2297a654c5c6e0f8a57444ee41"
+    },
+    {
+      "filename": "prompt_source_snapshot.json",
+      "sha256": "7868874805e6f119d9f53875b9b713fd1af432d29bec2293fbd2b4a810f322d9"
+    },
+    {
+      "filename": "run_config_snapshot.json",
+      "sha256": "71127dbdd9764eddf4e3d9666bb374aa84d59705688f1caae6bd8e944cc93540"
+    },
+    {
+      "filename": "runner_source_snapshot.py",
+      "sha256": "4d36d239b42b7feef89fb823b32befc00d998ff29291515afd791a40be8df435"
+    },
+    {
+      "filename": "scoring_source_snapshot.py",
+      "sha256": "c33e48c188c31a743e234a3b6e6cdbaed221d582e8d5b74ee430959033685190"
+    },
+    {
+      "filename": "execution_authorization_snapshot.json",
+      "sha256": "06c07a5780cb91c7b78fd4202985d864a48b7f9ef5c519f9bb895045738d138d"
+    },
+    {
+      "filename": "five_tool_schema_snapshot.json",
+      "sha256": "443b97c2d4c7eed069c941f0d91ce6661a7d06387e1c522052b45e584c534bad"
+    },
+    {
+      "filename": "run_records.jsonl",
+      "sha256": "51b884ecf71f491e3ddf74c96dea2b3d406e6d5f6095fd9a3d2b83d3d73a11ef"
+    },
+    {
+      "filename": "run_report.json",
+      "sha256": "4cf5ac0d539db6500b50407007630b0b77a57179ce75a89f84b1d1d572e45cd1"
+    }
+  ],
+  "evaluation_split_opened": true,
+  "core_frozen": false
+}

@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "tool_ids": [
+    "A001",
+    "A002",
+    "A003",
+    "A004",
+    "B019"
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "A001",
+        "description": "单位换算；支持线性换算和温度偏移换算；超界返回警告；适用条件: 支持线性换算和温度偏移换算；超界返回警告",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number",
+              "description": "数值；待换算的数值"
+            },
+            "source_unit": {
+              "type": "string",
+              "description": "源单位；示例: 如 °C, kg, MPa"
+            },
+            "target_unit": {
+              "type": "string",
+              "description": "目标单位；示例: 如 K, g, psi"
+            }
+          },
+          "required": [
+            "value",
+            "source_unit",
+            "target_unit"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "A002",
+        "description": "化学式解析；支持含括号的化学式；不支持同位素标记；适用条件: 支持含括号的化学式；不支持同位素标记",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "formula": {
+              "type": "string",
+              "description": "化学式；示例: 如 Fe2(SO4)3, CaCO3, Mg(OH)2"
+            }
+          },
+          "required": [
+            "formula"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "A003",
+        "description": "摩尔质量计算；基于 IUPAC 2021 原子量；适用条件: 基于 IUPAC 2021 原子量",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "formula": {
+              "type": "string",
+              "description": "化学式；示例: 如 Fe2O3, H2SO4, CaCO3"
+            }
+          },
+          "required": [
+            "formula"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "A004",
+        "description": "成分归一化；输入各组分分数（质量或摩尔），总和可不等于1；适用条件: 输入各组分分数（质量或摩尔），总和可不等于1",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "compositions": {
+              "type": "object",
+              "description": "组分名称到质量分数或摩尔分数的映射",
+              "additionalProperties": {
+                "type": "number"
+              }
+            },
+            "tolerance": {
+              "type": "number",
+              "description": "容差；归一化偏差容差",
+              "default": 0.001
+            }
+          },
+          "required": [
+            "compositions"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "B019",
+        "description": "杠杆规则计算；仅适用于二元系两相区；适用条件: 仅适用于二元系两相区",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "overall_composition": {
+              "type": "number",
+              "description": "总体成分；总体成分；三个成分值必须使用同一标度"
+            },
+            "phase1_composition": {
+              "type": "number",
+              "description": "相1成分；相1边界成分；与总体成分使用同一标度"
+            },
+            "phase2_composition": {
+              "type": "number",
+              "description": "相2成分；相2边界成分；与总体成分使用同一标度"
+            },
+            "composition_basis": {
+              "type": "string",
+              "description": "成分标度；fraction 表示 0—1；percent 表示 0—100；auto 仅为历史调用兼容，确认性实验必须显式指定",
+              "enum": [
+                "fraction",
+                "percent",
+                "auto"
+              ],
+              "default": "auto"
+            },
+            "component": {
+              "type": "string",
+              "description": "组元；组元名称",
+              "default": "B"
+            }
+          },
+          "required": [
+            "overall_composition",
+            "phase1_composition",
+            "phase2_composition"
+          ]
+        }
+      }
+    }
+  ]
+}
