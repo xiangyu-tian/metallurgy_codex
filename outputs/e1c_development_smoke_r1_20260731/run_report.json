@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "run_id": "E1C-RUN-2E1897ED3D394AE8",
+  "dataset_id": "E1C-TASKSET-V1-DEVELOPMENT-20260731",
+  "run_config_id": "E1C-DEVELOPMENT-PILOT-V1-20260731",
+  "generated_at": "2026-07-31T01:38:29.984968+00:00",
+  "task_source_sha256": "5417ef798138c448f27c8a7322b1a595caba35759b43ef3cc1c33ca8d754275c",
+  "protocol_sha256": "6695f491aefc0f44ee42c95ba15ff0dba6c1f9468f6a71503d2915426db3f42d",
+  "prompt_source_sha256": "7868874805e6f119d9f53875b9b713fd1af432d29bec2293fbd2b4a810f322d9",
+  "run_config_sha256": "8d3266324bd15a972f91206b40553b6981fc2eb65c420356f17be23b272ee8ad",
+  "adapter_configuration": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "openai_base_url": "https://api.deepseek.com",
+    "thinking": "disabled",
+    "api_key_configured": true
+  },
+  "summary": {
+    "cell_count": 54,
+    "condition_count": 6,
+    "by_condition": {
+      "no_tool": {
+        "cell_count": 9,
+        "completed_count": 9,
+        "correct_count": 9,
+        "accuracy": 1.0,
+        "call_count": 0,
+        "boundary_evaluable_count": 0,
+        "boundary_correct_count": 0,
+        "tool_selection_evaluable_count": 0,
+        "tool_selection_correct_count": 0,
+        "parameter_evaluable_count": 0,
+        "parameter_exact_count": 0,
+        "provider_call_count": 9,
+        "provider_attempt_count": 9,
+        "failure_stage_counts": {
+          "success": 9
+        }
+      },
+      "forced_verified_oracle_parameters": {
+        "cell_count": 9,
+        "completed_count": 9,
+        "correct_count": 9,
+        "accuracy": 1.0,
+        "call_count": 0,
+        "boundary_evaluable_count": 0,
+        "boundary_correct_count": 0,
+        "tool_selection_evaluable_count": 0,
+        "tool_selection_correct_count": 0,
+        "parameter_evaluable_count": 9,
+        "parameter_exact_count": 9,
+        "provider_call_count": 9,
+        "provider_attempt_count": 9,
+        "failure_stage_counts": {
+          "success": 9
+        }
+      },
+      "model_gate_oracle_parameters": {
+        "cell_count": 9,
+        "completed_count": 9,
+        "correct_count": 9,
+        "accuracy": 1.0,
+        "call_count": 0,
+        "boundary_evaluable_count": 9,
+        "boundary_correct_count": 8,
+        "tool_selection_evaluable_count": 0,
+        "tool_selection_correct_count": 0,
+        "parameter_evaluable_count": 0,
+        "parameter_exact_count": 0,
+        "provider_call_count": 9,
+        "provider_attempt_count": 9,
+        "failure_stage_counts": {
+          "boundary_decision_error": 1,
+          "success": 8
+        }
+      },
+      "oracle_gate_model_parameters": {
+        "cell_count": 9,
+        "completed_count": 9,
+        "correct_count": 9,
+        "accuracy": 1.0,
+        "call_count": 1,
+        "boundary_evaluable_count": 9,
+        "boundary_correct_count": 9,
+        "tool_selection_evaluable_count": 0,
+        "tool_selection_correct_count": 0,
+        "parameter_evaluable_count": 1,
+        "parameter_exact_count": 1,
+        "provider_call_count": 10,
+        "provider_attempt_count": 10,
+        "failure_stage_counts": {
+          "success": 9
+        }
+      },
+      "direct_fc": {
+        "cell_count": 9,
+        "completed_count": 9,
+        "correct_count": 9,
+        "accuracy": 1.0,
+        "call_count": 9,
+        "boundary_evaluable_count": 9,
+        "boundary_correct_count": 1,
+        "tool_selection_evaluable_count": 9,
+        "tool_selection_correct_count": 9,
+        "parameter_evaluable_count": 9,
+        "parameter_exact_count": 9,
+        "provider_call_count": 18,
+        "provider_attempt_count": 18,
+        "failure_stage_counts": {
+          "boundary_decision_error": 8,
+          "success": 1
+        }
+      },
+      "boundary_guided_fc": {
+        "cell_count": 9,
+        "completed_count": 9,
+        "correct_count": 9,
+        "accuracy": 1.0,
+        "call_count": 9,
+        "boundary_evaluable_count": 9,
+        "boundary_correct_count": 1,
+        "tool_selection_evaluable_count": 9,
+        "tool_selection_correct_count": 9,
+        "parameter_evaluable_count": 9,
+        "parameter_exact_count": 9,
+        "provider_call_count": 18,
+        "provider_attempt_count": 18,
+        "failure_stage_counts": {
+          "boundary_decision_error": 8,
+          "success": 1
+        }
+      }
+    },
+    "provider_call_count": 73,
+    "provider_attempt_count": 73,
+    "retried_cell_count": 0,
+    "status": "completed",
+    "confirmatory_inference_allowed": false
+  },
+  "evaluation_split_opened": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}
