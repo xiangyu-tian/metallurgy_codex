@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.1",
+  "analysis_id": "E2-V1.1-RECHECK-COMPARISON-20260731",
+  "source_bindings": {
+    "v1_1_run_manifest_sha256": "47d0e33c5c3db517c1cc2858f54d55e1d5ff030563570a074303f2a54f861da2",
+    "baseline_candidate_manifest_sha256": "d8972115acfd0ca86b560815b8bdcb609ba66dfcb5af4858dc9b42e8a8877f7d",
+    "analysis_script_sha256": "b7d87a7d60d9e2f507a1b87a3e5b9892fd6bb2ecfe45366afcc9c778d6c49334"
+  },
+  "artifacts": [
+    {
+      "filename": "task_errors.csv",
+      "sha256": "5404a372bf289c9d061964a4225c6c3d77302a832afc4b630fce9c995e183063"
+    },
+    {
+      "filename": "mutation_comparison.csv",
+      "sha256": "277adee61836a468684d2bf9689afe2fef7b3de2e44932edf5a7f3d8eaf383ec"
+    },
+    {
+      "filename": "flag_comparison.csv",
+      "sha256": "7df9be9b886d30206c8213dc8946f8946cb10d4f35e1b87074ad86ff44a9e4e5"
+    },
+    {
+      "filename": "comparison_report.json",
+      "sha256": "4599ec570d449cfeb17e74c3141131fc23b8c9c4925427af4ad5507fd5137ce0"
+    }
+  ],
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

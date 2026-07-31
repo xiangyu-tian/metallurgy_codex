@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.1",
+  "run_id": "E2-DEV-V11-RUN-876742250AA34387",
+  "artifacts": [
+    {
+      "filename": "task_source_snapshot.json",
+      "sha256": "4e8b89043fee0faddd8f2ed34c258b5e8531cff9c744c66a56a32568ec622a34"
+    },
+    {
+      "filename": "contracts_snapshot.json",
+      "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"
+    },
+    {
+      "filename": "policy_snapshot.json",
+      "sha256": "a16c7c359e7ade35965edeb1fe036cf11cb91c01f1ca1b43d7b04b6b0544e519"
+    },
+    {
+      "filename": "prompt_source_snapshot.json",
+      "sha256": "8e6047010443d1661df96c5f762c9a19dbc9f01a0d57a48588960ed5613a1eac"
+    },
+    {
+      "filename": "output_schema_snapshot.json",
+      "sha256": "f8c00f7aa42b2823e3e4efd8c7d74bcfd3f70acb6b7b67185b3c6346f0568840"
+    },
+    {
+      "filename": "run_config_snapshot.json",
+      "sha256": "ee95c9c9de0f398aa0b78f422d0e1214272ee3a09c98c6bf4aad1656ecf9016c"
+    },
+    {
+      "filename": "execution_authorization_snapshot.json",
+      "sha256": "5b3863a19a482c9e1a2dfc09314c603c0f6c4d9abf5b56c1f7bdff57f400221d"
+    },
+    {
+      "filename": "runner_source_snapshot.py",
+      "sha256": "ae40b0c7ce14a15f5cce399de9f20e3f88e35b351272899eaf8bfe3fb5de6334"
+    },
+    {
+      "filename": "run_records.jsonl",
+      "sha256": "df0253bc77454a7e706455d700f5425222036368bd12d7aae4db392cdbf70ea8"
+    },
+    {
+      "filename": "run_report.json",
+      "sha256": "57073fedf2c263c326e91dc959b12c422c554d583cfd303f14caf3c297179813"
+    }
+  ],
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

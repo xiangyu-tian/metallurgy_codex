@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.1",
+  "analysis_id": "E2-V1.1-RECHECK-COMPARISON-20260731",
+  "generated_at": "2026-07-31T06:34:38.493035+00:00",
+  "baseline_type": "v1_response_flags_counterfactual_replay",
+  "recheck_type": "v1.1_independent_development_recheck",
+  "task_count": 55,
+  "paired_flags_transitions": {
+    "correct_to_correct": 40,
+    "correct_to_incorrect": 2,
+    "incorrect_to_correct": 8,
+    "incorrect_to_incorrect": 5
+  },
+  "paired_action_transitions": {
+    "correct_to_correct": 48,
+    "correct_to_incorrect": 2,
+    "incorrect_to_correct": 1,
+    "incorrect_to_incorrect": 4
+  },
+  "metrics": {
+    "schema_valid_rate": {
+      "baseline": 1.0,
+      "v1_1": 1.0,
+      "change": 0.0
+    },
+    "flags_exact_accuracy": {
+      "baseline": 0.7636363636363637,
+      "v1_1": 0.8727272727272727,
+      "change": 0.10909090909090902
+    },
+    "supported_flag_macro_f1": {
+      "baseline": 0.7992720090171365,
+      "v1_1": 0.9457680250783699,
+      "change": 0.14649601606123341
+    },
+    "action_accuracy": {
+      "baseline": 0.9090909090909091,
+      "v1_1": 0.8909090909090909,
+      "change": -0.018181818181818188
+    },
+    "multilabel_flags_exact_accuracy": {
+      "baseline": 0.4666666666666667,
+      "v1_1": 0.6,
+      "change": 0.1333333333333333
+    },
+    "invalid_execution_rate": {
+      "baseline": 0.0,
+      "v1_1": 0.02,
+      "change": 0.02
+    },
+    "premature_call_rate": {
+      "baseline": 0.0,
+      "v1_1": 0.041666666666666664,
+      "change": 0.041666666666666664
+    }
+  },
+  "development_gate": {
+    "schema_valid_rate_100_percent": true,
+    "unsupported_system_recall_improved": true,
+    "multilabel_exact_accuracy_improved": true,
+    "clarify_action_accuracy_improved": false
+  },
+  "interpretation": {
+    "protocol_failure_closed": true,
+    "unsupported_system_distinction_improved": true,
+    "ambiguous_plus_ood_remains_primary_error_cluster": true,
+    "premature_call_observed": true,
+    "same_development_tasks_used": true,
+    "unbiased_generalization_claim_allowed": false,
+    "confirmatory_inference_allowed": false,
+    "core_frozen": false
+  }
+}

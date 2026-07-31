@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.1",
+  "run_id": "E2-DEV-V11-RUN-876742250AA34387",
+  "run_config_id": "E2-DEVELOPMENT-RECHECK-V1.1-20260731",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V1-20260731",
+  "generated_at": "2026-07-31T06:32:32.779907+00:00",
+  "source_bindings": {
+    "decision": "authorized_to_execute_v1_1_development_recheck",
+    "run_config_id": "E2-DEVELOPMENT-RECHECK-V1.1-20260731",
+    "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V1-20260731",
+    "authorized_task_count": 55,
+    "authorized_repeats": 1,
+    "endpoint": "https://api.deepseek.com",
+    "model": "deepseek-v4-flash",
+    "tool_access": "disabled",
+    "task_source_sha256": "4e8b89043fee0faddd8f2ed34c258b5e8531cff9c744c66a56a32568ec622a34",
+    "prompt_sha256": "8e6047010443d1661df96c5f762c9a19dbc9f01a0d57a48588960ed5613a1eac",
+    "output_schema_sha256": "f8c00f7aa42b2823e3e4efd8c7d74bcfd3f70acb6b7b67185b3c6346f0568840",
+    "run_config_sha256": "ee95c9c9de0f398aa0b78f422d0e1214272ee3a09c98c6bf4aad1656ecf9016c",
+    "runner_sha256": "ae40b0c7ce14a15f5cce399de9f20e3f88e35b351272899eaf8bfe3fb5de6334",
+    "execution_authorization_sha256": "5b3863a19a482c9e1a2dfc09314c603c0f6c4d9abf5b56c1f7bdff57f400221d"
+  },
+  "adapter_configuration": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "openai_base_url": "https://api.deepseek.com",
+    "thinking": "disabled",
+    "api_key_configured": true
+  },
+  "summary": {
+    "cell_count": 55,
+    "completed_count": 55,
+    "provider_failure_count": 0,
+    "retried_cell_count": 0,
+    "schema_valid_count": 55,
+    "schema_valid_rate": 1.0,
+    "flags_exact_count": 48,
+    "flags_exact_accuracy": 0.8727272727272727,
+    "mean_flags_jaccard": 0.9272727272727272,
+    "supported_flag_macro_f1": 0.9457680250783699,
+    "flag_metrics": [
+      {
+        "flag": "missing_parameter",
+        "support": 12,
+        "true_positive": 10,
+        "false_positive": 0,
+        "false_negative": 2,
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1": 0.9090909090909091
+      },
+      {
+        "flag": "ambiguous_parameter",
+        "support": 12,
+        "true_positive": 8,
+        "false_positive": 0,
+        "false_negative": 4,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8
+      },
+      {
+        "flag": "contract_defined_out_of_domain",
+        "support": 15,
+        "true_positive": 14,
+        "false_positive": 0,
+        "false_negative": 1,
+        "precision": 1.0,
+        "recall": 0.9333333333333333,
+        "f1": 0.9655172413793104
+      },
+      {
+        "flag": "contract_defined_unsupported_system",
+        "support": 6,
+        "true_positive": 6,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "flag": "unavailable",
+        "support": 15,
+        "true_positive": 15,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "flag": "version_mismatch",
+        "support": 5,
+        "true_positive": 5,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    ],
+    "primary_status_accuracy": 0.8727272727272727,
+    "action_accuracy": 0.8909090909090909,
+    "by_expected_action": {
+      "call": {
+        "task_count": 5,
+        "correct_count": 5,
+        "accuracy": 1.0,
+        "predicted_action_counts": {
+          "call": 5
+        }
+      },
+      "clarify": {
+        "task_count": 24,
+        "correct_count": 18,
+        "accuracy": 0.75,
+        "predicted_action_counts": {
+          "call": 1,
+          "clarify": 18,
+          "refuse": 5
+        }
+      },
+      "refuse": {
+        "task_count": 26,
+        "correct_count": 26,
+        "accuracy": 1.0,
+        "predicted_action_counts": {
+          "refuse": 26
+        }
+      }
+    },
+    "invalid_execution_rate": 0.02,
+    "premature_call_rate": 0.041666666666666664,
+    "out_of_domain_call_rate": 0.0,
+    "provider_attempt_count": 55,
+    "status": "completed",
+    "confirmatory_inference_allowed": false,
+    "model_output_fields": [
+      "flags"
+    ],
+    "primary_status_source": "deterministic_policy_from_predicted_flags",
+    "action_source": "deterministic_policy_from_predicted_flags"
+  },
+  "model_policy_revision_allowed_after_open": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

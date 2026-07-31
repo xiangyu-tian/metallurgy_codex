@@ -1,0 +1,14 @@
+﻿mutation_types,task_count,baseline_flags_exact_accuracy,v1_1_flags_exact_accuracy,flags_exact_change,baseline_action_accuracy,v1_1_action_accuracy,action_accuracy_change
+contract_out_of_domain,5,1.0,1.0,0.0,1.0,1.0,0.0
+contract_out_of_domain+unavailable_tool,5,0.6,0.8,0.20000000000000007,1.0,1.0,0.0
+make_parameter_ambiguous,5,1.0,1.0,0.0,1.0,1.0,0.0
+make_parameter_ambiguous+contract_out_of_domain,5,0.0,0.2,0.2,0.2,0.2,0.0
+make_unit_ambiguous,2,1.0,1.0,0.0,1.0,1.0,0.0
+ready,5,1.0,1.0,0.0,1.0,1.0,0.0
+remove_required_parameter,5,1.0,0.8,-0.19999999999999996,1.0,0.8,-0.19999999999999996
+remove_required_parameter+unavailable_tool,5,0.8,0.8,0.0,0.8,0.8,0.0
+remove_unit,2,1.0,1.0,0.0,1.0,1.0,0.0
+unavailable_tool,5,1.0,1.0,0.0,1.0,1.0,0.0
+unsupported_phase,1,0.0,1.0,1.0,1.0,1.0,0.0
+unsupported_system,5,0.2,1.0,0.8,1.0,1.0,0.0
+version_mismatch,5,1.0,1.0,0.0,1.0,1.0,0.0
