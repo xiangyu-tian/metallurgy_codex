@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "power_input_id": "V11-CF03-POWER-INPUT-20260731",
+  "status": "pilot_descriptive_input_only",
+  "primary_estimand": "Accuracy(Forced Verified Tool + Oracle Parameters) - Accuracy(No Tool)",
+  "benefit_calibration": {
+    "task_count": 45,
+    "base_task_group_count": 26,
+    "paired_repeat_count": 135,
+    "pilot_repeat_count": 3,
+    "no_tool_accuracy": 0.8666666666666667,
+    "forced_accuracy": 1.0,
+    "paired_accuracy_gain": 0.13333333333333333,
+    "discordant_forced_better_count": 18,
+    "discordant_no_tool_better_count": 0,
+    "concordant_count": 117,
+    "cluster_bootstrap": {
+      "seed": 20260730,
+      "iterations": 10000,
+      "cluster_unit": "base_task_group_id",
+      "task_weighted": {
+        "estimate": 0.13333333333333333,
+        "ci95": [
+          0.05185185185185185,
+          0.21985815602836878
+        ]
+      },
+      "group_equal": {
+        "estimate": 0.11538461538461539,
+        "ci95": [
+          0.044871794871794865,
+          0.19871794871794873
+        ]
+      },
+      "confirmatory_inference_allowed": false
+    },
+    "tool_family_effects": [
+      {
+        "source_tool_id": "A001",
+        "paired_cell_count": 30,
+        "no_tool_accuracy": 1.0,
+        "forced_accuracy": 1.0,
+        "accuracy_gain": 0.0
+      },
+      {
+        "source_tool_id": "A002",
+        "paired_cell_count": 21,
+        "no_tool_accuracy": 1.0,
+        "forced_accuracy": 1.0,
+        "accuracy_gain": 0.0
+      },
+      {
+        "source_tool_id": "A003",
+        "paired_cell_count": 36,
+        "no_tool_accuracy": 0.5833333333333334,
+        "forced_accuracy": 1.0,
+        "accuracy_gain": 0.4166666666666667
+      },
+      {
+        "source_tool_id": "A004",
+        "paired_cell_count": 24,
+        "no_tool_accuracy": 0.9166666666666666,
+        "forced_accuracy": 1.0,
+        "accuracy_gain": 0.08333333333333333
+      },
+      {
+        "source_tool_id": "B019",
+        "paired_cell_count": 24,
+        "no_tool_accuracy": 0.9583333333333334,
+        "forced_accuracy": 1.0,
+        "accuracy_gain": 0.041666666666666664
+      }
+    ],
+    "precision_policy_effects": [
+      {
+        "precision_policy": "approximate_educational",
+        "paired_cell_count": 18,
+        "no_tool_accuracy": 1.0,
+        "forced_accuracy": 1.0,
+        "accuracy_gain": 0.0
+      },
+      {
+        "precision_policy": "contract_numeric",
+        "paired_cell_count": 30,
+        "no_tool_accuracy": 1.0,
+        "forced_accuracy": 1.0,
+        "accuracy_gain": 0.0
+      },
+      {
+        "precision_policy": "exact_stoichiometric_counts",
+        "paired_cell_count": 21,
+        "no_tool_accuracy": 1.0,
+        "forced_accuracy": 1.0,
+        "accuracy_gain": 0.0
+      },
+      {
+        "precision_policy": "fraction_explicit_six_decimal",
+        "paired_cell_count": 12,
+        "no_tool_accuracy": 1.0,
+        "forced_accuracy": 1.0,
+        "accuracy_gain": 0.0
+      },
+      {
+        "precision_policy": "percent_explicit_six_decimal",
+        "paired_cell_count": 12,
+        "no_tool_accuracy": 0.9166666666666666,
+        "forced_accuracy": 1.0,
+        "accuracy_gain": 0.08333333333333333
+      },
+      {
+        "precision_policy": "six_decimal_components",
+        "paired_cell_count": 24,
+        "no_tool_accuracy": 0.9166666666666666,
+        "forced_accuracy": 1.0,
+        "accuracy_gain": 0.08333333333333333
+      },
+      {
+        "precision_policy": "strict_versioned",
+        "paired_cell_count": 18,
+        "no_tool_accuracy": 0.16666666666666666,
+        "forced_accuracy": 1.0,
+        "accuracy_gain": 0.8333333333333334
+      }
+    ]
+  },
+  "gate_evaluation": {
+    "task_count": 27,
+    "base_task_group_count": 16,
+    "paired_repeat_count": 81,
+    "pilot_repeat_count": 3,
+    "no_tool_accuracy": 0.9629629629629629,
+    "forced_accuracy": 1.0,
+    "candidate_policy_accuracy": 1.0,
+    "candidate_policy_call_rate": 0.14814814814814814,
+    "positive_gain_cell_count": 3,
+    "captured_positive_gain_cell_count": 3
+  },
+  "analysis_constraints": {
+    "independence_unit_is_not_paired_repeat": true,
+    "cluster_unit": "base_task_group_id",
+    "task_family_and_tool_family_variation_required": true,
+    "formal_repeat_count_frozen": false,
+    "formal_sample_size_frozen": false,
+    "may_be_used_for_confirmatory_inference": false,
+    "next_gate": "CF-08 power analysis and repeat-count decision"
+  },
+  "core_frozen": false
+}

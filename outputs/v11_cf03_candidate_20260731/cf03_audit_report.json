@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF03-CANDIDATE-AUDIT-20260731",
+  "check_id": "CF-03",
+  "status": "in_progress",
+  "candidate_evidence_status": "passed",
+  "completed_components": {
+    "benefit_run_reproducibility": "passed",
+    "gate_run_reproducibility": "passed",
+    "analysis_artifact_integrity": "passed",
+    "benefit_gate_split_isolation": "passed",
+    "verified_core_scope": "passed"
+  },
+  "benefit_run": {
+    "split": "benefit_estimation",
+    "status": "passed",
+    "run_id": "E1B-RUN-92E5D7291A2C4337",
+    "dataset_id": "E1B-TASKSET-V2-BENEFIT-20260730",
+    "task_count": 45,
+    "base_task_group_count": 26,
+    "tool_ids": [
+      "A001",
+      "A002",
+      "A003",
+      "A004",
+      "B019"
+    ],
+    "model_run_repeats": [
+      1,
+      2,
+      3
+    ],
+    "paired_repeat_count": 135,
+    "record_count": 270,
+    "checks": [
+      {
+        "check_id": "benefit_estimation-MANIFEST",
+        "passed": true,
+        "evidence": "manifest verified"
+      },
+      {
+        "check_id": "benefit_estimation-TASK-SOURCE-BINDING",
+        "passed": true,
+        "evidence": {
+          "reported": "81d90e7f9cb638ff18614a6f49d09fafc391bbe304c9917674beab307cef43c8",
+          "actual": "81d90e7f9cb638ff18614a6f49d09fafc391bbe304c9917674beab307cef43c8"
+        }
+      },
+      {
+        "check_id": "benefit_estimation-SPLIT",
+        "passed": true,
+        "evidence": {
+          "required_split": "benefit_estimation",
+          "task_splits": [
+            "benefit_estimation"
+          ],
+          "record_splits": [
+            "benefit_estimation"
+          ]
+        }
+      },
+      {
+        "check_id": "benefit_estimation-INDEPENDENT-REFERENCE",
+        "passed": true,
+        "evidence": "task_count=45"
+      },
+      {
+        "check_id": "benefit_estimation-CONDITIONS",
+        "passed": true,
+        "evidence": [
+          "forced_verified_oracle_parameters",
+          "no_tool"
+        ]
+      },
+      {
+        "check_id": "benefit_estimation-PILOT-REPEATS",
+        "passed": true,
+        "evidence": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "check_id": "benefit_estimation-PAIR-COMPLETENESS",
+        "passed": true,
+        "evidence": {
+          "observed_pair_units": 135,
+          "expected_pair_units": 135
+        }
+      },
+      {
+        "check_id": "benefit_estimation-RUN-STATUS",
+        "passed": true,
+        "evidence": {
+          "run_status": "completed",
+          "incomplete_pair_count": 0
+        }
+      },
+      {
+        "check_id": "benefit_estimation-DEVELOPMENT-BOUNDARY",
+        "passed": true,
+        "evidence": {
+          "formal_repeats_frozen": false,
+          "confirmatory_inference_allowed": false,
+          "core_frozen": false
+        }
+      }
+    ]
+  },
+  "gate_run": {
+    "split": "gate_evaluation",
+    "status": "passed",
+    "run_id": "E1B-RUN-9052A8F9CBA54962",
+    "dataset_id": "E1B-TASKSET-V2-GATE-20260730",
+    "task_count": 27,
+    "base_task_group_count": 16,
+    "tool_ids": [
+      "A001",
+      "A002",
+      "A003",
+      "A004",
+      "B019"
+    ],
+    "model_run_repeats": [
+      1,
+      2,
+      3
+    ],
+    "paired_repeat_count": 81,
+    "record_count": 162,
+    "checks": [
+      {
+        "check_id": "gate_evaluation-MANIFEST",
+        "passed": true,
+        "evidence": "manifest verified"
+      },
+      {
+        "check_id": "gate_evaluation-TASK-SOURCE-BINDING",
+        "passed": true,
+        "evidence": {
+          "reported": "c97cb254dfffcfec6cddd1c161a4a609fb9cdcc780c546264c812f9101e2e45d",
+          "actual": "c97cb254dfffcfec6cddd1c161a4a609fb9cdcc780c546264c812f9101e2e45d"
+        }
+      },
+      {
+        "check_id": "gate_evaluation-SPLIT",
+        "passed": true,
+        "evidence": {
+          "required_split": "gate_evaluation",
+          "task_splits": [
+            "gate_evaluation"
+          ],
+          "record_splits": [
+            "gate_evaluation"
+          ]
+        }
+      },
+      {
+        "check_id": "gate_evaluation-INDEPENDENT-REFERENCE",
+        "passed": true,
+        "evidence": "task_count=27"
+      },
+      {
+        "check_id": "gate_evaluation-CONDITIONS",
+        "passed": true,
+        "evidence": [
+          "forced_verified_oracle_parameters",
+          "no_tool"
+        ]
+      },
+      {
+        "check_id": "gate_evaluation-PILOT-REPEATS",
+        "passed": true,
+        "evidence": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "check_id": "gate_evaluation-PAIR-COMPLETENESS",
+        "passed": true,
+        "evidence": {
+          "observed_pair_units": 81,
+          "expected_pair_units": 81
+        }
+      },
+      {
+        "check_id": "gate_evaluation-RUN-STATUS",
+        "passed": true,
+        "evidence": {
+          "run_status": "completed",
+          "incomplete_pair_count": 0
+        }
+      },
+      {
+        "check_id": "gate_evaluation-DEVELOPMENT-BOUNDARY",
+        "passed": true,
+        "evidence": {
+          "formal_repeats_frozen": false,
+          "confirmatory_inference_allowed": false,
+          "core_frozen": false
+        }
+      }
+    ]
+  },
+  "analysis_audit": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "CF03-BENEFIT-ANALYSIS-MANIFEST",
+        "passed": true,
+        "evidence": "manifest verified"
+      },
+      {
+        "check_id": "CF03-GATE-ANALYSIS-MANIFEST",
+        "passed": true,
+        "evidence": "manifest verified"
+      },
+      {
+        "check_id": "CF03-BENEFIT-DESCRIPTIVE-ONLY",
+        "passed": true,
+        "evidence": {
+          "analysis_status": "descriptive_development_only",
+          "confirmatory_inference_allowed": false
+        }
+      },
+      {
+        "check_id": "CF03-GATE-INDEPENDENT-EVALUATION",
+        "passed": true,
+        "evidence": {
+          "analysis_status": "independent_gate_evaluation_completed",
+          "source_run_id": "E1B-RUN-9052A8F9CBA54962"
+        }
+      },
+      {
+        "check_id": "CF03-GATE-POLICY-FROZEN",
+        "passed": true,
+        "evidence": {
+          "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+          "policy_git_commit": "1ee098e",
+          "policy_revision_allowed": false
+        }
+      }
+    ]
+  },
+  "split_isolation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "CF03-BENEFIT-GATE-ISOLATION",
+        "passed": true,
+        "evidence": {
+          "task_id": [],
+          "task_pair_id": [],
+          "base_task_group_id": []
+        }
+      },
+      {
+        "check_id": "CF03-FAMILY-LEVEL-TRANSFER-ONLY",
+        "passed": true,
+        "evidence": {
+          "benefit_tool_ids": [
+            "A001",
+            "A002",
+            "A003",
+            "A004",
+            "B019"
+          ],
+          "gate_tool_ids": [
+            "A001",
+            "A002",
+            "A003",
+            "A004",
+            "B019"
+          ],
+          "interpretation": "The same verified tool families are allowed across splits; task, pair and base-group identities are not."
+        }
+      }
+    ],
+    "overlaps": {
+      "task_id": [],
+      "task_pair_id": [],
+      "base_task_group_id": []
+    }
+  },
+  "verified_tool_audit": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "CF03-VERIFIED-CORE-TOOLS",
+        "passed": true,
+        "evidence": {
+          "observed_tool_ids": [
+            "A001",
+            "A002",
+            "A003",
+            "A004",
+            "B019"
+          ],
+          "verified_core_tool_ids": [
+            "A001",
+            "A002",
+            "A003",
+            "A004",
+            "B019"
+          ]
+        }
+      }
+    ]
+  },
+  "pending_requirements": [
+    "CF-08 power analysis approval",
+    "formal model-run repeat count freeze",
+    "CF-09 sample-size addendum approval"
+  ],
+  "interpretation": "E1b pilot tasks, independent references, paired controls, three-repeat pilot and anti-leakage split are reproducible. CF-03 remains in_progress until CF-08/CF-09 freeze the formal repeat count and sample-size basis.",
+  "pilot_results_promoted_to_confirmatory": false,
+  "tool_benefit_written_back_to_base_truth": false,
+  "core_frozen": false
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "registry_id": "V11-CF03-BENEFIT-EVIDENCE-20260731",
+  "primary_estimand": "Accuracy(Forced Verified Tool + Oracle Parameters) - Accuracy(No Tool)",
+  "datasets": [
+    {
+      "evidence_role": "benefit_calibration",
+      "experiment": "E1b",
+      "run_id": "E1B-RUN-92E5D7291A2C4337",
+      "dataset_id": "E1B-TASKSET-V2-BENEFIT-20260730",
+      "split": "benefit_estimation",
+      "task_count": 45,
+      "base_task_group_count": 26,
+      "model_run_repeats": [
+        1,
+        2,
+        3
+      ],
+      "paired_repeat_count": 135,
+      "accuracy_gain": 0.13333333333333333,
+      "eligible_for_pilot_effect_estimation": true,
+      "eligible_for_gate_performance_claim": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "evidence_role": "gate_evaluation",
+      "experiment": "E1b",
+      "run_id": "E1B-RUN-9052A8F9CBA54962",
+      "dataset_id": "E1B-TASKSET-V2-GATE-20260730",
+      "split": "gate_evaluation",
+      "task_count": 27,
+      "base_task_group_count": 16,
+      "model_run_repeats": [
+        1,
+        2,
+        3
+      ],
+      "paired_repeat_count": 81,
+      "candidate_policy_accuracy": 1.0,
+      "eligible_for_pilot_effect_estimation": false,
+      "eligible_for_gate_performance_claim": true,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "evidence_role": "mechanism_development_secondary",
+      "experiment": "E1c",
+      "run_id": "E1C-RUN-71BA08D38E474CB4",
+      "dataset_id": "E1C-TASKSET-V1-DEVELOPMENT-20260731",
+      "split": "runner_development",
+      "task_count": 24,
+      "condition_count": 6,
+      "model_run_repeats": 1,
+      "manifest_verified": true,
+      "manifest_errors": [],
+      "eligible_for_e1b_primary_benefit_estimate": false,
+      "eligible_for_formal_repeat_freeze": false,
+      "confirmatory_inference_allowed": false,
+      "purpose": "Secondary mechanism evidence only; it must not be pooled with the E1b primary benefit contrast."
+    },
+    {
+      "evidence_role": "mechanism_evaluation_secondary",
+      "experiment": "E1c",
+      "run_id": "E1C-RUN-9FDC7D48AD154CE1",
+      "dataset_id": "E1C-TASKSET-V1-EVALUATION-20260731",
+      "split": "end_to_end_evaluation",
+      "task_count": 36,
+      "condition_count": 6,
+      "model_run_repeats": 1,
+      "manifest_verified": true,
+      "manifest_errors": [],
+      "eligible_for_e1b_primary_benefit_estimate": false,
+      "eligible_for_formal_repeat_freeze": false,
+      "confirmatory_inference_allowed": false,
+      "purpose": "Secondary mechanism evidence only; it must not be pooled with the E1b primary benefit contrast."
+    }
+  ],
+  "anti_leakage_policy": {
+    "same_run_may_generate_benefit_and_prove_gate": false,
+    "e1c_pooled_into_e1b_primary_estimand": false,
+    "pilot_result_written_back_to_base_truth": false,
+    "ai_silver_promoted_to_gold": false
+  },
+  "formal_repeat_count_frozen": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}
