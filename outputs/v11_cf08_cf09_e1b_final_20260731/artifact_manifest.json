@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "finalization_id": "V11-CF08-CF09-E1B-FINAL-20260731",
+  "artifacts": [
+    {
+      "filename": "e1b_design_finalization.json",
+      "sha256": "ea204d081a3cefb78f05b5823a8c604c2763373add2dc53dd23f6eb74667cdc6"
+    },
+    {
+      "filename": "cf09_coverage_report.json",
+      "sha256": "bb08e871d1db9db9944aff8156b3a954310e4dcacd7b08912b674e15a057cf16"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "filename": "outputs/v11_cf08_power_20260731/cf08_power_report.json",
+      "sha256": "d6a6ad103f3e90f20c52ea18472429a05b2cbd21a2e294762873d696f09b590c"
+    },
+    {
+      "filename": "outputs/v11_cf08_power_20260731/artifact_manifest.json",
+      "sha256": "5f3ac0a4b1fdfc629f7b3a147f3b057c4434d52274354ea591f3daddad873a72"
+    },
+    {
+      "filename": "Tools/core_freeze/approvals/v11_cf08_e1b_approval_20260731.json",
+      "sha256": "861c55496cfa55ece0455deea6d3a0ead21a8e5d5c3ab8b1d6f3e88706480a56"
+    },
+    {
+      "filename": "docs/experiments/sample_size_addendum_v1.1-rc1.md",
+      "sha256": "42802a765b1b31adcb9ce95ebfb5457482c9e4ba7a5154e4b6df31dc1d9a6125"
+    },
+    {
+      "filename": "Tools/core_freeze/finalize_v11_cf08_cf09.py",
+      "sha256": "50fa5b64cd6a36486c1a86cc8d23597386c42f0444a2d5aadddf83181cb07432"
+    }
+  ],
+  "cf03_status": "passed",
+  "cf08_status": "in_progress",
+  "cf09_status": "in_progress",
+  "core_frozen": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "approval_id": "V11-CF08-E1B-APPROVAL-20260731",
+  "decision": "approved",
+  "approved_scope": "E1b formal benefit experiment only",
+  "approved_by_role": "project_owner",
+  "approval_channel": "explicit_user_instruction_in_codex_task",
+  "approved_at": "2026-07-31T11:14:34.7881549+08:00",
+  "analysis_git_commit": "41b485d2c074f52b1d3e89db156e52ea8e4ef8ba",
+  "artifact_manifest_sha256": "5f3ac0a4b1fdfc629f7b3a147f3b057c4434d52274354ea591f3daddad873a72",
+  "cf08_power_report_sha256": "d6a6ad103f3e90f20c52ea18472429a05b2cbd21a2e294762873d696f09b590c",
+  "approved_parameters": {
+    "minimum_meaningful_accuracy_gain": 0.05,
+    "alpha": 0.05,
+    "test_direction": "one_sided_positive_gain",
+    "target_power": 0.8,
+    "pilot_uncertainty_inflation": 0.15,
+    "base_task_groups": 120,
+    "base_task_groups_per_verified_tool_family": 24,
+    "tasks_per_base_task_group": 2,
+    "task_count": 240,
+    "condition_count": 2,
+    "model_run_repeats": 3,
+    "paired_repeat_count": 720,
+    "model_cell_count": 1440
+  },
+  "cryptographic_signature_present": false,
+  "record_type": "governed_approval_record",
+  "notes": "This records the project owner's explicit approval. It is not a cryptographic digital signature and does not approve E1a, E2 or E3 sample sizes.",
+  "core_frozen": false
+}

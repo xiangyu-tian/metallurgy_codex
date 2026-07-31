@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "coverage_id": "V11-CF09-COVERAGE-20260731",
+  "experiments": [
+    {
+      "experiment": "E1a",
+      "sample_size_status": "pending",
+      "repeat_count_status": "pending",
+      "blocker": "Schema-condition pilot and effect variance unavailable"
+    },
+    {
+      "experiment": "E1b",
+      "sample_size_status": "approved",
+      "repeat_count_status": "approved",
+      "base_task_groups": 120,
+      "task_count": 240,
+      "model_run_repeats": 3,
+      "model_cell_count": 1440
+    },
+    {
+      "experiment": "E2",
+      "sample_size_status": "pending",
+      "repeat_count_status": "pending",
+      "blocker": "CF-04 mutation pilot unavailable"
+    },
+    {
+      "experiment": "E3",
+      "sample_size_status": "pending",
+      "repeat_count_status": "pending",
+      "blocker": "CF-05/CF-06 routing and API pilots unavailable"
+    }
+  ],
+  "approved_experiment_count": 1,
+  "required_experiment_count": 4,
+  "cf09_status": "in_progress",
+  "core_frozen": false
+}

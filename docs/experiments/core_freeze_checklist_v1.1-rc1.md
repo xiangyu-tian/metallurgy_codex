@@ -38,13 +38,13 @@ v1.1 的 CF 编号重新绑定到可执行真值冻结门槛：
 |---|---|---|---|---|
 | CF-01 | 协议与数据规范兼容性 | v1.1研究问题、G1/G2/C1真值、S1限制、数据生产和`core_frozen=false`一致 | `passed` | `outputs/v11_cf01_cf02_audit_20260731/`；8项兼容性检查全部通过 |
 | CF-02 | `verified_core`工具及独立参考 | 至少3个工具；契约字段、来源、适用域、限制、哈希、正常/边界案例和独立参考均通过 | `passed` | A001、A002、A003、A004、B019共5工具；27/27参考案例通过；11项审计检查通过 |
-| CF-03 | E1b基础任务与收益先导 | 基础任务、独立参考、No Tool/Forced Tool对照、重复和防循环划分可复现 | `in_progress` | 候选证据审计已通过：45条收益任务和27条门控任务完成3次成对重复，任务/任务对/基础任务组零交叉；待CF-08/CF-09冻结正式重复次数和样本量 |
+| CF-03 | E1b基础任务与收益先导 | 基础任务、独立参考、No Tool/Forced Tool对照、重复和防循环划分可复现 | `passed` | 候选证据审计通过；E1b的120基础任务组、240任务和3次重复设计已审批冻结 |
 | CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `pending` | 尚未形成v1.1正式变换集 |
 | CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 五工具端到端选择已验证；17/50/100/120契约目录与近邻生成仍未完成 |
 | CF-06 | 17/50/100/120 Schema API可行性 | 实测函数数量、Token、上下文、延迟、错误、`tool_choice=none`和供应商限制 | `pending` | 尚未按v1.1 Schema-only目录口径执行 |
 | CF-07 | 数据层级与泄漏审计 | `controlled_confirmatory`、`naturalistic_validation`、`exploratory_domain_cases`分层；家族划分和收益校准/评价隔离通过 | `in_progress` | E1b/E1c受控集已分区；自然验证层和探索层尚未冻结 |
-| CF-08 | 先导波动与功效分析 | 估计任务家族、工具家族、重复波动和主要效应；固定正式重复次数 | `in_progress` | 功效候选已生成：5个百分点最小效应、80%功效、15%先导余量对应120个基础任务组；3次重复候选已形成，等待参数审批 |
-| CF-09 | 样本量附录 | 生成并审批v1.1样本量和重复次数附录 | `pending` | 待CF-08 |
+| CF-08 | 先导波动与功效分析 | 估计任务家族、工具家族、重复波动和主要效应；固定正式重复次数 | `in_progress` | E1b组件已批准：5个百分点最小效应、80%功效、120基础任务组、3次重复；E1a/E2/E3组件待各自先导 |
+| CF-09 | 样本量附录 | 生成并审批v1.1样本量和重复次数附录 | `in_progress` | `sample_size_addendum_v1.1-rc1.md`已建立，E1b章节批准；E1a/E2/E3章节待补 |
 | CF-10 | 新统计接口与报告模板干跑 | v1.1 E1/E2/E3字段通过输入校验、聚合、Bootstrap/GLMM和报告模板干跑 | `in_progress` | 旧CF-11基础设施已完成；尚未使用v1.1真实候选数据干跑 |
 | CF-11 | 正式资产哈希冻结 | 工具、契约、生成器、任务、参考结果、评分器、配置和报告模板全部进入不可变manifest | `in_progress` | verified_core、E1b、E1c已有局部manifest；全项目冻结清单尚未形成 |
 | CF-12 | 最终审查与冻结决定 | CF-01至CF-11全部`passed`或正式`waived`；限制声明、偏离记录和项目审批完整 | `pending` | `core_frozen=false` |
@@ -117,12 +117,12 @@ scope:
 | 已发布验证报告 | `9b50c51f79370316544ef0c226ea88e98c3c0eda76a03919afb1b77a0b657341` |
 | 已发布manifest | `e61f0f909fda929c4fd5b59031c046009aa2c797e52ab102e97bf7d0e6fa7058` |
 
-## 6. CF-03候选验收记录
+## 6. CF-03验收记录
 
 ```yaml
 check_id: CF-03
 title: E1b基础任务、收益先导与防循环划分
-status: in_progress
+status: passed
 audit_id: V11-CF03-CANDIDATE-AUDIT-20260731
 candidate_evidence_status: passed
 evidence:
@@ -145,16 +145,53 @@ acceptance_result:
   base_task_group_id_overlap: 0
   pilot_results_promoted_to_confirmatory: false
   tool_benefit_written_back_to_base_truth: false
-pending:
-  - CF-08功效分析审批
-  - 正式模型重复次数冻结
-  - CF-09样本量附录审批
+resolved_requirements:
+  - CF-08 E1b功效参数已审批
+  - 正式模型重复次数冻结为3
+  - CF-09附录的E1b章节已审批
+formal_design:
+  base_task_groups: 120
+  task_count: 240
+  model_run_repeats: 3
+  model_cell_count: 1440
 core_frozen: false
 ```
 
-本次通过的是“CF-03候选证据可复现性”，不是CF-03最终冻结。E1b收益校准集用于估计先导效应，独立门控集用于检验冻结策略；E1c只登记为机制层次的次要证据，不与E1b主要收益效应合并。
+E1b收益校准集用于估计先导效应，独立门控集用于检验冻结策略；E1c只登记为机制层次的次要证据，不与E1b主要收益效应合并。项目负责人批准正式功效参数后，CF-03的候选证据、功效依据和重复次数门槛均已满足。
 
-## 7. 旧CF-01/CF-02资产的保留方式
+## 7. CF-08/CF-09 E1b组件冻结记录
+
+```yaml
+finalization_id: V11-CF08-CF09-E1B-FINAL-20260731
+approval_id: V11-CF08-E1B-APPROVAL-20260731
+approval_scope: E1b formal benefit experiment only
+evidence:
+  - Tools/core_freeze/approvals/v11_cf08_e1b_approval_20260731.json
+  - docs/experiments/sample_size_addendum_v1.1-rc1.md
+  - outputs/v11_cf08_cf09_e1b_final_20260731/e1b_design_finalization.json
+  - outputs/v11_cf08_cf09_e1b_final_20260731/cf09_coverage_report.json
+  - outputs/v11_cf08_cf09_e1b_final_20260731/artifact_manifest.json
+approved_parameters:
+  minimum_meaningful_accuracy_gain: 0.05
+  alpha: 0.05
+  test_direction: one_sided_positive_gain
+  target_power: 0.80
+  base_task_groups: 120
+  task_count: 240
+  model_run_repeats: 3
+  model_cell_count: 1440
+status:
+  cf03: passed
+  cf08_e1b_component: passed
+  cf08_overall: in_progress
+  cf09_e1b_component: passed
+  cf09_overall: in_progress
+core_frozen: false
+```
+
+CF-08和CF-09是全项目门槛。E1b组件通过不能替代E1a、E2和E3各自的样本量依据，因此两项总体状态仍为`in_progress`。
+
+## 8. 旧CF-01/CF-02资产的保留方式
 
 ### AI辅助Track A
 
@@ -183,12 +220,12 @@ formal_cf03_eligible = false
 
 称为v1.1确认性金标准。
 
-## 8. 下一执行点
+## 9. 下一执行点
 
-CF-08候选分析已经完成，下一执行点是审批候选参数，而不是立即运行1,440个正式模型单元：
+CF-09的E1b章节已冻结，但全项目附录仍缺E1a、E2和E3。下一执行点不是立即运行1,440个E1b正式模型单元，而是补齐其余实验的前置先导：
 
-1. 审批或修改5个百分点的最小有意义准确率收益；
-2. 审批或修改单侧`alpha=0.05`和80%目标功效；
-3. 审批或修改120个基础任务组及五工具家族平衡分配；
-4. 审批或修改每任务3次模型重复；
-5. 参数批准后生成`sample_size_addendum_v1.1`并更新CF-03、CF-08和CF-09状态。
+1. 推进CF-04，生成E2契约边界变换和先导波动；
+2. 继续CF-05/CF-06，完成E3近邻工具池及Schema API先导；
+3. 固定E1a正式条件并执行Schema暴露先导；
+4. 将E1a、E2和E3功效结果补入样本量附录；
+5. 全部章节审批后再把CF-08、CF-09改为`passed`。

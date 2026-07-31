@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "finalization_id": "V11-CF08-CF09-E1B-FINAL-20260731",
+  "approval_id": "V11-CF08-E1B-APPROVAL-20260731",
+  "approved_at": "2026-07-31T11:14:34.7881549+08:00",
+  "approved_scope": "E1b formal benefit experiment only",
+  "analysis_git_commit": "41b485d2c074f52b1d3e89db156e52ea8e4ef8ba",
+  "source_bindings": {
+    "cf08_manifest_sha256": "5f3ac0a4b1fdfc629f7b3a147f3b057c4434d52274354ea591f3daddad873a72",
+    "cf08_report_sha256": "d6a6ad103f3e90f20c52ea18472429a05b2cbd21a2e294762873d696f09b590c",
+    "approval_record_sha256": "861c55496cfa55ece0455deea6d3a0ead21a8e5d5c3ab8b1d6f3e88706480a56",
+    "sample_size_addendum_sha256": "42802a765b1b31adcb9ce95ebfb5457482c9e4ba7a5154e4b6df31dc1d9a6125"
+  },
+  "approved_parameters": {
+    "minimum_meaningful_accuracy_gain": 0.05,
+    "alpha": 0.05,
+    "test_direction": "one_sided_positive_gain",
+    "target_power": 0.8,
+    "pilot_uncertainty_inflation": 0.15,
+    "base_task_groups": 120,
+    "base_task_groups_per_verified_tool_family": 24,
+    "tasks_per_base_task_group": 2,
+    "task_count": 240,
+    "condition_count": 2,
+    "model_run_repeats": 3,
+    "paired_repeat_count": 720,
+    "model_cell_count": 1440
+  },
+  "status_updates": {
+    "cf03": {
+      "e1b_candidate_evidence": "passed",
+      "e1b_power_and_repeat_freeze": "passed",
+      "overall": "passed"
+    },
+    "cf08": {
+      "e1b_component": "passed",
+      "e1a_component": "pending",
+      "e2_component": "pending",
+      "e3_component": "pending",
+      "overall": "in_progress"
+    },
+    "cf09": {
+      "e1b_component": "passed",
+      "e1a_component": "pending",
+      "e2_component": "pending",
+      "e3_component": "pending",
+      "overall": "in_progress"
+    }
+  },
+  "approval_is_cryptographic_signature": false,
+  "cf08_global_passed": false,
+  "cf09_global_passed": false,
+  "core_frozen": false
+}
