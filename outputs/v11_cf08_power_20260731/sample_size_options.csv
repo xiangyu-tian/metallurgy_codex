@@ -1,0 +1,7 @@
+minimum_meaningful_accuracy_gain,target_power,alpha_one_sided,required_base_task_groups_uninflated,pilot_uncertainty_inflation,recommended_base_task_groups,base_task_groups_per_tool_family_if_balanced,tasks_per_base_task_group,planned_task_count,model_run_repeats,condition_count,planned_model_cells
+0.05,0.8,0.05,104,0.15,120,24,2,240,3,2,1440
+0.05,0.9,0.05,143,0.15,165,33,2,330,3,2,1980
+0.08,0.8,0.05,41,0.15,50,10,2,100,3,2,600
+0.08,0.9,0.05,56,0.15,65,13,2,130,3,2,780
+0.1,0.8,0.05,26,0.15,30,6,2,60,3,2,360
+0.1,0.9,0.05,36,0.15,45,9,2,90,3,2,540
