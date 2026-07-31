@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0-candidate",
+  "split_id": "E2-INDEPENDENT-SEMANTIC-VALIDATION-SPLIT-V1",
+  "source_v2_manifest_sha256": "53002a6929ea78fce18bed02e8ca93ab97e55750c57ea5a9a38a72fb29a03305",
+  "source_hybrid_manifest_sha256": "40e79ae676d9184df59d6e67e709fac7d1e02a0b56976aa17ea258bbda968dfc",
+  "base_task_snapshot_sha256": "81d90e7f9cb638ff18614a6f49d09fafc391bbe304c9917674beab307cef43c8",
+  "split_role": "independent_semantic_validation_candidate",
+  "base_task_selection": {
+    "A001": "E1B2-A001-005",
+    "A002": "E1B2-A002-004",
+    "A003": "E1B2-A003-005",
+    "A004": "E1B2-A004-005",
+    "B019": "E1B2-B019-007"
+  },
+  "task_matrix": [
+    [],
+    ["make_parameter_ambiguous"],
+    ["unavailable_tool"],
+    ["version_mismatch"],
+    ["contract_out_of_domain"],
+    ["unsupported_system"],
+    ["make_parameter_ambiguous", "contract_out_of_domain"],
+    ["contract_out_of_domain", "unavailable_tool"]
+  ],
+  "tool_mutation_specs": {
+    "A001": {
+      "ambiguous_field": "source_unit",
+      "ambiguous_candidates": ["m", "cm"],
+      "out_of_domain_patch": {
+        "parameters": {
+          "source_unit": "Pa",
+          "target_unit": "kg"
+        }
+      },
+      "unsupported_system_patch": {
+        "request_context": {
+          "requested_system": "thermal_energy_conversion"
+        }
+      },
+      "joint_ambiguous_ood_patch": {
+        "parameters": {
+          "source_unit": {
+            "status": "ambiguous",
+            "candidates": ["Pa", "MPa"]
+          },
+          "target_unit": "kg"
+        }
+      }
+    },
+    "A002": {
+      "ambiguous_field": "formula",
+      "ambiguous_candidates": ["Ca(OH)2", "(NH4)2SO4"],
+      "out_of_domain_patch": {
+        "parameters": {
+          "formula": "CuSO4·5H2O"
+        }
+      },
+      "unsupported_system_patch": {
+        "request_context": {
+          "requested_system": "charged_ion_speciation"
+        }
+      },
+      "joint_ambiguous_ood_patch": {
+        "parameters": {
+          "formula": {
+            "status": "ambiguous",
+            "candidates": ["CuSO4·5H2O", "FeSO4·7H2O"]
+          }
+        }
+      }
+    },
+    "A003": {
+      "ambiguous_field": "formula",
+      "ambiguous_candidates": ["CaCO3", "CuSO4"],
+      "out_of_domain_patch": {
+        "parameters": {
+          "formula": "NaCl"
+        }
+      },
+      "unsupported_system_patch": {
+        "request_context": {
+          "requested_system": "isotope_abundance_weighting"
+        }
+      },
+      "joint_ambiguous_ood_patch": {
+        "parameters": {
+          "formula": {
+            "status": "ambiguous",
+            "candidates": ["NaCl", "MgO"]
+          }
+        }
+      }
+    },
+    "A004": {
+      "ambiguous_field": "compositions",
+      "ambiguous_candidates": [
+        {"A": 1.0, "B": 2.0},
+        {"A": 2.0, "B": 1.0}
+      ],
+      "out_of_domain_patch": {
+        "parameters": {
+          "compositions": {"Fe": -0.05, "C": 1.05}
+        }
+      },
+      "unsupported_system_patch": {
+        "request_context": {
+          "requested_system": "signed_vector_normalization"
+        }
+      },
+      "joint_ambiguous_ood_patch": {
+        "parameters": {
+          "compositions": {
+            "status": "ambiguous",
+            "candidates": [
+              {"Fe": -0.05, "C": 1.05},
+              {"Fe": 1.1, "C": -0.1}
+            ]
+          }
+        }
+      }
+    },
+    "B019": {
+      "ambiguous_field": "overall_composition",
+      "ambiguous_candidates": [0.45, 0.65],
+      "out_of_domain_patch": {
+        "parameters": {
+          "overall_composition": -0.1,
+          "phase1_composition": 0.15,
+          "phase2_composition": 0.75,
+          "composition_basis": "fraction"
+        }
+      },
+      "unsupported_system_patch": {
+        "request_context": {
+          "requested_system": "binary_three_phase_tie_triangle"
+        }
+      },
+      "joint_ambiguous_ood_patch": {
+        "parameters": {
+          "overall_composition": {
+            "status": "ambiguous",
+            "candidates": [-0.25, 1.25]
+          },
+          "phase1_composition": 0.15,
+          "phase2_composition": 0.75,
+          "composition_basis": "fraction"
+        }
+      }
+    }
+  },
+  "independence_invariants": [
+    "validation base_task_id and base_task_group_id must be disjoint from the E2 v2 development source",
+    "validation task_id and mutation_id namespaces must be disjoint from development namespaces",
+    "model-visible structured states must not exactly duplicate E2 v2 development states",
+    "semantic positive boundary values must differ from the development mutation specifications",
+    "gold flags must be recomputable from final model-visible state and versioned contracts",
+    "the validation split is locked before any LLM execution"
+  ],
+  "external_api_execution_authorized": false,
+  "model_execution_count": 0,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

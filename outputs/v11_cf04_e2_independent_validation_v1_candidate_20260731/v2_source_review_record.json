@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0-candidate",
+  "review_id": "E2-V2-DEVELOPMENT-SOURCE-REVIEW-20260731",
+  "source_dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731",
+  "source_manifest_sha256": "53002a6929ea78fce18bed02e8ca93ab97e55750c57ea5a9a38a72fb29a03305",
+  "decision": "accepted_as_locked_development_source_for_validation",
+  "checks": {
+    "manifest_hashes_valid": true,
+    "stored_tasks_match_rebuild": true,
+    "stored_events_match_rebuild": true,
+    "label_observability_passed": true
+  },
+  "manifest_failures": [],
+  "task_count": 55,
+  "mutation_event_count": 65,
+  "scope_limit": "development source lock only; not CF-04 pass and not Core Frozen",
+  "external_api_calls": 0,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

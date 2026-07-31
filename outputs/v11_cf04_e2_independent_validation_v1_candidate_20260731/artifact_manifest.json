@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0-candidate",
+  "dataset_id": "E2-INDEPENDENT-SEMANTIC-VALIDATION-V1-CANDIDATE-20260731",
+  "source_bindings": {
+    "split_sha256": "42ad1674b136ad881ec9ce0945ca44263402965da541ad43c72655776b2b4066",
+    "v2_manifest_sha256": "53002a6929ea78fce18bed02e8ca93ab97e55750c57ea5a9a38a72fb29a03305",
+    "hybrid_manifest_sha256": "40e79ae676d9184df59d6e67e709fac7d1e02a0b56976aa17ea258bbda968dfc",
+    "contracts_sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec",
+    "builder_sha256": "b8ce7f70043712a0ba55889cda09a9d29ed3afd2ce3d5252b438f50cae12bbe1"
+  },
+  "artifacts": [
+    {
+      "filename": "validation_split_snapshot.json",
+      "sha256": "ca816b07ad2806ba962c4a8e5b3451c9cd2819352f95f81f1def2ab037d76c8c"
+    },
+    {
+      "filename": "e2_validation_tasks_v1.json",
+      "sha256": "a8f0648b392e48de576d1fa5dc1d3f04cb2bc064986070756827eff9e99b6921"
+    },
+    {
+      "filename": "mutation_events_validation_v1.json",
+      "sha256": "3184690e737c846b81d02dd7390316c1ec746f096ef5c0ff8e00a05f504cc84a"
+    },
+    {
+      "filename": "v2_source_review_record.json",
+      "sha256": "092bb6acef2282089507aba8d22ab745c1cb5cf2011f0d1c66c90094083068fd"
+    },
+    {
+      "filename": "independence_audit.json",
+      "sha256": "535f555e6b6790e92976018d04887de2dede825a8d61d0877224b1a03a2ed76b"
+    }
+  ],
+  "external_api_calls": 0,
+  "external_api_execution_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

@@ -1,0 +1,1289 @@
+{
+  "schema_version": "1.0-candidate",
+  "dataset_id": "E2-INDEPENDENT-SEMANTIC-VALIDATION-V1-CANDIDATE-20260731",
+  "mutation_event_count": 45,
+  "mutation_events": [
+    {
+      "mutation_id": "MUT-E2VAL-A001-02-01",
+      "base_task_id": "E1B2-A001-005",
+      "mutated_task_id": "E2VAL-A001-02",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "parameters.source_unit": {
+          "before": "m",
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              "m",
+              "cm"
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 1373981308
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A001-03-01",
+      "base_task_id": "E1B2-A001-005",
+      "mutated_task_id": "E2VAL-A001-03",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 649465141
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A001-04-01",
+      "base_task_id": "E1B2-A001-005",
+      "mutated_task_id": "E2VAL-A001-04",
+      "mutation_type": "version_mismatch",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "request_context.requested_tool_version": {
+          "before": "1.0.0",
+          "after": "1.0.0-mismatch"
+        }
+      },
+      "expected_flag_effects": [
+        "version_mismatch"
+      ],
+      "random_seed": 3492073135
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A001-05-01",
+      "base_task_id": "E1B2-A001-005",
+      "mutated_task_id": "E2VAL-A001-05",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "value": 0.0125,
+              "source_unit": "m",
+              "target_unit": "mm"
+            },
+            "request_context": {
+              "requested_tool_id": "A001",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "SI"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "value": 0.0125,
+              "source_unit": "Pa",
+              "target_unit": "kg"
+            },
+            "request_context": {
+              "requested_tool_id": "A001",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "SI"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 2895415959
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A001-06-01",
+      "base_task_id": "E1B2-A001-005",
+      "mutated_task_id": "E2VAL-A001-06",
+      "mutation_type": "unsupported_system",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "value": 0.0125,
+              "source_unit": "m",
+              "target_unit": "mm"
+            },
+            "request_context": {
+              "requested_tool_id": "A001",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "SI"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "value": 0.0125,
+              "source_unit": "m",
+              "target_unit": "mm"
+            },
+            "request_context": {
+              "requested_tool_id": "A001",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "thermal_energy_conversion"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_unsupported_system"
+      ],
+      "random_seed": 3798391775
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A001-07-01",
+      "base_task_id": "E1B2-A001-005",
+      "mutated_task_id": "E2VAL-A001-07",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "composition_mode": "joint_observable_final_state",
+        "final_state_patch": {
+          "parameters": {
+            "source_unit": {
+              "status": "ambiguous",
+              "candidates": [
+                "Pa",
+                "MPa"
+              ]
+            },
+            "target_unit": "kg"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 1595736512,
+      "joint_mutation_spec_id": "JOINT-A001-VALIDATION-AMBIGUOUS-OOD-V1",
+      "joint_event_index": 1
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A001-07-02",
+      "base_task_id": "E1B2-A001-005",
+      "mutated_task_id": "E2VAL-A001-07",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "composition_mode": "joint_observable_final_state",
+        "final_state_patch": {
+          "parameters": {
+            "source_unit": {
+              "status": "ambiguous",
+              "candidates": [
+                "Pa",
+                "MPa"
+              ]
+            },
+            "target_unit": "kg"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 1275505220,
+      "joint_mutation_spec_id": "JOINT-A001-VALIDATION-AMBIGUOUS-OOD-V1",
+      "joint_event_index": 2
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A001-08-01",
+      "base_task_id": "E1B2-A001-005",
+      "mutated_task_id": "E2VAL-A001-08",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "value": 0.0125,
+              "source_unit": "m",
+              "target_unit": "mm"
+            },
+            "request_context": {
+              "requested_tool_id": "A001",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "SI"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "value": 0.0125,
+              "source_unit": "Pa",
+              "target_unit": "kg"
+            },
+            "request_context": {
+              "requested_tool_id": "A001",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "SI"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 2439324649
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A001-08-02",
+      "base_task_id": "E1B2-A001-005",
+      "mutated_task_id": "E2VAL-A001-08",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 1339519879
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A002-02-01",
+      "base_task_id": "E1B2-A002-004",
+      "mutated_task_id": "E2VAL-A002-02",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "parameters.formula": {
+          "before": "Ca(OH)2",
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              "Ca(OH)2",
+              "(NH4)2SO4"
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 4119827020
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A002-03-01",
+      "base_task_id": "E1B2-A002-004",
+      "mutated_task_id": "E2VAL-A002-03",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 1642262828
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A002-04-01",
+      "base_task_id": "E1B2-A002-004",
+      "mutated_task_id": "E2VAL-A002-04",
+      "mutation_type": "version_mismatch",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "request_context.requested_tool_version": {
+          "before": "1.0.0",
+          "after": "1.0.0-mismatch"
+        }
+      },
+      "expected_flag_effects": [
+        "version_mismatch"
+      ],
+      "random_seed": 1284671999
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A002-05-01",
+      "base_task_id": "E1B2-A002-004",
+      "mutated_task_id": "E2VAL-A002-05",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "formula": "Ca(OH)2"
+            },
+            "request_context": {
+              "requested_tool_id": "A002",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "formula": "CuSO4·5H2O"
+            },
+            "request_context": {
+              "requested_tool_id": "A002",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 2446734021
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A002-06-01",
+      "base_task_id": "E1B2-A002-004",
+      "mutated_task_id": "E2VAL-A002-06",
+      "mutation_type": "unsupported_system",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "formula": "Ca(OH)2"
+            },
+            "request_context": {
+              "requested_tool_id": "A002",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "formula": "Ca(OH)2"
+            },
+            "request_context": {
+              "requested_tool_id": "A002",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "charged_ion_speciation"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_unsupported_system"
+      ],
+      "random_seed": 4196874253
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A002-07-01",
+      "base_task_id": "E1B2-A002-004",
+      "mutated_task_id": "E2VAL-A002-07",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "composition_mode": "joint_observable_final_state",
+        "final_state_patch": {
+          "parameters": {
+            "formula": {
+              "status": "ambiguous",
+              "candidates": [
+                "CuSO4·5H2O",
+                "FeSO4·7H2O"
+              ]
+            }
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 810444422,
+      "joint_mutation_spec_id": "JOINT-A002-VALIDATION-AMBIGUOUS-OOD-V1",
+      "joint_event_index": 1
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A002-07-02",
+      "base_task_id": "E1B2-A002-004",
+      "mutated_task_id": "E2VAL-A002-07",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "composition_mode": "joint_observable_final_state",
+        "final_state_patch": {
+          "parameters": {
+            "formula": {
+              "status": "ambiguous",
+              "candidates": [
+                "CuSO4·5H2O",
+                "FeSO4·7H2O"
+              ]
+            }
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 3435112473,
+      "joint_mutation_spec_id": "JOINT-A002-VALIDATION-AMBIGUOUS-OOD-V1",
+      "joint_event_index": 2
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A002-08-01",
+      "base_task_id": "E1B2-A002-004",
+      "mutated_task_id": "E2VAL-A002-08",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "formula": "Ca(OH)2"
+            },
+            "request_context": {
+              "requested_tool_id": "A002",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "formula": "CuSO4·5H2O"
+            },
+            "request_context": {
+              "requested_tool_id": "A002",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 2251713298
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A002-08-02",
+      "base_task_id": "E1B2-A002-004",
+      "mutated_task_id": "E2VAL-A002-08",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 1472795522
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A003-02-01",
+      "base_task_id": "E1B2-A003-005",
+      "mutated_task_id": "E2VAL-A003-02",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "parameters.formula": {
+          "before": "CaCO3",
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              "CaCO3",
+              "CuSO4"
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 156166998
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A003-03-01",
+      "base_task_id": "E1B2-A003-005",
+      "mutated_task_id": "E2VAL-A003-03",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 573030493
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A003-04-01",
+      "base_task_id": "E1B2-A003-005",
+      "mutated_task_id": "E2VAL-A003-04",
+      "mutation_type": "version_mismatch",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "request_context.requested_tool_version": {
+          "before": "1.0.0",
+          "after": "1.0.0-mismatch"
+        }
+      },
+      "expected_flag_effects": [
+        "version_mismatch"
+      ],
+      "random_seed": 380813614
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A003-05-01",
+      "base_task_id": "E1B2-A003-005",
+      "mutated_task_id": "E2VAL-A003-05",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "formula": "CaCO3"
+            },
+            "request_context": {
+              "requested_tool_id": "A003",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "formula": "NaCl"
+            },
+            "request_context": {
+              "requested_tool_id": "A003",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 4170063168
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A003-06-01",
+      "base_task_id": "E1B2-A003-005",
+      "mutated_task_id": "E2VAL-A003-06",
+      "mutation_type": "unsupported_system",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "formula": "CaCO3"
+            },
+            "request_context": {
+              "requested_tool_id": "A003",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "formula": "CaCO3"
+            },
+            "request_context": {
+              "requested_tool_id": "A003",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "isotope_abundance_weighting"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_unsupported_system"
+      ],
+      "random_seed": 1282315861
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A003-07-01",
+      "base_task_id": "E1B2-A003-005",
+      "mutated_task_id": "E2VAL-A003-07",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "composition_mode": "joint_observable_final_state",
+        "final_state_patch": {
+          "parameters": {
+            "formula": {
+              "status": "ambiguous",
+              "candidates": [
+                "NaCl",
+                "MgO"
+              ]
+            }
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 1071037793,
+      "joint_mutation_spec_id": "JOINT-A003-VALIDATION-AMBIGUOUS-OOD-V1",
+      "joint_event_index": 1
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A003-07-02",
+      "base_task_id": "E1B2-A003-005",
+      "mutated_task_id": "E2VAL-A003-07",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "composition_mode": "joint_observable_final_state",
+        "final_state_patch": {
+          "parameters": {
+            "formula": {
+              "status": "ambiguous",
+              "candidates": [
+                "NaCl",
+                "MgO"
+              ]
+            }
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 2429187518,
+      "joint_mutation_spec_id": "JOINT-A003-VALIDATION-AMBIGUOUS-OOD-V1",
+      "joint_event_index": 2
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A003-08-01",
+      "base_task_id": "E1B2-A003-005",
+      "mutated_task_id": "E2VAL-A003-08",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "formula": "CaCO3"
+            },
+            "request_context": {
+              "requested_tool_id": "A003",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "formula": "NaCl"
+            },
+            "request_context": {
+              "requested_tool_id": "A003",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "neutral_formula_grammar_v1"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 2561341639
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A003-08-02",
+      "base_task_id": "E1B2-A003-005",
+      "mutated_task_id": "E2VAL-A003-08",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 417502420
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A004-02-01",
+      "base_task_id": "E1B2-A004-005",
+      "mutated_task_id": "E2VAL-A004-02",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "parameters.compositions": {
+          "before": {
+            "A": 1.0,
+            "B": 1.0,
+            "C": 2.0
+          },
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "A": 1.0,
+                "B": 2.0
+              },
+              {
+                "A": 2.0,
+                "B": 1.0
+              }
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 2856366904
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A004-03-01",
+      "base_task_id": "E1B2-A004-005",
+      "mutated_task_id": "E2VAL-A004-03",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 3711020275
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A004-04-01",
+      "base_task_id": "E1B2-A004-005",
+      "mutated_task_id": "E2VAL-A004-04",
+      "mutation_type": "version_mismatch",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "request_context.requested_tool_version": {
+          "before": "1.0.0",
+          "after": "1.0.0-mismatch"
+        }
+      },
+      "expected_flag_effects": [
+        "version_mismatch"
+      ],
+      "random_seed": 1809206217
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A004-05-01",
+      "base_task_id": "E1B2-A004-005",
+      "mutated_task_id": "E2VAL-A004-05",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "compositions": {
+                "A": 1.0,
+                "B": 1.0,
+                "C": 2.0
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A004",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "nonnegative_weight_vectors"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "compositions": {
+                "A": 1.0,
+                "B": 1.0,
+                "C": 1.05,
+                "Fe": -0.05
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A004",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "nonnegative_weight_vectors"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 2865964877
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A004-06-01",
+      "base_task_id": "E1B2-A004-005",
+      "mutated_task_id": "E2VAL-A004-06",
+      "mutation_type": "unsupported_system",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "compositions": {
+                "A": 1.0,
+                "B": 1.0,
+                "C": 2.0
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A004",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "nonnegative_weight_vectors"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "compositions": {
+                "A": 1.0,
+                "B": 1.0,
+                "C": 2.0
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A004",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "signed_vector_normalization"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_unsupported_system"
+      ],
+      "random_seed": 1483889461
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A004-07-01",
+      "base_task_id": "E1B2-A004-005",
+      "mutated_task_id": "E2VAL-A004-07",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "composition_mode": "joint_observable_final_state",
+        "final_state_patch": {
+          "parameters": {
+            "compositions": {
+              "status": "ambiguous",
+              "candidates": [
+                {
+                  "Fe": -0.05,
+                  "C": 1.05
+                },
+                {
+                  "Fe": 1.1,
+                  "C": -0.1
+                }
+              ]
+            }
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 2669545743,
+      "joint_mutation_spec_id": "JOINT-A004-VALIDATION-AMBIGUOUS-OOD-V1",
+      "joint_event_index": 1
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A004-07-02",
+      "base_task_id": "E1B2-A004-005",
+      "mutated_task_id": "E2VAL-A004-07",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "composition_mode": "joint_observable_final_state",
+        "final_state_patch": {
+          "parameters": {
+            "compositions": {
+              "status": "ambiguous",
+              "candidates": [
+                {
+                  "Fe": -0.05,
+                  "C": 1.05
+                },
+                {
+                  "Fe": 1.1,
+                  "C": -0.1
+                }
+              ]
+            }
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 3775298413,
+      "joint_mutation_spec_id": "JOINT-A004-VALIDATION-AMBIGUOUS-OOD-V1",
+      "joint_event_index": 2
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A004-08-01",
+      "base_task_id": "E1B2-A004-005",
+      "mutated_task_id": "E2VAL-A004-08",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "compositions": {
+                "A": 1.0,
+                "B": 1.0,
+                "C": 2.0
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A004",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "nonnegative_weight_vectors"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "compositions": {
+                "A": 1.0,
+                "B": 1.0,
+                "C": 1.05,
+                "Fe": -0.05
+              }
+            },
+            "request_context": {
+              "requested_tool_id": "A004",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "nonnegative_weight_vectors"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 1314980253
+    },
+    {
+      "mutation_id": "MUT-E2VAL-A004-08-02",
+      "base_task_id": "E1B2-A004-005",
+      "mutated_task_id": "E2VAL-A004-08",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 3350709873
+    },
+    {
+      "mutation_id": "MUT-E2VAL-B019-02-01",
+      "base_task_id": "E1B2-B019-007",
+      "mutated_task_id": "E2VAL-B019-02",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "parameters.overall_composition": {
+          "before": 0.6,
+          "after": {
+            "status": "ambiguous",
+            "candidates": [
+              0.45,
+              0.65
+            ]
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 422050999
+    },
+    {
+      "mutation_id": "MUT-E2VAL-B019-03-01",
+      "base_task_id": "E1B2-B019-007",
+      "mutated_task_id": "E2VAL-B019-03",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 2314855396
+    },
+    {
+      "mutation_id": "MUT-E2VAL-B019-04-01",
+      "base_task_id": "E1B2-B019-007",
+      "mutated_task_id": "E2VAL-B019-04",
+      "mutation_type": "version_mismatch",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "request_context.requested_tool_version": {
+          "before": "1.0.0",
+          "after": "1.0.0-mismatch"
+        }
+      },
+      "expected_flag_effects": [
+        "version_mismatch"
+      ],
+      "random_seed": 3286858015
+    },
+    {
+      "mutation_id": "MUT-E2VAL-B019-05-01",
+      "base_task_id": "E1B2-B019-007",
+      "mutated_task_id": "E2VAL-B019-05",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "overall_composition": 0.6,
+              "phase1_composition": 0.85,
+              "phase2_composition": 0.35,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_two_phase_tie_line"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "overall_composition": -0.1,
+              "phase1_composition": 0.15,
+              "phase2_composition": 0.75,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_two_phase_tie_line"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 847221655
+    },
+    {
+      "mutation_id": "MUT-E2VAL-B019-06-01",
+      "base_task_id": "E1B2-B019-007",
+      "mutated_task_id": "E2VAL-B019-06",
+      "mutation_type": "unsupported_system",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "overall_composition": 0.6,
+              "phase1_composition": 0.85,
+              "phase2_composition": 0.35,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_two_phase_tie_line"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "overall_composition": 0.6,
+              "phase1_composition": 0.85,
+              "phase2_composition": 0.35,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_three_phase_tie_triangle"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_unsupported_system"
+      ],
+      "random_seed": 2921261887
+    },
+    {
+      "mutation_id": "MUT-E2VAL-B019-07-01",
+      "base_task_id": "E1B2-B019-007",
+      "mutated_task_id": "E2VAL-B019-07",
+      "mutation_type": "make_parameter_ambiguous",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "composition_mode": "joint_observable_final_state",
+        "final_state_patch": {
+          "parameters": {
+            "overall_composition": {
+              "status": "ambiguous",
+              "candidates": [
+                -0.25,
+                1.25
+              ]
+            },
+            "phase1_composition": 0.15,
+            "phase2_composition": 0.75,
+            "composition_basis": "fraction"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "ambiguous_parameter"
+      ],
+      "random_seed": 1305988435,
+      "joint_mutation_spec_id": "JOINT-B019-VALIDATION-AMBIGUOUS-OOD-V1",
+      "joint_event_index": 1
+    },
+    {
+      "mutation_id": "MUT-E2VAL-B019-07-02",
+      "base_task_id": "E1B2-B019-007",
+      "mutated_task_id": "E2VAL-B019-07",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "composition_mode": "joint_observable_final_state",
+        "final_state_patch": {
+          "parameters": {
+            "overall_composition": {
+              "status": "ambiguous",
+              "candidates": [
+                -0.25,
+                1.25
+              ]
+            },
+            "phase1_composition": 0.15,
+            "phase2_composition": 0.75,
+            "composition_basis": "fraction"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 795445049,
+      "joint_mutation_spec_id": "JOINT-B019-VALIDATION-AMBIGUOUS-OOD-V1",
+      "joint_event_index": 2
+    },
+    {
+      "mutation_id": "MUT-E2VAL-B019-08-01",
+      "base_task_id": "E1B2-B019-007",
+      "mutated_task_id": "E2VAL-B019-08",
+      "mutation_type": "contract_out_of_domain",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "state_patch": {
+          "before": {
+            "parameters": {
+              "overall_composition": 0.6,
+              "phase1_composition": 0.85,
+              "phase2_composition": 0.35,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_two_phase_tie_line"
+            },
+            "service_status": "available"
+          },
+          "after": {
+            "parameters": {
+              "overall_composition": -0.1,
+              "phase1_composition": 0.15,
+              "phase2_composition": 0.75,
+              "composition_basis": "fraction"
+            },
+            "request_context": {
+              "requested_tool_id": "B019",
+              "requested_tool_version": "1.0.0",
+              "requested_system": "binary_two_phase_tie_line"
+            },
+            "service_status": "available"
+          }
+        }
+      },
+      "expected_flag_effects": [
+        "contract_defined_out_of_domain"
+      ],
+      "random_seed": 686141255
+    },
+    {
+      "mutation_id": "MUT-E2VAL-B019-08-02",
+      "base_task_id": "E1B2-B019-007",
+      "mutated_task_id": "E2VAL-B019-08",
+      "mutation_type": "unavailable_tool",
+      "mutation_rule_version": "e2-independent-validation-mutation-v1.0.0-candidate",
+      "changed_fields": {
+        "service_status": {
+          "before": "available",
+          "after": "unavailable"
+        }
+      },
+      "expected_flag_effects": [
+        "unavailable"
+      ],
+      "random_seed": 462645064
+    }
+  ],
+  "core_frozen": false
+}

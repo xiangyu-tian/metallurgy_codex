@@ -1,0 +1,620 @@
+{
+  "schema_version": "1.0-candidate",
+  "audit_id": "E2-INDEPENDENT-VALIDATION-AUDIT-V1-20260731",
+  "dataset_id": "E2-INDEPENDENT-SEMANTIC-VALIDATION-V1-CANDIDATE-20260731",
+  "status": "candidate_passed",
+  "summary": {
+    "task_count": 40,
+    "mutation_event_count": 45,
+    "tool_count": 5,
+    "semantic_positive_count": 20,
+    "semantic_negative_count": 20,
+    "multi_label_count": 10,
+    "action_counts": {
+      "call": 5,
+      "clarify": 10,
+      "refuse": 25
+    },
+    "development_state_overlap_count": 0,
+    "observability_error_count": 0
+  },
+  "checks": [
+    {
+      "check_id": "CF04-VAL-UNIQUE-IDS",
+      "passed": true,
+      "evidence": {
+        "task_count": 40,
+        "unique_task_count": 40,
+        "event_count": 45,
+        "unique_event_count": 45
+      }
+    },
+    {
+      "check_id": "CF04-VAL-TASK-ID-DISJOINT",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "check_id": "CF04-VAL-EVENT-ID-DISJOINT",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "check_id": "CF04-VAL-BASE-TASK-DISJOINT",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "check_id": "CF04-VAL-BASE-GROUP-DISJOINT",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "check_id": "CF04-VAL-STATE-DISJOINT",
+      "passed": true,
+      "evidence": {
+        "development_overlap": [],
+        "validation_state_count": 40,
+        "unique_validation_state_count": 40
+      }
+    },
+    {
+      "check_id": "CF04-VAL-BOUNDARY-SPEC-DISJOINT",
+      "passed": true,
+      "evidence": [
+        "A001",
+        "A002",
+        "A003",
+        "A004",
+        "B019"
+      ]
+    },
+    {
+      "check_id": "CF04-VAL-LABEL-OBSERVABILITY",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "check_id": "CF04-VAL-ACTION-RECOMPUTATION",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "check_id": "CF04-VAL-SEMANTIC-BALANCE",
+      "passed": true,
+      "evidence": {
+        "semantic_positive_count": 20,
+        "semantic_negative_count": 20
+      }
+    },
+    {
+      "check_id": "CF04-VAL-FIVE-TOOL-COVERAGE",
+      "passed": true,
+      "evidence": [
+        "A001",
+        "A002",
+        "A003",
+        "A004",
+        "B019"
+      ]
+    },
+    {
+      "check_id": "CF04-VAL-NOT-EXECUTED",
+      "passed": true,
+      "evidence": "model_execution_count=0"
+    }
+  ],
+  "task_audit": [
+    {
+      "task_id": "E2VAL-A001-01",
+      "structured_state_sha256": "ebe55c4f6e7a521dc573e0044c0ab6caddb49c478760e0ef43815a51c54075cf",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A001-02",
+      "structured_state_sha256": "4accde15d4082a871d4d890da027b06320d417968a7eaf6792f27721183d1b34",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A001-03",
+      "structured_state_sha256": "354029f5c933f49bb0f3fc855f5b65b31231c7bb96e126cad7c82a6c0a3440d0",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A001-04",
+      "structured_state_sha256": "43d7b29e7f237a53fb9071440b45e0d4272670011d55460d1a3cd414a9a23a7c",
+      "expected_structural_flags": [
+        "version_mismatch"
+      ],
+      "observed_structural_flags": [
+        "version_mismatch"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A001-05",
+      "structured_state_sha256": "b40abba657387a9c8de7cc732401b32fafc381859506be9497029f9d9c8de985",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A001-06",
+      "structured_state_sha256": "280cdb850c0d54b8cfd934b653ce0fbc618a56266b182c80493abfca8d70bdb2",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A001-07",
+      "structured_state_sha256": "b8eedbe2816ec63d5a69711010e5a98f5bdede96ff8df2eabef0f7614158b1de",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A001-08",
+      "structured_state_sha256": "0a9f87e59615df60d5f6587f4cee09ab2267c64ae94d4e0e1f34d0bfae15de94",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A002-01",
+      "structured_state_sha256": "590f997008632c5e8ea3a1a561db3bc92b15d1ece04a03407bde5cf68ac5c20f",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A002-02",
+      "structured_state_sha256": "61de8b984888c5a0a747562b007cfd0afdf632e78681d30b6b0e66b251e7eebf",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A002-03",
+      "structured_state_sha256": "42937b93fe7db4e8af4f1ef68b5386f7416d6f9577267883dbb9f807a8762e3c",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A002-04",
+      "structured_state_sha256": "cc14e3603e246af9eae5dd1539838ffc8652dd53fa5a75226ce32c6df56b9676",
+      "expected_structural_flags": [
+        "version_mismatch"
+      ],
+      "observed_structural_flags": [
+        "version_mismatch"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A002-05",
+      "structured_state_sha256": "53fdde1265346b6dba4fc34f8aa395d332268b58a1510efedbbb25c8aa366ccb",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A002-06",
+      "structured_state_sha256": "73ef086fc1ebc7334570fd359e609e094f5b2ef3fc51aad8b9be92e1f27169ae",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A002-07",
+      "structured_state_sha256": "4bac8aaba1d2bea0bc80706f0479f75a13b1fcab8a730f8cd7fbaf6eb0cf7983",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A002-08",
+      "structured_state_sha256": "7cfad014bf2c5a0f01961d083f55b6fa6f07abe528e46fabad2e80929b43a284",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A003-01",
+      "structured_state_sha256": "1ee279486eb5717a47029ac527fa996f0acece3b8765d837ddfa126d69562d1b",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A003-02",
+      "structured_state_sha256": "e5dd50ad7263371358d2bc71e77efe0c7ca5a48f234aa7ebb80efd61a0ec72ce",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A003-03",
+      "structured_state_sha256": "1a5fd4a3c7a77eb637d0a10f9267de95d495e13d68fe4919d51a7e8c62cbe1bd",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A003-04",
+      "structured_state_sha256": "9374c8519bae1eb5aaa287caca02978423979940d0fa2b2eb54aa795d5cf4512",
+      "expected_structural_flags": [
+        "version_mismatch"
+      ],
+      "observed_structural_flags": [
+        "version_mismatch"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A003-05",
+      "structured_state_sha256": "ae122acfcff92ac21416b3ef49a288f43613153a0f2bd311d0951a36461a87d1",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A003-06",
+      "structured_state_sha256": "914ad4eabe714225c02de5ac92a7696ca1bcf6da628a31c254386f4429366407",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A003-07",
+      "structured_state_sha256": "b80f01683d9e5e04f8e5c450562bc025f8748e96d5186f2194c4748fe1bc6009",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A003-08",
+      "structured_state_sha256": "e0b96ff10f4f81b1d135a494368ce0d21168bbe2fe047ebf400a9d782523ee82",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A004-01",
+      "structured_state_sha256": "b1c56ea5302f5b006c9977565b2b20ca086f23d264801d7f7529f46f27388a2a",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A004-02",
+      "structured_state_sha256": "f1e9f5e6bdb789c4837eed7df82060d6390b7ef758161c09873361194d0ecae1",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A004-03",
+      "structured_state_sha256": "84301fe6b4e9ac4f232193076f14dcb36f35c2790a445d29b1ffe355830ae0c8",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A004-04",
+      "structured_state_sha256": "11d9d8a269643765f8c5d8239213fd969d0856ee0c06f7f1a2de4f36646b8703",
+      "expected_structural_flags": [
+        "version_mismatch"
+      ],
+      "observed_structural_flags": [
+        "version_mismatch"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-A004-05",
+      "structured_state_sha256": "cd7efe6f8636b8884235bfdeda6df4437167df05916f2bf6a58f6df0145224c9",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A004-06",
+      "structured_state_sha256": "3188f00bdb7ad1ac476975746b390db968c45c96f8313d7e5a8e816636082f40",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A004-07",
+      "structured_state_sha256": "92bb8e0c9ac2823172b0c9ab4ca134f18112934888aa85db54eff3dd2b19d6fb",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    },
+    {
+      "task_id": "E2VAL-A004-08",
+      "structured_state_sha256": "7dc2069d24f436a6de2a12c83eac4f4fb7e659758aac1de78eb395621ce9e9be",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    },
+    {
+      "task_id": "E2VAL-B019-01",
+      "structured_state_sha256": "5dc8c02451ed3d5f6fbdfee54fb4a5603ca028b8179569d57c4cd43591924996",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-B019-02",
+      "structured_state_sha256": "8d9dbeaca6fa577e14173cb937b76ac404a52485c44b4237be76f8d3cc03a27a",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-B019-03",
+      "structured_state_sha256": "30fdb53c6a6802b0f42209d1fddfaf86fc19ba65775fbacbf2dc7d784d626d0e",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-B019-04",
+      "structured_state_sha256": "79c719c046d576b4d645c7b5d4efbb5d1104b709e33ca6c0782f357945618435",
+      "expected_structural_flags": [
+        "version_mismatch"
+      ],
+      "observed_structural_flags": [
+        "version_mismatch"
+      ],
+      "expected_semantic_flags": [],
+      "reference_semantic_flags": []
+    },
+    {
+      "task_id": "E2VAL-B019-05",
+      "structured_state_sha256": "a35545d58c1d28998b509b97e90d0fbcac41092d9d00c64376869ba53f9abc4b",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    },
+    {
+      "task_id": "E2VAL-B019-06",
+      "structured_state_sha256": "10e35e38aa913b1c120b966c3b11ceef1b745a96fbbdc29c28152df4985ac43c",
+      "expected_structural_flags": [],
+      "observed_structural_flags": [],
+      "expected_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_unsupported_system"
+      ]
+    },
+    {
+      "task_id": "E2VAL-B019-07",
+      "structured_state_sha256": "7c304d3c3a7d49848808f4758fe0b3924e449ce440ae2cdbae15d15495a13f7f",
+      "expected_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "observed_structural_flags": [
+        "ambiguous_parameter"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    },
+    {
+      "task_id": "E2VAL-B019-08",
+      "structured_state_sha256": "5989488074a0525f2ed377cc2afa7e5f7954b9d416f81e95db96c87cd277ed46",
+      "expected_structural_flags": [
+        "unavailable"
+      ],
+      "observed_structural_flags": [
+        "unavailable"
+      ],
+      "expected_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "reference_semantic_flags": [
+        "contract_defined_out_of_domain"
+      ]
+    }
+  ],
+  "limitations": [
+    "contracts and tool identities remain shared with development",
+    "this tests within-tool case generalization, not unseen-tool generalization",
+    "temperature, pressure and model-card OOD are not covered",
+    "no LLM has executed this locked candidate"
+  ],
+  "external_api_calls": 0,
+  "external_api_execution_authorized": false,
+  "model_performance_claim_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}
