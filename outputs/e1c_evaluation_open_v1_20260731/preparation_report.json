@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "E1C-EVALUATION-OPEN-V1-20260731",
+  "status": "passed",
+  "task_count": 36,
+  "condition_count": 6,
+  "scheduled_cells": 216,
+  "task_count_by_tool": {
+    "A001": 6,
+    "A002": 6,
+    "A003": 12,
+    "A004": 8,
+    "B019": 4
+  },
+  "policy_action_task_counts": {
+    "ANSWER_WITHOUT_TOOL": 26,
+    "CALL_VERIFIED_TOOL": 10
+  },
+  "development_evidence_verified": true,
+  "artifact_hashes_verified": true,
+  "evaluation_split_opened": true,
+  "external_api_execution_authorized": false,
+  "api_model_runs_performed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

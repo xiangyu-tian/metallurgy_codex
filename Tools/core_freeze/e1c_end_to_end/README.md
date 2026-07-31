@@ -64,3 +64,47 @@ boundary_guided_fc
 ```
 
 只有开发运行的接口、解析和错误归因通过后，才能讨论解封36题后置分区。开发结果不得用于修改E1b策略v1。
+
+## 准备后置评测开启包
+
+完整开发运行通过后，使用以下命令在本地提取并冻结36道后置任务：
+
+```powershell
+& '.\.venv\Scripts\python.exe' `
+  'Tools\core_freeze\e1c_end_to_end\prepare_e1c_evaluation.py'
+```
+
+开启包：
+
+```text
+outputs/e1c_evaluation_open_v1_20260731/
+```
+
+准备器会验证完整开发运行、开发产物manifest、协议、提示词、策略和源任务集哈希。开启包固定：
+
+- 36道`end_to_end_evaluation`任务；
+- 6个条件和216个计划单元；
+- 评测运行配置；
+- 评测模式运行器和评分器快照；
+- 开启记录；
+- 外部执行授权请求；
+- 完整产物manifest。
+
+生成开启包只表示本地评测快照已经打开，不代表允许向外部API发送数据。默认状态必须保持：
+
+```text
+external_api_execution_authorized = false
+api_model_runs_performed = false
+```
+
+## 执行后置评测
+
+后置评测必须先取得针对`execution_authorization_request.json`所列精确载荷的用户授权，再生成独立的`execution_authorization.json`。运行器会校验：
+
+- 题目快照SHA-256；
+- 提示词SHA-256；
+- 运行配置SHA-256；
+- 运行器SHA-256；
+- 数据集、模型、端点和任务数。
+
+缺少授权、授权决策不正确或任一哈希不一致时，运行器必须拒绝执行。正式评测禁止使用`--max-tasks`、`--conditions`或不同于冻结配置的重复次数。

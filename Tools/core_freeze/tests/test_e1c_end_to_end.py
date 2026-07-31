@@ -20,10 +20,14 @@ from core_freeze.e1c_end_to_end.generate_e1c_tasks import (  # noqa: E402
 from core_freeze.e1c_end_to_end.prepare_e1c_development import (  # noqa: E402
     prepare_development,
 )
+from core_freeze.e1c_end_to_end.prepare_e1c_evaluation import (  # noqa: E402
+    prepare_evaluation,
+)
 from core_freeze.e1c_end_to_end.run_e1c import (  # noqa: E402
     CONDITIONS,
     TOOL_IDS,
     run_cell,
+    validate_execution_authorization_hashes,
     validate_run_scope,
 )
 from core_freeze.e1b_v2.apply_candidate_gate_policy import (  # noqa: E402
@@ -92,6 +96,9 @@ class E1cEndToEndTests(unittest.TestCase):
         cls.prompts = load_json(cls.e1c_dir / "prompts_v1.json")
         cls.run_config = load_json(
             cls.e1c_dir / "run_config_development_v1.json"
+        )
+        cls.evaluation_config = load_json(
+            cls.e1c_dir / "run_config_evaluation_v1.json"
         )
         cls.development_doc = load_json(
             PROJECT_ROOT
@@ -195,6 +202,130 @@ class E1cEndToEndTests(unittest.TestCase):
                     )
                 )
             self.assertEqual(reports[0], reports[1])
+
+    def _prepare_evaluation(self, output_dir):
+        return prepare_evaluation(
+            source_tasks_path=self.output_dir / "e1c_tasks_v1.json",
+            protocol_path=self.e1c_dir / "protocol_v1.md",
+            prompts_path=self.e1c_dir / "prompts_v1.json",
+            config_path=self.e1c_dir / "run_config_evaluation_v1.json",
+            policy_path=self.e1b_dir / "candidate_gate_policy_v1.json",
+            development_report_path=(
+                PROJECT_ROOT
+                / "outputs"
+                / "e1c_development_full_r1_20260731"
+                / "run_report.json"
+            ),
+            development_manifest_path=(
+                PROJECT_ROOT
+                / "outputs"
+                / "e1c_development_full_r1_20260731"
+                / "artifact_manifest.json"
+            ),
+            output_dir=Path(output_dir),
+        )
+
+    def test_prepare_evaluation_opens_only_frozen_evaluation_rows(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            package_dir = Path(temp_dir) / "package"
+            report = self._prepare_evaluation(package_dir)
+            task_path = package_dir / "e1c_evaluation_tasks_v1.json"
+            tasks = load_json(task_path)
+            request = load_json(
+                package_dir / "execution_authorization_request.json"
+            )
+            self.assertEqual(report["status"], "passed")
+            self.assertEqual(tasks["task_count"], 36)
+            self.assertEqual(
+                {task["split"] for task in tasks["tasks"]},
+                {"end_to_end_evaluation"},
+            )
+            self.assertTrue(tasks["evaluation_split_opened"])
+            self.assertFalse(tasks["external_api_execution_authorized"])
+            self.assertFalse(tasks["api_model_runs_performed"])
+            self.assertEqual(
+                Counter(
+                    task["frozen_policy_decision"]["action"]
+                    for task in tasks["tasks"]
+                ),
+                Counter(
+                    {
+                        "ANSWER_WITHOUT_TOOL": 26,
+                        "CALL_VERIFIED_TOOL": 10,
+                    }
+                ),
+            )
+            self.assertEqual(
+                request["status"],
+                "pending_explicit_user_authorization",
+            )
+            self.assertFalse(
+                request["external_api_execution_authorized"]
+            )
+
+    def test_evaluation_scope_requires_bound_execution_authorization(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            package_dir = Path(temp_dir) / "package"
+            self._prepare_evaluation(package_dir)
+            task_path = package_dir / "e1c_evaluation_tasks_v1.json"
+            tasks = load_json(task_path)
+            request = load_json(
+                package_dir / "execution_authorization_request.json"
+            )
+            with self.assertRaisesRegex(
+                ValueError,
+                "execution authorization is required",
+            ):
+                validate_run_scope(
+                    tasks,
+                    self.prompts,
+                    self.evaluation_config,
+                )
+            authorization = {
+                **request,
+                "authorization_id": "TEST-E1C-EVALUATION-AUTH",
+                "decision": "authorized_to_execute_evaluation",
+            }
+            validate_run_scope(
+                tasks,
+                self.prompts,
+                self.evaluation_config,
+                authorization,
+            )
+            validate_execution_authorization_hashes(
+                execution_authorization=authorization,
+                tasks_path=task_path,
+                prompts_path=self.e1c_dir / "prompts_v1.json",
+                config_path=(
+                    self.e1c_dir / "run_config_evaluation_v1.json"
+                ),
+            )
+            tampered = copy.deepcopy(authorization)
+            tampered["runner_sha256"] = "0" * 64
+            with self.assertRaisesRegex(
+                ValueError,
+                "runner_sha256 mismatch",
+            ):
+                validate_execution_authorization_hashes(
+                    execution_authorization=tampered,
+                    tasks_path=task_path,
+                    prompts_path=self.e1c_dir / "prompts_v1.json",
+                    config_path=(
+                        self.e1c_dir / "run_config_evaluation_v1.json"
+                    ),
+                )
+
+    def test_development_scope_rejects_evaluation_authorization(self):
+        with self.assertRaisesRegex(
+            ValueError,
+            "must not use evaluation authorization",
+        ):
+            validate_run_scope(
+                self.development_doc,
+                self.prompts,
+                self.run_config,
+                {"decision": "authorized_to_execute_evaluation"},
+            )
 
     def _strict_task(self):
         return next(
