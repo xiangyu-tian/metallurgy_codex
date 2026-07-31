@@ -362,7 +362,7 @@ independent_semantic_validation_v1:
   confirmatory_inference_allowed: false
 hybrid_semantic_development_opening_v1:
   candidate_id: E2-HYBRID-SEMANTIC-DEV-OPENING-V1-20260731
-  status: prepared_not_authorized
+  status: superseded_before_execution
   source_dataset: E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731
   task_count: 55
   model_output_fields:
@@ -371,6 +371,22 @@ hybrid_semantic_development_opening_v1:
   gold_labels_sent: false
   mutation_history_sent: false
   validation_dataset_sent: false
+  external_api_calls: 0
+  external_api_execution_authorized: false
+  confirmatory_inference_allowed: false
+hybrid_semantic_development_opening_v1_1:
+  candidate_id: E2-HYBRID-SEMANTIC-DEV-OPENING-V1.1-20260731
+  status: prepared_not_authorized
+  source_dataset: E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731
+  task_count: 55
+  advancement_gate_id: E2-HYBRID-SEMANTIC-DEVELOPMENT-GATE-V1
+  advancement_required_check_count: 11
+  advancement_partial_pass_allowed: false
+  merged_flags_exact_minimum: 52
+  action_correct_minimum: 53
+  semantic_macro_f1_minimum: 0.9
+  premature_call_maximum: 1
+  validation_dataset_access_count: 0
   external_api_calls: 0
   external_api_execution_authorized: false
   confirmatory_inference_allowed: false

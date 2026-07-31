@@ -9,12 +9,17 @@ from Tools.core_freeze.e2_contract_boundaries.build_e2_hybrid_semantic_opening i
     build_package,
     validate_opening,
 )
+from Tools.core_freeze.e2_contract_boundaries.analyze_e2_hybrid_semantic_development import (
+    compute_gate_metrics,
+    evaluate_gate,
+)
 from Tools.core_freeze.e2_contract_boundaries.run_e2_development import (
     file_hash,
     load_json,
 )
 from Tools.core_freeze.e2_contract_boundaries.run_e2_hybrid_semantic_development import (
     BASE_POLICY_PATH,
+    ADVANCEMENT_GATE_PATH,
     CONFIG_PATH,
     CONTRACTS_PATH,
     HYBRID_POLICY_PATH,
@@ -33,7 +38,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 OUTPUT_DIR = (
     PROJECT_ROOT
     / "outputs"
-    / "v11_cf04_e2_hybrid_semantic_dev_opening_v1_20260731"
+    / "v11_cf04_e2_hybrid_semantic_dev_opening_v1_1_20260731"
 )
 
 
@@ -85,6 +90,10 @@ class V11Cf04E2HybridSemanticOpeningTests(unittest.TestCase):
             values["authorization_request"][
                 "external_api_execution_authorized"
             ]
+        )
+        self.assertEqual(
+            values["config"]["advancement_gate_sha256"],
+            file_hash(ADVANCEMENT_GATE_PATH),
         )
 
     def test_payload_audit_excludes_gold_and_identifiers(self):
@@ -159,6 +168,10 @@ class V11Cf04E2HybridSemanticOpeningTests(unittest.TestCase):
         self.assertEqual(summary["semantic_flags_exact_accuracy"], 1.0)
         self.assertEqual(summary["merged_flags_exact_accuracy"], 1.0)
         self.assertEqual(summary["action_accuracy"], 1.0)
+        self.assertEqual(summary["structural_flags_exact_count"], 55)
+        self.assertEqual(summary["merged_flags_exact_count"], 55)
+        self.assertEqual(summary["action_correct_count"], 55)
+        self.assertEqual(summary["premature_call_count"], 0)
 
     def test_execution_refuses_before_adapter_use_without_authorization(self):
         target = (
@@ -184,6 +197,10 @@ class V11Cf04E2HybridSemanticOpeningTests(unittest.TestCase):
         self.assertFalse(
             report["model_payload_audit"]["validation_dataset_sent"]
         )
+        self.assertEqual(
+            report["advancement_gate"]["required_check_count"],
+            11,
+        )
         for artifact in manifest["artifacts"]:
             self.assertEqual(
                 file_hash(OUTPUT_DIR / artifact["filename"]),
@@ -200,6 +217,8 @@ class V11Cf04E2HybridSemanticOpeningTests(unittest.TestCase):
     def test_opening_does_not_snapshot_validation_dataset(self):
         names = {path.name for path in OUTPUT_DIR.iterdir()}
         self.assertNotIn("e2_validation_tasks_v1.json", names)
+        self.assertIn("advancement_gate_snapshot.json", names)
+        self.assertIn("analyzer_snapshot.py", names)
         report = load_json(OUTPUT_DIR / "candidate_report.json")
         self.assertIn(
             "40-task independent E2 validation candidate",
@@ -213,6 +232,75 @@ class V11Cf04E2HybridSemanticOpeningTests(unittest.TestCase):
             self.assertEqual(report["status"], "prepared_not_authorized")
             with self.assertRaises(FileExistsError):
                 build_package(output)
+
+    def test_perfect_offline_records_pass_frozen_advancement_gate(self):
+        (
+            tasks,
+            contracts,
+            prompts,
+            schema,
+            base_policy,
+            hybrid_policy,
+            config,
+        ) = self._inputs()
+        adapter = FakeAdapter(
+            [
+                {
+                    "semantic_flags": expected_semantic_flags(
+                        task,
+                        hybrid_policy,
+                    )
+                }
+                for task in tasks["tasks"]
+            ]
+        )
+        records, _summary = execute_tasks(
+            adapter,
+            tasks_doc=tasks,
+            contracts_doc=contracts,
+            prompts=prompts,
+            output_schema=schema,
+            base_policy=base_policy,
+            hybrid_policy=hybrid_policy,
+            config=config,
+        )
+        metrics = compute_gate_metrics(
+            records,
+            {"validation_dataset_access": "forbidden"},
+        )
+        evaluation = evaluate_gate(
+            metrics,
+            load_json(ADVANCEMENT_GATE_PATH),
+        )
+        self.assertTrue(evaluation["all_required_checks_passed"])
+        self.assertEqual(
+            evaluation["decision"],
+            "advance_to_validation_preparation",
+        )
+        self.assertFalse(evaluation["validation_dataset_may_be_opened"])
+
+    def test_failed_gate_requires_development_revision(self):
+        gate = load_json(ADVANCEMENT_GATE_PATH)
+        metrics = {
+            rule["metric"]: rule["threshold"]
+            for rule in gate["required_checks"]
+        }
+        metrics["semantic_supported_flag_macro_f1"] = 0.5
+        evaluation = evaluate_gate(metrics, gate)
+        self.assertFalse(evaluation["all_required_checks_passed"])
+        self.assertEqual(
+            evaluation["decision"],
+            "revise_on_development_only",
+        )
+        self.assertFalse(evaluation["validation_dataset_may_be_opened"])
+
+    def test_missing_gate_metric_fails_closed(self):
+        evaluation = evaluate_gate(
+            {},
+            load_json(ADVANCEMENT_GATE_PATH),
+        )
+        self.assertFalse(evaluation["all_required_checks_passed"])
+        self.assertEqual(evaluation["passed_check_count"], 0)
 
 
 if __name__ == "__main__":

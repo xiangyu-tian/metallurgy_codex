@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0-candidate",
+  "candidate_id": "E2-HYBRID-SEMANTIC-DEV-OPENING-V1.1-20260731",
+  "source_bindings": {
+    "tasks_sha256": "935ad56c507eded50e824fdfd5bd1e672bbe74e67a52359de5b4be4eba2daebb",
+    "contracts_sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec",
+    "base_policy_sha256": "a16c7c359e7ade35965edeb1fe036cf11cb91c01f1ca1b43d7b04b6b0544e519",
+    "hybrid_policy_sha256": "93cf8f82e2db750cabf87aa14f98759b0818ab5652ec7c8a3f63ce7e4e03bb65",
+    "advancement_gate_sha256": "8dfc9601dd0cb816aaa2b400690bea6182934ae35ed39b74ccffa760f438165d",
+    "prompt_sha256": "4488c137c40d67c7d92fe73cea536d41166ded26d317a3c4dc66803661c78b2e",
+    "output_schema_sha256": "9d20ae571abc0a7ccb98b64c217b6fe6304028b2159c1d7ed10e50a92186c5cb",
+    "run_config_sha256": "096b229d8e7259edfa167e5a1b27dfeb5e85ca0e74c32b18424ae0668b06a91b",
+    "authorization_request_sha256": "fdcf669ed644506d76b81e4628fee83a92471bcab44bbb564e78086f18803210",
+    "runner_sha256": "f3304bf867a507ab7cc709623a7c651ad6c628dbe34a4fba33c1f47d686f326a",
+    "analyzer_sha256": "0139228deed8c9d74ce0fed700801cdb01a50fd0595ada5f9e0182b3b33d3719",
+    "builder_sha256": "cbe47796ac0a186efb84c36fd459a849dddb7171cd52a52f00950856a694726f"
+  },
+  "artifacts": [
+    {
+      "filename": "task_source_snapshot.json",
+      "sha256": "935ad56c507eded50e824fdfd5bd1e672bbe74e67a52359de5b4be4eba2daebb"
+    },
+    {
+      "filename": "contracts_snapshot.json",
+      "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"
+    },
+    {
+      "filename": "base_policy_snapshot.json",
+      "sha256": "a16c7c359e7ade35965edeb1fe036cf11cb91c01f1ca1b43d7b04b6b0544e519"
+    },
+    {
+      "filename": "hybrid_policy_snapshot.json",
+      "sha256": "93cf8f82e2db750cabf87aa14f98759b0818ab5652ec7c8a3f63ce7e4e03bb65"
+    },
+    {
+      "filename": "advancement_gate_snapshot.json",
+      "sha256": "8dfc9601dd0cb816aaa2b400690bea6182934ae35ed39b74ccffa760f438165d"
+    },
+    {
+      "filename": "prompt_snapshot.json",
+      "sha256": "4488c137c40d67c7d92fe73cea536d41166ded26d317a3c4dc66803661c78b2e"
+    },
+    {
+      "filename": "output_schema_snapshot.json",
+      "sha256": "9d20ae571abc0a7ccb98b64c217b6fe6304028b2159c1d7ed10e50a92186c5cb"
+    },
+    {
+      "filename": "run_config_snapshot.json",
+      "sha256": "096b229d8e7259edfa167e5a1b27dfeb5e85ca0e74c32b18424ae0668b06a91b"
+    },
+    {
+      "filename": "execution_authorization_request_snapshot.json",
+      "sha256": "fdcf669ed644506d76b81e4628fee83a92471bcab44bbb564e78086f18803210"
+    },
+    {
+      "filename": "runner_snapshot.py",
+      "sha256": "f3304bf867a507ab7cc709623a7c651ad6c628dbe34a4fba33c1f47d686f326a"
+    },
+    {
+      "filename": "analyzer_snapshot.py",
+      "sha256": "0139228deed8c9d74ce0fed700801cdb01a50fd0595ada5f9e0182b3b33d3719"
+    },
+    {
+      "filename": "model_payload_audit.json",
+      "sha256": "2e014e4c9d476091df65f78911c1e4ca11446fa4bf62d90d6c18752aa462d02b"
+    },
+    {
+      "filename": "candidate_report.json",
+      "sha256": "156bc4983464785b0ec6888e32e50bd7680faac7c6bdefca23aa0be0091d91c0"
+    }
+  ],
+  "execution_status": "prepared_not_authorized",
+  "external_api_calls": 0,
+  "external_api_execution_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

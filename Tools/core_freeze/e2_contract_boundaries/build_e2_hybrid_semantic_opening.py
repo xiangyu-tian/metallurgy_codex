@@ -24,6 +24,7 @@ from core_freeze.e2_contract_boundaries.run_e2_development import (  # noqa: E40
 from core_freeze.e2_contract_boundaries.run_e2_hybrid_semantic_development import (  # noqa: E402
     AUTHORIZATION_PATH,
     AUTHORIZATION_REQUEST_PATH,
+    ADVANCEMENT_GATE_PATH,
     BASE_POLICY_PATH,
     CONFIG_PATH,
     CONTRACTS_PATH,
@@ -38,6 +39,9 @@ from core_freeze.e2_contract_boundaries.run_e2_hybrid_semantic_development impor
 RUNNER_PATH = (
     HERE
     / "run_e2_hybrid_semantic_development.py"
+)
+ANALYZER_PATH = (
+    HERE / "analyze_e2_hybrid_semantic_development.py"
 )
 FORBIDDEN_MODEL_FIELDS = (
     "task_id",
@@ -64,6 +68,7 @@ def validate_opening() -> dict[str, Any]:
         "authorization_request": load_json(
             AUTHORIZATION_REQUEST_PATH
         ),
+        "advancement_gate": load_json(ADVANCEMENT_GATE_PATH),
     }
     validate_inputs(
         values["tasks"],
@@ -81,6 +86,15 @@ def validate_opening() -> dict[str, Any]:
         raise ValueError("request cannot claim authorization exists")
     if request["external_api_execution_authorized"] is not False:
         raise ValueError("request cannot authorize API execution")
+    gate = values["advancement_gate"]
+    if values["config"]["advancement_gate_id"] != gate["gate_id"]:
+        raise ValueError("run config advancement gate ID mismatch")
+    if request["advancement_gate_id"] != gate["gate_id"]:
+        raise ValueError("authorization request gate ID mismatch")
+    if request["advancement_gate_sha256"] != file_hash(
+        ADVANCEMENT_GATE_PATH
+    ):
+        raise ValueError("authorization request gate hash mismatch")
     if AUTHORIZATION_PATH.exists():
         raise ValueError("unexpected hybrid semantic authorization file")
     if values["config"]["execution_status"] != "prepared_not_authorized":
@@ -173,6 +187,9 @@ def build_package(output_dir: Path) -> dict[str, Any]:
         CONTRACTS_PATH: output_dir / "contracts_snapshot.json",
         BASE_POLICY_PATH: output_dir / "base_policy_snapshot.json",
         HYBRID_POLICY_PATH: output_dir / "hybrid_policy_snapshot.json",
+        ADVANCEMENT_GATE_PATH: (
+            output_dir / "advancement_gate_snapshot.json"
+        ),
         PROMPTS_PATH: output_dir / "prompt_snapshot.json",
         OUTPUT_SCHEMA_PATH: output_dir / "output_schema_snapshot.json",
         CONFIG_PATH: output_dir / "run_config_snapshot.json",
@@ -180,6 +197,7 @@ def build_package(output_dir: Path) -> dict[str, Any]:
             output_dir / "execution_authorization_request_snapshot.json"
         ),
         RUNNER_PATH: output_dir / "runner_snapshot.py",
+        ANALYZER_PATH: output_dir / "analyzer_snapshot.py",
     }
     for source, target in snapshots.items():
         shutil.copyfile(source, target)
@@ -190,7 +208,7 @@ def build_package(output_dir: Path) -> dict[str, Any]:
     )
     report = {
         "schema_version": "1.0-candidate",
-        "candidate_id": "E2-HYBRID-SEMANTIC-DEV-OPENING-V1-20260731",
+        "candidate_id": "E2-HYBRID-SEMANTIC-DEV-OPENING-V1.1-20260731",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "status": "prepared_not_authorized",
         "dataset_id": values["tasks"]["dataset_id"],
@@ -225,6 +243,15 @@ def build_package(output_dir: Path) -> dict[str, Any]:
             "validation_dataset_sent": False,
         },
         "development_only": True,
+        "advancement_gate": {
+            "gate_id": values["advancement_gate"]["gate_id"],
+            "required_check_count": len(
+                values["advancement_gate"]["required_checks"]
+            ),
+            "partial_pass_allowed": values["advancement_gate"][
+                "decision_rule"
+            ]["partial_pass_allowed"],
+        },
         "model_performance_claim_allowed": False,
         "confirmatory_inference_allowed": False,
         "core_frozen": False,
@@ -246,6 +273,9 @@ def build_package(output_dir: Path) -> dict[str, Any]:
             "contracts_sha256": file_hash(CONTRACTS_PATH),
             "base_policy_sha256": file_hash(BASE_POLICY_PATH),
             "hybrid_policy_sha256": file_hash(HYBRID_POLICY_PATH),
+            "advancement_gate_sha256": file_hash(
+                ADVANCEMENT_GATE_PATH
+            ),
             "prompt_sha256": file_hash(PROMPTS_PATH),
             "output_schema_sha256": file_hash(OUTPUT_SCHEMA_PATH),
             "run_config_sha256": file_hash(CONFIG_PATH),
@@ -253,6 +283,7 @@ def build_package(output_dir: Path) -> dict[str, Any]:
                 AUTHORIZATION_REQUEST_PATH
             ),
             "runner_sha256": file_hash(RUNNER_PATH),
+            "analyzer_sha256": file_hash(ANALYZER_PATH),
             "builder_sha256": file_hash(Path(__file__)),
         },
         "artifacts": [

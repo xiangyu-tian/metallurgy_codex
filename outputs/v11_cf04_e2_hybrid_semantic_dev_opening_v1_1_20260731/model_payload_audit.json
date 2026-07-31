@@ -1,0 +1,467 @@
+{
+  "schema_version": "1.0-candidate",
+  "audit_id": "E2-HYBRID-SEMANTIC-DEV-PAYLOAD-AUDIT-20260731",
+  "task_count": 55,
+  "status": "passed",
+  "forbidden_fields": [
+    "task_id",
+    "base_task_id",
+    "base_task_group_id",
+    "mutation_types",
+    "mutation_ids",
+    "expected_flags",
+    "primary_status",
+    "allowed_actions",
+    "policy_expected_action"
+  ],
+  "leakage_error_count": 0,
+  "errors": [],
+  "payload_hashes": [
+    {
+      "task_id": "E2V2-A001-01",
+      "source_tool_id": "A001",
+      "message_sha256": "cbe267fe34d6148f378a24991333e7554308b6e5d7c6e72e01267f44ed82b327",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A001-02",
+      "source_tool_id": "A001",
+      "message_sha256": "a3d560a74733a676ea6452b7bacbb4919d1b6ddcf91430ab74337605b1ecfd19",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A001-03",
+      "source_tool_id": "A001",
+      "message_sha256": "7ad5f5489f45a1e158e676eac403e7d4951ad9a35995ac11a82f2f0312a586d0",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A001-04",
+      "source_tool_id": "A001",
+      "message_sha256": "5beb44833c77bcd0bcc852cb8813db75d83f9599d1f8ebed5660f5c53fd94106",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A001-05",
+      "source_tool_id": "A001",
+      "message_sha256": "677afc0e77c1473f38ce66609283cd4ce945f3a6c7be901a929205d8d3c1e6e7",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A001-06",
+      "source_tool_id": "A001",
+      "message_sha256": "8a09f1499dbfa2a9d1449f3ceeb8a6906eaa26273fb86a2a9d18cd03aba7ebda",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A001-07",
+      "source_tool_id": "A001",
+      "message_sha256": "53de3cbdf9950f3daf1e0310762a8bd30fa436bca353923bd98359238e9ea440",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A001-08",
+      "source_tool_id": "A001",
+      "message_sha256": "932a045ed8fffb2588ca5223f77f8b3ee85ddeba2205fa9e7a13494637680b80",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A001-09",
+      "source_tool_id": "A001",
+      "message_sha256": "c6a8d8048229acd73155668496889dbce9d831868c8f15ea12de4fe56e2d0741",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A001-10",
+      "source_tool_id": "A001",
+      "message_sha256": "4fd643ca1fb9fbe13f768732d69854f403b2168b94848b7548daf6fe7ec0bc9d",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A001-11",
+      "source_tool_id": "A001",
+      "message_sha256": "5d502e4a57ff08a1274866111a9054713bbcea7681e793decfa8cb2911c54b29",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A001-12",
+      "source_tool_id": "A001",
+      "message_sha256": "dadc48b9f23682929ec84397275d4bd5e7b36cc0a0dee70fd96b57a3b0a732e0",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A002-01",
+      "source_tool_id": "A002",
+      "message_sha256": "3ffbff7430a119188cba2999382649126d442d035193efd87d5d46689143b341",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A002-02",
+      "source_tool_id": "A002",
+      "message_sha256": "1d3a1fadfb61e774f7c1bb224d34359e0fda8a6c07595d873f0b5e27d96dea6c",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A002-03",
+      "source_tool_id": "A002",
+      "message_sha256": "95560050569ec5d2c23db34b7b165dcc4961ad2e59de7d0144b2af9722525bc3",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A002-04",
+      "source_tool_id": "A002",
+      "message_sha256": "c9ca670d25a7f9d2eb77791998536ac6a27c9b3b299ac1ecd3cfa6ce45f13c3d",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A002-05",
+      "source_tool_id": "A002",
+      "message_sha256": "4a3ff6a1cd0fc62f99012ba53d133f6546010d984e44a24f8b2cf54ef58a3d92",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A002-06",
+      "source_tool_id": "A002",
+      "message_sha256": "293fc34a405a765bafd95bf0fd93edbbca030ffd660c3bfdabe6cf3ec7db8563",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A002-07",
+      "source_tool_id": "A002",
+      "message_sha256": "723af8775769f08e083aceba501deb750634b2afd88f459b69ab0ab26c9a7f21",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A002-08",
+      "source_tool_id": "A002",
+      "message_sha256": "2549df635281bbec65486844ca6b10170857307eb5d195dd9fd001efc208e730",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A002-09",
+      "source_tool_id": "A002",
+      "message_sha256": "56391af30f2d80cfa04a79dbc8c5bd50d5900aa40afa9020839bcb9efe238c8f",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A002-10",
+      "source_tool_id": "A002",
+      "message_sha256": "bacbeaaed348ccec62d6aaa9f0fe4e2f41ea676dcab2e76c9d83e3fd04dd7d55",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A003-01",
+      "source_tool_id": "A003",
+      "message_sha256": "0ee47d25047c8e72259f3b179130cf68fe6b263242305acf769ea8cf246c9f96",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A003-02",
+      "source_tool_id": "A003",
+      "message_sha256": "0525a1d764074d16b7af91b0ee3e30c3a236a241f7628a6e3577e410a53dfce5",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A003-03",
+      "source_tool_id": "A003",
+      "message_sha256": "62f54f454d01633063a06cb9c2113225241d995d1bf8d418b132e67f5b82fb22",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A003-04",
+      "source_tool_id": "A003",
+      "message_sha256": "4268af3dd576f2d37c8aa061cdd473b490450d977e102c2879382296f88530ff",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A003-05",
+      "source_tool_id": "A003",
+      "message_sha256": "b8a9107d3ab078f255e77dfd35ec0f22d7ebe9da28e21a1e99387f3e9042d6b0",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A003-06",
+      "source_tool_id": "A003",
+      "message_sha256": "4221ec78bd3184fb3ceb4973226ded479eb29f6b0d3f6b51f9feb8f2cb273801",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A003-07",
+      "source_tool_id": "A003",
+      "message_sha256": "d14403b2f8b43073084e644e8ef1e6a1b6e000ea98e991b732af4d2e13b401a9",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A003-08",
+      "source_tool_id": "A003",
+      "message_sha256": "40a804125911fb8f346fea44da076abce4a0f462983596e47f1064fbe96da96c",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A003-09",
+      "source_tool_id": "A003",
+      "message_sha256": "7e1784a05351d13044fafec35fa7deb895e49d94a02cdfb70c8ef1f8025b5289",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A003-10",
+      "source_tool_id": "A003",
+      "message_sha256": "3d612657e4abb5e1bc0c0a5bf8087e901eb251287cf62828d7b377a883890457",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A004-01",
+      "source_tool_id": "A004",
+      "message_sha256": "4fd643296a78c6af6a475cff3892165b845e20df3735f5dbba5f83e0a35be121",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A004-02",
+      "source_tool_id": "A004",
+      "message_sha256": "ff2330b92ae9eb71bf4e94c9a6e9a10141323fb6d14e68418ec3f3141e6b88ac",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A004-03",
+      "source_tool_id": "A004",
+      "message_sha256": "be66c5825899a656a5d8dd53fd1acd78765674181a1ee1455fabf20875d324f8",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A004-04",
+      "source_tool_id": "A004",
+      "message_sha256": "18703cade0150cd1f9764654b1c17d5bb532f1e1fd60ebe71967a17c3c360251",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A004-05",
+      "source_tool_id": "A004",
+      "message_sha256": "0fd2c6fd8f596b242ef05216e1d9223539532a7fc8b388553692935c508ebef5",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A004-06",
+      "source_tool_id": "A004",
+      "message_sha256": "3bed3b9ad7d3a57c0b642f8c5c3d934ed59e7d069fb42f4798793faf7c6f8e2e",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A004-07",
+      "source_tool_id": "A004",
+      "message_sha256": "52b1f7fa3a9cb0566d0788d970674f4af7395c8eba3f4524a175f100f8abe089",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A004-08",
+      "source_tool_id": "A004",
+      "message_sha256": "60492990e101af8c310198aea1de51c87ade3808c9fde01f31335a823bae278b",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A004-09",
+      "source_tool_id": "A004",
+      "message_sha256": "40fca99c54660892b5d095efa031e0c6f1f93238673d8ad2edb96a8b2986d2fa",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-A004-10",
+      "source_tool_id": "A004",
+      "message_sha256": "3fc0cb68b59d10f78b48534393f6d846c1087d6d0fc56ebeb3ff53dfe88d46fe",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-B019-01",
+      "source_tool_id": "B019",
+      "message_sha256": "131dda7d4be6410718236e4f0f2e54d837165bca6dae90976afb51acbf7a8eb4",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-B019-02",
+      "source_tool_id": "B019",
+      "message_sha256": "ee7c667268cd4b48f8511dbd8b9740921a15e7904b4cf2b6b9f3ce3f676bdea8",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-B019-03",
+      "source_tool_id": "B019",
+      "message_sha256": "caa11c1554e90da9d5c1a8f06eabf42f0e762bea6cdf41baa87e11f8d023ee57",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-B019-04",
+      "source_tool_id": "B019",
+      "message_sha256": "f71d2b0a898aafc34aa1ba94d7379afd34b9c84626f54d54745cd7ddfbc79730",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-B019-05",
+      "source_tool_id": "B019",
+      "message_sha256": "796622e4d47791551394c4a0e1b8d99db1bbed92dc75c9370ecfdb5f425b1cbc",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-B019-06",
+      "source_tool_id": "B019",
+      "message_sha256": "d4e2e803ebdc2bb35c959cc1e343e067ece375492ab037db9e4119a18cf6164d",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-B019-07",
+      "source_tool_id": "B019",
+      "message_sha256": "b239b3402c0ed406beb130585d6817c9b748597a12ffc70c1c52f3f2e50eee90",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-B019-08",
+      "source_tool_id": "B019",
+      "message_sha256": "1f5c762f975651a940e4524139d187e021244c57e53cb5e90380ffd3de951e83",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-B019-09",
+      "source_tool_id": "B019",
+      "message_sha256": "f525c5b391b937fa47d751dc63869c82aa5616d55b06070b720f4134c76324aa",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-B019-10",
+      "source_tool_id": "B019",
+      "message_sha256": "2321d5833d01ab243283e3469c6fb9363b8ff247e5a9d4bcefbfa50f50a63e88",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-B019-11",
+      "source_tool_id": "B019",
+      "message_sha256": "b6e65c0cf5b9518d776e06c6a350e49ac9ad3707c548baed81b5dc3095406f44",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-B019-12",
+      "source_tool_id": "B019",
+      "message_sha256": "c52eefeba50fb430e73dfaabe1e3a88dec5a5d2006473d4e992000f010e13ecc",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    },
+    {
+      "task_id": "E2V2-B019-13",
+      "source_tool_id": "B019",
+      "message_sha256": "e74b729c811a7027c19b3568f217799abc793eb043c3b54a44f31679e1aa41ab",
+      "message_count": 2,
+      "forbidden_field_count": 0,
+      "forbidden_identifier_value_count": 0
+    }
+  ],
+  "gold_labels_sent": false,
+  "mutation_history_sent": false,
+  "validation_dataset_sent": false,
+  "external_api_calls": 0,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "metallurgy://schemas/e2-hybrid-semantic-flags-v1",
+  "title": "E2 hybrid semantic boundary flags",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["semantic_flags"],
+  "properties": {
+    "semantic_flags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "contract_defined_out_of_domain",
+          "contract_defined_unsupported_system",
+          "model_card_defined_ood"
+        ]
+      }
+    }
+  }
+}

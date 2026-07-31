@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0-candidate",
+  "candidate_id": "E2-HYBRID-SEMANTIC-DEV-OPENING-V1.1-20260731",
+  "generated_at": "2026-07-31T07:41:23.871849+00:00",
+  "status": "prepared_not_authorized",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731",
+  "task_count": 55,
+  "model_output_fields": [
+    "semantic_flags"
+  ],
+  "deterministic_components": [
+    "structural flag derivation",
+    "ordered flag merge",
+    "primary status derivation",
+    "action derivation"
+  ],
+  "execution_gate": {
+    "authorization_status": "pending",
+    "authorization_file_exists": false,
+    "external_api_execution_authorized": false,
+    "new_provider_calls": 0
+  },
+  "external_data_scope": [
+    "55 synthetic observable E2 v2 development tasks",
+    "corresponding five versioned tool contract views",
+    "frozen E2 hybrid semantic-only prompt"
+  ],
+  "excluded_external_data_scope": [
+    "40-task independent E2 validation candidate",
+    "gold labels and mutation histories",
+    "API credentials",
+    "metallurgical tool outputs"
+  ],
+  "model_payload_audit": {
+    "status": "passed",
+    "task_count": 55,
+    "leakage_error_count": 0,
+    "gold_labels_sent": false,
+    "mutation_history_sent": false,
+    "validation_dataset_sent": false
+  },
+  "development_only": true,
+  "advancement_gate": {
+    "gate_id": "E2-HYBRID-SEMANTIC-DEVELOPMENT-GATE-V1",
+    "required_check_count": 11,
+    "partial_pass_allowed": false
+  },
+  "model_performance_claim_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

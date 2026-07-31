@@ -1,0 +1,2339 @@
+{
+  "schema_version": "2.0-candidate",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731",
+  "dataset_status": "observable_development_candidate",
+  "task_count": 55,
+  "tasks": [
+    {
+      "task_id": "E2V2-A001-01",
+      "base_task_id": "E1B2-A001-001",
+      "base_task_group_id": "A001-KG-G",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        },
+        "request_context": {
+          "requested_tool_id": "A001",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "SI"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [],
+      "mutation_types": [],
+      "expected_flags": [],
+      "primary_status": "ready",
+      "allowed_actions": [
+        "call"
+      ],
+      "policy_expected_action": "call",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A001-02",
+      "base_task_id": "E1B2-A001-001",
+      "base_task_group_id": "A001-KG-G",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "source_unit": "kg",
+          "target_unit": "g"
+        },
+        "request_context": {
+          "requested_tool_id": "A001",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "SI"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A001-02-01"
+      ],
+      "mutation_types": [
+        "remove_required_parameter"
+      ],
+      "expected_flags": [
+        "missing_parameter"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A001-03",
+      "base_task_id": "E1B2-A001-001",
+      "base_task_group_id": "A001-KG-G",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "value": 0.25,
+          "source_unit": {
+            "status": "ambiguous",
+            "candidates": [
+              "kg",
+              "g"
+            ]
+          },
+          "target_unit": "g"
+        },
+        "request_context": {
+          "requested_tool_id": "A001",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "SI"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A001-03-01"
+      ],
+      "mutation_types": [
+        "make_parameter_ambiguous"
+      ],
+      "expected_flags": [
+        "ambiguous_parameter"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A001-04",
+      "base_task_id": "E1B2-A001-001",
+      "base_task_group_id": "A001-KG-G",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "m"
+        },
+        "request_context": {
+          "requested_tool_id": "A001",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "SI"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A001-04-01"
+      ],
+      "mutation_types": [
+        "contract_out_of_domain"
+      ],
+      "expected_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A001-05",
+      "base_task_id": "E1B2-A001-001",
+      "base_task_group_id": "A001-KG-G",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        },
+        "request_context": {
+          "requested_tool_id": "A001",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "currency_exchange"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A001-05-01"
+      ],
+      "mutation_types": [
+        "unsupported_system"
+      ],
+      "expected_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A001-06",
+      "base_task_id": "E1B2-A001-001",
+      "base_task_group_id": "A001-KG-G",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        },
+        "request_context": {
+          "requested_tool_id": "A001",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "SI"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A001-06-01"
+      ],
+      "mutation_types": [
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "unavailable"
+      ],
+      "primary_status": "unavailable",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A001-07",
+      "base_task_id": "E1B2-A001-001",
+      "base_task_group_id": "A001-KG-G",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        },
+        "request_context": {
+          "requested_tool_id": "A001",
+          "requested_tool_version": "1.0.0-mismatch",
+          "requested_system": "SI"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A001-07-01"
+      ],
+      "mutation_types": [
+        "version_mismatch"
+      ],
+      "expected_flags": [
+        "version_mismatch"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A001-08",
+      "base_task_id": "E1B2-A001-001",
+      "base_task_group_id": "A001-KG-G",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "value": 0.25,
+          "source_unit": "kg"
+        },
+        "request_context": {
+          "requested_tool_id": "A001",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "SI"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A001-08-01"
+      ],
+      "mutation_types": [
+        "remove_unit"
+      ],
+      "expected_flags": [
+        "missing_parameter"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A001-09",
+      "base_task_id": "E1B2-A001-001",
+      "base_task_group_id": "A001-KG-G",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": {
+            "status": "ambiguous",
+            "candidates": [
+              "g",
+              "kg"
+            ]
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "A001",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "SI"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A001-09-01"
+      ],
+      "mutation_types": [
+        "make_unit_ambiguous"
+      ],
+      "expected_flags": [
+        "ambiguous_parameter"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A001-10",
+      "base_task_id": "E1B2-A001-001",
+      "base_task_group_id": "A001-KG-G",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "source_unit": "kg",
+          "target_unit": "g"
+        },
+        "request_context": {
+          "requested_tool_id": "A001",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "SI"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A001-10-01",
+        "MUT-E2V2-A001-10-02"
+      ],
+      "mutation_types": [
+        "remove_required_parameter",
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A001-11",
+      "base_task_id": "E1B2-A001-001",
+      "base_task_group_id": "A001-KG-G",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": {
+            "status": "ambiguous",
+            "candidates": [
+              "m",
+              "s"
+            ]
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "A001",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "SI"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A001-11-01",
+        "MUT-E2V2-A001-11-02"
+      ],
+      "mutation_types": [
+        "make_parameter_ambiguous",
+        "contract_out_of_domain"
+      ],
+      "expected_flags": [
+        "ambiguous_parameter",
+        "contract_defined_out_of_domain"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false,
+      "joint_mutation_spec_id": "JOINT-A001-AMBIGUOUS-AND-OOD-V2",
+      "label_observability_rationale": "target unit is unresolved and every candidate is dimensionally incompatible with kg"
+    },
+    {
+      "task_id": "E2V2-A001-12",
+      "base_task_id": "E1B2-A001-001",
+      "base_task_group_id": "A001-KG-G",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "m"
+        },
+        "request_context": {
+          "requested_tool_id": "A001",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "SI"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A001-12-01",
+        "MUT-E2V2-A001-12-02"
+      ],
+      "mutation_types": [
+        "contract_out_of_domain",
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "contract_defined_out_of_domain",
+        "unavailable"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A002-01",
+      "base_task_id": "E1B2-A002-001",
+      "base_task_group_id": "A002-01",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": "Fe2O3"
+        },
+        "request_context": {
+          "requested_tool_id": "A002",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [],
+      "mutation_types": [],
+      "expected_flags": [],
+      "primary_status": "ready",
+      "allowed_actions": [
+        "call"
+      ],
+      "policy_expected_action": "call",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A002-02",
+      "base_task_id": "E1B2-A002-001",
+      "base_task_group_id": "A002-01",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {},
+        "request_context": {
+          "requested_tool_id": "A002",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A002-02-01"
+      ],
+      "mutation_types": [
+        "remove_required_parameter"
+      ],
+      "expected_flags": [
+        "missing_parameter"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A002-03",
+      "base_task_id": "E1B2-A002-001",
+      "base_task_group_id": "A002-01",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": {
+            "status": "ambiguous",
+            "candidates": [
+              "Fe2O3",
+              "Fe3O4"
+            ]
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "A002",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A002-03-01"
+      ],
+      "mutation_types": [
+        "make_parameter_ambiguous"
+      ],
+      "expected_flags": [
+        "ambiguous_parameter"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A002-04",
+      "base_task_id": "E1B2-A002-001",
+      "base_task_group_id": "A002-01",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": "Fe2O3·H2O"
+        },
+        "request_context": {
+          "requested_tool_id": "A002",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A002-04-01"
+      ],
+      "mutation_types": [
+        "contract_out_of_domain"
+      ],
+      "expected_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A002-05",
+      "base_task_id": "E1B2-A002-001",
+      "base_task_group_id": "A002-01",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": "Fe2O3"
+        },
+        "request_context": {
+          "requested_tool_id": "A002",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "ionic_reaction_equation"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A002-05-01"
+      ],
+      "mutation_types": [
+        "unsupported_system"
+      ],
+      "expected_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A002-06",
+      "base_task_id": "E1B2-A002-001",
+      "base_task_group_id": "A002-01",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": "Fe2O3"
+        },
+        "request_context": {
+          "requested_tool_id": "A002",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A002-06-01"
+      ],
+      "mutation_types": [
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "unavailable"
+      ],
+      "primary_status": "unavailable",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A002-07",
+      "base_task_id": "E1B2-A002-001",
+      "base_task_group_id": "A002-01",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": "Fe2O3"
+        },
+        "request_context": {
+          "requested_tool_id": "A002",
+          "requested_tool_version": "1.0.0-mismatch",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A002-07-01"
+      ],
+      "mutation_types": [
+        "version_mismatch"
+      ],
+      "expected_flags": [
+        "version_mismatch"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A002-08",
+      "base_task_id": "E1B2-A002-001",
+      "base_task_group_id": "A002-01",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {},
+        "request_context": {
+          "requested_tool_id": "A002",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A002-08-01",
+        "MUT-E2V2-A002-08-02"
+      ],
+      "mutation_types": [
+        "remove_required_parameter",
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A002-09",
+      "base_task_id": "E1B2-A002-001",
+      "base_task_group_id": "A002-01",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": {
+            "status": "ambiguous",
+            "candidates": [
+              "Fe2O3·H2O",
+              "Fe3O4·H2O"
+            ]
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "A002",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A002-09-01",
+        "MUT-E2V2-A002-09-02"
+      ],
+      "mutation_types": [
+        "make_parameter_ambiguous",
+        "contract_out_of_domain"
+      ],
+      "expected_flags": [
+        "ambiguous_parameter",
+        "contract_defined_out_of_domain"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false,
+      "joint_mutation_spec_id": "JOINT-A002-AMBIGUOUS-AND-OOD-V2",
+      "label_observability_rationale": "formula is unresolved and every candidate violates neutral_formula_grammar_v1"
+    },
+    {
+      "task_id": "E2V2-A002-10",
+      "base_task_id": "E1B2-A002-001",
+      "base_task_group_id": "A002-01",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": "Fe2O3·H2O"
+        },
+        "request_context": {
+          "requested_tool_id": "A002",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A002-10-01",
+        "MUT-E2V2-A002-10-02"
+      ],
+      "mutation_types": [
+        "contract_out_of_domain",
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "contract_defined_out_of_domain",
+        "unavailable"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A003-01",
+      "base_task_id": "E1B2-A003-001",
+      "base_task_group_id": "A003-01",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": "Fe2O3"
+        },
+        "request_context": {
+          "requested_tool_id": "A003",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [],
+      "mutation_types": [],
+      "expected_flags": [],
+      "primary_status": "ready",
+      "allowed_actions": [
+        "call"
+      ],
+      "policy_expected_action": "call",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A003-02",
+      "base_task_id": "E1B2-A003-001",
+      "base_task_group_id": "A003-01",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {},
+        "request_context": {
+          "requested_tool_id": "A003",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A003-02-01"
+      ],
+      "mutation_types": [
+        "remove_required_parameter"
+      ],
+      "expected_flags": [
+        "missing_parameter"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A003-03",
+      "base_task_id": "E1B2-A003-001",
+      "base_task_group_id": "A003-01",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": {
+            "status": "ambiguous",
+            "candidates": [
+              "Fe2O3",
+              "Fe3O4"
+            ]
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "A003",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A003-03-01"
+      ],
+      "mutation_types": [
+        "make_parameter_ambiguous"
+      ],
+      "expected_flags": [
+        "ambiguous_parameter"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A003-04",
+      "base_task_id": "E1B2-A003-001",
+      "base_task_group_id": "A003-01",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": "SiO2"
+        },
+        "request_context": {
+          "requested_tool_id": "A003",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A003-04-01"
+      ],
+      "mutation_types": [
+        "contract_out_of_domain"
+      ],
+      "expected_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A003-05",
+      "base_task_id": "E1B2-A003-001",
+      "base_task_group_id": "A003-01",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": "Fe2O3"
+        },
+        "request_context": {
+          "requested_tool_id": "A003",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "isotopically_resolved_formula"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A003-05-01"
+      ],
+      "mutation_types": [
+        "unsupported_system"
+      ],
+      "expected_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A003-06",
+      "base_task_id": "E1B2-A003-001",
+      "base_task_group_id": "A003-01",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": "Fe2O3"
+        },
+        "request_context": {
+          "requested_tool_id": "A003",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A003-06-01"
+      ],
+      "mutation_types": [
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "unavailable"
+      ],
+      "primary_status": "unavailable",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A003-07",
+      "base_task_id": "E1B2-A003-001",
+      "base_task_group_id": "A003-01",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": "Fe2O3"
+        },
+        "request_context": {
+          "requested_tool_id": "A003",
+          "requested_tool_version": "1.0.0-mismatch",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A003-07-01"
+      ],
+      "mutation_types": [
+        "version_mismatch"
+      ],
+      "expected_flags": [
+        "version_mismatch"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A003-08",
+      "base_task_id": "E1B2-A003-001",
+      "base_task_group_id": "A003-01",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {},
+        "request_context": {
+          "requested_tool_id": "A003",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A003-08-01",
+        "MUT-E2V2-A003-08-02"
+      ],
+      "mutation_types": [
+        "remove_required_parameter",
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A003-09",
+      "base_task_id": "E1B2-A003-001",
+      "base_task_group_id": "A003-01",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": {
+            "status": "ambiguous",
+            "candidates": [
+              "SiO2",
+              "Al2O3"
+            ]
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "A003",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A003-09-01",
+        "MUT-E2V2-A003-09-02"
+      ],
+      "mutation_types": [
+        "make_parameter_ambiguous",
+        "contract_out_of_domain"
+      ],
+      "expected_flags": [
+        "ambiguous_parameter",
+        "contract_defined_out_of_domain"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false,
+      "joint_mutation_spec_id": "JOINT-A003-AMBIGUOUS-AND-OOD-V2",
+      "label_observability_rationale": "formula is unresolved and every candidate uses elements outside the verified atomic-weight subset"
+    },
+    {
+      "task_id": "E2V2-A003-10",
+      "base_task_id": "E1B2-A003-001",
+      "base_task_group_id": "A003-01",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "formula": "SiO2"
+        },
+        "request_context": {
+          "requested_tool_id": "A003",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "neutral_formula_grammar_v1"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A003-10-01",
+        "MUT-E2V2-A003-10-02"
+      ],
+      "mutation_types": [
+        "contract_out_of_domain",
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "contract_defined_out_of_domain",
+        "unavailable"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A004-01",
+      "base_task_id": "E1B2-A004-001",
+      "base_task_group_id": "A004-STEEL",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "compositions": {
+            "Fe": 94.0,
+            "C": 4.0,
+            "Si": 2.0
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "A004",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "nonnegative_weight_vectors"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [],
+      "mutation_types": [],
+      "expected_flags": [],
+      "primary_status": "ready",
+      "allowed_actions": [
+        "call"
+      ],
+      "policy_expected_action": "call",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A004-02",
+      "base_task_id": "E1B2-A004-001",
+      "base_task_group_id": "A004-STEEL",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {},
+        "request_context": {
+          "requested_tool_id": "A004",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "nonnegative_weight_vectors"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A004-02-01"
+      ],
+      "mutation_types": [
+        "remove_required_parameter"
+      ],
+      "expected_flags": [
+        "missing_parameter"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A004-03",
+      "base_task_id": "E1B2-A004-001",
+      "base_task_group_id": "A004-STEEL",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "compositions": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "Fe": 70,
+                "C": 30
+              },
+              {
+                "Fe": 0.7,
+                "C": 0.3
+              }
+            ]
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "A004",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "nonnegative_weight_vectors"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A004-03-01"
+      ],
+      "mutation_types": [
+        "make_parameter_ambiguous"
+      ],
+      "expected_flags": [
+        "ambiguous_parameter"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A004-04",
+      "base_task_id": "E1B2-A004-001",
+      "base_task_group_id": "A004-STEEL",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "compositions": {
+            "Fe": 0.8,
+            "C": -0.1,
+            "Si": 2.0
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "A004",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "nonnegative_weight_vectors"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A004-04-01"
+      ],
+      "mutation_types": [
+        "contract_out_of_domain"
+      ],
+      "expected_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A004-05",
+      "base_task_id": "E1B2-A004-001",
+      "base_task_group_id": "A004-STEEL",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "compositions": {
+            "Fe": 94.0,
+            "C": 4.0,
+            "Si": 2.0
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "A004",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "mixed_mass_and_mole_basis"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A004-05-01"
+      ],
+      "mutation_types": [
+        "unsupported_system"
+      ],
+      "expected_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A004-06",
+      "base_task_id": "E1B2-A004-001",
+      "base_task_group_id": "A004-STEEL",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "compositions": {
+            "Fe": 94.0,
+            "C": 4.0,
+            "Si": 2.0
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "A004",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "nonnegative_weight_vectors"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A004-06-01"
+      ],
+      "mutation_types": [
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "unavailable"
+      ],
+      "primary_status": "unavailable",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A004-07",
+      "base_task_id": "E1B2-A004-001",
+      "base_task_group_id": "A004-STEEL",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "compositions": {
+            "Fe": 94.0,
+            "C": 4.0,
+            "Si": 2.0
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "A004",
+          "requested_tool_version": "1.0.0-mismatch",
+          "requested_system": "nonnegative_weight_vectors"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A004-07-01"
+      ],
+      "mutation_types": [
+        "version_mismatch"
+      ],
+      "expected_flags": [
+        "version_mismatch"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A004-08",
+      "base_task_id": "E1B2-A004-001",
+      "base_task_group_id": "A004-STEEL",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {},
+        "request_context": {
+          "requested_tool_id": "A004",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "nonnegative_weight_vectors"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A004-08-01",
+        "MUT-E2V2-A004-08-02"
+      ],
+      "mutation_types": [
+        "remove_required_parameter",
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-A004-09",
+      "base_task_id": "E1B2-A004-001",
+      "base_task_group_id": "A004-STEEL",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "compositions": {
+            "Fe": 94.0,
+            "C": 4.0,
+            "Si": 2.0,
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "Fe": 0.8,
+                "C": -0.1
+              },
+              {
+                "Fe": 1.2,
+                "C": -0.2
+              }
+            ]
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "A004",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "nonnegative_weight_vectors"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A004-09-01",
+        "MUT-E2V2-A004-09-02"
+      ],
+      "mutation_types": [
+        "make_parameter_ambiguous",
+        "contract_out_of_domain"
+      ],
+      "expected_flags": [
+        "ambiguous_parameter",
+        "contract_defined_out_of_domain"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false,
+      "joint_mutation_spec_id": "JOINT-A004-AMBIGUOUS-AND-OOD-V2",
+      "label_observability_rationale": "composition is unresolved and every candidate violates the nonnegative-value contract"
+    },
+    {
+      "task_id": "E2V2-A004-10",
+      "base_task_id": "E1B2-A004-001",
+      "base_task_group_id": "A004-STEEL",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "compositions": {
+            "Fe": 0.8,
+            "C": -0.1,
+            "Si": 2.0
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "A004",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "nonnegative_weight_vectors"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-A004-10-01",
+        "MUT-E2V2-A004-10-02"
+      ],
+      "mutation_types": [
+        "contract_out_of_domain",
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "contract_defined_out_of_domain",
+        "unavailable"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-B019-01",
+      "base_task_id": "E1B2-B019-001",
+      "base_task_group_id": "B019-01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "request_context": {
+          "requested_tool_id": "B019",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "binary_two_phase_tie_line"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [],
+      "mutation_types": [],
+      "expected_flags": [],
+      "primary_status": "ready",
+      "allowed_actions": [
+        "call"
+      ],
+      "policy_expected_action": "call",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-B019-02",
+      "base_task_id": "E1B2-B019-001",
+      "base_task_group_id": "B019-01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "request_context": {
+          "requested_tool_id": "B019",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "binary_two_phase_tie_line"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-B019-02-01"
+      ],
+      "mutation_types": [
+        "remove_required_parameter"
+      ],
+      "expected_flags": [
+        "missing_parameter"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-B019-03",
+      "base_task_id": "E1B2-B019-001",
+      "base_task_group_id": "B019-01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "overall_composition": {
+            "status": "ambiguous",
+            "candidates": [
+              0.4,
+              40.0
+            ]
+          },
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "request_context": {
+          "requested_tool_id": "B019",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "binary_two_phase_tie_line"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-B019-03-01"
+      ],
+      "mutation_types": [
+        "make_parameter_ambiguous"
+      ],
+      "expected_flags": [
+        "ambiguous_parameter"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-B019-04",
+      "base_task_id": "E1B2-B019-001",
+      "base_task_group_id": "B019-01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "overall_composition": 0.9,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "request_context": {
+          "requested_tool_id": "B019",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "binary_two_phase_tie_line"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-B019-04-01"
+      ],
+      "mutation_types": [
+        "contract_out_of_domain"
+      ],
+      "expected_flags": [
+        "contract_defined_out_of_domain"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-B019-05",
+      "base_task_id": "E1B2-B019-001",
+      "base_task_group_id": "B019-01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "request_context": {
+          "requested_tool_id": "B019",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "ternary_three_phase_equilibrium"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-B019-05-01"
+      ],
+      "mutation_types": [
+        "unsupported_system"
+      ],
+      "expected_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-B019-06",
+      "base_task_id": "E1B2-B019-001",
+      "base_task_group_id": "B019-01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "request_context": {
+          "requested_tool_id": "B019",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "binary_two_phase_tie_line"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-B019-06-01"
+      ],
+      "mutation_types": [
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "unavailable"
+      ],
+      "primary_status": "unavailable",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-B019-07",
+      "base_task_id": "E1B2-B019-001",
+      "base_task_group_id": "B019-01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "request_context": {
+          "requested_tool_id": "B019",
+          "requested_tool_version": "1.0.0-mismatch",
+          "requested_system": "binary_two_phase_tie_line"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-B019-07-01"
+      ],
+      "mutation_types": [
+        "version_mismatch"
+      ],
+      "expected_flags": [
+        "version_mismatch"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-B019-08",
+      "base_task_id": "E1B2-B019-001",
+      "base_task_group_id": "B019-01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7
+        },
+        "request_context": {
+          "requested_tool_id": "B019",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "binary_two_phase_tie_line"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-B019-08-01"
+      ],
+      "mutation_types": [
+        "remove_unit"
+      ],
+      "expected_flags": [
+        "missing_parameter"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-B019-09",
+      "base_task_id": "E1B2-B019-001",
+      "base_task_group_id": "B019-01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": {
+            "status": "ambiguous",
+            "candidates": [
+              "fraction",
+              "percent"
+            ]
+          }
+        },
+        "request_context": {
+          "requested_tool_id": "B019",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "binary_two_phase_tie_line"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-B019-09-01"
+      ],
+      "mutation_types": [
+        "make_unit_ambiguous"
+      ],
+      "expected_flags": [
+        "ambiguous_parameter"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-B019-10",
+      "base_task_id": "E1B2-B019-001",
+      "base_task_group_id": "B019-01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "request_context": {
+          "requested_tool_id": "B019",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "binary_two_phase_tie_line",
+          "requested_phase_count": 3
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-B019-10-01"
+      ],
+      "mutation_types": [
+        "unsupported_phase"
+      ],
+      "expected_flags": [
+        "contract_defined_unsupported_system"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-B019-11",
+      "base_task_id": "E1B2-B019-001",
+      "base_task_group_id": "B019-01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "request_context": {
+          "requested_tool_id": "B019",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "binary_two_phase_tie_line"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-B019-11-01",
+        "MUT-E2V2-B019-11-02"
+      ],
+      "mutation_types": [
+        "remove_required_parameter",
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "missing_parameter",
+        "unavailable"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    },
+    {
+      "task_id": "E2V2-B019-12",
+      "base_task_id": "E1B2-B019-001",
+      "base_task_group_id": "B019-01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "overall_composition": {
+            "status": "ambiguous",
+            "candidates": [
+              0.9,
+              1.1
+            ]
+          },
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "request_context": {
+          "requested_tool_id": "B019",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "binary_two_phase_tie_line"
+        },
+        "service_status": "available"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-B019-12-01",
+        "MUT-E2V2-B019-12-02"
+      ],
+      "mutation_types": [
+        "make_parameter_ambiguous",
+        "contract_out_of_domain"
+      ],
+      "expected_flags": [
+        "ambiguous_parameter",
+        "contract_defined_out_of_domain"
+      ],
+      "primary_status": "missing_or_ambiguous_input",
+      "allowed_actions": [
+        "clarify"
+      ],
+      "policy_expected_action": "clarify",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false,
+      "joint_mutation_spec_id": "JOINT-B019-AMBIGUOUS-AND-OOD-V2",
+      "label_observability_rationale": "overall composition is unresolved and every candidate lies outside the verified tie-line or fraction domain"
+    },
+    {
+      "task_id": "E2V2-B019-13",
+      "base_task_id": "E1B2-B019-001",
+      "base_task_group_id": "B019-01",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "data_layer": "controlled_confirmatory_candidate",
+      "task_stage": "e2_pilot_v2_observable_candidate",
+      "structured_state": {
+        "parameters": {
+          "overall_composition": 0.9,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "request_context": {
+          "requested_tool_id": "B019",
+          "requested_tool_version": "1.0.0",
+          "requested_system": "binary_two_phase_tie_line"
+        },
+        "service_status": "unavailable"
+      },
+      "mutation_ids": [
+        "MUT-E2V2-B019-13-01",
+        "MUT-E2V2-B019-13-02"
+      ],
+      "mutation_types": [
+        "contract_out_of_domain",
+        "unavailable_tool"
+      ],
+      "expected_flags": [
+        "contract_defined_out_of_domain",
+        "unavailable"
+      ],
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "allowed_actions": [
+        "refuse"
+      ],
+      "policy_expected_action": "refuse",
+      "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+      "confirmatory_inference_allowed": false,
+      "core_frozen": false
+    }
+  ],
+  "human_per_task_labels_used": false,
+  "external_api_calls": 0,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}
