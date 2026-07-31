@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.1",
+  "authorization_id": "E2-DEV-V1.1-AUTH-20260731",
+  "decision": "authorized_to_execute_v1_1_development_recheck",
+  "authorization_channel": "explicit_user_instruction_in_codex_task",
+  "authorized_at": "2026-07-31T14:29:26.4310545+08:00",
+  "user_statement_normalized": "同意将55条合成E2任务、对应工具契约视图和v1.1 flags-only冻结提示词发送至https://api.deepseek.com，使用deepseek-v4-flash执行一次开发复核，不调用冶金工具。",
+  "run_config_id": "E2-DEVELOPMENT-RECHECK-V1.1-20260731",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V1-20260731",
+  "authorized_task_count": 55,
+  "authorized_repeats": 1,
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "tool_access": "disabled",
+  "external_data_sharing_authorized": true,
+  "external_data_scope": [
+    "55 synthetic E2 boundary tasks",
+    "corresponding versioned tool contract views",
+    "frozen E2 v1.1 flags-only prompt"
+  ],
+  "pre_run_git_commit": "a56442d2598d9edd503b14a034aab930488d2375",
+  "pre_run_remote": "git@github.com:xiangyu-tian/metallurgy_codex.git",
+  "pre_run_remote_branch": "codex/main",
+  "task_source_sha256": "4e8b89043fee0faddd8f2ed34c258b5e8531cff9c744c66a56a32568ec622a34",
+  "prompt_sha256": "8e6047010443d1661df96c5f762c9a19dbc9f01a0d57a48588960ed5613a1eac",
+  "output_schema_sha256": "f8c00f7aa42b2823e3e4efd8c7d74bcfd3f70acb6b7b67185b3c6346f0568840",
+  "run_config_sha256": "ee95c9c9de0f398aa0b78f422d0e1214272ee3a09c98c6bf4aad1656ecf9016c",
+  "runner_sha256": "ae40b0c7ce14a15f5cce399de9f20e3f88e35b351272899eaf8bfe3fb5de6334",
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

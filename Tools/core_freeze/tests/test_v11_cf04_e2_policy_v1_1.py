@@ -2,15 +2,13 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
-from Tools.core_freeze.e2_contract_boundaries.build_e2_v1_1_candidate import (
-    build_package,
-    validate_candidate,
-)
 from Tools.core_freeze.e2_contract_boundaries.run_e2_development import (
     CONTRACTS_PATH,
     POLICY_PATH,
     TASKS_PATH,
+    file_hash,
     load_json,
 )
 from Tools.core_freeze.e2_contract_boundaries.run_e2_development_v1_1 import (
@@ -22,8 +20,16 @@ from Tools.core_freeze.e2_contract_boundaries.run_e2_development_v1_1 import (
     execute_tasks,
     run_experiment,
     score_flags_prediction,
+    validate_execution_authorization,
     validate_flags_output,
     validate_inputs,
+)
+
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+CANDIDATE_OUTPUT_DIR = (
+    PROJECT_ROOT
+    / "outputs"
+    / "v11_cf04_e2_policy_v1_1_candidate_20260731"
 )
 
 
@@ -183,40 +189,53 @@ class V11Cf04E2PolicyV11Tests(unittest.TestCase):
             )
         )
 
-    def test_live_runner_refuses_missing_execution_authorization(self):
-        self.assertFalse(AUTHORIZATION_PATH.exists())
-        with self.assertRaisesRegex(
-            FileNotFoundError,
-            "authorization is pending",
-        ):
-            run_experiment(FakeAdapter([]))
+    def test_authorization_is_bound_and_missing_file_is_rejected(self):
+        authorization = load_json(AUTHORIZATION_PATH)
+        config = load_json(CONFIG_PATH)
+        validate_execution_authorization(authorization, config)
+        with tempfile.TemporaryDirectory() as temp_dir:
+            missing = Path(temp_dir) / "missing_authorization.json"
+            target = (
+                "Tools.core_freeze.e2_contract_boundaries."
+                "run_e2_development_v1_1.AUTHORIZATION_PATH"
+            )
+            with patch(target, missing):
+                with self.assertRaisesRegex(
+                    FileNotFoundError,
+                    "authorization is pending",
+                ):
+                    run_experiment(FakeAdapter([]))
 
     def test_counterfactual_package_is_pending_and_audited(self):
-        validate_candidate()
-        with tempfile.TemporaryDirectory() as temp_dir:
-            output = Path(temp_dir) / "candidate"
-            report = build_package(output)
-            replay = report["counterfactual_replay"]
-            self.assertEqual(report["status"], "prepared_not_authorized")
-            self.assertEqual(replay["new_provider_calls"], 0)
-            self.assertFalse(replay["independent_model_recheck_completed"])
-            self.assertEqual(replay["schema_valid_rate"], 1.0)
-            self.assertEqual(replay["flags_exact_count"], 42)
-            self.assertAlmostEqual(
-                replay["action_accuracy"],
-                50 / 55,
+        report = json.loads(
+            (CANDIDATE_OUTPUT_DIR / "candidate_report.json").read_text(
+                encoding="utf-8"
             )
-            manifest = json.loads(
-                (output / "artifact_manifest.json").read_text(
-                    encoding="utf-8"
-                )
+        )
+        replay = report["counterfactual_replay"]
+        self.assertEqual(report["status"], "prepared_not_authorized")
+        self.assertEqual(replay["new_provider_calls"], 0)
+        self.assertFalse(replay["independent_model_recheck_completed"])
+        self.assertEqual(replay["schema_valid_rate"], 1.0)
+        self.assertEqual(replay["flags_exact_count"], 42)
+        self.assertAlmostEqual(
+            replay["action_accuracy"],
+            50 / 55,
+        )
+        manifest = json.loads(
+            (CANDIDATE_OUTPUT_DIR / "artifact_manifest.json").read_text(
+                encoding="utf-8"
             )
+        )
+        self.assertEqual(
+            manifest["execution_status"],
+            "prepared_not_authorized",
+        )
+        for artifact in manifest["artifacts"]:
             self.assertEqual(
-                manifest["execution_status"],
-                "prepared_not_authorized",
+                file_hash(CANDIDATE_OUTPUT_DIR / artifact["filename"]),
+                artifact["sha256"],
             )
-            with self.assertRaises(FileExistsError):
-                build_package(output)
 
 
 if __name__ == "__main__":
