@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1C-TASKSET-V1-DEVELOPMENT-20260731",
+  "status": "passed",
+  "task_count": 24,
+  "condition_count": 6,
+  "scheduled_cells_at_one_repeat": 144,
+  "task_count_by_tool": {
+    "A001": 4,
+    "A002": 4,
+    "A003": 8,
+    "A004": 4,
+    "B019": 4
+  },
+  "policy_action_task_counts": {
+    "ANSWER_WITHOUT_TOOL": 18,
+    "CALL_VERIFIED_TOOL": 6
+  },
+  "evaluation_task_count": 0,
+  "evaluation_split_opened": false,
+  "api_model_runs_performed": false,
+  "runner_sha256": "3b881845d82824b788f3d4c76c5a637625476f57424340339bb509d76656d1dd",
+  "core_frozen": false
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1C-TASKSET-V1-20260731",
+  "validation_status": "passed",
+  "artifacts": [
+    {
+      "filename": "e1c_tasks_v1.json",
+      "sha256": "4e079bab547df3e762b06a765f386e47f7fbdf370093bcc587b9395c968a97cc"
+    },
+    {
+      "filename": "generation_report.json",
+      "sha256": "b6a7267e2b6754cc0f3bc17a4f93931310dfeb62f8288d41759eff29cb5d8ce1"
+    },
+    {
+      "filename": "validation_report.json",
+      "sha256": "e65733d01754ac416df5410d71eae6e494bc4f6bd88c8d3497103e98822b4126"
+    },
+    {
+      "filename": "production_checks.csv",
+      "sha256": "8024eb45a3bda411b3bb07057c34e9f272472e810dea2bcd4f6d7ec029162dc1"
+    },
+    {
+      "filename": "five_tool_schema_snapshot.json",
+      "sha256": "af500aa1df9433b98944ed7a4ece1f1a496bbc6534964e43b822bc5bc737061d"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "filename": "Tools/core_freeze/e1c_end_to_end/protocol_v1.md",
+      "sha256": "6695f491aefc0f44ee42c95ba15ff0dba6c1f9468f6a71503d2915426db3f42d"
+    },
+    {
+      "filename": "Tools/core_freeze/e1c_end_to_end/task_seeds_v1.json",
+      "sha256": "3db418e095cac624216861083f09de710c0015288be02cbb32ee43db99254b88"
+    },
+    {
+      "filename": "Tools/core_freeze/verified_core/contracts_v1.json",
+      "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"
+    },
+    {
+      "filename": "Tools/core_freeze/e1b_v2/candidate_gate_policy_v1.json",
+      "sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5"
+    },
+    {
+      "filename": "outputs/e1b_taskset_v2_20260730/e1b_tasks_v2.json",
+      "sha256": "1193b238ac20ae131f6c97398f5ae4dcdcdc6f937c57973986368f8363afdf03"
+    },
+    {
+      "filename": "Tools/core_freeze/e1c_end_to_end/validate_e1c_tasks.py",
+      "sha256": "402a0eec125789f8e6a248b484683445b74a705bcbbc05b7c61b9df00c145f75"
+    },
+    {
+      "filename": "Tools/core_freeze/e1c_end_to_end/generate_e1c_tasks.py",
+      "sha256": "212dfbb0af7104a77a99bc47d810c24aed2f77419b895d8699687b24b03b6775"
+    }
+  ],
+  "api_model_runs_performed": false,
+  "evaluation_split_opened": false,
+  "core_frozen": false
+}

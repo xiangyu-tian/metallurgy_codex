@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1C-TASKSET-V1-20260731",
+  "generator_version": "e1c-independent-generator-v1.0.0",
+  "generated_at": "2026-07-31T00:00:00+08:00",
+  "atomic_weights": {
+    "H": 1.008,
+    "C": 12.011,
+    "N": 14.007,
+    "O": 15.999,
+    "S": 32.06,
+    "Ca": 40.078,
+    "Fe": 55.845,
+    "Cu": 63.546
+  },
+  "a001_groups": [
+    {"group_id": "E1C-A001-KG-G", "split": "runner_development", "source_unit": "kg", "target_unit": "g", "factor": 1000.0, "offset": 0.0, "values": [0.00375, 48.25]},
+    {"group_id": "E1C-A001-MPA-PA", "split": "runner_development", "source_unit": "MPa", "target_unit": "Pa", "factor": 1000000.0, "offset": 0.0, "values": [0.00275, 6.125]},
+    {"group_id": "E1C-A001-ATM-PA", "split": "end_to_end_evaluation", "source_unit": "atm", "target_unit": "Pa", "factor": 101325.0, "offset": 0.0, "values": [0.73, 1.85]},
+    {"group_id": "E1C-A001-C-K", "split": "end_to_end_evaluation", "source_unit": "°C", "target_unit": "K", "factor": 1.0, "offset": 273.15, "values": [-17.5, 1234.5]},
+    {"group_id": "E1C-A001-F-C", "split": "end_to_end_evaluation", "source_unit": "°F", "target_unit": "°C", "factor": 0.5555555555555556, "offset": -17.77777777777778, "values": [14.0, 451.0]}
+  ],
+  "a002_groups": [
+    {"group_id": "E1C-A002-01", "split": "runner_development", "formula": "Fe(OH)3", "elements": {"Fe": 1.0, "O": 3.0, "H": 3.0}},
+    {"group_id": "E1C-A002-02", "split": "runner_development", "formula": "Cu2O", "elements": {"Cu": 2.0, "O": 1.0}},
+    {"group_id": "E1C-A002-03", "split": "runner_development", "formula": "CH3COOH", "elements": {"C": 2.0, "H": 4.0, "O": 2.0}},
+    {"group_id": "E1C-A002-04", "split": "runner_development", "formula": "HNO3", "elements": {"H": 1.0, "N": 1.0, "O": 3.0}},
+    {"group_id": "E1C-A002-05", "split": "end_to_end_evaluation", "formula": "CaSO4", "elements": {"Ca": 1.0, "S": 1.0, "O": 4.0}},
+    {"group_id": "E1C-A002-06", "split": "end_to_end_evaluation", "formula": "Fe(NO3)3", "elements": {"Fe": 1.0, "N": 3.0, "O": 9.0}},
+    {"group_id": "E1C-A002-07", "split": "end_to_end_evaluation", "formula": "Cu(OH)2", "elements": {"Cu": 1.0, "O": 2.0, "H": 2.0}},
+    {"group_id": "E1C-A002-08", "split": "end_to_end_evaluation", "formula": "C2H5OH", "elements": {"C": 2.0, "H": 6.0, "O": 1.0}},
+    {"group_id": "E1C-A002-09", "split": "end_to_end_evaluation", "formula": "NH4NO3", "elements": {"N": 2.0, "H": 4.0, "O": 3.0}},
+    {"group_id": "E1C-A002-10", "split": "end_to_end_evaluation", "formula": "Ca(HCO3)2", "elements": {"Ca": 1.0, "H": 2.0, "C": 2.0, "O": 6.0}}
+  ],
+  "a003_groups": [
+    {"group_id": "E1C-A003-01", "split": "runner_development", "formula": "CO2", "elements": {"C": 1.0, "O": 2.0}},
+    {"group_id": "E1C-A003-02", "split": "runner_development", "formula": "H2O", "elements": {"H": 2.0, "O": 1.0}},
+    {"group_id": "E1C-A003-03", "split": "runner_development", "formula": "NO2", "elements": {"N": 1.0, "O": 2.0}},
+    {"group_id": "E1C-A003-04", "split": "runner_development", "formula": "FeS", "elements": {"Fe": 1.0, "S": 1.0}},
+    {"group_id": "E1C-A003-05", "split": "end_to_end_evaluation", "formula": "Cu2O", "elements": {"Cu": 2.0, "O": 1.0}},
+    {"group_id": "E1C-A003-06", "split": "end_to_end_evaluation", "formula": "Fe(OH)3", "elements": {"Fe": 1.0, "O": 3.0, "H": 3.0}},
+    {"group_id": "E1C-A003-07", "split": "end_to_end_evaluation", "formula": "C2H6", "elements": {"C": 2.0, "H": 6.0}},
+    {"group_id": "E1C-A003-08", "split": "end_to_end_evaluation", "formula": "HNO3", "elements": {"H": 1.0, "N": 1.0, "O": 3.0}},
+    {"group_id": "E1C-A003-09", "split": "end_to_end_evaluation", "formula": "CaSO4", "elements": {"Ca": 1.0, "S": 1.0, "O": 4.0}},
+    {"group_id": "E1C-A003-10", "split": "end_to_end_evaluation", "formula": "NH4NO3", "elements": {"N": 2.0, "H": 4.0, "O": 3.0}}
+  ],
+  "a004_groups": [
+    {"group_id": "E1C-A004-DEV-HIGH-1", "split": "runner_development", "variants": [{"matrix": 9999.0, "trace": 1.0}]},
+    {"group_id": "E1C-A004-DEV-HIGH-2", "split": "runner_development", "variants": [{"bulk": 500.0, "minor": 5.0}]},
+    {"group_id": "E1C-A004-DEV-CONTROL-1", "split": "runner_development", "variants": [{"A": 3.0, "B": 2.0}]},
+    {"group_id": "E1C-A004-DEV-CONTROL-2", "split": "runner_development", "variants": [{"A": 0.6, "B": 0.4}]},
+    {"group_id": "E1C-A004-EVAL-HIGH-1", "split": "end_to_end_evaluation", "variants": [{"matrix": 4999.0, "trace": 1.0}]},
+    {"group_id": "E1C-A004-EVAL-HIGH-2", "split": "end_to_end_evaluation", "variants": [{"bulk": 100.0, "trace": 1.0}]},
+    {"group_id": "E1C-A004-EVAL-HIGH-3", "split": "end_to_end_evaluation", "variants": [{"A": 10000.0, "B": 100.0, "C": 1.0}]},
+    {"group_id": "E1C-A004-EVAL-HIGH-4", "split": "end_to_end_evaluation", "variants": [{"major": 2500.0, "minor": 25.0}]},
+    {"group_id": "E1C-A004-EVAL-CONTROL-1", "split": "end_to_end_evaluation", "variants": [{"A": 7.0, "B": 3.0}]},
+    {"group_id": "E1C-A004-EVAL-CONTROL-2", "split": "end_to_end_evaluation", "variants": [{"Fe": 92.0, "C": 5.0, "Si": 3.0}]},
+    {"group_id": "E1C-A004-EVAL-CONTROL-3", "split": "end_to_end_evaluation", "variants": [{"A": 0.25, "B": 0.75}]},
+    {"group_id": "E1C-A004-EVAL-CONTROL-4", "split": "end_to_end_evaluation", "variants": [{"A": 2.0, "B": 2.0, "C": 1.0}]}
+  ],
+  "b019_groups": [
+    {"group_id": "E1C-B019-DEV-1", "split": "runner_development", "overall": 0.46, "phase1": 0.15, "phase2": 0.78},
+    {"group_id": "E1C-B019-DEV-2", "split": "runner_development", "overall": 0.68, "phase1": 0.85, "phase2": 0.25},
+    {"group_id": "E1C-B019-EVAL-1", "split": "end_to_end_evaluation", "overall": 0.31, "phase1": 0.08, "phase2": 0.74},
+    {"group_id": "E1C-B019-EVAL-2", "split": "end_to_end_evaluation", "overall": 0.57, "phase1": 0.2, "phase2": 0.92}
+  ]
+}

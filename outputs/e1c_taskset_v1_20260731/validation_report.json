@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1C-TASKSET-V1-20260731",
+  "status": "passed",
+  "task_count": 60,
+  "production_execution_count": 60,
+  "production_execution_success_count": 60,
+  "production_reference_match_count": 60,
+  "five_tool_schema_count": 5,
+  "five_tool_schema_names": [
+    "A001",
+    "A002",
+    "A003",
+    "A004",
+    "B019"
+  ],
+  "count_by_split": {
+    "end_to_end_evaluation": 36,
+    "runner_development": 24
+  },
+  "call_action_count_by_split": {
+    "runner_development": 6,
+    "end_to_end_evaluation": 10
+  },
+  "e1b_group_overlap_count": 0,
+  "validation_errors": [],
+  "api_model_runs_performed": false,
+  "evaluation_split_opened": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

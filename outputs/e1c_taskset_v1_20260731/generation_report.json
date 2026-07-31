@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1C-TASKSET-V1-20260731",
+  "status": "passed",
+  "task_count": 60,
+  "task_count_by_tool": {
+    "A001": 10,
+    "A002": 10,
+    "A003": 20,
+    "A004": 12,
+    "B019": 8
+  },
+  "task_count_by_split": {
+    "end_to_end_evaluation": 36,
+    "runner_development": 24
+  },
+  "policy_action_count_by_split": {
+    "end_to_end_evaluation::ANSWER_WITHOUT_TOOL": 26,
+    "end_to_end_evaluation::CALL_VERIFIED_TOOL": 10,
+    "runner_development::ANSWER_WITHOUT_TOOL": 18,
+    "runner_development::CALL_VERIFIED_TOOL": 6
+  },
+  "e1b_group_overlap_count": 0,
+  "a003_precision_pair_count": 10,
+  "experimental_condition_count": 6,
+  "api_model_runs_performed": false,
+  "evaluation_split_opened": false,
+  "reference_generation": {
+    "production_tool_code_imported": false,
+    "basis": "frozen seed facts plus independent elementary equations"
+  },
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "production_validation_status": "passed"
+}

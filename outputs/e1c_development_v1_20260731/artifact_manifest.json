@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1C-TASKSET-V1-DEVELOPMENT-20260731",
+  "artifacts": [
+    {
+      "filename": "e1c_development_tasks_v1.json",
+      "sha256": "5417ef798138c448f27c8a7322b1a595caba35759b43ef3cc1c33ca8d754275c"
+    },
+    {
+      "filename": "protocol_v1.md",
+      "sha256": "6695f491aefc0f44ee42c95ba15ff0dba6c1f9468f6a71503d2915426db3f42d"
+    },
+    {
+      "filename": "prompts_v1.json",
+      "sha256": "7868874805e6f119d9f53875b9b713fd1af432d29bec2293fbd2b4a810f322d9"
+    },
+    {
+      "filename": "run_config_development_v1.json",
+      "sha256": "8d3266324bd15a972f91206b40553b6981fc2eb65c420356f17be23b272ee8ad"
+    },
+    {
+      "filename": "candidate_gate_policy_v1.json",
+      "sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5"
+    },
+    {
+      "filename": "development_preparer_source_snapshot.py",
+      "sha256": "3cfe4b351132721afea87c0176cdfdaac12705f6c7af487fb519f3f39b96e7eb"
+    },
+    {
+      "filename": "runner_source_snapshot.py",
+      "sha256": "3b881845d82824b788f3d4c76c5a637625476f57424340339bb509d76656d1dd"
+    },
+    {
+      "filename": "scoring_source_snapshot.py",
+      "sha256": "c33e48c188c31a743e234a3b6e6cdbaed221d582e8d5b74ee430959033685190"
+    },
+    {
+      "filename": "preparation_report.json",
+      "sha256": "3b79b7646dec9da8406ba048458166e49f3abd98717cc12eaada6492864d3a2c"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "filename": "outputs/e1c_taskset_v1_20260731/e1c_tasks_v1.json",
+      "sha256": "4e079bab547df3e762b06a765f386e47f7fbdf370093bcc587b9395c968a97cc"
+    },
+    {
+      "filename": "Tools/core_freeze/e1c_end_to_end/protocol_v1.md",
+      "sha256": "6695f491aefc0f44ee42c95ba15ff0dba6c1f9468f6a71503d2915426db3f42d"
+    },
+    {
+      "filename": "Tools/core_freeze/e1c_end_to_end/prompts_v1.json",
+      "sha256": "7868874805e6f119d9f53875b9b713fd1af432d29bec2293fbd2b4a810f322d9"
+    },
+    {
+      "filename": "Tools/core_freeze/e1c_end_to_end/run_config_development_v1.json",
+      "sha256": "8d3266324bd15a972f91206b40553b6981fc2eb65c420356f17be23b272ee8ad"
+    },
+    {
+      "filename": "Tools/core_freeze/e1b_v2/candidate_gate_policy_v1.json",
+      "sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5"
+    },
+    {
+      "filename": "Tools/core_freeze/e1c_end_to_end/run_e1c.py",
+      "sha256": "3b881845d82824b788f3d4c76c5a637625476f57424340339bb509d76656d1dd"
+    },
+    {
+      "filename": "Tools/core_freeze/e1c_end_to_end/prepare_e1c_development.py",
+      "sha256": "3cfe4b351132721afea87c0176cdfdaac12705f6c7af487fb519f3f39b96e7eb"
+    },
+    {
+      "filename": "Tools/core_freeze/e1b_pilot/e1b_scoring.py",
+      "sha256": "c33e48c188c31a743e234a3b6e6cdbaed221d582e8d5b74ee430959033685190"
+    }
+  ],
+  "evaluation_split_opened": false,
+  "core_frozen": false
+}
