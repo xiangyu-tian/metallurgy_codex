@@ -151,8 +151,8 @@ def audit_model_payloads(values: dict[str, Any]) -> dict[str, Any]:
             }
         )
     return {
-        "schema_version": "1.0-candidate",
-        "audit_id": "E2-HYBRID-SEMANTIC-DEV-PAYLOAD-AUDIT-20260731",
+        "schema_version": "1.2-candidate",
+        "audit_id": "E2-HYBRID-SEMANTIC-DEV-V1.2-PAYLOAD-AUDIT-20260731",
         "task_count": len(rows),
         "status": "passed" if not errors else "failed",
         "forbidden_fields": list(FORBIDDEN_MODEL_FIELDS),
@@ -207,8 +207,8 @@ def build_package(output_dir: Path) -> dict[str, Any]:
         encoding="utf-8",
     )
     report = {
-        "schema_version": "1.0-candidate",
-        "candidate_id": "E2-HYBRID-SEMANTIC-DEV-OPENING-V1.1-20260731",
+        "schema_version": "1.2-candidate",
+        "candidate_id": "E2-HYBRID-SEMANTIC-DEV-OPENING-V1.2-20260731",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "status": "prepared_not_authorized",
         "dataset_id": values["tasks"]["dataset_id"],
@@ -266,7 +266,7 @@ def build_package(output_dir: Path) -> dict[str, Any]:
         report_path,
     ]
     manifest = {
-        "schema_version": "1.0-candidate",
+        "schema_version": "1.2-candidate",
         "candidate_id": report["candidate_id"],
         "source_bindings": {
             "tasks_sha256": file_hash(TASKS_PATH),

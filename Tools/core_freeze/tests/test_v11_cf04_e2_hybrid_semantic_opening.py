@@ -38,7 +38,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 OUTPUT_DIR = (
     PROJECT_ROOT
     / "outputs"
-    / "v11_cf04_e2_hybrid_semantic_dev_opening_v1_1_20260731"
+    / "v11_cf04_e2_hybrid_semantic_dev_opening_v1_2_20260731"
 )
 
 
@@ -131,6 +131,22 @@ class V11Cf04E2HybridSemanticOpeningTests(unittest.TestCase):
         )
         self.assertFalse(score["semantic_schema_valid"])
         self.assertFalse(score["action_correct"])
+
+    def test_semantic_prompt_separates_structural_and_domain_evidence(self):
+        prompts = load_json(PROMPTS_PATH)
+        system = prompts["system"]
+        self.assertIn(
+            "缺失或显式歧义的参数只属于结构层",
+            system,
+        )
+        self.assertIn(
+            "不得从参数字段数量或组成标量数量推断组元数或相数",
+            system,
+        )
+        self.assertIn(
+            "相数、组元数或requested_system的显式不匹配",
+            system,
+        )
 
     def test_offline_perfect_semantic_outputs_score_all_tasks(self):
         (

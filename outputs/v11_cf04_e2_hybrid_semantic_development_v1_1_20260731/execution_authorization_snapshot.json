@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.1",
+  "authorization_id": "E2-HYBRID-SEMANTIC-DEV-V1.1-AUTH-20260731",
+  "decision": "authorized_to_execute_hybrid_semantic_development_v1_1",
+  "authorization_channel": "explicit_user_instruction_in_codex_task",
+  "authorized_at": "2026-07-31T15:47:40.2331311+08:00",
+  "user_statement_normalized": "同意将55条v2合成开发任务、5个对应契约视图和冻结语义提示词发送至https://api.deepseek.com，使用deepseek-v4-flash执行一次开发复核，不调用冶金工具，不访问40条独立验证集。",
+  "run_config_id": "E2-HYBRID-SEMANTIC-DEVELOPMENT-V1.1-20260731",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731",
+  "authorized_task_count": 55,
+  "authorized_repeats": 1,
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "tool_access": "disabled",
+  "validation_dataset_access": "forbidden",
+  "external_data_sharing_authorized": true,
+  "external_data_scope": [
+    "55 synthetic observable E2 v2 development tasks",
+    "corresponding five versioned tool contract views",
+    "frozen E2 hybrid semantic-only prompt"
+  ],
+  "excluded_external_data_scope": [
+    "40-task independent E2 validation candidate",
+    "gold labels and mutation histories",
+    "API credentials",
+    "metallurgical tool outputs"
+  ],
+  "pre_run_git_commit": "588bd0a4bb0d0caf2ecce50b157e222386fadea8",
+  "pre_run_remote": "git@github.com:xiangyu-tian/metallurgy_codex.git",
+  "pre_run_remote_branch": "codex/main",
+  "task_source_sha256": "935ad56c507eded50e824fdfd5bd1e672bbe74e67a52359de5b4be4eba2daebb",
+  "prompt_sha256": "4488c137c40d67c7d92fe73cea536d41166ded26d317a3c4dc66803661c78b2e",
+  "output_schema_sha256": "9d20ae571abc0a7ccb98b64c217b6fe6304028b2159c1d7ed10e50a92186c5cb",
+  "run_config_sha256": "096b229d8e7259edfa167e5a1b27dfeb5e85ca0e74c32b18424ae0668b06a91b",
+  "runner_sha256": "f3304bf867a507ab7cc709623a7c651ad6c628dbe34a4fba33c1f47d686f326a",
+  "advancement_gate_sha256": "8dfc9601dd0cb816aaa2b400690bea6182934ae35ed39b74ccffa760f438165d",
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

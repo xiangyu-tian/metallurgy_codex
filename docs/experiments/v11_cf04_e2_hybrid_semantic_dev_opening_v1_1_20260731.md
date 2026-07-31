@@ -164,3 +164,28 @@ Core Freeze完整回归：
 2. DeepSeek开发执行授权：发送55条v2开发任务、5个契约视图和冻结提示词，使用`deepseek-v4-flash`执行一次，不调用工具，不接触40条验证集。
 
 两项授权相互独立。
+
+## 9. 后续执行状态
+
+两项授权随后均已取得并执行：
+
+```yaml
+git_publish:
+  commit: 588bd0a
+  remote_branch: codex/main
+  status: pushed
+development_run:
+  run_id: E2-HYBRID-SEMANTIC-DEV-F3BA521A42AF4CCD
+  completed_count: 55
+  provider_failure_count: 0
+  gate_checks_passed: 8
+  gate_checks_required: 11
+  decision: revise_on_development_only
+  validation_dataset_access_count: 0
+```
+
+因此，本文件保留为v1.1执行前冻结记录；结果与开发性根因分析见：
+
+`docs/experiments/v11_cf04_e2_hybrid_semantic_development_v1_1_result_20260731.md`
+
+40条独立验证候选未开启。后续仅在55条开发集上形成v1.2修订和新的未授权开启包。
