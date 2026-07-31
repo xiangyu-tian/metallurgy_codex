@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.1",
+  "request_id": "E2-DEV-V1.1-AUTH-REQUEST-20260731",
+  "status": "awaiting_explicit_user_authorization",
+  "requested_decision": "authorized_to_execute_v1_1_development_recheck",
+  "run_config_id": "E2-DEVELOPMENT-RECHECK-V1.1-20260731",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V1-20260731",
+  "requested_task_count": 55,
+  "requested_repeats": 1,
+  "external_data_scope": [
+    "55 synthetic E2 boundary tasks",
+    "corresponding versioned tool contract views",
+    "frozen E2 v1.1 flags-only prompt"
+  ],
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "tool_access": "disabled",
+  "execution_authorization_file": "execution_authorization_development_v1_1.json",
+  "execution_authorization_file_exists": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

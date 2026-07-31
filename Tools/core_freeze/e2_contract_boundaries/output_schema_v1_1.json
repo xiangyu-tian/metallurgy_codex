@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "metallurgy://schemas/e2-readiness-flags-output-v1.1",
+  "title": "E2 readiness fact flags",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["flags"],
+  "properties": {
+    "flags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "missing_parameter",
+          "ambiguous_parameter",
+          "contract_defined_out_of_domain",
+          "contract_defined_unsupported_system",
+          "unavailable",
+          "model_card_defined_ood",
+          "version_mismatch"
+        ]
+      }
+    }
+  }
+}

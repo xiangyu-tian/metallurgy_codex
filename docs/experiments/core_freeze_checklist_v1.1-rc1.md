@@ -39,7 +39,7 @@ v1.1 的 CF 编号重新绑定到可执行真值冻结门槛：
 | CF-01 | 协议与数据规范兼容性 | v1.1研究问题、G1/G2/C1真值、S1限制、数据生产和`core_frozen=false`一致 | `passed` | `outputs/v11_cf01_cf02_audit_20260731/`；8项兼容性检查全部通过 |
 | CF-02 | `verified_core`工具及独立参考 | 至少3个工具；契约字段、来源、适用域、限制、哈希、正常/边界案例和独立参考均通过 | `passed` | A001、A002、A003、A004、B019共5工具；27/27参考案例通过；11项审计检查通过 |
 | CF-03 | E1b基础任务与收益先导 | 基础任务、独立参考、No Tool/Forced Tool对照、重复和防循环划分可复现 | `passed` | 候选证据审计通过；E1b的120基础任务组、240任务和3次重复设计已审批冻结 |
-| CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `in_progress` | 55任务模型开发先导已执行：55/55 API完成；严格Schema有效率23.64%，独立字段诊断flags完全匹配率76.36%、action准确率89.09%；聚合状态映射、多标签优先级及温度/压力/模型卡OOD覆盖待修复 |
+| CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `in_progress` | v1首轮55/55 API完成；v1.1 flags-only候选已准备且反事实回放通过，独立API复核尚未授权；unsupported-system、多标签及温度/压力/模型卡OOD覆盖待验证 |
 | CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 五工具端到端选择已验证；17/50/100/120契约目录与近邻生成仍未完成 |
 | CF-06 | 17/50/100/120 Schema API可行性 | 实测函数数量、Token、上下文、延迟、错误、`tool_choice=none`和供应商限制 | `pending` | 尚未按v1.1 Schema-only目录口径执行 |
 | CF-07 | 数据层级与泄漏审计 | `controlled_confirmatory`、`naturalistic_validation`、`exploratory_domain_cases`分层；家族划分和收益校准/评价隔离通过 | `in_progress` | E1b/E1c受控集已分区；自然验证层和探索层尚未冻结 |
@@ -277,6 +277,19 @@ model_pilot:
   strict_flags_exact_accuracy: 0.2
   diagnostic_flags_exact_accuracy: 0.7636363636363637
   diagnostic_raw_action_accuracy: 0.8909090909090909
+  confirmatory_inference_allowed: false
+policy_v1_1_candidate:
+  status: prepared_not_authorized
+  model_output_fields:
+    - flags
+  derived_fields:
+    - primary_status
+    - action
+  counterfactual_replay_schema_valid_rate: 1.0
+  counterfactual_replay_flags_exact_accuracy: 0.7636363636363637
+  counterfactual_replay_action_accuracy: 0.9090909090909091
+  new_provider_calls: 0
+  independent_model_recheck: pending
   confirmatory_inference_allowed: false
 core_frozen: false
 ```

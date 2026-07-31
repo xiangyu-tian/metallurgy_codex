@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.1",
+  "candidate_id": "E2-FLAGS-ONLY-POLICY-CANDIDATE-V1.1-20260731",
+  "source_bindings": {
+    "task_source_sha256": "4e8b89043fee0faddd8f2ed34c258b5e8531cff9c744c66a56a32568ec622a34",
+    "contracts_sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec",
+    "policy_sha256": "a16c7c359e7ade35965edeb1fe036cf11cb91c01f1ca1b43d7b04b6b0544e519",
+    "previous_run_manifest_sha256": "46d7c8355256946000c79787677c6e4487a4fd199351c5cca364c6536f57c0cd",
+    "previous_analysis_manifest_sha256": "fa38ff4ea9cd2f42d18a8fa6697d145c909f16177651898494cc8ff905cbd735",
+    "builder_sha256": "7b2b2a5d94f1770b05e02faf49b7f80bbe8e36e5671f7f8db175d86bf21e53b4"
+  },
+  "artifacts": [
+    {
+      "filename": "prompt_candidate.json",
+      "sha256": "8e6047010443d1661df96c5f762c9a19dbc9f01a0d57a48588960ed5613a1eac"
+    },
+    {
+      "filename": "output_schema_candidate.json",
+      "sha256": "f8c00f7aa42b2823e3e4efd8c7d74bcfd3f70acb6b7b67185b3c6346f0568840"
+    },
+    {
+      "filename": "run_config_candidate.json",
+      "sha256": "ee95c9c9de0f398aa0b78f422d0e1214272ee3a09c98c6bf4aad1656ecf9016c"
+    },
+    {
+      "filename": "execution_authorization_request.json",
+      "sha256": "db6cd6baa0b2a812f475fc6840bb80aa1bef0ec793018426e59d38da34447f6d"
+    },
+    {
+      "filename": "runner_candidate.py",
+      "sha256": "ae40b0c7ce14a15f5cce399de9f20e3f88e35b351272899eaf8bfe3fb5de6334"
+    },
+    {
+      "filename": "counterfactual_replay_records.jsonl",
+      "sha256": "dcfb5e3d0d41f6b6f0260c09482f885b3f09b362a3286e36aa7af72cda14b2cb"
+    },
+    {
+      "filename": "counterfactual_replay_report.json",
+      "sha256": "085a639abf097502854df6d9d2893be685ce5943030c57d689f48b13f5ac17f1"
+    },
+    {
+      "filename": "candidate_report.json",
+      "sha256": "76727509911266d0c724a981ec04d91a5521d2b3b5ca4daa6ec49116df0c91d8"
+    }
+  ],
+  "execution_status": "prepared_not_authorized",
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}
