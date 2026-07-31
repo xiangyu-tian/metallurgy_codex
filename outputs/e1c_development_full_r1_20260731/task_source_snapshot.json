@@ -1,0 +1,2321 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "E1C-TASKSET-V1-DEVELOPMENT-20260731",
+  "dataset_status": "prepared_development_pre_api",
+  "source_dataset_id": "E1C-TASKSET-V1-20260731",
+  "source_dataset_sha256": "4e079bab547df3e762b06a765f386e47f7fbdf370093bcc587b9395c968a97cc",
+  "protocol_id": "E1C-END-TO-END-PROTOCOL-V1",
+  "protocol_sha256": "6695f491aefc0f44ee42c95ba15ff0dba6c1f9468f6a71503d2915426db3f42d",
+  "prompt_version": "e1c-end-to-end-v1",
+  "frozen_policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+  "frozen_policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+  "required_split": "runner_development",
+  "task_count": 24,
+  "tasks": [
+    {
+      "task_id": "E1C-A001-001",
+      "task_family_id": "E1C-A001",
+      "task_pair_id": "PAIR-E1C-A001-001",
+      "base_task_group_id": "E1C-A001-KG-G",
+      "split": "runner_development",
+      "precision_policy": "contract_numeric",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 3846905847,
+      "problem_text": "请将 0.00375 kg 换算为 g。只返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 0.00375,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "expected_parameters": {
+        "value": 0.00375,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "acceptable_tools": [
+        "A001"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "properties": {
+          "value": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A001-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 3.75,
+            "abs_tol": 1e-09,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent affine conversion: target = source * frozen factor + frozen offset",
+        "expected_checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 3.75,
+            "abs_tol": 1e-09,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A001",
+          "oracle_parameters": {
+            "value": 0.00375,
+            "source_unit": "kg",
+            "target_unit": "g"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-A001-002",
+      "task_family_id": "E1C-A001",
+      "task_pair_id": "PAIR-E1C-A001-002",
+      "base_task_group_id": "E1C-A001-KG-G",
+      "split": "runner_development",
+      "precision_policy": "contract_numeric",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 4217993894,
+      "problem_text": "请将 48.25 kg 换算为 g。只返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 48.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "expected_parameters": {
+        "value": 48.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "acceptable_tools": [
+        "A001"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "properties": {
+          "value": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A001-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 48250.0,
+            "abs_tol": 4.825e-08,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent affine conversion: target = source * frozen factor + frozen offset",
+        "expected_checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 48250.0,
+            "abs_tol": 4.825e-08,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A001",
+          "oracle_parameters": {
+            "value": 48.25,
+            "source_unit": "kg",
+            "target_unit": "g"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-A001-003",
+      "task_family_id": "E1C-A001",
+      "task_pair_id": "PAIR-E1C-A001-003",
+      "base_task_group_id": "E1C-A001-MPA-PA",
+      "split": "runner_development",
+      "precision_policy": "contract_numeric",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 1735219736,
+      "problem_text": "请将 0.00275 MPa 换算为 Pa。只返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 0.00275,
+        "source_unit": "MPa",
+        "target_unit": "Pa"
+      },
+      "expected_parameters": {
+        "value": 0.00275,
+        "source_unit": "MPa",
+        "target_unit": "Pa"
+      },
+      "acceptable_tools": [
+        "A001"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "properties": {
+          "value": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A001-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 2750.0,
+            "abs_tol": 2.75e-09,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent affine conversion: target = source * frozen factor + frozen offset",
+        "expected_checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 2750.0,
+            "abs_tol": 2.75e-09,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A001",
+          "oracle_parameters": {
+            "value": 0.00275,
+            "source_unit": "MPa",
+            "target_unit": "Pa"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-A001-004",
+      "task_family_id": "E1C-A001",
+      "task_pair_id": "PAIR-E1C-A001-004",
+      "base_task_group_id": "E1C-A001-MPA-PA",
+      "split": "runner_development",
+      "precision_policy": "contract_numeric",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A001",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A001-1.0.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 1240611411,
+      "problem_text": "请将 6.125 MPa 换算为 Pa。只返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 6.125,
+        "source_unit": "MPa",
+        "target_unit": "Pa"
+      },
+      "expected_parameters": {
+        "value": 6.125,
+        "source_unit": "MPa",
+        "target_unit": "Pa"
+      },
+      "acceptable_tools": [
+        "A001"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "properties": {
+          "value": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A001-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 6125000.0,
+            "abs_tol": 6.125e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent affine conversion: target = source * frozen factor + frozen offset",
+        "expected_checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 6125000.0,
+            "abs_tol": 6.125e-06,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A001",
+          "oracle_parameters": {
+            "value": 6.125,
+            "source_unit": "MPa",
+            "target_unit": "Pa"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-A002-001",
+      "task_family_id": "E1C-A002",
+      "task_pair_id": "PAIR-E1C-A002-001",
+      "base_task_group_id": "E1C-A002-01",
+      "split": "runner_development",
+      "precision_policy": "exact_stoichiometric_counts",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 1104590565,
+      "problem_text": "解析中性化学式 Fe(OH)3，返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "Fe(OH)3"
+      },
+      "expected_parameters": {
+        "formula": "Fe(OH)3"
+      },
+      "acceptable_tools": [
+        "A002"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "elements"
+        ],
+        "properties": {
+          "elements": {
+            "type": "object"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A002-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "Fe": 1.0,
+              "O": 3.0,
+              "H": 3.0
+            }
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Explicit human-readable stoichiometric counts in frozen seeds",
+        "expected_checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "Fe": 1.0,
+              "O": 3.0,
+              "H": 3.0
+            }
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A002",
+          "oracle_parameters": {
+            "formula": "Fe(OH)3"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-A002-002",
+      "task_family_id": "E1C-A002",
+      "task_pair_id": "PAIR-E1C-A002-002",
+      "base_task_group_id": "E1C-A002-02",
+      "split": "runner_development",
+      "precision_policy": "exact_stoichiometric_counts",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 2615382005,
+      "problem_text": "解析中性化学式 Cu2O，返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "Cu2O"
+      },
+      "expected_parameters": {
+        "formula": "Cu2O"
+      },
+      "acceptable_tools": [
+        "A002"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "elements"
+        ],
+        "properties": {
+          "elements": {
+            "type": "object"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A002-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "Cu": 2.0,
+              "O": 1.0
+            }
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Explicit human-readable stoichiometric counts in frozen seeds",
+        "expected_checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "Cu": 2.0,
+              "O": 1.0
+            }
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A002",
+          "oracle_parameters": {
+            "formula": "Cu2O"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-A002-003",
+      "task_family_id": "E1C-A002",
+      "task_pair_id": "PAIR-E1C-A002-003",
+      "base_task_group_id": "E1C-A002-03",
+      "split": "runner_development",
+      "precision_policy": "exact_stoichiometric_counts",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 866502614,
+      "problem_text": "解析中性化学式 CH3COOH，返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "CH3COOH"
+      },
+      "expected_parameters": {
+        "formula": "CH3COOH"
+      },
+      "acceptable_tools": [
+        "A002"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "elements"
+        ],
+        "properties": {
+          "elements": {
+            "type": "object"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A002-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "C": 2.0,
+              "H": 4.0,
+              "O": 2.0
+            }
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Explicit human-readable stoichiometric counts in frozen seeds",
+        "expected_checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "C": 2.0,
+              "H": 4.0,
+              "O": 2.0
+            }
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A002",
+          "oracle_parameters": {
+            "formula": "CH3COOH"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-A002-004",
+      "task_family_id": "E1C-A002",
+      "task_pair_id": "PAIR-E1C-A002-004",
+      "base_task_group_id": "E1C-A002-04",
+      "split": "runner_development",
+      "precision_policy": "exact_stoichiometric_counts",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A002",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A002-1.0.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 4112621250,
+      "problem_text": "解析中性化学式 HNO3，返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "HNO3"
+      },
+      "expected_parameters": {
+        "formula": "HNO3"
+      },
+      "acceptable_tools": [
+        "A002"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "elements"
+        ],
+        "properties": {
+          "elements": {
+            "type": "object"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A002-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "H": 1.0,
+              "N": 1.0,
+              "O": 3.0
+            }
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Explicit human-readable stoichiometric counts in frozen seeds",
+        "expected_checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "H": 1.0,
+              "N": 1.0,
+              "O": 3.0
+            }
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A002",
+          "oracle_parameters": {
+            "formula": "HNO3"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-A003-001",
+      "task_family_id": "E1C-A003",
+      "task_pair_id": "PAIR-E1C-A003-001",
+      "base_task_group_id": "E1C-A003-01",
+      "split": "runner_development",
+      "precision_policy": "strict_versioned",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 1279532283,
+      "problem_text": "使用冻结原子量（C=12.011，O=15.999）计算 CO2 的摩尔质量。按上述原子量计算并保留4位小数。",
+      "canonical_inputs": {
+        "formula": "CO2"
+      },
+      "expected_parameters": {
+        "formula": "CO2"
+      },
+      "acceptable_tools": [
+        "A003"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "molar_mass"
+        ],
+        "properties": {
+          "molar_mass": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A003-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 44.009,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent sum of explicit stoichiometric counts times frozen atomic weights",
+        "expected_checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 44.009,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A003",
+          "oracle_parameters": {
+            "formula": "CO2"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "CALL_VERIFIED_TOOL",
+        "rule_id": "CGP-V1-STRICT-VERSIONED",
+        "reason_code": "VERSION_BOUND_NUMERIC_EVIDENCE"
+      }
+    },
+    {
+      "task_id": "E1C-A003-002",
+      "task_family_id": "E1C-A003",
+      "task_pair_id": "PAIR-E1C-A003-002",
+      "base_task_group_id": "E1C-A003-01",
+      "split": "runner_development",
+      "precision_policy": "approximate_educational",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 2397749259,
+      "problem_text": "使用冻结原子量（C=12.011，O=15.999）计算 CO2 的摩尔质量。给出近似结果，允许绝对误差不超过0.1 g/mol。",
+      "canonical_inputs": {
+        "formula": "CO2"
+      },
+      "expected_parameters": {
+        "formula": "CO2"
+      },
+      "acceptable_tools": [
+        "A003"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "molar_mass"
+        ],
+        "properties": {
+          "molar_mass": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A003-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 44.009,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent sum of explicit stoichiometric counts times frozen atomic weights",
+        "expected_checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 44.009,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A003",
+          "oracle_parameters": {
+            "formula": "CO2"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-A003-003",
+      "task_family_id": "E1C-A003",
+      "task_pair_id": "PAIR-E1C-A003-003",
+      "base_task_group_id": "E1C-A003-02",
+      "split": "runner_development",
+      "precision_policy": "strict_versioned",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 2540955442,
+      "problem_text": "使用冻结原子量（H=1.008，O=15.999）计算 H2O 的摩尔质量。按上述原子量计算并保留4位小数。",
+      "canonical_inputs": {
+        "formula": "H2O"
+      },
+      "expected_parameters": {
+        "formula": "H2O"
+      },
+      "acceptable_tools": [
+        "A003"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "molar_mass"
+        ],
+        "properties": {
+          "molar_mass": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A003-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 18.015,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent sum of explicit stoichiometric counts times frozen atomic weights",
+        "expected_checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 18.015,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A003",
+          "oracle_parameters": {
+            "formula": "H2O"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "CALL_VERIFIED_TOOL",
+        "rule_id": "CGP-V1-STRICT-VERSIONED",
+        "reason_code": "VERSION_BOUND_NUMERIC_EVIDENCE"
+      }
+    },
+    {
+      "task_id": "E1C-A003-004",
+      "task_family_id": "E1C-A003",
+      "task_pair_id": "PAIR-E1C-A003-004",
+      "base_task_group_id": "E1C-A003-02",
+      "split": "runner_development",
+      "precision_policy": "approximate_educational",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 151392454,
+      "problem_text": "使用冻结原子量（H=1.008，O=15.999）计算 H2O 的摩尔质量。给出近似结果，允许绝对误差不超过0.1 g/mol。",
+      "canonical_inputs": {
+        "formula": "H2O"
+      },
+      "expected_parameters": {
+        "formula": "H2O"
+      },
+      "acceptable_tools": [
+        "A003"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "molar_mass"
+        ],
+        "properties": {
+          "molar_mass": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A003-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 18.015,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent sum of explicit stoichiometric counts times frozen atomic weights",
+        "expected_checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 18.015,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A003",
+          "oracle_parameters": {
+            "formula": "H2O"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-A003-005",
+      "task_family_id": "E1C-A003",
+      "task_pair_id": "PAIR-E1C-A003-005",
+      "base_task_group_id": "E1C-A003-03",
+      "split": "runner_development",
+      "precision_policy": "strict_versioned",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 1993695553,
+      "problem_text": "使用冻结原子量（N=14.007，O=15.999）计算 NO2 的摩尔质量。按上述原子量计算并保留4位小数。",
+      "canonical_inputs": {
+        "formula": "NO2"
+      },
+      "expected_parameters": {
+        "formula": "NO2"
+      },
+      "acceptable_tools": [
+        "A003"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "molar_mass"
+        ],
+        "properties": {
+          "molar_mass": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A003-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 46.005,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent sum of explicit stoichiometric counts times frozen atomic weights",
+        "expected_checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 46.005,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A003",
+          "oracle_parameters": {
+            "formula": "NO2"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "CALL_VERIFIED_TOOL",
+        "rule_id": "CGP-V1-STRICT-VERSIONED",
+        "reason_code": "VERSION_BOUND_NUMERIC_EVIDENCE"
+      }
+    },
+    {
+      "task_id": "E1C-A003-006",
+      "task_family_id": "E1C-A003",
+      "task_pair_id": "PAIR-E1C-A003-006",
+      "base_task_group_id": "E1C-A003-03",
+      "split": "runner_development",
+      "precision_policy": "approximate_educational",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 3125414594,
+      "problem_text": "使用冻结原子量（N=14.007，O=15.999）计算 NO2 的摩尔质量。给出近似结果，允许绝对误差不超过0.1 g/mol。",
+      "canonical_inputs": {
+        "formula": "NO2"
+      },
+      "expected_parameters": {
+        "formula": "NO2"
+      },
+      "acceptable_tools": [
+        "A003"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "molar_mass"
+        ],
+        "properties": {
+          "molar_mass": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A003-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 46.005,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent sum of explicit stoichiometric counts times frozen atomic weights",
+        "expected_checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 46.005,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A003",
+          "oracle_parameters": {
+            "formula": "NO2"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-A003-007",
+      "task_family_id": "E1C-A003",
+      "task_pair_id": "PAIR-E1C-A003-007",
+      "base_task_group_id": "E1C-A003-04",
+      "split": "runner_development",
+      "precision_policy": "strict_versioned",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 514963119,
+      "problem_text": "使用冻结原子量（Fe=55.845，S=32.06）计算 FeS 的摩尔质量。按上述原子量计算并保留4位小数。",
+      "canonical_inputs": {
+        "formula": "FeS"
+      },
+      "expected_parameters": {
+        "formula": "FeS"
+      },
+      "acceptable_tools": [
+        "A003"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "molar_mass"
+        ],
+        "properties": {
+          "molar_mass": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A003-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 87.905,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent sum of explicit stoichiometric counts times frozen atomic weights",
+        "expected_checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 87.905,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A003",
+          "oracle_parameters": {
+            "formula": "FeS"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "CALL_VERIFIED_TOOL",
+        "rule_id": "CGP-V1-STRICT-VERSIONED",
+        "reason_code": "VERSION_BOUND_NUMERIC_EVIDENCE"
+      }
+    },
+    {
+      "task_id": "E1C-A003-008",
+      "task_family_id": "E1C-A003",
+      "task_pair_id": "PAIR-E1C-A003-008",
+      "base_task_group_id": "E1C-A003-04",
+      "split": "runner_development",
+      "precision_policy": "approximate_educational",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A003",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A003-1.0.0",
+      "contract_hash": "4126d82408a6183d6b9a36c66f60e7f25395874cb4663163e5d328e3254d140e",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 3550679984,
+      "problem_text": "使用冻结原子量（Fe=55.845，S=32.06）计算 FeS 的摩尔质量。给出近似结果，允许绝对误差不超过0.1 g/mol。",
+      "canonical_inputs": {
+        "formula": "FeS"
+      },
+      "expected_parameters": {
+        "formula": "FeS"
+      },
+      "acceptable_tools": [
+        "A003"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "molar_mass"
+        ],
+        "properties": {
+          "molar_mass": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A003-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 87.905,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent sum of explicit stoichiometric counts times frozen atomic weights",
+        "expected_checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 87.905,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A003",
+          "oracle_parameters": {
+            "formula": "FeS"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-A004-001",
+      "task_family_id": "E1C-A004",
+      "task_pair_id": "PAIR-E1C-A004-001",
+      "base_task_group_id": "E1C-A004-DEV-HIGH-1",
+      "split": "runner_development",
+      "precision_policy": "six_decimal_components",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 1447101548,
+      "problem_text": "以下组分使用同一基准：{\"matrix\": 9999.0, \"trace\": 1.0}。请归一化各组分，使总和为1；各分量保留6位小数。",
+      "canonical_inputs": {
+        "compositions": {
+          "matrix": 9999.0,
+          "trace": 1.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "matrix": 9999.0,
+          "trace": 1.0
+        }
+      },
+      "acceptable_tools": [
+        "A004"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "normalized"
+        ],
+        "properties": {
+          "normalized": {
+            "type": "object"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A004-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "matrix": 0.9999,
+              "trace": 0.0001
+            }
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent component divided by positive finite sum",
+        "expected_checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "matrix": 0.9999,
+              "trace": 0.0001
+            }
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A004",
+          "oracle_parameters": {
+            "compositions": {
+              "matrix": 9999.0,
+              "trace": 1.0
+            }
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "CALL_VERIFIED_TOOL",
+        "rule_id": "CGP-V1-CONDITIONED-NORMALIZATION",
+        "reason_code": "HIGH_DYNAMIC_RANGE_RESCALING"
+      }
+    },
+    {
+      "task_id": "E1C-A004-002",
+      "task_family_id": "E1C-A004",
+      "task_pair_id": "PAIR-E1C-A004-002",
+      "base_task_group_id": "E1C-A004-DEV-HIGH-2",
+      "split": "runner_development",
+      "precision_policy": "six_decimal_components",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 3906099018,
+      "problem_text": "以下组分使用同一基准：{\"bulk\": 500.0, \"minor\": 5.0}。请归一化各组分，使总和为1；各分量保留6位小数。",
+      "canonical_inputs": {
+        "compositions": {
+          "bulk": 500.0,
+          "minor": 5.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "bulk": 500.0,
+          "minor": 5.0
+        }
+      },
+      "acceptable_tools": [
+        "A004"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "normalized"
+        ],
+        "properties": {
+          "normalized": {
+            "type": "object"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A004-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "bulk": 0.990099,
+              "minor": 0.009901
+            }
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent component divided by positive finite sum",
+        "expected_checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "bulk": 0.990099,
+              "minor": 0.009901
+            }
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A004",
+          "oracle_parameters": {
+            "compositions": {
+              "bulk": 500.0,
+              "minor": 5.0
+            }
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "CALL_VERIFIED_TOOL",
+        "rule_id": "CGP-V1-CONDITIONED-NORMALIZATION",
+        "reason_code": "HIGH_DYNAMIC_RANGE_RESCALING"
+      }
+    },
+    {
+      "task_id": "E1C-A004-003",
+      "task_family_id": "E1C-A004",
+      "task_pair_id": "PAIR-E1C-A004-003",
+      "base_task_group_id": "E1C-A004-DEV-CONTROL-1",
+      "split": "runner_development",
+      "precision_policy": "six_decimal_components",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 120878396,
+      "problem_text": "以下组分使用同一基准：{\"A\": 3.0, \"B\": 2.0}。请归一化各组分，使总和为1；各分量保留6位小数。",
+      "canonical_inputs": {
+        "compositions": {
+          "A": 3.0,
+          "B": 2.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "A": 3.0,
+          "B": 2.0
+        }
+      },
+      "acceptable_tools": [
+        "A004"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "normalized"
+        ],
+        "properties": {
+          "normalized": {
+            "type": "object"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A004-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "A": 0.6,
+              "B": 0.4
+            }
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent component divided by positive finite sum",
+        "expected_checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "A": 0.6,
+              "B": 0.4
+            }
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A004",
+          "oracle_parameters": {
+            "compositions": {
+              "A": 3.0,
+              "B": 2.0
+            }
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-A004-004",
+      "task_family_id": "E1C-A004",
+      "task_pair_id": "PAIR-E1C-A004-004",
+      "base_task_group_id": "E1C-A004-DEV-CONTROL-2",
+      "split": "runner_development",
+      "precision_policy": "six_decimal_components",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "A004",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-A004-1.0.0",
+      "contract_hash": "92d020c1a85997bd35b69933e4cca4f7f5585aee690e8e146dc253910667f3dc",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 1043988469,
+      "problem_text": "以下组分使用同一基准：{\"A\": 0.6, \"B\": 0.4}。请归一化各组分，使总和为1；各分量保留6位小数。",
+      "canonical_inputs": {
+        "compositions": {
+          "A": 0.6,
+          "B": 0.4
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "A": 0.6,
+          "B": 0.4
+        }
+      },
+      "acceptable_tools": [
+        "A004"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "normalized"
+        ],
+        "properties": {
+          "normalized": {
+            "type": "object"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-A004-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "A": 0.6,
+              "B": 0.4
+            }
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent component divided by positive finite sum",
+        "expected_checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "A": 0.6,
+              "B": 0.4
+            }
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "A004",
+          "oracle_parameters": {
+            "compositions": {
+              "A": 0.6,
+              "B": 0.4
+            }
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-B019-001",
+      "task_family_id": "E1C-B019",
+      "task_pair_id": "PAIR-E1C-B019-001",
+      "base_task_group_id": "E1C-B019-DEV-1",
+      "split": "runner_development",
+      "precision_policy": "fraction_explicit_six_decimal",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 1862320422,
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.46，相1边界成分为 0.15，相2边界成分为 0.78，三者均使用 fraction 标度。计算相1和相2的相分数，结果保留6位小数。",
+      "canonical_inputs": {
+        "overall_composition": 0.46,
+        "phase1_composition": 0.15,
+        "phase2_composition": 0.78,
+        "composition_basis": "fraction"
+      },
+      "expected_parameters": {
+        "overall_composition": 0.46,
+        "phase1_composition": 0.15,
+        "phase2_composition": 0.78,
+        "composition_basis": "fraction"
+      },
+      "acceptable_tools": [
+        "B019"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "phase1_fraction",
+          "phase2_fraction"
+        ],
+        "properties": {
+          "phase1_fraction": {
+            "type": "number"
+          },
+          "phase2_fraction": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-B019-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.507937,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.492063,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent solution of f1+f2=1 and C0=f1*C1+f2*C2",
+        "expected_checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.507937,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.492063,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "B019",
+          "oracle_parameters": {
+            "overall_composition": 0.46,
+            "phase1_composition": 0.15,
+            "phase2_composition": 0.78,
+            "composition_basis": "fraction"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-B019-002",
+      "task_family_id": "E1C-B019",
+      "task_pair_id": "PAIR-E1C-B019-002",
+      "base_task_group_id": "E1C-B019-DEV-1",
+      "split": "runner_development",
+      "precision_policy": "percent_explicit_six_decimal",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 3018495574,
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 46，相1边界成分为 15，相2边界成分为 78，三者均使用 percent 标度。计算相1和相2的相分数，结果保留6位小数。",
+      "canonical_inputs": {
+        "overall_composition": 46.0,
+        "phase1_composition": 15.0,
+        "phase2_composition": 78.0,
+        "composition_basis": "percent"
+      },
+      "expected_parameters": {
+        "overall_composition": 46.0,
+        "phase1_composition": 15.0,
+        "phase2_composition": 78.0,
+        "composition_basis": "percent"
+      },
+      "acceptable_tools": [
+        "B019"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "phase1_fraction",
+          "phase2_fraction"
+        ],
+        "properties": {
+          "phase1_fraction": {
+            "type": "number"
+          },
+          "phase2_fraction": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-B019-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.507937,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.492063,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent solution of f1+f2=1 and C0=f1*C1+f2*C2",
+        "expected_checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.507937,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.492063,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "B019",
+          "oracle_parameters": {
+            "overall_composition": 46.0,
+            "phase1_composition": 15.0,
+            "phase2_composition": 78.0,
+            "composition_basis": "percent"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-B019-003",
+      "task_family_id": "E1C-B019",
+      "task_pair_id": "PAIR-E1C-B019-003",
+      "base_task_group_id": "E1C-B019-DEV-2",
+      "split": "runner_development",
+      "precision_policy": "fraction_explicit_six_decimal",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 1502494434,
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.68，相1边界成分为 0.85，相2边界成分为 0.25，三者均使用 fraction 标度。计算相1和相2的相分数，结果保留6位小数。",
+      "canonical_inputs": {
+        "overall_composition": 0.68,
+        "phase1_composition": 0.85,
+        "phase2_composition": 0.25,
+        "composition_basis": "fraction"
+      },
+      "expected_parameters": {
+        "overall_composition": 0.68,
+        "phase1_composition": 0.85,
+        "phase2_composition": 0.25,
+        "composition_basis": "fraction"
+      },
+      "acceptable_tools": [
+        "B019"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "phase1_fraction",
+          "phase2_fraction"
+        ],
+        "properties": {
+          "phase1_fraction": {
+            "type": "number"
+          },
+          "phase2_fraction": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-B019-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.716667,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.283333,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent solution of f1+f2=1 and C0=f1*C1+f2*C2",
+        "expected_checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.716667,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.283333,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "B019",
+          "oracle_parameters": {
+            "overall_composition": 0.68,
+            "phase1_composition": 0.85,
+            "phase2_composition": 0.25,
+            "composition_basis": "fraction"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    },
+    {
+      "task_id": "E1C-B019-004",
+      "task_family_id": "E1C-B019",
+      "task_pair_id": "PAIR-E1C-B019-004",
+      "base_task_group_id": "E1C-B019-DEV-2",
+      "split": "runner_development",
+      "precision_policy": "percent_explicit_six_decimal",
+      "data_layer": "controlled_executable_truth",
+      "source_type": "independent_contract_generator",
+      "source_tool_id": "B019",
+      "source_tool_version": "1.0.0",
+      "contract_id": "VC-B019-1.0.0",
+      "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+      "generator_version": "e1c-independent-generator-v1.0.0",
+      "random_seed": 2200314715,
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 68，相1边界成分为 85，相2边界成分为 25，三者均使用 percent 标度。计算相1和相2的相分数，结果保留6位小数。",
+      "canonical_inputs": {
+        "overall_composition": 68.0,
+        "phase1_composition": 85.0,
+        "phase2_composition": 25.0,
+        "composition_basis": "percent"
+      },
+      "expected_parameters": {
+        "overall_composition": 68.0,
+        "phase1_composition": 85.0,
+        "phase2_composition": 25.0,
+        "composition_basis": "percent"
+      },
+      "acceptable_tools": [
+        "B019"
+      ],
+      "answer_schema": {
+        "type": "object",
+        "required": [
+          "phase1_fraction",
+          "phase2_fraction"
+        ],
+        "properties": {
+          "phase1_fraction": {
+            "type": "number"
+          },
+          "phase2_fraction": {
+            "type": "number"
+          }
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1C-B019-PRIMARY-v1",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.716667,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.283333,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "reference_execution": {
+        "oracle_version": "independent-equations-v2",
+        "oracle_basis": "Independent solution of f1+f2=1 and C0=f1*C1+f2*C2",
+        "expected_checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.716667,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.283333,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ],
+        "production_code_imported": false
+      },
+      "conditions": [
+        {
+          "condition": "no_tool",
+          "tool_access": "disabled",
+          "oracle_parameters": null
+        },
+        {
+          "condition": "forced_verified_oracle_parameters",
+          "tool_access": "forced",
+          "forced_tool_id": "B019",
+          "oracle_parameters": {
+            "overall_composition": 68.0,
+            "phase1_composition": 85.0,
+            "phase2_composition": 25.0,
+            "composition_basis": "percent"
+          }
+        }
+      ],
+      "confirmatory_eligibility": "e1c_development_candidate",
+      "frozen_policy_decision": {
+        "policy_id": "E1B-CANDIDATE-GATE-POLICY-V1",
+        "policy_version": "1.0.0",
+        "policy_sha256": "4d34ddc0a8d53d46f0aabf1469469dab243b9ddb6c03a5e8e849b9763801c1d5",
+        "action": "ANSWER_WITHOUT_TOOL",
+        "rule_id": "DEFAULT",
+        "reason_code": "NO_DEVELOPMENT_BENEFIT_RULE_MATCHED"
+      }
+    }
+  ],
+  "evaluation_split_opened": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

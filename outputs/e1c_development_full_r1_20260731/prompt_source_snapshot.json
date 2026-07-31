@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "prompt_version": "e1c-end-to-end-v1",
+  "answer_system": "你正在参加机器可评分的科学计算实验。只返回一个符合给定答案Schema的JSON对象，不要使用Markdown代码块，不要添加解释。所有数值必须是JSON number，不能写入单位字符串。",
+  "no_tool_instruction": "本条件禁止使用任何外部工具；请直接作答。",
+  "boundary_policy": "冻结调用边界：仅在以下情况调用验证工具：(1) 结果受题目明确给出的冻结版本常数约束且要求窄容差；(2) 组分归一化需要重标度、非零分量动态范围至少为100且要求六位小数。普通单位换算、中性化学式计数、教学近似摩尔质量、普通组分归一化和简单二元杠杆规则应直接回答。",
+  "gate_system": "先依据冻结调用边界判断是否调用工具。只返回一个JSON对象。需要调用时返回 {\"action\":\"CALL_VERIFIED_TOOL\"}；不需要调用时返回 {\"action\":\"ANSWER_WITHOUT_TOOL\",\"answer\":<符合答案Schema的JSON对象>}。不得返回其他动作。",
+  "parameter_system": "目标验证工具已经固定。只生成调用该工具所需的参数JSON对象，不要返回工具名、解释或Markdown。",
+  "direct_fc_system": "你可以使用提供的验证工具，也可以直接回答。自行判断是否需要调用；如调用，只调用一个最合适的工具。最终回答必须是符合答案Schema的JSON对象。",
+  "boundary_guided_fc_system": "你可以使用提供的验证工具，也可以直接回答。严格遵守冻结调用边界，自行决定是否调用并选择一个工具。最终回答必须是符合答案Schema的JSON对象。",
+  "tool_result_instruction": "验证工具已经执行。请忠实依据工具结果填写最终JSON，不得改写核心数值，也不要添加解释或Markdown。"
+}
