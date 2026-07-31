@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.3",
+  "authorization_id": "E2-HYBRID-SEMANTIC-DEV-V1.3-AUTH-20260731",
+  "decision": "authorized_to_execute_hybrid_semantic_development_v1_3",
+  "authorization_channel": "explicit_user_instruction_in_codex_task",
+  "authorized_at": "2026-07-31T17:13:43.8510865+08:00",
+  "user_statement_normalized": "同意将同一55条开发任务、5个契约视图和v1.3冻结提示词发送至https://api.deepseek.com，使用deepseek-v4-flash执行一次开发复核，不调用冶金工具，不访问40条独立验证集。",
+  "run_config_id": "E2-HYBRID-SEMANTIC-DEVELOPMENT-V1.3-20260731",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731",
+  "authorized_task_count": 55,
+  "authorized_repeats": 1,
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "tool_access": "disabled",
+  "validation_dataset_access": "forbidden",
+  "external_data_sharing_authorized": true,
+  "external_data_scope": [
+    "55 synthetic observable E2 v2 development tasks",
+    "corresponding five versioned tool contract views",
+    "revised E2 hybrid semantic-only v1.3 prompt"
+  ],
+  "excluded_external_data_scope": [
+    "40-task independent E2 validation candidate",
+    "gold labels and mutation histories",
+    "API credentials",
+    "metallurgical tool outputs"
+  ],
+  "pre_run_git_commit": "9f2e264b97e065849f0e31f25b3f7572d9e13253",
+  "pre_run_remote": "git@github.com:xiangyu-tian/metallurgy_codex.git",
+  "pre_run_remote_branch": "codex/main",
+  "task_source_sha256": "935ad56c507eded50e824fdfd5bd1e672bbe74e67a52359de5b4be4eba2daebb",
+  "prompt_sha256": "9cc49fd63d8623c123173a711c642b4eaf4ea3769cf9d96eecd5b0d166dc866e",
+  "output_schema_sha256": "9d20ae571abc0a7ccb98b64c217b6fe6304028b2159c1d7ed10e50a92186c5cb",
+  "run_config_sha256": "7ed97e1823e89fdd8e60c9e61faefe705e7a189b21832a4aa625184341ce282a",
+  "runner_sha256": "4ee1a2519ecf6060a8a6fc85d1f702e375fa5a6ba0d4118bb087b0114cd5aa70",
+  "advancement_gate_sha256": "8dfc9601dd0cb816aaa2b400690bea6182934ae35ed39b74ccffa760f438165d",
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

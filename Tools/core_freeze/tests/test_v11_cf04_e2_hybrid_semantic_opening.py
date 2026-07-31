@@ -26,6 +26,8 @@ from Tools.core_freeze.e2_contract_boundaries.run_e2_hybrid_semantic_development
     OUTPUT_SCHEMA_PATH,
     PROMPTS_PATH,
     TASKS_PATH,
+    build_semantic_messages,
+    build_semantic_request_view,
     execute_tasks,
     expected_semantic_flags,
     run_experiment,
@@ -38,7 +40,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 OUTPUT_DIR = (
     PROJECT_ROOT
     / "outputs"
-    / "v11_cf04_e2_hybrid_semantic_dev_opening_v1_3_20260731"
+    / "v11_cf04_e2_hybrid_semantic_dev_opening_v1_4_20260731"
 )
 
 
@@ -156,13 +158,117 @@ class V11Cf04E2HybridSemanticOpeningTests(unittest.TestCase):
             system,
         )
         self.assertIn(
-            "只有request_context中的requested_system、requested_phase_count或requested_component_count",
+            "只有explicit_domain_evidence中requested_system.status=unsupported",
             system,
         )
         self.assertIn(
             "参数值、单位对、语法、元素集、组成范围或verification_scope违反仍是contract_defined_out_of_domain",
             system,
         )
+        self.assertIn(
+            "当前结构化请求中的deterministic_context",
+            system,
+        )
+
+    def test_semantic_payload_exposes_deterministic_domain_context(self):
+        (
+            tasks,
+            contracts,
+            prompts,
+            _schema,
+            _base_policy,
+            hybrid_policy,
+            _config,
+        ) = self._inputs()
+        task = next(
+            row
+            for row in tasks["tasks"]
+            if row["task_id"] == "E2V2-B019-01"
+        )
+        contract = next(
+            row
+            for row in contracts["contracts"]
+            if row["tool_id"] == "B019"
+        )
+        view = build_semantic_request_view(
+            task,
+            contract,
+            hybrid_policy,
+        )
+        context = view["deterministic_context"]
+        evidence = context["explicit_domain_evidence"]
+        self.assertEqual(
+            evidence["requested_system"]["status"],
+            "supported",
+        )
+        self.assertEqual(
+            evidence["requested_phase_count"]["status"],
+            "not_provided",
+        )
+        self.assertEqual(
+            evidence["requested_component_count"]["status"],
+            "not_provided",
+        )
+        self.assertFalse(
+            context["parameter_field_count_is_domain_count"]
+        )
+        messages = build_semantic_messages(
+            task,
+            contract,
+            prompts,
+            hybrid_policy,
+        )
+        self.assertIn('"deterministic_context"', messages[1]["content"])
+
+    def test_semantic_payload_identifies_structural_paths_without_gold(self):
+        (
+            tasks,
+            contracts,
+            _prompts,
+            _schema,
+            _base_policy,
+            hybrid_policy,
+            _config,
+        ) = self._inputs()
+        contract = next(
+            row
+            for row in contracts["contracts"]
+            if row["tool_id"] == "B019"
+        )
+        ambiguous = next(
+            row
+            for row in tasks["tasks"]
+            if row["task_id"] == "E2V2-B019-03"
+        )
+        missing = next(
+            row
+            for row in tasks["tasks"]
+            if row["task_id"] == "E2V2-B019-08"
+        )
+        ambiguous_context = build_semantic_request_view(
+            ambiguous,
+            contract,
+            hybrid_policy,
+        )["deterministic_context"]
+        missing_context = build_semantic_request_view(
+            missing,
+            contract,
+            hybrid_policy,
+        )["deterministic_context"]
+        self.assertEqual(
+            ambiguous_context["ambiguous_parameter_paths"],
+            ["parameters.overall_composition"],
+        )
+        self.assertEqual(
+            missing_context["missing_required_inputs"],
+            ["composition_basis"],
+        )
+        serialized = json.dumps(
+            [ambiguous_context, missing_context],
+            ensure_ascii=False,
+        )
+        self.assertNotIn("expected_flags", serialized)
+        self.assertNotIn("policy_expected_action", serialized)
 
     def test_offline_perfect_semantic_outputs_score_all_tasks(self):
         (

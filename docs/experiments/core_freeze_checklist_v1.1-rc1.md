@@ -436,12 +436,41 @@ hybrid_semantic_development_result_v1_2:
   validation_dataset_may_be_opened: false
 hybrid_semantic_development_opening_v1_3:
   candidate_id: E2-HYBRID-SEMANTIC-DEV-OPENING-V1.3-20260731
-  status: prepared_not_authorized
+  status: executed_gate_failed
   revision_scope:
     - structural and semantic flags remain independently observable
     - all-invalid ambiguity candidates retain semantic boundary flags
     - unavailable/version mismatch do not suppress semantic inspection
     - unsupported-system evidence is limited to explicit request-context system/count mismatches
+  source_dataset: E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731
+  task_count: 55
+  advancement_gate_id: E2-HYBRID-SEMANTIC-DEVELOPMENT-GATE-V1
+  external_api_calls: 55
+  external_api_execution_authorized: true
+  validation_dataset_access: forbidden
+  confirmatory_inference_allowed: false
+hybrid_semantic_development_result_v1_3:
+  run_id: E2-HYBRID-SEMANTIC-DEV-9D67593DA79A4522
+  completed_count: 55
+  provider_failure_count: 0
+  semantic_supported_flag_macro_f1: 0.9166666666666667
+  merged_flags_exact_count: 49
+  action_correct_count: 54
+  out_of_domain_recall: 1.0
+  unsupported_system_recall: 1.0
+  premature_call_count: 0
+  validation_dataset_access_count: 0
+  advancement_checks_passed: 10
+  advancement_checks_required: 11
+  decision: revise_on_development_only
+  validation_dataset_may_be_opened: false
+hybrid_semantic_development_opening_v1_4:
+  candidate_id: E2-HYBRID-SEMANTIC-DEV-OPENING-V1.4-20260731
+  status: prepared_not_authorized
+  architecture_revision:
+    - deterministic structural flags and affected paths are exposed to the semantic layer
+    - explicit requested-system/phase/component match status is exposed without gold labels
+    - parameter field count is explicitly marked as not a domain count
   source_dataset: E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731
   task_count: 55
   advancement_gate_id: E2-HYBRID-SEMANTIC-DEVELOPMENT-GATE-V1

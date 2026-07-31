@@ -1,0 +1,13 @@
+{
+  "completed_count": 55,
+  "provider_failure_count": 0,
+  "semantic_schema_valid_count": 55,
+  "structural_flags_exact_count": 55,
+  "semantic_supported_flag_macro_f1": 0.9166666666666667,
+  "merged_flags_exact_count": 49,
+  "action_correct_count": 54,
+  "contract_defined_out_of_domain_recall": 1.0,
+  "contract_defined_unsupported_system_recall": 1.0,
+  "premature_call_count": 0,
+  "validation_dataset_access_count": 0
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0-development",
+  "run_id": "E2-HYBRID-SEMANTIC-DEV-9D67593DA79A4522",
+  "run_config_id": "E2-HYBRID-SEMANTIC-DEVELOPMENT-V1.3-20260731",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731",
+  "generated_at": "2026-07-31T09:15:35.856006+00:00",
+  "source_bindings": {
+    "decision": "authorized_to_execute_hybrid_semantic_development_v1_3",
+    "run_config_id": "E2-HYBRID-SEMANTIC-DEVELOPMENT-V1.3-20260731",
+    "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731",
+    "authorized_task_count": 55,
+    "authorized_repeats": 1,
+    "endpoint": "https://api.deepseek.com",
+    "model": "deepseek-v4-flash",
+    "tool_access": "disabled",
+    "validation_dataset_access": "forbidden",
+    "task_source_sha256": "935ad56c507eded50e824fdfd5bd1e672bbe74e67a52359de5b4be4eba2daebb",
+    "prompt_sha256": "9cc49fd63d8623c123173a711c642b4eaf4ea3769cf9d96eecd5b0d166dc866e",
+    "output_schema_sha256": "9d20ae571abc0a7ccb98b64c217b6fe6304028b2159c1d7ed10e50a92186c5cb",
+    "run_config_sha256": "7ed97e1823e89fdd8e60c9e61faefe705e7a189b21832a4aa625184341ce282a",
+    "runner_sha256": "4ee1a2519ecf6060a8a6fc85d1f702e375fa5a6ba0d4118bb087b0114cd5aa70",
+    "advancement_gate_sha256": "8dfc9601dd0cb816aaa2b400690bea6182934ae35ed39b74ccffa760f438165d",
+    "execution_authorization_sha256": "77d0e014594bc053421361e43f2e2846d13caac049ee058331a332b5ca8efd79"
+  },
+  "adapter_configuration": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "openai_base_url": "https://api.deepseek.com",
+    "thinking": "disabled",
+    "api_key_configured": true
+  },
+  "summary": {
+    "status": "completed",
+    "cell_count": 55,
+    "completed_count": 55,
+    "provider_failure_count": 0,
+    "retried_cell_count": 0,
+    "semantic_schema_valid_rate": 1.0,
+    "semantic_schema_valid_count": 55,
+    "structural_flags_exact_count": 55,
+    "structural_flags_exact_accuracy": 1.0,
+    "semantic_flags_exact_accuracy": 0.8909090909090909,
+    "mean_semantic_flags_jaccard": 0.9,
+    "semantic_supported_flag_macro_f1": 0.9166666666666667,
+    "semantic_flag_metrics": {
+      "contract_defined_out_of_domain": {
+        "true_positive": 15,
+        "false_positive": 6,
+        "false_negative": 0,
+        "f1": 0.8333333333333334
+      },
+      "contract_defined_unsupported_system": {
+        "true_positive": 6,
+        "false_positive": 0,
+        "false_negative": 0,
+        "f1": 1.0
+      }
+    },
+    "merged_flags_exact_accuracy": 0.8909090909090909,
+    "merged_flags_exact_count": 49,
+    "action_accuracy": 0.9818181818181818,
+    "action_correct_count": 54,
+    "premature_call_count": 0,
+    "predicted_action_counts": {
+      "call": 4,
+      "clarify": 24,
+      "refuse": 27
+    },
+    "model_output_fields": [
+      "semantic_flags"
+    ],
+    "structural_flags_source": "deterministic_checker",
+    "decision_source": "frozen_policy_after_flag_merge"
+  },
+  "validation_dataset_access": "forbidden",
+  "model_policy_revision_allowed_after_open": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

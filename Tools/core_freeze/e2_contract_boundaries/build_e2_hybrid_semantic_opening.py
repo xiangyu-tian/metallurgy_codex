@@ -17,7 +17,6 @@ if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
 from core_freeze.e2_contract_boundaries.run_e2_development import (  # noqa: E402
-    build_messages,
     file_hash,
     load_json,
 )
@@ -32,6 +31,7 @@ from core_freeze.e2_contract_boundaries.run_e2_hybrid_semantic_development impor
     OUTPUT_SCHEMA_PATH,
     PROMPTS_PATH,
     TASKS_PATH,
+    build_semantic_messages,
     validate_inputs,
 )
 
@@ -109,10 +109,11 @@ def audit_model_payloads(values: dict[str, Any]) -> dict[str, Any]:
     rows = []
     errors = []
     for task in values["tasks"]["tasks"]:
-        messages = build_messages(
+        messages = build_semantic_messages(
             task,
             contracts[task["source_tool_id"]],
             values["prompts"],
+            values["hybrid_policy"],
         )
         serialized = json.dumps(messages, ensure_ascii=False)
         visible_text = "\n".join(
@@ -151,8 +152,8 @@ def audit_model_payloads(values: dict[str, Any]) -> dict[str, Any]:
             }
         )
     return {
-        "schema_version": "1.3-candidate",
-        "audit_id": "E2-HYBRID-SEMANTIC-DEV-V1.3-PAYLOAD-AUDIT-20260731",
+        "schema_version": "1.4-candidate",
+        "audit_id": "E2-HYBRID-SEMANTIC-DEV-V1.4-PAYLOAD-AUDIT-20260731",
         "task_count": len(rows),
         "status": "passed" if not errors else "failed",
         "forbidden_fields": list(FORBIDDEN_MODEL_FIELDS),
@@ -207,8 +208,8 @@ def build_package(output_dir: Path) -> dict[str, Any]:
         encoding="utf-8",
     )
     report = {
-        "schema_version": "1.3-candidate",
-        "candidate_id": "E2-HYBRID-SEMANTIC-DEV-OPENING-V1.3-20260731",
+        "schema_version": "1.4-candidate",
+        "candidate_id": "E2-HYBRID-SEMANTIC-DEV-OPENING-V1.4-20260731",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "status": "prepared_not_authorized",
         "dataset_id": values["tasks"]["dataset_id"],
@@ -266,7 +267,7 @@ def build_package(output_dir: Path) -> dict[str, Any]:
         report_path,
     ]
     manifest = {
-        "schema_version": "1.3-candidate",
+        "schema_version": "1.4-candidate",
         "candidate_id": report["candidate_id"],
         "source_bindings": {
             "tasks_sha256": file_hash(TASKS_PATH),
