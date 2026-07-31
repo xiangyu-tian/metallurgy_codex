@@ -1,0 +1,14 @@
+﻿mutation_types,task_count,strict_schema_valid_rate,flags_exact_accuracy,raw_action_accuracy,derived_primary_accuracy,derived_action_accuracy
+contract_out_of_domain,5,0.0,1.0,1.0,1.0,1.0
+contract_out_of_domain+unavailable_tool,5,0.2,0.6,1.0,0.8,1.0
+make_parameter_ambiguous,5,0.0,1.0,1.0,1.0,1.0
+make_parameter_ambiguous+contract_out_of_domain,5,0.0,0.0,0.2,0.2,0.2
+make_unit_ambiguous,2,0.0,1.0,1.0,1.0,1.0
+ready,5,1.0,1.0,1.0,1.0,1.0
+remove_required_parameter,5,0.0,1.0,1.0,1.0,1.0
+remove_required_parameter+unavailable_tool,5,0.4,0.8,0.6,0.8,0.8
+remove_unit,2,0.0,1.0,1.0,1.0,1.0
+unavailable_tool,5,1.0,1.0,1.0,1.0,1.0
+unsupported_phase,1,0.0,0.0,1.0,1.0,1.0
+unsupported_system,5,0.0,0.2,1.0,1.0,1.0
+version_mismatch,5,0.0,1.0,1.0,1.0,1.0

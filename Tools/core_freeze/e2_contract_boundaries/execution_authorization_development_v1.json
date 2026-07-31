@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "authorization_id": "E2-DEV-AUTH-20260731",
+  "decision": "authorized_to_execute_development_pilot",
+  "authorization_channel": "explicit_user_instruction_in_codex_task",
+  "authorized_at": "2026-07-31T11:40:33.1554441+08:00",
+  "run_config_id": "E2-DEVELOPMENT-PILOT-V1-20260731",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V1-20260731",
+  "authorized_task_count": 55,
+  "authorized_repeats": 1,
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "tool_access": "disabled",
+  "task_source_sha256": "4e8b89043fee0faddd8f2ed34c258b5e8531cff9c744c66a56a32568ec622a34",
+  "prompt_sha256": "0bed6d45dcd2de22052e091a32e6a601c800b5fca69755334e8590f82e8d4217",
+  "output_schema_sha256": "36301e3854cd64287a57389daca997d993c6d40da7df4266fc392ed5d5ae4145",
+  "run_config_sha256": "464c8184b9fb79865618033102a50f36b030e5b8ad0381b16427d80dbb8c8c9c",
+  "runner_sha256": "62e69b1cd3097271597e842efa931f5e4e77caf7b364aab4f2ed0811be9cc5e2",
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

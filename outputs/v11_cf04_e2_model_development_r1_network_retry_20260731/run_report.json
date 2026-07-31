@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "run_id": "E2-DEV-RUN-113954B8E81F4D86",
+  "run_config_id": "E2-DEVELOPMENT-PILOT-V1-20260731",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V1-20260731",
+  "generated_at": "2026-07-31T06:04:11.558658+00:00",
+  "source_bindings": {
+    "task_source_sha256": "4e8b89043fee0faddd8f2ed34c258b5e8531cff9c744c66a56a32568ec622a34",
+    "contracts_sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec",
+    "policy_sha256": "a16c7c359e7ade35965edeb1fe036cf11cb91c01f1ca1b43d7b04b6b0544e519",
+    "prompt_sha256": "0bed6d45dcd2de22052e091a32e6a601c800b5fca69755334e8590f82e8d4217",
+    "output_schema_sha256": "36301e3854cd64287a57389daca997d993c6d40da7df4266fc392ed5d5ae4145",
+    "run_config_sha256": "464c8184b9fb79865618033102a50f36b030e5b8ad0381b16427d80dbb8c8c9c",
+    "execution_authorization_sha256": "60858260b7f1832fcfd503558b3b5c5c5a97fcd04071c2d48ccb2e0a4801fe25",
+    "runner_sha256": "62e69b1cd3097271597e842efa931f5e4e77caf7b364aab4f2ed0811be9cc5e2"
+  },
+  "adapter_configuration": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "openai_base_url": "https://api.deepseek.com",
+    "thinking": "disabled",
+    "api_key_configured": true
+  },
+  "summary": {
+    "cell_count": 55,
+    "completed_count": 55,
+    "provider_failure_count": 0,
+    "retried_cell_count": 0,
+    "schema_valid_count": 13,
+    "schema_valid_rate": 0.23636363636363636,
+    "flags_exact_count": 11,
+    "flags_exact_accuracy": 0.2,
+    "mean_flags_jaccard": 0.21818181818181817,
+    "supported_flag_macro_f1": 0.1415830546265329,
+    "flag_metrics": [
+      {
+        "flag": "missing_parameter",
+        "support": 12,
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 11,
+        "precision": 1.0,
+        "recall": 0.08333333333333333,
+        "f1": 0.15384615384615385
+      },
+      {
+        "flag": "ambiguous_parameter",
+        "support": 12,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "flag": "contract_defined_out_of_domain",
+        "support": 15,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 15,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "flag": "contract_defined_unsupported_system",
+        "support": 6,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "flag": "unavailable",
+        "support": 15,
+        "true_positive": 8,
+        "false_positive": 0,
+        "false_negative": 7,
+        "precision": 1.0,
+        "recall": 0.5333333333333333,
+        "f1": 0.6956521739130436
+      },
+      {
+        "flag": "version_mismatch",
+        "support": 5,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    ],
+    "primary_status_accuracy": 0.18181818181818182,
+    "action_accuracy": 0.2,
+    "by_expected_action": {
+      "call": {
+        "task_count": 5,
+        "correct_count": 5,
+        "accuracy": 1.0,
+        "predicted_action_counts": {
+          "call": 5
+        }
+      },
+      "clarify": {
+        "task_count": 24,
+        "correct_count": 0,
+        "accuracy": 0.0,
+        "predicted_action_counts": {
+          "__INVALID__": 22,
+          "refuse": 2
+        }
+      },
+      "refuse": {
+        "task_count": 26,
+        "correct_count": 6,
+        "accuracy": 0.23076923076923078,
+        "predicted_action_counts": {
+          "__INVALID__": 20,
+          "refuse": 6
+        }
+      }
+    },
+    "invalid_execution_rate": 0.0,
+    "premature_call_rate": 0.0,
+    "out_of_domain_call_rate": 0.0,
+    "provider_attempt_count": 55,
+    "status": "completed",
+    "confirmatory_inference_allowed": false
+  },
+  "model_policy_revision_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

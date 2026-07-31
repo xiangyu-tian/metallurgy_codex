@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "metallurgy://schemas/e2-readiness-output-v1",
+  "title": "E2 readiness decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["flags", "primary_status", "action"],
+  "properties": {
+    "flags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "missing_parameter",
+          "ambiguous_parameter",
+          "contract_defined_out_of_domain",
+          "contract_defined_unsupported_system",
+          "unavailable",
+          "model_card_defined_ood",
+          "version_mismatch"
+        ]
+      }
+    },
+    "primary_status": {
+      "type": "string",
+      "enum": [
+        "missing_or_ambiguous_input",
+        "contract_out_of_domain_or_unsupported",
+        "unavailable",
+        "ready"
+      ]
+    },
+    "action": {
+      "type": "string",
+      "enum": ["call", "clarify", "refuse"]
+    }
+  }
+}

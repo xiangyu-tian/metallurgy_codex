@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "E2-DEVELOPMENT-DIAGNOSTIC-V1-20260731",
+  "source_bindings": {
+    "source_directory": "v11_cf04_e2_model_development_r1_network_retry_20260731",
+    "run_records_sha256": "4ef64eb7ad609d529cdc124cd0f686d92ce7db1ff855df6b42c161f809ab3c5c",
+    "run_report_sha256": "4be06365d9f1cd49d7386338a067383d6e37535765826925b088ad69f4417d67",
+    "source_manifest_sha256": "46d7c8355256946000c79787677c6e4487a4fd199351c5cca364c6536f57c0cd",
+    "analysis_script_sha256": "ed4868e606920dfed20863166d5052cd2fe8544043a17d003d8174087257029d"
+  },
+  "artifacts": [
+    {
+      "filename": "task_diagnostics.csv",
+      "sha256": "125fb313360b55873c4bb2a57990f86939ca7a83f161dcffe4b7151e58a31f07"
+    },
+    {
+      "filename": "mutation_summary.csv",
+      "sha256": "161c616ff4144c91af2cba18b680e587786a52b1425e866d86651087a671b703"
+    },
+    {
+      "filename": "analysis_report.json",
+      "sha256": "21cb9e86404bc2c028067bfdea7e70c4eabe9e08c85033429fe84531fd7b4f51"
+    }
+  ],
+  "strict_score_unchanged": true,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

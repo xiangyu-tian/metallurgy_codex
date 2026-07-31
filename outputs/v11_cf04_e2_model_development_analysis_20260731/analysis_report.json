@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "E2-DEVELOPMENT-DIAGNOSTIC-V1-20260731",
+  "generated_at": "2026-07-31T06:07:34.224724+00:00",
+  "run_id": "E2-DEV-RUN-113954B8E81F4D86",
+  "run_config_id": "E2-DEVELOPMENT-PILOT-V1-20260731",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V1-20260731",
+  "strict_score_unchanged": true,
+  "strict_summary": {
+    "cell_count": 55,
+    "completed_count": 55,
+    "provider_failure_count": 0,
+    "retried_cell_count": 0,
+    "schema_valid_count": 13,
+    "schema_valid_rate": 0.23636363636363636,
+    "flags_exact_count": 11,
+    "flags_exact_accuracy": 0.2,
+    "mean_flags_jaccard": 0.21818181818181817,
+    "supported_flag_macro_f1": 0.1415830546265329,
+    "flag_metrics": [
+      {
+        "flag": "missing_parameter",
+        "support": 12,
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 11,
+        "precision": 1.0,
+        "recall": 0.08333333333333333,
+        "f1": 0.15384615384615385
+      },
+      {
+        "flag": "ambiguous_parameter",
+        "support": 12,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "flag": "contract_defined_out_of_domain",
+        "support": 15,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 15,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "flag": "contract_defined_unsupported_system",
+        "support": 6,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "flag": "unavailable",
+        "support": 15,
+        "true_positive": 8,
+        "false_positive": 0,
+        "false_negative": 7,
+        "precision": 1.0,
+        "recall": 0.5333333333333333,
+        "f1": 0.6956521739130436
+      },
+      {
+        "flag": "version_mismatch",
+        "support": 5,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    ],
+    "primary_status_accuracy": 0.18181818181818182,
+    "action_accuracy": 0.2,
+    "by_expected_action": {
+      "call": {
+        "task_count": 5,
+        "correct_count": 5,
+        "accuracy": 1.0,
+        "predicted_action_counts": {
+          "call": 5
+        }
+      },
+      "clarify": {
+        "task_count": 24,
+        "correct_count": 0,
+        "accuracy": 0.0,
+        "predicted_action_counts": {
+          "__INVALID__": 22,
+          "refuse": 2
+        }
+      },
+      "refuse": {
+        "task_count": 26,
+        "correct_count": 6,
+        "accuracy": 0.23076923076923078,
+        "predicted_action_counts": {
+          "__INVALID__": 20,
+          "refuse": 6
+        }
+      }
+    },
+    "invalid_execution_rate": 0.0,
+    "premature_call_rate": 0.0,
+    "out_of_domain_call_rate": 0.0,
+    "provider_attempt_count": 55,
+    "status": "completed",
+    "confirmatory_inference_allowed": false
+  },
+  "parsed_field_diagnostic": {
+    "task_count": 55,
+    "flags_well_formed_rate": 1.0,
+    "action_well_formed_rate": 1.0,
+    "primary_status_well_formed_rate": 0.23636363636363636,
+    "flags_exact_count": 42,
+    "flags_exact_accuracy": 0.7636363636363637,
+    "mean_flags_jaccard": 0.8363636363636363,
+    "raw_action_correct_count": 49,
+    "raw_action_accuracy": 0.8909090909090909,
+    "derived_primary_accuracy": 0.8909090909090909,
+    "derived_action_accuracy": 0.9090909090909091,
+    "error_counts": {
+      "action_mismatch": 6,
+      "flags_mismatch": 13,
+      "primary_status_mapping_error": 42,
+      "strict_schema_invalid": 42
+    }
+  },
+  "interpretation": {
+    "primary_observation": "All completed responses were parseable JSON, but many used a fine-grained flag as primary_status instead of the predefined aggregate status.",
+    "secondary_observation": "Remaining semantic errors concentrate in unsupported-system distinction and multi-label retention/priority.",
+    "diagnostic_not_official_rescore": true,
+    "model_policy_revision_allowed_by_run": false,
+    "confirmatory_inference_allowed": false,
+    "core_frozen": false
+  }
+}

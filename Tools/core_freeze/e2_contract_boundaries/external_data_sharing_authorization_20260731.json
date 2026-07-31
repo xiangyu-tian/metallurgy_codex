@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "authorization_id": "E2-EXTERNAL-DATA-SHARING-AUTH-20260731",
+  "authorization_channel": "explicit_user_instruction_in_codex_task",
+  "user_statement": "同意将55条E2合成任务、工具契约片段和冻结提示词发送至DeepSeek API执行单次开发先导。",
+  "scope": {
+    "task_count": 55,
+    "task_content": "synthetic_e2_contract_boundary_tasks",
+    "contract_content": "versioned_tool_contract_views",
+    "prompt_content": "frozen_e2_prompt",
+    "provider": "deepseek",
+    "endpoint": "https://api.deepseek.com",
+    "model": "deepseek-v4-flash",
+    "execution_count": 1,
+    "tool_access": "disabled"
+  },
+  "received_before_execution": true,
+  "recorded_at": "2026-07-31T14:11:16.7686010+08:00",
+  "run_config_id": "E2-DEVELOPMENT-PILOT-V1-20260731",
+  "successful_run_id": "E2-DEV-RUN-113954B8E81F4D86",
+  "successful_run_manifest_sha256": "46d7c8355256946000c79787677c6e4487a4fd199351c5cca364c6536f57c0cd",
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}
