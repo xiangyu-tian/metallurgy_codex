@@ -1,0 +1,20 @@
+{
+  "review_id": "V11-CF05-E3-POST-EQUIVALENCE-REVIEW-BATCH1-V1-20260803",
+  "scope": "development_post_equivalence_review_nonconfirmatory",
+  "status": "post_equivalence_development_review_complete",
+  "exact_equivalent_candidate_count": 1,
+  "implementation_independence_pass_count": 1,
+  "acceptable_tools_candidate_count": 1,
+  "formal_acceptable_tools_admission_count": 0,
+  "development_fixture_candidate_count": 4,
+  "held_out_fixture_count": 0,
+  "formal_neighbor_admission_count": 0,
+  "catalog_increment_count": 0,
+  "filled_relation_slot_count": 0,
+  "remaining_lexical_gap": 30,
+  "remaining_contract_mismatch_gap": 40,
+  "external_api_calls": 0,
+  "formal_pool_generation_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

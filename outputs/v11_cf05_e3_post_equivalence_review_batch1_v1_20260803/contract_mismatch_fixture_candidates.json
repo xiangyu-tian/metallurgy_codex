@@ -1,0 +1,82 @@
+{
+  "review_id": "V11-CF05-E3-POST-EQUIVALENCE-REVIEW-BATCH1-V1-20260803",
+  "fixture_count": 4,
+  "fixtures": [
+    {
+      "provisional_candidate_id": "SRC-PMG-001",
+      "target_tool_id": "A002",
+      "reference_case_id": "VC-A002-B03",
+      "relation_basis": "validation_boundary_mismatch",
+      "equivalence_classification": "not_equivalent_over_frozen_scope",
+      "case_partition": "boundary",
+      "expected_success": false,
+      "candidate_success": true,
+      "candidate_output": {
+        "amounts": {}
+      },
+      "candidate_error_type": null,
+      "comparison_basis": "success_failure_outcome_mismatch",
+      "target_reference_behavior_bound": true,
+      "candidate_mismatch_observed": true,
+      "fixture_status": "development_fixture_candidate_not_held_out",
+      "formal_neighbor_admission": false
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-004",
+      "target_tool_id": "A003",
+      "reference_case_id": "VC-A003-B01",
+      "relation_basis": "input_adapter_unavailable",
+      "equivalence_classification": "not_equivalent_over_frozen_scope",
+      "case_partition": "boundary",
+      "expected_success": false,
+      "candidate_success": null,
+      "candidate_output": null,
+      "candidate_error_type": "ADAPTER_UNAVAILABLE",
+      "comparison_basis": "adapter_unavailable",
+      "target_reference_behavior_bound": true,
+      "candidate_mismatch_observed": true,
+      "fixture_status": "development_fixture_candidate_not_held_out",
+      "formal_neighbor_admission": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-002",
+      "target_tool_id": "A003",
+      "reference_case_id": "VC-A003-N01",
+      "relation_basis": "frozen_atomic_weight_numeric_mismatch",
+      "equivalence_classification": "not_equivalent_over_frozen_scope",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "composition_weight": 159.6882
+      },
+      "candidate_error_type": null,
+      "comparison_basis": "composition_weight_comparison",
+      "target_reference_behavior_bound": true,
+      "candidate_mismatch_observed": true,
+      "fixture_status": "development_fixture_candidate_not_held_out",
+      "formal_neighbor_admission": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-003",
+      "target_tool_id": "A004",
+      "reference_case_id": "VC-A004-B01",
+      "relation_basis": "empty_composition_validation_mismatch",
+      "equivalence_classification": "partial_equivalent_overlap_only",
+      "case_partition": "boundary",
+      "expected_success": false,
+      "candidate_success": true,
+      "candidate_output": {
+        "fractional_amounts": {}
+      },
+      "candidate_error_type": null,
+      "comparison_basis": "success_failure_outcome_mismatch",
+      "target_reference_behavior_bound": true,
+      "candidate_mismatch_observed": true,
+      "fixture_status": "development_fixture_candidate_not_held_out",
+      "formal_neighbor_admission": false
+    }
+  ],
+  "held_out_fixture_count": 0,
+  "formal_neighbor_admission_count": 0
+}

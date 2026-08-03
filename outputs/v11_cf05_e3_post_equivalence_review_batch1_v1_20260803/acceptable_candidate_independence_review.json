@@ -1,0 +1,50 @@
+{
+  "review_id": "V11-CF05-E3-POST-EQUIVALENCE-REVIEW-BATCH1-V1-20260803",
+  "provisional_candidate_id": "SRC-PINT-001",
+  "target_tool_id": "A001",
+  "candidate_distribution": "pint",
+  "target_runtime_sources": [
+    {
+      "path": "Tools/models_core/models_a.py",
+      "sha256": "4de1fa8779bbbb0a76b094fd24e05a8f769bfbce67d953c9094927d0a30389e1",
+      "import_roots": [
+        "__future__",
+        "a001_unit_conversion",
+        "base",
+        "chemical_data",
+        "math",
+        "re",
+        "typing"
+      ],
+      "forbidden_import_hits": []
+    },
+    {
+      "path": "Tools/a001_unit_conversion/converter.py",
+      "sha256": "950742c05553392e134ca13efa7928c9ea930e58d704262087cfdaf06d44b0d3",
+      "import_roots": [
+        "math",
+        "models",
+        "typing",
+        "units"
+      ],
+      "forbidden_import_hits": []
+    },
+    {
+      "path": "Tools/a001_unit_conversion/units.py",
+      "sha256": "4c2e766c6f6e2397ef7c85a7c9d0f74af97e097a9d61b42ee75c8f54420b5207",
+      "import_roots": [
+        "dataclasses",
+        "enum",
+        "typing"
+      ],
+      "forbidden_import_hits": []
+    }
+  ],
+  "implementation_provider_distinct": true,
+  "scientific_function_distinct": false,
+  "acceptable_tools_candidate_over_frozen_scope": true,
+  "formal_registration_required": true,
+  "formal_acceptable_tools_admission": false,
+  "catalog_increment_allowed": false,
+  "decision": "implementation_independent_functionally_equivalent_candidate"
+}

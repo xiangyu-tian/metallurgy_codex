@@ -1,0 +1,26 @@
+{
+  "review_id": "V11-CF05-E3-POST-EQUIVALENCE-REVIEW-BATCH1-V1-20260803",
+  "artifact_count": 4,
+  "artifacts": [
+    {
+      "filename": "acceptable_candidate_independence_review.json",
+      "sha256": "bebf852f55be4856cc4d87a37e7f07c314ef8009ace28ef1d7e0ed1e80d01552",
+      "bytes": 1528
+    },
+    {
+      "filename": "contract_mismatch_fixture_candidates.json",
+      "sha256": "c3dc606463b636551b6598c248d17a7160b84d26a8107e9f48d472b0463b0af6",
+      "bytes": 3183
+    },
+    {
+      "filename": "post_equivalence_review_config_snapshot.json",
+      "sha256": "0577d2f40c1ef03a1c421e69687a1dfaa575285c9d1e4c391c00e4776ae4d4a8",
+      "bytes": 3012
+    },
+    {
+      "filename": "post_equivalence_review_report.json",
+      "sha256": "2303f7269610d0b4666128c69759435e9c130d296ee358a54f25e867a19608f8",
+      "bytes": 790
+    }
+  ]
+}
