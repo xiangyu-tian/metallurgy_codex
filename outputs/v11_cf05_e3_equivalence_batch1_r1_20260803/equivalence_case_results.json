@@ -1,0 +1,406 @@
+{
+  "run_id": "V11-CF05-E3-EQUIVALENCE-BATCH1-R1-20260803",
+  "case_count": 25,
+  "rows": [
+    {
+      "provisional_candidate_id": "SRC-PINT-001",
+      "target_tool_id": "A001",
+      "reference_case_id": "VC-A001-N01",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "converted_value": 1000.0
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": true,
+      "comparison_basis": "numeric_value_comparison"
+    },
+    {
+      "provisional_candidate_id": "SRC-PINT-001",
+      "target_tool_id": "A001",
+      "reference_case_id": "VC-A001-N02",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "converted_value": 2500000.0
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": true,
+      "comparison_basis": "numeric_value_comparison"
+    },
+    {
+      "provisional_candidate_id": "SRC-PINT-001",
+      "target_tool_id": "A001",
+      "reference_case_id": "VC-A001-B01",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "converted_value": 273.15
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": true,
+      "comparison_basis": "numeric_value_comparison"
+    },
+    {
+      "provisional_candidate_id": "SRC-PINT-001",
+      "target_tool_id": "A001",
+      "reference_case_id": "VC-A001-B02",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "converted_value": 5.684341886080802e-14
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": true,
+      "comparison_basis": "numeric_value_comparison"
+    },
+    {
+      "provisional_candidate_id": "SRC-PINT-001",
+      "target_tool_id": "A001",
+      "reference_case_id": "VC-A001-D01",
+      "case_partition": "boundary",
+      "expected_success": false,
+      "adapter_available": true,
+      "candidate_success": false,
+      "candidate_output": null,
+      "candidate_error_type": "DimensionalityError",
+      "candidate_error_message": "Cannot convert from 'kilogram' ([mass]) to 'meter' ([length])",
+      "comparison_pass": true,
+      "comparison_basis": "both_rejected_input"
+    },
+    {
+      "provisional_candidate_id": "SRC-PINT-001",
+      "target_tool_id": "A001",
+      "reference_case_id": "VC-A001-D02",
+      "case_partition": "boundary",
+      "expected_success": false,
+      "adapter_available": true,
+      "candidate_success": false,
+      "candidate_output": null,
+      "candidate_error_type": "UndefinedUnitError",
+      "candidate_error_message": "'not_a_unit' is not defined in the unit registry",
+      "comparison_pass": true,
+      "comparison_basis": "both_rejected_input"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-001",
+      "target_tool_id": "A002",
+      "reference_case_id": "VC-A002-N01",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "amounts": {
+          "Fe": 2.0,
+          "S": 3.0,
+          "O": 12.0
+        }
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": true,
+      "comparison_basis": "element_amount_mapping_comparison"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-001",
+      "target_tool_id": "A002",
+      "reference_case_id": "VC-A002-N02",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "amounts": {
+          "Cu": 1.0,
+          "N": 4.0,
+          "H": 12.0,
+          "S": 1.0,
+          "O": 4.0
+        }
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": true,
+      "comparison_basis": "element_amount_mapping_comparison"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-001",
+      "target_tool_id": "A002",
+      "reference_case_id": "VC-A002-B01",
+      "case_partition": "boundary",
+      "expected_success": false,
+      "adapter_available": true,
+      "candidate_success": false,
+      "candidate_output": null,
+      "candidate_error_type": "ValueError",
+      "candidate_error_message": "abc is an invalid formula!",
+      "comparison_pass": true,
+      "comparison_basis": "both_rejected_input"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-001",
+      "target_tool_id": "A002",
+      "reference_case_id": "VC-A002-B02",
+      "case_partition": "boundary",
+      "expected_success": false,
+      "adapter_available": true,
+      "candidate_success": false,
+      "candidate_output": null,
+      "candidate_error_type": "ValueError",
+      "candidate_error_message": "()2 is an invalid formula!",
+      "comparison_pass": true,
+      "comparison_basis": "both_rejected_input"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-001",
+      "target_tool_id": "A002",
+      "reference_case_id": "VC-A002-B03",
+      "case_partition": "boundary",
+      "expected_success": false,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "amounts": {}
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": false,
+      "comparison_basis": "success_failure_outcome_mismatch"
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-004",
+      "target_tool_id": "A003",
+      "reference_case_id": "VC-A003-N01",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "average_molecular_weight": 159.68699999999998
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": true,
+      "comparison_basis": "average_weight_comparison"
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-004",
+      "target_tool_id": "A003",
+      "reference_case_id": "VC-A003-N02",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "average_molecular_weight": 98.07899999999998
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": false,
+      "comparison_basis": "average_weight_comparison"
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-004",
+      "target_tool_id": "A003",
+      "reference_case_id": "VC-A003-N03",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "average_molecular_weight": 100.086
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": true,
+      "comparison_basis": "average_weight_comparison"
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-004",
+      "target_tool_id": "A003",
+      "reference_case_id": "VC-A003-B01",
+      "case_partition": "boundary",
+      "expected_success": false,
+      "adapter_available": false,
+      "candidate_success": null,
+      "candidate_output": null,
+      "candidate_error_type": "ADAPTER_UNAVAILABLE",
+      "candidate_error_message": "no frozen formula-to-SMILES mapping",
+      "comparison_pass": false,
+      "comparison_basis": "adapter_unavailable"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-002",
+      "target_tool_id": "A003",
+      "reference_case_id": "VC-A003-N01",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "composition_weight": 159.6882
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": false,
+      "comparison_basis": "composition_weight_comparison"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-002",
+      "target_tool_id": "A003",
+      "reference_case_id": "VC-A003-N02",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "composition_weight": 98.07848
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": false,
+      "comparison_basis": "composition_weight_comparison"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-002",
+      "target_tool_id": "A003",
+      "reference_case_id": "VC-A003-N03",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "composition_weight": 100.0869
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": false,
+      "comparison_basis": "composition_weight_comparison"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-002",
+      "target_tool_id": "A003",
+      "reference_case_id": "VC-A003-B01",
+      "case_partition": "boundary",
+      "expected_success": false,
+      "adapter_available": true,
+      "candidate_success": false,
+      "candidate_output": null,
+      "candidate_error_type": "AttributeError",
+      "candidate_error_message": "",
+      "comparison_pass": true,
+      "comparison_basis": "both_rejected_input"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-003",
+      "target_tool_id": "A004",
+      "reference_case_id": "VC-A004-N01",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "fractional_amounts": {
+          "Fe": 0.94,
+          "C": 0.04,
+          "Si": 0.02
+        }
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": true,
+      "comparison_basis": "fractional_mapping_comparison"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-003",
+      "target_tool_id": "A004",
+      "reference_case_id": "VC-A004-M01",
+      "case_partition": "overlap",
+      "expected_success": true,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "fractional_amounts": {
+          "Fe": 0.94,
+          "C": 0.04,
+          "Si": 0.02
+        }
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": true,
+      "comparison_basis": "fractional_mapping_comparison"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-003",
+      "target_tool_id": "A004",
+      "reference_case_id": "VC-A004-B01",
+      "case_partition": "boundary",
+      "expected_success": false,
+      "adapter_available": true,
+      "candidate_success": true,
+      "candidate_output": {
+        "fractional_amounts": {}
+      },
+      "candidate_error_type": null,
+      "candidate_error_message": null,
+      "comparison_pass": false,
+      "comparison_basis": "success_failure_outcome_mismatch"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-003",
+      "target_tool_id": "A004",
+      "reference_case_id": "VC-A004-B02",
+      "case_partition": "boundary",
+      "expected_success": false,
+      "adapter_available": true,
+      "candidate_success": false,
+      "candidate_output": null,
+      "candidate_error_type": "ValueError",
+      "candidate_error_message": "Amounts in Composition cannot be negative!",
+      "comparison_pass": true,
+      "comparison_basis": "both_rejected_input"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-003",
+      "target_tool_id": "A004",
+      "reference_case_id": "VC-A004-B03",
+      "case_partition": "boundary",
+      "expected_success": false,
+      "adapter_available": true,
+      "candidate_success": false,
+      "candidate_output": null,
+      "candidate_error_type": "ValueError",
+      "candidate_error_message": "dictionary update sequence element #1 has length 1; 2 is required",
+      "comparison_pass": true,
+      "comparison_basis": "both_rejected_input"
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-003",
+      "target_tool_id": "A004",
+      "reference_case_id": "VC-A004-B04",
+      "case_partition": "boundary",
+      "expected_success": false,
+      "adapter_available": true,
+      "candidate_success": false,
+      "candidate_output": null,
+      "candidate_error_type": "TypeError",
+      "candidate_error_message": "'<' not supported between instances of 'str' and 'float'",
+      "comparison_pass": true,
+      "comparison_basis": "both_rejected_input"
+    }
+  ]
+}

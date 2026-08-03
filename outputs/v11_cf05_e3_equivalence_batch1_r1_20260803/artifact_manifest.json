@@ -1,0 +1,31 @@
+{
+  "run_id": "V11-CF05-E3-EQUIVALENCE-BATCH1-R1-20260803",
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "filename": "environment_lock_verification.json",
+      "sha256": "6f6a91cb1e8ed476eb92ae0a97fd25155dc1ed81d988e0c1e002308b35dbe460",
+      "bytes": 661
+    },
+    {
+      "filename": "equivalence_candidate_summary.json",
+      "sha256": "ee91852fea448988a0f89d6b819dbbcd08903e587fdaff388fe31f0792784fce",
+      "bytes": 2733
+    },
+    {
+      "filename": "equivalence_case_results.json",
+      "sha256": "1554ff1b312b3d17079f4c1f1ed47680c0877a1006f8a39750d37ed18d086d60",
+      "bytes": 13509
+    },
+    {
+      "filename": "equivalence_execution_config_snapshot.json",
+      "sha256": "6a30d68f6498cbeb7cd3e46793ad3d0fcd9c045cc1cf02de253e1c7c0605e62e",
+      "bytes": 1491
+    },
+    {
+      "filename": "equivalence_run_report.json",
+      "sha256": "c6079aa099f12b843913a879fe335b3f164eb5d19351f02ff2b61b1741e2b6f5",
+      "bytes": 931
+    }
+  ]
+}

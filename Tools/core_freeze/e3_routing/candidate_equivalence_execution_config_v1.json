@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "run_id": "V11-CF05-E3-EQUIVALENCE-BATCH1-R1-20260803",
+  "scope": "development_candidate_validation_nonconfirmatory",
+  "equivalence_plan_path": "outputs/v11_cf05_e3_candidate_contract_package_batch1_v1_20260803/candidate_equivalence_test_plan.json",
+  "equivalence_plan_sha256": "a8e157f25e967cd093823b553d84c40d6f56d998feb3bd0c29b341653df6bec4",
+  "reference_cases_path": "Tools/core_freeze/verified_core/reference_cases_v1.json",
+  "reference_cases_sha256": "8efabe718a67e34d471921735461f654d5541559dbe5e322b7172d0250367d1f",
+  "requirements_lock_path": "Tools/core_freeze/e3_routing/candidate_validation_requirements_lock.txt",
+  "requirements_lock_sha256": "cf7e10e2217306bb3516875eca513ee085be7ca57b5225777fd16cfa1331c0b3",
+  "expected_python_version": "3.11.15",
+  "expected_top_level_versions": {
+    "pint": "0.25.3",
+    "rdkit": "2026.3.4",
+    "pymatgen": "2026.5.4",
+    "pymatgen-core": "2026.7.31",
+    "pycalphad": "0.11.2"
+  },
+  "local_candidate_execution_authorized": true,
+  "authorization_basis": "user message on 2026-08-03: 可以，继续吧",
+  "external_api_calls_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "unit_aliases": {
+    "掳C": "degC",
+    "掳F": "degF"
+  },
+  "formula_to_smiles_probe_mapping": {
+    "Fe2O3": "[Fe+3].[Fe+3].[O-2].[O-2].[O-2]",
+    "H2SO4": "OS(=O)(=O)O",
+    "CaCO3": "[Ca+2].[O-]C([O-])=O"
+  },
+  "formula_to_smiles_mapping_generalizable": false
+}

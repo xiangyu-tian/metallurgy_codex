@@ -8,6 +8,7 @@ Thumbs.db
 *.tar.gz
 venv/
 .venv/
+.venv-e3-candidates/
 .r-runtime/
 __pycache__/
 *.pyc

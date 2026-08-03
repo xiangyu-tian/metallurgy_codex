@@ -1,0 +1,71 @@
+{
+  "run_id": "V11-CF05-E3-EQUIVALENCE-BATCH1-R1-20260803",
+  "candidate_count": 5,
+  "candidates": [
+    {
+      "provisional_candidate_id": "SRC-PINT-001",
+      "target_tool_id": "A001",
+      "case_count": 6,
+      "comparison_pass_count": 6,
+      "comparison_fail_count": 0,
+      "adapter_generalizable_over_target_scope": true,
+      "equivalence_classification": "exact_equivalent_over_frozen_scope",
+      "may_enter_acceptable_tool_set": true,
+      "conditional_acceptable_subdomain_only": false,
+      "may_enter_unacceptable_neighbor_set": false,
+      "neighbor_fixture_still_required": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-001",
+      "target_tool_id": "A002",
+      "case_count": 5,
+      "comparison_pass_count": 4,
+      "comparison_fail_count": 1,
+      "adapter_generalizable_over_target_scope": true,
+      "equivalence_classification": "not_equivalent_over_frozen_scope",
+      "may_enter_acceptable_tool_set": false,
+      "conditional_acceptable_subdomain_only": false,
+      "may_enter_unacceptable_neighbor_set": false,
+      "neighbor_fixture_still_required": true
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-004",
+      "target_tool_id": "A003",
+      "case_count": 4,
+      "comparison_pass_count": 2,
+      "comparison_fail_count": 2,
+      "adapter_generalizable_over_target_scope": false,
+      "equivalence_classification": "not_equivalent_over_frozen_scope",
+      "may_enter_acceptable_tool_set": false,
+      "conditional_acceptable_subdomain_only": false,
+      "may_enter_unacceptable_neighbor_set": false,
+      "neighbor_fixture_still_required": true
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-002",
+      "target_tool_id": "A003",
+      "case_count": 4,
+      "comparison_pass_count": 1,
+      "comparison_fail_count": 3,
+      "adapter_generalizable_over_target_scope": true,
+      "equivalence_classification": "not_equivalent_over_frozen_scope",
+      "may_enter_acceptable_tool_set": false,
+      "conditional_acceptable_subdomain_only": false,
+      "may_enter_unacceptable_neighbor_set": false,
+      "neighbor_fixture_still_required": true
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-003",
+      "target_tool_id": "A004",
+      "case_count": 6,
+      "comparison_pass_count": 5,
+      "comparison_fail_count": 1,
+      "adapter_generalizable_over_target_scope": false,
+      "equivalence_classification": "partial_equivalent_overlap_only",
+      "may_enter_acceptable_tool_set": false,
+      "conditional_acceptable_subdomain_only": true,
+      "may_enter_unacceptable_neighbor_set": false,
+      "neighbor_fixture_still_required": true
+    }
+  ]
+}

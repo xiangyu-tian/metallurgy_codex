@@ -1,0 +1,26 @@
+{
+  "run_id": "V11-CF05-E3-EQUIVALENCE-BATCH1-R1-20260803",
+  "scope": "development_candidate_validation_nonconfirmatory",
+  "status": "completed_nonconfirmatory_equivalence_evidence",
+  "environment_verification_passed": true,
+  "candidate_count": 5,
+  "case_count": 25,
+  "comparison_pass_count": 18,
+  "comparison_fail_count": 7,
+  "classification_counts": {
+    "exact_equivalent_over_frozen_scope": 1,
+    "not_equivalent_over_frozen_scope": 3,
+    "partial_equivalent_overlap_only": 1
+  },
+  "acceptable_tool_candidate_count": 1,
+  "conditional_subdomain_candidate_count": 1,
+  "unacceptable_neighbor_admission_count": 0,
+  "catalog_increment_count": 0,
+  "filled_relation_slot_count": 0,
+  "remaining_lexical_gap": 30,
+  "remaining_contract_mismatch_gap": 40,
+  "external_api_calls": 0,
+  "confirmatory_inference_allowed": false,
+  "formal_pool_generation_allowed": false,
+  "core_frozen": false
+}

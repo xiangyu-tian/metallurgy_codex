@@ -1,0 +1,20 @@
+{
+  "run_id": "V11-CF05-E3-EQUIVALENCE-BATCH1-R1-20260803",
+  "python_version": "3.11.15",
+  "expected_python_version": "3.11.15",
+  "locked_distribution_count": 59,
+  "installed_distribution_count": 59,
+  "missing_distributions": [],
+  "unexpected_distributions": [],
+  "version_mismatches": [],
+  "top_level_versions": {
+    "pint": "0.25.3",
+    "rdkit": "2026.3.4",
+    "pymatgen": "2026.5.4",
+    "pymatgen-core": "2026.7.31",
+    "pycalphad": "0.11.2"
+  },
+  "top_level_versions_match": true,
+  "requirements_lock_sha256": "cf7e10e2217306bb3516875eca513ee085be7ca57b5225777fd16cfa1331c0b3",
+  "environment_verification_passed": true
+}

@@ -1,0 +1,6 @@
+# Top-level dependencies for the isolated E3 candidate-validation environment.
+# Exact resolved versions are recorded after installation in the generated lock.
+pint
+rdkit
+pymatgen
+pycalphad
