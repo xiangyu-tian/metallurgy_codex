@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0-candidate",
+  "candidate_id": "E2-INDEPENDENT-VALIDATION-OPENING-V1-20260803",
+  "source_bindings": {
+    "run_config_sha256": "ec2898ac871931060f2765de44ef61f444f968ba9fbaafaea4a94e86d7ea27ff",
+    "runner_sha256": "3e025a48ef99b5877abedadea941d90c6f75988de4c2b0dc921dde298c545de0",
+    "authorization_request_sha256": "5689a59872706f518829cfd1a827ed449e2e3c05aa541c8b97775ef8ddafddc7",
+    "validation_manifest_sha256": "038ca57d448036d7da373a3fb5e8d7223d7b462c2042e4c855a80e4d90f4e342",
+    "development_run_manifest_sha256": "02b637be9619aa11d6f714c328427978a2417eea0541455b6bb7635c291a75b3",
+    "development_gate_manifest_sha256": "503a8fb333014dd29bebc431894f3434e0ce421d6487334a099ee6d19c9b4495",
+    "builder_sha256": "3e2b7ec1a40604233187f9d4bb04052d16daad7555d6284b92204a63e0cc2fa9"
+  },
+  "artifacts": [
+    {
+      "filename": "run_config_snapshot.json",
+      "sha256": "ec2898ac871931060f2765de44ef61f444f968ba9fbaafaea4a94e86d7ea27ff"
+    },
+    {
+      "filename": "runner_snapshot.py",
+      "sha256": "3e025a48ef99b5877abedadea941d90c6f75988de4c2b0dc921dde298c545de0"
+    },
+    {
+      "filename": "authorization_request_snapshot.json",
+      "sha256": "5689a59872706f518829cfd1a827ed449e2e3c05aa541c8b97775ef8ddafddc7"
+    },
+    {
+      "filename": "validation_candidate_manifest_snapshot.json",
+      "sha256": "038ca57d448036d7da373a3fb5e8d7223d7b462c2042e4c855a80e4d90f4e342"
+    },
+    {
+      "filename": "development_run_manifest_snapshot.json",
+      "sha256": "02b637be9619aa11d6f714c328427978a2417eea0541455b6bb7635c291a75b3"
+    },
+    {
+      "filename": "development_gate_snapshot.json",
+      "sha256": "72e93c409b66a91dc4f13c471551e522c464e7ebeaba024bbfe3588a51c12a41"
+    },
+    {
+      "filename": "development_gate_manifest_snapshot.json",
+      "sha256": "503a8fb333014dd29bebc431894f3434e0ce421d6487334a099ee6d19c9b4495"
+    },
+    {
+      "filename": "opening_report.json",
+      "sha256": "9e0512646b5fd481124dc943821edf971ec8a14807ec0c82af356c7ec5d2eb0a"
+    }
+  ],
+  "execution_status": "prepared_not_authorized",
+  "external_api_calls": 0,
+  "external_api_execution_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

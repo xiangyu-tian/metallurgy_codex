@@ -39,7 +39,7 @@ v1.1 的 CF 编号重新绑定到可执行真值冻结门槛：
 | CF-01 | 协议与数据规范兼容性 | v1.1研究问题、G1/G2/C1真值、S1限制、数据生产和`core_frozen=false`一致 | `passed` | `outputs/v11_cf01_cf02_audit_20260731/`；8项兼容性检查全部通过 |
 | CF-02 | `verified_core`工具及独立参考 | 至少3个工具；契约字段、来源、适用域、限制、哈希、正常/边界案例和独立参考均通过 | `passed` | A001、A002、A003、A004、B019共5工具；27/27参考案例通过；11项审计检查通过 |
 | CF-03 | E1b基础任务与收益先导 | 基础任务、独立参考、No Tool/Forced Tool对照、重复和防循环划分可复现 | `passed` | 候选证据审计通过；E1b的120基础任务组、240任务和3次重复设计已审批冻结 |
-| CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `in_progress` | 双层门控v1.1开发复核完成但仅通过8/11项晋级检查；40条验证集保持密封；已形成v1.2未授权开发开启包 |
+| CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `in_progress` | v1.4开发复核通过11/11项晋级检查；40条验证集仍密封；下一步为另行授权的独立验证 |
 | CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 五工具端到端选择已验证；17/50/100/120契约目录与近邻生成仍未完成 |
 | CF-06 | 17/50/100/120 Schema API可行性 | 实测函数数量、Token、上下文、延迟、错误、`tool_choice=none`和供应商限制 | `pending` | 尚未按v1.1 Schema-only目录口径执行 |
 | CF-07 | 数据层级与泄漏审计 | `controlled_confirmatory`、`naturalistic_validation`、`exploratory_domain_cases`分层；家族划分和收益校准/评价隔离通过 | `in_progress` | E1b/E1c受控集已分区；自然验证层和探索层尚未冻结 |
@@ -466,7 +466,7 @@ hybrid_semantic_development_result_v1_3:
   validation_dataset_may_be_opened: false
 hybrid_semantic_development_opening_v1_4:
   candidate_id: E2-HYBRID-SEMANTIC-DEV-OPENING-V1.4-20260731
-  status: prepared_not_authorized
+  status: executed_gate_passed
   architecture_revision:
     - deterministic structural flags and affected paths are exposed to the semantic layer
     - explicit requested-system/phase/component match status is exposed without gold labels
@@ -474,9 +474,39 @@ hybrid_semantic_development_opening_v1_4:
   source_dataset: E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731
   task_count: 55
   advancement_gate_id: E2-HYBRID-SEMANTIC-DEVELOPMENT-GATE-V1
+  external_api_calls: 55
+  external_api_execution_authorized: true
+  validation_dataset_access: forbidden
+  confirmatory_inference_allowed: false
+hybrid_semantic_development_result_v1_4:
+  run_id: E2-HYBRID-SEMANTIC-DEV-76C34AE0E04A47FE
+  completed_count: 55
+  provider_failure_count: 0
+  semantic_supported_flag_macro_f1: 0.96875
+  merged_flags_exact_count: 53
+  action_correct_count: 55
+  out_of_domain_recall: 1.0
+  unsupported_system_recall: 1.0
+  premature_call_count: 0
+  validation_dataset_access_count: 0
+  advancement_checks_passed: 11
+  advancement_checks_required: 11
+  decision: advance_to_validation_preparation
+  validation_dataset_may_be_opened: false
+independent_validation_opening_v1:
+  candidate_id: E2-INDEPENDENT-VALIDATION-OPENING-V1-20260803
+  status: prepared_not_authorized
+  task_count: 40
+  conditions:
+    - flags_only_v1_1
+    - hybrid_semantic_v1_4
+  model_run_repeats: 1
+  model_cell_count: 80
+  held_out_task_content_read_by_builder: false
+  held_out_task_content_copied_into_opening: false
   external_api_calls: 0
   external_api_execution_authorized: false
-  validation_dataset_access: forbidden
+  manifest_sha256: a71f3749feb97ae27ceee2e3f94731d869c60b8fb5b2160a14985363cbc875cc
   confirmatory_inference_allowed: false
 core_frozen: false
 ```

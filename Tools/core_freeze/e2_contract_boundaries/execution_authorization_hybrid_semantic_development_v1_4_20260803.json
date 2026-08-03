@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4",
+  "authorization_id": "E2-HYBRID-SEMANTIC-DEV-V1.4-AUTH-20260803",
+  "decision": "authorized_to_execute_hybrid_semantic_development_v1_4",
+  "authorization_channel": "explicit_user_instruction_in_codex_task",
+  "authorized_at": "2026-08-03T09:00:26.6025328+08:00",
+  "user_statement_normalized": "同意将同一55条开发任务、5个契约视图、v1.4冻结提示词及由请求和契约生成的不含金标的deterministic_context发送至https://api.deepseek.com，使用deepseek-v4-flash执行一次开发复核，不调用冶金工具，不访问40条独立验证集。",
+  "run_config_id": "E2-HYBRID-SEMANTIC-DEVELOPMENT-V1.4-20260731",
+  "dataset_id": "E2-CONTRACT-BOUNDARY-PILOT-V2-CANDIDATE-20260731",
+  "authorized_task_count": 55,
+  "authorized_repeats": 1,
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "tool_access": "disabled",
+  "validation_dataset_access": "forbidden",
+  "external_data_sharing_authorized": true,
+  "external_data_scope": [
+    "55 synthetic observable E2 v2 development tasks with deterministic non-gold context",
+    "corresponding five versioned tool contract views",
+    "revised E2 hybrid semantic-only v1.4 prompt"
+  ],
+  "excluded_external_data_scope": [
+    "40-task independent E2 validation candidate",
+    "gold labels and mutation histories",
+    "API credentials",
+    "metallurgical tool outputs"
+  ],
+  "pre_run_git_commit": "8a1a09c9161621e1d027a8b3737f6a7455ddb032",
+  "pre_run_remote": "git@github.com:xiangyu-tian/metallurgy_codex.git",
+  "pre_run_remote_branch": "codex/main",
+  "task_source_sha256": "935ad56c507eded50e824fdfd5bd1e672bbe74e67a52359de5b4be4eba2daebb",
+  "prompt_sha256": "b4e427dc1c9e396ae373811c56561b51cb3922de9b1dc6edea11acbc99b95abf",
+  "output_schema_sha256": "9d20ae571abc0a7ccb98b64c217b6fe6304028b2159c1d7ed10e50a92186c5cb",
+  "run_config_sha256": "ce14af9264c053650f8e7a4c3c229023e1dfa3cc8f77fdc9021852c0c0b0ec04",
+  "runner_sha256": "e21181058c0e1c04109b7e81226e34b0752abba7fd62167f97912454f28f7fdb",
+  "deterministic_context_generator_sha256": "e21181058c0e1c04109b7e81226e34b0752abba7fd62167f97912454f28f7fdb",
+  "advancement_gate_sha256": "8dfc9601dd0cb816aaa2b400690bea6182934ae35ed39b74ccffa760f438165d",
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

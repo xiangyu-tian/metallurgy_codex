@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0-candidate",
+  "authorization_request_id": "E2-INDEPENDENT-VALIDATION-V1-AUTH-REQUEST-20260803",
+  "status": "awaiting_explicit_user_authorization",
+  "requested_decision": "authorized_to_execute_e2_independent_validation_v1",
+  "authorization_channel_required": "explicit_user_instruction_in_codex_task",
+  "run_config_id": "E2-INDEPENDENT-VALIDATION-COMPARISON-V1-20260803",
+  "dataset_id": "E2-INDEPENDENT-SEMANTIC-VALIDATION-V1-CANDIDATE-20260731",
+  "requested_task_count": 40,
+  "requested_condition_count": 2,
+  "requested_repeats": 1,
+  "requested_model_cell_count": 80,
+  "conditions": [
+    "flags_only_v1_1",
+    "hybrid_semantic_v1_4"
+  ],
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "tool_access": "disabled",
+  "validation_dataset_access_requested": "authorized_once",
+  "external_data_scope": [
+    "40 locked independent synthetic E2 request states without gold labels or mutation history",
+    "corresponding five versioned tool contract views",
+    "frozen flags-only v1.1 prompt",
+    "frozen hybrid semantic v1.4 prompt and non-gold deterministic context"
+  ],
+  "excluded_external_data_scope": [
+    "gold labels and expected actions",
+    "mutation histories",
+    "API credentials",
+    "metallurgical tool outputs",
+    "any task outside the locked 40-task candidate"
+  ],
+  "validation_manifest_sha256": "038ca57d448036d7da373a3fb5e8d7223d7b462c2042e4c855a80e4d90f4e342",
+  "task_source_sha256": "a8f0648b392e48de576d1fa5dc1d3f04cb2bc064986070756827eff9e99b6921",
+  "run_config_sha256": "ec2898ac871931060f2765de44ef61f444f968ba9fbaafaea4a94e86d7ea27ff",
+  "runner_sha256": "3e025a48ef99b5877abedadea941d90c6f75988de4c2b0dc921dde298c545de0",
+  "development_run_manifest_sha256": "02b637be9619aa11d6f714c328427978a2417eea0541455b6bb7635c291a75b3",
+  "development_gate_manifest_sha256": "503a8fb333014dd29bebc431894f3434e0ce421d6487334a099ee6d19c9b4495",
+  "development_gate_decision": "advance_to_validation_preparation",
+  "execution_authorization_file_exists": false,
+  "external_api_execution_authorized": false,
+  "model_execution_count": 0,
+  "gold_labels_sent": false,
+  "mutation_history_sent": false,
+  "model_policy_revision_allowed_after_open": false,
+  "model_performance_claim_allowed_before_execution": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}
