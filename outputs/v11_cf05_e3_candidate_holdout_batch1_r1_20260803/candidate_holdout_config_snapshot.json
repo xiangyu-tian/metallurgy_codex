@@ -1,0 +1,147 @@
+{
+  "run_id": "V11-CF05-E3-CANDIDATE-HOLDOUT-BATCH1-R1-20260803",
+  "scope": "post_equivalence_input_holdout_nonconfirmatory",
+  "bindings": [
+    {
+      "path": "Tools/core_freeze/verified_core/reference_cases_v1.json",
+      "sha256": "8efabe718a67e34d471921735461f654d5541559dbe5e322b7172d0250367d1f"
+    },
+    {
+      "path": "Tools/core_freeze/e3_routing/candidate_validation_requirements_lock.txt",
+      "sha256": "cf7e10e2217306bb3516875eca513ee085be7ca57b5225777fd16cfa1331c0b3"
+    },
+    {
+      "path": "outputs/v11_cf05_e3_post_equivalence_review_batch1_v1_20260803/artifact_manifest.json",
+      "sha256": "e7dedf537cc505de2a38009de773de1055a2cf0773e104e2e3b92f9a3f89596b"
+    }
+  ],
+  "pint_contract_path": "Tools/core_freeze/e3_routing/pint_acceptable_candidate_contract_v1.json",
+  "pint_contract_sha256": "768ef6a6cba63f92cf4b1c66d879511463b4f34c48241d5ade2eabf9a0056bc2",
+  "acceptable_equivalence_cases": [
+    {
+      "case_id": "E3-HO-PINT-001",
+      "target_tool_id": "A001",
+      "candidate_id": "SRC-PINT-001",
+      "input": {
+        "value": 2.75,
+        "source_unit": "kg",
+        "target_unit": "g"
+      }
+    },
+    {
+      "case_id": "E3-HO-PINT-002",
+      "target_tool_id": "A001",
+      "candidate_id": "SRC-PINT-001",
+      "input": {
+        "value": 0.125,
+        "source_unit": "t",
+        "target_unit": "kg"
+      }
+    },
+    {
+      "case_id": "E3-HO-PINT-003",
+      "target_tool_id": "A001",
+      "candidate_id": "SRC-PINT-001",
+      "input": {
+        "value": 0.0075,
+        "source_unit": "m",
+        "target_unit": "mm"
+      }
+    },
+    {
+      "case_id": "E3-HO-PINT-004",
+      "target_tool_id": "A001",
+      "candidate_id": "SRC-PINT-001",
+      "input": {
+        "value": 0.75,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      }
+    },
+    {
+      "case_id": "E3-HO-PINT-005",
+      "target_tool_id": "A001",
+      "candidate_id": "SRC-PINT-001",
+      "input": {
+        "value": -2.5,
+        "source_unit": "kJ",
+        "target_unit": "J"
+      }
+    },
+    {
+      "case_id": "E3-HO-PINT-006",
+      "target_tool_id": "A001",
+      "candidate_id": "SRC-PINT-001",
+      "input": {
+        "value": -40,
+        "source_unit": "°C",
+        "target_unit": "K"
+      }
+    },
+    {
+      "case_id": "E3-HO-PINT-007",
+      "target_tool_id": "A001",
+      "candidate_id": "SRC-PINT-001",
+      "input": {
+        "value": 212,
+        "source_unit": "°F",
+        "target_unit": "°C"
+      }
+    }
+  ],
+  "contract_mismatch_cases": [
+    {
+      "case_id": "E3-HO-PMG001-001",
+      "target_tool_id": "A002",
+      "candidate_id": "SRC-PMG-001",
+      "input": {
+        "formula": "O0"
+      },
+      "relation_basis": "zero_stoichiometry_validation_boundary"
+    },
+    {
+      "case_id": "E3-HO-RDKIT004-001",
+      "target_tool_id": "A003",
+      "candidate_id": "SRC-RDKIT-004",
+      "input": {
+        "formula": "Mg(OH)2"
+      },
+      "relation_basis": "raw_formula_to_molecular_object_adapter_unavailable"
+    },
+    {
+      "case_id": "E3-HO-PMG002-001",
+      "target_tool_id": "A003",
+      "candidate_id": "SRC-PMG-002",
+      "input": {
+        "formula": "Al2O3"
+      },
+      "relation_basis": "frozen_atomic_weight_numeric_mismatch"
+    },
+    {
+      "case_id": "E3-HO-PMG003-001",
+      "target_tool_id": "A004",
+      "candidate_id": "SRC-PMG-003",
+      "input": {
+        "compositions": {
+          "Fe": 0,
+          "C": 0,
+          "Si": 0
+        }
+      },
+      "relation_basis": "all_zero_composition_validation_boundary"
+    }
+  ],
+  "numeric_abs_tolerance": 0.0001,
+  "expected_python_version": "3.11.15",
+  "expected_top_level_versions": {
+    "pint": "0.25.3",
+    "rdkit": "2026.3.4",
+    "pymatgen": "2026.5.4",
+    "pycalphad": "0.11.2"
+  },
+  "local_execution_authorized": true,
+  "external_api_calls_authorized": false,
+  "formal_registration_allowed": false,
+  "formal_pool_generation_allowed": false,
+  "confirmatory_inference_allowed": false
+}

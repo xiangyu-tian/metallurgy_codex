@@ -1,0 +1,120 @@
+{
+  "run_id": "V11-CF05-E3-CANDIDATE-HOLDOUT-BATCH1-R1-20260803",
+  "case_count": 4,
+  "rows": [
+    {
+      "case_id": "E3-HO-PMG001-001",
+      "target_tool_id": "A002",
+      "candidate_id": "SRC-PMG-001",
+      "input": {
+        "formula": "O0"
+      },
+      "relation_basis": "zero_stoichiometry_validation_boundary",
+      "target_execution": {
+        "success": false,
+        "result": null,
+        "error_code": "PARSE_ERROR",
+        "error": "化学计量数必须为正数: 0"
+      },
+      "candidate_execution": {
+        "success": true,
+        "result": {
+          "elements": {}
+        },
+        "error_code": null,
+        "error": null
+      },
+      "comparison_basis": "target_rejects_candidate_accepts_invalid_boundary",
+      "relation_fixture_pass": true,
+      "formal_neighbor_admission": false
+    },
+    {
+      "case_id": "E3-HO-RDKIT004-001",
+      "target_tool_id": "A003",
+      "candidate_id": "SRC-RDKIT-004",
+      "input": {
+        "formula": "Mg(OH)2"
+      },
+      "relation_basis": "raw_formula_to_molecular_object_adapter_unavailable",
+      "target_execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 58.319,
+          "formula": "Mg(OH)2",
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "candidate_execution": {
+        "success": null,
+        "result": null,
+        "error_code": "ADAPTER_UNAVAILABLE",
+        "error": "raw formula cannot be generally converted to an RDKit molecular object"
+      },
+      "comparison_basis": "target_executes_candidate_input_adapter_unavailable",
+      "relation_fixture_pass": true,
+      "formal_neighbor_admission": false
+    },
+    {
+      "case_id": "E3-HO-PMG002-001",
+      "target_tool_id": "A003",
+      "candidate_id": "SRC-PMG-002",
+      "input": {
+        "formula": "Al2O3"
+      },
+      "relation_basis": "frozen_atomic_weight_numeric_mismatch",
+      "target_execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 101.961,
+          "formula": "Al2O3",
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "candidate_execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 101.9612772
+        },
+        "error_code": null,
+        "error": null
+      },
+      "comparison_basis": "numeric_result_exceeds_frozen_tolerance",
+      "relation_fixture_pass": true,
+      "formal_neighbor_admission": false
+    },
+    {
+      "case_id": "E3-HO-PMG003-001",
+      "target_tool_id": "A004",
+      "candidate_id": "SRC-PMG-003",
+      "input": {
+        "compositions": {
+          "Fe": 0,
+          "C": 0,
+          "Si": 0
+        }
+      },
+      "relation_basis": "all_zero_composition_validation_boundary",
+      "target_execution": {
+        "success": false,
+        "result": null,
+        "error_code": "INVALID_INPUT",
+        "error": "组成总和为0"
+      },
+      "candidate_execution": {
+        "success": true,
+        "result": {
+          "normalized": {}
+        },
+        "error_code": null,
+        "error": null
+      },
+      "comparison_basis": "target_rejects_candidate_accepts_invalid_boundary",
+      "relation_fixture_pass": true,
+      "formal_neighbor_admission": false
+    }
+  ]
+}

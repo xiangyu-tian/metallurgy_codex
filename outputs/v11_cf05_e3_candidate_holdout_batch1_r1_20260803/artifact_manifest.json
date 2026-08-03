@@ -1,0 +1,41 @@
+{
+  "run_id": "V11-CF05-E3-CANDIDATE-HOLDOUT-BATCH1-R1-20260803",
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "filename": "acceptable_equivalence_holdout_results.json",
+      "sha256": "3c8d620b795778c0500646e35fe2e397a6c031a11844eaf611e847f36a095ccc",
+      "bytes": 7373
+    },
+    {
+      "filename": "candidate_holdout_config_snapshot.json",
+      "sha256": "74c2d375eef2db2e2b633c915b4242e7b133f570be65f5efec776a7403e0c288",
+      "bytes": 4128
+    },
+    {
+      "filename": "candidate_holdout_run_report.json",
+      "sha256": "3a7edccfe4fc4ee6cb16ea05b4af9c5616be3decc31166d06097b71cde01af50",
+      "bytes": 952
+    },
+    {
+      "filename": "contract_mismatch_holdout_results.json",
+      "sha256": "806a37824d5fe30e9e8ff8f2a1ebde8ed99909cd8edddf49d9162b09eff2ee7d",
+      "bytes": 3429
+    },
+    {
+      "filename": "environment_lock_verification.json",
+      "sha256": "21a86c8f3b8789c3313be5236e897efed4bb483679822ecc9be4acc19af58e99",
+      "bytes": 632
+    },
+    {
+      "filename": "holdout_input_novelty_report.json",
+      "sha256": "e04913c9e8af5e17bb421ce97a3d886e9d259ddc6d22813412229c84495be060",
+      "bytes": 204
+    },
+    {
+      "filename": "pint_candidate_contract_snapshot.json",
+      "sha256": "f0bb1d6ba27dfa39a34880583a7b68eaff1f73f6a3c0106fe65b5f06a7799a1b",
+      "bytes": 3043
+    }
+  ]
+}

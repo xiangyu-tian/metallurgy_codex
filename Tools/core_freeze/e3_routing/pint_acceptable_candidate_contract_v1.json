@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "provisional_candidate_id": "SRC-PINT-001",
+  "runtime_adapter_id": "E3-PINT-A001-CANDIDATE-V1",
+  "target_tool_id": "A001",
+  "tool_name": "pint_scalar_unit_conversion",
+  "scientific_function": "同量纲标量单位换算",
+  "implementation_provider": "Pint",
+  "implementation_version": "0.25.3",
+  "input_contract": {
+    "type": "object",
+    "properties": {
+      "value": {"type": "number"},
+      "source_unit": {"type": "string"},
+      "target_unit": {"type": "string"}
+    },
+    "required": ["value", "source_unit", "target_unit"],
+    "additionalProperties": false
+  },
+  "output_contract": {
+    "value": "target-unit numeric magnitude",
+    "source_unit": "normalized source unit",
+    "target_unit": "normalized target unit",
+    "conversion_factor": "converted value at source value 1 minus converted value at source value 0",
+    "conversion_offset": "converted value at source value 0",
+    "category": "frozen physical quantity category"
+  },
+  "frozen_scope": {
+    "unit_pairs": [
+      ["kg", "g"],
+      ["t", "kg"],
+      ["m", "mm"],
+      ["MPa", "Pa"],
+      ["atm", "Pa"],
+      ["kJ", "J"],
+      ["°C", "K"],
+      ["°F", "°C"]
+    ],
+    "numeric_domain": "finite IEEE-754 values that do not overflow Pint conversion"
+  },
+  "error_codes": [
+    "INVALID_INPUT",
+    "UNSUPPORTED_PAIR",
+    "INVALID_UNIT",
+    "DIMENSION_MISMATCH",
+    "EXECUTION_ERROR"
+  ],
+  "openai_function_schema": {
+    "type": "function",
+    "function": {
+      "name": "pint_scalar_unit_conversion",
+      "description": "Convert a finite scalar between a frozen set of same-dimension unit pairs using Pint.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "value": {"type": "number", "description": "Numeric value in source_unit."},
+          "source_unit": {"type": "string", "description": "Source unit symbol."},
+          "target_unit": {"type": "string", "description": "Target unit symbol."}
+        },
+        "required": ["value", "source_unit", "target_unit"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "acceptable_relation": {
+    "relation_to_target": "implementation_independent_functionally_equivalent_candidate",
+    "acceptable_over_frozen_scope": true,
+    "scientific_function_distinct": false,
+    "catalog_increment_allowed": false
+  },
+  "status": "development_contract_frozen_runtime_verification_pending",
+  "formal_registration_allowed": false,
+  "formal_pool_generation_allowed": false
+}

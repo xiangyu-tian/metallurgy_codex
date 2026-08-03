@@ -1,0 +1,7 @@
+{
+  "frozen_reference_case_count": 27,
+  "proposed_case_count": 11,
+  "exact_input_duplicates_with_frozen_references": [],
+  "duplicate_inputs_within_holdout": [],
+  "input_novelty_passed": true
+}

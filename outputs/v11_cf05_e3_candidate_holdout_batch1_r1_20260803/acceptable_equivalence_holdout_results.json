@@ -1,0 +1,272 @@
+{
+  "run_id": "V11-CF05-E3-CANDIDATE-HOLDOUT-BATCH1-R1-20260803",
+  "case_count": 7,
+  "rows": [
+    {
+      "case_id": "E3-HO-PINT-001",
+      "target_tool_id": "A001",
+      "candidate_id": "SRC-PINT-001",
+      "input": {
+        "value": 2.75,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "target_execution": {
+        "success": true,
+        "result": {
+          "value": 2750.0,
+          "source_unit": "kg",
+          "target_unit": "g",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "质量"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "candidate_execution": {
+        "success": true,
+        "result": {
+          "value": 2750.0,
+          "source_unit": "kg",
+          "target_unit": "g",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "质量"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "comparison_basis": "converted_value_comparison",
+      "comparison_pass": true
+    },
+    {
+      "case_id": "E3-HO-PINT-002",
+      "target_tool_id": "A001",
+      "candidate_id": "SRC-PINT-001",
+      "input": {
+        "value": 0.125,
+        "source_unit": "t",
+        "target_unit": "kg"
+      },
+      "target_execution": {
+        "success": true,
+        "result": {
+          "value": 125.0,
+          "source_unit": "t",
+          "target_unit": "kg",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "质量"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "candidate_execution": {
+        "success": true,
+        "result": {
+          "value": 125.0,
+          "source_unit": "t",
+          "target_unit": "kg",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "质量"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "comparison_basis": "converted_value_comparison",
+      "comparison_pass": true
+    },
+    {
+      "case_id": "E3-HO-PINT-003",
+      "target_tool_id": "A001",
+      "candidate_id": "SRC-PINT-001",
+      "input": {
+        "value": 0.0075,
+        "source_unit": "m",
+        "target_unit": "mm"
+      },
+      "target_execution": {
+        "success": true,
+        "result": {
+          "value": 7.5,
+          "source_unit": "m",
+          "target_unit": "mm",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "长度"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "candidate_execution": {
+        "success": true,
+        "result": {
+          "value": 7.5,
+          "source_unit": "m",
+          "target_unit": "mm",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "长度"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "comparison_basis": "converted_value_comparison",
+      "comparison_pass": true
+    },
+    {
+      "case_id": "E3-HO-PINT-004",
+      "target_tool_id": "A001",
+      "candidate_id": "SRC-PINT-001",
+      "input": {
+        "value": 0.75,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "target_execution": {
+        "success": true,
+        "result": {
+          "value": 75993.75,
+          "source_unit": "atm",
+          "target_unit": "Pa",
+          "conversion_factor": 101325.0,
+          "conversion_offset": 0.0,
+          "category": "压强"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "candidate_execution": {
+        "success": true,
+        "result": {
+          "value": 75993.75,
+          "source_unit": "atm",
+          "target_unit": "Pa",
+          "conversion_factor": 101325.0,
+          "conversion_offset": 0.0,
+          "category": "压强"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "comparison_basis": "converted_value_comparison",
+      "comparison_pass": true
+    },
+    {
+      "case_id": "E3-HO-PINT-005",
+      "target_tool_id": "A001",
+      "candidate_id": "SRC-PINT-001",
+      "input": {
+        "value": -2.5,
+        "source_unit": "kJ",
+        "target_unit": "J"
+      },
+      "target_execution": {
+        "success": true,
+        "result": {
+          "value": -2500.0,
+          "source_unit": "kJ",
+          "target_unit": "J",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "能量"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "candidate_execution": {
+        "success": true,
+        "result": {
+          "value": -2500.0,
+          "source_unit": "kJ",
+          "target_unit": "J",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "能量"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "comparison_basis": "converted_value_comparison",
+      "comparison_pass": true
+    },
+    {
+      "case_id": "E3-HO-PINT-006",
+      "target_tool_id": "A001",
+      "candidate_id": "SRC-PINT-001",
+      "input": {
+        "value": -40,
+        "source_unit": "°C",
+        "target_unit": "K"
+      },
+      "target_execution": {
+        "success": true,
+        "result": {
+          "value": 233.15,
+          "source_unit": "°C",
+          "target_unit": "K",
+          "conversion_factor": 1,
+          "conversion_offset": 273.15,
+          "category": "温度"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "candidate_execution": {
+        "success": true,
+        "result": {
+          "value": 233.14999999999998,
+          "source_unit": "°C",
+          "target_unit": "K",
+          "conversion_factor": 1.0,
+          "conversion_offset": 273.15,
+          "category": "温度"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "comparison_basis": "converted_value_comparison",
+      "comparison_pass": true
+    },
+    {
+      "case_id": "E3-HO-PINT-007",
+      "target_tool_id": "A001",
+      "candidate_id": "SRC-PINT-001",
+      "input": {
+        "value": 212,
+        "source_unit": "°F",
+        "target_unit": "°C"
+      },
+      "target_execution": {
+        "success": true,
+        "result": {
+          "value": 100.0,
+          "source_unit": "°F",
+          "target_unit": "°C",
+          "conversion_factor": 0.5555555555555556,
+          "conversion_offset": -17.77777777777778,
+          "category": "温度"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "candidate_execution": {
+        "success": true,
+        "result": {
+          "value": 100.00000000000006,
+          "source_unit": "°F",
+          "target_unit": "°C",
+          "conversion_factor": 0.5555555555555429,
+          "conversion_offset": -17.777777777777743,
+          "category": "温度"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "comparison_basis": "converted_value_comparison",
+      "comparison_pass": true
+    }
+  ]
+}
