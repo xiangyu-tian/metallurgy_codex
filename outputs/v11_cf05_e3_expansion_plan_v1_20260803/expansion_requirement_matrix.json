@@ -1,0 +1,60 @@
+{
+  "plan_id": "V11-CF05-E3-ROUTING-EXPANSION-PLAN-V1-20260803",
+  "target_neighbor_count_per_type": 8,
+  "requirements": [
+    {
+      "target_tool_id": "A001",
+      "target_tool_name": "单位换算",
+      "current_lexical_count": 0,
+      "lexical_gap_to_8": 8,
+      "current_contract_mismatch_count": 0,
+      "contract_mismatch_gap_to_8": 8,
+      "paired_8_ready": false
+    },
+    {
+      "target_tool_id": "A002",
+      "target_tool_name": "化学式解析",
+      "current_lexical_count": 1,
+      "lexical_gap_to_8": 7,
+      "current_contract_mismatch_count": 0,
+      "contract_mismatch_gap_to_8": 8,
+      "paired_8_ready": false
+    },
+    {
+      "target_tool_id": "A003",
+      "target_tool_name": "摩尔质量计算",
+      "current_lexical_count": 4,
+      "lexical_gap_to_8": 4,
+      "current_contract_mismatch_count": 0,
+      "contract_mismatch_gap_to_8": 8,
+      "paired_8_ready": false
+    },
+    {
+      "target_tool_id": "A004",
+      "target_tool_name": "成分归一化",
+      "current_lexical_count": 1,
+      "lexical_gap_to_8": 7,
+      "current_contract_mismatch_count": 0,
+      "contract_mismatch_gap_to_8": 8,
+      "paired_8_ready": false
+    },
+    {
+      "target_tool_id": "B019",
+      "target_tool_name": "杠杆规则计算",
+      "current_lexical_count": 4,
+      "lexical_gap_to_8": 4,
+      "current_contract_mismatch_count": 0,
+      "contract_mismatch_gap_to_8": 8,
+      "paired_8_ready": false
+    }
+  ],
+  "lexical_gap_total": 30,
+  "contract_mismatch_gap_total": 40,
+  "conservative_distinct_slot_count": 70,
+  "minimum_capacity_catalog_size": 136,
+  "conservative_no_reuse_catalog_size": 190,
+  "minimum_unique_expansion_count": 16,
+  "actual_unique_expansion_count": null,
+  "capacity_reserve_after_evidence_based_dedup": null,
+  "note": "136 is a capacity floor; target relation gaps remain binding. Cross-target reuse is counted only after each relation independently passes evidence checks."
+}

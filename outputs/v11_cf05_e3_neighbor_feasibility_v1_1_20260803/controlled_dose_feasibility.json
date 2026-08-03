@@ -1,0 +1,47 @@
+{
+  "audit_id": "V11-CF05-E3-NEIGHBOR-FEASIBILITY-V1.1-20260803",
+  "catalog_size": 120,
+  "near_neighbor_counts": [
+    0,
+    4,
+    8
+  ],
+  "capacity": [
+    {
+      "tool_pool_size": 17,
+      "single_neighbor_type_min_catalog_size": 25,
+      "two_disjoint_neighbor_types_min_catalog_size": 33,
+      "catalog_size": 120,
+      "single_type_capacity_feasible": true,
+      "two_disjoint_type_capacity_feasible": true
+    },
+    {
+      "tool_pool_size": 50,
+      "single_neighbor_type_min_catalog_size": 58,
+      "two_disjoint_neighbor_types_min_catalog_size": 66,
+      "catalog_size": 120,
+      "single_type_capacity_feasible": true,
+      "two_disjoint_type_capacity_feasible": true
+    },
+    {
+      "tool_pool_size": 100,
+      "single_neighbor_type_min_catalog_size": 108,
+      "two_disjoint_neighbor_types_min_catalog_size": 116,
+      "catalog_size": 120,
+      "single_type_capacity_feasible": true,
+      "two_disjoint_type_capacity_feasible": true
+    },
+    {
+      "tool_pool_size": 120,
+      "single_neighbor_type_min_catalog_size": 128,
+      "two_disjoint_neighbor_types_min_catalog_size": 136,
+      "catalog_size": 120,
+      "single_type_capacity_feasible": false,
+      "two_disjoint_type_capacity_feasible": false
+    }
+  ],
+  "h3_paired_8_eligible_target_ids": [],
+  "h3_paired_8_eligible_target_count": 0,
+  "formal_controlled_dose_pools_generated": false,
+  "reason": "structured contract-mismatch neighbors are insufficient and the 120-entry universe cannot support paired 0/4/8 replacement pools at size 120"
+}

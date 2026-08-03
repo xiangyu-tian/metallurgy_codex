@@ -1,0 +1,295 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "e3-routing-expansion-entry-v1",
+  "title": "E3 routing catalog expansion entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "candidate_tool_id",
+    "tool_name",
+    "semantic_alias",
+    "scientific_function",
+    "scenario",
+    "tool_type",
+    "core_method",
+    "input_contract",
+    "output_contract",
+    "applicability_contract",
+    "source_provenance",
+    "neighbor_relations",
+    "independence_evidence_ids",
+    "lifecycle_status",
+    "review_status"
+  ],
+  "properties": {
+    "candidate_tool_id": {
+      "type": "string",
+      "pattern": "^[A-Z][0-9]{3}$"
+    },
+    "tool_name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "semantic_alias": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]{2,63}$"
+    },
+    "scientific_function": {
+      "type": "string",
+      "minLength": 4
+    },
+    "scenario": {
+      "type": "string",
+      "minLength": 2
+    },
+    "tool_type": {
+      "type": "string",
+      "minLength": 2
+    },
+    "core_method": {
+      "type": "string",
+      "minLength": 4
+    },
+    "input_contract": {
+      "type": "object",
+      "required": [
+        "parameters",
+        "required",
+        "units"
+      ],
+      "properties": {
+        "parameters": {
+          "type": "object",
+          "minProperties": 1
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "units": {
+          "type": "object"
+        }
+      }
+    },
+    "output_contract": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "applicability_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "phases",
+        "temperature_range",
+        "pressure_range",
+        "systems",
+        "version",
+        "availability",
+        "known_limitations"
+      ],
+      "properties": {
+        "phases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "temperature_range": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "pressure_range": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "systems": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "availability": {
+          "type": "string",
+          "enum": [
+            "available",
+            "unavailable",
+            "conditional"
+          ]
+        },
+        "known_limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "source_provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "title",
+          "locator",
+          "source_type"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "locator": {
+            "type": "string"
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "standard",
+              "primary_documentation",
+              "paper",
+              "software_manual",
+              "model_card"
+            ]
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "neighbor_relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "target_tool_id",
+          "neighbor_type",
+          "scientific_function_distinct",
+          "acceptable_tool_equivalent",
+          "non_equivalence_evidence_ids"
+        ],
+        "properties": {
+          "target_tool_id": {
+            "type": "string",
+            "enum": [
+              "A001",
+              "A002",
+              "A003",
+              "A004",
+              "B019"
+            ]
+          },
+          "neighbor_type": {
+            "type": "string",
+            "enum": [
+              "lexical",
+              "contract_mismatch"
+            ]
+          },
+          "scientific_function_distinct": {
+            "type": "boolean"
+          },
+          "acceptable_tool_equivalent": {
+            "type": "boolean"
+          },
+          "lexical_name_dice": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 1
+          },
+          "lexical_contract_text_dice": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 1
+          },
+          "functional_input_dice": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 1
+          },
+          "functional_output_dice": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 1
+          },
+          "mismatch_dimensions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "phase",
+                "temperature_range",
+                "pressure_range",
+                "system",
+                "version",
+                "availability"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "target_valid_candidate_invalid_fixture_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "non_equivalence_evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "independence_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "lifecycle_status": {
+      "const": "schema_only_candidate"
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "machine_precheck_pending",
+        "machine_precheck_passed",
+        "rejected"
+      ]
+    }
+  }
+}

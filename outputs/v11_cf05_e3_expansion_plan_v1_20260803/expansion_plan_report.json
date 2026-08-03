@@ -1,0 +1,16 @@
+{
+  "plan_id": "V11-CF05-E3-ROUTING-EXPANSION-PLAN-V1-20260803",
+  "status": "requirements_frozen_entries_unfilled",
+  "source_audit_id": "V11-CF05-E3-NEIGHBOR-FEASIBILITY-V1.1-20260803",
+  "source_h3_eligible_target_count": 0,
+  "target_count": 5,
+  "lexical_gap_total": 30,
+  "contract_mismatch_gap_total": 40,
+  "conservative_distinct_slot_count": 70,
+  "minimum_capacity_catalog_size": 136,
+  "conservative_no_reuse_catalog_size": 190,
+  "new_tool_entries_created": 0,
+  "external_api_calls": 0,
+  "external_api_calls_authorized": false,
+  "formal_pool_generation_allowed": false
+}

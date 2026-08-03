@@ -17,7 +17,7 @@ from typing import Any
 
 
 WORKSPACE = Path(__file__).resolve().parents[3]
-CONFIG_PATH = Path(__file__).with_name("neighbor_audit_config_v1_candidate.json")
+CONFIG_PATH = Path(__file__).with_name("neighbor_audit_config_v1_1.json")
 
 
 def load_json(path: Path) -> Any:
@@ -51,16 +51,18 @@ def normalize_text(value: str) -> str:
     return re.sub(r"[^0-9a-z\u4e00-\u9fff]+", "", value.lower())
 
 
-def bigrams(value: str) -> set[str]:
+def bigrams(value: str, stop_terms: list[str] | None = None) -> set[str]:
     normalized = normalize_text(value)
+    for term in stop_terms or []:
+        normalized = normalized.replace(normalize_text(term), "")
     if len(normalized) < 2:
         return {normalized} if normalized else set()
     return {normalized[index:index + 2] for index in range(len(normalized) - 1)}
 
 
-def dice(left: str, right: str) -> float:
-    left_set = bigrams(left)
-    right_set = bigrams(right)
+def dice(left: str, right: str, stop_terms: list[str] | None = None) -> float:
+    left_set = bigrams(left, stop_terms)
+    right_set = bigrams(right, stop_terms)
     if not left_set or not right_set:
         return 0.0
     return 2.0 * len(left_set & right_set) / (len(left_set) + len(right_set))
@@ -104,10 +106,11 @@ def score_pair(
     candidate_contract: dict[str, Any],
     config: dict[str, Any],
 ) -> dict[str, Any]:
-    name_score = dice(target["tool_name"], candidate["tool_name"])
-    text_score = dice(contract_text(target), contract_text(candidate))
-    input_score = dice(target["main_input"], candidate["main_input"])
-    output_score = dice(target["main_output"], candidate["main_output"])
+    stop_terms = config.get("lexical_stop_terms", [])
+    name_score = dice(target["tool_name"], candidate["tool_name"], stop_terms)
+    text_score = dice(contract_text(target), contract_text(candidate), stop_terms)
+    input_score = dice(target["main_input"], candidate["main_input"], stop_terms)
+    output_score = dice(target["main_output"], candidate["main_output"], stop_terms)
     input_output_overlap = (
         input_score >= config["functional_similarity_dice_min"]
         and output_score >= config["functional_similarity_dice_min"]
@@ -249,7 +252,11 @@ def audit(config: dict[str, Any]) -> dict[str, Any]:
         "candidate_matrix": {
             "audit_id": config["audit_id"],
             "method": {
-                "lexical": "character-bigram Dice on frozen catalog fields",
+                "lexical": (
+                    "character-bigram Dice on frozen catalog fields after removing "
+                    "preregistered generic function terms"
+                ),
+                "lexical_stop_terms": config.get("lexical_stop_terms", []),
                 "contract_mismatch": (
                     "functional overlap plus a mismatch in a structured, present-on-both-sides "
                     "contract dimension"

@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "V11-CF05-E3-ROUTING-EXPANSION-PLAN-V1-20260803",
+  "corrected_audit_matrix_path": "outputs/v11_cf05_e3_neighbor_feasibility_v1_1_20260803/neighbor_candidate_matrix.json",
+  "corrected_audit_matrix_sha256": "a3f1d22418a5d4564ef44a034e8289df5a32b9929ac879b7bbd735bb47d082bc",
+  "corrected_feasibility_path": "outputs/v11_cf05_e3_neighbor_feasibility_v1_1_20260803/controlled_dose_feasibility.json",
+  "corrected_feasibility_sha256": "1e3dbc6d8a8b82932b8edaf433f80bd51d04a3418056a8ba4fd2ba1a2b4f88ca",
+  "current_catalog_size": 120,
+  "target_neighbor_count_per_type": 8,
+  "minimum_capacity_catalog_size": 136,
+  "neighbor_types": [
+    "lexical",
+    "contract_mismatch"
+  ],
+  "cross_target_reuse_allowed_only_after_relation_evidence": true,
+  "same_target_cross_type_reuse_allowed": false,
+  "invented_tool_identity_allowed": false,
+  "schema_only_may_be_called_executable": false,
+  "external_api_calls_authorized": false
+}

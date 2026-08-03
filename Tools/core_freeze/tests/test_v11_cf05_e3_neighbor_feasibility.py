@@ -60,6 +60,20 @@ class V11Cf05E3NeighborFeasibilityTests(unittest.TestCase):
                     self.assertGreaterEqual(row[field], 0.0)
                     self.assertLessEqual(row[field], 1.0)
 
+    def test_generic_calculation_suffix_does_not_create_lexical_neighbor(self):
+        a003 = next(
+            target
+            for target in self.result["candidate_matrix"]["targets"]
+            if target["target_tool_id"] == "A003"
+        )
+        lexical_ids = {
+            row["candidate_tool_id"] for row in a003["lexical_candidates"]
+        }
+        self.assertNotIn("B006", lexical_ids)
+        self.assertNotIn("B007", lexical_ids)
+        self.assertNotIn("B009", lexical_ids)
+        self.assertNotIn("F008", lexical_ids)
+
     def test_output_package_is_offline_and_manifest_complete(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             output_dir = Path(temp_dir)

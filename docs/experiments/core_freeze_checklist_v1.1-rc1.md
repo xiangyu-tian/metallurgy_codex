@@ -157,19 +157,20 @@ formal_design:
 core_frozen: false
 ```
 
-## 12. CF-05 E3近邻可行性审计
+## 6.1 CF-05 E3近邻可行性审计
 
 ```yaml
-audit_id: V11-CF05-E3-NEIGHBOR-FEASIBILITY-V1-20260803
+audit_id: V11-CF05-E3-NEIGHBOR-FEASIBILITY-V1.1-20260803
+supersedes_audit_id: V11-CF05-E3-NEIGHBOR-FEASIBILITY-V1-20260803
 status: blocked_evidence_generated
 catalog_size: 120
 target_tool_ids: [A001, A002, A003, A004, B019]
 algorithmic_lexical_candidate_counts:
   A001: 0
   A002: 1
-  A003: 12
+  A003: 4
   A004: 1
-  B019: 8
+  B019: 4
 provable_contract_mismatch_neighbor_counts:
   A001: 0
   A002: 0
@@ -184,11 +185,30 @@ minimum_catalog_size_for_120_two_disjoint_types: 136
 weak_related_fill_forbidden: true
 external_api_calls: 0
 external_api_calls_authorized: false
-artifact_manifest_sha256: 20f2023bcffe5bcb22c75dba3bd2f59f32775492e733de2307e31cb2dbf7166a
+artifact_manifest_sha256: b1a2669dee94bb2a2665fb8ba08226daf00e766165df761dd7bae0e475f744e8
 core_frozen: false
 ```
 
 目录容量只是必要条件，不是充分条件。即使扩展至136条，也必须新增能够从结构化适用域、系统、版本或可用性契约中证明“不适用于当前目标任务”的真实近邻，不能添加无关Schema凑数。
+
+## 6.2 CF-05 E3目录扩展计划
+
+```yaml
+plan_id: V11-CF05-E3-ROUTING-EXPANSION-PLAN-V1-20260803
+status: requirements_frozen_entries_unfilled
+lexical_gap_total: 30
+contract_mismatch_gap_total: 40
+conservative_distinct_slot_count: 70
+minimum_capacity_catalog_size: 136
+conservative_no_reuse_catalog_size: 190
+new_tool_entries_created: 0
+invented_tool_identity_allowed: false
+external_api_calls: 0
+external_api_calls_authorized: false
+formal_pool_generation_allowed: false
+artifact_manifest_sha256: 1e3d207045ad618e26624c7d529951582025919a8f7b5239d1827d6b3fda55e2
+core_frozen: false
+```
 
 E1b收益校准集用于估计先导效应，独立门控集用于检验冻结策略；E1c只登记为机制层次的次要证据，不与E1b主要收益效应合并。项目负责人批准正式功效参数后，CF-03的候选证据、功效依据和重复次数门槛均已满足。
 

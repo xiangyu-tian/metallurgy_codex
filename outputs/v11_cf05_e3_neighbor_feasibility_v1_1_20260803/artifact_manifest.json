@@ -1,0 +1,26 @@
+{
+  "audit_id": "V11-CF05-E3-NEIGHBOR-FEASIBILITY-V1.1-20260803",
+  "artifact_count": 4,
+  "artifacts": [
+    {
+      "filename": "audit_report.json",
+      "sha256": "09fb57e3d9c6eca0ccac8aa9844003f0c7f247b0972bab3d55c550506dbb1497",
+      "bytes": 757
+    },
+    {
+      "filename": "controlled_dose_feasibility.json",
+      "sha256": "1e3dbc6d8a8b82932b8edaf433f80bd51d04a3418056a8ba4fd2ba1a2b4f88ca",
+      "bytes": 1596
+    },
+    {
+      "filename": "neighbor_audit_config_snapshot.json",
+      "sha256": "30c15e1fcdbd56db79ebc90b147986aa91e592601018e21129268d6ceeb42340",
+      "bytes": 1867
+    },
+    {
+      "filename": "neighbor_candidate_matrix.json",
+      "sha256": "a3f1d22418a5d4564ef44a034e8289df5a32b9929ac879b7bbd735bb47d082bc",
+      "bytes": 49964
+    }
+  ]
+}

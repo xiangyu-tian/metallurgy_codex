@@ -1,0 +1,708 @@
+{
+  "plan_id": "V11-CF05-E3-ROUTING-EXPANSION-PLAN-V1-20260803",
+  "slot_count": 70,
+  "all_slots_unfilled": true,
+  "invented_tool_identity_allowed": false,
+  "slots": [
+    {
+      "slot_id": "A001-LEXICAL-01",
+      "target_tool_id": "A001",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-LEXICAL-02",
+      "target_tool_id": "A001",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-LEXICAL-03",
+      "target_tool_id": "A001",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-LEXICAL-04",
+      "target_tool_id": "A001",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-LEXICAL-05",
+      "target_tool_id": "A001",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-LEXICAL-06",
+      "target_tool_id": "A001",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-LEXICAL-07",
+      "target_tool_id": "A001",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-LEXICAL-08",
+      "target_tool_id": "A001",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-CONTRACT_MISMATCH-01",
+      "target_tool_id": "A001",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-CONTRACT_MISMATCH-02",
+      "target_tool_id": "A001",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-CONTRACT_MISMATCH-03",
+      "target_tool_id": "A001",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-CONTRACT_MISMATCH-04",
+      "target_tool_id": "A001",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-CONTRACT_MISMATCH-05",
+      "target_tool_id": "A001",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-CONTRACT_MISMATCH-06",
+      "target_tool_id": "A001",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-CONTRACT_MISMATCH-07",
+      "target_tool_id": "A001",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A001-CONTRACT_MISMATCH-08",
+      "target_tool_id": "A001",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-LEXICAL-01",
+      "target_tool_id": "A002",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-LEXICAL-02",
+      "target_tool_id": "A002",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-LEXICAL-03",
+      "target_tool_id": "A002",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-LEXICAL-04",
+      "target_tool_id": "A002",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-LEXICAL-05",
+      "target_tool_id": "A002",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-LEXICAL-06",
+      "target_tool_id": "A002",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-LEXICAL-07",
+      "target_tool_id": "A002",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-CONTRACT_MISMATCH-01",
+      "target_tool_id": "A002",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-CONTRACT_MISMATCH-02",
+      "target_tool_id": "A002",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-CONTRACT_MISMATCH-03",
+      "target_tool_id": "A002",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-CONTRACT_MISMATCH-04",
+      "target_tool_id": "A002",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-CONTRACT_MISMATCH-05",
+      "target_tool_id": "A002",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-CONTRACT_MISMATCH-06",
+      "target_tool_id": "A002",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-CONTRACT_MISMATCH-07",
+      "target_tool_id": "A002",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A002-CONTRACT_MISMATCH-08",
+      "target_tool_id": "A002",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A003-LEXICAL-01",
+      "target_tool_id": "A003",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A003-LEXICAL-02",
+      "target_tool_id": "A003",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A003-LEXICAL-03",
+      "target_tool_id": "A003",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A003-LEXICAL-04",
+      "target_tool_id": "A003",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A003-CONTRACT_MISMATCH-01",
+      "target_tool_id": "A003",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A003-CONTRACT_MISMATCH-02",
+      "target_tool_id": "A003",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A003-CONTRACT_MISMATCH-03",
+      "target_tool_id": "A003",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A003-CONTRACT_MISMATCH-04",
+      "target_tool_id": "A003",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A003-CONTRACT_MISMATCH-05",
+      "target_tool_id": "A003",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A003-CONTRACT_MISMATCH-06",
+      "target_tool_id": "A003",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A003-CONTRACT_MISMATCH-07",
+      "target_tool_id": "A003",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A003-CONTRACT_MISMATCH-08",
+      "target_tool_id": "A003",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-LEXICAL-01",
+      "target_tool_id": "A004",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-LEXICAL-02",
+      "target_tool_id": "A004",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-LEXICAL-03",
+      "target_tool_id": "A004",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-LEXICAL-04",
+      "target_tool_id": "A004",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-LEXICAL-05",
+      "target_tool_id": "A004",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-LEXICAL-06",
+      "target_tool_id": "A004",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-LEXICAL-07",
+      "target_tool_id": "A004",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-CONTRACT_MISMATCH-01",
+      "target_tool_id": "A004",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-CONTRACT_MISMATCH-02",
+      "target_tool_id": "A004",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-CONTRACT_MISMATCH-03",
+      "target_tool_id": "A004",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-CONTRACT_MISMATCH-04",
+      "target_tool_id": "A004",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-CONTRACT_MISMATCH-05",
+      "target_tool_id": "A004",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-CONTRACT_MISMATCH-06",
+      "target_tool_id": "A004",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-CONTRACT_MISMATCH-07",
+      "target_tool_id": "A004",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "A004-CONTRACT_MISMATCH-08",
+      "target_tool_id": "A004",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "B019-LEXICAL-01",
+      "target_tool_id": "B019",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "B019-LEXICAL-02",
+      "target_tool_id": "B019",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "B019-LEXICAL-03",
+      "target_tool_id": "B019",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "B019-LEXICAL-04",
+      "target_tool_id": "B019",
+      "neighbor_type": "lexical",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "B019-CONTRACT_MISMATCH-01",
+      "target_tool_id": "B019",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "B019-CONTRACT_MISMATCH-02",
+      "target_tool_id": "B019",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "B019-CONTRACT_MISMATCH-03",
+      "target_tool_id": "B019",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "B019-CONTRACT_MISMATCH-04",
+      "target_tool_id": "B019",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "B019-CONTRACT_MISMATCH-05",
+      "target_tool_id": "B019",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "B019-CONTRACT_MISMATCH-06",
+      "target_tool_id": "B019",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "B019-CONTRACT_MISMATCH-07",
+      "target_tool_id": "B019",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    },
+    {
+      "slot_id": "B019-CONTRACT_MISMATCH-08",
+      "target_tool_id": "B019",
+      "neighbor_type": "contract_mismatch",
+      "slot_status": "unfilled",
+      "candidate_tool_id": null,
+      "relation_evidence_id": null,
+      "may_share_candidate_with_other_target": true,
+      "may_share_candidate_across_types_for_same_target": false
+    }
+  ]
+}

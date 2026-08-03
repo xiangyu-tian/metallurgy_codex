@@ -1,0 +1,31 @@
+{
+  "plan_id": "V11-CF05-E3-ROUTING-EXPANSION-PLAN-V1-20260803",
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "filename": "expansion_entry_schema_v1.json",
+      "sha256": "676229b73b7231c121c5e0c1bd0f703f942d5bb0aaa732c6caca1c798b26cb33",
+      "bytes": 6844
+    },
+    {
+      "filename": "expansion_plan_config_snapshot.json",
+      "sha256": "826c3aa228c5ecc8ceaba4049cdd275a3b781140dcee145af355d6ac500d9a29",
+      "bytes": 989
+    },
+    {
+      "filename": "expansion_plan_report.json",
+      "sha256": "9686af8d32d5b70383548ea02b4252a2c58565868c035f7165c043619f4e7f4e",
+      "bytes": 602
+    },
+    {
+      "filename": "expansion_requirement_matrix.json",
+      "sha256": "b4943897d597e002940b9a249d72d4424cef4b8e180ce9e1b00ce3e9b5ad9a56",
+      "bytes": 2017
+    },
+    {
+      "filename": "expansion_slot_template.json",
+      "sha256": "566d8bdce9c168a8afec102441132756a9ee305b3b5fb7e635f01360714e237d",
+      "bytes": 25064
+    }
+  ]
+}
