@@ -1,0 +1,146 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH1-V1-20260803",
+  "row_count": 5,
+  "rows": [
+    {
+      "target_tool_id": "A001",
+      "candidate_tool_id": "E3C001",
+      "candidate_tool_name": "Pint单位换算",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": true,
+      "name_bigram_dice": 0.6,
+      "contract_text_bigram_dice": 0.909091,
+      "input_bigram_dice": 1.0,
+      "output_bigram_dice": 1.0,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "acceptable_equivalent",
+      "relation_evidence_case_ids": [
+        "E3-HO-PINT-001",
+        "E3-HO-PINT-002",
+        "E3-HO-PINT-003",
+        "E3-HO-PINT-004",
+        "E3-HO-PINT-005",
+        "E3-HO-PINT-006",
+        "E3-HO-PINT-007"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "acceptable_equivalent",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A002",
+      "candidate_tool_id": "E3C002",
+      "candidate_tool_name": "pymatgen化学式解析",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": false,
+      "name_bigram_dice": 0.5,
+      "contract_text_bigram_dice": 0.545455,
+      "input_bigram_dice": 1.0,
+      "output_bigram_dice": 1.0,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": true,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "contract_mismatch",
+      "relation_evidence_case_ids": [
+        "E3-HO-PMG001-001"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C003",
+      "candidate_tool_name": "RDKit平均分子量计算",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": false,
+      "name_bigram_dice": 0.0,
+      "contract_text_bigram_dice": 0.244898,
+      "input_bigram_dice": 0.0,
+      "output_bigram_dice": 1.0,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": true,
+      "provable_contract_mismatch_neighbor": false,
+      "relation_policy": "lexical_or_contract_mismatch_pending_score",
+      "relation_evidence_case_ids": [
+        "E3-HO-RDKIT004-001"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C004",
+      "candidate_tool_name": "pymatgen组成式量计算",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": true,
+      "name_bigram_dice": 0.0,
+      "contract_text_bigram_dice": 0.791667,
+      "input_bigram_dice": 1.0,
+      "output_bigram_dice": 1.0,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "contract_mismatch",
+      "relation_evidence_case_ids": [
+        "E3-HO-PMG002-001"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C005",
+      "candidate_tool_name": "pymatgen成分分数归一化",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": true,
+      "name_bigram_dice": 0.333333,
+      "contract_text_bigram_dice": 0.833333,
+      "input_bigram_dice": 1.0,
+      "output_bigram_dice": 1.0,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "contract_mismatch",
+      "relation_evidence_case_ids": [
+        "E3-HO-PMG003-001"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_relation_admission": false
+    }
+  ]
+}

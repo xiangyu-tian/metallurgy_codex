@@ -1,0 +1,244 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH1-V1-20260803",
+  "candidate_id_namespace": "E3C",
+  "candidate_count": 5,
+  "candidates": [
+    {
+      "candidate_tool_id": "E3C001",
+      "provisional_candidate_id": "SRC-PINT-001",
+      "target_tool_id": "A001",
+      "semantic_alias": "pint_unit_conversion",
+      "tool_name": "Pint单位换算",
+      "scenario": "通用数据与校验",
+      "tool_type": "确定性公式/规则",
+      "core_method": "量纲分析与单位映射",
+      "main_input": "数值、源单位、目标单位",
+      "main_output": "换算值、换算因子",
+      "supported_systems": [
+        "SI",
+        "A001_frozen_unit_pair_subset"
+      ],
+      "data_or_model_version": "pint-0.25.3",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "pint",
+      "package_version": "0.25.3",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C001",
+          "description": "Pint单位换算；方法：量纲分析与单位映射；输入：数值、源单位、目标单位；输出：换算值、换算因子",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "number"
+              },
+              "source_unit": {
+                "type": "string"
+              },
+              "target_unit": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "value",
+              "source_unit",
+              "target_unit"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "acceptable_equivalent",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C002",
+      "provisional_candidate_id": "SRC-PMG-001",
+      "target_tool_id": "A002",
+      "semantic_alias": "pymatgen_formula_parser",
+      "tool_name": "pymatgen化学式解析",
+      "scenario": "通用数据与校验",
+      "tool_type": "确定性公式/规则",
+      "core_method": "pymatgen Composition化学式解析",
+      "main_input": "化学式字符串",
+      "main_output": "元素—计量数字典、解析警告",
+      "supported_systems": [
+        "pymatgen_composition_formula_syntax"
+      ],
+      "data_or_model_version": "pymatgen-2026.5.4",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "pymatgen",
+      "package_version": "2026.5.4",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C002",
+          "description": "pymatgen化学式解析；方法：pymatgen Composition化学式解析；输入：化学式字符串；输出：元素—计量数字典、解析警告",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "formula": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "formula"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C003",
+      "provisional_candidate_id": "SRC-RDKIT-004",
+      "target_tool_id": "A003",
+      "semantic_alias": "rdkit_average_molecular_weight",
+      "tool_name": "RDKit平均分子量计算",
+      "scenario": "通用数据与校验",
+      "tool_type": "确定性公式/规则",
+      "core_method": "分子图平均原子量求和",
+      "main_input": "SMILES分子字符串",
+      "main_output": "摩尔质量",
+      "supported_systems": [
+        "rdkit_valid_molecular_graphs"
+      ],
+      "data_or_model_version": "rdkit-2026.3.4",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "rdkit",
+      "package_version": "2026.3.4",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C003",
+          "description": "RDKit平均分子量计算；方法：分子图平均原子量求和；输入：SMILES分子字符串；输出：摩尔质量",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "smiles": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "smiles"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "lexical",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C004",
+      "provisional_candidate_id": "SRC-PMG-002",
+      "target_tool_id": "A003",
+      "semantic_alias": "pymatgen_composition_weight",
+      "tool_name": "pymatgen组成式量计算",
+      "scenario": "通用数据与校验",
+      "tool_type": "确定性公式/规则",
+      "core_method": "元素原子量加权求和",
+      "main_input": "化学式/元素组成",
+      "main_output": "摩尔质量",
+      "supported_systems": [
+        "pymatgen_composition_formula_syntax"
+      ],
+      "data_or_model_version": "pymatgen-2026.5.4-atomic-weights",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "pymatgen",
+      "package_version": "2026.5.4",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C004",
+          "description": "pymatgen组成式量计算；方法：元素原子量加权求和；输入：化学式/元素组成；输出：摩尔质量",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "formula": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "formula"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C005",
+      "provisional_candidate_id": "SRC-PMG-003",
+      "target_tool_id": "A004",
+      "semantic_alias": "pymatgen_fractional_composition",
+      "tool_name": "pymatgen成分分数归一化",
+      "scenario": "通用数据与校验",
+      "tool_type": "确定性公式/规则",
+      "core_method": "质量分数/摩尔分数归一化与基准转换",
+      "main_input": "组成、基准、容差",
+      "main_output": "归一化组成、偏差",
+      "supported_systems": [
+        "pymatgen_element_or_species_compositions"
+      ],
+      "data_or_model_version": "pymatgen-2026.5.4",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "pymatgen",
+      "package_version": "2026.5.4",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C005",
+          "description": "pymatgen成分分数归一化；方法：质量分数/摩尔分数归一化与基准转换；输入：组成、基准、容差；输出：归一化组成、偏差",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "compositions": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "number"
+                }
+              }
+            },
+            "required": [
+              "compositions"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    }
+  ]
+}

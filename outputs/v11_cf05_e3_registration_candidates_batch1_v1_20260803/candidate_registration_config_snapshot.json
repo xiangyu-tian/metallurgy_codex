@@ -1,0 +1,324 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH1-V1-20260803",
+  "scope": "nonformal_candidate_registration_and_runtime_contract_validation",
+  "candidate_id_namespace": "E3C",
+  "bindings": [
+    {
+      "path": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803/e3_schema_catalog_v1_candidate.json",
+      "sha256": "78de613f974d1ee48d5e2afa8a379b534a1e28a5b6749d9fc75f015aff6dd4f6"
+    },
+    {
+      "path": "Tools/core_freeze/verified_core/contracts_v1.json",
+      "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"
+    },
+    {
+      "path": "Tools/core_freeze/e3_routing/neighbor_audit_config_v1_1.json",
+      "sha256": "9ba29726f3e38b2701133e19445f58b9797e6de92e20d1dfeb203c986242bfa3"
+    },
+    {
+      "path": "Tools/core_freeze/e3_routing/candidate_validation_requirements_lock.txt",
+      "sha256": "cf7e10e2217306bb3516875eca513ee085be7ca57b5225777fd16cfa1331c0b3"
+    },
+    {
+      "path": "outputs/v11_cf05_e3_candidate_holdout_batch1_r1_20260803/artifact_manifest.json",
+      "sha256": "0e66f61010d7e3eb06a43a19c02e4a4f4e76d0662628bc7d0fc9bc2237dbcc3b"
+    }
+  ],
+  "expected_python_version": "3.11.15",
+  "expected_top_level_versions": {
+    "pint": "0.25.3",
+    "rdkit": "2026.3.4",
+    "pymatgen": "2026.5.4",
+    "pycalphad": "0.11.2"
+  },
+  "candidates": [
+    {
+      "candidate_tool_id": "E3C001",
+      "provisional_candidate_id": "SRC-PINT-001",
+      "target_tool_id": "A001",
+      "semantic_alias": "pint_unit_conversion",
+      "tool_name": "Pint单位换算",
+      "scenario": "通用数据与校验",
+      "tool_type": "确定性公式/规则",
+      "core_method": "量纲分析与单位映射",
+      "main_input": "数值、源单位、目标单位",
+      "main_output": "换算值、换算因子",
+      "supported_systems": [
+        "SI",
+        "A001_frozen_unit_pair_subset"
+      ],
+      "data_or_model_version": "pint-0.25.3",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "pint",
+      "package_version": "0.25.3",
+      "relation_policy": "acceptable_equivalent",
+      "relation_evidence_case_ids": [
+        "E3-HO-PINT-001",
+        "E3-HO-PINT-002",
+        "E3-HO-PINT-003",
+        "E3-HO-PINT-004",
+        "E3-HO-PINT-005",
+        "E3-HO-PINT-006",
+        "E3-HO-PINT-007"
+      ],
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "number"
+          },
+          "source_unit": {
+            "type": "string"
+          },
+          "target_unit": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value",
+          "source_unit",
+          "target_unit"
+        ],
+        "additionalProperties": false
+      },
+      "smoke_cases": [
+        {
+          "case_id": "E3-REG-E3C001-S01",
+          "input": {
+            "value": 3.25,
+            "source_unit": "kg",
+            "target_unit": "g"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-REG-E3C001-F01",
+          "input": {
+            "value": 1,
+            "source_unit": "g",
+            "target_unit": "kg"
+          },
+          "expected_success": false
+        }
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C002",
+      "provisional_candidate_id": "SRC-PMG-001",
+      "target_tool_id": "A002",
+      "semantic_alias": "pymatgen_formula_parser",
+      "tool_name": "pymatgen化学式解析",
+      "scenario": "通用数据与校验",
+      "tool_type": "确定性公式/规则",
+      "core_method": "pymatgen Composition化学式解析",
+      "main_input": "化学式字符串",
+      "main_output": "元素—计量数字典、解析警告",
+      "supported_systems": [
+        "pymatgen_composition_formula_syntax"
+      ],
+      "data_or_model_version": "pymatgen-2026.5.4",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "pymatgen",
+      "package_version": "2026.5.4",
+      "relation_policy": "contract_mismatch",
+      "relation_evidence_case_ids": [
+        "E3-HO-PMG001-001"
+      ],
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "formula"
+        ],
+        "additionalProperties": false
+      },
+      "smoke_cases": [
+        {
+          "case_id": "E3-REG-E3C002-S01",
+          "input": {
+            "formula": "Na2CO3"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-REG-E3C002-F01",
+          "input": {
+            "formula": "Fe2O3abc"
+          },
+          "expected_success": false
+        }
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C003",
+      "provisional_candidate_id": "SRC-RDKIT-004",
+      "target_tool_id": "A003",
+      "semantic_alias": "rdkit_average_molecular_weight",
+      "tool_name": "RDKit平均分子量计算",
+      "scenario": "通用数据与校验",
+      "tool_type": "确定性公式/规则",
+      "core_method": "分子图平均原子量求和",
+      "main_input": "SMILES分子字符串",
+      "main_output": "摩尔质量",
+      "supported_systems": [
+        "rdkit_valid_molecular_graphs"
+      ],
+      "data_or_model_version": "rdkit-2026.3.4",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "rdkit",
+      "package_version": "2026.3.4",
+      "relation_policy": "lexical_or_contract_mismatch_pending_score",
+      "relation_evidence_case_ids": [
+        "E3-HO-RDKIT004-001"
+      ],
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "smiles": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "smiles"
+        ],
+        "additionalProperties": false
+      },
+      "smoke_cases": [
+        {
+          "case_id": "E3-REG-E3C003-S01",
+          "input": {
+            "smiles": "CCO"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-REG-E3C003-F01",
+          "input": {
+            "smiles": "not_smiles"
+          },
+          "expected_success": false
+        }
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C004",
+      "provisional_candidate_id": "SRC-PMG-002",
+      "target_tool_id": "A003",
+      "semantic_alias": "pymatgen_composition_weight",
+      "tool_name": "pymatgen组成式量计算",
+      "scenario": "通用数据与校验",
+      "tool_type": "确定性公式/规则",
+      "core_method": "元素原子量加权求和",
+      "main_input": "化学式/元素组成",
+      "main_output": "摩尔质量",
+      "supported_systems": [
+        "pymatgen_composition_formula_syntax"
+      ],
+      "data_or_model_version": "pymatgen-2026.5.4-atomic-weights",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "pymatgen",
+      "package_version": "2026.5.4",
+      "relation_policy": "contract_mismatch",
+      "relation_evidence_case_ids": [
+        "E3-HO-PMG002-001"
+      ],
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "formula"
+        ],
+        "additionalProperties": false
+      },
+      "smoke_cases": [
+        {
+          "case_id": "E3-REG-E3C004-S01",
+          "input": {
+            "formula": "Al2O3"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-REG-E3C004-F01",
+          "input": {
+            "formula": "Xx2"
+          },
+          "expected_success": false
+        }
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C005",
+      "provisional_candidate_id": "SRC-PMG-003",
+      "target_tool_id": "A004",
+      "semantic_alias": "pymatgen_fractional_composition",
+      "tool_name": "pymatgen成分分数归一化",
+      "scenario": "通用数据与校验",
+      "tool_type": "确定性公式/规则",
+      "core_method": "质量分数/摩尔分数归一化与基准转换",
+      "main_input": "组成、基准、容差",
+      "main_output": "归一化组成、偏差",
+      "supported_systems": [
+        "pymatgen_element_or_species_compositions"
+      ],
+      "data_or_model_version": "pymatgen-2026.5.4",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "pymatgen",
+      "package_version": "2026.5.4",
+      "relation_policy": "contract_mismatch",
+      "relation_evidence_case_ids": [
+        "E3-HO-PMG003-001"
+      ],
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "compositions": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number"
+            }
+          }
+        },
+        "required": [
+          "compositions"
+        ],
+        "additionalProperties": false
+      },
+      "smoke_cases": [
+        {
+          "case_id": "E3-REG-E3C005-S01",
+          "input": {
+            "compositions": {
+              "Fe": 3,
+              "C": 1
+            }
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-REG-E3C005-F01",
+          "input": {
+            "compositions": [
+              "Fe",
+              "C"
+            ]
+          },
+          "expected_success": false
+        }
+      ]
+    }
+  ],
+  "local_execution_authorized": true,
+  "external_api_calls_authorized": false,
+  "formal_catalog_mutation_allowed": false,
+  "formal_pool_generation_allowed": false,
+  "confirmatory_inference_allowed": false
+}

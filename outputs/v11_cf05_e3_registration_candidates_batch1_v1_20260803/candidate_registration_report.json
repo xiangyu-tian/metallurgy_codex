@@ -1,0 +1,29 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH1-V1-20260803",
+  "scope": "nonformal_candidate_registration_and_runtime_contract_validation",
+  "status": "candidate_registration_package_complete_nonformal",
+  "environment_verification_passed": true,
+  "formal_catalog_size_before": 120,
+  "candidate_registration_count": 5,
+  "candidate_id_collision_count": 0,
+  "runtime_smoke_case_count": 10,
+  "runtime_smoke_pass_count": 10,
+  "all_runtime_contracts_passed": true,
+  "relation_candidate_counts": {
+    "acceptable_equivalent": 1,
+    "lexical": 1,
+    "contract_mismatch": 3,
+    "evidence_insufficient": 0
+  },
+  "formal_catalog_size_after": 120,
+  "formal_catalog_increment_count": 0,
+  "formal_acceptable_tools_admission_count": 0,
+  "formal_neighbor_admission_count": 0,
+  "filled_relation_slot_count": 0,
+  "remaining_lexical_gap": 30,
+  "remaining_contract_mismatch_gap": 40,
+  "external_api_calls": 0,
+  "formal_pool_generation_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

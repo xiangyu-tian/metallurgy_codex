@@ -1,0 +1,190 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH1-V1-20260803",
+  "case_count": 10,
+  "rows": [
+    {
+      "candidate_tool_id": "E3C001",
+      "case_id": "E3-REG-E3C001-S01",
+      "input": {
+        "value": 3.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "value": 3250.0,
+          "source_unit": "kg",
+          "target_unit": "g",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "质量"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C001",
+      "case_id": "E3-REG-E3C001-F01",
+      "input": {
+        "value": 1,
+        "source_unit": "g",
+        "target_unit": "kg"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "UNSUPPORTED_PAIR",
+        "error": "unit pair is outside frozen scope: g -> kg"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C002",
+      "case_id": "E3-REG-E3C002-S01",
+      "input": {
+        "formula": "Na2CO3"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Na": 2.0,
+            "C": 1.0,
+            "O": 3.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C002",
+      "case_id": "E3-REG-E3C002-F01",
+      "input": {
+        "formula": "Fe2O3abc"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "PARSE_ERROR",
+        "error": "ValueError: abc is an invalid formula!"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C003",
+      "case_id": "E3-REG-E3C003-S01",
+      "input": {
+        "smiles": "CCO"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 46.069,
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C003",
+      "case_id": "E3-REG-E3C003-F01",
+      "input": {
+        "smiles": "not_smiles"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "PARSE_ERROR",
+        "error": "RDKit rejected the SMILES input"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C004",
+      "case_id": "E3-REG-E3C004-S01",
+      "input": {
+        "formula": "Al2O3"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 101.9612772,
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C004",
+      "case_id": "E3-REG-E3C004-F01",
+      "input": {
+        "formula": "Xx2"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "PARSE_ERROR",
+        "error": "AttributeError: "
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C005",
+      "case_id": "E3-REG-E3C005-S01",
+      "input": {
+        "compositions": {
+          "Fe": 3,
+          "C": 1
+        }
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "normalized": {
+            "Fe": 0.75,
+            "C": 0.25
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C005",
+      "case_id": "E3-REG-E3C005-F01",
+      "input": {
+        "compositions": [
+          "Fe",
+          "C"
+        ]
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "INVALID_INPUT",
+        "error": "compositions must be an object"
+      },
+      "contract_outcome_pass": true
+    }
+  ]
+}
