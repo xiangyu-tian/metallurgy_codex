@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0-candidate",
+  "authorization_request_id": "CF08-E2-VARIABILITY-R2-R3-V1-AUTH-REQUEST-20260803",
+  "status": "awaiting_explicit_user_authorization",
+  "requested_decision": "authorized_to_execute_cf08_e2_variability_r2_r3_v1",
+  "authorization_channel_required": "explicit_user_instruction_in_codex_task",
+  "run_config_id": "CF08-E2-VARIABILITY-R2-R3-V1-20260803",
+  "dataset_id": "E2-INDEPENDENT-SEMANTIC-VALIDATION-V1-CANDIDATE-20260731",
+  "requested_task_count": 40,
+  "requested_condition_count": 2,
+  "requested_repeat_ids": [2, 3],
+  "requested_model_cell_count": 160,
+  "conditions": [
+    "flags_only_v1_1",
+    "hybrid_semantic_v1_4"
+  ],
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "tool_access": "disabled",
+  "opened_validation_reuse": "variability_estimation_only",
+  "external_data_scope": [
+    "the same 40 already-opened E2 request states, repeated as R2 and R3 without gold labels or mutation history",
+    "corresponding five versioned tool contract views",
+    "frozen flags-only v1.1 prompt",
+    "frozen hybrid semantic v1.4 prompt and non-gold deterministic context"
+  ],
+  "excluded_external_data_scope": [
+    "gold labels and expected actions",
+    "mutation histories",
+    "API credentials",
+    "metallurgical tool outputs",
+    "any new or modified validation task",
+    "any task outside the locked 40-task candidate"
+  ],
+  "task_source_sha256": "a8f0648b392e48de576d1fa5dc1d3f04cb2bc064986070756827eff9e99b6921",
+  "validation_manifest_sha256": "038ca57d448036d7da373a3fb5e8d7223d7b462c2042e4c855a80e4d90f4e342",
+  "run_config_sha256": "a4f0e16c08dc235fb141de563a5df67808440f6852a3259c2ba9236026cf14b6",
+  "runner_sha256": "05a3bbbe43bcc21d79d63eeda39408fcce5ae43beeb91e47cfb6889e05131ad6",
+  "analyzer_sha256": "b586303fc28aa2e19b70f837dc531a277ea1dab166ed996b8142197c1f06a084",
+  "r1_run_manifest_sha256": "d3e8c4f24860161a83785f17bda3d4b14a5f61b024737576d6dfabc59b998ff9",
+  "r1_analysis_manifest_sha256": "0c9f4b9311714346e62dd154e9dcf36eeb121e7edaf1bd4e7f2e11464cf26f6b",
+  "execution_authorization_file_exists": false,
+  "external_api_execution_authorized": false,
+  "model_execution_count": 0,
+  "gold_labels_sent": false,
+  "mutation_history_sent": false,
+  "repeat_units_are_independent_tasks": false,
+  "post_validation_policy_revision_allowed": false,
+  "model_performance_claim_allowed_before_execution": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

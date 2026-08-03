@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0-candidate",
+  "candidate_id": "CF08-E2-VARIABILITY-R2-R3-OPENING-V1-20260803",
+  "source_bindings": {
+    "run_config_sha256": "a4f0e16c08dc235fb141de563a5df67808440f6852a3259c2ba9236026cf14b6",
+    "runner_sha256": "05a3bbbe43bcc21d79d63eeda39408fcce5ae43beeb91e47cfb6889e05131ad6",
+    "analyzer_sha256": "b586303fc28aa2e19b70f837dc531a277ea1dab166ed996b8142197c1f06a084",
+    "authorization_request_sha256": "dcd893827c16c663c198f6c0b2ab6a2d06dca4578585ae7a0b677f4f1a2ac9a2",
+    "validation_manifest_sha256": "038ca57d448036d7da373a3fb5e8d7223d7b462c2042e4c855a80e4d90f4e342",
+    "r1_run_manifest_sha256": "d3e8c4f24860161a83785f17bda3d4b14a5f61b024737576d6dfabc59b998ff9",
+    "r1_analysis_manifest_sha256": "0c9f4b9311714346e62dd154e9dcf36eeb121e7edaf1bd4e7f2e11464cf26f6b",
+    "builder_sha256": "3e8abc6875413b125703c71303b9dd29d51d822367e149d9a7fd4bb423f3eb6a"
+  },
+  "artifacts": [
+    {
+      "filename": "run_config_snapshot.json",
+      "sha256": "a4f0e16c08dc235fb141de563a5df67808440f6852a3259c2ba9236026cf14b6"
+    },
+    {
+      "filename": "runner_snapshot.py",
+      "sha256": "05a3bbbe43bcc21d79d63eeda39408fcce5ae43beeb91e47cfb6889e05131ad6"
+    },
+    {
+      "filename": "analyzer_snapshot.py",
+      "sha256": "b586303fc28aa2e19b70f837dc531a277ea1dab166ed996b8142197c1f06a084"
+    },
+    {
+      "filename": "authorization_request_snapshot.json",
+      "sha256": "dcd893827c16c663c198f6c0b2ab6a2d06dca4578585ae7a0b677f4f1a2ac9a2"
+    },
+    {
+      "filename": "validation_candidate_manifest_snapshot.json",
+      "sha256": "038ca57d448036d7da373a3fb5e8d7223d7b462c2042e4c855a80e4d90f4e342"
+    },
+    {
+      "filename": "r1_run_manifest_snapshot.json",
+      "sha256": "d3e8c4f24860161a83785f17bda3d4b14a5f61b024737576d6dfabc59b998ff9"
+    },
+    {
+      "filename": "r1_run_report_snapshot.json",
+      "sha256": "9763fbcfd2697c0eaae98d5ebbe52f48328c975f785d7dceb0d485ed12767757"
+    },
+    {
+      "filename": "r1_analysis_manifest_snapshot.json",
+      "sha256": "0c9f4b9311714346e62dd154e9dcf36eeb121e7edaf1bd4e7f2e11464cf26f6b"
+    },
+    {
+      "filename": "r1_analysis_report_snapshot.json",
+      "sha256": "74f9b50ac362e817ef01c3e32e4e5d47bc7a66b99173ea5d3de1125e1a9241be"
+    },
+    {
+      "filename": "opening_report.json",
+      "sha256": "9b2e2ad837c07cdbb31bfb920d819afdc1a728f8e842d8734e3ad589af0e7820"
+    }
+  ],
+  "execution_status": "prepared_not_authorized",
+  "external_api_calls": 0,
+  "external_api_execution_authorized": false,
+  "repeat_units_are_independent_tasks": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

@@ -43,7 +43,7 @@ v1.1 的 CF 编号重新绑定到可执行真值冻结门槛：
 | CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 五工具端到端选择已验证；17/50/100/120契约目录与近邻生成仍未完成 |
 | CF-06 | 17/50/100/120 Schema API可行性 | 实测函数数量、Token、上下文、延迟、错误、`tool_choice=none`和供应商限制 | `pending` | 尚未按v1.1 Schema-only目录口径执行 |
 | CF-07 | 数据层级与泄漏审计 | `controlled_confirmatory`、`naturalistic_validation`、`exploratory_domain_cases`分层；家族划分和收益校准/评价隔离通过 | `in_progress` | E1b/E1c受控集已分区；自然验证层和探索层尚未冻结 |
-| CF-08 | 先导波动与功效分析 | 估计任务家族、工具家族、重复波动和主要效应；固定正式重复次数 | `in_progress` | E1b组件已批准：5个百分点最小效应、80%功效、120基础任务组、3次重复；E1a/E2/E3组件待各自先导 |
+| CF-08 | 先导波动与功效分析 | 估计任务家族、工具家族、重复波动和主要效应；固定正式重复次数 | `in_progress` | E1b组件已批准；E2已完成R1并形成R2/R3未授权开启包，执行后合并三次重复估计波动；E1a/E3仍待先导 |
 | CF-09 | 样本量附录 | 生成并审批v1.1样本量和重复次数附录 | `in_progress` | `sample_size_addendum_v1.1-rc1.md`已建立，E1b章节批准；E1a/E2/E3章节待补 |
 | CF-10 | 新统计接口与报告模板干跑 | v1.1 E1/E2/E3字段通过输入校验、聚合、Bootstrap/GLMM和报告模板干跑 | `in_progress` | 旧CF-11基础设施已完成；尚未使用v1.1真实候选数据干跑 |
 | CF-11 | 正式资产哈希冻结 | 工具、契约、生成器、任务、参考结果、评分器、配置和报告模板全部进入不可变manifest | `in_progress` | verified_core、E1b、E1c已有局部manifest；全项目冻结清单尚未形成 |
@@ -523,6 +523,22 @@ independent_validation_result_v1:
   premature_call_count: 0
   model_run_repeats: 1
   post_validation_policy_revision_allowed: false
+  confirmatory_inference_allowed: false
+e2_variability_r2_r3_opening_v1:
+  candidate_id: CF08-E2-VARIABILITY-R2-R3-OPENING-V1-20260803
+  status: prepared_not_authorized
+  source_r1_run_id: E2-INDEPENDENT-VALIDATION-B7A96A49A281459B
+  task_count: 40
+  condition_count: 2
+  repeat_ids: [2, 3]
+  additional_repeat_count: 2
+  total_repeat_count_after_execution: 3
+  model_cell_count: 160
+  repeat_units_are_independent_tasks: false
+  post_validation_policy_revision_allowed: false
+  external_api_calls: 0
+  external_api_execution_authorized: false
+  manifest_sha256: 5cea43af17560069a00c0c48193714d90753ce57591854ad91e25c23b7edae34
   confirmatory_inference_allowed: false
 core_frozen: false
 ```

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0-candidate",
+  "run_id": "E2-INDEPENDENT-VALIDATION-B7A96A49A281459B",
+  "artifacts": [
+    {
+      "filename": "run_records.jsonl",
+      "sha256": "abaf06c526353ac2efa49aff6c2b78cbe99ca6b2ebd17b9fb8c9a5e6e33bab5f"
+    },
+    {
+      "filename": "run_report.json",
+      "sha256": "9763fbcfd2697c0eaae98d5ebbe52f48328c975f785d7dceb0d485ed12767757"
+    },
+    {
+      "filename": "held_out_task_source_snapshot.json",
+      "sha256": "a8f0648b392e48de576d1fa5dc1d3f04cb2bc064986070756827eff9e99b6921"
+    },
+    {
+      "filename": "validation_candidate_manifest_snapshot.json",
+      "sha256": "038ca57d448036d7da373a3fb5e8d7223d7b462c2042e4c855a80e4d90f4e342"
+    },
+    {
+      "filename": "contracts_snapshot.json",
+      "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"
+    },
+    {
+      "filename": "base_policy_snapshot.json",
+      "sha256": "a16c7c359e7ade35965edeb1fe036cf11cb91c01f1ca1b43d7b04b6b0544e519"
+    },
+    {
+      "filename": "hybrid_policy_snapshot.json",
+      "sha256": "93cf8f82e2db750cabf87aa14f98759b0818ab5652ec7c8a3f63ce7e4e03bb65"
+    },
+    {
+      "filename": "baseline_prompt_snapshot.json",
+      "sha256": "8e6047010443d1661df96c5f762c9a19dbc9f01a0d57a48588960ed5613a1eac"
+    },
+    {
+      "filename": "baseline_schema_snapshot.json",
+      "sha256": "f8c00f7aa42b2823e3e4efd8c7d74bcfd3f70acb6b7b67185b3c6346f0568840"
+    },
+    {
+      "filename": "hybrid_prompt_snapshot.json",
+      "sha256": "b4e427dc1c9e396ae373811c56561b51cb3922de9b1dc6edea11acbc99b95abf"
+    },
+    {
+      "filename": "hybrid_schema_snapshot.json",
+      "sha256": "9d20ae571abc0a7ccb98b64c217b6fe6304028b2159c1d7ed10e50a92186c5cb"
+    },
+    {
+      "filename": "run_config_snapshot.json",
+      "sha256": "ec2898ac871931060f2765de44ef61f444f968ba9fbaafaea4a94e86d7ea27ff"
+    },
+    {
+      "filename": "execution_authorization_snapshot.json",
+      "sha256": "724b551eeb936958e99c2ddc4b8e806b2c916a782a4c4369ff6a2da1e77328ba"
+    },
+    {
+      "filename": "runner_source_snapshot.py",
+      "sha256": "3e025a48ef99b5877abedadea941d90c6f75988de4c2b0dc921dde298c545de0"
+    }
+  ],
+  "external_api_calls": 80,
+  "external_api_execution_authorized": true,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}
