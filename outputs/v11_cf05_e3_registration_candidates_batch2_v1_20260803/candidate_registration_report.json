@@ -1,0 +1,28 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH2-V1-20260803",
+  "scope": "second_nonformal_candidate_runtime_and_relation_validation",
+  "status": "batch2_registration_complete_pycalphad_blocked",
+  "environment_verification_passed": true,
+  "candidate_id_reservation_count": 12,
+  "implemented_candidate_count": 10,
+  "blocked_candidate_count": 2,
+  "runtime_case_count": 30,
+  "runtime_pass_count": 30,
+  "all_runtime_contracts_passed": true,
+  "relation_candidate_counts": {
+    "contract_mismatch": 4,
+    "evidence_insufficient": 1,
+    "lexical": 5
+  },
+  "lexical_gap_before": 29,
+  "lexical_gap_if_admitted": 24,
+  "contract_mismatch_gap_before": 37,
+  "contract_mismatch_gap_if_admitted": 33,
+  "formal_catalog_size": 120,
+  "formal_catalog_increment_count": 0,
+  "formal_relation_admission_count": 0,
+  "external_api_calls": 0,
+  "formal_pool_generation_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

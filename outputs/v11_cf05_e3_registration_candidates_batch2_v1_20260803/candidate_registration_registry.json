@@ -1,0 +1,503 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH2-V1-20260803",
+  "candidate_count": 10,
+  "candidates": [
+    {
+      "candidate_tool_id": "E3C006",
+      "provisional_candidate_id": "SRC-PINT-002",
+      "target_tool_id": "A001",
+      "semantic_alias": "pint_explicit_context_transform",
+      "tool_id": "E3C006",
+      "tool_name": "Pint上下文单位维度变换",
+      "scenario": "通用数据与校验",
+      "core_method": "量纲分析与单位映射",
+      "main_input": "数值、源单位、目标单位、上下文名称与参数",
+      "main_output": "上下文变换值、目标单位与上下文名称",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "registered_pint_context_transformations"
+      ],
+      "data_or_model_version": "pint-0.25.3-context-registry",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "pint",
+      "package_version": "0.25.3",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C006",
+          "description": "Pint上下文单位维度变换；方法：量纲分析与单位映射；输入：数值、源单位、目标单位、上下文名称与参数；输出：上下文变换值、目标单位与上下文名称；边界：requires an explicitly named dimensional context whereas A001 only accepts ordinary frozen unit-pair conversions",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "number"
+              },
+              "source_unit": {
+                "type": "string"
+              },
+              "target_unit": {
+                "type": "string"
+              },
+              "context_name": {
+                "type": "string"
+              },
+              "context_parameters": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "value",
+              "source_unit",
+              "target_unit",
+              "context_name"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch2",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C007",
+      "provisional_candidate_id": "SRC-RDKIT-001",
+      "target_tool_id": "A002",
+      "semantic_alias": "rdkit_smiles_structure_parser",
+      "tool_id": "E3C007",
+      "tool_name": "RDKit SMILES分子结构解析",
+      "scenario": "通用数据与校验",
+      "core_method": "RDKit SMILES分子结构解析专用算法",
+      "main_input": "SMILES分子字符串与清洗选项",
+      "main_output": "规范SMILES、原子数、键数与形式电荷",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "rdkit_smiles_molecular_graphs"
+      ],
+      "data_or_model_version": "rdkit-2026.3.4-smiles",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "rdkit",
+      "package_version": "2026.3.4",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C007",
+          "description": "RDKit SMILES分子结构解析；方法：RDKit SMILES分子结构解析专用算法；输入：SMILES分子字符串与清洗选项；输出：规范SMILES、原子数、键数与形式电荷；边界：parser wording overlaps A002 but the accepted grammar is SMILES connectivity rather than stoichiometric formula syntax",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "smiles": {
+                "type": "string"
+              },
+              "sanitize": {
+                "type": "boolean",
+                "default": true
+              }
+            },
+            "required": [
+              "smiles"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch2",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "evidence_insufficient",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C008",
+      "provisional_candidate_id": "SRC-RDKIT-002",
+      "target_tool_id": "A002",
+      "semantic_alias": "rdkit_smarts_query_parser",
+      "tool_id": "E3C008",
+      "tool_name": "RDKit SMARTS化学查询式解析",
+      "scenario": "通用数据与校验",
+      "core_method": "RDKit SMARTS化学查询式解析专用算法",
+      "main_input": "SMARTS查询字符串与氢合并选项",
+      "main_output": "规范SMARTS与查询图规模",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "rdkit_smarts_query_graphs"
+      ],
+      "data_or_model_version": "rdkit-2026.3.4-smarts",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "rdkit",
+      "package_version": "2026.3.4",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C008",
+          "description": "RDKit SMARTS化学查询式解析；方法：RDKit SMARTS化学查询式解析专用算法；输入：SMARTS查询字符串与氢合并选项；输出：规范SMARTS与查询图规模；边界：chemical-expression parser wording overlaps A002, but SMARTS returns a query graph and may describe nonphysical patterns rather than element counts",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "smarts": {
+                "type": "string"
+              },
+              "merge_hydrogens": {
+                "type": "boolean",
+                "default": false
+              }
+            },
+            "required": [
+              "smarts"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch2",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C009",
+      "provisional_candidate_id": "SRC-RDKIT-003",
+      "target_tool_id": "A002",
+      "semantic_alias": "rdkit_canonical_smiles_normalizer",
+      "tool_id": "E3C009",
+      "tool_name": "RDKit SMILES化学表达式解析与规范化",
+      "scenario": "通用数据与校验",
+      "core_method": "RDKit SMILES化学表达式解析与规范化专用算法",
+      "main_input": "SMILES分子字符串与手性选项",
+      "main_output": "规范SMILES字符串",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "rdkit_parseable_smiles"
+      ],
+      "data_or_model_version": "rdkit-2026.3.4-canonicalization",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "rdkit",
+      "package_version": "2026.3.4",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C009",
+          "description": "RDKit SMILES化学表达式解析与规范化；方法：RDKit SMILES化学表达式解析与规范化专用算法；输入：SMILES分子字符串与手性选项；输出：规范SMILES字符串；边界：chemical-string parsing language overlaps A002 while the operation normalizes SMILES and never returns stoichiometric element counts",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "smiles": {
+                "type": "string"
+              },
+              "use_chirality": {
+                "type": "boolean",
+                "default": true
+              }
+            },
+            "required": [
+              "smiles"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch2",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C010",
+      "provisional_candidate_id": "SRC-RDKIT-005",
+      "target_tool_id": "A003",
+      "semantic_alias": "rdkit_exact_molecular_weight",
+      "tool_id": "E3C010",
+      "tool_name": "RDKit精确摩尔质量计算（同位素）",
+      "scenario": "通用数据与校验",
+      "core_method": "RDKit精确摩尔质量计算（同位素）专用算法",
+      "main_input": "SMILES分子结构",
+      "main_output": "精确同位素分子量与质量约定",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "rdkit_valid_molecular_graphs"
+      ],
+      "data_or_model_version": "rdkit-2026.3.4-exact-isotopic-mass",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "rdkit",
+      "package_version": "2026.3.4",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C010",
+          "description": "RDKit精确摩尔质量计算（同位素）；方法：RDKit精确摩尔质量计算（同位素）专用算法；输入：SMILES分子结构；输出：精确同位素分子量与质量约定；边界：molecular-weight wording is highly similar, but exact isotopic mass is not A003 average standard-atomic-weight molar mass",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "smiles": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "smiles"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch2",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C011",
+      "provisional_candidate_id": "SRC-RDKIT-006",
+      "target_tool_id": "A003",
+      "semantic_alias": "rdkit_heavy_atom_molecular_weight",
+      "tool_id": "E3C011",
+      "tool_name": "RDKit重原子摩尔质量计算",
+      "scenario": "通用数据与校验",
+      "core_method": "元素原子量加权求和",
+      "main_input": "SMILES分子结构",
+      "main_output": "排除氢后的平均分子量",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "rdkit_valid_molecular_graphs_without_hydrogen_contribution"
+      ],
+      "data_or_model_version": "rdkit-2026.3.4-heavy-atom-mass",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "rdkit",
+      "package_version": "2026.3.4",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C011",
+          "description": "RDKit重原子摩尔质量计算；方法：元素原子量加权求和；输入：SMILES分子结构；输出：排除氢后的平均分子量；边界：uses an atomic-weight sum related to A003 but intentionally excludes hydrogen and requires a molecular graph",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "smiles": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "smiles"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch2",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C012",
+      "provisional_candidate_id": "SRC-PMG-004",
+      "target_tool_id": "A004",
+      "semantic_alias": "pymatgen_reduced_composition",
+      "tool_id": "E3C012",
+      "tool_name": "pymatgen成分归一化为最简整数比",
+      "scenario": "通用数据与校验",
+      "core_method": "pymatgen成分归一化为最简整数比专用算法",
+      "main_input": "化学式或元素计量映射",
+      "main_output": "最简化学式、最简组成与约简因子",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "pymatgen_element_or_species_compositions"
+      ],
+      "data_or_model_version": "pymatgen-2026.5.4-reduction",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "pymatgen",
+      "package_version": "2026.5.4",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C012",
+          "description": "pymatgen成分归一化为最简整数比；方法：pymatgen成分归一化为最简整数比专用算法；输入：化学式或元素计量映射；输出：最简化学式、最简组成与约简因子；边界：composition normalization terminology overlaps A004, but integer-ratio reduction is a different transformation from unit-sum normalization",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "formula_or_amounts": {
+                "type": [
+                  "string",
+                  "object"
+                ]
+              }
+            },
+            "required": [
+              "formula_or_amounts"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch2",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C013",
+      "provisional_candidate_id": "SRC-PMG-005",
+      "target_tool_id": "A004",
+      "semantic_alias": "pymatgen_atomic_fraction",
+      "tool_id": "E3C013",
+      "tool_name": "pymatgen成分归一化：单元素原子分数",
+      "scenario": "通用数据与校验",
+      "core_method": "pymatgen成分归一化：单元素原子分数专用算法",
+      "main_input": "化学式或组成与目标元素",
+      "main_output": "目标元素原子分数",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "pymatgen_element_compositions"
+      ],
+      "data_or_model_version": "pymatgen-2026.5.4-atomic-fraction",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "pymatgen",
+      "package_version": "2026.5.4",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C013",
+          "description": "pymatgen成分归一化：单元素原子分数；方法：pymatgen成分归一化：单元素原子分数专用算法；输入：化学式或组成与目标元素；输出：目标元素原子分数；边界：fraction and composition wording overlaps A004, but this accessor returns only one selected species on an atomic basis",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "formula_or_amounts": {
+                "type": [
+                  "string",
+                  "object"
+                ]
+              },
+              "species": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "formula_or_amounts",
+              "species"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch2",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C014",
+      "provisional_candidate_id": "SRC-PMG-006",
+      "target_tool_id": "A004",
+      "semantic_alias": "pymatgen_weight_fraction",
+      "tool_id": "E3C014",
+      "tool_name": "pymatgen成分归一化：单元素质量分数",
+      "scenario": "通用数据与校验",
+      "core_method": "质量分数/摩尔分数归一化与基准转换",
+      "main_input": "化学式或组成与目标元素",
+      "main_output": "目标元素质量分数",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "pymatgen_element_compositions"
+      ],
+      "data_or_model_version": "pymatgen-2026.5.4-weight-fraction",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "pymatgen",
+      "package_version": "2026.5.4",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C014",
+          "description": "pymatgen成分归一化：单元素质量分数；方法：质量分数/摩尔分数归一化与基准转换；输入：化学式或组成与目标元素；输出：目标元素质量分数；边界：shares mass-fraction normalization logic with A004 but returns one species only and fixes pymatgen atomic-weight conventions",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "formula_or_amounts": {
+                "type": [
+                  "string",
+                  "object"
+                ]
+              },
+              "species": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "formula_or_amounts",
+              "species"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch2",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C015",
+      "provisional_candidate_id": "SRC-PMG-007",
+      "target_tool_id": "A004",
+      "semantic_alias": "pymatgen_weight_to_molar_composition",
+      "tool_id": "E3C015",
+      "tool_name": "pymatgen质量到摩尔成分归一化转换",
+      "scenario": "通用数据与校验",
+      "core_method": "质量分数/摩尔分数归一化与基准转换",
+      "main_input": "元素质量映射",
+      "main_output": "摩尔量映射与原子分数",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "pymatgen_recognized_element_weight_mappings"
+      ],
+      "data_or_model_version": "pymatgen-2026.5.4-weight-to-molar",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "pymatgen",
+      "package_version": "2026.5.4",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C015",
+          "description": "pymatgen质量到摩尔成分归一化转换；方法：质量分数/摩尔分数归一化与基准转换；输入：元素质量映射；输出：摩尔量映射与原子分数；边界：shares composition-basis transformation with A004 but interprets input strictly as weights and converts it to molar amounts",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "weights": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "number"
+                }
+              }
+            },
+            "required": [
+              "weights"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch2",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    }
+  ]
+}

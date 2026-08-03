@@ -1,0 +1,602 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH2-V1-20260803",
+  "case_count": 30,
+  "rows": [
+    {
+      "candidate_tool_id": "E3C006",
+      "case_id": "E3-B2-E3C006-N01",
+      "case_kind": "normal",
+      "input": {
+        "value": 500,
+        "source_unit": "nm",
+        "target_unit": "THz",
+        "context_name": "spectroscopy"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "converted_value": 599.5849159999999,
+          "target_unit": "terahertz",
+          "context_name": "spectroscopy"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C006",
+      "case_id": "E3-B2-E3C006-B01",
+      "case_kind": "boundary",
+      "input": {
+        "value": 1,
+        "source_unit": "um",
+        "target_unit": "eV",
+        "context_name": "spectroscopy"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "converted_value": 1.2398419843320028,
+          "target_unit": "electron_volt",
+          "context_name": "spectroscopy"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C006",
+      "case_id": "E3-B2-E3C006-F01",
+      "case_kind": "failure",
+      "input": {
+        "value": 1,
+        "source_unit": "m",
+        "target_unit": "s",
+        "context_name": "missing_context"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "UNDEFINED_CONTEXT",
+        "error": "KeyError: 'missing_context'"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C007",
+      "case_id": "E3-B2-E3C007-N01",
+      "case_kind": "normal",
+      "input": {
+        "smiles": "CCO"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "canonical_smiles": "CCO",
+          "atom_count": 3,
+          "bond_count": 2,
+          "formal_charge": 0
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C007",
+      "case_id": "E3-B2-E3C007-B01",
+      "case_kind": "boundary",
+      "input": {
+        "smiles": "[NH4+]"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "canonical_smiles": "[NH4+]",
+          "atom_count": 1,
+          "bond_count": 0,
+          "formal_charge": 1
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C007",
+      "case_id": "E3-B2-E3C007-F01",
+      "case_kind": "failure",
+      "input": {
+        "smiles": "not_smiles"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "SMILES_PARSE_ERROR",
+        "error": "RDKit rejected the SMILES input"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C008",
+      "case_id": "E3-B2-E3C008-N01",
+      "case_kind": "normal",
+      "input": {
+        "smarts": "[#6]-[#8]"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "canonical_smarts": "[#6]-[#8]",
+          "query_atom_count": 2,
+          "query_bond_count": 1
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C008",
+      "case_id": "E3-B2-E3C008-B01",
+      "case_kind": "boundary",
+      "input": {
+        "smarts": "[Fe+2]"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "canonical_smarts": "[#26&+2]",
+          "query_atom_count": 1,
+          "query_bond_count": 0
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C008",
+      "case_id": "E3-B2-E3C008-F01",
+      "case_kind": "failure",
+      "input": {
+        "smarts": "["
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "SMARTS_PARSE_ERROR",
+        "error": "RDKit rejected the SMARTS input"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C009",
+      "case_id": "E3-B2-E3C009-N01",
+      "case_kind": "normal",
+      "input": {
+        "smiles": "C(C)O"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "canonical_smiles": "CCO"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C009",
+      "case_id": "E3-B2-E3C009-B01",
+      "case_kind": "boundary",
+      "input": {
+        "smiles": "N[C@@H](C)C(=O)O"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "canonical_smiles": "C[C@H](N)C(=O)O"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C009",
+      "case_id": "E3-B2-E3C009-F01",
+      "case_kind": "failure",
+      "input": {
+        "smiles": "not_smiles"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "CANONICALIZATION_ERROR",
+        "error": "ArgumentError: Python argument types in\n    rdkit.Chem.rdmolfiles.MolToSmiles(NoneType, bool)\ndid not match C++ signature:\n    MolToSmiles(class RDKit::ROMol mol, bool isomericSmiles=True, bool kekuleSmiles=False, int rootedAtAtom=-1, bool canonical=True,"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C010",
+      "case_id": "E3-B2-E3C010-N01",
+      "case_kind": "normal",
+      "input": {
+        "smiles": "CCO"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "exact_molecular_weight": 46.041864812,
+          "mass_convention": "exact_isotopic_mass"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C010",
+      "case_id": "E3-B2-E3C010-B01",
+      "case_kind": "boundary",
+      "input": {
+        "smiles": "[Fe+2]"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "exact_molecular_weight": 55.93384034018,
+          "mass_convention": "exact_isotopic_mass"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C010",
+      "case_id": "E3-B2-E3C010-F01",
+      "case_kind": "failure",
+      "input": {
+        "smiles": "not_smiles"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "SMILES_PARSE_ERROR",
+        "error": "RDKit rejected the SMILES input"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C011",
+      "case_id": "E3-B2-E3C011-N01",
+      "case_kind": "normal",
+      "input": {
+        "smiles": "CCO"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "heavy_atom_molecular_weight": 40.021,
+          "hydrogen_excluded": true
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C011",
+      "case_id": "E3-B2-E3C011-B01",
+      "case_kind": "boundary",
+      "input": {
+        "smiles": "C"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "heavy_atom_molecular_weight": 12.011,
+          "hydrogen_excluded": true
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C011",
+      "case_id": "E3-B2-E3C011-F01",
+      "case_kind": "failure",
+      "input": {
+        "smiles": "not_smiles"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "SMILES_PARSE_ERROR",
+        "error": "RDKit rejected the SMILES input"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C012",
+      "case_id": "E3-B2-E3C012-N01",
+      "case_kind": "normal",
+      "input": {
+        "formula_or_amounts": "Fe4O6"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "reduced_formula": "Fe2O3",
+          "reduced_amounts": {
+            "Fe": 2.0,
+            "O": 3.0
+          },
+          "reduction_factor": 2.0
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C012",
+      "case_id": "E3-B2-E3C012-B01",
+      "case_kind": "boundary",
+      "input": {
+        "formula_or_amounts": {
+          "Fe": 0.5,
+          "O": 0.75
+        }
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "reduced_formula": "Fe0.5O0.75",
+          "reduced_amounts": {
+            "Fe": 0.5,
+            "O": 0.75
+          },
+          "reduction_factor": 1.0
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C012",
+      "case_id": "E3-B2-E3C012-F01",
+      "case_kind": "failure",
+      "input": {
+        "formula_or_amounts": {
+          "not_element": 1
+        }
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "REDUCTION_ERROR",
+        "error": "ValueError: Can't parse Element or Species from 'not_element'"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C013",
+      "case_id": "E3-B2-E3C013-N01",
+      "case_kind": "normal",
+      "input": {
+        "formula_or_amounts": "Fe2O3",
+        "species": "Fe"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "species": "Fe",
+          "atomic_fraction": 0.4
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C013",
+      "case_id": "E3-B2-E3C013-B01",
+      "case_kind": "boundary",
+      "input": {
+        "formula_or_amounts": {
+          "Fe": 1,
+          "O": 99
+        },
+        "species": "Fe"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "species": "Fe",
+          "atomic_fraction": 0.01
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C013",
+      "case_id": "E3-B2-E3C013-F01",
+      "case_kind": "failure",
+      "input": {
+        "formula_or_amounts": "Fe2O3",
+        "species": "C"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "UNKNOWN_SPECIES",
+        "error": "selected species is absent from the composition"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C014",
+      "case_id": "E3-B2-E3C014-N01",
+      "case_kind": "normal",
+      "input": {
+        "formula_or_amounts": "Fe2O3",
+        "species": "Fe"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "species": "Fe",
+          "weight_fraction": 0.699425505453753
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C014",
+      "case_id": "E3-B2-E3C014-B01",
+      "case_kind": "boundary",
+      "input": {
+        "formula_or_amounts": "H2O",
+        "species": "H"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "species": "H",
+          "weight_fraction": 0.11189834407236524
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C014",
+      "case_id": "E3-B2-E3C014-F01",
+      "case_kind": "failure",
+      "input": {
+        "formula_or_amounts": "Fe2O3",
+        "species": "C"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "UNKNOWN_SPECIES",
+        "error": "selected species is absent from the composition"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C015",
+      "case_id": "E3-B2-E3C015-N01",
+      "case_kind": "normal",
+      "input": {
+        "weights": {
+          "Fe": 70,
+          "C": 30
+        }
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_amounts": {
+            "Fe": 0.33414782168746143,
+            "C": 0.6658521783125385
+          },
+          "atomic_fractions": {
+            "Fe": 0.33414782168746143,
+            "C": 0.6658521783125385
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C015",
+      "case_id": "E3-B2-E3C015-B01",
+      "case_kind": "boundary",
+      "input": {
+        "weights": {
+          "Fe": 100,
+          "C": 0
+        }
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_amounts": {
+            "Fe": 1.0
+          },
+          "atomic_fractions": {
+            "Fe": 1.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C015",
+      "case_id": "E3-B2-E3C015-F01",
+      "case_kind": "failure",
+      "input": {
+        "weights": {
+          "Fe": 0,
+          "C": 0
+        }
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "INVALID_WEIGHT_MAPPING",
+        "error": "weights must be finite, nonnegative, and not all zero"
+      },
+      "contract_outcome_pass": true
+    }
+  ]
+}

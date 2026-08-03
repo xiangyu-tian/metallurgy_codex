@@ -1,0 +1,302 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH2-V1-20260803",
+  "row_count": 10,
+  "rows": [
+    {
+      "target_tool_id": "A001",
+      "candidate_tool_id": "E3C006",
+      "candidate_tool_name": "Pint上下文单位维度变换",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": true,
+      "name_bigram_dice": 0.133333,
+      "contract_text_bigram_dice": 0.481481,
+      "input_bigram_dice": 0.7,
+      "output_bigram_dice": 0.0,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "requires an explicitly named dimensional context whereas A001 only accepts ordinary frozen unit-pair conversions",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C006-N01",
+        "E3-B2-E3C006-B01",
+        "E3-B2-E3C006-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A002",
+      "candidate_tool_id": "E3C007",
+      "candidate_tool_name": "RDKit SMILES分子结构解析",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": false,
+      "name_bigram_dice": 0.1,
+      "contract_text_bigram_dice": 0.084507,
+      "input_bigram_dice": 0.2,
+      "output_bigram_dice": 0.0,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": false,
+      "relation_policy": "lexical",
+      "relation_mechanism": "parser wording overlaps A002 but the accepted grammar is SMILES connectivity rather than stoichiometric formula syntax",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C007-N01",
+        "E3-B2-E3C007-B01",
+        "E3-B2-E3C007-F01"
+      ],
+      "relation_evidence_passed": false,
+      "registration_candidate_relation": "evidence_insufficient",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A002",
+      "candidate_tool_id": "E3C008",
+      "candidate_tool_name": "RDKit SMARTS化学查询式解析",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": false,
+      "name_bigram_dice": 0.3,
+      "contract_text_bigram_dice": 0.147059,
+      "input_bigram_dice": 0.190476,
+      "output_bigram_dice": 0.0,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": true,
+      "provable_contract_mismatch_neighbor": false,
+      "relation_policy": "lexical",
+      "relation_mechanism": "chemical-expression parser wording overlaps A002, but SMARTS returns a query graph and may describe nonphysical patterns rather than element counts",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C008-N01",
+        "E3-B2-E3C008-B01",
+        "E3-B2-E3C008-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A002",
+      "candidate_tool_id": "E3C009",
+      "candidate_tool_name": "RDKit SMILES化学表达式解析与规范化",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": false,
+      "name_bigram_dice": 0.24,
+      "contract_text_bigram_dice": 0.147059,
+      "input_bigram_dice": 0.2,
+      "output_bigram_dice": 0.0,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": true,
+      "provable_contract_mismatch_neighbor": false,
+      "relation_policy": "lexical",
+      "relation_mechanism": "chemical-string parsing language overlaps A002 while the operation normalizes SMILES and never returns stoichiometric element counts",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C009-N01",
+        "E3-B2-E3C009-B01",
+        "E3-B2-E3C009-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C010",
+      "candidate_tool_name": "RDKit精确摩尔质量计算（同位素）",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": false,
+      "name_bigram_dice": 0.375,
+      "contract_text_bigram_dice": 0.145455,
+      "input_bigram_dice": 0.0,
+      "output_bigram_dice": 0.133333,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": true,
+      "provable_contract_mismatch_neighbor": false,
+      "relation_policy": "lexical",
+      "relation_mechanism": "molecular-weight wording is highly similar, but exact isotopic mass is not A003 average standard-atomic-weight molar mass",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C010-N01",
+        "E3-B2-E3C010-B01",
+        "E3-B2-E3C010-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C011",
+      "candidate_tool_name": "RDKit重原子摩尔质量计算",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": true,
+      "name_bigram_dice": 0.428571,
+      "contract_text_bigram_dice": 0.428571,
+      "input_bigram_dice": 0.0,
+      "output_bigram_dice": 0.0,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "uses an atomic-weight sum related to A003 but intentionally excludes hydrogen and requires a molecular graph",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C011-N01",
+        "E3-B2-E3C011-B01",
+        "E3-B2-E3C011-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C012",
+      "candidate_tool_name": "pymatgen成分归一化为最简整数比",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": false,
+      "name_bigram_dice": 0.363636,
+      "contract_text_bigram_dice": 0.144928,
+      "input_bigram_dice": 0.0,
+      "output_bigram_dice": 0.111111,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": true,
+      "provable_contract_mismatch_neighbor": false,
+      "relation_policy": "lexical",
+      "relation_mechanism": "composition normalization terminology overlaps A004, but integer-ratio reduction is a different transformation from unit-sum normalization",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C012-N01",
+        "E3-B2-E3C012-B01",
+        "E3-B2-E3C012-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C013",
+      "candidate_tool_name": "pymatgen成分归一化：单元素原子分数",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": false,
+      "name_bigram_dice": 0.347826,
+      "contract_text_bigram_dice": 0.196721,
+      "input_bigram_dice": 0.133333,
+      "output_bigram_dice": 0.0,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": true,
+      "provable_contract_mismatch_neighbor": false,
+      "relation_policy": "lexical",
+      "relation_mechanism": "fraction and composition wording overlaps A004, but this accessor returns only one selected species on an atomic basis",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C013-N01",
+        "E3-B2-E3C013-B01",
+        "E3-B2-E3C013-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C014",
+      "candidate_tool_name": "pymatgen成分归一化：单元素质量分数",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": true,
+      "name_bigram_dice": 0.347826,
+      "contract_text_bigram_dice": 0.515152,
+      "input_bigram_dice": 0.133333,
+      "output_bigram_dice": 0.0,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "shares mass-fraction normalization logic with A004 but returns one species only and fixes pymatgen atomic-weight conventions",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C014-N01",
+        "E3-B2-E3C014-B01",
+        "E3-B2-E3C014-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C015",
+      "candidate_tool_name": "pymatgen质量到摩尔成分归一化转换",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": true,
+      "name_bigram_dice": 0.347826,
+      "contract_text_bigram_dice": 0.484848,
+      "input_bigram_dice": 0.0,
+      "output_bigram_dice": 0.0,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "shares composition-basis transformation with A004 but interprets input strictly as weights and converts it to molar amounts",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C015-N01",
+        "E3-B2-E3C015-B01",
+        "E3-B2-E3C015-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_relation_admission": false
+    }
+  ]
+}

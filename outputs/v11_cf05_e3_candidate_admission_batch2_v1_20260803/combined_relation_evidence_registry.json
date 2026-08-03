@@ -1,0 +1,281 @@
+{
+  "decision_id": "V11-CF05-E3-CANDIDATE-ADMISSION-BATCH2-V1-20260803",
+  "relation_count": 13,
+  "relations": [
+    {
+      "candidate_tool_id": "E3C002",
+      "target_tool_id": "A002",
+      "relation_type": "contract_mismatch",
+      "relation_evidence_case_ids": [
+        "E3-HO-PMG001-001"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "not_acceptable_equivalent": true,
+        "single_relation_assigned": true,
+        "no_duplicate_slot": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C003",
+      "target_tool_id": "A003",
+      "relation_type": "lexical",
+      "relation_evidence_case_ids": [
+        "E3-HO-RDKIT004-001"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "not_acceptable_equivalent": true,
+        "single_relation_assigned": true,
+        "no_duplicate_slot": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C004",
+      "target_tool_id": "A003",
+      "relation_type": "contract_mismatch",
+      "relation_evidence_case_ids": [
+        "E3-HO-PMG002-001"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "not_acceptable_equivalent": true,
+        "single_relation_assigned": true,
+        "no_duplicate_slot": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C005",
+      "target_tool_id": "A004",
+      "relation_type": "contract_mismatch",
+      "relation_evidence_case_ids": [
+        "E3-HO-PMG003-001"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "not_acceptable_equivalent": true,
+        "single_relation_assigned": true,
+        "no_duplicate_slot": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C006",
+      "target_tool_id": "A001",
+      "relation_type": "contract_mismatch",
+      "relation_mechanism": "requires an explicitly named dimensional context whereas A001 only accepts ordinary frozen unit-pair conversions",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C006-N01",
+        "E3-B2-E3C006-B01",
+        "E3-B2-E3C006-F01"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C008",
+      "target_tool_id": "A002",
+      "relation_type": "lexical",
+      "relation_mechanism": "chemical-expression parser wording overlaps A002, but SMARTS returns a query graph and may describe nonphysical patterns rather than element counts",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C008-N01",
+        "E3-B2-E3C008-B01",
+        "E3-B2-E3C008-F01"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C009",
+      "target_tool_id": "A002",
+      "relation_type": "lexical",
+      "relation_mechanism": "chemical-string parsing language overlaps A002 while the operation normalizes SMILES and never returns stoichiometric element counts",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C009-N01",
+        "E3-B2-E3C009-B01",
+        "E3-B2-E3C009-F01"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C010",
+      "target_tool_id": "A003",
+      "relation_type": "lexical",
+      "relation_mechanism": "molecular-weight wording is highly similar, but exact isotopic mass is not A003 average standard-atomic-weight molar mass",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C010-N01",
+        "E3-B2-E3C010-B01",
+        "E3-B2-E3C010-F01"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C011",
+      "target_tool_id": "A003",
+      "relation_type": "contract_mismatch",
+      "relation_mechanism": "uses an atomic-weight sum related to A003 but intentionally excludes hydrogen and requires a molecular graph",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C011-N01",
+        "E3-B2-E3C011-B01",
+        "E3-B2-E3C011-F01"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C012",
+      "target_tool_id": "A004",
+      "relation_type": "lexical",
+      "relation_mechanism": "composition normalization terminology overlaps A004, but integer-ratio reduction is a different transformation from unit-sum normalization",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C012-N01",
+        "E3-B2-E3C012-B01",
+        "E3-B2-E3C012-F01"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C013",
+      "target_tool_id": "A004",
+      "relation_type": "lexical",
+      "relation_mechanism": "fraction and composition wording overlaps A004, but this accessor returns only one selected species on an atomic basis",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C013-N01",
+        "E3-B2-E3C013-B01",
+        "E3-B2-E3C013-F01"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C014",
+      "target_tool_id": "A004",
+      "relation_type": "contract_mismatch",
+      "relation_mechanism": "shares mass-fraction normalization logic with A004 but returns one species only and fixes pymatgen atomic-weight conventions",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C014-N01",
+        "E3-B2-E3C014-B01",
+        "E3-B2-E3C014-F01"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C015",
+      "target_tool_id": "A004",
+      "relation_type": "contract_mismatch",
+      "relation_mechanism": "shares composition-basis transformation with A004 but interprets input strictly as weights and converts it to molar amounts",
+      "runtime_evidence_case_ids": [
+        "E3-B2-E3C015-N01",
+        "E3-B2-E3C015-B01",
+        "E3-B2-E3C015-F01"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    }
+  ],
+  "formal_pool_inclusion_count": 0
+}

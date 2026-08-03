@@ -1,0 +1,305 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH2-V1-20260803",
+  "scope": "second_nonformal_candidate_runtime_and_relation_validation",
+  "bindings": [
+    {
+      "path": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803/e3_schema_catalog_v1_candidate.json",
+      "sha256": "78de613f974d1ee48d5e2afa8a379b534a1e28a5b6749d9fc75f015aff6dd4f6"
+    },
+    {
+      "path": "Tools/core_freeze/verified_core/contracts_v1.json",
+      "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"
+    },
+    {
+      "path": "Tools/core_freeze/e3_routing/neighbor_audit_config_v1_1.json",
+      "sha256": "9ba29726f3e38b2701133e19445f58b9797e6de92e20d1dfeb203c986242bfa3"
+    },
+    {
+      "path": "Tools/core_freeze/e3_routing/candidate_validation_requirements_lock.txt",
+      "sha256": "cf7e10e2217306bb3516875eca513ee085be7ca57b5225777fd16cfa1331c0b3"
+    },
+    {
+      "path": "outputs/v11_cf05_e3_candidate_admission_batch1_v1_20260803/artifact_manifest.json",
+      "sha256": "8c66557f7cdfe03c36e2d412534f5bc213109ce0ad4313e421f3d7ffbb88f1f9"
+    }
+  ],
+  "expected_python_version": "3.11.15",
+  "expected_top_level_versions": {
+    "pint": "0.25.3",
+    "rdkit": "2026.3.4",
+    "pymatgen": "2026.5.4",
+    "pycalphad": "0.11.2"
+  },
+  "starting_gap_state": {
+    "lexical_gap": 29,
+    "contract_mismatch_gap": 37
+  },
+  "implemented_candidates": [
+    {
+      "candidate_tool_id": "E3C006",
+      "provisional_candidate_id": "SRC-PINT-002",
+      "target_tool_id": "A001",
+      "semantic_alias": "pint_explicit_context_transform",
+      "package": "pint",
+      "package_version": "0.25.3",
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "requires an explicitly named dimensional context whereas A001 only accepts ordinary frozen unit-pair conversions",
+      "tool_name": "Pint上下文单位维度变换",
+      "core_method_mode": "target_overlap",
+      "main_input": "数值、源单位、目标单位、上下文名称与参数",
+      "main_output": "上下文变换值、目标单位与上下文名称",
+      "supported_systems": ["registered_pint_context_transformations"],
+      "data_or_model_version": "pint-0.25.3-context-registry",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "value": {"type": "number"},
+          "source_unit": {"type": "string"},
+          "target_unit": {"type": "string"},
+          "context_name": {"type": "string"},
+          "context_parameters": {"type": "object"}
+        },
+        "required": ["value", "source_unit", "target_unit", "context_name"],
+        "additionalProperties": false
+      },
+      "smoke_cases": [
+        {"case_id": "E3-B2-E3C006-N01", "case_kind": "normal", "input": {"value": 500, "source_unit": "nm", "target_unit": "THz", "context_name": "spectroscopy"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C006-B01", "case_kind": "boundary", "input": {"value": 1, "source_unit": "um", "target_unit": "eV", "context_name": "spectroscopy"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C006-F01", "case_kind": "failure", "input": {"value": 1, "source_unit": "m", "target_unit": "s", "context_name": "missing_context"}, "expected_success": false}
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C007",
+      "provisional_candidate_id": "SRC-RDKIT-001",
+      "target_tool_id": "A002",
+      "semantic_alias": "rdkit_smiles_structure_parser",
+      "package": "rdkit",
+      "package_version": "2026.3.4",
+      "relation_policy": "lexical",
+      "relation_mechanism": "parser wording overlaps A002 but the accepted grammar is SMILES connectivity rather than stoichiometric formula syntax",
+      "tool_name": "RDKit SMILES分子结构解析",
+      "core_method_mode": "distinct",
+      "main_input": "SMILES分子字符串与清洗选项",
+      "main_output": "规范SMILES、原子数、键数与形式电荷",
+      "supported_systems": ["rdkit_smiles_molecular_graphs"],
+      "data_or_model_version": "rdkit-2026.3.4-smiles",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {"type": "object", "properties": {"smiles": {"type": "string"}, "sanitize": {"type": "boolean", "default": true}}, "required": ["smiles"], "additionalProperties": false},
+      "smoke_cases": [
+        {"case_id": "E3-B2-E3C007-N01", "case_kind": "normal", "input": {"smiles": "CCO"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C007-B01", "case_kind": "boundary", "input": {"smiles": "[NH4+]"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C007-F01", "case_kind": "failure", "input": {"smiles": "not_smiles"}, "expected_success": false}
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C008",
+      "provisional_candidate_id": "SRC-RDKIT-002",
+      "target_tool_id": "A002",
+      "semantic_alias": "rdkit_smarts_query_parser",
+      "package": "rdkit",
+      "package_version": "2026.3.4",
+      "relation_policy": "lexical",
+      "relation_mechanism": "chemical-expression parser wording overlaps A002, but SMARTS returns a query graph and may describe nonphysical patterns rather than element counts",
+      "tool_name": "RDKit SMARTS化学查询式解析",
+      "core_method_mode": "distinct",
+      "main_input": "SMARTS查询字符串与氢合并选项",
+      "main_output": "规范SMARTS与查询图规模",
+      "supported_systems": ["rdkit_smarts_query_graphs"],
+      "data_or_model_version": "rdkit-2026.3.4-smarts",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {"type": "object", "properties": {"smarts": {"type": "string"}, "merge_hydrogens": {"type": "boolean", "default": false}}, "required": ["smarts"], "additionalProperties": false},
+      "smoke_cases": [
+        {"case_id": "E3-B2-E3C008-N01", "case_kind": "normal", "input": {"smarts": "[#6]-[#8]"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C008-B01", "case_kind": "boundary", "input": {"smarts": "[Fe+2]"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C008-F01", "case_kind": "failure", "input": {"smarts": "["}, "expected_success": false}
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C009",
+      "provisional_candidate_id": "SRC-RDKIT-003",
+      "target_tool_id": "A002",
+      "semantic_alias": "rdkit_canonical_smiles_normalizer",
+      "package": "rdkit",
+      "package_version": "2026.3.4",
+      "relation_policy": "lexical",
+      "relation_mechanism": "chemical-string parsing language overlaps A002 while the operation normalizes SMILES and never returns stoichiometric element counts",
+      "tool_name": "RDKit SMILES化学表达式解析与规范化",
+      "core_method_mode": "distinct",
+      "main_input": "SMILES分子字符串与手性选项",
+      "main_output": "规范SMILES字符串",
+      "supported_systems": ["rdkit_parseable_smiles"],
+      "data_or_model_version": "rdkit-2026.3.4-canonicalization",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {"type": "object", "properties": {"smiles": {"type": "string"}, "use_chirality": {"type": "boolean", "default": true}}, "required": ["smiles"], "additionalProperties": false},
+      "smoke_cases": [
+        {"case_id": "E3-B2-E3C009-N01", "case_kind": "normal", "input": {"smiles": "C(C)O"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C009-B01", "case_kind": "boundary", "input": {"smiles": "N[C@@H](C)C(=O)O"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C009-F01", "case_kind": "failure", "input": {"smiles": "not_smiles"}, "expected_success": false}
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C010",
+      "provisional_candidate_id": "SRC-RDKIT-005",
+      "target_tool_id": "A003",
+      "semantic_alias": "rdkit_exact_molecular_weight",
+      "package": "rdkit",
+      "package_version": "2026.3.4",
+      "relation_policy": "lexical",
+      "relation_mechanism": "molecular-weight wording is highly similar, but exact isotopic mass is not A003 average standard-atomic-weight molar mass",
+      "tool_name": "RDKit精确摩尔质量计算（同位素）",
+      "core_method_mode": "distinct",
+      "main_input": "SMILES分子结构",
+      "main_output": "精确同位素分子量与质量约定",
+      "supported_systems": ["rdkit_valid_molecular_graphs"],
+      "data_or_model_version": "rdkit-2026.3.4-exact-isotopic-mass",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {"type": "object", "properties": {"smiles": {"type": "string"}}, "required": ["smiles"], "additionalProperties": false},
+      "smoke_cases": [
+        {"case_id": "E3-B2-E3C010-N01", "case_kind": "normal", "input": {"smiles": "CCO"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C010-B01", "case_kind": "boundary", "input": {"smiles": "[Fe+2]"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C010-F01", "case_kind": "failure", "input": {"smiles": "not_smiles"}, "expected_success": false}
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C011",
+      "provisional_candidate_id": "SRC-RDKIT-006",
+      "target_tool_id": "A003",
+      "semantic_alias": "rdkit_heavy_atom_molecular_weight",
+      "package": "rdkit",
+      "package_version": "2026.3.4",
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "uses an atomic-weight sum related to A003 but intentionally excludes hydrogen and requires a molecular graph",
+      "tool_name": "RDKit重原子摩尔质量计算",
+      "core_method_mode": "target_overlap",
+      "main_input": "SMILES分子结构",
+      "main_output": "排除氢后的平均分子量",
+      "supported_systems": ["rdkit_valid_molecular_graphs_without_hydrogen_contribution"],
+      "data_or_model_version": "rdkit-2026.3.4-heavy-atom-mass",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {"type": "object", "properties": {"smiles": {"type": "string"}}, "required": ["smiles"], "additionalProperties": false},
+      "smoke_cases": [
+        {"case_id": "E3-B2-E3C011-N01", "case_kind": "normal", "input": {"smiles": "CCO"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C011-B01", "case_kind": "boundary", "input": {"smiles": "C"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C011-F01", "case_kind": "failure", "input": {"smiles": "not_smiles"}, "expected_success": false}
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C012",
+      "provisional_candidate_id": "SRC-PMG-004",
+      "target_tool_id": "A004",
+      "semantic_alias": "pymatgen_reduced_composition",
+      "package": "pymatgen",
+      "package_version": "2026.5.4",
+      "relation_policy": "lexical",
+      "relation_mechanism": "composition normalization terminology overlaps A004, but integer-ratio reduction is a different transformation from unit-sum normalization",
+      "tool_name": "pymatgen成分归一化为最简整数比",
+      "core_method_mode": "distinct",
+      "main_input": "化学式或元素计量映射",
+      "main_output": "最简化学式、最简组成与约简因子",
+      "supported_systems": ["pymatgen_element_or_species_compositions"],
+      "data_or_model_version": "pymatgen-2026.5.4-reduction",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {"type": "object", "properties": {"formula_or_amounts": {"type": ["string", "object"]}}, "required": ["formula_or_amounts"], "additionalProperties": false},
+      "smoke_cases": [
+        {"case_id": "E3-B2-E3C012-N01", "case_kind": "normal", "input": {"formula_or_amounts": "Fe4O6"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C012-B01", "case_kind": "boundary", "input": {"formula_or_amounts": {"Fe": 0.5, "O": 0.75}}, "expected_success": true},
+        {"case_id": "E3-B2-E3C012-F01", "case_kind": "failure", "input": {"formula_or_amounts": {"not_element": 1}}, "expected_success": false}
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C013",
+      "provisional_candidate_id": "SRC-PMG-005",
+      "target_tool_id": "A004",
+      "semantic_alias": "pymatgen_atomic_fraction",
+      "package": "pymatgen",
+      "package_version": "2026.5.4",
+      "relation_policy": "lexical",
+      "relation_mechanism": "fraction and composition wording overlaps A004, but this accessor returns only one selected species on an atomic basis",
+      "tool_name": "pymatgen成分归一化：单元素原子分数",
+      "core_method_mode": "distinct",
+      "main_input": "化学式或组成与目标元素",
+      "main_output": "目标元素原子分数",
+      "supported_systems": ["pymatgen_element_compositions"],
+      "data_or_model_version": "pymatgen-2026.5.4-atomic-fraction",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {"type": "object", "properties": {"formula_or_amounts": {"type": ["string", "object"]}, "species": {"type": "string"}}, "required": ["formula_or_amounts", "species"], "additionalProperties": false},
+      "smoke_cases": [
+        {"case_id": "E3-B2-E3C013-N01", "case_kind": "normal", "input": {"formula_or_amounts": "Fe2O3", "species": "Fe"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C013-B01", "case_kind": "boundary", "input": {"formula_or_amounts": {"Fe": 1, "O": 99}, "species": "Fe"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C013-F01", "case_kind": "failure", "input": {"formula_or_amounts": "Fe2O3", "species": "C"}, "expected_success": false}
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C014",
+      "provisional_candidate_id": "SRC-PMG-006",
+      "target_tool_id": "A004",
+      "semantic_alias": "pymatgen_weight_fraction",
+      "package": "pymatgen",
+      "package_version": "2026.5.4",
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "shares mass-fraction normalization logic with A004 but returns one species only and fixes pymatgen atomic-weight conventions",
+      "tool_name": "pymatgen成分归一化：单元素质量分数",
+      "core_method_mode": "target_overlap",
+      "main_input": "化学式或组成与目标元素",
+      "main_output": "目标元素质量分数",
+      "supported_systems": ["pymatgen_element_compositions"],
+      "data_or_model_version": "pymatgen-2026.5.4-weight-fraction",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {"type": "object", "properties": {"formula_or_amounts": {"type": ["string", "object"]}, "species": {"type": "string"}}, "required": ["formula_or_amounts", "species"], "additionalProperties": false},
+      "smoke_cases": [
+        {"case_id": "E3-B2-E3C014-N01", "case_kind": "normal", "input": {"formula_or_amounts": "Fe2O3", "species": "Fe"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C014-B01", "case_kind": "boundary", "input": {"formula_or_amounts": "H2O", "species": "H"}, "expected_success": true},
+        {"case_id": "E3-B2-E3C014-F01", "case_kind": "failure", "input": {"formula_or_amounts": "Fe2O3", "species": "C"}, "expected_success": false}
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C015",
+      "provisional_candidate_id": "SRC-PMG-007",
+      "target_tool_id": "A004",
+      "semantic_alias": "pymatgen_weight_to_molar_composition",
+      "package": "pymatgen",
+      "package_version": "2026.5.4",
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "shares composition-basis transformation with A004 but interprets input strictly as weights and converts it to molar amounts",
+      "tool_name": "pymatgen质量到摩尔成分归一化转换",
+      "core_method_mode": "target_overlap",
+      "main_input": "元素质量映射",
+      "main_output": "摩尔量映射与原子分数",
+      "supported_systems": ["pymatgen_recognized_element_weight_mappings"],
+      "data_or_model_version": "pymatgen-2026.5.4-weight-to-molar",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {"type": "object", "properties": {"weights": {"type": "object", "additionalProperties": {"type": "number"}}}, "required": ["weights"], "additionalProperties": false},
+      "smoke_cases": [
+        {"case_id": "E3-B2-E3C015-N01", "case_kind": "normal", "input": {"weights": {"Fe": 70, "C": 30}}, "expected_success": true},
+        {"case_id": "E3-B2-E3C015-B01", "case_kind": "boundary", "input": {"weights": {"Fe": 100, "C": 0}}, "expected_success": true},
+        {"case_id": "E3-B2-E3C015-F01", "case_kind": "failure", "input": {"weights": {"Fe": 0, "C": 0}}, "expected_success": false}
+      ]
+    }
+  ],
+  "blocked_candidates": [
+    {
+      "candidate_tool_id": "E3C016",
+      "provisional_candidate_id": "SRC-PYCAL-003",
+      "target_tool_id": "B019",
+      "semantic_alias": "pycalphad_phase_stability_screen",
+      "blocker_code": "THERMODYNAMIC_DATABASE_NOT_FROZEN",
+      "blocker": "No permissible, redistributable, hash-locked TDB and matching component/phase fixture is available. Package installation alone cannot validate scientific execution.",
+      "unblock_requirement": "Bind a redistributable TDB by path, license, SHA-256, components, phases, conditions, and independent expected phase-stability fixtures."
+    },
+    {
+      "candidate_tool_id": "E3C017",
+      "provisional_candidate_id": "SRC-PYCAL-004",
+      "target_tool_id": "B019",
+      "semantic_alias": "pycalphad_binary_phase_diagram_map",
+      "blocker_code": "THERMODYNAMIC_DATABASE_NOT_FROZEN",
+      "blocker": "No permissible, redistributable, hash-locked binary TDB or frozen node-stepping and convergence contract is available.",
+      "unblock_requirement": "Bind a redistributable binary TDB plus axis ranges, node strategy, convergence settings, and independent expected phase-region fixtures."
+    }
+  ],
+  "local_execution_authorized": true,
+  "external_api_calls_authorized": false,
+  "formal_catalog_mutation_allowed": false,
+  "formal_pool_generation_allowed": false,
+  "confirmatory_inference_allowed": false
+}

@@ -1,0 +1,76 @@
+{
+  "decision_id": "V11-CF05-E3-CANDIDATE-ADMISSION-BATCH2-V1-20260803",
+  "rows": [
+    {
+      "target_tool_id": "A001",
+      "target_tool_name": "单位换算",
+      "lexical_count_before": 0,
+      "lexical_admitted": 0,
+      "lexical_count_after": 0,
+      "lexical_gap_to_8_after": 8,
+      "contract_mismatch_count_before": 0,
+      "contract_mismatch_admitted": 1,
+      "contract_mismatch_count_after": 1,
+      "contract_mismatch_gap_to_8_after": 7,
+      "paired_8_ready_after": false
+    },
+    {
+      "target_tool_id": "A002",
+      "target_tool_name": "化学式解析",
+      "lexical_count_before": 1,
+      "lexical_admitted": 2,
+      "lexical_count_after": 3,
+      "lexical_gap_to_8_after": 5,
+      "contract_mismatch_count_before": 1,
+      "contract_mismatch_admitted": 0,
+      "contract_mismatch_count_after": 1,
+      "contract_mismatch_gap_to_8_after": 7,
+      "paired_8_ready_after": false
+    },
+    {
+      "target_tool_id": "A003",
+      "target_tool_name": "摩尔质量计算",
+      "lexical_count_before": 5,
+      "lexical_admitted": 1,
+      "lexical_count_after": 6,
+      "lexical_gap_to_8_after": 2,
+      "contract_mismatch_count_before": 1,
+      "contract_mismatch_admitted": 1,
+      "contract_mismatch_count_after": 2,
+      "contract_mismatch_gap_to_8_after": 6,
+      "paired_8_ready_after": false
+    },
+    {
+      "target_tool_id": "A004",
+      "target_tool_name": "成分归一化",
+      "lexical_count_before": 1,
+      "lexical_admitted": 2,
+      "lexical_count_after": 3,
+      "lexical_gap_to_8_after": 5,
+      "contract_mismatch_count_before": 1,
+      "contract_mismatch_admitted": 2,
+      "contract_mismatch_count_after": 3,
+      "contract_mismatch_gap_to_8_after": 5,
+      "paired_8_ready_after": false
+    },
+    {
+      "target_tool_id": "B019",
+      "target_tool_name": "杠杆规则计算",
+      "lexical_count_before": 4,
+      "lexical_admitted": 0,
+      "lexical_count_after": 4,
+      "lexical_gap_to_8_after": 4,
+      "contract_mismatch_count_before": 0,
+      "contract_mismatch_admitted": 0,
+      "contract_mismatch_count_after": 0,
+      "contract_mismatch_gap_to_8_after": 8,
+      "paired_8_ready_after": false
+    }
+  ],
+  "lexical_gap_before": 29,
+  "lexical_admitted": 5,
+  "lexical_gap_after": 24,
+  "contract_mismatch_gap_before": 37,
+  "contract_mismatch_admitted": 4,
+  "contract_mismatch_gap_after": 33
+}

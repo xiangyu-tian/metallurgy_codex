@@ -40,7 +40,7 @@ v1.1 的 CF 编号重新绑定到可执行真值冻结门槛：
 | CF-02 | `verified_core`工具及独立参考 | 至少3个工具；契约字段、来源、适用域、限制、哈希、正常/边界案例和独立参考均通过 | `passed` | A001、A002、A003、A004、B019共5工具；27/27参考案例通过；11项审计检查通过 |
 | CF-03 | E1b基础任务与收益先导 | 基础任务、独立参考、No Tool/Forced Tool对照、重复和防循环划分可复现 | `passed` | 候选证据审计通过；E1b的120基础任务组、240任务和3次重复设计已审批冻结 |
 | CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `passed` | 40条锁定独立任务、两个冻结条件共80单元全部完成；双层门控flags 39/40、动作40/40、提前调用0；波动与样本量转入CF-08/CF-09 |
-| CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 第一批证据准入完成：A001新增1项任务级可接受工具关系，4项近邻关系进入证据注册表（词法1、契约错配3），且不重复增加科学功能目录数。逐目标复算后缺口由30/40降为29/37；正式目录仍为120，确认性0/4/8池及任务隔离尚未完成 |
+| CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 两批证据准入完成：A001保留1项任务级可接受工具关系，13项近邻关系进入证据注册表（词法6、契约错配7），且不重复增加科学功能目录数。第二批10个候选的30/30契约用例通过，其中9项关系准入、1项因真实Dice不足暂停，另2个pycalphad候选因TDB未冻结而暂停；逐目标复算后总缺口由30/40降为24/33。正式目录仍为120，尚无目标达到8/8，确认性0/4/8池及任务隔离未完成 |
 | CF-06 | 17/50/100/120 Schema API可行性 | 实测函数数量、Token、上下文、延迟、错误、`tool_choice=none`和供应商限制 | `in_progress` | 四种规模的OpenAI工具定义候选已离线生成；103条仅为摘要Schema stub，尚未获得外部API可行性实测授权 |
 | CF-07 | 数据层级与泄漏审计 | `controlled_confirmatory`、`naturalistic_validation`、`exploratory_domain_cases`分层；家族划分和收益校准/评价隔离通过 | `in_progress` | E1b/E1c受控集已分区；自然验证层和探索层尚未冻结 |
 | CF-08 | 先导波动与功效分析 | 估计任务家族、工具家族、重复波动和主要效应；固定正式重复次数 | `in_progress` | E1b组件已批准；E2已完成R1并形成R2/R3未授权开启包，执行后合并三次重复估计波动；E1a/E3仍待先导 |
@@ -728,3 +728,29 @@ core_frozen: false
 ```
 
 12项草案已具有结构化输入、输出、单位、适用域、排除条件和错误码，但本地冻结环境未安装Pint、RDKit、pymatgen或pycalphad，因而不能称为可执行工具。5项等价性测试绑定现有独立参考案例，并将“输入适配能否覆盖完整目标域”纳入判定，防止仅凭少量数值一致把部分等价工具错误升级为完全等价。
+
+## 11.4 CF-05 E3第二批候选运行与证据准入
+
+```yaml
+registration_package_id: V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH2-V1-20260803
+admission_decision_id: V11-CF05-E3-CANDIDATE-ADMISSION-BATCH2-V1-20260803
+candidate_id_reservation_count: 12
+implemented_candidate_count: 10
+blocked_candidate_count: 2
+runtime_case_count: 30
+runtime_pass_count: 30
+lexical_relation_admission_count: 5
+contract_mismatch_relation_admission_count: 4
+relation_evidence_held_count: 1
+combined_relation_registry_count: 13
+remaining_lexical_gap: 24
+remaining_contract_mismatch_gap: 33
+formal_catalog_size: 120
+formal_pool_inclusion_count: 0
+external_api_calls: 0
+registration_manifest_sha256: 9e0f13d1d84c2b4a57015975e3184cf8bac07b9fb5dfd741c8924fe108a71039
+admission_manifest_sha256: 95dd858ded897ede49eccb354538d924e08e361151aad73bee6360c733ab13b5
+core_frozen: false
+```
+
+`E3C006`至`E3C015`已经形成真实调用包装器，并各自通过正常、边界和失败契约；其中`E3C007`的真实名称和契约文本未达到冻结Dice阈值，故只保留运行实现、不准入关系证据，且禁止通过拼接目标名称制造词法相似度。`E3C016`和`E3C017`只保留稳定编号，因为pycalphad相稳定性和相图映射必须绑定可再分发、哈希冻结且有独立参考结果的TDB，不能仅凭包已安装宣称可执行。两批关系合并后仍无目标同时达到8个词法近邻和8个契约错配近邻，因此CF-05保持`in_progress`，不得生成正式确认性工具池。

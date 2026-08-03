@@ -1,0 +1,23 @@
+{
+  "decision_id": "V11-CF05-E3-CANDIDATE-ADMISSION-BATCH2-V1-20260803",
+  "scope": "admit_second_batch_relations_to_nonformal_evidence_registry",
+  "status": "batch2_evidence_admitted_pycalphad_held_formal_pool_pending",
+  "batch2_relation_admission_count": 9,
+  "relation_evidence_held_count": 1,
+  "combined_relation_registry_count": 13,
+  "blocked_candidate_count": 2,
+  "lexical_relation_admission_count": 5,
+  "contract_mismatch_relation_admission_count": 4,
+  "lexical_gap_before": 29,
+  "lexical_gap_after": 24,
+  "contract_mismatch_gap_before": 37,
+  "contract_mismatch_gap_after": 33,
+  "acceptable_tools_registry_unchanged": true,
+  "scientific_function_catalog_increment_count": 0,
+  "formal_catalog_size": 120,
+  "formal_pool_inclusion_count": 0,
+  "external_api_calls": 0,
+  "formal_pool_generation_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}
