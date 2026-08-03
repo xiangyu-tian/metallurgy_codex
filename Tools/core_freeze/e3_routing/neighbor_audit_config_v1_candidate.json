@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF05-E3-NEIGHBOR-FEASIBILITY-V1-20260803",
+  "catalog_path": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803/e3_schema_catalog_v1_candidate.json",
+  "catalog_sha256": "78de613f974d1ee48d5e2afa8a379b534a1e28a5b6749d9fc75f015aff6dd4f6",
+  "pool_manifest_path": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803/e3_nested_pool_manifest_v1_candidate.json",
+  "pool_manifest_sha256": "e60927cb13af9d5579358b4930304246cddae817a0117506791ad4415a4e492a",
+  "verified_contracts_path": "Tools/core_freeze/verified_core/contracts_v1.json",
+  "verified_contracts_sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec",
+  "target_tool_ids": ["A001", "A002", "A003", "A004", "B019"],
+  "pool_sizes": [17, 50, 100, 120],
+  "near_neighbor_counts": [0, 4, 8],
+  "lexical_name_dice_min": 0.2,
+  "lexical_contract_text_dice_min": 0.12,
+  "functional_similarity_dice_min": 0.2,
+  "contract_mismatch_dimensions": ["supported_systems", "data_or_model_version", "service_status"],
+  "neighbor_types_must_be_disjoint_for_capacity_planning": true,
+  "weak_related_fill_forbidden": true,
+  "external_api_calls_authorized": false
+}

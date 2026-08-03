@@ -1,0 +1,16 @@
+{
+  "audit_id": "V11-CF05-E3-NEIGHBOR-FEASIBILITY-V1-20260803",
+  "status": "blocked_evidence_generated",
+  "target_count": 5,
+  "catalog_size": 120,
+  "h3_paired_8_eligible_target_count": 0,
+  "minimum_catalog_size_for_120_single_type": 128,
+  "minimum_catalog_size_for_120_two_disjoint_types": 136,
+  "additional_schema_entries_needed_single_type": 8,
+  "additional_schema_entries_needed_two_disjoint_types": 16,
+  "formal_controlled_dose_pools_generated": false,
+  "mixed_realistic_120_remains_available": true,
+  "external_api_calls": 0,
+  "external_api_calls_authorized": false,
+  "next_decision": "expand the routing universe before H3 120-tool controlled-dose construction, or preregister a smaller controlled-dose primary scale"
+}

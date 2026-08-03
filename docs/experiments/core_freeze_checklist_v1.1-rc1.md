@@ -40,7 +40,7 @@ v1.1 的 CF 编号重新绑定到可执行真值冻结门槛：
 | CF-02 | `verified_core`工具及独立参考 | 至少3个工具；契约字段、来源、适用域、限制、哈希、正常/边界案例和独立参考均通过 | `passed` | A001、A002、A003、A004、B019共5工具；27/27参考案例通过；11项审计检查通过 |
 | CF-03 | E1b基础任务与收益先导 | 基础任务、独立参考、No Tool/Forced Tool对照、重复和防循环划分可复现 | `passed` | 候选证据审计通过；E1b的120基础任务组、240任务和3次重复设计已审批冻结 |
 | CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `passed` | 40条锁定独立任务、两个冻结条件共80单元全部完成；双层门控flags 39/40、动作40/40、提前调用0；波动与样本量转入CF-08/CF-09 |
-| CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 120条候选目录及17/50/100/120基础嵌套池已生成并通过结构测试；25条仍待家族独立性复核，目标级0/4/8近邻和正式参数契约尚未冻结 |
+| CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 120条候选目录及基础嵌套池已生成；近邻审计发现5个目标均无8个可证明契约错配近邻，且120规模的0/4/8替换设计至少需要128条单类型或136条双类型目录；未用弱相关工具补位 |
 | CF-06 | 17/50/100/120 Schema API可行性 | 实测函数数量、Token、上下文、延迟、错误、`tool_choice=none`和供应商限制 | `in_progress` | 四种规模的OpenAI工具定义候选已离线生成；103条仅为摘要Schema stub，尚未获得外部API可行性实测授权 |
 | CF-07 | 数据层级与泄漏审计 | `controlled_confirmatory`、`naturalistic_validation`、`exploratory_domain_cases`分层；家族划分和收益校准/评价隔离通过 | `in_progress` | E1b/E1c受控集已分区；自然验证层和探索层尚未冻结 |
 | CF-08 | 先导波动与功效分析 | 估计任务家族、工具家族、重复波动和主要效应；固定正式重复次数 | `in_progress` | E1b组件已批准；E2已完成R1并形成R2/R3未授权开启包，执行后合并三次重复估计波动；E1a/E3仍待先导 |
@@ -156,6 +156,39 @@ formal_design:
   model_cell_count: 1440
 core_frozen: false
 ```
+
+## 12. CF-05 E3近邻可行性审计
+
+```yaml
+audit_id: V11-CF05-E3-NEIGHBOR-FEASIBILITY-V1-20260803
+status: blocked_evidence_generated
+catalog_size: 120
+target_tool_ids: [A001, A002, A003, A004, B019]
+algorithmic_lexical_candidate_counts:
+  A001: 0
+  A002: 1
+  A003: 12
+  A004: 1
+  B019: 8
+provable_contract_mismatch_neighbor_counts:
+  A001: 0
+  A002: 0
+  A003: 0
+  A004: 0
+  B019: 0
+h3_paired_8_eligible_target_count: 0
+formal_controlled_dose_pools_generated: false
+mixed_realistic_120_remains_available: true
+minimum_catalog_size_for_120_single_type: 128
+minimum_catalog_size_for_120_two_disjoint_types: 136
+weak_related_fill_forbidden: true
+external_api_calls: 0
+external_api_calls_authorized: false
+artifact_manifest_sha256: 20f2023bcffe5bcb22c75dba3bd2f59f32775492e733de2307e31cb2dbf7166a
+core_frozen: false
+```
+
+目录容量只是必要条件，不是充分条件。即使扩展至136条，也必须新增能够从结构化适用域、系统、版本或可用性契约中证明“不适用于当前目标任务”的真实近邻，不能添加无关Schema凑数。
 
 E1b收益校准集用于估计先导效应，独立门控集用于检验冻结策略；E1c只登记为机制层次的次要证据，不与E1b主要收益效应合并。项目负责人批准正式功效参数后，CF-03的候选证据、功效依据和重复次数门槛均已满足。
 
