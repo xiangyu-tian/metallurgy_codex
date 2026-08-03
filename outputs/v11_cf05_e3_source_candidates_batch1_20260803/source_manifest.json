@@ -1,0 +1,67 @@
+{
+  "batch_id": "V11-CF05-E3-SOURCE-CANDIDATES-BATCH1-20260803",
+  "retrieved_on": "2026-08-03",
+  "source_count": 10,
+  "sources": [
+    {
+      "source_id": "PINT-CONTEXTS",
+      "publisher": "Pint",
+      "locator": "https://pint.readthedocs.io/en/stable/user/contexts.html",
+      "source_type": "primary_documentation"
+    },
+    {
+      "source_id": "RDKIT-RDMOLFILES",
+      "publisher": "RDKit",
+      "locator": "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolfiles.html",
+      "source_type": "primary_documentation"
+    },
+    {
+      "source_id": "RDKIT-CHEM",
+      "publisher": "RDKit",
+      "locator": "https://www.rdkit.org/docs/source/rdkit.Chem.html",
+      "source_type": "primary_documentation"
+    },
+    {
+      "source_id": "RDKIT-DESCRIPTORS",
+      "publisher": "RDKit",
+      "locator": "https://www.rdkit.org/docs/source/rdkit.Chem.Descriptors.html",
+      "source_type": "primary_documentation"
+    },
+    {
+      "source_id": "PYMATGEN-CORE",
+      "publisher": "pymatgen",
+      "locator": "https://pymatgen.org/pymatgen.core.html",
+      "source_type": "primary_documentation"
+    },
+    {
+      "source_id": "PYCALPHAD-EQUILIBRIUM",
+      "publisher": "pycalphad",
+      "locator": "https://pycalphad.org/docs/latest/_modules/pycalphad/core/equilibrium.html",
+      "source_type": "primary_documentation"
+    },
+    {
+      "source_id": "PYCALPHAD-RESULTS",
+      "publisher": "pycalphad",
+      "locator": "https://pycalphad.org/docs/latest/examples/UsingCalculationResults.html",
+      "source_type": "primary_documentation"
+    },
+    {
+      "source_id": "PYCALPHAD-STABILITY",
+      "publisher": "pycalphad",
+      "locator": "https://pycalphad.org/docs/latest/examples/ScreeningPhaseStability.html",
+      "source_type": "primary_documentation"
+    },
+    {
+      "source_id": "PYCALPHAD-MAPPING",
+      "publisher": "pycalphad",
+      "locator": "https://pycalphad.org/docs/latest/examples/Mapping.html",
+      "source_type": "primary_documentation"
+    },
+    {
+      "source_id": "PYCALPHAD-PLOT",
+      "publisher": "pycalphad",
+      "locator": "https://pycalphad.org/docs/latest/api/pycalphad.plot.html",
+      "source_type": "primary_documentation"
+    }
+  ]
+}

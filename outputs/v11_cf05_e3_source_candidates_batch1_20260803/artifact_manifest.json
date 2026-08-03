@@ -1,0 +1,26 @@
+{
+  "batch_id": "V11-CF05-E3-SOURCE-CANDIDATES-BATCH1-20260803",
+  "artifact_count": 4,
+  "artifacts": [
+    {
+      "filename": "candidate_precheck_report.json",
+      "sha256": "f2d33c1aba37d2cff475ecfde8e8a735846a40537eb5d03b2a321c2c1b33cd71",
+      "bytes": 909
+    },
+    {
+      "filename": "source_candidate_batch_snapshot.json",
+      "sha256": "e318a416e5150111bbce3b737c05daaa0903a0a31bcbae79abe456f4ef1492bb",
+      "bytes": 17613
+    },
+    {
+      "filename": "source_candidate_registry.json",
+      "sha256": "9b2e4e5e25fa03f92867bfb1c3127534ecb637e0c347c334d1d9ea948cbe593f",
+      "bytes": 23854
+    },
+    {
+      "filename": "source_manifest.json",
+      "sha256": "05bfbdb13105bd7ac8487c9bd5a462ee783c0054129b467f3623521099779851",
+      "bytes": 2278
+    }
+  ]
+}

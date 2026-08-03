@@ -1,0 +1,32 @@
+{
+  "batch_id": "V11-CF05-E3-SOURCE-CANDIDATES-BATCH1-20260803",
+  "status": "source_binding_passed_admission_review_pending",
+  "source_count": 10,
+  "candidate_count": 20,
+  "candidate_count_by_target": {
+    "A001": 2,
+    "A002": 4,
+    "A003": 4,
+    "A004": 5,
+    "B019": 5
+  },
+  "candidate_count_by_package": {
+    "Pint": 2,
+    "RDKit": 6,
+    "pycalphad": 5,
+    "pymatgen": 7
+  },
+  "exact_catalog_alias_collision_count": 0,
+  "exact_catalog_alias_collisions": [],
+  "semantic_duplicate_review_pending_count": 20,
+  "independence_review_pending_count": 20,
+  "relation_fixture_pending_count": 20,
+  "accepted_candidate_count": 0,
+  "catalog_increment_count": 0,
+  "filled_relation_slot_count": 0,
+  "remaining_lexical_gap": 30,
+  "remaining_contract_mismatch_gap": 40,
+  "external_api_calls": 0,
+  "formal_pool_generation_allowed": false,
+  "core_frozen": false
+}

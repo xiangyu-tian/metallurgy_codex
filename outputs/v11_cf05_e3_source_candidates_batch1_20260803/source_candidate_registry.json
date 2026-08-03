@@ -1,0 +1,543 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "V11-CF05-E3-SOURCE-CANDIDATES-BATCH1-20260803",
+  "retrieved_on": "2026-08-03",
+  "catalog_binding": {
+    "path": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803/e3_schema_catalog_v1_candidate.json",
+    "sha256": "78de613f974d1ee48d5e2afa8a379b534a1e28a5b6749d9fc75f015aff6dd4f6"
+  },
+  "sources": [
+    {
+      "source_id": "PINT-CONTEXTS",
+      "title": "Pint documentation: Contexts",
+      "locator": "https://pint.readthedocs.io/en/stable/user/contexts.html",
+      "source_type": "primary_documentation",
+      "publisher": "Pint"
+    },
+    {
+      "source_id": "RDKIT-RDMOLFILES",
+      "title": "RDKit documentation: rdkit.Chem.rdmolfiles",
+      "locator": "https://www.rdkit.org/docs/source/rdkit.Chem.rdmolfiles.html",
+      "source_type": "primary_documentation",
+      "publisher": "RDKit"
+    },
+    {
+      "source_id": "RDKIT-CHEM",
+      "title": "RDKit documentation: rdkit.Chem",
+      "locator": "https://www.rdkit.org/docs/source/rdkit.Chem.html",
+      "source_type": "primary_documentation",
+      "publisher": "RDKit"
+    },
+    {
+      "source_id": "RDKIT-DESCRIPTORS",
+      "title": "RDKit documentation: rdkit.Chem.Descriptors",
+      "locator": "https://www.rdkit.org/docs/source/rdkit.Chem.Descriptors.html",
+      "source_type": "primary_documentation",
+      "publisher": "RDKit"
+    },
+    {
+      "source_id": "PYMATGEN-CORE",
+      "title": "pymatgen documentation: pymatgen.core",
+      "locator": "https://pymatgen.org/pymatgen.core.html",
+      "source_type": "primary_documentation",
+      "publisher": "pymatgen"
+    },
+    {
+      "source_id": "PYCALPHAD-EQUILIBRIUM",
+      "title": "pycalphad documentation: equilibrium source",
+      "locator": "https://pycalphad.org/docs/latest/_modules/pycalphad/core/equilibrium.html",
+      "source_type": "primary_documentation",
+      "publisher": "pycalphad"
+    },
+    {
+      "source_id": "PYCALPHAD-RESULTS",
+      "title": "pycalphad example: Using Calculation Results",
+      "locator": "https://pycalphad.org/docs/latest/examples/UsingCalculationResults.html",
+      "source_type": "primary_documentation",
+      "publisher": "pycalphad"
+    },
+    {
+      "source_id": "PYCALPHAD-STABILITY",
+      "title": "pycalphad example: Screening Phase Stability",
+      "locator": "https://pycalphad.org/docs/latest/examples/ScreeningPhaseStability.html",
+      "source_type": "primary_documentation",
+      "publisher": "pycalphad"
+    },
+    {
+      "source_id": "PYCALPHAD-MAPPING",
+      "title": "pycalphad example: Mapping Strategy",
+      "locator": "https://pycalphad.org/docs/latest/examples/Mapping.html",
+      "source_type": "primary_documentation",
+      "publisher": "pycalphad"
+    },
+    {
+      "source_id": "PYCALPHAD-PLOT",
+      "title": "pycalphad API: plot",
+      "locator": "https://pycalphad.org/docs/latest/api/pycalphad.plot.html",
+      "source_type": "primary_documentation",
+      "publisher": "pycalphad"
+    }
+  ],
+  "candidates": [
+    {
+      "provisional_candidate_id": "SRC-PINT-001",
+      "capability_name": "context_aware_unit_conversion",
+      "package": "Pint",
+      "operation": "Context-enabled Quantity conversion",
+      "target_tool_id": "A001",
+      "source_ids": [
+        "PINT-CONTEXTS"
+      ],
+      "documented_capability": "Applies named context transformations while converting quantities.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "A context may not create new units or change the dimensionality of an existing unit.",
+      "disqualifier_risk": "May be an implementation variant or strict superset of A001 rather than an independent tool.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PINT-002",
+      "capability_name": "explicit_context_dimensional_transform",
+      "package": "Pint",
+      "operation": "Context transformation between otherwise incompatible dimensions",
+      "target_tool_id": "A001",
+      "source_ids": [
+        "PINT-CONTEXTS"
+      ],
+      "documented_capability": "Uses an explicit relation supplied by a context to transform between dimensions.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "The transformation is valid only when the named context and its parameters are applicable.",
+      "disqualifier_risk": "Could remain part of one Pint conversion engine and fail independence review.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-001",
+      "capability_name": "smiles_structure_parser",
+      "package": "RDKit",
+      "operation": "MolFromSmiles",
+      "target_tool_id": "A002",
+      "source_ids": [
+        "RDKIT-RDMOLFILES"
+      ],
+      "documented_capability": "Constructs a molecular object from a SMILES string with parser options.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "SMILES encodes molecular connectivity and is not the same input grammar as a bulk chemical formula.",
+      "disqualifier_risk": "May be too clearly differentiated to satisfy the lexical-neighbor threshold.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-002",
+      "capability_name": "smarts_pattern_parser",
+      "package": "RDKit",
+      "operation": "MolFromSmarts",
+      "target_tool_id": "A002",
+      "source_ids": [
+        "RDKIT-RDMOLFILES"
+      ],
+      "documented_capability": "Constructs a query molecule from a SMARTS pattern.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "SMARTS represents substructure query patterns rather than stoichiometric formulas.",
+      "disqualifier_risk": "Could be rejected as an unrelated query parser after relation scoring.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-003",
+      "capability_name": "canonical_smiles_normalizer",
+      "package": "RDKit",
+      "operation": "CanonSmiles",
+      "target_tool_id": "A002",
+      "source_ids": [
+        "RDKIT-CHEM"
+      ],
+      "documented_capability": "Returns a canonicalized representation of a SMILES string.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "Normalization assumes a parseable molecular representation and does not count elements from a bulk formula.",
+      "disqualifier_risk": "Might be an operation in the same parser family rather than an independent callable tool.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-001",
+      "capability_name": "composition_formula_parser",
+      "package": "pymatgen",
+      "operation": "Composition",
+      "target_tool_id": "A002",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "documented_capability": "Creates a Composition from formulas or mappings and exposes composition properties.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "Composition parsing and normalization semantics may overlap directly with A002 and A004.",
+      "disqualifier_risk": "High acceptable-equivalence risk with the existing formula parser.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-004",
+      "capability_name": "average_molecular_weight",
+      "package": "RDKit",
+      "operation": "Descriptors.MolWt",
+      "target_tool_id": "A003",
+      "source_ids": [
+        "RDKIT-DESCRIPTORS"
+      ],
+      "documented_capability": "Computes the average molecular weight of a molecular object.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "Requires an RDKit molecular object rather than a raw bulk formula.",
+      "disqualifier_risk": "Likely scientifically equivalent to A003 after input adaptation.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-005",
+      "capability_name": "exact_molecular_weight",
+      "package": "RDKit",
+      "operation": "Descriptors.ExactMolWt",
+      "target_tool_id": "A003",
+      "source_ids": [
+        "RDKIT-DESCRIPTORS"
+      ],
+      "documented_capability": "Computes an exact molecular-weight descriptor for a molecular object.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "Exact/isotopic mass is a different quantity from average molar mass.",
+      "disqualifier_risk": "Could qualify only as a contract mismatch and not as a distinct catalog tool.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-006",
+      "capability_name": "heavy_atom_molecular_weight",
+      "package": "RDKit",
+      "operation": "Descriptors.HeavyAtomMolWt",
+      "target_tool_id": "A003",
+      "source_ids": [
+        "RDKIT-DESCRIPTORS"
+      ],
+      "documented_capability": "Computes molecular weight excluding hydrogen contributions.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "The output intentionally excludes hydrogen and cannot replace total molar mass.",
+      "disqualifier_risk": "May be a descriptor option within one engine rather than an independent tool.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-002",
+      "capability_name": "composition_weight",
+      "package": "pymatgen",
+      "operation": "Composition.weight",
+      "target_tool_id": "A003",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "documented_capability": "Provides a weight derived from a parsed composition.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "Its scientific result may be equivalent to the existing molar-mass calculator.",
+      "disqualifier_risk": "High acceptable-equivalence and duplicate-function risk.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-003",
+      "capability_name": "fractional_composition_normalizer",
+      "package": "pymatgen",
+      "operation": "Composition.fractional_composition",
+      "target_tool_id": "A004",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "documented_capability": "Returns a composition normalized to fractional amounts.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "Normalization basis and accepted species syntax must be reconciled with A004.",
+      "disqualifier_risk": "Likely acceptable-equivalent to part of A004.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-004",
+      "capability_name": "reduced_composition_transform",
+      "package": "pymatgen",
+      "operation": "Composition.reduced_composition",
+      "target_tool_id": "A004",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "documented_capability": "Returns the smallest integer-ratio representation of a composition.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "Integer-ratio reduction is not equivalent to normalization to arbitrary mass or mole fractions.",
+      "disqualifier_risk": "May be treated as a formatting operation rather than a separate scientific tool.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-005",
+      "capability_name": "atomic_fraction_extractor",
+      "package": "pymatgen",
+      "operation": "Composition.get_atomic_fraction",
+      "target_tool_id": "A004",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "documented_capability": "Returns the atomic fraction of a selected species in a composition.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "Produces one selected-species fraction rather than a complete normalized composition mapping.",
+      "disqualifier_risk": "May be too narrow to count as an independent tool.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-006",
+      "capability_name": "weight_fraction_extractor",
+      "package": "pymatgen",
+      "operation": "Composition.get_wt_fraction",
+      "target_tool_id": "A004",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "documented_capability": "Returns the weight fraction of a selected species in a composition.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "Produces a selected-species fraction and depends on atomic-weight conventions.",
+      "disqualifier_risk": "Could be a narrow accessor rather than an independent tool.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-007",
+      "capability_name": "weight_to_molar_composition_converter",
+      "package": "pymatgen",
+      "operation": "Composition.from_weight_dict",
+      "target_tool_id": "A004",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "documented_capability": "Builds a molar Composition from a mapping expressed by weight.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "Converts a declared weight basis and is not a generic arbitrary-basis normalizer.",
+      "disqualifier_risk": "May overlap with A004 basis conversion and fail distinct-function review.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-001",
+      "capability_name": "thermodynamic_equilibrium_solver",
+      "package": "pycalphad",
+      "operation": "equilibrium",
+      "target_tool_id": "B019",
+      "source_ids": [
+        "PYCALPHAD-EQUILIBRIUM"
+      ],
+      "documented_capability": "Calculates equilibrium properties from a database, components, phases, and conditions.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "Requires a compatible thermodynamic database and explicitly selected components, phases, and conditions.",
+      "disqualifier_risk": "May be the same underlying equilibrium engine as B019.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-002",
+      "capability_name": "equilibrium_phase_fraction_extractor",
+      "package": "pycalphad",
+      "operation": "equilibrium result NP",
+      "target_tool_id": "B019",
+      "source_ids": [
+        "PYCALPHAD-RESULTS"
+      ],
+      "documented_capability": "Reads phase-fraction information from an equilibrium result.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "It is a result extraction operation and does not independently solve equilibrium.",
+      "disqualifier_risk": "Likely not an independent tool from the equilibrium engine.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-003",
+      "capability_name": "phase_stability_screener",
+      "package": "pycalphad",
+      "operation": "phase stability screening workflow",
+      "target_tool_id": "B019",
+      "source_ids": [
+        "PYCALPHAD-STABILITY"
+      ],
+      "documented_capability": "Screens phase stability and identifies stable or two-phase regions in an example workflow.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "Validity is constrained by the selected database, component set, phases, and sampled conditions.",
+      "disqualifier_risk": "Could be a workflow built from the same equilibrium call rather than an independent engine.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-004",
+      "capability_name": "binary_phase_diagram_mapper",
+      "package": "pycalphad",
+      "operation": "binary phase-diagram mapping workflow",
+      "target_tool_id": "B019",
+      "source_ids": [
+        "PYCALPHAD-MAPPING"
+      ],
+      "documented_capability": "Maps a binary phase diagram by stepping through equilibrium regions.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "The workflow is specific to a declared thermodynamic system and mapping strategy.",
+      "disqualifier_risk": "May not be independent of the pycalphad equilibrium engine.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-005",
+      "capability_name": "ternary_phase_diagram_plotter",
+      "package": "pycalphad",
+      "operation": "ternplot",
+      "target_tool_id": "B019",
+      "source_ids": [
+        "PYCALPHAD-PLOT"
+      ],
+      "documented_capability": "Plots a ternary phase diagram from calculated equilibrium data.",
+      "proposed_neighbor_types": [
+        "lexical",
+        "contract_mismatch"
+      ],
+      "known_limitation": "This is a visualization of calculated data and does not itself establish equilibrium validity.",
+      "disqualifier_risk": "Likely a presentation operation, not an independent calculation tool.",
+      "candidate_status": "source_bound_candidate_unreviewed",
+      "relation_claim_status": "proposed_pending_fixture",
+      "independence_status": "pending",
+      "duplicate_screen_status": "exact_alias_precheck_complete_semantic_review_pending",
+      "count_toward_catalog": false,
+      "execution_allowed": false
+    }
+  ]
+}
