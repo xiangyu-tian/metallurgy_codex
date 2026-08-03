@@ -1,0 +1,551 @@
+{
+  "screening_id": "V11-CF05-E3-CANDIDATE-SCREENING-BATCH1-V1-20260803",
+  "candidate_count": 20,
+  "rows": [
+    {
+      "provisional_candidate_id": "SRC-PINT-001",
+      "capability_name": "context_aware_unit_conversion",
+      "package": "Pint",
+      "target_tool_id": "A001",
+      "target_semantic_alias": "convert_units",
+      "source_ids": [
+        "PINT-CONTEXTS"
+      ],
+      "screening_lane": "equivalence_test_required",
+      "independence_class": "external_engine_wrapper_identity_missing",
+      "existing_catalog_matches": [
+        "A001"
+      ],
+      "rationale": "The documented capability performs unit conversion and may correctly satisfy ordinary A001 requests; it cannot be treated as an unacceptable neighbor before an equivalence test.",
+      "alias_name_bigram_dice": 0.484848,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": true,
+      "may_enter_contract_draft": false,
+      "preliminary_lexical_name_review_pass": false,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PINT-002",
+      "capability_name": "explicit_context_dimensional_transform",
+      "package": "Pint",
+      "target_tool_id": "A001",
+      "target_semantic_alias": "convert_units",
+      "source_ids": [
+        "PINT-CONTEXTS"
+      ],
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A001"
+      ],
+      "rationale": "Explicit context transformations have a narrower applicability contract than ordinary same-dimensional conversion and require a separate callable-contract review.",
+      "alias_name_bigram_dice": 0.142857,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": false,
+      "may_enter_contract_draft": true,
+      "preliminary_lexical_name_review_pass": false,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-001",
+      "capability_name": "smiles_structure_parser",
+      "package": "RDKit",
+      "target_tool_id": "A002",
+      "target_semantic_alias": "parse_chemical_formula",
+      "source_ids": [
+        "RDKIT-RDMOLFILES"
+      ],
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A002"
+      ],
+      "rationale": "SMILES parsing uses a molecular-connectivity grammar rather than the neutral bulk-formula grammar of A002.",
+      "alias_name_bigram_dice": 0.25641,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": true,
+      "may_enter_contract_draft": true,
+      "preliminary_lexical_name_review_pass": true,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-002",
+      "capability_name": "smarts_pattern_parser",
+      "package": "RDKit",
+      "target_tool_id": "A002",
+      "target_semantic_alias": "parse_chemical_formula",
+      "source_ids": [
+        "RDKIT-RDMOLFILES"
+      ],
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A002"
+      ],
+      "rationale": "SMARTS parsing produces a query molecule and is contract-distinct from stoichiometric formula parsing.",
+      "alias_name_bigram_dice": 0.235294,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": true,
+      "may_enter_contract_draft": true,
+      "preliminary_lexical_name_review_pass": true,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-003",
+      "capability_name": "canonical_smiles_normalizer",
+      "package": "RDKit",
+      "target_tool_id": "A002",
+      "target_semantic_alias": "parse_chemical_formula",
+      "source_ids": [
+        "RDKIT-CHEM"
+      ],
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A002"
+      ],
+      "rationale": "Canonical SMILES normalization requires a molecular representation and does not return element-count mappings.",
+      "alias_name_bigram_dice": 0.3,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": true,
+      "may_enter_contract_draft": true,
+      "preliminary_lexical_name_review_pass": true,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-001",
+      "capability_name": "composition_formula_parser",
+      "package": "pymatgen",
+      "target_tool_id": "A002",
+      "target_semantic_alias": "parse_chemical_formula",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "screening_lane": "equivalence_test_required",
+      "independence_class": "external_engine_wrapper_identity_missing",
+      "existing_catalog_matches": [
+        "A002"
+      ],
+      "rationale": "pymatgen Composition parses formulas and may be an acceptable alternative implementation of A002.",
+      "alias_name_bigram_dice": 0.47619,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": true,
+      "may_enter_contract_draft": false,
+      "preliminary_lexical_name_review_pass": false,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-004",
+      "capability_name": "average_molecular_weight",
+      "package": "RDKit",
+      "target_tool_id": "A003",
+      "target_semantic_alias": "calc_molar_mass",
+      "source_ids": [
+        "RDKIT-DESCRIPTORS"
+      ],
+      "screening_lane": "equivalence_test_required",
+      "independence_class": "external_engine_wrapper_identity_missing",
+      "existing_catalog_matches": [
+        "A003"
+      ],
+      "rationale": "Average molecular weight targets the same scientific quantity as A003 after input adaptation.",
+      "alias_name_bigram_dice": 0.242424,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": true,
+      "may_enter_contract_draft": false,
+      "preliminary_lexical_name_review_pass": false,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-005",
+      "capability_name": "exact_molecular_weight",
+      "package": "RDKit",
+      "target_tool_id": "A003",
+      "target_semantic_alias": "calc_molar_mass",
+      "source_ids": [
+        "RDKIT-DESCRIPTORS"
+      ],
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A003"
+      ],
+      "rationale": "Exact molecular weight is a different mass convention from A003 average molar mass and needs a quantity-contract fixture.",
+      "alias_name_bigram_dice": 0.258065,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": true,
+      "may_enter_contract_draft": true,
+      "preliminary_lexical_name_review_pass": true,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-006",
+      "capability_name": "heavy_atom_molecular_weight",
+      "package": "RDKit",
+      "target_tool_id": "A003",
+      "target_semantic_alias": "calc_molar_mass",
+      "source_ids": [
+        "RDKIT-DESCRIPTORS"
+      ],
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A003"
+      ],
+      "rationale": "Heavy-atom molecular weight excludes hydrogen and cannot replace total molar mass.",
+      "alias_name_bigram_dice": 0.228571,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": true,
+      "may_enter_contract_draft": true,
+      "preliminary_lexical_name_review_pass": true,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-002",
+      "capability_name": "composition_weight",
+      "package": "pymatgen",
+      "target_tool_id": "A003",
+      "target_semantic_alias": "calc_molar_mass",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "screening_lane": "equivalence_test_required",
+      "independence_class": "external_engine_wrapper_identity_missing",
+      "existing_catalog_matches": [
+        "A003"
+      ],
+      "rationale": "Composition weight may reproduce the A003 result and therefore requires equivalence testing before neighbor use.",
+      "alias_name_bigram_dice": 0.0,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": false,
+      "may_enter_contract_draft": false,
+      "preliminary_lexical_name_review_pass": false,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-003",
+      "capability_name": "fractional_composition_normalizer",
+      "package": "pymatgen",
+      "target_tool_id": "A004",
+      "target_semantic_alias": "normalize_composition",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "screening_lane": "equivalence_test_required",
+      "independence_class": "external_engine_wrapper_identity_missing",
+      "existing_catalog_matches": [
+        "A004"
+      ],
+      "rationale": "Fractional composition normalization may correctly satisfy the core normalization behavior of A004.",
+      "alias_name_bigram_dice": 0.8,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": true,
+      "may_enter_contract_draft": false,
+      "preliminary_lexical_name_review_pass": false,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-004",
+      "capability_name": "reduced_composition_transform",
+      "package": "pymatgen",
+      "target_tool_id": "A004",
+      "target_semantic_alias": "normalize_composition",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A004"
+      ],
+      "rationale": "Smallest-integer-ratio reduction differs from normalization to a unit-sum vector.",
+      "alias_name_bigram_dice": 0.545455,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": true,
+      "may_enter_contract_draft": true,
+      "preliminary_lexical_name_review_pass": true,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-005",
+      "capability_name": "atomic_fraction_extractor",
+      "package": "pymatgen",
+      "target_tool_id": "A004",
+      "target_semantic_alias": "normalize_composition",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A004"
+      ],
+      "rationale": "Atomic-fraction extraction returns one species fraction rather than the complete normalized mapping.",
+      "alias_name_bigram_dice": 0.27027,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": true,
+      "may_enter_contract_draft": true,
+      "preliminary_lexical_name_review_pass": true,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-006",
+      "capability_name": "weight_fraction_extractor",
+      "package": "pymatgen",
+      "target_tool_id": "A004",
+      "target_semantic_alias": "normalize_composition",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A004"
+      ],
+      "rationale": "Weight-fraction extraction uses a declared mass basis and returns one selected-species fraction.",
+      "alias_name_bigram_dice": 0.210526,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": true,
+      "may_enter_contract_draft": true,
+      "preliminary_lexical_name_review_pass": true,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-007",
+      "capability_name": "weight_to_molar_composition_converter",
+      "package": "pymatgen",
+      "target_tool_id": "A004",
+      "target_semantic_alias": "normalize_composition",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A004"
+      ],
+      "rationale": "Weight-to-molar composition conversion changes basis and is not generic unit-sum normalization.",
+      "alias_name_bigram_dice": 0.425532,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": true,
+      "may_enter_contract_draft": true,
+      "preliminary_lexical_name_review_pass": true,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-001",
+      "capability_name": "thermodynamic_equilibrium_solver",
+      "package": "pycalphad",
+      "target_tool_id": "B019",
+      "target_semantic_alias": "calc_lever_rule",
+      "source_ids": [
+        "PYCALPHAD-EQUILIBRIUM"
+      ],
+      "screening_lane": "screened_out_before_fixture",
+      "independence_class": "semantic_catalog_duplicate",
+      "existing_catalog_matches": [
+        "B023"
+      ],
+      "rationale": "The existing catalog already contains B023 run_calphad_equilibrium with the same equilibrium-engine intent.",
+      "alias_name_bigram_dice": 0.102564,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": false,
+      "may_enter_contract_draft": false,
+      "preliminary_lexical_name_review_pass": false,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-002",
+      "capability_name": "equilibrium_phase_fraction_extractor",
+      "package": "pycalphad",
+      "target_tool_id": "B019",
+      "target_semantic_alias": "calc_lever_rule",
+      "source_ids": [
+        "PYCALPHAD-RESULTS"
+      ],
+      "screening_lane": "screened_out_before_fixture",
+      "independence_class": "dependent_result_accessor",
+      "existing_catalog_matches": [
+        "B019",
+        "B023"
+      ],
+      "rationale": "Reading NP from an equilibrium result depends on a prior equilibrium calculation and is not an independent calculation tool.",
+      "alias_name_bigram_dice": 0.0,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": false,
+      "may_enter_contract_draft": false,
+      "preliminary_lexical_name_review_pass": false,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-003",
+      "capability_name": "phase_stability_screener",
+      "package": "pycalphad",
+      "target_tool_id": "B019",
+      "target_semantic_alias": "calc_lever_rule",
+      "source_ids": [
+        "PYCALPHAD-STABILITY"
+      ],
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "workflow_identity_pending",
+      "existing_catalog_matches": [
+        "B022",
+        "B023"
+      ],
+      "rationale": "Phase-stability screening has a distinct decision output, but its independence from the equilibrium engine requires a callable workflow contract.",
+      "alias_name_bigram_dice": 0.0625,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": false,
+      "may_enter_contract_draft": true,
+      "preliminary_lexical_name_review_pass": false,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-004",
+      "capability_name": "binary_phase_diagram_mapper",
+      "package": "pycalphad",
+      "target_tool_id": "B019",
+      "target_semantic_alias": "calc_lever_rule",
+      "source_ids": [
+        "PYCALPHAD-MAPPING"
+      ],
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "workflow_identity_pending",
+      "existing_catalog_matches": [
+        "B020",
+        "B023",
+        "B025"
+      ],
+      "rationale": "Binary mapping may be a distinct workflow, but overlaps existing phase-boundary and CALPHAD catalog intentions.",
+      "alias_name_bigram_dice": 0.058824,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": false,
+      "may_enter_contract_draft": true,
+      "preliminary_lexical_name_review_pass": false,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-005",
+      "capability_name": "ternary_phase_diagram_plotter",
+      "package": "pycalphad",
+      "target_tool_id": "B019",
+      "target_semantic_alias": "calc_lever_rule",
+      "source_ids": [
+        "PYCALPHAD-PLOT"
+      ],
+      "screening_lane": "screened_out_before_fixture",
+      "independence_class": "presentation_only_postprocessor",
+      "existing_catalog_matches": [
+        "B023",
+        "B025"
+      ],
+      "rationale": "ternplot visualizes previously calculated equilibrium data and is not an independent calculation tool for E3 routing.",
+      "alias_name_bigram_dice": 0.058824,
+      "lexical_name_dice_min": 0.2,
+      "raw_alias_name_threshold_pass": false,
+      "may_enter_contract_draft": false,
+      "preliminary_lexical_name_review_pass": false,
+      "full_contract_text_score": null,
+      "semantic_equivalence_test_passed": null,
+      "independence_evidence_passed": null,
+      "target_valid_candidate_invalid_fixture_passed": null,
+      "admitted_to_catalog": false,
+      "may_fill_relation_slot": false
+    }
+  ]
+}

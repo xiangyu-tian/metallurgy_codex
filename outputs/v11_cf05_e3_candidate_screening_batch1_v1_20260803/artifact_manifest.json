@@ -1,0 +1,26 @@
+{
+  "screening_id": "V11-CF05-E3-CANDIDATE-SCREENING-BATCH1-V1-20260803",
+  "artifact_count": 4,
+  "artifacts": [
+    {
+      "filename": "candidate_screening_matrix.json",
+      "sha256": "24376de5dc06857ffd13d3f36624c82014f2188e64f46b1e789b8b7bf194c267",
+      "bytes": 22470
+    },
+    {
+      "filename": "candidate_screening_policy_snapshot.json",
+      "sha256": "1f5ed97375e74f75fb7442cd2a03811448e80d6ba7b6dad4c6ebb181bf8c8afc",
+      "bytes": 8758
+    },
+    {
+      "filename": "candidate_screening_summary.json",
+      "sha256": "84300267b913dffc2abbb679f31ac94cd2ec6d174bd79d464681119ed60487d3",
+      "bytes": 1968
+    },
+    {
+      "filename": "source_binding_report.json",
+      "sha256": "34425610f5f977d135d2c9e68e239cec5c6749e174b97161eb1df6e544eb18a3",
+      "bytes": 757
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.0",
+  "screening_id": "V11-CF05-E3-CANDIDATE-SCREENING-BATCH1-V1-20260803",
+  "source_registry_path": "outputs/v11_cf05_e3_source_candidates_batch1_20260803/source_candidate_registry.json",
+  "source_registry_sha256": "9b2e4e5e25fa03f92867bfb1c3127534ecb637e0c347c334d1d9ea948cbe593f",
+  "catalog_path": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803/e3_schema_catalog_v1_candidate.json",
+  "catalog_sha256": "78de613f974d1ee48d5e2afa8a379b534a1e28a5b6749d9fc75f015aff6dd4f6",
+  "neighbor_audit_config_path": "Tools/core_freeze/e3_routing/neighbor_audit_config_v1_1.json",
+  "neighbor_audit_config_sha256": "9ba29726f3e38b2701133e19445f58b9797e6de92e20d1dfeb203c986242bfa3",
+  "screening_is_final_admission": false,
+  "external_api_calls_authorized": false,
+  "allowed_lanes": [
+    "contract_draft_queue",
+    "equivalence_test_required",
+    "screened_out_before_fixture"
+  ],
+  "decisions": [
+    {
+      "provisional_candidate_id": "SRC-PINT-001",
+      "screening_lane": "equivalence_test_required",
+      "independence_class": "external_engine_wrapper_identity_missing",
+      "existing_catalog_matches": [
+        "A001"
+      ],
+      "rationale": "The documented capability performs unit conversion and may correctly satisfy ordinary A001 requests; it cannot be treated as an unacceptable neighbor before an equivalence test."
+    },
+    {
+      "provisional_candidate_id": "SRC-PINT-002",
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A001"
+      ],
+      "rationale": "Explicit context transformations have a narrower applicability contract than ordinary same-dimensional conversion and require a separate callable-contract review."
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-001",
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A002"
+      ],
+      "rationale": "SMILES parsing uses a molecular-connectivity grammar rather than the neutral bulk-formula grammar of A002."
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-002",
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A002"
+      ],
+      "rationale": "SMARTS parsing produces a query molecule and is contract-distinct from stoichiometric formula parsing."
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-003",
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A002"
+      ],
+      "rationale": "Canonical SMILES normalization requires a molecular representation and does not return element-count mappings."
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-001",
+      "screening_lane": "equivalence_test_required",
+      "independence_class": "external_engine_wrapper_identity_missing",
+      "existing_catalog_matches": [
+        "A002"
+      ],
+      "rationale": "pymatgen Composition parses formulas and may be an acceptable alternative implementation of A002."
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-004",
+      "screening_lane": "equivalence_test_required",
+      "independence_class": "external_engine_wrapper_identity_missing",
+      "existing_catalog_matches": [
+        "A003"
+      ],
+      "rationale": "Average molecular weight targets the same scientific quantity as A003 after input adaptation."
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-005",
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A003"
+      ],
+      "rationale": "Exact molecular weight is a different mass convention from A003 average molar mass and needs a quantity-contract fixture."
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-006",
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A003"
+      ],
+      "rationale": "Heavy-atom molecular weight excludes hydrogen and cannot replace total molar mass."
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-002",
+      "screening_lane": "equivalence_test_required",
+      "independence_class": "external_engine_wrapper_identity_missing",
+      "existing_catalog_matches": [
+        "A003"
+      ],
+      "rationale": "Composition weight may reproduce the A003 result and therefore requires equivalence testing before neighbor use."
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-003",
+      "screening_lane": "equivalence_test_required",
+      "independence_class": "external_engine_wrapper_identity_missing",
+      "existing_catalog_matches": [
+        "A004"
+      ],
+      "rationale": "Fractional composition normalization may correctly satisfy the core normalization behavior of A004."
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-004",
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A004"
+      ],
+      "rationale": "Smallest-integer-ratio reduction differs from normalization to a unit-sum vector."
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-005",
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A004"
+      ],
+      "rationale": "Atomic-fraction extraction returns one species fraction rather than the complete normalized mapping."
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-006",
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A004"
+      ],
+      "rationale": "Weight-fraction extraction uses a declared mass basis and returns one selected-species fraction."
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-007",
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "external_engine_operation_identity_pending",
+      "existing_catalog_matches": [
+        "A004"
+      ],
+      "rationale": "Weight-to-molar composition conversion changes basis and is not generic unit-sum normalization."
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-001",
+      "screening_lane": "screened_out_before_fixture",
+      "independence_class": "semantic_catalog_duplicate",
+      "existing_catalog_matches": [
+        "B023"
+      ],
+      "rationale": "The existing catalog already contains B023 run_calphad_equilibrium with the same equilibrium-engine intent."
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-002",
+      "screening_lane": "screened_out_before_fixture",
+      "independence_class": "dependent_result_accessor",
+      "existing_catalog_matches": [
+        "B019",
+        "B023"
+      ],
+      "rationale": "Reading NP from an equilibrium result depends on a prior equilibrium calculation and is not an independent calculation tool."
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-003",
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "workflow_identity_pending",
+      "existing_catalog_matches": [
+        "B022",
+        "B023"
+      ],
+      "rationale": "Phase-stability screening has a distinct decision output, but its independence from the equilibrium engine requires a callable workflow contract."
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-004",
+      "screening_lane": "contract_draft_queue",
+      "independence_class": "workflow_identity_pending",
+      "existing_catalog_matches": [
+        "B020",
+        "B023",
+        "B025"
+      ],
+      "rationale": "Binary mapping may be a distinct workflow, but overlaps existing phase-boundary and CALPHAD catalog intentions."
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-005",
+      "screening_lane": "screened_out_before_fixture",
+      "independence_class": "presentation_only_postprocessor",
+      "existing_catalog_matches": [
+        "B023",
+        "B025"
+      ],
+      "rationale": "ternplot visualizes previously calculated equilibrium data and is not an independent calculation tool for E3 routing."
+    }
+  ]
+}

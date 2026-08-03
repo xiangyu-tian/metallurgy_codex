@@ -1,0 +1,67 @@
+{
+  "screening_id": "V11-CF05-E3-CANDIDATE-SCREENING-BATCH1-V1-20260803",
+  "status": "pre_admission_screen_complete_followup_evidence_required",
+  "candidate_count": 20,
+  "screening_lane_counts": {
+    "contract_draft_queue": 12,
+    "equivalence_test_required": 5,
+    "screened_out_before_fixture": 3
+  },
+  "screening_lane_candidate_ids": {
+    "contract_draft_queue": [
+      "SRC-PINT-002",
+      "SRC-RDKIT-001",
+      "SRC-RDKIT-002",
+      "SRC-RDKIT-003",
+      "SRC-RDKIT-005",
+      "SRC-RDKIT-006",
+      "SRC-PMG-004",
+      "SRC-PMG-005",
+      "SRC-PMG-006",
+      "SRC-PMG-007",
+      "SRC-PYCAL-003",
+      "SRC-PYCAL-004"
+    ],
+    "equivalence_test_required": [
+      "SRC-PINT-001",
+      "SRC-PMG-001",
+      "SRC-RDKIT-004",
+      "SRC-PMG-002",
+      "SRC-PMG-003"
+    ],
+    "screened_out_before_fixture": [
+      "SRC-PYCAL-001",
+      "SRC-PYCAL-002",
+      "SRC-PYCAL-005"
+    ]
+  },
+  "contract_draft_queue_count_by_target": {
+    "A001": 1,
+    "A002": 3,
+    "A003": 2,
+    "A004": 4,
+    "B019": 2
+  },
+  "preliminary_alias_name_pass_count": 9,
+  "preliminary_alias_name_pass_count_by_target": {
+    "A002": 3,
+    "A003": 2,
+    "A004": 4
+  },
+  "full_contract_text_score_complete_count": 0,
+  "equivalence_test_complete_count": 0,
+  "equivalence_test_pass_count": 0,
+  "independence_review_complete_count": 0,
+  "independence_evidence_pass_count": 0,
+  "relation_fixture_complete_count": 0,
+  "relation_fixture_pass_count": 0,
+  "accepted_candidate_count": 0,
+  "catalog_increment_count": 0,
+  "filled_relation_slot_count": 0,
+  "remaining_lexical_gap": 30,
+  "remaining_contract_mismatch_gap": 40,
+  "external_api_calls": 0,
+  "formal_pool_generation_allowed": false,
+  "core_frozen": false,
+  "next_gate": "draft complete callable contracts for contract_draft_queue entries; run equivalence tests separately; then build target-valid/candidate-invalid fixtures"
+}
