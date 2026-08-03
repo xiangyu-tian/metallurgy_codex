@@ -39,7 +39,7 @@ v1.1 的 CF 编号重新绑定到可执行真值冻结门槛：
 | CF-01 | 协议与数据规范兼容性 | v1.1研究问题、G1/G2/C1真值、S1限制、数据生产和`core_frozen=false`一致 | `passed` | `outputs/v11_cf01_cf02_audit_20260731/`；8项兼容性检查全部通过 |
 | CF-02 | `verified_core`工具及独立参考 | 至少3个工具；契约字段、来源、适用域、限制、哈希、正常/边界案例和独立参考均通过 | `passed` | A001、A002、A003、A004、B019共5工具；27/27参考案例通过；11项审计检查通过 |
 | CF-03 | E1b基础任务与收益先导 | 基础任务、独立参考、No Tool/Forced Tool对照、重复和防循环划分可复现 | `passed` | 候选证据审计通过；E1b的120基础任务组、240任务和3次重复设计已审批冻结 |
-| CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `in_progress` | v1.4开发复核通过11/11项晋级检查；40条验证集仍密封；下一步为另行授权的独立验证 |
+| CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `passed` | 40条锁定独立任务、两个冻结条件共80单元全部完成；双层门控flags 39/40、动作40/40、提前调用0；波动与样本量转入CF-08/CF-09 |
 | CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 五工具端到端选择已验证；17/50/100/120契约目录与近邻生成仍未完成 |
 | CF-06 | 17/50/100/120 Schema API可行性 | 实测函数数量、Token、上下文、延迟、错误、`tool_choice=none`和供应商限制 | `pending` | 尚未按v1.1 Schema-only目录口径执行 |
 | CF-07 | 数据层级与泄漏审计 | `controlled_confirmatory`、`naturalistic_validation`、`exploratory_domain_cases`分层；家族划分和收益校准/评价隔离通过 | `in_progress` | E1b/E1c受控集已分区；自然验证层和探索层尚未冻结 |
@@ -224,7 +224,7 @@ formal_cf03_eligible = false
 
 CF-09的E1b章节已冻结，但全项目附录仍缺E1a、E2和E3。下一执行点不是立即运行1,440个E1b正式模型单元，而是补齐其余实验的前置先导：
 
-1. 推进CF-04，生成E2契约边界变换和先导波动；
+1. 基于CF-04独立单次结果，在不修改冻结策略的前提下确定E2重复波动方案；
 2. 继续CF-05/CF-06，完成E3近邻工具池及Schema API先导；
 3. 固定E1a正式条件并执行Schema暴露先导；
 4. 将E1a、E2和E3功效结果补入样本量附录；
@@ -495,7 +495,7 @@ hybrid_semantic_development_result_v1_4:
   validation_dataset_may_be_opened: false
 independent_validation_opening_v1:
   candidate_id: E2-INDEPENDENT-VALIDATION-OPENING-V1-20260803
-  status: prepared_not_authorized
+  status: executed_complete
   task_count: 40
   conditions:
     - flags_only_v1_1
@@ -504,9 +504,25 @@ independent_validation_opening_v1:
   model_cell_count: 80
   held_out_task_content_read_by_builder: false
   held_out_task_content_copied_into_opening: false
-  external_api_calls: 0
-  external_api_execution_authorized: false
+  external_api_calls: 80
+  external_api_execution_authorized: true
   manifest_sha256: a71f3749feb97ae27ceee2e3f94731d869c60b8fb5b2160a14985363cbc875cc
+  confirmatory_inference_allowed: false
+independent_validation_result_v1:
+  run_id: E2-INDEPENDENT-VALIDATION-B7A96A49A281459B
+  completed_count: 80
+  provider_failure_count: 0
+  flags_only_exact_count: 37
+  hybrid_exact_count: 39
+  flags_only_action_correct_count: 39
+  hybrid_action_correct_count: 40
+  flags_only_micro_f1: 0.9555555555555556
+  hybrid_micro_f1: 0.989010989010989
+  flags_net_hybrid_advantage: 2
+  action_net_hybrid_advantage: 1
+  premature_call_count: 0
+  model_run_repeats: 1
+  post_validation_policy_revision_allowed: false
   confirmatory_inference_allowed: false
 core_frozen: false
 ```

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "authorization_id": "E2-INDEPENDENT-VALIDATION-V1-AUTH-20260803",
+  "decision": "authorized_to_execute_e2_independent_validation_v1",
+  "authorization_channel": "explicit_user_instruction_in_codex_task",
+  "authorized_at": "2026-08-03T09:32:04.6563931+08:00",
+  "user_statement_normalized": "可以，继续吧。承接上一轮明确列出的下一步：推送7abe13f，并将锁定40条独立验证任务的非金标模型可见状态、5个契约视图及flags-only v1.1和hybrid v1.4冻结提示词发送至DeepSeek，使用deepseek-v4-flash执行两条件各一次，共80个模型单元；不发送金标或变换历史，不调用冶金工具。",
+  "run_config_id": "E2-INDEPENDENT-VALIDATION-COMPARISON-V1-20260803",
+  "dataset_id": "E2-INDEPENDENT-SEMANTIC-VALIDATION-V1-CANDIDATE-20260731",
+  "authorized_task_count": 40,
+  "authorized_condition_count": 2,
+  "authorized_repeats": 1,
+  "authorized_model_cell_count": 80,
+  "conditions": [
+    "flags_only_v1_1",
+    "hybrid_semantic_v1_4"
+  ],
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "tool_access": "disabled",
+  "validation_dataset_access": "authorized_once",
+  "external_data_sharing_authorized": true,
+  "external_data_scope": [
+    "40 locked independent synthetic E2 request states without gold labels or mutation history",
+    "corresponding five versioned tool contract views",
+    "frozen flags-only v1.1 prompt",
+    "frozen hybrid semantic v1.4 prompt and non-gold deterministic context"
+  ],
+  "excluded_external_data_scope": [
+    "gold labels and expected actions",
+    "mutation histories",
+    "API credentials",
+    "metallurgical tool outputs",
+    "any task outside the locked 40-task candidate"
+  ],
+  "pre_run_git_commit": "7abe13f7e4edcc37945265414893843ce7357e9b",
+  "pre_run_remote": "git@github.com:xiangyu-tian/metallurgy_codex.git",
+  "pre_run_remote_branch": "codex/main",
+  "task_source_sha256": "a8f0648b392e48de576d1fa5dc1d3f04cb2bc064986070756827eff9e99b6921",
+  "validation_manifest_sha256": "038ca57d448036d7da373a3fb5e8d7223d7b462c2042e4c855a80e4d90f4e342",
+  "run_config_sha256": "ec2898ac871931060f2765de44ef61f444f968ba9fbaafaea4a94e86d7ea27ff",
+  "runner_sha256": "3e025a48ef99b5877abedadea941d90c6f75988de4c2b0dc921dde298c545de0",
+  "baseline_prompt_sha256": "8e6047010443d1661df96c5f762c9a19dbc9f01a0d57a48588960ed5613a1eac",
+  "hybrid_prompt_sha256": "b4e427dc1c9e396ae373811c56561b51cb3922de9b1dc6edea11acbc99b95abf",
+  "gold_labels_sent": false,
+  "mutation_history_sent": false,
+  "model_policy_revision_allowed_after_open": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

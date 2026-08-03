@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "E2-CONTRACT-BOUNDARY-POLICY-V1",
+  "mutation_rule_version": "e2-contract-mutation-v1.0.0",
+  "readiness_rule_version": "e2-readiness-policy-v1.0.0",
+  "flags": [
+    "missing_parameter",
+    "ambiguous_parameter",
+    "contract_defined_out_of_domain",
+    "contract_defined_unsupported_system",
+    "unavailable",
+    "model_card_defined_ood",
+    "version_mismatch"
+  ],
+  "mutation_types": {
+    "remove_required_parameter": {
+      "flags": ["missing_parameter"],
+      "applicability": "all_verified_core"
+    },
+    "remove_unit": {
+      "flags": ["missing_parameter"],
+      "applicability": "contract_has_required_unit_or_basis_field"
+    },
+    "make_parameter_ambiguous": {
+      "flags": ["ambiguous_parameter"],
+      "applicability": "all_verified_core"
+    },
+    "make_unit_ambiguous": {
+      "flags": ["ambiguous_parameter"],
+      "applicability": "contract_has_required_unit_or_basis_field"
+    },
+    "contract_out_of_domain": {
+      "flags": ["contract_defined_out_of_domain"],
+      "applicability": "all_verified_core"
+    },
+    "out_of_temperature_range": {
+      "flags": ["contract_defined_out_of_domain"],
+      "applicability": "contract_declares_temperature_range"
+    },
+    "out_of_pressure_range": {
+      "flags": ["contract_defined_out_of_domain"],
+      "applicability": "contract_declares_pressure_range"
+    },
+    "unsupported_phase": {
+      "flags": ["contract_defined_unsupported_system"],
+      "applicability": "contract_declares_phase_count_or_supported_phases"
+    },
+    "unsupported_system": {
+      "flags": ["contract_defined_unsupported_system"],
+      "applicability": "all_verified_core"
+    },
+    "unavailable_tool": {
+      "flags": ["unavailable"],
+      "applicability": "all_verified_core"
+    },
+    "model_card_defined_ood": {
+      "flags": ["model_card_defined_ood"],
+      "applicability": "verified_neural_model_with_model_card"
+    },
+    "version_mismatch": {
+      "flags": ["version_mismatch"],
+      "applicability": "all_versioned_tools"
+    }
+  },
+  "priority": [
+    {
+      "primary_status": "missing_or_ambiguous_input",
+      "any_flags": ["missing_parameter", "ambiguous_parameter"],
+      "allowed_actions": ["clarify"],
+      "policy_expected_action": "clarify"
+    },
+    {
+      "primary_status": "contract_out_of_domain_or_unsupported",
+      "any_flags": [
+        "contract_defined_out_of_domain",
+        "contract_defined_unsupported_system",
+        "model_card_defined_ood",
+        "version_mismatch"
+      ],
+      "allowed_actions": ["refuse"],
+      "policy_expected_action": "refuse"
+    },
+    {
+      "primary_status": "unavailable",
+      "any_flags": ["unavailable"],
+      "allowed_actions": ["refuse"],
+      "policy_expected_action": "refuse"
+    },
+    {
+      "primary_status": "ready",
+      "any_flags": [],
+      "allowed_actions": ["call"],
+      "policy_expected_action": "call"
+    }
+  ],
+  "tool_mutation_specs": {
+    "A001": {
+      "ambiguous_field": "source_unit",
+      "ambiguous_candidates": ["kg", "g"],
+      "unit_field": "target_unit",
+      "unit_ambiguous_candidates": ["g", "kg"],
+      "out_of_domain_patch": {
+        "parameters": {"source_unit": "kg", "target_unit": "m"}
+      },
+      "unsupported_system_patch": {
+        "request_context": {"requested_system": "currency_exchange"}
+      }
+    },
+    "A002": {
+      "ambiguous_field": "formula",
+      "ambiguous_candidates": ["Fe2O3", "Fe3O4"],
+      "out_of_domain_patch": {
+        "parameters": {"formula": "Fe2O3·H2O"}
+      },
+      "unsupported_system_patch": {
+        "request_context": {"requested_system": "ionic_reaction_equation"}
+      }
+    },
+    "A003": {
+      "ambiguous_field": "formula",
+      "ambiguous_candidates": ["Fe2O3", "Fe3O4"],
+      "out_of_domain_patch": {
+        "parameters": {"formula": "SiO2"}
+      },
+      "unsupported_system_patch": {
+        "request_context": {"requested_system": "isotopically_resolved_formula"}
+      }
+    },
+    "A004": {
+      "ambiguous_field": "compositions",
+      "ambiguous_candidates": [
+        {"Fe": 70, "C": 30},
+        {"Fe": 0.7, "C": 0.3}
+      ],
+      "out_of_domain_patch": {
+        "parameters": {"compositions": {"Fe": 0.8, "C": -0.1}}
+      },
+      "unsupported_system_patch": {
+        "request_context": {"requested_system": "mixed_mass_and_mole_basis"}
+      }
+    },
+    "B019": {
+      "ambiguous_field": "overall_composition",
+      "ambiguous_candidates": [0.4, 40.0],
+      "unit_field": "composition_basis",
+      "unit_ambiguous_candidates": ["fraction", "percent"],
+      "out_of_domain_patch": {
+        "parameters": {
+          "overall_composition": 0.9,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        }
+      },
+      "unsupported_system_patch": {
+        "request_context": {"requested_system": "ternary_three_phase_equilibrium"}
+      },
+      "unsupported_phase_patch": {
+        "request_context": {"requested_phase_count": 3}
+      }
+    }
+  },
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

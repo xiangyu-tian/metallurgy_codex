@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "E2-INDEPENDENT-VALIDATION-ANALYSIS-V1-20260803",
+  "source_bindings": {
+    "run_records_sha256": "abaf06c526353ac2efa49aff6c2b78cbe99ca6b2ebd17b9fb8c9a5e6e33bab5f",
+    "run_report_sha256": "9763fbcfd2697c0eaae98d5ebbe52f48328c975f785d7dceb0d485ed12767757",
+    "run_manifest_sha256": "d3e8c4f24860161a83785f17bda3d4b14a5f61b024737576d6dfabc59b998ff9",
+    "analyzer_sha256": "31f642e36a3f0c02c76dad82730c8387e8b47aff2e58a448d8034088e56146ef"
+  },
+  "artifacts": [
+    {
+      "filename": "condition_metrics.json",
+      "sha256": "31358042757be0e44385c32c5675b200a6edee7e1029913619835d9e1b8466e7"
+    },
+    {
+      "filename": "paired_task_results.jsonl",
+      "sha256": "6690e6ac0164c5dd7c05ba2a14a02f180c419405022a6ecd6a438235e6a3c664"
+    },
+    {
+      "filename": "analysis_report.json",
+      "sha256": "74f9b50ac362e817ef01c3e32e4e5d47bc7a66b99173ea5d3de1125e1a9241be"
+    }
+  ],
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

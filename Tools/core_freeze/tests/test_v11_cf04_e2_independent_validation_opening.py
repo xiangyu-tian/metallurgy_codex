@@ -4,6 +4,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from Tools.core_freeze.e2_contract_boundaries import (
+    analyze_e2_independent_validation as analysis,
     build_e2_independent_validation_opening as opening,
     run_e2_independent_validation as validation,
 )
@@ -13,6 +14,62 @@ from Tools.core_freeze.e2_contract_boundaries.run_e2_development import (
 
 
 class V11Cf04E2IndependentValidationOpeningTests(unittest.TestCase):
+    def test_post_validation_analysis_keeps_pairing_descriptive(self):
+        records = []
+        for index in range(40):
+            task_id = f"T{index:02d}"
+            baseline_correct = index != 0
+            records.extend(
+                [
+                    {
+                        "cell_id": f"{task_id}::baseline",
+                        "task_id": task_id,
+                        "condition": "flags_only_v1_1",
+                        "status": "completed",
+                        "expected_flags": ["ambiguous_parameter"],
+                        "expected_action": "clarify",
+                        "predicted_flags": (
+                            ["ambiguous_parameter"]
+                            if baseline_correct
+                            else []
+                        ),
+                        "flags_exact": baseline_correct,
+                        "predicted_action": (
+                            "clarify" if baseline_correct else "call"
+                        ),
+                        "action_correct": baseline_correct,
+                    },
+                    {
+                        "cell_id": f"{task_id}::hybrid",
+                        "task_id": task_id,
+                        "condition": "hybrid_semantic_v1_4",
+                        "status": "completed",
+                        "expected_flags": ["ambiguous_parameter"],
+                        "expected_action": "clarify",
+                        "merged_flags": ["ambiguous_parameter"],
+                        "merged_flags_exact": True,
+                        "predicted_action": "clarify",
+                        "action_correct": True,
+                    },
+                ]
+            )
+        result = analysis.analyze_records(records)
+        self.assertEqual(
+            result["paired_summary"][
+                "flags_baseline_wrong_hybrid_correct"
+            ],
+            1,
+        )
+        self.assertEqual(
+            result["paired_summary"]["flags_net_hybrid_advantage"],
+            1,
+        )
+        self.assertFalse(
+            result["interpretation_limits"][
+                "confirmatory_inference_allowed"
+            ]
+        )
+
     def test_opening_package_excludes_held_out_task_content(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             output_dir = Path(temp_dir) / "opening"

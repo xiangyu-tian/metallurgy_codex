@@ -1,0 +1,148 @@
+{
+  "flags_only_v1_1": {
+    "condition_id": "flags_only_v1_1",
+    "cell_count": 40,
+    "completed_count": 40,
+    "provider_failure_count": 0,
+    "flags_exact_count": 37,
+    "flags_exact_accuracy": 0.925,
+    "flags_exact_wilson_95": [
+      0.8013576647568946,
+      0.9741639742254119
+    ],
+    "action_correct_count": 39,
+    "action_accuracy": 0.975,
+    "action_wilson_95": [
+      0.8711863103652591,
+      0.9955731684973186
+    ],
+    "premature_call_count": 0,
+    "all_flag_micro_f1": 0.9555555555555556,
+    "gold_supported_flag_macro_f1": 0.9675324675324676,
+    "fixed_flag_macro_f1": 0.8339517625231911,
+    "gold_supported_flags": [
+      "ambiguous_parameter",
+      "contract_defined_out_of_domain",
+      "contract_defined_unsupported_system",
+      "unavailable",
+      "version_mismatch"
+    ],
+    "flag_metrics": {
+      "missing_parameter": {
+        "true_positive": 0,
+        "false_positive": 1,
+        "false_negative": 0,
+        "f1": 0.0
+      },
+      "ambiguous_parameter": {
+        "true_positive": 10,
+        "false_positive": 0,
+        "false_negative": 0,
+        "f1": 1.0
+      },
+      "contract_defined_out_of_domain": {
+        "true_positive": 13,
+        "false_positive": 0,
+        "false_negative": 2,
+        "f1": 0.9285714285714286
+      },
+      "contract_defined_unsupported_system": {
+        "true_positive": 5,
+        "false_positive": 1,
+        "false_negative": 0,
+        "f1": 0.9090909090909091
+      },
+      "unavailable": {
+        "true_positive": 10,
+        "false_positive": 0,
+        "false_negative": 0,
+        "f1": 1.0
+      },
+      "model_card_defined_ood": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "f1": 1.0
+      },
+      "version_mismatch": {
+        "true_positive": 5,
+        "false_positive": 0,
+        "false_negative": 0,
+        "f1": 1.0
+      }
+    }
+  },
+  "hybrid_semantic_v1_4": {
+    "condition_id": "hybrid_semantic_v1_4",
+    "cell_count": 40,
+    "completed_count": 40,
+    "provider_failure_count": 0,
+    "flags_exact_count": 39,
+    "flags_exact_accuracy": 0.975,
+    "flags_exact_wilson_95": [
+      0.8711863103652591,
+      0.9955731684973186
+    ],
+    "action_correct_count": 40,
+    "action_accuracy": 1.0,
+    "action_wilson_95": [
+      0.9123783988027135,
+      1.0000000000000002
+    ],
+    "premature_call_count": 0,
+    "all_flag_micro_f1": 0.989010989010989,
+    "gold_supported_flag_macro_f1": 0.9935483870967742,
+    "fixed_flag_macro_f1": 0.9953917050691244,
+    "gold_supported_flags": [
+      "ambiguous_parameter",
+      "contract_defined_out_of_domain",
+      "contract_defined_unsupported_system",
+      "unavailable",
+      "version_mismatch"
+    ],
+    "flag_metrics": {
+      "missing_parameter": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "f1": 1.0
+      },
+      "ambiguous_parameter": {
+        "true_positive": 10,
+        "false_positive": 0,
+        "false_negative": 0,
+        "f1": 1.0
+      },
+      "contract_defined_out_of_domain": {
+        "true_positive": 15,
+        "false_positive": 1,
+        "false_negative": 0,
+        "f1": 0.967741935483871
+      },
+      "contract_defined_unsupported_system": {
+        "true_positive": 5,
+        "false_positive": 0,
+        "false_negative": 0,
+        "f1": 1.0
+      },
+      "unavailable": {
+        "true_positive": 10,
+        "false_positive": 0,
+        "false_negative": 0,
+        "f1": 1.0
+      },
+      "model_card_defined_ood": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "f1": 1.0
+      },
+      "version_mismatch": {
+        "true_positive": 5,
+        "false_positive": 0,
+        "false_negative": 0,
+        "f1": 1.0
+      }
+    }
+  }
+}
