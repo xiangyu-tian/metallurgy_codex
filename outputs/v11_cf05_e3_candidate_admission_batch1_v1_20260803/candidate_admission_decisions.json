@@ -1,0 +1,100 @@
+{
+  "decision_id": "V11-CF05-E3-CANDIDATE-ADMISSION-BATCH1-V1-20260803",
+  "acceptable_decision": {
+    "candidate_tool_id": "E3C001",
+    "target_tool_id": "A001",
+    "checks": {
+      "target_matches": true,
+      "exact_equivalence_passed": true,
+      "implementation_provider_distinct": true,
+      "scientific_function_distinct": false,
+      "holdout_runtime_verified": true,
+      "registration_runtime_verified": true,
+      "relation_evidence_passed": true,
+      "relation_is_acceptable": true
+    },
+    "decision": "admit_to_task_acceptable_tools_registry",
+    "acceptable_tools_registry_admitted": true,
+    "counts_as_new_scientific_function": false,
+    "counts_toward_formal_catalog_size": false,
+    "formal_pool_inclusion": false
+  },
+  "neighbor_decisions": [
+    {
+      "candidate_tool_id": "E3C002",
+      "target_tool_id": "A002",
+      "relation_type": "contract_mismatch",
+      "relation_evidence_case_ids": [
+        "E3-HO-PMG001-001"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "not_acceptable_equivalent": true,
+        "single_relation_assigned": true,
+        "no_duplicate_slot": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C003",
+      "target_tool_id": "A003",
+      "relation_type": "lexical",
+      "relation_evidence_case_ids": [
+        "E3-HO-RDKIT004-001"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "not_acceptable_equivalent": true,
+        "single_relation_assigned": true,
+        "no_duplicate_slot": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C004",
+      "target_tool_id": "A003",
+      "relation_type": "contract_mismatch",
+      "relation_evidence_case_ids": [
+        "E3-HO-PMG002-001"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "not_acceptable_equivalent": true,
+        "single_relation_assigned": true,
+        "no_duplicate_slot": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C005",
+      "target_tool_id": "A004",
+      "relation_type": "contract_mismatch",
+      "relation_evidence_case_ids": [
+        "E3-HO-PMG003-001"
+      ],
+      "checks": {
+        "runtime_contract_passed": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "not_acceptable_equivalent": true,
+        "single_relation_assigned": true,
+        "no_duplicate_slot": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    }
+  ]
+}

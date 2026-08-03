@@ -1,0 +1,51 @@
+{
+  "decision_id": "V11-CF05-E3-CANDIDATE-ADMISSION-BATCH1-V1-20260803",
+  "scope": "evidence_registry_admission_pool_generation_pending",
+  "bindings": [
+    {
+      "path": "outputs/v11_cf05_e3_equivalence_batch1_r1_20260803/artifact_manifest.json",
+      "sha256": "ec31a6ab043a322be256569f3e7cdbc04a0f1b3749461d5a208ac6810c19e743"
+    },
+    {
+      "path": "outputs/v11_cf05_e3_post_equivalence_review_batch1_v1_20260803/artifact_manifest.json",
+      "sha256": "e7dedf537cc505de2a38009de773de1055a2cf0773e104e2e3b92f9a3f89596b"
+    },
+    {
+      "path": "outputs/v11_cf05_e3_candidate_holdout_batch1_r1_20260803/artifact_manifest.json",
+      "sha256": "0e66f61010d7e3eb06a43a19c02e4a4f4e76d0662628bc7d0fc9bc2237dbcc3b"
+    },
+    {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch1_v1_20260803/artifact_manifest.json",
+      "sha256": "d2218c285010b2e74751061293c84ea67253a5f7076cdb2d306bc34465c623f7"
+    },
+    {
+      "path": "outputs/v11_cf05_e3_expansion_plan_v1_20260803/artifact_manifest.json",
+      "sha256": "1e3d207045ad618e26624c7d529951582025919a8f7b5239d1827d6b3fda55e2"
+    },
+    {
+      "path": "docs/experiments/research_protocol_v1.1-rc1.md",
+      "sha256": "14e219ddd9b9891f338845376d46f9442794b474421bda9d18fa1e8796712d25"
+    }
+  ],
+  "required_candidate_ids": [
+    "E3C001",
+    "E3C002",
+    "E3C003",
+    "E3C004",
+    "E3C005"
+  ],
+  "acceptable_candidate_id": "E3C001",
+  "acceptable_source_candidate_id": "SRC-PINT-001",
+  "acceptable_target_tool_id": "A001",
+  "allowed_neighbor_relation_types": [
+    "lexical",
+    "contract_mismatch"
+  ],
+  "target_neighbor_count_per_type": 8,
+  "one_relation_per_candidate": true,
+  "scientific_function_duplicates_count_toward_catalog": false,
+  "formal_catalog_mutation_allowed": false,
+  "formal_pool_generation_allowed": false,
+  "external_api_calls_authorized": false,
+  "confirmatory_inference_allowed": false
+}
