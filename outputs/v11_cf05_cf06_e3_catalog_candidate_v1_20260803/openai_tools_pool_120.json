@@ -1,0 +1,3117 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "A001",
+      "description": "单位换算；功能：量纲分析与单位映射；输入：数值、源单位、目标单位；输出：换算值、换算因子；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "number",
+            "description": "数值；待换算的数值"
+          },
+          "source_unit": {
+            "type": "string",
+            "description": "源单位；示例: 如 °C, kg, MPa"
+          },
+          "target_unit": {
+            "type": "string",
+            "description": "目标单位；示例: 如 K, g, psi"
+          }
+        },
+        "required": [
+          "value",
+          "source_unit",
+          "target_unit"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "A002",
+      "description": "化学式解析；功能：化学式词法解析、括号展开、元素计数；输入：化学式字符串；输出：元素—计量数字典、解析警告；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "type": "string",
+            "description": "化学式；示例: 如 Fe2(SO4)3, CaCO3, Mg(OH)2"
+          }
+        },
+        "required": [
+          "formula"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "A003",
+      "description": "摩尔质量计算；功能：元素原子量加权求和；输入：化学式/元素组成；输出：摩尔质量；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "type": "string",
+            "description": "化学式；示例: 如 Fe2O3, H2SO4, CaCO3"
+          }
+        },
+        "required": [
+          "formula"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "A004",
+      "description": "成分归一化；功能：质量分数/摩尔分数归一化与基准转换；输入：组成、基准、容差；输出：归一化组成、偏差；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "compositions": {
+            "type": "object",
+            "description": "组分名称到质量分数或摩尔分数的映射",
+            "additionalProperties": {
+              "type": "number"
+            }
+          },
+          "tolerance": {
+            "type": "number",
+            "description": "容差；归一化偏差容差",
+            "default": 0.001
+          }
+        },
+        "required": [
+          "compositions"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "A005",
+      "description": "元素质量守恒校验；功能：输入—输出元素逐项守恒残差；输入：物流、组成、质量；输出：元素残差、闭合率、通过/失败；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "input_streams": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "物流名称"
+                },
+                "mass": {
+                  "type": "number",
+                  "description": "物流质量"
+                },
+                "elements": {
+                  "type": "object",
+                  "description": "元素名称到质量分数的映射",
+                  "additionalProperties": {
+                    "type": "number"
+                  }
+                }
+              },
+              "required": [
+                "name",
+                "mass",
+                "elements"
+              ]
+            }
+          },
+          "output_streams": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "物流名称"
+                },
+                "mass": {
+                  "type": "number",
+                  "description": "物流质量"
+                },
+                "elements": {
+                  "type": "object",
+                  "description": "元素名称到质量分数的映射",
+                  "additionalProperties": {
+                    "type": "number"
+                  }
+                }
+              },
+              "required": [
+                "name",
+                "mass",
+                "elements"
+              ]
+            }
+          },
+          "tolerance": {
+            "type": "number",
+            "description": "容差",
+            "default": 0.001
+          }
+        },
+        "required": [
+          "input_streams",
+          "output_streams"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B001",
+      "description": "Shomate热容计算；功能：标准多项式热容/焓/熵表达式；输入：物种、相态、温度、参数集；输出：Cp、H、S及适用温区；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string",
+            "description": "物种；示例: 如 Fe(s), O2(g), CO2(g)"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 (K)",
+            "default": 298.15
+          }
+        },
+        "required": [
+          "species",
+          "temperature"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B002",
+      "description": "NASA多项式热物性计算；功能：标准多项式热容/焓/熵表达式；输入：物种、相态、温度、参数集；输出：Cp、H、S及适用温区；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string",
+            "description": "物种；示例: 如 Fe(s), O2(g)"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 (K)",
+            "default": 298.15
+          }
+        },
+        "required": [
+          "species",
+          "temperature"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B003",
+      "description": "显热与焓积分；功能：热容积分与参考态转换；输入：物种、相态、温度区间、参考态；输出：H/S/G与分段积分记录；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string",
+            "description": "物种；示例: 如 Fe(s), O2(g), CO2(g)"
+          },
+          "temperature_start": {
+            "type": "number",
+            "description": "起始温度 (K)",
+            "default": 298.15
+          },
+          "temperature_end": {
+            "type": "number",
+            "description": "终止温度 (K)",
+            "default": 1873
+          },
+          "mass": {
+            "type": "number",
+            "description": "质量 (g)；如果不为1，结果乘以该质量",
+            "default": 1
+          }
+        },
+        "required": [
+          "species",
+          "temperature_start",
+          "temperature_end"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B004",
+      "description": "熵积分；功能：热容积分与参考态转换；输入：物种、相态、温度区间、参考态；输出：H/S/G与分段积分记录；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string",
+            "description": "物种；示例: 如 Fe(s)"
+          },
+          "temperature_start": {
+            "type": "number",
+            "description": "起始温度 (K)",
+            "default": 298.15
+          },
+          "temperature_end": {
+            "type": "number",
+            "description": "终止温度 (K)",
+            "default": 1873
+          }
+        },
+        "required": [
+          "species",
+          "temperature_start",
+          "temperature_end"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B005",
+      "description": "Gibbs自由能计算；功能：热容积分与参考态转换；输入：物种、相态、温度区间、参考态；输出：H/S/G与分段积分记录；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string",
+            "description": "物种；示例: 如 Fe(s), O2(g)"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 (K)",
+            "default": 1873
+          }
+        },
+        "required": [
+          "species",
+          "temperature"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B006",
+      "description": "反应焓计算；功能：反应计量加权与ΔG°=-RTlnK；输入：配平反应、温度、物种热力学数据；输出：ΔH/ΔS/ΔG/K、数据血缘；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reaction": {
+            "type": "string",
+            "description": "反应式；示例: 如 FeO + C → Fe + CO"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 (K)",
+            "default": 298.15
+          }
+        },
+        "required": [
+          "reaction"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B007",
+      "description": "反应熵计算；功能：反应计量加权与ΔG°=-RTlnK；输入：配平反应、温度、物种热力学数据；输出：ΔH/ΔS/ΔG/K、数据血缘；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reaction": {
+            "type": "string",
+            "description": "反应式；示例: 如 FeO + C → Fe + CO"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 (K)",
+            "default": 298.15
+          }
+        },
+        "required": [
+          "reaction"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B008",
+      "description": "反应Gibbs自由能计算；功能：反应计量加权与ΔG°=-RTlnK；输入：配平反应、温度、物种热力学数据；输出：ΔH/ΔS/ΔG/K、数据血缘；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reaction": {
+            "type": "string",
+            "description": "反应式；示例: 如 2Fe + O2 → 2FeO"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 (K)",
+            "default": 1873
+          },
+          "pressure": {
+            "type": "number",
+            "description": "压力 (Pa)",
+            "default": 101325
+          }
+        },
+        "required": [
+          "reaction"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B009",
+      "description": "平衡常数计算；功能：反应计量加权与ΔG°=-RTlnK；输入：配平反应、温度、物种热力学数据；输出：ΔH/ΔS/ΔG/K、数据血缘；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reaction": {
+            "type": "string",
+            "description": "反应式；示例: 如 FeO + C → Fe + CO"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 (K)",
+            "default": 1600
+          }
+        },
+        "required": [
+          "reaction"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B019",
+      "description": "杠杆规则计算；功能：二相区杠杆规则；输入：总体成分、两相边界成分；输出：相分数、守恒残差；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "overall_composition": {
+            "type": "number",
+            "description": "总体成分；总体成分；三个成分值必须使用同一标度"
+          },
+          "phase1_composition": {
+            "type": "number",
+            "description": "相1成分；相1边界成分；与总体成分使用同一标度"
+          },
+          "phase2_composition": {
+            "type": "number",
+            "description": "相2成分；相2边界成分；与总体成分使用同一标度"
+          },
+          "composition_basis": {
+            "type": "string",
+            "description": "成分标度；fraction 表示 0—1；percent 表示 0—100；auto 仅为历史调用兼容，确认性实验必须显式指定",
+            "enum": [
+              "fraction",
+              "percent",
+              "auto"
+            ],
+            "default": "auto"
+          },
+          "component": {
+            "type": "string",
+            "description": "组元；组元名称",
+            "default": "B"
+          }
+        },
+        "required": [
+          "overall_composition",
+          "phase1_composition",
+          "phase2_composition"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "C001",
+      "description": "Arrhenius速率常数；功能：k=Aexp(-Ea/RT)；输入：A、Ea、T及单位；输出：速率常数、灵敏度；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "A": {
+            "type": "number",
+            "description": "指前因子 A；指前因子，单位与 k 一致"
+          },
+          "Ea": {
+            "type": "number",
+            "description": "活化能 Ea；活化能 (J/mol 或 kJ/mol)"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 T；反应温度 (K)"
+          },
+          "Ea_unit": {
+            "type": "string",
+            "description": "活化能单位",
+            "enum": [
+              "J/mol",
+              "kJ/mol"
+            ],
+            "default": "J/mol"
+          },
+          "R": {
+            "type": "number",
+            "description": "气体常数；气体常数 (J/(mol·K))",
+            "default": 8.314
+          }
+        },
+        "required": [
+          "A",
+          "Ea",
+          "temperature"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "C002",
+      "description": "扩散系数计算；功能：Arrhenius扩散系数/经验关联；输入：D0、Q、T或组分；输出：扩散系数；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "D0": {
+            "type": "number",
+            "description": "指前因子 D₀；扩散常数 (m²/s)"
+          },
+          "Q": {
+            "type": "number",
+            "description": "激活能 Q；扩散激活能"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 T；温度 (K)"
+          },
+          "Q_unit": {
+            "type": "string",
+            "description": "激活能单位",
+            "enum": [
+              "J/mol",
+              "kJ/mol",
+              "eV"
+            ],
+            "default": "J/mol"
+          }
+        },
+        "required": [
+          "D0",
+          "Q",
+          "temperature"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "A006",
+      "description": "氧当量/还原剂当量计算；功能：化学计量电子/氧当量；输入：反应物组成、氧化态；输出：理论氧量/还原剂当量；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：反应物组成、氧化态"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D001",
+      "description": "转炉装料物料平衡；功能：铁、碳、硅、锰、磷等元素收支；输入：铁水/废钢/熔剂/目标钢水；输出：各物流质量、元素闭合率；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：铁水/废钢/熔剂/目标钢水"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E001",
+      "description": "高炉炉料物料平衡；功能：矿、焦、煤、熔剂、热风、产品/炉渣/煤气总物料平衡；输入：炉料、产量、成分、煤气；输出：物流量、收率、闭合率；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：炉料、产量、成分、煤气"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F001",
+      "description": "液相线温度；功能：成分经验式或CALPHAD；输入：钢种成分、数据库/公式版本；输出：液相线/固相线温度、置信区间；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：钢种成分、数据库/公式版本"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "A007",
+      "description": "电荷与价态平衡校验；功能：氧化态与电中性约束；输入：化学式、候选价态；输出：电荷残差、可行价态组合；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：化学式、候选价态"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D002",
+      "description": "铁水-废钢热平衡；功能：显热、反应热、熔化热、散热能量平衡；输入：装料、温度、成分、热损失；输出：可熔废钢量、终点温度、热闭合率；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：装料、温度、成分、热损失"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E002",
+      "description": "铁元素平衡与还原度；功能：铁收支与直接/间接还原分解；输入：炉料铁量、铁水/渣/尘；输出：铁收得率、还原度、损失；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：炉料铁量、铁水/渣/尘"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F002",
+      "description": "固相线温度；功能：成分经验式或CALPHAD；输入：钢种成分、数据库/公式版本；输出：液相线/固相线温度、置信区间；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：钢种成分、数据库/公式版本"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "A008",
+      "description": "缺失值处理；功能：规则填补/插值/KNN/模型填补；输入：表格、字段类型、策略；输出：填补数据、缺失标记、质量报告；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：表格、字段类型、策略"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D003",
+      "description": "理论耗氧量；功能：Si/Mn/C/P/Fe氧化化学计量；输入：铁水成分、目标终点、收得率；输出：理论氧量、分元素耗氧；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：铁水成分、目标终点、收得率"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E003",
+      "description": "高炉碳平衡；功能：焦炭/煤/COG等碳输入输出平衡；输入：燃料、铁水C、顶煤气、粉尘；输出：碳去向、闭合率、单位碳耗；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：燃料、铁水C、顶煤气、粉尘"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F003",
+      "description": "钢液过热度；功能：浇注温度-液相线温度；输入：中包/钢包温度、液相线；输出：过热度、合格判定；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：中包/钢包温度、液相线"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D004",
+      "description": "石灰/白云石加入量；功能：目标碱度/MgO约束的熔剂配平；输入：Si/P、目标碱度、石灰/白云石成分；输出：熔剂加入量、预计渣成分；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：Si/P、目标碱度、石灰/白云石成分"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E004",
+      "description": "高炉氧平衡；功能：鼓风/富氧/炉料氧输入输出平衡；输入：风量、富氧、炉料、煤气；输出：氧收支、间接还原指标；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：风量、富氧、炉料、煤气"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F004",
+      "description": "固相率曲线；功能：平衡/Scheil固相率曲线；输入：成分、温度、数据库；输出：fs(T)、潜热分配；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：成分、温度、数据库"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "A009",
+      "description": "异常值检测；功能：IQR、鲁棒Z分数、Isolation Forest；输入：时序/表格、分组键、阈值；输出：异常分数、异常标签、解释；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：时序/表格、分组键、阈值"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B010",
+      "description": "van't Hoff温度修正；功能：van't Hoff方程积分；输入：参考温度K值、反应焓、目标温度；输出：目标温度平衡常数；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：参考温度K值、反应焓、目标温度"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "C003",
+      "description": "Fick一维扩散；功能：Fick第二定律有限差分/有限体积；输入：空间网格、初边值、D(t,x)；输出：浓度场、通量、守恒误差；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：空间网格、初边值、D(t,x)"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D005",
+      "description": "炉渣量估算；功能：氧化产物+熔剂+夹带估算；输入：装料和氧化量；输出：总渣量、组分；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：装料和氧化量"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E005",
+      "description": "高炉氢平衡；功能：喷吹气/湿分/还原生成水的氢平衡；输入：氢源、顶煤气H2/H2O；输出：氢利用率、氢收支；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：氢源、顶煤气H2/H2O"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F005",
+      "description": "一维坯壳厚度；功能：一维瞬态导热+潜热/等效比热；输入：铸坯几何、拉速、边界热流、物性；输出：坯壳厚度、温度场、能量残差；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：铸坯几何、拉速、边界热流、物性"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G001",
+      "description": "网格尺度估计；功能：边界层/温度梯度尺度+网格无关性规则；输入：几何、物性、速度、目标误差；输出：建议网格尺寸、层数、验证计划；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：几何、物性、速度、目标误差"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "A010",
+      "description": "不确定度传播；功能：一阶误差传播、Monte Carlo；输入：输入分布/协方差、计算函数；输出：输出分布、置信区间、敏感度；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：输入分布/协方差、计算函数"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B011",
+      "description": "Ellingham线计算；功能：氧化反应ΔG°-T线与氧势换算；输入：氧化反应、温区、热力学参数；输出：Ellingham曲线点、交点、氧分压；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：氧化反应、温区、热力学参数"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "C004",
+      "description": "JMAK相变动力学；功能：X=1-exp[-(kt)^n]；输入：温度历程、k/n参数；输出：转变量—时间曲线；适用边界：动力学参数高度依赖材料状态与设备条件；公开参数只能作初始值，需本地标定",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：温度历程、k/n参数"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D006",
+      "description": "炉渣碱度计算；功能：CaO/SiO2及多元碱度指标；输入：渣成分、碱度定义；输出：碱度值、合格判定；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：渣成分、碱度定义"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E006",
+      "description": "Rist操作线；功能：Rist操作线与还原平衡；输入：炉料、顶煤气、燃料比、还原度；输出：操作线、理想点、直接还原度；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：炉料、顶煤气、燃料比、还原度"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F006",
+      "description": "凝固终点预测；功能：温度场固相率阈值或回归代理；输入：拉速、过热度、水量、钢种、断面；输出：凝固终点位置、置信区间；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：拉速、过热度、水量、钢种、断面"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G002",
+      "description": "时间步与CFL校验；功能：CFL/Fourier数/扩散稳定性条件；输入：网格、速度、扩散率、求解器；输出：最大时间步、稳定性诊断；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：网格、速度、扩散率、求解器"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B012",
+      "description": "绝热反应温度；功能：绝热能量守恒+非线性求根；输入：反应物、初温、转化率、相变；输出：绝热终温、能量闭合误差；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：反应物、初温、转化率、相变"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "C005",
+      "description": "晶粒长大动力学；功能：D^n-D0^n=Kt；输入：初始晶粒、温度历程、参数；输出：晶粒尺寸；适用边界：动力学参数高度依赖材料状态与设备条件；公开参数只能作初始值，需本地标定",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：初始晶粒、温度历程、参数"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D007",
+      "description": "脱碳速率模型；功能：分阶段脱碳动力学+氧供给约束；输入：时间、供氧、枪位、炉气/副枪信号；输出：脱碳速率、碳轨迹；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：时间、供氧、枪位、炉气/副枪信号"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E007",
+      "description": "高炉热平衡；功能：高低温区热收支；输入：风温、燃料、炉料、产物温度、热损；输出：热需求、热收入、热效率；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：风温、燃料、炉料、产物温度、热损"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F007",
+      "description": "结晶器热流计算；功能：冷却水热平衡/热电偶反演/经验关联；输入：水温流量、铜板温度、铸速；输出：热流密度、纵向分布；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：水温流量、铜板温度、铸速"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G003",
+      "description": "一维传热PDE求解；功能：一维导热有限差分/有限体积；输入：几何、物性、热源、初边值；输出：温度场、热流、能量闭合；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：几何、物性、热源、初边值"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B013",
+      "description": "理想气体混合平衡；功能：理想气体化学势+Gibbs最小化；输入：物种集、元素总量、T、P；输出：平衡组成、G、收敛状态；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：物种集、元素总量、T、P"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "C006",
+      "description": "缩核反应模型；功能：膜扩散/界面反应/产物层扩散串联；输入：粒径、气体浓度、动力学参数；输出：转化率、控速步骤；适用边界：动力学参数高度依赖材料状态与设备条件；公开参数只能作初始值，需本地标定",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：粒径、气体浓度、动力学参数"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D008",
+      "description": "终点碳预测；功能：GBDT/随机森林/时序特征+守恒约束；输入：装料、过程供氧/加料、炉气、副枪、历史炉次；输出：终点预测值、置信区间、特征贡献、是否建议测量；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：装料、过程供氧/加料、炉气、副枪、历史炉次"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E008",
+      "description": "焦比估算；功能：物料热平衡+回归校正；输入：炉况、风温、喷煤、炉料、目标产量；输出：焦比、区间、影响因素；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：炉况、风温、喷煤、炉料、目标产量"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F008",
+      "description": "二冷总水量计算；功能：目标表面温度/比水量经验模型；输入：钢种、断面、拉速、目标温度；输出：总水量、比水量；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：钢种、断面、拉速、目标温度"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B014",
+      "description": "理想溶液活度；功能：溶液热力学活度/超额Gibbs模型；输入：组元、组成、温度、交互参数/标准态；输出：活度、活度系数、化学势；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：组元、组成、温度、交互参数/标准态"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "C007",
+      "description": "抛物线氧化动力学；功能：质量增重平方律；输入：温度、时间、氧化常数；输出：氧化层厚度/质量增重；适用边界：动力学参数高度依赖材料状态与设备条件；公开参数只能作初始值，需本地标定",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：温度、时间、氧化常数"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D009",
+      "description": "终点温度预测；功能：GBDT/随机森林/时序特征+守恒约束；输入：装料、过程供氧/加料、炉气、副枪、历史炉次；输出：终点预测值、置信区间、特征贡献、是否建议测量；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：装料、过程供氧/加料、炉气、副枪、历史炉次"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E009",
+      "description": "喷煤等效替代；功能：固定碳/热值/置换比经验模型；输入：煤/焦性质、喷煤量、炉况；输出：等效焦炭替代量、边际收益；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：煤/焦性质、喷煤量、炉况"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F009",
+      "description": "二冷分区水量分配；功能：各区换热模型+温度/回温约束；输入：总水量、区段、喷嘴、拉速、目标温度；输出：分区水量、温度曲线、约束余量；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：总水量、区段、喷嘴、拉速、目标温度"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B015",
+      "description": "正则溶液活度系数；功能：溶液热力学活度/超额Gibbs模型；输入：组元、组成、温度、交互参数/标准态；输出：活度、活度系数、化学势；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：组元、组成、温度、交互参数/标准态"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D010",
+      "description": "磷分配比；功能：渣-钢磷分配经验/热力学关联；输入：温度、渣成分、钢中P、氧势；输出：Lp、预测终点P；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：温度、渣成分、钢中P、氧势"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E010",
+      "description": "炉顶煤气组成；功能：C/O/H/N平衡与反应平衡；输入：风量、燃料、还原度、湿分；输出：CO/CO2/H2/N2组成与体积；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：风量、燃料、还原度、湿分"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F010",
+      "description": "反问题换热系数辨识；功能：最小二乘/贝叶斯反演；输入：测温、位置、传热模型、先验范围；输出：换热系数、置信区间、拟合残差；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：测温、位置、传热模型、先验范围"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B016",
+      "description": "Redlich-Kister超额Gibbs；功能：溶液热力学活度/超额Gibbs模型；输入：组元、组成、温度、交互参数/标准态；输出：活度、活度系数、化学势；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：组元、组成、温度、交互参数/标准态"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D011",
+      "description": "硫分配比；功能：硫容量/分配比关联；输入：温度、渣成分、钢中S、氧势；输出：Ls、预测S；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：温度、渣成分、钢中S、氧势"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E011",
+      "description": "CO/CO2利用率；功能：ηCO=CO2/(CO+CO2)等指标；输入：顶煤气组成；输出：CO/H2利用率、趋势；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：顶煤气组成"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F011",
+      "description": "拉速优化；功能：产量、凝固终点、温度、质量风险多目标优化；输入：钢种、断面、温度、水量、设备约束；输出：拉速建议、风险/产量权衡；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：钢种、断面、温度、水量、设备约束"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B017",
+      "description": "Henry/Raoult标准态切换；功能：溶液热力学活度/超额Gibbs模型；输入：组元、组成、温度、交互参数/标准态；输出：活度、活度系数、化学势；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：组元、组成、温度、交互参数/标准态"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D012",
+      "description": "锰氧化平衡；功能：氧化平衡+活度修正；输入：温度、渣钢组成、氧势；输出：平衡残余量、氧化量；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：温度、渣钢组成、氧势"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E012",
+      "description": "风口前煤气量；功能：鼓风、富氧、喷吹燃料的风口区气量平衡；输入：风量、湿分、富氧、喷煤；输出：理论煤气量、组成；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：风量、湿分、富氧、喷煤"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F012",
+      "description": "漏钢风险预测；功能：热电偶时空特征+规则+分类模型；输入：结晶器热电偶、液面、拉速、水量；输出：漏钢风险、位置、提前量、证据；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：结晶器热电偶、液面、拉速、水量"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B018",
+      "description": "Gibbs相律校验；功能：F=C-P+2及受约束变体；输入：组元数、相数、约束条件；输出：自由度、规则冲突；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：组元数、相数、约束条件"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D013",
+      "description": "硅氧化平衡；功能：氧化平衡+活度修正；输入：温度、渣钢组成、氧势；输出：平衡残余量、氧化量；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：温度、渣钢组成、氧势"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E013",
+      "description": "风口回旋区绝热火焰温度；功能：风口区绝热热平衡；输入：风温、富氧、湿分、喷煤/气；输出：RAFT、热量分项；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：风温、富氧、湿分、喷煤/气"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F013",
+      "description": "液面波动异常检测；功能：滤波、频域特征、变点/孤立森林；输入：液位时序、塞棒、拉速；输出：异常片段、频率特征、严重级别；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：液位时序、塞棒、拉速"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D014",
+      "description": "TFe与铁损估算；功能：铁氧化物平衡+渣铁收支；输入：渣量、渣成分、钢水收得率；输出：TFe、铁损、经济损失；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：渣量、渣成分、钢水收得率"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E014",
+      "description": "料柱Ergun压降；功能：Ergun方程与多层料柱叠加；输入：粒径、空隙率、气速、物性、层厚；输出：压降、临界区段；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：粒径、空隙率、气速、物性、层厚"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F014",
+      "description": "铸坯热应力/应变；功能：温度场驱动热弹塑性/裂纹判据；输入：温度场、材料高温力学、边界条件；输出：应力/应变、危险位置；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：温度场、材料高温力学、边界条件"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B020",
+      "description": "二元相界插值；功能：单调分段插值/样条；输入：相界离散点、温度/组成；输出：相界值、插值不确定度；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：相界离散点、温度/组成"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "C008",
+      "description": "熔渣/钢液黏度估算；功能：组分—温度经验关联或回归；输入：渣/钢组成、温度；输出：黏度、置信区间；适用边界：动力学参数高度依赖材料状态与设备条件；公开参数只能作初始值，需本地标定",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：渣/钢组成、温度"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D015",
+      "description": "炉气生成量；功能：CO/CO2生成化学计量与状态方程；输入：脱碳量、后燃比、温压；输出：炉气体积、组成、流量曲线；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：脱碳量、后燃比、温压"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E015",
+      "description": "透气性指数；功能：压差/风量/料柱修正指数；输入：压差、风量、炉顶压力、料线；输出：透气性指数、趋势异常；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：压差、风量、炉顶压力、料线"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F015",
+      "description": "表面裂纹敏感性；功能：工艺+成分+热状态特征的GBDT/分类回归；输入：钢种、浇铸参数、温度/水量/拉速、质量检测；输出：质量风险/等级、置信度、主要影响因素；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：钢种、浇铸参数、温度/水量/拉速、质量检测"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G004",
+      "description": "反应ODE求解；功能：刚性/非刚性ODE自适应积分；输入：反应网络、速率、初值、时间区间；输出：状态轨迹、事件、收敛信息；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：反应网络、速率、初值、时间区间"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B021",
+      "description": "液相线/固相线回归；功能：物理约束回归/高斯过程；输入：钢种成分、实验/CALPHAD温度；输出：液相线/固相线温度、置信区间；适用边界：结果依赖热力学数据库版本、相名映射与计算条件；必须返回数据库和软件版本",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：钢种成分、实验/CALPHAD温度"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "C009",
+      "description": "导热系数混合规则；功能：串并联、Maxwell-Eucken等混合规则；输入：各相导热率、相分数、结构假设；输出：有效导热率、上下界；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：各相导热率、相分数、结构假设"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D016",
+      "description": "氧利用率计算；功能：理论耗氧与实际供氧比；输入：实际氧量、氧化产物、炉气；输出：氧利用率、分项损失；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：实际氧量、氧化产物、炉气"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E016",
+      "description": "布料分布指数；功能：布料矩阵、径向矿焦比和粒度分布；输入：溜槽角度、批次、探尺/雷达数据；输出：径向分布指数、均匀性；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：溜槽角度、批次、探尺/雷达数据"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F016",
+      "description": "中心偏析预测；功能：工艺+成分+热状态特征的GBDT/分类回归；输入：钢种、浇铸参数、温度/水量/拉速、质量检测；输出：质量风险/等级、置信度、主要影响因素；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：钢种、浇铸参数、温度/水量/拉速、质量检测"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G005",
+      "description": "CFD参数化案例生成；功能：模板渲染+参数/边界条件校验；输入：几何模板、物性、工况、求解器设置；输出：可运行CFD案例目录、manifest；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：几何模板、物性、工况、求解器设置"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B022",
+      "description": "多元多相Gibbs最小化；功能：元素守恒约束下全局/局部Gibbs最小化；输入：组元、候选相、T、P、G模型；输出：相组成、相分数、收敛诊断；适用边界：结果依赖热力学数据库版本、相名映射与计算条件；必须返回数据库和软件版本",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：组元、候选相、T、P、G模型"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "C010",
+      "description": "界面传质系数估算；功能：Sherwood/Reynolds/Schmidt关联；输入：流速、尺度、物性、几何；输出：传质系数、适用Re范围；适用边界：动力学参数高度依赖材料状态与设备条件；公开参数只能作初始值，需本地标定",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：流速、尺度、物性、几何"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D017",
+      "description": "氧枪枪位推荐；功能：规则库+历史最优炉次相似检索；输入：炉龄、熔池、供氧阶段、炉气/喷溅信号；输出：枪位区间、理由、风险；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：炉龄、熔池、供氧阶段、炉气/喷溅信号"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E017",
+      "description": "铁水硅预测；功能：时滞特征+GBDT/时序模型+物料平衡约束；输入：近数小时工艺、炉料、风口、煤气、历史化验；输出：铁水Si/温度预测、区间、贡献；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：近数小时工艺、炉料、风口、煤气、历史化验"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F017",
+      "description": "中心疏松预测；功能：工艺+成分+热状态特征的GBDT/分类回归；输入：钢种、浇铸参数、温度/水量/拉速、质量检测；输出：质量风险/等级、置信度、主要影响因素；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：钢种、浇铸参数、温度/水量/拉速、质量检测"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G006",
+      "description": "参数化仿真批处理；功能：参数网格/试验设计+容器队列+失败重试；输入：案例模板、参数空间、资源配额；输出：运行状态、结果索引、失败原因；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：案例模板、参数空间、资源配额"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B023",
+      "description": "CALPHAD平衡计算封装；功能：pycalphad/OpenCalphad/Thermo-Calc/FactSage适配器；输入：数据库ID、组元、条件、输出请求；输出：相平衡结果、软件/数据库版本、日志；适用边界：结果依赖热力学数据库版本、相名映射与计算条件；必须返回数据库和软件版本",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：数据库ID、组元、条件、输出请求"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D018",
+      "description": "吹氧制度优化；功能：分段供氧/枪位非线性或动态优化；输入：目标C/T/P、装料、设备约束；输出：供氧曲线、枪位曲线、预计指标；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：目标C/T/P、装料、设备约束"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E018",
+      "description": "铁水温度预测；功能：时滞特征+GBDT/时序模型+物料平衡约束；输入：近数小时工艺、炉料、风口、煤气、历史化验；输出：铁水Si/温度预测、区间、贡献；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：近数小时工艺、炉料、风口、煤气、历史化验"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F018",
+      "description": "夹杂物上浮时间；功能：Stokes上浮+流场修正；输入：夹杂尺寸/密度、钢液物性、流场尺度；输出：上浮速度、停留时间、捕获概率；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：夹杂尺寸/密度、钢液物性、流场尺度"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G007",
+      "description": "降阶/代理模型；功能：高斯过程/GBDT/神经网络降阶；输入：仿真/实验输入输出；输出：快速预测、置信区间、适用域；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：仿真/实验输入输出"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B024",
+      "description": "Scheil-Gulliver凝固计算；功能：Scheil-Gulliver逐步凝固；输入：合金成分、温区、数据库、步长；输出：固相率、相序、偏析曲线；适用边界：结果依赖热力学数据库版本、相名映射与计算条件；必须返回数据库和软件版本",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：合金成分、温区、数据库、步长"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D019",
+      "description": "合金加入优化；功能：线性/混合整数最小成本配料；输入：钢水成分、目标规格、合金成分/价格/收得率；输出：合金加入方案、成本、约束余量；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：钢水成分、目标规格、合金成分/价格/收得率"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E019",
+      "description": "炉况稳定性分类；功能：多变量时序特征+可解释分类器；输入：压差、炉顶、风口、煤气、料线等；输出：稳定/预警类别、风险因素；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：压差、炉顶、风口、煤气、料线等"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F019",
+      "description": "电磁搅拌效果指数；功能：电磁力尺度分析+历史回归；输入：电流频率、断面、拉速、偏析指标；输出：搅拌效果指数、推荐区间；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：电流频率、断面、拉速、偏析指标"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G008",
+      "description": "插值与查表服务；功能：多维规则网格/散点插值+缓存；输入：查询点、表格版本、外推策略；输出：插值值、距离、是否外推；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：查询点、表格版本、外推策略"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B025",
+      "description": "相图一致性校验；功能：相律、相区邻接、杠杆规则、自由能最小；输入：相图拓扑/计算结果/测试点；输出：违规项、证据、严重级别；适用边界：结果依赖热力学数据库版本、相名映射与计算条件；必须返回数据库和软件版本",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：相图拓扑/计算结果/测试点"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "D020",
+      "description": "冷却剂/废钢加入优化；功能：热平衡约束下最小成本/最小波动优化；输入：热状态、废钢/矿石/冷却剂属性；输出：加入量、终温区间、成本；适用边界：必须按转炉、炉龄、原料和钢种标定；预测/优化结果仅作辅助，超出训练分布需人工确认",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：热状态、废钢/矿石/冷却剂属性"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "E020",
+      "description": "高炉碳足迹；功能：活动数据×排放因子；工序边界与分配规则；输入：焦/煤/电/气/原料/产量、因子版本；输出：tCO2e/tHM、分项排放、范围说明；适用边界：高炉具有强时滞和炉况差异；模型必须绑定高炉、炉料制度、统计周期与碳核算边界",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：焦/煤/电/气/原料/产量、因子版本"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "F020",
+      "description": "铸坯质量分类；功能：工艺+成分+热状态特征的GBDT/分类回归；输入：钢种、浇铸参数、温度/水量/拉速、质量检测；输出：质量风险/等级、置信度、主要影响因素；适用边界：连铸模型必须绑定钢种、断面、设备、喷嘴与传感器配置；高风险报警须人工/联锁规则复核",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：钢种、浇铸参数、温度/水量/拉速、质量检测"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G009",
+      "description": "敏感性分析；功能：局部导数、Morris/Sobol可选；输入：模型、参数范围、采样预算；输出：敏感度排序、交互效应；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：模型、参数范围、采样预算"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G010",
+      "description": "Monte Carlo不确定度分析；功能：输入分布采样+模型批量执行；输入：模型、输入分布、相关性、样本数；输出：输出分布、区间、失效概率；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：模型、输入分布、相关性、样本数"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G011",
+      "description": "贝叶斯优化；功能：高斯过程/TPE采集函数；输入：目标函数、约束、变量范围、预算；输出：推荐下一组参数、最优历史、置信度；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：目标函数、约束、变量范围、预算"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G012",
+      "description": "多目标优化；功能：NSGA-II/ε约束/Pyomo；输入：目标、约束、变量、权重偏好；输出：Pareto解集、折中解、约束状态；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：目标、约束、变量、权重偏好"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G013",
+      "description": "约束规则校验器；功能：JSON规则/表达式树/物料能量与工艺边界；输入：模型输入输出、上下文、规则版本；输出：通过/失败、违反规则、修复建议；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：模型输入输出、上下文、规则版本"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G014",
+      "description": "模型路由评分器；功能：能力矩阵+输入完整度+风险+成本+历史成功率评分；输入：任务意图、参数、候选工具元数据；输出：工具排序、是否强制调用/人工确认、理由；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：任务意图、参数、候选工具元数据"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "G015",
+      "description": "分布外/OOD检测；功能：特征距离、孤立森林、共形预测/不确定度阈值；输入：当前样本、训练分布摘要；输出：OOD分数、拒答/人工确认建议；适用边界：所有仿真与优化工具必须返回收敛状态、约束违反、软件版本、运行日志和可复现实验清单",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "string",
+            "description": "按候选目录摘要提供输入：当前样本、训练分布摘要"
+          },
+          "context": {
+            "type": "object",
+            "description": "可选上下文；字段尚未形成可执行参数契约。",
+            "properties": {}
+          }
+        },
+        "required": [
+          "request"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+]

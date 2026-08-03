@@ -40,8 +40,8 @@ v1.1 的 CF 编号重新绑定到可执行真值冻结门槛：
 | CF-02 | `verified_core`工具及独立参考 | 至少3个工具；契约字段、来源、适用域、限制、哈希、正常/边界案例和独立参考均通过 | `passed` | A001、A002、A003、A004、B019共5工具；27/27参考案例通过；11项审计检查通过 |
 | CF-03 | E1b基础任务与收益先导 | 基础任务、独立参考、No Tool/Forced Tool对照、重复和防循环划分可复现 | `passed` | 候选证据审计通过；E1b的120基础任务组、240任务和3次重复设计已审批冻结 |
 | CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `passed` | 40条锁定独立任务、两个冻结条件共80单元全部完成；双层门控flags 39/40、动作40/40、提前调用0；波动与样本量转入CF-08/CF-09 |
-| CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 五工具端到端选择已验证；17/50/100/120契约目录与近邻生成仍未完成 |
-| CF-06 | 17/50/100/120 Schema API可行性 | 实测函数数量、Token、上下文、延迟、错误、`tool_choice=none`和供应商限制 | `pending` | 尚未按v1.1 Schema-only目录口径执行 |
+| CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 120条候选目录及17/50/100/120基础嵌套池已生成并通过结构测试；25条仍待家族独立性复核，目标级0/4/8近邻和正式参数契约尚未冻结 |
+| CF-06 | 17/50/100/120 Schema API可行性 | 实测函数数量、Token、上下文、延迟、错误、`tool_choice=none`和供应商限制 | `in_progress` | 四种规模的OpenAI工具定义候选已离线生成；103条仅为摘要Schema stub，尚未获得外部API可行性实测授权 |
 | CF-07 | 数据层级与泄漏审计 | `controlled_confirmatory`、`naturalistic_validation`、`exploratory_domain_cases`分层；家族划分和收益校准/评价隔离通过 | `in_progress` | E1b/E1c受控集已分区；自然验证层和探索层尚未冻结 |
 | CF-08 | 先导波动与功效分析 | 估计任务家族、工具家族、重复波动和主要效应；固定正式重复次数 | `in_progress` | E1b组件已批准；E2已完成R1并形成R2/R3未授权开启包，执行后合并三次重复估计波动；E1a/E3仍待先导 |
 | CF-09 | 样本量附录 | 生成并审批v1.1样本量和重复次数附录 | `in_progress` | `sample_size_addendum_v1.1-rc1.md`已建立，E1b章节批准；E1a/E2/E3章节待补 |
@@ -540,5 +540,32 @@ e2_variability_r2_r3_opening_v1:
   external_api_execution_authorized: false
   manifest_sha256: 5cea43af17560069a00c0c48193714d90753ce57591854ad91e25c23b7edae34
   confirmatory_inference_allowed: false
+core_frozen: false
+```
+
+## 11. CF-05/CF-06 E3目录候选记录
+
+```yaml
+candidate_id: V11-CF05-CF06-E3-CATALOG-CANDIDATE-V1-20260803
+status: candidate_generated_not_formally_eligible
+catalog_entry_count: 120
+runtime_implemented_count: 17
+verified_executable_count: 5
+implemented_unverified_count: 12
+schema_only_planned_count: 103
+unresolved_family_review_entry_count: 25
+pool_sizes: [17, 50, 100, 120]
+pool_relation: Pool-17 subset Pool-50 subset Pool-100 subset Pool-120
+formal_execution_scope: verified_core_only
+api_visible_lifecycle_labels: false
+planned_schema_fidelity: summary_stub_not_parameter_contract
+external_api_calls: 0
+external_api_calls_authorized: false
+artifact_manifest_sha256: cbebc748110bad4b853ab1f965119be02780af93a7492936f21bd7e73dd6fc15
+blocking_requirements:
+  - resolve CF-05 family independence reviews
+  - freeze target-specific 0/4/8 contract-neighbor pools
+  - freeze parameter contracts before formal E3 parameter scoring
+  - obtain separate authorization before CF-06 external API feasibility calls
 core_frozen: false
 ```

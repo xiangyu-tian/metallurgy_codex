@@ -1,0 +1,542 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "A001",
+      "description": "单位换算；功能：量纲分析与单位映射；输入：数值、源单位、目标单位；输出：换算值、换算因子；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "number",
+            "description": "数值；待换算的数值"
+          },
+          "source_unit": {
+            "type": "string",
+            "description": "源单位；示例: 如 °C, kg, MPa"
+          },
+          "target_unit": {
+            "type": "string",
+            "description": "目标单位；示例: 如 K, g, psi"
+          }
+        },
+        "required": [
+          "value",
+          "source_unit",
+          "target_unit"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "A002",
+      "description": "化学式解析；功能：化学式词法解析、括号展开、元素计数；输入：化学式字符串；输出：元素—计量数字典、解析警告；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "type": "string",
+            "description": "化学式；示例: 如 Fe2(SO4)3, CaCO3, Mg(OH)2"
+          }
+        },
+        "required": [
+          "formula"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "A003",
+      "description": "摩尔质量计算；功能：元素原子量加权求和；输入：化学式/元素组成；输出：摩尔质量；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "type": "string",
+            "description": "化学式；示例: 如 Fe2O3, H2SO4, CaCO3"
+          }
+        },
+        "required": [
+          "formula"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "A004",
+      "description": "成分归一化；功能：质量分数/摩尔分数归一化与基准转换；输入：组成、基准、容差；输出：归一化组成、偏差；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "compositions": {
+            "type": "object",
+            "description": "组分名称到质量分数或摩尔分数的映射",
+            "additionalProperties": {
+              "type": "number"
+            }
+          },
+          "tolerance": {
+            "type": "number",
+            "description": "容差；归一化偏差容差",
+            "default": 0.001
+          }
+        },
+        "required": [
+          "compositions"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "A005",
+      "description": "元素质量守恒校验；功能：输入—输出元素逐项守恒残差；输入：物流、组成、质量；输出：元素残差、闭合率、通过/失败；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "input_streams": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "物流名称"
+                },
+                "mass": {
+                  "type": "number",
+                  "description": "物流质量"
+                },
+                "elements": {
+                  "type": "object",
+                  "description": "元素名称到质量分数的映射",
+                  "additionalProperties": {
+                    "type": "number"
+                  }
+                }
+              },
+              "required": [
+                "name",
+                "mass",
+                "elements"
+              ]
+            }
+          },
+          "output_streams": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "物流名称"
+                },
+                "mass": {
+                  "type": "number",
+                  "description": "物流质量"
+                },
+                "elements": {
+                  "type": "object",
+                  "description": "元素名称到质量分数的映射",
+                  "additionalProperties": {
+                    "type": "number"
+                  }
+                }
+              },
+              "required": [
+                "name",
+                "mass",
+                "elements"
+              ]
+            }
+          },
+          "tolerance": {
+            "type": "number",
+            "description": "容差",
+            "default": 0.001
+          }
+        },
+        "required": [
+          "input_streams",
+          "output_streams"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B001",
+      "description": "Shomate热容计算；功能：标准多项式热容/焓/熵表达式；输入：物种、相态、温度、参数集；输出：Cp、H、S及适用温区；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string",
+            "description": "物种；示例: 如 Fe(s), O2(g), CO2(g)"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 (K)",
+            "default": 298.15
+          }
+        },
+        "required": [
+          "species",
+          "temperature"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B002",
+      "description": "NASA多项式热物性计算；功能：标准多项式热容/焓/熵表达式；输入：物种、相态、温度、参数集；输出：Cp、H、S及适用温区；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string",
+            "description": "物种；示例: 如 Fe(s), O2(g)"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 (K)",
+            "default": 298.15
+          }
+        },
+        "required": [
+          "species",
+          "temperature"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B003",
+      "description": "显热与焓积分；功能：热容积分与参考态转换；输入：物种、相态、温度区间、参考态；输出：H/S/G与分段积分记录；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string",
+            "description": "物种；示例: 如 Fe(s), O2(g), CO2(g)"
+          },
+          "temperature_start": {
+            "type": "number",
+            "description": "起始温度 (K)",
+            "default": 298.15
+          },
+          "temperature_end": {
+            "type": "number",
+            "description": "终止温度 (K)",
+            "default": 1873
+          },
+          "mass": {
+            "type": "number",
+            "description": "质量 (g)；如果不为1，结果乘以该质量",
+            "default": 1
+          }
+        },
+        "required": [
+          "species",
+          "temperature_start",
+          "temperature_end"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B004",
+      "description": "熵积分；功能：热容积分与参考态转换；输入：物种、相态、温度区间、参考态；输出：H/S/G与分段积分记录；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string",
+            "description": "物种；示例: 如 Fe(s)"
+          },
+          "temperature_start": {
+            "type": "number",
+            "description": "起始温度 (K)",
+            "default": 298.15
+          },
+          "temperature_end": {
+            "type": "number",
+            "description": "终止温度 (K)",
+            "default": 1873
+          }
+        },
+        "required": [
+          "species",
+          "temperature_start",
+          "temperature_end"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B005",
+      "description": "Gibbs自由能计算；功能：热容积分与参考态转换；输入：物种、相态、温度区间、参考态；输出：H/S/G与分段积分记录；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "species": {
+            "type": "string",
+            "description": "物种；示例: 如 Fe(s), O2(g)"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 (K)",
+            "default": 1873
+          }
+        },
+        "required": [
+          "species",
+          "temperature"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B006",
+      "description": "反应焓计算；功能：反应计量加权与ΔG°=-RTlnK；输入：配平反应、温度、物种热力学数据；输出：ΔH/ΔS/ΔG/K、数据血缘；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reaction": {
+            "type": "string",
+            "description": "反应式；示例: 如 FeO + C → Fe + CO"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 (K)",
+            "default": 298.15
+          }
+        },
+        "required": [
+          "reaction"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B007",
+      "description": "反应熵计算；功能：反应计量加权与ΔG°=-RTlnK；输入：配平反应、温度、物种热力学数据；输出：ΔH/ΔS/ΔG/K、数据血缘；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reaction": {
+            "type": "string",
+            "description": "反应式；示例: 如 FeO + C → Fe + CO"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 (K)",
+            "default": 298.15
+          }
+        },
+        "required": [
+          "reaction"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B008",
+      "description": "反应Gibbs自由能计算；功能：反应计量加权与ΔG°=-RTlnK；输入：配平反应、温度、物种热力学数据；输出：ΔH/ΔS/ΔG/K、数据血缘；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reaction": {
+            "type": "string",
+            "description": "反应式；示例: 如 2Fe + O2 → 2FeO"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 (K)",
+            "default": 1873
+          },
+          "pressure": {
+            "type": "number",
+            "description": "压力 (Pa)",
+            "default": 101325
+          }
+        },
+        "required": [
+          "reaction"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B009",
+      "description": "平衡常数计算；功能：反应计量加权与ΔG°=-RTlnK；输入：配平反应、温度、物种热力学数据；输出：ΔH/ΔS/ΔG/K、数据血缘；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reaction": {
+            "type": "string",
+            "description": "反应式；示例: 如 FeO + C → Fe + CO"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 (K)",
+            "default": 1600
+          }
+        },
+        "required": [
+          "reaction"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "B019",
+      "description": "杠杆规则计算；功能：二相区杠杆规则；输入：总体成分、两相边界成分；输出：相分数、守恒残差；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "overall_composition": {
+            "type": "number",
+            "description": "总体成分；总体成分；三个成分值必须使用同一标度"
+          },
+          "phase1_composition": {
+            "type": "number",
+            "description": "相1成分；相1边界成分；与总体成分使用同一标度"
+          },
+          "phase2_composition": {
+            "type": "number",
+            "description": "相2成分；相2边界成分；与总体成分使用同一标度"
+          },
+          "composition_basis": {
+            "type": "string",
+            "description": "成分标度；fraction 表示 0—1；percent 表示 0—100；auto 仅为历史调用兼容，确认性实验必须显式指定",
+            "enum": [
+              "fraction",
+              "percent",
+              "auto"
+            ],
+            "default": "auto"
+          },
+          "component": {
+            "type": "string",
+            "description": "组元；组元名称",
+            "default": "B"
+          }
+        },
+        "required": [
+          "overall_composition",
+          "phase1_composition",
+          "phase2_composition"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "C001",
+      "description": "Arrhenius速率常数；功能：k=Aexp(-Ea/RT)；输入：A、Ea、T及单位；输出：速率常数、灵敏度；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "A": {
+            "type": "number",
+            "description": "指前因子 A；指前因子，单位与 k 一致"
+          },
+          "Ea": {
+            "type": "number",
+            "description": "活化能 Ea；活化能 (J/mol 或 kJ/mol)"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 T；反应温度 (K)"
+          },
+          "Ea_unit": {
+            "type": "string",
+            "description": "活化能单位",
+            "enum": [
+              "J/mol",
+              "kJ/mol"
+            ],
+            "default": "J/mol"
+          },
+          "R": {
+            "type": "number",
+            "description": "气体常数；气体常数 (J/(mol·K))",
+            "default": 8.314
+          }
+        },
+        "required": [
+          "A",
+          "Ea",
+          "temperature"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "C002",
+      "description": "扩散系数计算；功能：Arrhenius扩散系数/经验关联；输入：D0、Q、T或组分；输出：扩散系数；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "D0": {
+            "type": "number",
+            "description": "指前因子 D₀；扩散常数 (m²/s)"
+          },
+          "Q": {
+            "type": "number",
+            "description": "激活能 Q；扩散激活能"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "温度 T；温度 (K)"
+          },
+          "Q_unit": {
+            "type": "string",
+            "description": "激活能单位",
+            "enum": [
+              "J/mol",
+              "kJ/mol",
+              "eV"
+            ],
+            "default": "J/mol"
+          }
+        },
+        "required": [
+          "D0",
+          "Q",
+          "temperature"
+        ]
+      }
+    }
+  }
+]

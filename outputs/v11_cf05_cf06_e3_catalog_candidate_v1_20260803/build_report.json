@@ -1,0 +1,26 @@
+{
+  "candidate_id": "V11-CF05-CF06-E3-CATALOG-CANDIDATE-V1-20260803",
+  "status": "candidate_generated_not_formally_eligible",
+  "catalog_entry_count": 120,
+  "runtime_implemented_count": 17,
+  "verified_executable_count": 5,
+  "schema_only_planned_count": 103,
+  "unresolved_family_review_entry_count": 25,
+  "pool_sizes": [
+    17,
+    50,
+    100,
+    120
+  ],
+  "nested_pool_check": true,
+  "external_api_calls": 0,
+  "external_api_calls_authorized": false,
+  "formal_execution_scope": "verified_core_only",
+  "planned_schema_limit": "103 planned entries use summary stubs for routing/API feasibility; they are not executable parameter contracts",
+  "blocking_requirements": [
+    "resolve CF-05 family independence reviews",
+    "freeze target-specific 0/4/8 contract-neighbor pools",
+    "freeze parameter contracts before formal E3 parameter scoring",
+    "obtain separate authorization before CF-06 external API feasibility calls"
+  ]
+}

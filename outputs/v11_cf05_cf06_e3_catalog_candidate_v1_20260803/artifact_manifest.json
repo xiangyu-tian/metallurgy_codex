@@ -1,0 +1,46 @@
+{
+  "candidate_id": "V11-CF05-CF06-E3-CATALOG-CANDIDATE-V1-20260803",
+  "artifact_count": 8,
+  "artifacts": [
+    {
+      "filename": "build_report.json",
+      "sha256": "f3e961924491863ffd991096e8a60d344d05a5f5f1f76ab0c58ffc72d0c9c820",
+      "bytes": 971
+    },
+    {
+      "filename": "catalog_config_snapshot.json",
+      "sha256": "11c786d2da59d5a90175ecacfdd00b877d023a64cbf0bdf56f21989d18041f69",
+      "bytes": 1075
+    },
+    {
+      "filename": "e3_nested_pool_manifest_v1_candidate.json",
+      "sha256": "e60927cb13af9d5579358b4930304246cddae817a0117506791ad4415a4e492a",
+      "bytes": 6600
+    },
+    {
+      "filename": "e3_schema_catalog_v1_candidate.json",
+      "sha256": "78de613f974d1ee48d5e2afa8a379b534a1e28a5b6749d9fc75f015aff6dd4f6",
+      "bytes": 243073
+    },
+    {
+      "filename": "openai_tools_pool_100.json",
+      "sha256": "3a9e5b866bb2cc2a6aca2e334e653f079030e58b854e92d4ec8e766d3e9d1376",
+      "bytes": 96884
+    },
+    {
+      "filename": "openai_tools_pool_120.json",
+      "sha256": "2542f24f62e3e2980b27a9af0479d7b2181a94fc06d2d0bdccd9e285784b8570",
+      "bytes": 116615
+    },
+    {
+      "filename": "openai_tools_pool_17.json",
+      "sha256": "376644b7b21bfe788f57f967c6447e80783d35b2482f68a7531d87f64ed1dea4",
+      "bytes": 17631
+    },
+    {
+      "filename": "openai_tools_pool_50.json",
+      "sha256": "86a15b138e60e2f614f38168600c423723b26af18bf3457c7b6caf5db71046ff",
+      "bytes": 48689
+    }
+  ]
+}
