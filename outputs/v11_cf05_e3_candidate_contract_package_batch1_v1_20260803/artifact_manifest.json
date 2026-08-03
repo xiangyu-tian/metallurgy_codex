@@ -1,0 +1,41 @@
+{
+  "package_id": "V11-CF05-E3-CANDIDATE-CONTRACT-PACKAGE-BATCH1-V1-20260803",
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "filename": "candidate_contract_drafts.json",
+      "sha256": "bd1e495bdb8473714329764d255ba749784c86c2ad82d910b5d4e2422d34a7de",
+      "bytes": 26766
+    },
+    {
+      "filename": "candidate_contract_package_config_snapshot.json",
+      "sha256": "a9ccc0ce15587c4cc95dcae275fa4ccf52b55e807fb85df6a115e5830f60cd7c",
+      "bytes": 26794
+    },
+    {
+      "filename": "candidate_contract_similarity.json",
+      "sha256": "f811ee9b07224ec5878ff7d885cbf440c96a2f3c7f4e0448f4a16274e68df484",
+      "bytes": 8474
+    },
+    {
+      "filename": "candidate_equivalence_test_plan.json",
+      "sha256": "a8e157f25e967cd093823b553d84c40d6f56d998feb3bd0c29b341653df6bec4",
+      "bytes": 5508
+    },
+    {
+      "filename": "contract_package_summary.json",
+      "sha256": "5478f0784f0e17ab9896a2699c01b444377e74569d86530a6331abf31d07951a",
+      "bytes": 1222
+    },
+    {
+      "filename": "dependency_environment_snapshot.json",
+      "sha256": "9b8ee32bca1a50109702370bede3e723956b5da779c8c27109def46e2cce50b4",
+      "bytes": 338
+    },
+    {
+      "filename": "source_binding_report.json",
+      "sha256": "0d9eef30140e047cde263b74c551462b293a8ec6099e719804ff9faebedcfef8",
+      "bytes": 1243
+    }
+  ]
+}

@@ -1,0 +1,877 @@
+{
+  "package_id": "V11-CF05-E3-CANDIDATE-CONTRACT-PACKAGE-BATCH1-V1-20260803",
+  "contract_count": 12,
+  "contracts": [
+    {
+      "provisional_candidate_id": "SRC-PINT-002",
+      "semantic_alias": "transform_units_with_context",
+      "target_tool_id": "A001",
+      "package": "Pint",
+      "import_name": "pint",
+      "source_operation": "Context-enabled Quantity.to",
+      "scientific_function": "Apply an explicitly named context transformation between quantities that ordinary dimensional conversion cannot connect.",
+      "input_contract": {
+        "parameters": {
+          "value": {
+            "type": "number"
+          },
+          "source_unit": {
+            "type": "string"
+          },
+          "target_unit": {
+            "type": "string"
+          },
+          "context_name": {
+            "type": "string"
+          },
+          "context_parameters": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "value",
+          "source_unit",
+          "target_unit",
+          "context_name"
+        ]
+      },
+      "output_contract": {
+        "properties": {
+          "converted_value": {
+            "type": "number"
+          },
+          "target_unit": {
+            "type": "string"
+          },
+          "context_name": {
+            "type": "string"
+          }
+        },
+        "units": {
+          "converted_value": "declared by target_unit"
+        }
+      },
+      "applicability_contract": {
+        "systems": [
+          "registered_pint_context_transformations"
+        ],
+        "prerequisites": [
+          "context exists",
+          "all required context parameters are supplied"
+        ],
+        "exclusions": [
+          "creating units inside a context",
+          "changing an existing unit dimensionality"
+        ]
+      },
+      "error_codes": [
+        "INVALID_UNIT",
+        "UNDEFINED_CONTEXT",
+        "MISSING_CONTEXT_PARAMETER",
+        "DIMENSIONALITY_ERROR"
+      ],
+      "known_limitations": [
+        "Exact package version and enabled context registry are not frozen."
+      ],
+      "source_ids": [
+        "PINT-CONTEXTS"
+      ],
+      "draft_status": "structurally_complete_execution_unverified",
+      "version_lock_status": "pending_dependency_installation_and_lock",
+      "implementation_status": "not_implemented",
+      "dependency_import_available": false,
+      "execution_allowed": false,
+      "admission_allowed": false,
+      "independence_evidence_passed": null,
+      "relation_fixture_passed": null
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-001",
+      "semantic_alias": "parse_smiles_structure",
+      "target_tool_id": "A002",
+      "package": "RDKit",
+      "import_name": "rdkit",
+      "source_operation": "Chem.MolFromSmiles",
+      "scientific_function": "Parse a SMILES molecular-connectivity representation into a sanitized molecular graph summary.",
+      "input_contract": {
+        "parameters": {
+          "smiles": {
+            "type": "string"
+          },
+          "sanitize": {
+            "type": "boolean",
+            "default": true
+          }
+        },
+        "required": [
+          "smiles"
+        ]
+      },
+      "output_contract": {
+        "properties": {
+          "canonical_smiles": {
+            "type": "string"
+          },
+          "atom_count": {
+            "type": "integer"
+          },
+          "bond_count": {
+            "type": "integer"
+          },
+          "formal_charge": {
+            "type": "integer"
+          }
+        },
+        "units": {}
+      },
+      "applicability_contract": {
+        "systems": [
+          "SMILES molecular representations supported by the frozen RDKit version"
+        ],
+        "prerequisites": [
+          "input is SMILES rather than a bulk chemical formula"
+        ],
+        "exclusions": [
+          "SMARTS query syntax",
+          "arbitrary stoichiometric formula grammar"
+        ]
+      },
+      "error_codes": [
+        "SMILES_PARSE_ERROR",
+        "SANITIZATION_ERROR"
+      ],
+      "known_limitations": [
+        "JSON output is a proposed wrapper summary, not a native RDKit molecule serialization."
+      ],
+      "source_ids": [
+        "RDKIT-RDMOLFILES"
+      ],
+      "draft_status": "structurally_complete_execution_unverified",
+      "version_lock_status": "pending_dependency_installation_and_lock",
+      "implementation_status": "not_implemented",
+      "dependency_import_available": false,
+      "execution_allowed": false,
+      "admission_allowed": false,
+      "independence_evidence_passed": null,
+      "relation_fixture_passed": null
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-002",
+      "semantic_alias": "parse_smarts_query",
+      "target_tool_id": "A002",
+      "package": "RDKit",
+      "import_name": "rdkit",
+      "source_operation": "Chem.MolFromSmarts",
+      "scientific_function": "Parse a SMARTS substructure-query pattern into a query-graph summary.",
+      "input_contract": {
+        "parameters": {
+          "smarts": {
+            "type": "string"
+          },
+          "merge_hydrogens": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": [
+          "smarts"
+        ]
+      },
+      "output_contract": {
+        "properties": {
+          "canonical_smarts": {
+            "type": "string"
+          },
+          "query_atom_count": {
+            "type": "integer"
+          },
+          "query_bond_count": {
+            "type": "integer"
+          }
+        },
+        "units": {}
+      },
+      "applicability_contract": {
+        "systems": [
+          "SMARTS query representations supported by the frozen RDKit version"
+        ],
+        "prerequisites": [
+          "input represents a substructure query"
+        ],
+        "exclusions": [
+          "bulk chemical formulas",
+          "requests for elemental stoichiometry"
+        ]
+      },
+      "error_codes": [
+        "SMARTS_PARSE_ERROR"
+      ],
+      "known_limitations": [
+        "Query semantics may not correspond to a physically realizable molecule."
+      ],
+      "source_ids": [
+        "RDKIT-RDMOLFILES"
+      ],
+      "draft_status": "structurally_complete_execution_unverified",
+      "version_lock_status": "pending_dependency_installation_and_lock",
+      "implementation_status": "not_implemented",
+      "dependency_import_available": false,
+      "execution_allowed": false,
+      "admission_allowed": false,
+      "independence_evidence_passed": null,
+      "relation_fixture_passed": null
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-003",
+      "semantic_alias": "normalize_canonical_smiles",
+      "target_tool_id": "A002",
+      "package": "RDKit",
+      "import_name": "rdkit",
+      "source_operation": "Chem.CanonSmiles",
+      "scientific_function": "Normalize a valid SMILES representation to a canonical SMILES string.",
+      "input_contract": {
+        "parameters": {
+          "smiles": {
+            "type": "string"
+          },
+          "use_chirality": {
+            "type": "boolean",
+            "default": true
+          }
+        },
+        "required": [
+          "smiles"
+        ]
+      },
+      "output_contract": {
+        "properties": {
+          "canonical_smiles": {
+            "type": "string"
+          }
+        },
+        "units": {}
+      },
+      "applicability_contract": {
+        "systems": [
+          "parseable SMILES representations"
+        ],
+        "prerequisites": [
+          "SMILES parser succeeds"
+        ],
+        "exclusions": [
+          "bulk formula parsing",
+          "element-count extraction"
+        ]
+      },
+      "error_codes": [
+        "SMILES_PARSE_ERROR",
+        "CANONICALIZATION_ERROR"
+      ],
+      "known_limitations": [
+        "Canonical output may depend on the locked RDKit version and stereochemistry options."
+      ],
+      "source_ids": [
+        "RDKIT-CHEM"
+      ],
+      "draft_status": "structurally_complete_execution_unverified",
+      "version_lock_status": "pending_dependency_installation_and_lock",
+      "implementation_status": "not_implemented",
+      "dependency_import_available": false,
+      "execution_allowed": false,
+      "admission_allowed": false,
+      "independence_evidence_passed": null,
+      "relation_fixture_passed": null
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-005",
+      "semantic_alias": "calculate_exact_molecular_weight",
+      "target_tool_id": "A003",
+      "package": "RDKit",
+      "import_name": "rdkit",
+      "source_operation": "Descriptors.ExactMolWt",
+      "scientific_function": "Calculate the exact molecular-weight descriptor for a parsed molecular structure.",
+      "input_contract": {
+        "parameters": {
+          "smiles": {
+            "type": "string"
+          },
+          "only_heavy_atoms": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": [
+          "smiles"
+        ]
+      },
+      "output_contract": {
+        "properties": {
+          "exact_molecular_weight": {
+            "type": "number"
+          },
+          "mass_convention": {
+            "type": "string",
+            "const": "exact_isotopic_mass"
+          }
+        },
+        "units": {
+          "exact_molecular_weight": "unit convention pending independent reference review"
+        }
+      },
+      "applicability_contract": {
+        "systems": [
+          "molecules parseable by frozen RDKit SMILES rules"
+        ],
+        "prerequisites": [
+          "SMILES parsing and sanitization succeed"
+        ],
+        "exclusions": [
+          "average standard atomic-weight molar mass"
+        ]
+      },
+      "error_codes": [
+        "SMILES_PARSE_ERROR",
+        "DESCRIPTOR_ERROR"
+      ],
+      "known_limitations": [
+        "The quantity is not interchangeable with A003 average molar mass."
+      ],
+      "source_ids": [
+        "RDKIT-DESCRIPTORS"
+      ],
+      "draft_status": "structurally_complete_execution_unverified",
+      "version_lock_status": "pending_dependency_installation_and_lock",
+      "implementation_status": "not_implemented",
+      "dependency_import_available": false,
+      "execution_allowed": false,
+      "admission_allowed": false,
+      "independence_evidence_passed": null,
+      "relation_fixture_passed": null
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-006",
+      "semantic_alias": "calculate_heavy_atom_molecular_weight",
+      "target_tool_id": "A003",
+      "package": "RDKit",
+      "import_name": "rdkit",
+      "source_operation": "Descriptors.HeavyAtomMolWt",
+      "scientific_function": "Calculate average molecular weight after excluding hydrogen contributions.",
+      "input_contract": {
+        "parameters": {
+          "smiles": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "smiles"
+        ]
+      },
+      "output_contract": {
+        "properties": {
+          "heavy_atom_molecular_weight": {
+            "type": "number"
+          },
+          "hydrogen_excluded": {
+            "type": "boolean",
+            "const": true
+          }
+        },
+        "units": {
+          "heavy_atom_molecular_weight": "unit convention pending independent reference review"
+        }
+      },
+      "applicability_contract": {
+        "systems": [
+          "molecules parseable by frozen RDKit SMILES rules"
+        ],
+        "prerequisites": [
+          "SMILES parsing succeeds"
+        ],
+        "exclusions": [
+          "total molecular weight",
+          "average formula molar mass including hydrogen"
+        ]
+      },
+      "error_codes": [
+        "SMILES_PARSE_ERROR",
+        "DESCRIPTOR_ERROR"
+      ],
+      "known_limitations": [
+        "Hydrogen exclusion makes the result intentionally unsuitable for A003 total molar-mass tasks."
+      ],
+      "source_ids": [
+        "RDKIT-DESCRIPTORS"
+      ],
+      "draft_status": "structurally_complete_execution_unverified",
+      "version_lock_status": "pending_dependency_installation_and_lock",
+      "implementation_status": "not_implemented",
+      "dependency_import_available": false,
+      "execution_allowed": false,
+      "admission_allowed": false,
+      "independence_evidence_passed": null,
+      "relation_fixture_passed": null
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-004",
+      "semantic_alias": "reduce_composition_ratio",
+      "target_tool_id": "A004",
+      "package": "pymatgen",
+      "import_name": "pymatgen",
+      "source_operation": "Composition.reduced_composition",
+      "scientific_function": "Reduce a chemical composition to its smallest supported stoichiometric ratio.",
+      "input_contract": {
+        "parameters": {
+          "formula_or_amounts": {
+            "type": [
+              "string",
+              "object"
+            ]
+          }
+        },
+        "required": [
+          "formula_or_amounts"
+        ]
+      },
+      "output_contract": {
+        "properties": {
+          "reduced_formula": {
+            "type": "string"
+          },
+          "reduced_amounts": {
+            "type": "object"
+          },
+          "reduction_factor": {
+            "type": "number"
+          }
+        },
+        "units": {}
+      },
+      "applicability_contract": {
+        "systems": [
+          "pymatgen Composition species and formulas"
+        ],
+        "prerequisites": [
+          "composition parsing succeeds"
+        ],
+        "exclusions": [
+          "arbitrary nonchemical component labels",
+          "generic unit-sum normalization"
+        ]
+      },
+      "error_codes": [
+        "COMPOSITION_PARSE_ERROR",
+        "REDUCTION_ERROR"
+      ],
+      "known_limitations": [
+        "Reduction semantics are distinct from A004 positive-scale normalization."
+      ],
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "draft_status": "structurally_complete_execution_unverified",
+      "version_lock_status": "pending_dependency_installation_and_lock",
+      "implementation_status": "not_implemented",
+      "dependency_import_available": false,
+      "execution_allowed": false,
+      "admission_allowed": false,
+      "independence_evidence_passed": null,
+      "relation_fixture_passed": null
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-005",
+      "semantic_alias": "calculate_atomic_fraction",
+      "target_tool_id": "A004",
+      "package": "pymatgen",
+      "import_name": "pymatgen",
+      "source_operation": "Composition.get_atomic_fraction",
+      "scientific_function": "Calculate the atomic fraction of one selected species in a parsed composition.",
+      "input_contract": {
+        "parameters": {
+          "formula_or_amounts": {
+            "type": [
+              "string",
+              "object"
+            ]
+          },
+          "species": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "formula_or_amounts",
+          "species"
+        ]
+      },
+      "output_contract": {
+        "properties": {
+          "species": {
+            "type": "string"
+          },
+          "atomic_fraction": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "units": {
+          "atomic_fraction": "fraction"
+        }
+      },
+      "applicability_contract": {
+        "systems": [
+          "pymatgen Composition species and formulas"
+        ],
+        "prerequisites": [
+          "selected species is represented in the parsed composition"
+        ],
+        "exclusions": [
+          "complete normalized vector output",
+          "mass-basis fractions"
+        ]
+      },
+      "error_codes": [
+        "COMPOSITION_PARSE_ERROR",
+        "UNKNOWN_SPECIES"
+      ],
+      "known_limitations": [
+        "Returns one species value, not the full A004 normalized mapping."
+      ],
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "draft_status": "structurally_complete_execution_unverified",
+      "version_lock_status": "pending_dependency_installation_and_lock",
+      "implementation_status": "not_implemented",
+      "dependency_import_available": false,
+      "execution_allowed": false,
+      "admission_allowed": false,
+      "independence_evidence_passed": null,
+      "relation_fixture_passed": null
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-006",
+      "semantic_alias": "calculate_weight_fraction",
+      "target_tool_id": "A004",
+      "package": "pymatgen",
+      "import_name": "pymatgen",
+      "source_operation": "Composition.get_wt_fraction",
+      "scientific_function": "Calculate the mass fraction of one selected species in a parsed composition.",
+      "input_contract": {
+        "parameters": {
+          "formula_or_amounts": {
+            "type": [
+              "string",
+              "object"
+            ]
+          },
+          "species": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "formula_or_amounts",
+          "species"
+        ]
+      },
+      "output_contract": {
+        "properties": {
+          "species": {
+            "type": "string"
+          },
+          "weight_fraction": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "units": {
+          "weight_fraction": "fraction"
+        }
+      },
+      "applicability_contract": {
+        "systems": [
+          "pymatgen Composition species and formulas"
+        ],
+        "prerequisites": [
+          "selected species is represented in the parsed composition"
+        ],
+        "exclusions": [
+          "atomic fraction",
+          "generic arbitrary-component normalization"
+        ]
+      },
+      "error_codes": [
+        "COMPOSITION_PARSE_ERROR",
+        "UNKNOWN_SPECIES"
+      ],
+      "known_limitations": [
+        "Atomic-weight conventions must be version-locked before numerical comparison."
+      ],
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "draft_status": "structurally_complete_execution_unverified",
+      "version_lock_status": "pending_dependency_installation_and_lock",
+      "implementation_status": "not_implemented",
+      "dependency_import_available": false,
+      "execution_allowed": false,
+      "admission_allowed": false,
+      "independence_evidence_passed": null,
+      "relation_fixture_passed": null
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-007",
+      "semantic_alias": "convert_weight_to_molar_composition",
+      "target_tool_id": "A004",
+      "package": "pymatgen",
+      "import_name": "pymatgen",
+      "source_operation": "Composition.from_weight_dict",
+      "scientific_function": "Convert a species weight mapping to a molar composition representation.",
+      "input_contract": {
+        "parameters": {
+          "weights": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number"
+            }
+          }
+        },
+        "required": [
+          "weights"
+        ]
+      },
+      "output_contract": {
+        "properties": {
+          "molar_amounts": {
+            "type": "object"
+          },
+          "atomic_fractions": {
+            "type": "object"
+          }
+        },
+        "units": {
+          "atomic_fractions": "fraction"
+        }
+      },
+      "applicability_contract": {
+        "systems": [
+          "chemical species recognized by frozen pymatgen Composition"
+        ],
+        "prerequisites": [
+          "weights are finite, nonnegative, and not all zero"
+        ],
+        "exclusions": [
+          "same-basis unit-sum normalization",
+          "unknown arbitrary component labels"
+        ]
+      },
+      "error_codes": [
+        "INVALID_WEIGHT_MAPPING",
+        "UNKNOWN_SPECIES",
+        "CONVERSION_ERROR"
+      ],
+      "known_limitations": [
+        "Changes composition basis and therefore cannot replace A004 without an explicit basis request."
+      ],
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "draft_status": "structurally_complete_execution_unverified",
+      "version_lock_status": "pending_dependency_installation_and_lock",
+      "implementation_status": "not_implemented",
+      "dependency_import_available": false,
+      "execution_allowed": false,
+      "admission_allowed": false,
+      "independence_evidence_passed": null,
+      "relation_fixture_passed": null
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-003",
+      "semantic_alias": "screen_phase_stability",
+      "target_tool_id": "B019",
+      "package": "pycalphad",
+      "import_name": "pycalphad",
+      "source_operation": "phase-stability screening workflow over equilibrium results",
+      "scientific_function": "Screen stable phases and phase-region changes over declared thermodynamic conditions.",
+      "input_contract": {
+        "parameters": {
+          "database_ref": {
+            "type": "string"
+          },
+          "components": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "phases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "conditions": {
+            "type": "object"
+          },
+          "phase_fraction_threshold": {
+            "type": "number",
+            "default": 1e-08
+          }
+        },
+        "required": [
+          "database_ref",
+          "components",
+          "phases",
+          "conditions"
+        ]
+      },
+      "output_contract": {
+        "properties": {
+          "stable_phases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "phase_fractions": {
+            "type": "object"
+          },
+          "screened_condition_count": {
+            "type": "integer"
+          }
+        },
+        "units": {
+          "phase_fractions": "fraction"
+        }
+      },
+      "applicability_contract": {
+        "systems": [
+          "systems represented by the supplied thermodynamic database"
+        ],
+        "prerequisites": [
+          "database, components, phases, and conditions are mutually compatible"
+        ],
+        "exclusions": [
+          "lever-rule calculation from supplied tie-line endpoints",
+          "systems absent from the database"
+        ]
+      },
+      "error_codes": [
+        "DATABASE_ERROR",
+        "COMPONENT_PHASE_MISMATCH",
+        "CONDITION_ERROR",
+        "EQUILIBRIUM_FAILURE"
+      ],
+      "known_limitations": [
+        "Workflow identity and stable-phase threshold require freezing before implementation."
+      ],
+      "source_ids": [
+        "PYCALPHAD-STABILITY"
+      ],
+      "draft_status": "structurally_complete_execution_unverified",
+      "version_lock_status": "pending_dependency_installation_and_lock",
+      "implementation_status": "not_implemented",
+      "dependency_import_available": false,
+      "execution_allowed": false,
+      "admission_allowed": false,
+      "independence_evidence_passed": null,
+      "relation_fixture_passed": null
+    },
+    {
+      "provisional_candidate_id": "SRC-PYCAL-004",
+      "semantic_alias": "map_binary_phase_diagram",
+      "target_tool_id": "B019",
+      "package": "pycalphad",
+      "import_name": "pycalphad",
+      "source_operation": "binary phase-diagram mapping workflow",
+      "scientific_function": "Map binary phase regions and tie-line points across declared temperature and composition axes.",
+      "input_contract": {
+        "parameters": {
+          "database_ref": {
+            "type": "string"
+          },
+          "components": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "phases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "temperature_range": {
+            "type": "object"
+          },
+          "composition_range": {
+            "type": "object"
+          },
+          "pressure": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "database_ref",
+          "components",
+          "phases",
+          "temperature_range",
+          "composition_range",
+          "pressure"
+        ]
+      },
+      "output_contract": {
+        "properties": {
+          "phase_regions": {
+            "type": "array"
+          },
+          "tie_line_points": {
+            "type": "array"
+          },
+          "mapped_node_count": {
+            "type": "integer"
+          }
+        },
+        "units": {
+          "pressure": "Pa",
+          "temperature": "K",
+          "composition": "mole fraction unless explicitly frozen otherwise"
+        }
+      },
+      "applicability_contract": {
+        "systems": [
+          "binary systems represented by the supplied thermodynamic database"
+        ],
+        "prerequisites": [
+          "exactly two non-vacancy components after database conventions",
+          "finite bounded mapping ranges"
+        ],
+        "exclusions": [
+          "ternary or higher systems",
+          "direct lever-rule calculation from known endpoints"
+        ]
+      },
+      "error_codes": [
+        "DATABASE_ERROR",
+        "NON_BINARY_SYSTEM",
+        "INVALID_MAPPING_RANGE",
+        "MAPPING_FAILURE"
+      ],
+      "known_limitations": [
+        "Node stepping strategy and convergence settings are not yet frozen."
+      ],
+      "source_ids": [
+        "PYCALPHAD-MAPPING"
+      ],
+      "draft_status": "structurally_complete_execution_unverified",
+      "version_lock_status": "pending_dependency_installation_and_lock",
+      "implementation_status": "not_implemented",
+      "dependency_import_available": false,
+      "execution_allowed": false,
+      "admission_allowed": false,
+      "independence_evidence_passed": null,
+      "relation_fixture_passed": null
+    }
+  ]
+}

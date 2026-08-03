@@ -1,0 +1,146 @@
+{
+  "package_id": "V11-CF05-E3-CANDIDATE-CONTRACT-PACKAGE-BATCH1-V1-20260803",
+  "test_plan_count": 5,
+  "tests": [
+    {
+      "provisional_candidate_id": "SRC-PINT-001",
+      "target_tool_id": "A001",
+      "overlap_reference_case_ids": [
+        "VC-A001-N01",
+        "VC-A001-N02",
+        "VC-A001-B01",
+        "VC-A001-B02"
+      ],
+      "boundary_reference_case_ids": [
+        "VC-A001-D01",
+        "VC-A001-D02"
+      ],
+      "candidate_input_adapter": "copy value/source_unit/target_unit; use no active context for ordinary conversions",
+      "adapter_generalizable_over_target_scope": true,
+      "comparison_mapping": {
+        "value": "converted_value",
+        "error_outcome": "error_outcome"
+      },
+      "decision_rule": "exact_equivalent only if every target success/failure outcome matches and all numeric values meet the frozen target tolerance",
+      "source_ids": [
+        "PINT-CONTEXTS"
+      ],
+      "execution_status": "not_started_dependency_unavailable",
+      "observed_case_results": null,
+      "equivalence_classification": null,
+      "may_enter_acceptable_tool_set": false,
+      "may_enter_unacceptable_neighbor_set": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-001",
+      "target_tool_id": "A002",
+      "overlap_reference_case_ids": [
+        "VC-A002-N01",
+        "VC-A002-N02"
+      ],
+      "boundary_reference_case_ids": [
+        "VC-A002-B01",
+        "VC-A002-B02",
+        "VC-A002-B03"
+      ],
+      "candidate_input_adapter": "copy formula directly into pymatgen Composition wrapper",
+      "adapter_generalizable_over_target_scope": true,
+      "comparison_mapping": {
+        "elements": "amounts",
+        "error_outcome": "error_outcome"
+      },
+      "decision_rule": "exact_equivalent only if element amounts and all rejection outcomes match across the frozen A002 verification grammar",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "execution_status": "not_started_dependency_unavailable",
+      "observed_case_results": null,
+      "equivalence_classification": null,
+      "may_enter_acceptable_tool_set": false,
+      "may_enter_unacceptable_neighbor_set": false
+    },
+    {
+      "provisional_candidate_id": "SRC-RDKIT-004",
+      "target_tool_id": "A003",
+      "overlap_reference_case_ids": [
+        "VC-A003-N01",
+        "VC-A003-N02",
+        "VC-A003-N03"
+      ],
+      "boundary_reference_case_ids": [
+        "VC-A003-B01"
+      ],
+      "candidate_input_adapter": "requires an independently frozen formula-to-SMILES mapping before RDKit MolWt can run",
+      "adapter_generalizable_over_target_scope": false,
+      "comparison_mapping": {
+        "molar_mass": "average_molecular_weight",
+        "error_outcome": "error_outcome"
+      },
+      "decision_rule": "cannot be exact operational equivalent unless a deterministic adapter covers the entire A003 formula grammar; numerical agreement alone is insufficient",
+      "source_ids": [
+        "RDKIT-DESCRIPTORS"
+      ],
+      "execution_status": "not_started_dependency_unavailable",
+      "observed_case_results": null,
+      "equivalence_classification": null,
+      "may_enter_acceptable_tool_set": false,
+      "may_enter_unacceptable_neighbor_set": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-002",
+      "target_tool_id": "A003",
+      "overlap_reference_case_ids": [
+        "VC-A003-N01",
+        "VC-A003-N02",
+        "VC-A003-N03"
+      ],
+      "boundary_reference_case_ids": [
+        "VC-A003-B01"
+      ],
+      "candidate_input_adapter": "copy formula directly into pymatgen Composition wrapper",
+      "adapter_generalizable_over_target_scope": true,
+      "comparison_mapping": {
+        "molar_mass": "composition_weight",
+        "error_outcome": "error_outcome"
+      },
+      "decision_rule": "exact_equivalent only if frozen atomic-weight/version conventions reproduce all target results and rejection outcomes within target tolerance",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "execution_status": "not_started_dependency_unavailable",
+      "observed_case_results": null,
+      "equivalence_classification": null,
+      "may_enter_acceptable_tool_set": false,
+      "may_enter_unacceptable_neighbor_set": false
+    },
+    {
+      "provisional_candidate_id": "SRC-PMG-003",
+      "target_tool_id": "A004",
+      "overlap_reference_case_ids": [
+        "VC-A004-N01",
+        "VC-A004-M01"
+      ],
+      "boundary_reference_case_ids": [
+        "VC-A004-B01",
+        "VC-A004-B02",
+        "VC-A004-B03",
+        "VC-A004-B04"
+      ],
+      "candidate_input_adapter": "copy chemical-species amount mapping into pymatgen Composition wrapper",
+      "adapter_generalizable_over_target_scope": false,
+      "comparison_mapping": {
+        "normalized": "fractional_amounts",
+        "error_outcome": "error_outcome"
+      },
+      "decision_rule": "partial_equivalent if chemical-species overlap cases match but arbitrary-label or boundary behavior differs; exact equivalence requires the complete A004 input domain",
+      "source_ids": [
+        "PYMATGEN-CORE"
+      ],
+      "execution_status": "not_started_dependency_unavailable",
+      "observed_case_results": null,
+      "equivalence_classification": null,
+      "may_enter_acceptable_tool_set": false,
+      "may_enter_unacceptable_neighbor_set": false
+    }
+  ]
+}

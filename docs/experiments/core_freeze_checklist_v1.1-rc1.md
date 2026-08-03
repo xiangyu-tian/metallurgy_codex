@@ -40,7 +40,7 @@ v1.1 的 CF 编号重新绑定到可执行真值冻结门槛：
 | CF-02 | `verified_core`工具及独立参考 | 至少3个工具；契约字段、来源、适用域、限制、哈希、正常/边界案例和独立参考均通过 | `passed` | A001、A002、A003、A004、B019共5工具；27/27参考案例通过；11项审计检查通过 |
 | CF-03 | E1b基础任务与收益先导 | 基础任务、独立参考、No Tool/Forced Tool对照、重复和防循环划分可复现 | `passed` | 候选证据审计通过；E1b的120基础任务组、240任务和3次重复设计已审批冻结 |
 | CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `passed` | 40条锁定独立任务、两个冻结条件共80单元全部完成；双层门控flags 39/40、动作40/40、提前调用0；波动与样本量转入CF-08/CF-09 |
-| CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 120条候选目录及基础嵌套池已生成；第一批20项来源候选已分为12项契约起草、5项等价性测试和3项夹具前筛出；当前准入数、目录增量和槽位回填数仍均为0，词法/契约缺口仍为30/40；未用弱相关工具补位 |
+| CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 第一批已形成12项结构化契约草案和绑定21个独立参考案例的5项等价性测试计划；冻结环境尚无四个候选依赖，版本、实现、执行、独立性和错配夹具均未验证；准入数和槽位回填数仍为0，缺口仍为30/40 |
 | CF-06 | 17/50/100/120 Schema API可行性 | 实测函数数量、Token、上下文、延迟、错误、`tool_choice=none`和供应商限制 | `in_progress` | 四种规模的OpenAI工具定义候选已离线生成；103条仅为摘要Schema stub，尚未获得外部API可行性实测授权 |
 | CF-07 | 数据层级与泄漏审计 | `controlled_confirmatory`、`naturalistic_validation`、`exploratory_domain_cases`分层；家族划分和收益校准/评价隔离通过 | `in_progress` | E1b/E1c受控集已分区；自然验证层和探索层尚未冻结 |
 | CF-08 | 先导波动与功效分析 | 估计任务家族、工具家族、重复波动和主要效应；固定正式重复次数 | `in_progress` | E1b组件已批准；E2已完成R1并形成R2/R3未授权开启包，执行后合并三次重复估计波动；E1a/E3仍待先导 |
@@ -688,3 +688,43 @@ core_frozen: false
 ```
 
 该筛查只为后续证据工作分流，不是专家金标准或正式准入决定。12项进入完整可调用契约起草；5项必须先证明不会正确完成目标任务，否则只能进入可接受工具集合；3项因目录语义重复、依赖上游结果或仅做可视化而不再进入近邻夹具。别名Dice通过也不能替代完整契约文本、独立性证据和目标有效/候选无效夹具。
+
+## 11.3 CF-05 E3第一批候选契约与等价性测试包
+
+```yaml
+package_id: V11-CF05-E3-CANDIDATE-CONTRACT-PACKAGE-BATCH1-V1-20260803
+status: contract_and_equivalence_design_complete_execution_pending
+contract_draft_count: 12
+contract_draft_count_by_target:
+  A001: 1
+  A002: 3
+  A003: 2
+  A004: 4
+  B019: 2
+structurally_complete_contract_count: 12
+dependency_import_available_count: 0
+version_locked_contract_count: 0
+implemented_contract_count: 0
+execution_verified_contract_count: 0
+independence_verified_contract_count: 0
+admission_ready_contract_count: 0
+equivalence_test_plan_count: 5
+equivalence_reference_case_count: 21
+equivalence_test_executed_count: 0
+equivalence_classified_count: 0
+name_threshold_pass_count: 9
+structured_contract_threshold_pass_count: 12
+final_lexical_relation_pass_count: 0
+final_contract_mismatch_relation_pass_count: 0
+catalog_increment_count: 0
+filled_relation_slot_count: 0
+remaining_lexical_gap: 30
+remaining_contract_mismatch_gap: 40
+dependency_installations: 0
+external_api_calls: 0
+formal_pool_generation_allowed: false
+artifact_manifest_sha256: 2d484aef04e5bbcb7488e9aed93fab59d66b6ff057af80ac5a92f18446ab9732
+core_frozen: false
+```
+
+12项草案已具有结构化输入、输出、单位、适用域、排除条件和错误码，但本地冻结环境未安装Pint、RDKit、pymatgen或pycalphad，因而不能称为可执行工具。5项等价性测试绑定现有独立参考案例，并将“输入适配能否覆盖完整目标域”纳入判定，防止仅凭少量数值一致把部分等价工具错误升级为完全等价。

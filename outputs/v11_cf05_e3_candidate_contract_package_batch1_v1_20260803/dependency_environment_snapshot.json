@@ -1,0 +1,13 @@
+{
+  "package_id": "V11-CF05-E3-CANDIDATE-CONTRACT-PACKAGE-BATCH1-V1-20260803",
+  "python_environment": ".venv",
+  "checked_on": "2026-08-03",
+  "imports": {
+    "pint": false,
+    "rdkit": false,
+    "pymatgen": false,
+    "pycalphad": false
+  },
+  "dependency_installation_authorized": false,
+  "execution_allowed": false
+}
