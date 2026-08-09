@@ -1,0 +1,41 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH3-V1-20260803",
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "filename": "candidate_environment_verification.json",
+      "sha256": "5a962635b2f814dab66358fd764123a8334a3c7d48000960cc44e55932a0db6b",
+      "bytes": 640
+    },
+    {
+      "filename": "candidate_independence_matrix.json",
+      "sha256": "2bdd6e8ac6884bc8cb0fa11d63e63bfaa0c1e5f59250118f2b6aec6b396d785e",
+      "bytes": 3163
+    },
+    {
+      "filename": "candidate_registration_config_snapshot.json",
+      "sha256": "8350822a2cbc63aef2f96a584a9153b7d44f4b650fecbcc5a734a3d0e99d229a",
+      "bytes": 18565
+    },
+    {
+      "filename": "candidate_registration_registry.json",
+      "sha256": "4324d69f795f3c590792af1a9b8f5543a699b3ec1344262f395270d9164c4b0f",
+      "bytes": 17224
+    },
+    {
+      "filename": "candidate_registration_report.json",
+      "sha256": "0258a4e5e20bce7edd908a38a2c6a437240972943dc7b33572e773d076d7fa48",
+      "bytes": 1060
+    },
+    {
+      "filename": "candidate_relation_evidence.json",
+      "sha256": "f0f4964b1a65ff30ac8f1cbff00c65966c959863e7edc297d51c5888459599c1",
+      "bytes": 9808
+    },
+    {
+      "filename": "candidate_runtime_contract_results.json",
+      "sha256": "8a0317765d84474fba7162f20d1cea6829bec402d8e32ade7e73405f9007cc76",
+      "bytes": 15127
+    }
+  ]
+}

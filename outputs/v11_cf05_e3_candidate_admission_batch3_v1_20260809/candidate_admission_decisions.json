@@ -1,0 +1,213 @@
+{
+  "decision_id": "V11-CF05-E3-CANDIDATE-ADMISSION-BATCH3-V1-20260809",
+  "admitted": [
+    {
+      "candidate_tool_id": "E3C018",
+      "target_tool_id": "A003",
+      "relation_type": "lexical",
+      "relation_mechanism": "molar-mass wording closely overlaps A003, but the callable requires explicit isotope labels and uses isotope masses instead of A003 frozen abridged standard atomic weights",
+      "callable_identity": "periodictable.formula -> Formula.mass with explicit-isotope guard",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C018-N01",
+        "E3-B3-E3C018-B01",
+        "E3-B3-E3C018-F01"
+      ],
+      "checks": {
+        "target_is_a003": true,
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "independent_callable": true,
+        "distinct_contract": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C019",
+      "target_tool_id": "A003",
+      "relation_type": "lexical",
+      "relation_mechanism": "the Chinese name and output contain molecular-mass wording similar to A003, but the tool returns a mass-weighted spatial center and requires atomic coordinates",
+      "callable_identity": "ase.Atoms.get_center_of_mass",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C019-N01",
+        "E3-B3-E3C019-B01",
+        "E3-B3-E3C019-F01"
+      ],
+      "checks": {
+        "target_is_a003": true,
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "independent_callable": true,
+        "distinct_contract": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C020",
+      "target_tool_id": "A003",
+      "relation_type": "contract_mismatch",
+      "relation_mechanism": "uses the same formula atomic-mass sum as molar mass but returns the mass of one formula entity in grams rather than g/mol",
+      "callable_identity": "periodictable.formula -> Formula.molecular_mass",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C020-N01",
+        "E3-B3-E3C020-B01",
+        "E3-B3-E3C020-F01"
+      ],
+      "checks": {
+        "target_is_a003": true,
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "independent_callable": true,
+        "distinct_contract": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C021",
+      "target_tool_id": "A003",
+      "relation_type": "contract_mismatch",
+      "relation_mechanism": "returns the integer nominal mass number rather than A003 average standard-atomic-weight molar mass",
+      "callable_identity": "molmass.Formula.nominal_mass",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C021-N01",
+        "E3-B3-E3C021-B01",
+        "E3-B3-E3C021-F01"
+      ],
+      "checks": {
+        "target_is_a003": true,
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "independent_callable": true,
+        "distinct_contract": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C022",
+      "target_tool_id": "A003",
+      "relation_type": "contract_mismatch",
+      "relation_mechanism": "requires a charged formula and applies ChemPy charge/electron conventions outside A003 neutral frozen grammar",
+      "callable_identity": "chempy.Substance.from_formula -> Substance.mass with nonzero-charge guard",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C022-N01",
+        "E3-B3-E3C022-B01",
+        "E3-B3-E3C022-F01"
+      ],
+      "checks": {
+        "target_is_a003": true,
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "independent_callable": true,
+        "distinct_contract": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C023",
+      "target_tool_id": "A003",
+      "relation_type": "contract_mismatch",
+      "relation_mechanism": "sums ASE per-atom masses for an atom collection and reports unified atomic mass units, not A003 formula molar mass in g/mol",
+      "callable_identity": "ase.Atoms.get_masses -> sum",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C023-N01",
+        "E3-B3-E3C023-B01",
+        "E3-B3-E3C023-F01"
+      ],
+      "checks": {
+        "target_is_a003": true,
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "independent_callable": true,
+        "distinct_contract": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C024",
+      "target_tool_id": "A003",
+      "relation_type": "contract_mismatch",
+      "relation_mechanism": "uses element mass contributions and their total but returns an element-wise mass-composition table instead of only A003 molar mass",
+      "callable_identity": "molmass.Formula.composition",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C024-N01",
+        "E3-B3-E3C024-B01",
+        "E3-B3-E3C024-F01"
+      ],
+      "checks": {
+        "target_is_a003": true,
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "independent_callable": true,
+        "distinct_contract": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C025",
+      "target_tool_id": "A003",
+      "relation_type": "contract_mismatch",
+      "relation_mechanism": "computes an isotope mass distribution with abundance peaks, not the single average standard-atomic-weight result required by A003",
+      "callable_identity": "molmass.Formula.spectrum",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C025-N01",
+        "E3-B3-E3C025-B01",
+        "E3-B3-E3C025-F01"
+      ],
+      "checks": {
+        "target_is_a003": true,
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "independent_callable": true,
+        "distinct_contract": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    }
+  ]
+}

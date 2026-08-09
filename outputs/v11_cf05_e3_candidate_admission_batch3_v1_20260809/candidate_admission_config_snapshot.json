@@ -1,0 +1,41 @@
+{
+  "decision_id": "V11-CF05-E3-CANDIDATE-ADMISSION-BATCH3-V1-20260809",
+  "scope": "admit_third_batch_a003_relations_to_nonformal_evidence_registry",
+  "bindings": [
+    {
+      "role": "batch3_registration",
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch3_v1_20260803/artifact_manifest.json",
+      "sha256": "c01b3671414bd9b5da8d00a6d5fe1fdbe1aa327a3a829dd59c26d43f5f2cdd1f"
+    },
+    {
+      "role": "batch2_admission",
+      "path": "outputs/v11_cf05_e3_candidate_admission_batch2_v1_20260803/artifact_manifest.json",
+      "sha256": "95dd858ded897ede49eccb354538d924e08e361151aad73bee6360c733ab13b5"
+    }
+  ],
+  "required_candidate_ids": [
+    "E3C018",
+    "E3C019",
+    "E3C020",
+    "E3C021",
+    "E3C022",
+    "E3C023",
+    "E3C024",
+    "E3C025"
+  ],
+  "required_target_tool_id": "A003",
+  "required_relation_counts": {
+    "lexical": 2,
+    "contract_mismatch": 6
+  },
+  "allowed_relation_types": [
+    "lexical",
+    "contract_mismatch"
+  ],
+  "target_neighbor_count_per_type": 8,
+  "one_relation_per_candidate": true,
+  "formal_catalog_mutation_allowed": false,
+  "formal_pool_generation_allowed": false,
+  "external_api_calls_authorized": false,
+  "confirmatory_inference_allowed": false
+}

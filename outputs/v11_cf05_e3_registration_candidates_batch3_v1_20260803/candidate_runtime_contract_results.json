@@ -1,0 +1,587 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH3-V1-20260803",
+  "case_count": 24,
+  "rows": [
+    {
+      "candidate_tool_id": "E3C018",
+      "case_id": "E3-B3-E3C018-N01",
+      "case_kind": "normal",
+      "input": {
+        "formula": "Fe[56]2O[18]3"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "isotope_molar_mass": 165.8673499163,
+          "unit": "g/mol",
+          "isotopes": [
+            {
+              "symbol": "56-Fe",
+              "mass_number": 56,
+              "count": 2.0
+            },
+            {
+              "symbol": "18-O",
+              "mass_number": 18,
+              "count": 3.0
+            }
+          ]
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C018",
+      "case_id": "E3-B3-E3C018-B01",
+      "case_kind": "boundary",
+      "input": {
+        "formula": "D2O"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "isotope_molar_mass": 20.02720355568,
+          "unit": "g/mol",
+          "isotopes": [
+            {
+              "symbol": "D",
+              "mass_number": 2,
+              "count": 2.0
+            }
+          ]
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C018",
+      "case_id": "E3-B3-E3C018-F01",
+      "case_kind": "failure",
+      "input": {
+        "formula": "Fe2O3"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C019",
+      "case_id": "E3-B3-E3C019-N01",
+      "case_kind": "normal",
+      "input": {
+        "symbols": "H2O",
+        "positions": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "center_of_mass": [
+            0.055953372189841796,
+            0.8880932556203164,
+            0.0
+          ],
+          "coordinate_unit": "angstrom",
+          "atom_count": 3
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C019",
+      "case_id": "E3-B3-E3C019-B01",
+      "case_kind": "boundary",
+      "input": {
+        "symbols": "Fe",
+        "positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "center_of_mass": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "coordinate_unit": "angstrom",
+          "atom_count": 1
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C019",
+      "case_id": "E3-B3-E3C019-F01",
+      "case_kind": "failure",
+      "input": {
+        "symbols": "H2O",
+        "positions": [
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "STRUCTURE_ERROR",
+        "error": "ValueError: Array \"positions\" has wrong length: 1 != 3."
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C020",
+      "case_id": "E3-B3-E3C020-N01",
+      "case_kind": "normal",
+      "input": {
+        "formula": "Fe2O3"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "single_entity_mass": 2.651665020197901e-22,
+          "unit": "g/entity"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C020",
+      "case_id": "E3-B3-E3C020-B01",
+      "case_kind": "boundary",
+      "input": {
+        "formula": "H"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "single_entity_mass": 1.6738233797112375e-24,
+          "unit": "g/entity"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C020",
+      "case_id": "E3-B3-E3C020-F01",
+      "case_kind": "failure",
+      "input": {
+        "formula": "Xx2"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "FORMULA_MASS_ERROR",
+        "error": "ValueError: unknown element Xx"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C021",
+      "case_id": "E3-B3-E3C021-N01",
+      "case_kind": "normal",
+      "input": {
+        "formula": "Fe2O3"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "nominal_mass": 160,
+          "mass_convention": "integer_mass_number"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C021",
+      "case_id": "E3-B3-E3C021-B01",
+      "case_kind": "boundary",
+      "input": {
+        "formula": "H"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "nominal_mass": 1,
+          "mass_convention": "integer_mass_number"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C021",
+      "case_id": "E3-B3-E3C021-F01",
+      "case_kind": "failure",
+      "input": {
+        "formula": "("
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "NOMINAL_MASS_ERROR",
+        "error": "FormulaError: missing closing parenthesis ')]}>'\n(\n^"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C022",
+      "case_id": "E3-B3-E3C022-N01",
+      "case_kind": "normal",
+      "input": {
+        "ionic_formula": "Fe(CN)6-4"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "ionic_molar_mass": 211.9551956,
+          "unit": "g/mol",
+          "net_charge": -4
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C022",
+      "case_id": "E3-B3-E3C022-B01",
+      "case_kind": "boundary",
+      "input": {
+        "ionic_formula": "H+"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "ionic_molar_mass": 1.0074511,
+          "unit": "g/mol",
+          "net_charge": 1
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C022",
+      "case_id": "E3-B3-E3C022-F01",
+      "case_kind": "failure",
+      "input": {
+        "ionic_formula": "Fe2O3"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ION_REQUIRED",
+        "error": "a nonzero net charge is required"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C023",
+      "case_id": "E3-B3-E3C023-N01",
+      "case_kind": "normal",
+      "input": {
+        "symbols": "Fe2O3"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "atom_collection_mass": 159.68699999999998,
+          "unit": "u",
+          "atom_count": 5
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C023",
+      "case_id": "E3-B3-E3C023-B01",
+      "case_kind": "boundary",
+      "input": {
+        "symbols": "Fe"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "atom_collection_mass": 55.845,
+          "unit": "u",
+          "atom_count": 1
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C023",
+      "case_id": "E3-B3-E3C023-F01",
+      "case_kind": "failure",
+      "input": {
+        "symbols": "Xx"
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ATOM_COLLECTION_ERROR",
+        "error": "KeyError: 'Xx'"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C024",
+      "case_id": "E3-B3-E3C024-N01",
+      "case_kind": "normal",
+      "input": {
+        "formula": "Fe2O3"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": [
+            {
+              "element": "Fe",
+              "count": 2.0,
+              "mass_contribution": 111.69,
+              "mass_fraction": 0.6994254397545867
+            },
+            {
+              "element": "O",
+              "count": 3.0,
+              "mass_contribution": 47.998215,
+              "mass_fraction": 0.30057456024541324
+            }
+          ],
+          "total_mass": 159.688215
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C024",
+      "case_id": "E3-B3-E3C024-B01",
+      "case_kind": "boundary",
+      "input": {
+        "formula": "H"
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": [
+            {
+              "element": "H",
+              "count": 1.0,
+              "mass_contribution": 1.007941,
+              "mass_fraction": 1.0
+            }
+          ],
+          "total_mass": 1.007941
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C024",
+      "case_id": "E3-B3-E3C024-F01",
+      "case_kind": "failure",
+      "input": {
+        "formula": "("
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "MASS_COMPOSITION_ERROR",
+        "error": "FormulaError: missing closing parenthesis ')]}>'\n(\n^"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C025",
+      "case_id": "E3-B3-E3C025-N01",
+      "case_kind": "normal",
+      "input": {
+        "formula": "Fe2O3",
+        "min_fraction": 0.001
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "peaks": [
+            {
+              "mass_number": 156,
+              "isotopic_mass": 155.86396183871003,
+              "fraction": 0.0033915573972987246,
+              "relative_intensity": 0.4053294336508184
+            },
+            {
+              "mass_number": 158,
+              "isotopic_mass": 157.85929092946984,
+              "fraction": 0.10650130492824636,
+              "relative_intensity": 12.728109406027256
+            },
+            {
+              "mass_number": 159,
+              "isotopic_mass": 158.85974568871,
+              "fraction": 0.002459096706544396,
+              "relative_intensity": 0.2938898442792418
+            },
+            {
+              "mass_number": 160,
+              "isotopic_mass": 159.85462469243822,
+              "fraction": 0.8367409607416938,
+              "relative_intensity": 100.0
+            },
+            {
+              "mass_number": 161,
+              "isotopic_mass": 160.85507477946976,
+              "fraction": 0.03861013945987238,
+              "relative_intensity": 4.6143479608848175
+            },
+            {
+              "mass_number": 162,
+              "isotopic_mass": 161.85589707384867,
+              "fraction": 0.010736478977917952,
+              "relative_intensity": 1.2831305603111687
+            },
+            {
+              "mass_number": 163,
+              "isotopic_mass": 162.8563689196803,
+              "fraction": 0.0002376344963452185,
+              "relative_intensity": 0.028400007588319495
+            },
+            {
+              "mass_number": 164,
+              "isotopic_mass": 163.85523450730003,
+              "fraction": 2.3730221272703724e-05,
+              "relative_intensity": 0.0028360295941134597
+            }
+          ],
+          "peak_count": 8
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C025",
+      "case_id": "E3-B3-E3C025-B01",
+      "case_kind": "boundary",
+      "input": {
+        "formula": "H",
+        "min_fraction": 0.5
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "peaks": [
+            {
+              "mass_number": 1,
+              "isotopic_mass": 1.00782503223,
+              "fraction": 0.999885,
+              "relative_intensity": 100.0
+            },
+            {
+              "mass_number": 2,
+              "isotopic_mass": 2.01410177812,
+              "fraction": 0.000115,
+              "relative_intensity": 0.011501322652104993
+            }
+          ],
+          "peak_count": 2
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C025",
+      "case_id": "E3-B3-E3C025-F01",
+      "case_kind": "failure",
+      "input": {
+        "formula": "Fe2O3",
+        "min_fraction": 0
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "INVALID_THRESHOLD",
+        "error": "min_fraction must be finite and in (0, 1]"
+      },
+      "contract_outcome_pass": true
+    }
+  ]
+}

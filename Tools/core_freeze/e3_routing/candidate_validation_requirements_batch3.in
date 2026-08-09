@@ -1,0 +1,10 @@
+# Top-level dependencies for the isolated E3 batch-3 candidate environment.
+# Batch 1/2 keep using candidate_validation_requirements.in and its original lock.
+pint
+rdkit
+pymatgen
+pycalphad
+periodictable
+molmass
+chempy
+ase

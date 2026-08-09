@@ -1,0 +1,399 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH3-V1-20260803",
+  "candidate_count": 8,
+  "candidates": [
+    {
+      "candidate_tool_id": "E3C018",
+      "provisional_candidate_id": "SRC-PTABLE-001",
+      "target_tool_id": "A003",
+      "semantic_alias": "periodictable_isotope_molar_mass",
+      "callable_identity": "periodictable.formula -> Formula.mass with explicit-isotope guard",
+      "source_reference": "https://periodictable.readthedocs.io/en/latest/guide/formula_grammar.html",
+      "tool_id": "E3C018",
+      "tool_name": "PeriodicTable同位素摩尔质量计算",
+      "scenario": "通用数据与校验",
+      "core_method": "PeriodicTable同位素摩尔质量计算专用算法",
+      "main_input": "同位素标记化学式",
+      "main_output": "同位素组成的摩尔质量",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "periodictable_isotope_labelled_formula_grammar"
+      ],
+      "data_or_model_version": "periodictable-2.1.0-AME2020-isotope-masses",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "periodictable",
+      "package_version": "2.1.0",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C018",
+          "description": "PeriodicTable同位素摩尔质量计算；方法：PeriodicTable同位素摩尔质量计算专用算法；输入：同位素标记化学式；输出：同位素组成的摩尔质量；边界：molar-mass wording closely overlaps A003, but the callable requires explicit isotope labels and uses isotope masses instead of A003 frozen abridged standard atomic weights",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "formula": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "formula"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch3",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C019",
+      "provisional_candidate_id": "SRC-ASE-001",
+      "target_tool_id": "A003",
+      "semantic_alias": "ase_molecular_center_of_mass",
+      "callable_identity": "ase.Atoms.get_center_of_mass",
+      "source_reference": "https://wiki.fysik.dtu.dk/ase/ase/atoms.html",
+      "tool_id": "E3C019",
+      "tool_name": "分子质量中心计算",
+      "scenario": "通用数据与校验",
+      "core_method": "分子质量中心计算专用算法",
+      "main_input": "分子原子符号与三维坐标",
+      "main_output": "分子质量中心坐标",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "ase_atoms_with_cartesian_positions"
+      ],
+      "data_or_model_version": "ase-3.29.0-center-of-mass",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "ase",
+      "package_version": "3.29.0",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C019",
+          "description": "分子质量中心计算；方法：分子质量中心计算专用算法；输入：分子原子符号与三维坐标；输出：分子质量中心坐标；边界：the Chinese name and output contain molecular-mass wording similar to A003, but the tool returns a mass-weighted spatial center and requires atomic coordinates",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "symbols": {
+                "type": "string"
+              },
+              "positions": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                }
+              }
+            },
+            "required": [
+              "symbols",
+              "positions"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch3",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C020",
+      "provisional_candidate_id": "SRC-PTABLE-002",
+      "target_tool_id": "A003",
+      "semantic_alias": "periodictable_single_entity_mass",
+      "callable_identity": "periodictable.formula -> Formula.molecular_mass",
+      "source_reference": "https://periodictable.readthedocs.io/en/latest/guide/formula_grammar.html",
+      "tool_id": "E3C020",
+      "tool_name": "PeriodicTable单分子实体质量计算",
+      "scenario": "通用数据与校验",
+      "core_method": "元素原子量加权求和",
+      "main_input": "化学式",
+      "main_output": "单个分子实体质量（克）",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "periodictable_neutral_formula_single_entity_mass"
+      ],
+      "data_or_model_version": "periodictable-2.1.0-single-entity-mass",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "periodictable",
+      "package_version": "2.1.0",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C020",
+          "description": "PeriodicTable单分子实体质量计算；方法：元素原子量加权求和；输入：化学式；输出：单个分子实体质量（克）；边界：uses the same formula atomic-mass sum as molar mass but returns the mass of one formula entity in grams rather than g/mol",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "formula": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "formula"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch3",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C021",
+      "provisional_candidate_id": "SRC-MOLMASS-001",
+      "target_tool_id": "A003",
+      "semantic_alias": "molmass_nominal_mass",
+      "callable_identity": "molmass.Formula.nominal_mass",
+      "source_reference": "https://github.com/cgohlke/molmass",
+      "tool_id": "E3C021",
+      "tool_name": "Molmass名义分子质量计算",
+      "scenario": "通用数据与校验",
+      "core_method": "元素原子量加权求和",
+      "main_input": "化学式",
+      "main_output": "整数名义分子质量",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "molmass_formula_nominal_mass"
+      ],
+      "data_or_model_version": "molmass-2026.1.8-nominal-mass",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "molmass",
+      "package_version": "2026.1.8",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C021",
+          "description": "Molmass名义分子质量计算；方法：元素原子量加权求和；输入：化学式；输出：整数名义分子质量；边界：returns the integer nominal mass number rather than A003 average standard-atomic-weight molar mass",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "formula": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "formula"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch3",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C022",
+      "provisional_candidate_id": "SRC-CHEMPY-001",
+      "target_tool_id": "A003",
+      "semantic_alias": "chempy_ionic_molar_mass",
+      "callable_identity": "chempy.Substance.from_formula -> Substance.mass with nonzero-charge guard",
+      "source_reference": "https://bjodah.github.io/chempy/latest/_modules/chempy/chemistry.html",
+      "tool_id": "E3C022",
+      "tool_name": "ChemPy离子摩尔质量计算",
+      "scenario": "通用数据与校验",
+      "core_method": "元素原子量加权求和",
+      "main_input": "带电化学式",
+      "main_output": "含净电荷修正的离子摩尔质量",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "chempy_charged_formula_grammar"
+      ],
+      "data_or_model_version": "chempy-0.10.1-periodic-mass-table",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "chempy",
+      "package_version": "0.10.1",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C022",
+          "description": "ChemPy离子摩尔质量计算；方法：元素原子量加权求和；输入：带电化学式；输出：含净电荷修正的离子摩尔质量；边界：requires a charged formula and applies ChemPy charge/electron conventions outside A003 neutral frozen grammar",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "ionic_formula": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "ionic_formula"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch3",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C023",
+      "provisional_candidate_id": "SRC-ASE-002",
+      "target_tool_id": "A003",
+      "semantic_alias": "ase_atom_collection_mass",
+      "callable_identity": "ase.Atoms.get_masses -> sum",
+      "source_reference": "https://ase.gitlab.io/ase/ase/data.html",
+      "tool_id": "E3C023",
+      "tool_name": "ASE原子集合总质量计算",
+      "scenario": "通用数据与校验",
+      "core_method": "元素原子量加权求和",
+      "main_input": "原子符号序列或Atoms结构",
+      "main_output": "原子集合总原子质量",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "ase_atom_collections"
+      ],
+      "data_or_model_version": "ase-3.29.0-default-atomic-masses",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "ase",
+      "package_version": "3.29.0",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C023",
+          "description": "ASE原子集合总质量计算；方法：元素原子量加权求和；输入：原子符号序列或Atoms结构；输出：原子集合总原子质量；边界：sums ASE per-atom masses for an atom collection and reports unified atomic mass units, not A003 formula molar mass in g/mol",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "symbols": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "symbols"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch3",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C024",
+      "provisional_candidate_id": "SRC-MOLMASS-002",
+      "target_tool_id": "A003",
+      "semantic_alias": "molmass_element_mass_composition",
+      "callable_identity": "molmass.Formula.composition",
+      "source_reference": "https://github.com/cgohlke/molmass",
+      "tool_id": "E3C024",
+      "tool_name": "Molmass元素质量组成计算",
+      "scenario": "通用数据与校验",
+      "core_method": "元素原子量加权求和",
+      "main_input": "化学式",
+      "main_output": "各元素质量分数和质量贡献",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "molmass_formula_element_mass_composition"
+      ],
+      "data_or_model_version": "molmass-2026.1.8-composition",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "molmass",
+      "package_version": "2026.1.8",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C024",
+          "description": "Molmass元素质量组成计算；方法：元素原子量加权求和；输入：化学式；输出：各元素质量分数和质量贡献；边界：uses element mass contributions and their total but returns an element-wise mass-composition table instead of only A003 molar mass",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "formula": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "formula"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch3",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C025",
+      "provisional_candidate_id": "SRC-MOLMASS-003",
+      "target_tool_id": "A003",
+      "semantic_alias": "molmass_isotope_mass_spectrum",
+      "callable_identity": "molmass.Formula.spectrum",
+      "source_reference": "https://github.com/cgohlke/molmass",
+      "tool_id": "E3C025",
+      "tool_name": "Molmass同位素质量谱计算",
+      "scenario": "通用数据与校验",
+      "core_method": "元素原子量加权求和",
+      "main_input": "化学式和丰度截断阈值",
+      "main_output": "同位素质量峰、质量数和相对丰度",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "molmass_formula_isotope_spectrum"
+      ],
+      "data_or_model_version": "molmass-2026.1.8-isotope-spectrum",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "molmass",
+      "package_version": "2026.1.8",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C025",
+          "description": "Molmass同位素质量谱计算；方法：元素原子量加权求和；输入：化学式和丰度截断阈值；输出：同位素质量峰、质量数和相对丰度；边界：computes an isotope mass distribution with abundance peaks, not the single average standard-atomic-weight result required by A003",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "formula": {
+                "type": "string"
+              },
+              "min_fraction": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 1
+              }
+            },
+            "required": [
+              "formula"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch3",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    }
+  ]
+}

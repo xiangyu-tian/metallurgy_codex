@@ -1,0 +1,572 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH3-V1-20260803",
+  "scope": "third_nonformal_a003_candidate_runtime_and_relation_validation",
+  "bindings": [
+    {
+      "path": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803/e3_schema_catalog_v1_candidate.json",
+      "sha256": "78de613f974d1ee48d5e2afa8a379b534a1e28a5b6749d9fc75f015aff6dd4f6"
+    },
+    {
+      "path": "Tools/core_freeze/verified_core/contracts_v1.json",
+      "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"
+    },
+    {
+      "path": "Tools/core_freeze/e3_routing/neighbor_audit_config_v1_1.json",
+      "sha256": "9ba29726f3e38b2701133e19445f58b9797e6de92e20d1dfeb203c986242bfa3"
+    },
+    {
+      "path": "Tools/core_freeze/e3_routing/candidate_validation_requirements_batch3_lock.txt",
+      "sha256": "8ea7861f64cb31ca247732d7658d79ad089b9f49cd94f158ed160308d86118e0"
+    },
+    {
+      "path": "outputs/v11_cf05_e3_candidate_admission_batch2_v1_20260803/artifact_manifest.json",
+      "sha256": "95dd858ded897ede49eccb354538d924e08e361151aad73bee6360c733ab13b5"
+    }
+  ],
+  "expected_python_version": "3.11.15",
+  "expected_top_level_versions": {
+    "periodictable": "2.1.0",
+    "molmass": "2026.1.8",
+    "chempy": "0.10.1",
+    "ase": "3.29.0"
+  },
+  "starting_gap_state": {
+    "lexical_gap": 24,
+    "contract_mismatch_gap": 33
+  },
+  "starting_target_state": {
+    "target_tool_id": "A003",
+    "lexical_count": 6,
+    "contract_mismatch_count": 2
+  },
+  "implemented_candidates": [
+    {
+      "candidate_tool_id": "E3C018",
+      "provisional_candidate_id": "SRC-PTABLE-001",
+      "target_tool_id": "A003",
+      "semantic_alias": "periodictable_isotope_molar_mass",
+      "package": "periodictable",
+      "package_version": "2.1.0",
+      "source_reference": "https://periodictable.readthedocs.io/en/latest/guide/formula_grammar.html",
+      "callable_identity": "periodictable.formula -> Formula.mass with explicit-isotope guard",
+      "relation_policy": "lexical",
+      "relation_mechanism": "molar-mass wording closely overlaps A003, but the callable requires explicit isotope labels and uses isotope masses instead of A003 frozen abridged standard atomic weights",
+      "tool_name": "PeriodicTable同位素摩尔质量计算",
+      "core_method_mode": "distinct",
+      "main_input": "同位素标记化学式",
+      "main_output": "同位素组成的摩尔质量",
+      "supported_systems": [
+        "periodictable_isotope_labelled_formula_grammar"
+      ],
+      "data_or_model_version": "periodictable-2.1.0-AME2020-isotope-masses",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "formula"
+        ],
+        "additionalProperties": false
+      },
+      "smoke_cases": [
+        {
+          "case_id": "E3-B3-E3C018-N01",
+          "case_kind": "normal",
+          "input": {
+            "formula": "Fe[56]2O[18]3"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C018-B01",
+          "case_kind": "boundary",
+          "input": {
+            "formula": "D2O"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C018-F01",
+          "case_kind": "failure",
+          "input": {
+            "formula": "Fe2O3"
+          },
+          "expected_success": false
+        }
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C019",
+      "provisional_candidate_id": "SRC-ASE-001",
+      "target_tool_id": "A003",
+      "semantic_alias": "ase_molecular_center_of_mass",
+      "package": "ase",
+      "package_version": "3.29.0",
+      "source_reference": "https://wiki.fysik.dtu.dk/ase/ase/atoms.html",
+      "callable_identity": "ase.Atoms.get_center_of_mass",
+      "relation_policy": "lexical",
+      "relation_mechanism": "the Chinese name and output contain molecular-mass wording similar to A003, but the tool returns a mass-weighted spatial center and requires atomic coordinates",
+      "tool_name": "分子质量中心计算",
+      "core_method_mode": "distinct",
+      "main_input": "分子原子符号与三维坐标",
+      "main_output": "分子质量中心坐标",
+      "supported_systems": [
+        "ase_atoms_with_cartesian_positions"
+      ],
+      "data_or_model_version": "ase-3.29.0-center-of-mass",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "symbols": {
+            "type": "string"
+          },
+          "positions": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            }
+          }
+        },
+        "required": [
+          "symbols",
+          "positions"
+        ],
+        "additionalProperties": false
+      },
+      "smoke_cases": [
+        {
+          "case_id": "E3-B3-E3C019-N01",
+          "case_kind": "normal",
+          "input": {
+            "symbols": "H2O",
+            "positions": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ]
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C019-B01",
+          "case_kind": "boundary",
+          "input": {
+            "symbols": "Fe",
+            "positions": [
+              [
+                0,
+                0,
+                0
+              ]
+            ]
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C019-F01",
+          "case_kind": "failure",
+          "input": {
+            "symbols": "H2O",
+            "positions": [
+              [
+                0,
+                0,
+                0
+              ]
+            ]
+          },
+          "expected_success": false
+        }
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C020",
+      "provisional_candidate_id": "SRC-PTABLE-002",
+      "target_tool_id": "A003",
+      "semantic_alias": "periodictable_single_entity_mass",
+      "package": "periodictable",
+      "package_version": "2.1.0",
+      "source_reference": "https://periodictable.readthedocs.io/en/latest/guide/formula_grammar.html",
+      "callable_identity": "periodictable.formula -> Formula.molecular_mass",
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "uses the same formula atomic-mass sum as molar mass but returns the mass of one formula entity in grams rather than g/mol",
+      "tool_name": "PeriodicTable单分子实体质量计算",
+      "core_method_mode": "target_overlap",
+      "main_input": "化学式",
+      "main_output": "单个分子实体质量（克）",
+      "supported_systems": [
+        "periodictable_neutral_formula_single_entity_mass"
+      ],
+      "data_or_model_version": "periodictable-2.1.0-single-entity-mass",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "formula"
+        ],
+        "additionalProperties": false
+      },
+      "smoke_cases": [
+        {
+          "case_id": "E3-B3-E3C020-N01",
+          "case_kind": "normal",
+          "input": {
+            "formula": "Fe2O3"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C020-B01",
+          "case_kind": "boundary",
+          "input": {
+            "formula": "H"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C020-F01",
+          "case_kind": "failure",
+          "input": {
+            "formula": "Xx2"
+          },
+          "expected_success": false
+        }
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C021",
+      "provisional_candidate_id": "SRC-MOLMASS-001",
+      "target_tool_id": "A003",
+      "semantic_alias": "molmass_nominal_mass",
+      "package": "molmass",
+      "package_version": "2026.1.8",
+      "source_reference": "https://github.com/cgohlke/molmass",
+      "callable_identity": "molmass.Formula.nominal_mass",
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "returns the integer nominal mass number rather than A003 average standard-atomic-weight molar mass",
+      "tool_name": "Molmass名义分子质量计算",
+      "core_method_mode": "target_overlap",
+      "main_input": "化学式",
+      "main_output": "整数名义分子质量",
+      "supported_systems": [
+        "molmass_formula_nominal_mass"
+      ],
+      "data_or_model_version": "molmass-2026.1.8-nominal-mass",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "formula"
+        ],
+        "additionalProperties": false
+      },
+      "smoke_cases": [
+        {
+          "case_id": "E3-B3-E3C021-N01",
+          "case_kind": "normal",
+          "input": {
+            "formula": "Fe2O3"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C021-B01",
+          "case_kind": "boundary",
+          "input": {
+            "formula": "H"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C021-F01",
+          "case_kind": "failure",
+          "input": {
+            "formula": "("
+          },
+          "expected_success": false
+        }
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C022",
+      "provisional_candidate_id": "SRC-CHEMPY-001",
+      "target_tool_id": "A003",
+      "semantic_alias": "chempy_ionic_molar_mass",
+      "package": "chempy",
+      "package_version": "0.10.1",
+      "source_reference": "https://bjodah.github.io/chempy/latest/_modules/chempy/chemistry.html",
+      "callable_identity": "chempy.Substance.from_formula -> Substance.mass with nonzero-charge guard",
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "requires a charged formula and applies ChemPy charge/electron conventions outside A003 neutral frozen grammar",
+      "tool_name": "ChemPy离子摩尔质量计算",
+      "core_method_mode": "target_overlap",
+      "main_input": "带电化学式",
+      "main_output": "含净电荷修正的离子摩尔质量",
+      "supported_systems": [
+        "chempy_charged_formula_grammar"
+      ],
+      "data_or_model_version": "chempy-0.10.1-periodic-mass-table",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "ionic_formula": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "ionic_formula"
+        ],
+        "additionalProperties": false
+      },
+      "smoke_cases": [
+        {
+          "case_id": "E3-B3-E3C022-N01",
+          "case_kind": "normal",
+          "input": {
+            "ionic_formula": "Fe(CN)6-4"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C022-B01",
+          "case_kind": "boundary",
+          "input": {
+            "ionic_formula": "H+"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C022-F01",
+          "case_kind": "failure",
+          "input": {
+            "ionic_formula": "Fe2O3"
+          },
+          "expected_success": false
+        }
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C023",
+      "provisional_candidate_id": "SRC-ASE-002",
+      "target_tool_id": "A003",
+      "semantic_alias": "ase_atom_collection_mass",
+      "package": "ase",
+      "package_version": "3.29.0",
+      "source_reference": "https://ase.gitlab.io/ase/ase/data.html",
+      "callable_identity": "ase.Atoms.get_masses -> sum",
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "sums ASE per-atom masses for an atom collection and reports unified atomic mass units, not A003 formula molar mass in g/mol",
+      "tool_name": "ASE原子集合总质量计算",
+      "core_method_mode": "target_overlap",
+      "main_input": "原子符号序列或Atoms结构",
+      "main_output": "原子集合总原子质量",
+      "supported_systems": [
+        "ase_atom_collections"
+      ],
+      "data_or_model_version": "ase-3.29.0-default-atomic-masses",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "symbols": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "symbols"
+        ],
+        "additionalProperties": false
+      },
+      "smoke_cases": [
+        {
+          "case_id": "E3-B3-E3C023-N01",
+          "case_kind": "normal",
+          "input": {
+            "symbols": "Fe2O3"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C023-B01",
+          "case_kind": "boundary",
+          "input": {
+            "symbols": "Fe"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C023-F01",
+          "case_kind": "failure",
+          "input": {
+            "symbols": "Xx"
+          },
+          "expected_success": false
+        }
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C024",
+      "provisional_candidate_id": "SRC-MOLMASS-002",
+      "target_tool_id": "A003",
+      "semantic_alias": "molmass_element_mass_composition",
+      "package": "molmass",
+      "package_version": "2026.1.8",
+      "source_reference": "https://github.com/cgohlke/molmass",
+      "callable_identity": "molmass.Formula.composition",
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "uses element mass contributions and their total but returns an element-wise mass-composition table instead of only A003 molar mass",
+      "tool_name": "Molmass元素质量组成计算",
+      "core_method_mode": "target_overlap",
+      "main_input": "化学式",
+      "main_output": "各元素质量分数和质量贡献",
+      "supported_systems": [
+        "molmass_formula_element_mass_composition"
+      ],
+      "data_or_model_version": "molmass-2026.1.8-composition",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "formula"
+        ],
+        "additionalProperties": false
+      },
+      "smoke_cases": [
+        {
+          "case_id": "E3-B3-E3C024-N01",
+          "case_kind": "normal",
+          "input": {
+            "formula": "Fe2O3"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C024-B01",
+          "case_kind": "boundary",
+          "input": {
+            "formula": "H"
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C024-F01",
+          "case_kind": "failure",
+          "input": {
+            "formula": "("
+          },
+          "expected_success": false
+        }
+      ]
+    },
+    {
+      "candidate_tool_id": "E3C025",
+      "provisional_candidate_id": "SRC-MOLMASS-003",
+      "target_tool_id": "A003",
+      "semantic_alias": "molmass_isotope_mass_spectrum",
+      "package": "molmass",
+      "package_version": "2026.1.8",
+      "source_reference": "https://github.com/cgohlke/molmass",
+      "callable_identity": "molmass.Formula.spectrum",
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "computes an isotope mass distribution with abundance peaks, not the single average standard-atomic-weight result required by A003",
+      "tool_name": "Molmass同位素质量谱计算",
+      "core_method_mode": "target_overlap",
+      "main_input": "化学式和丰度截断阈值",
+      "main_output": "同位素质量峰、质量数和相对丰度",
+      "supported_systems": [
+        "molmass_formula_isotope_spectrum"
+      ],
+      "data_or_model_version": "molmass-2026.1.8-isotope-spectrum",
+      "service_status": "available_in_isolated_candidate_environment",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "type": "string"
+          },
+          "min_fraction": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 1
+          }
+        },
+        "required": [
+          "formula"
+        ],
+        "additionalProperties": false
+      },
+      "smoke_cases": [
+        {
+          "case_id": "E3-B3-E3C025-N01",
+          "case_kind": "normal",
+          "input": {
+            "formula": "Fe2O3",
+            "min_fraction": 0.001
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C025-B01",
+          "case_kind": "boundary",
+          "input": {
+            "formula": "H",
+            "min_fraction": 0.5
+          },
+          "expected_success": true
+        },
+        {
+          "case_id": "E3-B3-E3C025-F01",
+          "case_kind": "failure",
+          "input": {
+            "formula": "Fe2O3",
+            "min_fraction": 0
+          },
+          "expected_success": false
+        }
+      ]
+    }
+  ],
+  "local_execution_authorized": true,
+  "external_api_calls_authorized": false,
+  "formal_catalog_mutation_allowed": false,
+  "formal_pool_generation_allowed": false,
+  "confirmatory_inference_allowed": false
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH3-V1-20260803",
+  "python_version": "3.11.15",
+  "expected_python_version": "3.11.15",
+  "locked_distribution_count": 149,
+  "installed_distribution_count": 149,
+  "missing_distributions": [],
+  "unexpected_distributions": [],
+  "version_mismatches": [],
+  "top_level_versions": {
+    "periodictable": "2.1.0",
+    "molmass": "2026.1.8",
+    "chempy": "0.10.1",
+    "ase": "3.29.0"
+  },
+  "top_level_versions_match": true,
+  "requirements_lock_sha256": "8ea7861f64cb31ca247732d7658d79ad089b9f49cd94f158ed160308d86118e0",
+  "environment_verification_passed": true
+}

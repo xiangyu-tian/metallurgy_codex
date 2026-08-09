@@ -1,0 +1,78 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH3-V1-20260803",
+  "row_count": 8,
+  "rows": [
+    {
+      "candidate_tool_id": "E3C018",
+      "package": "periodictable",
+      "callable_identity": "periodictable.formula -> Formula.mass with explicit-isotope guard",
+      "semantic_alias": "periodictable_isotope_molar_mass",
+      "same_callable_renaming": false,
+      "distinct_input_or_output_contract": true,
+      "source_reference": "https://periodictable.readthedocs.io/en/latest/guide/formula_grammar.html"
+    },
+    {
+      "candidate_tool_id": "E3C019",
+      "package": "ase",
+      "callable_identity": "ase.Atoms.get_center_of_mass",
+      "semantic_alias": "ase_molecular_center_of_mass",
+      "same_callable_renaming": false,
+      "distinct_input_or_output_contract": true,
+      "source_reference": "https://wiki.fysik.dtu.dk/ase/ase/atoms.html"
+    },
+    {
+      "candidate_tool_id": "E3C020",
+      "package": "periodictable",
+      "callable_identity": "periodictable.formula -> Formula.molecular_mass",
+      "semantic_alias": "periodictable_single_entity_mass",
+      "same_callable_renaming": false,
+      "distinct_input_or_output_contract": true,
+      "source_reference": "https://periodictable.readthedocs.io/en/latest/guide/formula_grammar.html"
+    },
+    {
+      "candidate_tool_id": "E3C021",
+      "package": "molmass",
+      "callable_identity": "molmass.Formula.nominal_mass",
+      "semantic_alias": "molmass_nominal_mass",
+      "same_callable_renaming": false,
+      "distinct_input_or_output_contract": true,
+      "source_reference": "https://github.com/cgohlke/molmass"
+    },
+    {
+      "candidate_tool_id": "E3C022",
+      "package": "chempy",
+      "callable_identity": "chempy.Substance.from_formula -> Substance.mass with nonzero-charge guard",
+      "semantic_alias": "chempy_ionic_molar_mass",
+      "same_callable_renaming": false,
+      "distinct_input_or_output_contract": true,
+      "source_reference": "https://bjodah.github.io/chempy/latest/_modules/chempy/chemistry.html"
+    },
+    {
+      "candidate_tool_id": "E3C023",
+      "package": "ase",
+      "callable_identity": "ase.Atoms.get_masses -> sum",
+      "semantic_alias": "ase_atom_collection_mass",
+      "same_callable_renaming": false,
+      "distinct_input_or_output_contract": true,
+      "source_reference": "https://ase.gitlab.io/ase/ase/data.html"
+    },
+    {
+      "candidate_tool_id": "E3C024",
+      "package": "molmass",
+      "callable_identity": "molmass.Formula.composition",
+      "semantic_alias": "molmass_element_mass_composition",
+      "same_callable_renaming": false,
+      "distinct_input_or_output_contract": true,
+      "source_reference": "https://github.com/cgohlke/molmass"
+    },
+    {
+      "candidate_tool_id": "E3C025",
+      "package": "molmass",
+      "callable_identity": "molmass.Formula.spectrum",
+      "semantic_alias": "molmass_isotope_mass_spectrum",
+      "same_callable_renaming": false,
+      "distinct_input_or_output_contract": true,
+      "source_reference": "https://github.com/cgohlke/molmass"
+    }
+  ]
+}

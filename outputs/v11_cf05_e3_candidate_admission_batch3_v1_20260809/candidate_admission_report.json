@@ -1,0 +1,26 @@
+{
+  "decision_id": "V11-CF05-E3-CANDIDATE-ADMISSION-BATCH3-V1-20260809",
+  "scope": "admit_third_batch_a003_relations_to_nonformal_evidence_registry",
+  "status": "batch3_evidence_admitted_a003_paired8_ready_formal_pool_pending",
+  "batch3_relation_admission_count": 8,
+  "combined_relation_registry_count": 21,
+  "lexical_relation_admission_count": 2,
+  "contract_mismatch_relation_admission_count": 6,
+  "lexical_gap_before": 24,
+  "lexical_gap_after": 22,
+  "contract_mismatch_gap_before": 33,
+  "contract_mismatch_gap_after": 27,
+  "a003_paired_8_ready": true,
+  "paired_8_ready_target_ids": [
+    "A003"
+  ],
+  "acceptable_tools_registry_unchanged": true,
+  "scientific_function_catalog_increment_count": 0,
+  "formal_catalog_size": 120,
+  "formal_pool_inclusion_count": 0,
+  "external_api_calls": 0,
+  "formal_pool_generation_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false
+}

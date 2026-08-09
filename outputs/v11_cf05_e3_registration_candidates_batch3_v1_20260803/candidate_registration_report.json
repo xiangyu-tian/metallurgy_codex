@@ -1,0 +1,29 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH3-V1-20260803",
+  "scope": "third_nonformal_a003_candidate_runtime_and_relation_validation",
+  "status": "batch3_registration_complete_a003_candidate_ready",
+  "environment_verification_passed": true,
+  "implemented_candidate_count": 8,
+  "independent_callable_count": 8,
+  "runtime_case_count": 24,
+  "runtime_pass_count": 24,
+  "all_runtime_contracts_passed": true,
+  "relation_candidate_counts": {
+    "contract_mismatch": 6,
+    "lexical": 2
+  },
+  "lexical_gap_before": 24,
+  "lexical_gap_if_admitted": 22,
+  "contract_mismatch_gap_before": 33,
+  "contract_mismatch_gap_if_admitted": 27,
+  "a003_lexical_count_if_admitted": 8,
+  "a003_contract_mismatch_count_if_admitted": 8,
+  "a003_paired_8_ready_if_admitted": true,
+  "formal_catalog_size": 120,
+  "formal_catalog_increment_count": 0,
+  "formal_relation_admission_count": 0,
+  "external_api_calls": 0,
+  "formal_pool_generation_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

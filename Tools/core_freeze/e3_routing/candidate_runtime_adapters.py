@@ -353,6 +353,226 @@ def invoke_pymatgen_weight_to_molar(params: dict[str, Any]) -> dict[str, Any]:
         return _failure("CONVERSION_ERROR", f"{type(exc).__name__}: {str(exc)[:240]}")
 
 
+def _require_string_field(params: Any, field: str) -> str | None:
+    validated = _require_exact_object(params, {field})
+    if validated is None:
+        return None
+    value = validated[field]
+    return value if isinstance(value, str) and value else None
+
+
+def invoke_periodictable_isotope_molar_mass(params: dict[str, Any]) -> dict[str, Any]:
+    formula_text = _require_string_field(params, "formula")
+    if formula_text is None:
+        return _failure("INVALID_INPUT", "formula must be a non-empty isotope-labelled string")
+    try:
+        from periodictable import formula
+
+        composition = formula(formula_text)
+        isotopes = [
+            {"symbol": str(atom), "mass_number": int(atom.isotope), "count": float(count)}
+            for atom, count in composition.atoms.items()
+            if getattr(atom, "isotope", None) is not None
+        ]
+        if not isotopes:
+            return _failure("ISOTOPE_REQUIRED", "at least one isotope label is required")
+        return {
+            "success": True,
+            "result": {
+                "isotope_molar_mass": float(composition.mass),
+                "unit": "g/mol",
+                "isotopes": isotopes,
+            },
+            "error_code": None,
+            "error": None,
+        }
+    except Exception as exc:
+        return _failure("ISOTOPE_FORMULA_ERROR", f"{type(exc).__name__}: {str(exc)[:240]}")
+
+
+def invoke_ase_center_of_mass(params: dict[str, Any]) -> dict[str, Any]:
+    validated = _require_exact_object(params, {"symbols", "positions"})
+    if (
+        validated is None
+        or not isinstance(validated["symbols"], str)
+        or not validated["symbols"]
+        or not isinstance(validated["positions"], list)
+    ):
+        return _failure("INVALID_INPUT", "symbols and a positions array are required")
+    try:
+        from ase import Atoms
+
+        atoms = Atoms(symbols=validated["symbols"], positions=validated["positions"])
+        if len(atoms) == 0:
+            return _failure("EMPTY_STRUCTURE", "at least one atom is required")
+        return {
+            "success": True,
+            "result": {
+                "center_of_mass": [float(value) for value in atoms.get_center_of_mass()],
+                "coordinate_unit": "angstrom",
+                "atom_count": len(atoms),
+            },
+            "error_code": None,
+            "error": None,
+        }
+    except Exception as exc:
+        return _failure("STRUCTURE_ERROR", f"{type(exc).__name__}: {str(exc)[:240]}")
+
+
+def invoke_periodictable_single_entity_mass(params: dict[str, Any]) -> dict[str, Any]:
+    formula_text = _require_string_field(params, "formula")
+    if formula_text is None:
+        return _failure("INVALID_INPUT", "formula must be a non-empty string")
+    try:
+        from periodictable import formula
+
+        composition = formula(formula_text)
+        if composition.charge != 0:
+            return _failure("NEUTRAL_FORMULA_REQUIRED", "charged formulas are outside this contract")
+        return {
+            "success": True,
+            "result": {
+                "single_entity_mass": float(composition.molecular_mass),
+                "unit": "g/entity",
+            },
+            "error_code": None,
+            "error": None,
+        }
+    except Exception as exc:
+        return _failure("FORMULA_MASS_ERROR", f"{type(exc).__name__}: {str(exc)[:240]}")
+
+
+def invoke_molmass_nominal_mass(params: dict[str, Any]) -> dict[str, Any]:
+    formula_text = _require_string_field(params, "formula")
+    if formula_text is None:
+        return _failure("INVALID_INPUT", "formula must be a non-empty string")
+    try:
+        from molmass import Formula
+
+        value = Formula(formula_text).nominal_mass
+        return {
+            "success": True,
+            "result": {"nominal_mass": int(value), "mass_convention": "integer_mass_number"},
+            "error_code": None,
+            "error": None,
+        }
+    except Exception as exc:
+        return _failure("NOMINAL_MASS_ERROR", f"{type(exc).__name__}: {str(exc)[:240]}")
+
+
+def invoke_chempy_ionic_molar_mass(params: dict[str, Any]) -> dict[str, Any]:
+    formula_text = _require_string_field(params, "ionic_formula")
+    if formula_text is None:
+        return _failure("INVALID_INPUT", "ionic_formula must be a non-empty string")
+    try:
+        from chempy import Substance
+
+        substance = Substance.from_formula(formula_text)
+        if substance.charge == 0:
+            return _failure("ION_REQUIRED", "a nonzero net charge is required")
+        return {
+            "success": True,
+            "result": {
+                "ionic_molar_mass": float(substance.mass),
+                "unit": "g/mol",
+                "net_charge": int(substance.charge),
+            },
+            "error_code": None,
+            "error": None,
+        }
+    except Exception as exc:
+        return _failure("ION_FORMULA_ERROR", f"{type(exc).__name__}: {str(exc)[:240]}")
+
+
+def invoke_ase_atom_collection_mass(params: dict[str, Any]) -> dict[str, Any]:
+    symbols = _require_string_field(params, "symbols")
+    if symbols is None:
+        return _failure("INVALID_INPUT", "symbols must be a non-empty ASE formula string")
+    try:
+        from ase import Atoms
+
+        atoms = Atoms(symbols=symbols)
+        if len(atoms) == 0:
+            return _failure("EMPTY_STRUCTURE", "at least one atom is required")
+        masses = atoms.get_masses()
+        return {
+            "success": True,
+            "result": {
+                "atom_collection_mass": float(masses.sum()),
+                "unit": "u",
+                "atom_count": len(atoms),
+            },
+            "error_code": None,
+            "error": None,
+        }
+    except Exception as exc:
+        return _failure("ATOM_COLLECTION_ERROR", f"{type(exc).__name__}: {str(exc)[:240]}")
+
+
+def invoke_molmass_element_mass_composition(params: dict[str, Any]) -> dict[str, Any]:
+    formula_text = _require_string_field(params, "formula")
+    if formula_text is None:
+        return _failure("INVALID_INPUT", "formula must be a non-empty string")
+    try:
+        from molmass import Formula
+
+        composition = Formula(formula_text).composition()
+        rows = [
+            {
+                "element": symbol,
+                "count": float(item.count),
+                "mass_contribution": float(item.mass),
+                "mass_fraction": float(item.fraction),
+            }
+            for symbol, item in composition.items()
+        ]
+        return {
+            "success": True,
+            "result": {"elements": rows, "total_mass": float(composition.total.mass)},
+            "error_code": None,
+            "error": None,
+        }
+    except Exception as exc:
+        return _failure("MASS_COMPOSITION_ERROR", f"{type(exc).__name__}: {str(exc)[:240]}")
+
+
+def invoke_molmass_isotope_spectrum(params: dict[str, Any]) -> dict[str, Any]:
+    validated = _require_object_with_optional(params, {"formula"}, {"min_fraction"})
+    if validated is None or not isinstance(validated["formula"], str) or not validated["formula"]:
+        return _failure("INVALID_INPUT", "formula must be a non-empty string")
+    min_fraction = validated.get("min_fraction", 1e-6)
+    if (
+        not isinstance(min_fraction, (int, float))
+        or isinstance(min_fraction, bool)
+        or not math.isfinite(float(min_fraction))
+        or not 0 < float(min_fraction) <= 1
+    ):
+        return _failure("INVALID_THRESHOLD", "min_fraction must be finite and in (0, 1]")
+    try:
+        from molmass import Formula
+
+        spectrum = Formula(validated["formula"]).spectrum(min_fraction=float(min_fraction))
+        peaks = [
+            {
+                "mass_number": int(entry.massnumber),
+                "isotopic_mass": float(entry.mass),
+                "fraction": float(entry.fraction),
+                "relative_intensity": float(entry.intensity),
+            }
+            for entry in spectrum.values()
+        ]
+        if not peaks:
+            return _failure("EMPTY_SPECTRUM", "no isotope peak passed the threshold")
+        return {
+            "success": True,
+            "result": {"peaks": peaks, "peak_count": len(peaks)},
+            "error_code": None,
+            "error": None,
+        }
+    except Exception as exc:
+        return _failure("ISOTOPE_SPECTRUM_ERROR", f"{type(exc).__name__}: {str(exc)[:240]}")
+
+
 ADAPTERS: dict[str, Callable[[dict[str, Any]], dict[str, Any]]] = {
     "E3C001": invoke_pint_unit_conversion,
     "E3C002": invoke_pymatgen_formula_parser,
@@ -376,6 +596,18 @@ BATCH2_ADAPTERS: dict[str, Callable[[dict[str, Any]], dict[str, Any]]] = {
 }
 
 
+BATCH3_ADAPTERS: dict[str, Callable[[dict[str, Any]], dict[str, Any]]] = {
+    "E3C018": invoke_periodictable_isotope_molar_mass,
+    "E3C019": invoke_ase_center_of_mass,
+    "E3C020": invoke_periodictable_single_entity_mass,
+    "E3C021": invoke_molmass_nominal_mass,
+    "E3C022": invoke_chempy_ionic_molar_mass,
+    "E3C023": invoke_ase_atom_collection_mass,
+    "E3C024": invoke_molmass_element_mass_composition,
+    "E3C025": invoke_molmass_isotope_spectrum,
+}
+
+
 def invoke(candidate_tool_id: str, params: dict[str, Any]) -> dict[str, Any]:
     adapter = ADAPTERS.get(candidate_tool_id)
     if adapter is None:
@@ -387,4 +619,11 @@ def invoke_batch2(candidate_tool_id: str, params: dict[str, Any]) -> dict[str, A
     adapter = BATCH2_ADAPTERS.get(candidate_tool_id)
     if adapter is None:
         return _failure("UNKNOWN_OR_BLOCKED_CANDIDATE_TOOL", f"candidate is unknown or blocked: {candidate_tool_id}")
+    return adapter(params)
+
+
+def invoke_batch3(candidate_tool_id: str, params: dict[str, Any]) -> dict[str, Any]:
+    adapter = BATCH3_ADAPTERS.get(candidate_tool_id)
+    if adapter is None:
+        return _failure("UNKNOWN_CANDIDATE_TOOL", f"unknown batch-3 candidate: {candidate_tool_id}")
     return adapter(params)

@@ -1,0 +1,36 @@
+{
+  "decision_id": "V11-CF05-E3-CANDIDATE-ADMISSION-BATCH3-V1-20260809",
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "filename": "acceptable_tools_registry_carried_forward.json",
+      "sha256": "41774d21efc18b77d7070f6abc53164192a80cf1a25251fef54ccefaa09471f0",
+      "bytes": 437
+    },
+    {
+      "filename": "candidate_admission_config_snapshot.json",
+      "sha256": "11d3d5b0b99968c218341801bea790b473064c0b2c7d5bec06bd1c0e30d0a03c",
+      "bytes": 1266
+    },
+    {
+      "filename": "candidate_admission_decisions.json",
+      "sha256": "4f2f422257302cd09c8a087ca106e6f24f801d272b4a9b03d09e084a392b9ab9",
+      "bytes": 8406
+    },
+    {
+      "filename": "candidate_admission_report.json",
+      "sha256": "d97cebce50535b47968f29c31deaefb78a2aa60291192f3c050bab2759ebb1b7",
+      "bytes": 975
+    },
+    {
+      "filename": "combined_relation_evidence_registry.json",
+      "sha256": "feacc1e8db0b93d2f0e6a2ae406dc66d41f88a0f153d049c7e192c7d728c469b",
+      "bytes": 18605
+    },
+    {
+      "filename": "recalculated_gap_matrix.json",
+      "sha256": "4f2d886a229a6e843fbfa6dc9cd73591888686c0efe2010a5537af78249ed165",
+      "bytes": 2530
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH3-V1-20260803",
+  "row_count": 8,
+  "rows": [
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C018",
+      "candidate_tool_name": "PeriodicTable同位素摩尔质量计算",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": false,
+      "name_bigram_dice": 0.272727,
+      "contract_text_bigram_dice": 0.259259,
+      "input_bigram_dice": 0.307692,
+      "output_bigram_dice": 0.5,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": true,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "lexical",
+      "relation_mechanism": "molar-mass wording closely overlaps A003, but the callable requires explicit isotope labels and uses isotope masses instead of A003 frozen abridged standard atomic weights",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C018-N01",
+        "E3-B3-E3C018-B01",
+        "E3-B3-E3C018-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C019",
+      "candidate_tool_name": "分子质量中心计算",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": false,
+      "name_bigram_dice": 0.25,
+      "contract_text_bigram_dice": 0.097561,
+      "input_bigram_dice": 0.0,
+      "output_bigram_dice": 0.2,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": true,
+      "provable_contract_mismatch_neighbor": false,
+      "relation_policy": "lexical",
+      "relation_mechanism": "the Chinese name and output contain molecular-mass wording similar to A003, but the tool returns a mass-weighted spatial center and requires atomic coordinates",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C019-N01",
+        "E3-B3-E3C019-B01",
+        "E3-B3-E3C019-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C020",
+      "candidate_tool_name": "PeriodicTable单分子实体质量计算",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": true,
+      "name_bigram_dice": 0.090909,
+      "contract_text_bigram_dice": 0.481481,
+      "input_bigram_dice": 0.5,
+      "output_bigram_dice": 0.181818,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "uses the same formula atomic-mass sum as molar mass but returns the mass of one formula entity in grams rather than g/mol",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C020-N01",
+        "E3-B3-E3C020-B01",
+        "E3-B3-E3C020-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C021",
+      "candidate_tool_name": "Molmass名义分子质量计算",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": true,
+      "name_bigram_dice": 0.133333,
+      "contract_text_bigram_dice": 0.565217,
+      "input_bigram_dice": 0.5,
+      "output_bigram_dice": 0.2,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "returns the integer nominal mass number rather than A003 average standard-atomic-weight molar mass",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C021-N01",
+        "E3-B3-E3C021-B01",
+        "E3-B3-E3C021-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C022",
+      "candidate_tool_name": "ChemPy离子摩尔质量计算",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": true,
+      "name_bigram_dice": 0.428571,
+      "contract_text_bigram_dice": 0.538462,
+      "input_bigram_dice": 0.4,
+      "output_bigram_dice": 0.4,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "requires a charged formula and applies ChemPy charge/electron conventions outside A003 neutral frozen grammar",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C022-N01",
+        "E3-B3-E3C022-B01",
+        "E3-B3-E3C022-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C023",
+      "candidate_tool_name": "ASE原子集合总质量计算",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": true,
+      "name_bigram_dice": 0.166667,
+      "contract_text_bigram_dice": 0.384615,
+      "input_bigram_dice": 0.0,
+      "output_bigram_dice": 0.2,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "sums ASE per-atom masses for an atom collection and reports unified atomic mass units, not A003 formula molar mass in g/mol",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C023-N01",
+        "E3-B3-E3C023-B01",
+        "E3-B3-E3C023-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C024",
+      "candidate_tool_name": "Molmass元素质量组成计算",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": true,
+      "name_bigram_dice": 0.133333,
+      "contract_text_bigram_dice": 0.52,
+      "input_bigram_dice": 0.5,
+      "output_bigram_dice": 0.153846,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "uses element mass contributions and their total but returns an element-wise mass-composition table instead of only A003 molar mass",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C024-N01",
+        "E3-B3-E3C024-B01",
+        "E3-B3-E3C024-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C025",
+      "candidate_tool_name": "Molmass同位素质量谱计算",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": true,
+      "name_bigram_dice": 0.133333,
+      "contract_text_bigram_dice": 0.413793,
+      "input_bigram_dice": 0.266667,
+      "output_bigram_dice": 0.133333,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "data_or_model_version",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "computes an isotope mass distribution with abundance peaks, not the single average standard-atomic-weight result required by A003",
+      "runtime_evidence_case_ids": [
+        "E3-B3-E3C025-N01",
+        "E3-B3-E3C025-B01",
+        "E3-B3-E3C025-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_relation_admission": false
+    }
+  ]
+}
