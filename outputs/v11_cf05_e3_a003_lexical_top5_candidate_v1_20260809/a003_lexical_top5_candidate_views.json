@@ -1,0 +1,5852 @@
+{
+  "schema_version": "1.0",
+  "implementation_id": "V11-CF05-E3-A003-LEXICAL-TOP5-CANDIDATE-V1-20260809",
+  "method": "lexical_top5",
+  "router_visible_gold": false,
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "view_count": 24,
+  "views": [
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.2184,
+      "candidate_tool_ids": [
+        "A003",
+        "A006",
+        "E3C005",
+        "C002",
+        "B003"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 70.37136389,
+          "matched_token_count": 13,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.9810025
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "A006",
+          "score": 15.77328073,
+          "matched_token_count": 4,
+          "top_token_contributions": [
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.57329599
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.57329599
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.46984393
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.15684481
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C005",
+          "score": 7.30380391,
+          "matched_token_count": 2,
+          "top_token_contributions": [
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.00900402
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 5,
+              "contribution": 2.29479989
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "C002",
+          "score": 6.85763443,
+          "matched_token_count": 2,
+          "top_token_contributions": [
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.58071895
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.27691548
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "B003",
+          "score": 6.43138694,
+          "matched_token_count": 3,
+          "top_token_contributions": [
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.57131675
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.17644006
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 2,
+              "contribution": 1.68363013
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 44,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.1931,
+      "candidate_tool_ids": [
+        "E3C003",
+        "A003",
+        "E3C018",
+        "E3C010",
+        "A006"
+      ],
+      "candidates": [
+        {
+          "tool_id": "E3C003",
+          "score": 72.09807819,
+          "matched_token_count": 12,
+          "top_token_contributions": [
+            {
+              "token": "zh3:子量计",
+              "weighted_document_tf": 8,
+              "contribution": 9.02477415
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 13,
+              "contribution": 8.70793374
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 8.24544425
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.95424156
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.05910752
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.7930638
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.7930638
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "A003",
+          "score": 70.37136389,
+          "matched_token_count": 13,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.9810025
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 56.63945734,
+          "matched_token_count": 10,
+          "top_token_contributions": [
+            {
+              "token": "zh2:的摩",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh3:的摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 18,
+              "contribution": 5.52642383
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 13,
+              "contribution": 4.84547221
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.84547221
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.73586328
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.531848
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 47.61961852,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.53722668
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.41238817
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 13,
+              "contribution": 4.85731347
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.85731347
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.74743668
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.53641898
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "A006",
+          "score": 15.77328073,
+          "matched_token_count": 4,
+          "top_token_contributions": [
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.57329599
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.57329599
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.46984393
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.15684481
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 44,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.2163,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C011",
+        "E3C022",
+        "E3C004",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 70.37136389,
+          "matched_token_count": 13,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.9810025
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 63.66459082,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 13,
+              "contribution": 8.59146374
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 10,
+              "contribution": 8.41029586
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.98825325
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 8,
+              "contribution": 5.22970169
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69336264
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69336264
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.58719457
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 62.9985777,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.95452864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.67360016
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.67360016
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.45448148
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.68013033
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.68013033
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.57426158
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 62.8450236,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 8.32087242
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 8.02700585
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 8.02700585
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.10538753
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.8219038
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.8219038
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.71282801
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 40.82164963,
+          "matched_token_count": 7,
+          "top_token_contributions": [
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 28,
+              "contribution": 8.91615962
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.90684163
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.6275973
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.66135594
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.66135594
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.55591189
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.49242731
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 44,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.1443,
+      "candidate_tool_ids": [
+        "A003",
+        "F017",
+        "A001",
+        "B018",
+        "B017"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 70.37136389,
+          "matched_token_count": 13,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.9810025
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "F017",
+          "score": 2.41984733,
+          "matched_token_count": 1,
+          "top_token_contributions": [
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 12,
+              "contribution": 2.41984733
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "A001",
+          "score": 2.268701,
+          "matched_token_count": 1,
+          "top_token_contributions": [
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.268701
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "B018",
+          "score": 2.2434085,
+          "matched_token_count": 1,
+          "top_token_contributions": [
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.2434085
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "B017",
+          "score": 2.19352161,
+          "matched_token_count": 1,
+          "top_token_contributions": [
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.19352161
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 44,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.171,
+      "candidate_tool_ids": [
+        "E3C003",
+        "A003",
+        "E3C018",
+        "E3C010",
+        "E3C019"
+      ],
+      "candidates": [
+        {
+          "tool_id": "E3C003",
+          "score": 72.09807819,
+          "matched_token_count": 12,
+          "top_token_contributions": [
+            {
+              "token": "zh3:子量计",
+              "weighted_document_tf": 8,
+              "contribution": 9.02477415
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 13,
+              "contribution": 8.70793374
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 8.24544425
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.95424156
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.05910752
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.7930638
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.7930638
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "A003",
+          "score": 70.37136389,
+          "matched_token_count": 13,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.9810025
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 56.63945734,
+          "matched_token_count": 10,
+          "top_token_contributions": [
+            {
+              "token": "zh2:的摩",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh3:的摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 18,
+              "contribution": 5.52642383
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 13,
+              "contribution": 4.84547221
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.84547221
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.73586328
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.531848
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 47.61961852,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.53722668
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.41238817
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 13,
+              "contribution": 4.85731347
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.85731347
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.74743668
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.53641898
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C019",
+          "score": 14.83652206,
+          "matched_token_count": 3,
+          "top_token_contributions": [
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.54840572
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.75049172
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.53762461
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 44,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.1775,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C011",
+        "E3C022",
+        "E3C004",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 70.37136389,
+          "matched_token_count": 13,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.9810025
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 63.66459082,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 13,
+              "contribution": 8.59146374
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 10,
+              "contribution": 8.41029586
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.98825325
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 8,
+              "contribution": 5.22970169
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69336264
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69336264
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.58719457
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 62.9985777,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.95452864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.67360016
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.67360016
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.45448148
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.68013033
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.68013033
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.57426158
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 62.8450236,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 8.32087242
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 8.02700585
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 8.02700585
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.10538753
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.8219038
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.8219038
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.71282801
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 40.82164963,
+          "matched_token_count": 7,
+          "top_token_contributions": [
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 28,
+              "contribution": 8.91615962
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.90684163
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.6275973
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.66135594
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.66135594
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.55591189
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.49242731
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 44,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.8128,
+      "candidate_tool_ids": [
+        "A003",
+        "A006",
+        "F008",
+        "B001",
+        "B006"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 70.37136389,
+          "matched_token_count": 13,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.9810025
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "A006",
+          "score": 15.77328073,
+          "matched_token_count": 4,
+          "top_token_contributions": [
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.57329599
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.57329599
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.46984393
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.15684481
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "F008",
+          "score": 14.77207223,
+          "matched_token_count": 4,
+          "top_token_contributions": [
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.56162634
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.56162634
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.45843826
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 1,
+              "contribution": 1.1903813
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "B001",
+          "score": 9.67875828,
+          "matched_token_count": 3,
+          "top_token_contributions": [
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.58349197
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.81525504
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.28001127
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "B006",
+          "score": 9.49046036,
+          "matched_token_count": 3,
+          "top_token_contributions": [
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.54406333
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.70996968
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.23642735
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 44,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.6832,
+      "candidate_tool_ids": [
+        "E3C003",
+        "A003",
+        "E3C018",
+        "E3C010",
+        "A006"
+      ],
+      "candidates": [
+        {
+          "tool_id": "E3C003",
+          "score": 72.09807819,
+          "matched_token_count": 12,
+          "top_token_contributions": [
+            {
+              "token": "zh3:子量计",
+              "weighted_document_tf": 8,
+              "contribution": 9.02477415
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 13,
+              "contribution": 8.70793374
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 8.24544425
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.95424156
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.05910752
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.7930638
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.7930638
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "A003",
+          "score": 70.37136389,
+          "matched_token_count": 13,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.9810025
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 56.63945734,
+          "matched_token_count": 10,
+          "top_token_contributions": [
+            {
+              "token": "zh2:的摩",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh3:的摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 18,
+              "contribution": 5.52642383
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 13,
+              "contribution": 4.84547221
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.84547221
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.73586328
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.531848
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 47.61961852,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.53722668
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.41238817
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 13,
+              "contribution": 4.85731347
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.85731347
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.74743668
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.53641898
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "A006",
+          "score": 15.77328073,
+          "matched_token_count": 4,
+          "top_token_contributions": [
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.57329599
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.57329599
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.46984393
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.15684481
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 44,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.7973,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C011",
+        "E3C022",
+        "E3C004",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 70.37136389,
+          "matched_token_count": 13,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.9810025
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 63.66459082,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 13,
+              "contribution": 8.59146374
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 10,
+              "contribution": 8.41029586
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.98825325
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 8,
+              "contribution": 5.22970169
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69336264
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69336264
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.58719457
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 62.9985777,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.95452864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.67360016
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.67360016
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.45448148
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.68013033
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.68013033
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.57426158
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 62.8450236,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 8.32087242
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 8.02700585
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 8.02700585
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.10538753
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.8219038
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.8219038
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.71282801
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 40.82164963,
+          "matched_token_count": 7,
+          "top_token_contributions": [
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 28,
+              "contribution": 8.91615962
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.90684163
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.6275973
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.66135594
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.66135594
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.55591189
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.49242731
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 44,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.7533,
+      "candidate_tool_ids": [
+        "A003",
+        "A006",
+        "F008",
+        "B001",
+        "B006"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 70.37136389,
+          "matched_token_count": 13,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.9810025
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "A006",
+          "score": 15.77328073,
+          "matched_token_count": 4,
+          "top_token_contributions": [
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.57329599
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.57329599
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.46984393
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.15684481
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "F008",
+          "score": 14.77207223,
+          "matched_token_count": 4,
+          "top_token_contributions": [
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.56162634
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.56162634
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.45843826
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 1,
+              "contribution": 1.1903813
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "B001",
+          "score": 9.67875828,
+          "matched_token_count": 3,
+          "top_token_contributions": [
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.58349197
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.81525504
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.28001127
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "B006",
+          "score": 9.49046036,
+          "matched_token_count": 3,
+          "top_token_contributions": [
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.54406333
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.70996968
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.23642735
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 44,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.6891,
+      "candidate_tool_ids": [
+        "E3C003",
+        "A003",
+        "E3C018",
+        "E3C010",
+        "A006"
+      ],
+      "candidates": [
+        {
+          "tool_id": "E3C003",
+          "score": 72.09807819,
+          "matched_token_count": 12,
+          "top_token_contributions": [
+            {
+              "token": "zh3:子量计",
+              "weighted_document_tf": 8,
+              "contribution": 9.02477415
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 13,
+              "contribution": 8.70793374
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 8.24544425
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.95424156
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.05910752
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.7930638
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.7930638
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "A003",
+          "score": 70.37136389,
+          "matched_token_count": 13,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.9810025
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 56.63945734,
+          "matched_token_count": 10,
+          "top_token_contributions": [
+            {
+              "token": "zh2:的摩",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh3:的摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 18,
+              "contribution": 5.52642383
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 13,
+              "contribution": 4.84547221
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.84547221
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.73586328
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.531848
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 47.61961852,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.53722668
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.41238817
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 13,
+              "contribution": 4.85731347
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.85731347
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 4.74743668
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.53641898
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "A006",
+          "score": 15.77328073,
+          "matched_token_count": 4,
+          "top_token_contributions": [
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.57329599
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.57329599
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.46984393
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.15684481
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 44,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.7295,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C011",
+        "E3C022",
+        "E3C004",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 70.37136389,
+          "matched_token_count": 13,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.9810025
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.69913905
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69052085
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 63.66459082,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 13,
+              "contribution": 8.59146374
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 10,
+              "contribution": 8.41029586
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.98825325
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 8,
+              "contribution": 5.22970169
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.69336264
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.69336264
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.58719457
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 62.9985777,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.95452864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 7.67360016
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.67360016
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.45448148
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.68013033
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.68013033
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.57426158
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 62.8450236,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 8.32087242
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 8.02700585
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 8.02700585
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.10538753
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.8219038
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.8219038
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.71282801
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 40.82164963,
+          "matched_token_count": 7,
+          "top_token_contributions": [
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 28,
+              "contribution": 8.91615962
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.90684163
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 7.6275973
+            },
+            {
+              "token": "zh2:量计",
+              "weighted_document_tf": 8,
+              "contribution": 4.66135594
+            },
+            {
+              "token": "zh3:量计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.66135594
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 4.55591189
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.49242731
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 44,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.1616,
+      "candidate_tool_ids": [
+        "A003",
+        "B003",
+        "B022",
+        "B012",
+        "E3C005"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 49.54243483,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71370864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70763057
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.50245676
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "B003",
+          "score": 12.22252871,
+          "matched_token_count": 5,
+          "top_token_contributions": [
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 8,
+              "contribution": 4.18093071
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.57131675
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.17644006
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 2,
+              "contribution": 1.68363013
+            },
+            {
+              "token": "zh2:结果",
+              "weighted_document_tf": 1,
+              "contribution": 1.61021106
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "B022",
+          "score": 8.58613668,
+          "matched_token_count": 3,
+          "top_token_contributions": [
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 6,
+              "contribution": 3.96322892
+            },
+            {
+              "token": "zh2:结果",
+              "weighted_document_tf": 3,
+              "contribution": 2.4862164
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 3,
+              "contribution": 2.13669136
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "B012",
+          "score": 8.25689508,
+          "matched_token_count": 2,
+          "top_token_contributions": [
+            {
+              "token": "zh2:误差",
+              "weighted_document_tf": 5,
+              "contribution": 6.07668215
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.18021293
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C005",
+          "score": 7.30380391,
+          "matched_token_count": 2,
+          "top_token_contributions": [
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.00900402
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 5,
+              "contribution": 2.29479989
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 48,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.1884,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C018",
+        "E3C003",
+        "E3C010",
+        "E3C019"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 49.54243483,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71370864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70763057
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.50245676
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 45.00972679,
+          "matched_token_count": 8,
+          "top_token_contributions": [
+            {
+              "token": "zh2:的摩",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh3:的摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 18,
+              "contribution": 5.52642383
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 2.79707714
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.531848
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 41.37258193,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 13,
+              "contribution": 5.14304595
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.05910752
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.8698922
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.6979032
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.76682408
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 5,
+              "contribution": 2.31775406
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 32.87584829,
+          "matched_token_count": 7,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.41238817
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.45160749
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 2.80391258
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.53641898
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C019",
+          "score": 9.80155157,
+          "matched_token_count": 3,
+          "top_token_contributions": [
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.45821002
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 2.80571694
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.53762461
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 48,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.1947,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C011",
+        "E3C004",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 49.54243483,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71370864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70763057
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.50245676
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 42.22633556,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.45448148
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.69807276
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.53215187
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.53215187
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70163258
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.4988887
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 42.16943328,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 8,
+              "contribution": 5.22970169
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 13,
+              "contribution": 5.07425689
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 10,
+              "contribution": 4.96725622
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71799106
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70927101
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 8,
+              "contribution": 2.39590921
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 41.29317522,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.10538753
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.91444129
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.74087896
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.74087896
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.78347214
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 5,
+              "contribution": 2.33895655
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 28.03098138,
+          "matched_token_count": 7,
+          "top_token_contributions": [
+            {
+              "token": "lat:mol",
+              "weighted_document_tf": 2,
+              "contribution": 5.27066471
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 28,
+              "contribution": 5.2660275
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.66990804
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.50498184
+            },
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 2,
+              "contribution": 3.13617702
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.69079495
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.49242731
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 48,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.2678,
+      "candidate_tool_ids": [
+        "A003",
+        "A001",
+        "D004",
+        "F017",
+        "D009"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 49.54243483,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71370864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70763057
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.50245676
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "A001",
+          "score": 4.6347826,
+          "matched_token_count": 2,
+          "top_token_contributions": [
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 1,
+              "contribution": 2.3660816
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.268701
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "D004",
+          "score": 2.44979921,
+          "matched_token_count": 1,
+          "top_token_contributions": [
+            {
+              "token": "zh2:结果",
+              "weighted_document_tf": 3,
+              "contribution": 2.44979921
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "F017",
+          "score": 2.41984733,
+          "matched_token_count": 1,
+          "top_token_contributions": [
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 12,
+              "contribution": 2.41984733
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "D009",
+          "score": 2.40748251,
+          "matched_token_count": 1,
+          "top_token_contributions": [
+            {
+              "token": "zh2:结果",
+              "weighted_document_tf": 3,
+              "contribution": 2.40748251
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 48,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.1951,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C018",
+        "E3C003",
+        "E3C010",
+        "E3C019"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 49.54243483,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71370864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70763057
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.50245676
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 45.00972679,
+          "matched_token_count": 8,
+          "top_token_contributions": [
+            {
+              "token": "zh2:的摩",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh3:的摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 18,
+              "contribution": 5.52642383
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 2.79707714
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.531848
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 41.37258193,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 13,
+              "contribution": 5.14304595
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.05910752
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.8698922
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.6979032
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.76682408
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 5,
+              "contribution": 2.31775406
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 32.87584829,
+          "matched_token_count": 7,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.41238817
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.45160749
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 2.80391258
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.53641898
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C019",
+          "score": 9.80155157,
+          "matched_token_count": 3,
+          "top_token_contributions": [
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.45821002
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 2.80571694
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.53762461
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 48,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.1942,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C011",
+        "E3C004",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 49.54243483,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71370864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70763057
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.50245676
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 42.22633556,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.45448148
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.69807276
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.53215187
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.53215187
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70163258
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.4988887
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 42.16943328,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 8,
+              "contribution": 5.22970169
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 13,
+              "contribution": 5.07425689
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 10,
+              "contribution": 4.96725622
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71799106
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70927101
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 8,
+              "contribution": 2.39590921
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 41.29317522,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.10538753
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.91444129
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.74087896
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.74087896
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.78347214
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 5,
+              "contribution": 2.33895655
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 28.03098138,
+          "matched_token_count": 7,
+          "top_token_contributions": [
+            {
+              "token": "lat:mol",
+              "weighted_document_tf": 2,
+              "contribution": 5.27066471
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 28,
+              "contribution": 5.2660275
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.66990804
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.50498184
+            },
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 2,
+              "contribution": 3.13617702
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.69079495
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.49242731
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 48,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.7948,
+      "candidate_tool_ids": [
+        "A003",
+        "B003",
+        "B006",
+        "B007",
+        "B009"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 49.54243483,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71370864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70763057
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.50245676
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "B003",
+          "score": 12.22252871,
+          "matched_token_count": 5,
+          "top_token_contributions": [
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 8,
+              "contribution": 4.18093071
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.57131675
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.17644006
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 2,
+              "contribution": 1.68363013
+            },
+            {
+              "token": "zh2:结果",
+              "weighted_document_tf": 1,
+              "contribution": 1.61021106
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "B006",
+          "score": 11.96708727,
+          "matched_token_count": 4,
+          "top_token_contributions": [
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 10,
+              "contribution": 4.33689324
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.70996968
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.683797
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.23642735
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "B007",
+          "score": 11.96708727,
+          "matched_token_count": 4,
+          "top_token_contributions": [
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 10,
+              "contribution": 4.33689324
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.70996968
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.683797
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.23642735
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "B009",
+          "score": 11.89418722,
+          "matched_token_count": 4,
+          "top_token_contributions": [
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 10,
+              "contribution": 4.32554444
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.67523395
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.67277641
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.22063243
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 48,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.8676,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C018",
+        "E3C003",
+        "E3C010",
+        "B003"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 49.54243483,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71370864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70763057
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.50245676
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 45.00972679,
+          "matched_token_count": 8,
+          "top_token_contributions": [
+            {
+              "token": "zh2:的摩",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh3:的摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 18,
+              "contribution": 5.52642383
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 2.79707714
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.531848
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 41.37258193,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 13,
+              "contribution": 5.14304595
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.05910752
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.8698922
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.6979032
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.76682408
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 5,
+              "contribution": 2.31775406
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 32.87584829,
+          "matched_token_count": 7,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.41238817
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.45160749
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 2.80391258
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.53641898
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "B003",
+          "score": 12.22252871,
+          "matched_token_count": 5,
+          "top_token_contributions": [
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 8,
+              "contribution": 4.18093071
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.57131675
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.17644006
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 2,
+              "contribution": 1.68363013
+            },
+            {
+              "token": "zh2:结果",
+              "weighted_document_tf": 1,
+              "contribution": 1.61021106
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 48,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.8134,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C011",
+        "E3C004",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 49.54243483,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71370864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70763057
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.50245676
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 42.22633556,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.45448148
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.69807276
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.53215187
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.53215187
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70163258
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.4988887
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 42.16943328,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 8,
+              "contribution": 5.22970169
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 13,
+              "contribution": 5.07425689
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 10,
+              "contribution": 4.96725622
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71799106
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70927101
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 8,
+              "contribution": 2.39590921
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 41.29317522,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.10538753
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.91444129
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.74087896
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.74087896
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.78347214
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 5,
+              "contribution": 2.33895655
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 28.03098138,
+          "matched_token_count": 7,
+          "top_token_contributions": [
+            {
+              "token": "lat:mol",
+              "weighted_document_tf": 2,
+              "contribution": 5.27066471
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 28,
+              "contribution": 5.2660275
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.66990804
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.50498184
+            },
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 2,
+              "contribution": 3.13617702
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.69079495
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.49242731
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 48,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.7638,
+      "candidate_tool_ids": [
+        "A003",
+        "B003",
+        "B006",
+        "B007",
+        "B009"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 49.54243483,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71370864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70763057
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.50245676
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "B003",
+          "score": 12.22252871,
+          "matched_token_count": 5,
+          "top_token_contributions": [
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 8,
+              "contribution": 4.18093071
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.57131675
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.17644006
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 2,
+              "contribution": 1.68363013
+            },
+            {
+              "token": "zh2:结果",
+              "weighted_document_tf": 1,
+              "contribution": 1.61021106
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "B006",
+          "score": 11.96708727,
+          "matched_token_count": 4,
+          "top_token_contributions": [
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 10,
+              "contribution": 4.33689324
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.70996968
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.683797
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.23642735
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "B007",
+          "score": 11.96708727,
+          "matched_token_count": 4,
+          "top_token_contributions": [
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 10,
+              "contribution": 4.33689324
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.70996968
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.683797
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.23642735
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "B009",
+          "score": 11.89418722,
+          "matched_token_count": 4,
+          "top_token_contributions": [
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 10,
+              "contribution": 4.32554444
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.67523395
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.67277641
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.22063243
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 48,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.7937,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C018",
+        "E3C003",
+        "E3C010",
+        "B003"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 49.54243483,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71370864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70763057
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.50245676
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 45.00972679,
+          "matched_token_count": 8,
+          "top_token_contributions": [
+            {
+              "token": "zh2:的摩",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh3:的摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 8.05526439
+            },
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 18,
+              "contribution": 6.01461635
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 18,
+              "contribution": 5.52642383
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 2.79707714
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.531848
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 41.37258193,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.50601831
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 13,
+              "contribution": 5.14304595
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.05910752
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.8698922
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.6979032
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.76682408
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 5,
+              "contribution": 2.31775406
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 32.87584829,
+          "matched_token_count": 7,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.89050702
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.41238817
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.45160749
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 13,
+              "contribution": 2.80391258
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 18,
+              "contribution": 2.53641898
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "B003",
+          "score": 12.22252871,
+          "matched_token_count": 5,
+          "top_token_contributions": [
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 8,
+              "contribution": 4.18093071
+            },
+            {
+              "token": "lat:fe",
+              "weighted_document_tf": 1,
+              "contribution": 2.57131675
+            },
+            {
+              "token": "zh2:使用",
+              "weighted_document_tf": 3,
+              "contribution": 2.17644006
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 2,
+              "contribution": 1.68363013
+            },
+            {
+              "token": "zh2:结果",
+              "weighted_document_tf": 1,
+              "contribution": 1.61021106
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 48,
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "retriever_config_sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1",
+      "retrieval_latency_ms": 0.7573,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C011",
+        "E3C004",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 49.54243483,
+          "matched_token_count": 11,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.944795
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.46226971
+            },
+            {
+              "token": "lat:fe2o3",
+              "weighted_document_tf": 1,
+              "contribution": 4.94646801
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71370864
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.54723555
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70763057
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.50245676
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 42.22633556,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 13,
+              "contribution": 5.93631877
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 13,
+              "contribution": 5.45448148
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.69807276
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.53215187
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.53215187
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70163258
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.4988887
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 42.16943328,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 8,
+              "contribution": 5.6916824
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 8,
+              "contribution": 5.22970169
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 13,
+              "contribution": 5.07425689
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 10,
+              "contribution": 4.96725622
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.71799106
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.70927101
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 8,
+              "contribution": 2.39590921
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 41.29317522,
+          "matched_token_count": 9,
+          "top_token_contributions": [
+            {
+              "token": "zh2:尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:尔质量",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh3:摩尔质",
+              "weighted_document_tf": 5,
+              "contribution": 5.55638659
+            },
+            {
+              "token": "zh2:摩尔",
+              "weighted_document_tf": 5,
+              "contribution": 5.10538753
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.91444129
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 5,
+              "contribution": 4.74087896
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.74087896
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.78347214
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 5,
+              "contribution": 2.33895655
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 28.03098138,
+          "matched_token_count": 7,
+          "top_token_contributions": [
+            {
+              "token": "lat:mol",
+              "weighted_document_tf": 2,
+              "contribution": 5.27066471
+            },
+            {
+              "token": "zh2:原子",
+              "weighted_document_tf": 28,
+              "contribution": 5.2660275
+            },
+            {
+              "token": "zh3:原子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.66990804
+            },
+            {
+              "token": "zh2:子量",
+              "weighted_document_tf": 5,
+              "contribution": 4.50498184
+            },
+            {
+              "token": "lat:g",
+              "weighted_document_tf": 2,
+              "contribution": 3.13617702
+            },
+            {
+              "token": "zh2:计算",
+              "weighted_document_tf": 8,
+              "contribution": 2.69079495
+            },
+            {
+              "token": "zh2:质量",
+              "weighted_document_tf": 13,
+              "contribution": 2.49242731
+            }
+          ],
+          "rank": 5
+        }
+      ],
+      "index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "query_token_count": 48,
+      "execution_status": "candidate_view_only_no_external_api"
+    }
+  ]
+}

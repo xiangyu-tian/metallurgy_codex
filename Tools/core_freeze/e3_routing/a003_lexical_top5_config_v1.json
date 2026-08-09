@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "implementation_id": "V11-CF05-E3-A003-LEXICAL-TOP5-CANDIDATE-V1-20260809",
+  "method": "lexical_top5",
+  "algorithm": "weighted_unicode_ngram_bm25_v1",
+  "top_k": 5,
+  "bm25": {
+    "k1": 1.2,
+    "b": 0.75
+  },
+  "tokenizer": {
+    "unicode_normalization": "NFKC",
+    "casefold": true,
+    "chinese_character_ngram_sizes": [2, 3],
+    "latin_alphanumeric_tokens": true,
+    "numeric_tokens": false
+  },
+  "field_boosts": {
+    "tool_name": 6,
+    "semantic_alias": 3,
+    "scenario": 1,
+    "tool_type": 1,
+    "core_method": 3,
+    "main_input": 3,
+    "main_output": 3,
+    "applicable_boundary_risk": 1,
+    "function_description": 2,
+    "parameter_name": 2,
+    "parameter_description": 1
+  },
+  "query_source": "problem_text_only",
+  "index_scope": "all_entries_in_bound_pool_schema_registry",
+  "candidate_scope": "current_pool_tool_order_only",
+  "tie_break": "score_desc_then_tool_id_asc",
+  "zero_score_policy": "tool_id_asc",
+  "minimum_development_acceptable_recall_at_5": 1.0,
+  "minimum_development_target_recall_at_5": 1.0,
+  "expected_lexical_cell_count": 24,
+  "gold_visible_to_retriever": false,
+  "external_api_calls_authorized": false,
+  "tool_execution_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "independent_validation_split_access_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "opening_artifact_manifest": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/artifact_manifest.json",
+      "sha256": "cb344949ff94ff0b78638e1fe79d91a81626868c0df77c4b0882ced180dcd862"
+    },
+    "routing_input_tasks": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/a003_routing_input_tasks.json",
+      "sha256": "cfd01426d49bb7a83350dbbf20814902a4624a7fc5b98b969119e2cedf727fd5"
+    },
+    "routing_scoring_registry": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/a003_routing_scoring_registry.json",
+      "sha256": "b1932cd6e3d9c651a1d8ea771977499ea5c170457bc62155a9001e674f3bf56e"
+    },
+    "routing_selected_pools": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/a003_routing_selected_pools.json",
+      "sha256": "93d6b6a46c47e573db135db0c82d8d06a068c54040f451fe7a7d594137018064"
+    },
+    "routing_run_cells": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/a003_routing_run_cells.json",
+      "sha256": "5040377376f34a07f18378d07a301e01fc60bedcf15edee8659f3129bb7ccbfa"
+    },
+    "pool_schema_registry": {
+      "path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_pool_schema_registry.json",
+      "sha256": "ca7e4e5a5c9080d14e1eb08a54fa6f6644fd1ecac9f47a4ddc48237f59ad3faf"
+    }
+  }
+}

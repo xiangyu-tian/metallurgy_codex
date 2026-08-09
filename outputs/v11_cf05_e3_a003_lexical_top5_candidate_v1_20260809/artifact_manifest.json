@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "implementation_id": "V11-CF05-E3-A003-LEXICAL-TOP5-CANDIDATE-V1-20260809",
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "filename": "a003_lexical_top5_candidate_views.json",
+      "sha256": "e6f598c9ddf97ff8bb733389f2b7600cceb954d16dfeade1183a9e55edd505d6",
+      "bytes": 177231
+    },
+    {
+      "filename": "a003_lexical_top5_config_snapshot.json",
+      "sha256": "4ef0780602f8ced1ea7d85d75ed63f42f6322bdadd69f48de54e6fb5c230f32b",
+      "bytes": 2859
+    },
+    {
+      "filename": "a003_lexical_top5_determinism_audit.json",
+      "sha256": "95d4843c0d9a50b9871c01a69ff9de79fe4cd9b3828408be1d569a564ce718a9",
+      "bytes": 9268
+    },
+    {
+      "filename": "a003_lexical_top5_development_diagnostics.json",
+      "sha256": "bf9a9cd56b8432fa4ad1ea9bccac55f7c8db8eee8386a0c3e15be6051f0c70dd",
+      "bytes": 15188
+    },
+    {
+      "filename": "a003_lexical_top5_index_snapshot.json",
+      "sha256": "da1448911c5f7772f19db35566c8e1c970c323f735cd308247c5963c5bfd2d53",
+      "bytes": 29086
+    },
+    {
+      "filename": "a003_lexical_top5_readiness_report.json",
+      "sha256": "eaf11160552641f3fe4a2723e32ccd7493f008b78cfbd0d7af4f99622584dd2d",
+      "bytes": 1137
+    }
+  ]
+}
