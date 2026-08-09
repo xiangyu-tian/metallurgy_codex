@@ -1,0 +1,81 @@
+{
+  "run_config_id": "V11-CF06-FULL-SCHEMA-API-RUN-V1-20260809",
+  "run_status": "runtime_feasible_candidate_pending_review",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "pool_sizes": [
+    17,
+    50,
+    100,
+    120
+  ],
+  "request_count": 10,
+  "external_api_calls": 10,
+  "all_baselines_accepted": true,
+  "all_full_schema_probes_accepted": true,
+  "tool_choice_none_enforced_all_sizes": true,
+  "provider_token_deltas_available_all_sizes": true,
+  "size_results": [
+    {
+      "tool_count": 17,
+      "auto_request_accepted": true,
+      "none_request_accepted": true,
+      "native_function_call_returned": true,
+      "target_tool_selected": true,
+      "target_arguments_valid": true,
+      "tool_choice_none_enforced": true,
+      "schema_visibility_response_correct": false,
+      "auto_schema_exposure_prompt_token_delta": 3273,
+      "none_schema_exposure_prompt_token_delta": 0,
+      "auto_api_latency_ms": 1220.5302,
+      "none_api_latency_ms": 1065.3711
+    },
+    {
+      "tool_count": 50,
+      "auto_request_accepted": true,
+      "none_request_accepted": true,
+      "native_function_call_returned": true,
+      "target_tool_selected": true,
+      "target_arguments_valid": true,
+      "tool_choice_none_enforced": true,
+      "schema_visibility_response_correct": false,
+      "auto_schema_exposure_prompt_token_delta": 8697,
+      "none_schema_exposure_prompt_token_delta": 0,
+      "auto_api_latency_ms": 1180.975,
+      "none_api_latency_ms": 747.5503
+    },
+    {
+      "tool_count": 100,
+      "auto_request_accepted": true,
+      "none_request_accepted": true,
+      "native_function_call_returned": true,
+      "target_tool_selected": true,
+      "target_arguments_valid": true,
+      "tool_choice_none_enforced": true,
+      "schema_visibility_response_correct": false,
+      "auto_schema_exposure_prompt_token_delta": 17141,
+      "none_schema_exposure_prompt_token_delta": 0,
+      "auto_api_latency_ms": 894.45,
+      "none_api_latency_ms": 971.2882
+    },
+    {
+      "tool_count": 120,
+      "auto_request_accepted": true,
+      "none_request_accepted": true,
+      "native_function_call_returned": true,
+      "target_tool_selected": true,
+      "target_arguments_valid": true,
+      "tool_choice_none_enforced": true,
+      "schema_visibility_response_correct": false,
+      "auto_schema_exposure_prompt_token_delta": 20539,
+      "none_schema_exposure_prompt_token_delta": 0,
+      "auto_api_latency_ms": 1946.2718,
+      "none_api_latency_ms": 1145.6042
+    }
+  ],
+  "tool_calls_executed": 0,
+  "fallbacks_applied": 0,
+  "confirmatory_inference_allowed": false,
+  "cf06_status": "in_progress_pending_review",
+  "core_frozen": false
+}

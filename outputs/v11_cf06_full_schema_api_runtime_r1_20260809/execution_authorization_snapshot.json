@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "authorization_request_id": "V11-CF06-API-EXECUTION-AUTH-REQUEST-V1-20260809",
+  "decision": "authorized_to_execute_cf06_feasibility",
+  "run_config_id": "V11-CF06-FULL-SCHEMA-API-RUN-V1-20260809",
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "scheduled_request_count": 10,
+  "request_bundle_sha256": "68887ca56de6a990fde781d512085ad63794f16f7cbde548ed0e925a1b41ad95",
+  "config_sha256": "a516f7636c0a3f9387759ecbfd3555ce8eb60102b9b3216a9cf62c48f001d5d1",
+  "prompts_sha256": "2326545639d63372ec6c30cc42399410da3658e26b24d4f5cccfcb86528ea5b5",
+  "runner_sha256": "ccf3e22089a31941e426fb95f48ff25def941d233afdbd84a4a5dbc7e52b80aa",
+  "catalog_manifest_sha256": "cbebc748110bad4b853ab1f965119be02780af93a7492936f21bd7e73dd6fc15",
+  "authorized_by": "xiangyu (explicit Codex task instruction)",
+  "authorized_at": "2026-08-09T11:07:14.6173529+08:00",
+  "authorized_payload_types": [
+    "two neutral probe prompts",
+    "17/50/100/120 OpenAI-format function schema arrays",
+    "ten frozen chat-completion request payloads"
+  ],
+  "external_data_sharing_authorized": true,
+  "external_api_execution_authorized": true,
+  "tool_execution_authorized": false,
+  "fallback_tool_count_reduction_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "authorization_source": "user message in Codex task on 2026-08-09"
+}

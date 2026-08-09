@@ -1,0 +1,41 @@
+{
+  "run_config_id": "V11-CF06-FULL-SCHEMA-API-RUN-V1-20260809",
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "filename": "cf06_feasibility_config_snapshot.json",
+      "sha256": "a516f7636c0a3f9387759ecbfd3555ce8eb60102b9b3216a9cf62c48f001d5d1",
+      "bytes": 2577
+    },
+    {
+      "filename": "cf06_probe_prompts_snapshot.json",
+      "sha256": "2326545639d63372ec6c30cc42399410da3658e26b24d4f5cccfcb86528ea5b5",
+      "bytes": 919
+    },
+    {
+      "filename": "cf06_request_bundle_snapshot.json",
+      "sha256": "68887ca56de6a990fde781d512085ad63794f16f7cbde548ed0e925a1b41ad95",
+      "bytes": 694874
+    },
+    {
+      "filename": "cf06_request_results.json",
+      "sha256": "30215c7e6e3e7cce27fa69f8d12e8bc1b2a756bc585ea0d6cc70dfd4470997c3",
+      "bytes": 26200
+    },
+    {
+      "filename": "cf06_runtime_report.json",
+      "sha256": "e54425d0040afe5b63ca69f62be8d0f7439d2f19f2ec01d933323c37962a23bd",
+      "bytes": 2772
+    },
+    {
+      "filename": "execution_authorization_snapshot.json",
+      "sha256": "ed73e4c3ff79f4fc5c00c693ee937efade9be8d878f78514f624c641d0c57be9",
+      "bytes": 1406
+    },
+    {
+      "filename": "runner_source_snapshot.py",
+      "sha256": "ccf3e22089a31941e426fb95f48ff25def941d233afdbd84a4a5dbc7e52b80aa",
+      "bytes": 20926
+    }
+  ]
+}

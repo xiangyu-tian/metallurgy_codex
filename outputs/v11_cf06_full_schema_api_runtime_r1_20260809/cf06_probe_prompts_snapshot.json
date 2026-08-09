@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "prompt_id": "V11-CF06-FULL-SCHEMA-PROBES-V1-20260809",
+  "auto_function_call": {
+    "system": "你正在执行原生 Function Calling 接口可行性检查。只选择给定工具，不执行工具，也不要自行计算最终数值。",
+    "user_template": "请调用工具 A003 计算 {formula} 的摩尔质量。必须只返回一次函数调用，参数 formula 必须为 {formula}。"
+  },
+  "none_schema_visibility": {
+    "system": "你正在执行 tool_choice=none 下的 Schema 可见性检查。严禁调用任何工具，只输出一个 JSON 对象，不要输出 Markdown。",
+    "user_template": "根据本次请求中提供的工具定义，判断是否存在 A003，并报告工具总数。输出：{{\"target_tool_visible\":true或false,\"target_tool_id\":\"A003\"或null,\"declared_tool_count\":整数}}。本次预期工具数为 {tool_count}。"
+  }
+}
