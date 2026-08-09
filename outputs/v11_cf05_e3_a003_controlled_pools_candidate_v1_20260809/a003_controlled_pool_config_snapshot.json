@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "V11-CF05-E3-A003-CONTROLLED-POOLS-CANDIDATE-V1-20260809",
+  "target_tool_id": "A003",
+  "pool_design": "controlled_dose",
+  "pool_sizes": [
+    17,
+    50,
+    100,
+    120
+  ],
+  "pool_repeats": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "conditions": [
+    {
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "evidence_relation_type": "none"
+    },
+    {
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "evidence_relation_type": "lexical"
+    },
+    {
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "evidence_relation_type": "lexical"
+    },
+    {
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 4,
+      "evidence_relation_type": "contract_mismatch"
+    },
+    {
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "evidence_relation_type": "contract_mismatch"
+    }
+  ],
+  "lexical_neighbor_ids": [
+    "A005",
+    "A004",
+    "A002",
+    "F020",
+    "E3C003",
+    "E3C010",
+    "E3C018",
+    "E3C019"
+  ],
+  "contract_mismatch_neighbor_ids": [
+    "E3C004",
+    "E3C011",
+    "E3C020",
+    "E3C021",
+    "E3C022",
+    "E3C023",
+    "E3C024",
+    "E3C025"
+  ],
+  "four_neighbor_index_selection": {
+    "A": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "B": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "C": [
+      0,
+      2,
+      4,
+      6
+    ],
+    "D": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "E": [
+      0,
+      1,
+      4,
+      5
+    ]
+  },
+  "target_position_1_based": {
+    "17": {
+      "A": 1,
+      "B": 5,
+      "C": 9,
+      "D": 13,
+      "E": 17
+    },
+    "50": {
+      "A": 13,
+      "B": 25,
+      "C": 38,
+      "D": 50,
+      "E": 1
+    },
+    "100": {
+      "A": 50,
+      "B": 75,
+      "C": 100,
+      "D": 1,
+      "E": 25
+    },
+    "120": {
+      "A": 90,
+      "B": 120,
+      "C": 1,
+      "D": 30,
+      "E": 60
+    }
+  },
+  "registered_order_seed": "V11-CF05-E3-A003-CONTROLLED-POOLS-SEED-20260809",
+  "functional_overlap_operationalization": "contract_mismatch_proxy",
+  "expert_validated_functional_overlap": false,
+  "confirmatory_use_allowed": false,
+  "formal_catalog_mutation_allowed": false,
+  "formal_pool_generation_allowed": false,
+  "external_api_calls_authorized": false,
+  "expected_safe_neutral_candidate_ids": [
+    "E3C002",
+    "E3C005",
+    "E3C006",
+    "E3C008",
+    "E3C009"
+  ],
+  "expected_additional_a003_screening_exclusions": [
+    "E3C012",
+    "E3C013",
+    "E3C014",
+    "E3C015"
+  ],
+  "bindings": {
+    "catalog": {
+      "path": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803/e3_schema_catalog_v1_candidate.json",
+      "sha256": "78de613f974d1ee48d5e2afa8a379b534a1e28a5b6749d9fc75f015aff6dd4f6"
+    },
+    "base_pool_manifest": {
+      "path": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803/e3_nested_pool_manifest_v1_candidate.json",
+      "sha256": "e60927cb13af9d5579358b4930304246cddae817a0117506791ad4415a4e492a"
+    },
+    "neighbor_matrix": {
+      "path": "outputs/v11_cf05_e3_neighbor_feasibility_v1_1_20260803/neighbor_candidate_matrix.json",
+      "sha256": "a3f1d22418a5d4564ef44a034e8289df5a32b9929ac879b7bbd735bb47d082bc"
+    },
+    "combined_relation_registry": {
+      "path": "outputs/v11_cf05_e3_candidate_admission_batch3_v1_20260809/combined_relation_evidence_registry.json",
+      "sha256": "feacc1e8db0b93d2f0e6a2ae406dc66d41f88a0f153d049c7e192c7d728c469b"
+    },
+    "candidate_registry_batch1": {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch1_v1_20260803/candidate_registration_registry.json",
+      "sha256": "285283c5ab3099cdfe5f0f84452475ac6e868bf76db5d4695ebfe5fcb0d6623c"
+    },
+    "candidate_registry_batch2": {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch2_v1_20260803/candidate_registration_registry.json",
+      "sha256": "5a595f68c48a2340c8465208678ee750f2493e9e42ffa82b41ed02433175c834"
+    },
+    "candidate_registry_batch3": {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch3_v1_20260803/candidate_registration_registry.json",
+      "sha256": "4324d69f795f3c590792af1a9b8f5543a699b3ec1344262f395270d9164c4b0f"
+    },
+    "verified_contracts": {
+      "path": "Tools/core_freeze/verified_core/contracts_v1.json",
+      "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"
+    },
+    "neighbor_audit_config": {
+      "path": "Tools/core_freeze/e3_routing/neighbor_audit_config_v1_1.json",
+      "sha256": "9ba29726f3e38b2701133e19445f58b9797e6de92e20d1dfeb203c986242bfa3"
+    }
+  }
+}

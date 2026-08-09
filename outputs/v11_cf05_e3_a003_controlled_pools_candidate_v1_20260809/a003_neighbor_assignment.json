@@ -1,0 +1,43 @@
+{
+  "candidate_id": "V11-CF05-E3-A003-CONTROLLED-POOLS-CANDIDATE-V1-20260809",
+  "target_tool_id": "A003",
+  "lexical_neighbor_ids": [
+    "A005",
+    "A004",
+    "A002",
+    "F020",
+    "E3C003",
+    "E3C010",
+    "E3C018",
+    "E3C019"
+  ],
+  "lexical_evidence_sources": {
+    "formal_catalog_algorithmic": [
+      "A002",
+      "A004",
+      "A005",
+      "F020"
+    ],
+    "admitted_candidate_registry": [
+      "E3C003",
+      "E3C010",
+      "E3C018",
+      "E3C019"
+    ]
+  },
+  "functional_overlap_interface_neighbor_ids": [
+    "E3C004",
+    "E3C011",
+    "E3C020",
+    "E3C021",
+    "E3C022",
+    "E3C023",
+    "E3C024",
+    "E3C025"
+  ],
+  "evidence_relation_type": "contract_mismatch",
+  "functional_overlap_operationalization": "contract_mismatch_proxy",
+  "expert_validated_functional_overlap": false,
+  "confirmatory_use_allowed": false,
+  "interpretation_limit": "The functional_overlap label is retained only for compatibility with the frozen statistical interface. These neighbors operationalize contract-derived applicability mismatch, not expert-confirmed metallurgical functional overlap."
+}

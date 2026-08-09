@@ -1,0 +1,36 @@
+{
+  "candidate_id": "V11-CF05-E3-A003-CONTROLLED-POOLS-CANDIDATE-V1-20260809",
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "filename": "a003_controlled_pool_config_snapshot.json",
+      "sha256": "dd0233b85521130e0cae84a2f6beb84ac9506f6a6cf1e6db676383920ed5109e",
+      "bytes": 4801
+    },
+    {
+      "filename": "a003_controlled_pool_manifest.json",
+      "sha256": "4053401bce5175ea66c38bad85a81c2e227e50bb5a36162c47d96e4c6fc1337f",
+      "bytes": 340515
+    },
+    {
+      "filename": "a003_neighbor_assignment.json",
+      "sha256": "47d25aaca9c873440885419ac8bd8f18f53d82c9e4382d5452d2749da201c714",
+      "bytes": 1156
+    },
+    {
+      "filename": "a003_pool_audit.json",
+      "sha256": "820a14c0e6d39bc9837a4b0120d2ba548826b962c85e6c120d759dd2143ff09a",
+      "bytes": 2863
+    },
+    {
+      "filename": "a003_pool_construction_report.json",
+      "sha256": "045efcf1673ec48e6ef37b1904b9c0a2c95bae80319bd038b2bd167f584d95e5",
+      "bytes": 1134
+    },
+    {
+      "filename": "a003_pool_schema_registry.json",
+      "sha256": "ca7e4e5a5c9080d14e1eb08a54fa6f6644fd1ecac9f47a4ddc48237f59ad3faf",
+      "bytes": 284135
+    }
+  ]
+}

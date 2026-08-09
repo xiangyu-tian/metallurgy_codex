@@ -1,0 +1,98 @@
+{
+  "candidate_id": "V11-CF05-E3-A003-CONTROLLED-POOLS-CANDIDATE-V1-20260809",
+  "checks": {
+    "record_count": true,
+    "pool_ids_unique": true,
+    "exact_size_and_unique_tools": true,
+    "target_present_once": true,
+    "registered_target_positions": true,
+    "exact_neighbor_dose": true,
+    "no_neighbor_leakage": true,
+    "same_irrelevant_base_by_dose": true,
+    "same_neighbor_slots_by_dose": true,
+    "nested_sets_by_repeat_and_condition": true,
+    "four_dose_balanced": true,
+    "schema_registry_complete": true,
+    "neutral_capacity": true,
+    "proxy_not_expert_gold": true,
+    "no_formal_or_external_mutation": true
+  },
+  "all_pool_invariants_passed": true,
+  "four_dose_selection_frequency": {
+    "lexical": {
+      "A005": 3,
+      "A004": 3,
+      "A002": 2,
+      "F020": 2,
+      "E3C003": 3,
+      "E3C010": 3,
+      "E3C018": 2,
+      "E3C019": 2
+    },
+    "functional_overlap": {
+      "E3C004": 3,
+      "E3C011": 3,
+      "E3C020": 2,
+      "E3C021": 2,
+      "E3C022": 3,
+      "E3C023": 3,
+      "E3C024": 2,
+      "E3C025": 2
+    }
+  },
+  "neutral_universe": {
+    "count": 121,
+    "formal_neutral_count": 116,
+    "safe_candidate_ids": [
+      "E3C002",
+      "E3C005",
+      "E3C006",
+      "E3C008",
+      "E3C009"
+    ],
+    "additional_a003_screening_exclusions": [
+      {
+        "candidate_tool_id": "E3C012",
+        "algorithmic_lexical_candidate": true,
+        "provable_contract_mismatch_neighbor": false,
+        "name_bigram_dice": 0.0,
+        "contract_text_bigram_dice": 0.129032,
+        "input_bigram_dice": 0.4,
+        "output_bigram_dice": 0.0
+      },
+      {
+        "candidate_tool_id": "E3C013",
+        "algorithmic_lexical_candidate": true,
+        "provable_contract_mismatch_neighbor": false,
+        "name_bigram_dice": 0.0,
+        "contract_text_bigram_dice": 0.222222,
+        "input_bigram_dice": 0.5,
+        "output_bigram_dice": 0.0
+      },
+      {
+        "candidate_tool_id": "E3C014",
+        "algorithmic_lexical_candidate": true,
+        "provable_contract_mismatch_neighbor": true,
+        "name_bigram_dice": 0.090909,
+        "contract_text_bigram_dice": 0.20339,
+        "input_bigram_dice": 0.5,
+        "output_bigram_dice": 0.2
+      },
+      {
+        "candidate_tool_id": "E3C015",
+        "algorithmic_lexical_candidate": true,
+        "provable_contract_mismatch_neighbor": false,
+        "name_bigram_dice": 0.181818,
+        "contract_text_bigram_dice": 0.135593,
+        "input_bigram_dice": 0.181818,
+        "output_bigram_dice": 0.166667
+      }
+    ]
+  },
+  "interpretation": {
+    "statistical_interface_label": "functional_overlap",
+    "actual_evidence_relation": "contract_mismatch",
+    "expert_validated": false,
+    "formal_h3_claim_allowed": false
+  }
+}
