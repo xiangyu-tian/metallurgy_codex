@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF06-FULL-SCHEMA-API-OPENING-V1-20260809",
+  "run_config_id": "V11-CF06-FULL-SCHEMA-API-RUN-V1-20260809",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "openai_base_url": "https://api.deepseek.com",
+  "api_key_env": "DEEPSEEK_API_KEY",
+  "thinking": "disabled",
+  "temperature": 0.0,
+  "max_tokens": 192,
+  "timeout_seconds": 180,
+  "pool_sizes": [
+    17,
+    50,
+    100,
+    120
+  ],
+  "probe_modes": [
+    "auto_function_call",
+    "none_schema_visibility"
+  ],
+  "baseline_modes": [
+    "auto_function_call",
+    "none_schema_visibility"
+  ],
+  "scheduled_request_count": 10,
+  "provider_max_attempts": 1,
+  "target_tool_id": "A003",
+  "target_formula": "Fe2O3",
+  "tool_execution_allowed": false,
+  "fallback_tool_count_reduction_allowed": false,
+  "text_catalog_fallback_allowed": false,
+  "external_api_calls_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "provider_constraints_snapshot": {
+    "verified_at": "2026-08-09",
+    "max_function_count": 128,
+    "context_length_tokens": 1000000,
+    "supported_tool_choice_values": [
+      "none",
+      "auto",
+      "required"
+    ],
+    "openai_function_calling_supported": true,
+    "sources": [
+      "https://api-docs.deepseek.com/api/create-chat-completion",
+      "https://api-docs.deepseek.com/guides/tool_calls",
+      "https://api-docs.deepseek.com/quick_start/pricing/"
+    ]
+  },
+  "token_measurement_contract": {
+    "primary_total_request_measure": "provider_usage_prompt_tokens",
+    "schema_exposure_measure": "probe_prompt_tokens_minus_same_prompt_no_tools_baseline",
+    "local_exact_provider_tokenizer_available": false,
+    "local_preflight_measures": [
+      "canonical_json_character_count",
+      "canonical_json_utf8_byte_count"
+    ],
+    "silent_token_estimation_allowed": false
+  },
+  "catalog_artifact_manifest": {
+    "path": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803/artifact_manifest.json",
+    "sha256": "cbebc748110bad4b853ab1f965119be02780af93a7492936f21bd7e73dd6fc15"
+  },
+  "catalog_directory": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803",
+  "pool_files": {
+    "17": "openai_tools_pool_17.json",
+    "50": "openai_tools_pool_50.json",
+    "100": "openai_tools_pool_100.json",
+    "120": "openai_tools_pool_120.json"
+  },
+  "execution_authorization_file": "cf06_execution_authorization_v1.json",
+  "authorization_channel_required": "explicit_user_instruction_in_codex_task"
+}

@@ -1,0 +1,51 @@
+{
+  "opening_id": "V11-CF06-FULL-SCHEMA-API-OPENING-V1-20260809",
+  "artifact_count": 9,
+  "artifacts": [
+    {
+      "filename": "catalog_artifact_manifest_snapshot.json",
+      "sha256": "cbebc748110bad4b853ab1f965119be02780af93a7492936f21bd7e73dd6fc15",
+      "bytes": 1502
+    },
+    {
+      "filename": "cf06_feasibility_config_snapshot.json",
+      "sha256": "a516f7636c0a3f9387759ecbfd3555ce8eb60102b9b3216a9cf62c48f001d5d1",
+      "bytes": 2577
+    },
+    {
+      "filename": "cf06_opening_report.json",
+      "sha256": "c4182aac35e15b8dc96d844193225da7da63d5708550a428c291ce14a2b787d8",
+      "bytes": 844
+    },
+    {
+      "filename": "cf06_preflight_audit.json",
+      "sha256": "2195e89a0e631e002313c6ecfe939859684c11de92ff32cafe3b662b22cc7a3c",
+      "bytes": 5258
+    },
+    {
+      "filename": "cf06_probe_prompts_snapshot.json",
+      "sha256": "2326545639d63372ec6c30cc42399410da3658e26b24d4f5cccfcb86528ea5b5",
+      "bytes": 919
+    },
+    {
+      "filename": "cf06_request_bundle.json",
+      "sha256": "68887ca56de6a990fde781d512085ad63794f16f7cbde548ed0e925a1b41ad95",
+      "bytes": 694874
+    },
+    {
+      "filename": "execution_authorization_request.json",
+      "sha256": "fb19b28873fbf5e36066bea9936bd47bbb2cb78c8cdbb4b44099a608a16d2464",
+      "bytes": 1655
+    },
+    {
+      "filename": "opening_builder_source_snapshot.py",
+      "sha256": "f7d219de291add9dfbfe26a7558db7b383ccffd2763fdbd216de4cf36fbe3d20",
+      "bytes": 20361
+    },
+    {
+      "filename": "runner_source_snapshot.py",
+      "sha256": "ccf3e22089a31941e426fb95f48ff25def941d233afdbd84a4a5dbc7e52b80aa",
+      "bytes": 20926
+    }
+  ]
+}

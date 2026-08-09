@@ -1,0 +1,26 @@
+{
+  "opening_id": "V11-CF06-FULL-SCHEMA-API-OPENING-V1-20260809",
+  "status": "offline_preflight_passed_awaiting_explicit_api_authorization",
+  "pool_sizes": [
+    17,
+    50,
+    100,
+    120
+  ],
+  "probe_modes": [
+    "auto_function_call",
+    "none_schema_visibility"
+  ],
+  "scheduled_request_count": 10,
+  "documented_provider_function_limit": 128,
+  "documented_provider_context_length_tokens": 1000000,
+  "all_offline_preflight_checks_passed": true,
+  "provider_token_measurement_status": "pending_authorized_runtime",
+  "external_api_calls": 0,
+  "external_api_execution_authorized": false,
+  "tool_execution_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "cf06_status": "in_progress",
+  "core_frozen": false,
+  "next_gate": "explicit user authorization bound to the opening artifact hashes"
+}

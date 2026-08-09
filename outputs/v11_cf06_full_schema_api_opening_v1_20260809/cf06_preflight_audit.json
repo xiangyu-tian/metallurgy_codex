@@ -1,0 +1,144 @@
+{
+  "opening_id": "V11-CF06-FULL-SCHEMA-API-OPENING-V1-20260809",
+  "provider_constraints_snapshot": {
+    "verified_at": "2026-08-09",
+    "max_function_count": 128,
+    "context_length_tokens": 1000000,
+    "supported_tool_choice_values": [
+      "none",
+      "auto",
+      "required"
+    ],
+    "openai_function_calling_supported": true,
+    "sources": [
+      "https://api-docs.deepseek.com/api/create-chat-completion",
+      "https://api-docs.deepseek.com/guides/tool_calls",
+      "https://api-docs.deepseek.com/quick_start/pricing/"
+    ]
+  },
+  "token_measurement_contract": {
+    "primary_total_request_measure": "provider_usage_prompt_tokens",
+    "schema_exposure_measure": "probe_prompt_tokens_minus_same_prompt_no_tools_baseline",
+    "local_exact_provider_tokenizer_available": false,
+    "local_preflight_measures": [
+      "canonical_json_character_count",
+      "canonical_json_utf8_byte_count"
+    ],
+    "silent_token_estimation_allowed": false
+  },
+  "rows": [
+    {
+      "tool_count": 17,
+      "function_count_limit": 128,
+      "function_count_within_documented_limit": true,
+      "target_tool_present": true,
+      "unique_function_names": true,
+      "schema_parameter_field_count": 52,
+      "schema_character_count": 7867,
+      "schema_utf8_byte_count": 11264,
+      "provider_exact_schema_token_count": null,
+      "provider_token_measurement_status": "pending_authorized_runtime",
+      "request_metrics": {
+        "auto_function_call": {
+          "request_id": "CF06-POOL-17-AUTO-FUNCTION-CALL-V1",
+          "payload_character_count": 8198,
+          "payload_utf8_byte_count": 11739
+        },
+        "none_schema_visibility": {
+          "request_id": "CF06-POOL-17-NONE-SCHEMA-VISIBILITY-V1",
+          "payload_character_count": 8303,
+          "payload_utf8_byte_count": 11864
+        }
+      }
+    },
+    {
+      "tool_count": 50,
+      "function_count_limit": 128,
+      "function_count_within_documented_limit": true,
+      "target_tool_present": true,
+      "unique_function_names": true,
+      "schema_parameter_field_count": 118,
+      "schema_character_count": 21411,
+      "schema_utf8_byte_count": 33610,
+      "provider_exact_schema_token_count": null,
+      "provider_token_measurement_status": "pending_authorized_runtime",
+      "request_metrics": {
+        "auto_function_call": {
+          "request_id": "CF06-POOL-50-AUTO-FUNCTION-CALL-V1",
+          "payload_character_count": 21742,
+          "payload_utf8_byte_count": 34085
+        },
+        "none_schema_visibility": {
+          "request_id": "CF06-POOL-50-NONE-SCHEMA-VISIBILITY-V1",
+          "payload_character_count": 21847,
+          "payload_utf8_byte_count": 34210
+        }
+      }
+    },
+    {
+      "tool_count": 100,
+      "function_count_limit": 128,
+      "function_count_within_documented_limit": true,
+      "target_tool_present": true,
+      "unique_function_names": true,
+      "schema_parameter_field_count": 218,
+      "schema_character_count": 42313,
+      "schema_utf8_byte_count": 68605,
+      "provider_exact_schema_token_count": null,
+      "provider_token_measurement_status": "pending_authorized_runtime",
+      "request_metrics": {
+        "auto_function_call": {
+          "request_id": "CF06-POOL-100-AUTO-FUNCTION-CALL-V1",
+          "payload_character_count": 42644,
+          "payload_utf8_byte_count": 69080
+        },
+        "none_schema_visibility": {
+          "request_id": "CF06-POOL-100-NONE-SCHEMA-VISIBILITY-V1",
+          "payload_character_count": 42750,
+          "payload_utf8_byte_count": 69206
+        }
+      }
+    },
+    {
+      "tool_count": 120,
+      "function_count_limit": 128,
+      "function_count_within_documented_limit": true,
+      "target_tool_present": true,
+      "unique_function_names": true,
+      "schema_parameter_field_count": 258,
+      "schema_character_count": 50834,
+      "schema_utf8_byte_count": 83056,
+      "provider_exact_schema_token_count": null,
+      "provider_token_measurement_status": "pending_authorized_runtime",
+      "request_metrics": {
+        "auto_function_call": {
+          "request_id": "CF06-POOL-120-AUTO-FUNCTION-CALL-V1",
+          "payload_character_count": 51165,
+          "payload_utf8_byte_count": 83531
+        },
+        "none_schema_visibility": {
+          "request_id": "CF06-POOL-120-NONE-SCHEMA-VISIBILITY-V1",
+          "payload_character_count": 51271,
+          "payload_utf8_byte_count": 83657
+        }
+      }
+    }
+  ],
+  "checks": {
+    "catalog_manifest_hash_valid": true,
+    "all_catalog_artifact_hashes_valid": true,
+    "exact_pool_sizes": true,
+    "ordered_pool_nesting": true,
+    "target_present_all_sizes": true,
+    "function_names_unique_and_valid": true,
+    "all_sizes_within_documented_128_function_limit": true,
+    "request_count_is_10": true,
+    "no_api_key_in_bundle": true,
+    "no_fallback_or_tool_execution": true,
+    "provider_token_measurement_pending": true,
+    "external_api_calls_zero": true
+  },
+  "all_offline_preflight_checks_passed": true,
+  "context_feasibility_status": "pending_authorized_provider_measurement",
+  "external_api_calls": 0
+}
