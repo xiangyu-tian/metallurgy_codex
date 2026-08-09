@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "review_id": "V11-CF05-E3-A003-INDEPENDENT-REVIEW-V1-20260809",
+  "target_tool_id": "A003",
+  "expected_pool_sizes": [17, 50, 100, 120],
+  "expected_pool_repeats": ["A", "B", "C", "D", "E"],
+  "expected_conditions": [
+    ["none", 0, "none"],
+    ["lexical", 4, "lexical"],
+    ["lexical", 8, "lexical"],
+    ["functional_overlap", 4, "contract_mismatch"],
+    ["functional_overlap", 8, "contract_mismatch"]
+  ],
+  "expected_lexical_neighbor_ids": ["A005", "A004", "A002", "F020", "E3C003", "E3C010", "E3C018", "E3C019"],
+  "expected_contract_mismatch_neighbor_ids": ["E3C004", "E3C011", "E3C020", "E3C021", "E3C022", "E3C023", "E3C024", "E3C025"],
+  "known_direct_contract_overlap_ids": ["E3C004"],
+  "development_routing_run_allowed": false,
+  "confirmatory_use_allowed": false,
+  "external_api_calls_authorized": false,
+  "core_frozen": false,
+  "bindings": {
+    "pool_manifest": {
+      "path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_controlled_pool_manifest.json",
+      "sha256": "4053401bce5175ea66c38bad85a81c2e227e50bb5a36162c47d96e4c6fc1337f"
+    },
+    "pool_audit": {
+      "path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_pool_audit.json",
+      "sha256": "820a14c0e6d39bc9837a4b0120d2ba548826b962c85e6c120d759dd2143ff09a"
+    },
+    "neighbor_assignment": {
+      "path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_neighbor_assignment.json",
+      "sha256": "47d25aaca9c873440885419ac8bd8f18f53d82c9e4382d5452d2749da201c714"
+    },
+    "combined_relations": {
+      "path": "outputs/v11_cf05_e3_candidate_admission_batch3_v1_20260809/combined_relation_evidence_registry.json",
+      "sha256": "feacc1e8db0b93d2f0e6a2ae406dc66d41f88a0f153d049c7e192c7d728c469b"
+    },
+    "neighbor_matrix": {
+      "path": "outputs/v11_cf05_e3_neighbor_feasibility_v1_1_20260803/neighbor_candidate_matrix.json",
+      "sha256": "a3f1d22418a5d4564ef44a034e8289df5a32b9929ac879b7bbd735bb47d082bc"
+    },
+    "relation_evidence_batch1": {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch1_v1_20260803/candidate_relation_similarity.json",
+      "sha256": "91e4219393ed7f1bac8a0dc5b3c2c29dbe22635c3ee69928b58007526fddb0c8"
+    },
+    "relation_evidence_batch2": {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch2_v1_20260803/candidate_relation_evidence.json",
+      "sha256": "213cf4f789e894e98196d14725d42d0cf61e6fccf6c42c9db0097266ac6e6ed9"
+    },
+    "relation_evidence_batch3": {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch3_v1_20260803/candidate_relation_evidence.json",
+      "sha256": "f0f4964b1a65ff30ac8f1cbff00c65966c959863e7edc297d51c5888459599c1"
+    },
+    "runtime_results_batch1": {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch1_v1_20260803/candidate_runtime_contract_results.json",
+      "sha256": "350a25e78ea2f30706fc2ca0e381fa2b5b4ce79a3ed768b29c054afb34cb1e4d"
+    },
+    "runtime_results_batch2": {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch2_v1_20260803/candidate_runtime_contract_results.json",
+      "sha256": "3a71ec2ebd859d5abe7200261f78c25238844372bcbd1bb960c35e5130a4ac26"
+    },
+    "runtime_results_batch3": {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch3_v1_20260803/candidate_runtime_contract_results.json",
+      "sha256": "8a0317765d84474fba7162f20d1cea6829bec402d8e32ade7e73405f9007cc76"
+    },
+    "candidate_registry_batch1": {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch1_v1_20260803/candidate_registration_registry.json",
+      "sha256": "285283c5ab3099cdfe5f0f84452475ac6e868bf76db5d4695ebfe5fcb0d6623c"
+    },
+    "a003_taskset": {
+      "path": "outputs/e1b_benefit_taskset_v2_20260730/e1b_benefit_tasks_v2.json",
+      "sha256": "81d90e7f9cb638ff18614a6f49d09fafc391bbe304c9917674beab307cef43c8"
+    }
+  }
+}

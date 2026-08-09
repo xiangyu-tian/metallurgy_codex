@@ -1,0 +1,284 @@
+{
+  "rows": [
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "A005",
+      "relation_type": "lexical",
+      "relation_checks": {
+        "algorithmic_lexical_candidate": true,
+        "different_core_method": true
+      },
+      "runtime_checks": {
+        "case_count": null,
+        "all_contract_outcomes_passed": null,
+        "success_case_present": null,
+        "failure_case_present": null
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "A004",
+      "relation_type": "lexical",
+      "relation_checks": {
+        "algorithmic_lexical_candidate": true,
+        "different_core_method": true
+      },
+      "runtime_checks": {
+        "case_count": null,
+        "all_contract_outcomes_passed": null,
+        "success_case_present": null,
+        "failure_case_present": null
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "A002",
+      "relation_type": "lexical",
+      "relation_checks": {
+        "algorithmic_lexical_candidate": true,
+        "different_core_method": true
+      },
+      "runtime_checks": {
+        "case_count": null,
+        "all_contract_outcomes_passed": null,
+        "success_case_present": null,
+        "failure_case_present": null
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "F020",
+      "relation_type": "lexical",
+      "relation_checks": {
+        "algorithmic_lexical_candidate": true,
+        "different_core_method": true
+      },
+      "runtime_checks": {
+        "case_count": null,
+        "all_contract_outcomes_passed": null,
+        "success_case_present": null,
+        "failure_case_present": null
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C003",
+      "relation_type": "lexical",
+      "relation_checks": {
+        "algorithmic_lexical_candidate": true,
+        "different_core_method": true
+      },
+      "runtime_checks": {
+        "case_count": 2,
+        "all_contract_outcomes_passed": true,
+        "success_case_present": true,
+        "failure_case_present": true
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C010",
+      "relation_type": "lexical",
+      "relation_checks": {
+        "algorithmic_lexical_candidate": true,
+        "different_core_method": true
+      },
+      "runtime_checks": {
+        "case_count": 3,
+        "all_contract_outcomes_passed": true,
+        "success_case_present": true,
+        "failure_case_present": true
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C018",
+      "relation_type": "lexical",
+      "relation_checks": {
+        "algorithmic_lexical_candidate": true,
+        "different_core_method": true
+      },
+      "runtime_checks": {
+        "case_count": 3,
+        "all_contract_outcomes_passed": true,
+        "success_case_present": true,
+        "failure_case_present": true
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C019",
+      "relation_type": "lexical",
+      "relation_checks": {
+        "algorithmic_lexical_candidate": true,
+        "different_core_method": true
+      },
+      "runtime_checks": {
+        "case_count": 3,
+        "all_contract_outcomes_passed": true,
+        "success_case_present": true,
+        "failure_case_present": true
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C004",
+      "relation_type": "contract_mismatch",
+      "relation_checks": {
+        "same_scenario": true,
+        "same_core_method": true,
+        "not_algorithmic_lexical": true,
+        "provable_contract_mismatch": true,
+        "relation_evidence_passed": true
+      },
+      "runtime_checks": {
+        "case_count": 2,
+        "all_contract_outcomes_passed": true,
+        "success_case_present": true,
+        "failure_case_present": true
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C011",
+      "relation_type": "contract_mismatch",
+      "relation_checks": {
+        "same_scenario": true,
+        "same_core_method": true,
+        "not_algorithmic_lexical": true,
+        "provable_contract_mismatch": true,
+        "relation_evidence_passed": true
+      },
+      "runtime_checks": {
+        "case_count": 3,
+        "all_contract_outcomes_passed": true,
+        "success_case_present": true,
+        "failure_case_present": true
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C020",
+      "relation_type": "contract_mismatch",
+      "relation_checks": {
+        "same_scenario": true,
+        "same_core_method": true,
+        "not_algorithmic_lexical": true,
+        "provable_contract_mismatch": true,
+        "relation_evidence_passed": true
+      },
+      "runtime_checks": {
+        "case_count": 3,
+        "all_contract_outcomes_passed": true,
+        "success_case_present": true,
+        "failure_case_present": true
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C021",
+      "relation_type": "contract_mismatch",
+      "relation_checks": {
+        "same_scenario": true,
+        "same_core_method": true,
+        "not_algorithmic_lexical": true,
+        "provable_contract_mismatch": true,
+        "relation_evidence_passed": true
+      },
+      "runtime_checks": {
+        "case_count": 3,
+        "all_contract_outcomes_passed": true,
+        "success_case_present": true,
+        "failure_case_present": true
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C022",
+      "relation_type": "contract_mismatch",
+      "relation_checks": {
+        "same_scenario": true,
+        "same_core_method": true,
+        "not_algorithmic_lexical": true,
+        "provable_contract_mismatch": true,
+        "relation_evidence_passed": true
+      },
+      "runtime_checks": {
+        "case_count": 3,
+        "all_contract_outcomes_passed": true,
+        "success_case_present": true,
+        "failure_case_present": true
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C023",
+      "relation_type": "contract_mismatch",
+      "relation_checks": {
+        "same_scenario": true,
+        "same_core_method": true,
+        "not_algorithmic_lexical": true,
+        "provable_contract_mismatch": true,
+        "relation_evidence_passed": true
+      },
+      "runtime_checks": {
+        "case_count": 3,
+        "all_contract_outcomes_passed": true,
+        "success_case_present": true,
+        "failure_case_present": true
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C024",
+      "relation_type": "contract_mismatch",
+      "relation_checks": {
+        "same_scenario": true,
+        "same_core_method": true,
+        "not_algorithmic_lexical": true,
+        "provable_contract_mismatch": true,
+        "relation_evidence_passed": true
+      },
+      "runtime_checks": {
+        "case_count": 3,
+        "all_contract_outcomes_passed": true,
+        "success_case_present": true,
+        "failure_case_present": true
+      },
+      "review_passed": true
+    },
+    {
+      "target_tool_id": "A003",
+      "candidate_tool_id": "E3C025",
+      "relation_type": "contract_mismatch",
+      "relation_checks": {
+        "same_scenario": true,
+        "same_core_method": true,
+        "not_algorithmic_lexical": true,
+        "provable_contract_mismatch": true,
+        "relation_evidence_passed": true
+      },
+      "runtime_checks": {
+        "case_count": 3,
+        "all_contract_outcomes_passed": true,
+        "success_case_present": true,
+        "failure_case_present": true
+      },
+      "review_passed": true
+    }
+  ]
+}

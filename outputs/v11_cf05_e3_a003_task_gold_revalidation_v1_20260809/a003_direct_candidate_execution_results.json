@@ -1,0 +1,292 @@
+{
+  "rows": [
+    {
+      "task_id": "E1B2-A003-001",
+      "candidate_tool_id": "E3C004",
+      "input": {
+        "formula": "Fe2O3"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 159.6882,
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "expected_molar_mass": 159.687,
+      "absolute_tolerance": 0.0001,
+      "relative_tolerance": 0.0,
+      "effective_tolerance": 0.0001,
+      "candidate_molar_mass": 159.6882,
+      "absolute_error": 0.0011999999999829924,
+      "unit_matches": true,
+      "directly_acceptable": false
+    },
+    {
+      "task_id": "E1B2-A003-002",
+      "candidate_tool_id": "E3C004",
+      "input": {
+        "formula": "Fe2O3"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 159.6882,
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "expected_molar_mass": 159.687,
+      "absolute_tolerance": 0.1,
+      "relative_tolerance": 0.0,
+      "effective_tolerance": 0.1,
+      "candidate_molar_mass": 159.6882,
+      "absolute_error": 0.0011999999999829924,
+      "unit_matches": true,
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A003-003",
+      "candidate_tool_id": "E3C004",
+      "input": {
+        "formula": "H2SO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 98.07848,
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "expected_molar_mass": 98.072,
+      "absolute_tolerance": 0.0001,
+      "relative_tolerance": 0.0,
+      "effective_tolerance": 0.0001,
+      "candidate_molar_mass": 98.07848,
+      "absolute_error": 0.0064799999999962665,
+      "unit_matches": true,
+      "directly_acceptable": false
+    },
+    {
+      "task_id": "E1B2-A003-004",
+      "candidate_tool_id": "E3C004",
+      "input": {
+        "formula": "H2SO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 98.07848,
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "expected_molar_mass": 98.072,
+      "absolute_tolerance": 0.1,
+      "relative_tolerance": 0.0,
+      "effective_tolerance": 0.1,
+      "candidate_molar_mass": 98.07848,
+      "absolute_error": 0.0064799999999962665,
+      "unit_matches": true,
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A003-005",
+      "candidate_tool_id": "E3C004",
+      "input": {
+        "formula": "CaCO3"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 100.0869,
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "expected_molar_mass": 100.086,
+      "absolute_tolerance": 0.0001,
+      "relative_tolerance": 0.0,
+      "effective_tolerance": 0.0001,
+      "candidate_molar_mass": 100.0869,
+      "absolute_error": 0.0009000000000014552,
+      "unit_matches": true,
+      "directly_acceptable": false
+    },
+    {
+      "task_id": "E1B2-A003-006",
+      "candidate_tool_id": "E3C004",
+      "input": {
+        "formula": "CaCO3"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 100.0869,
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "expected_molar_mass": 100.086,
+      "absolute_tolerance": 0.1,
+      "relative_tolerance": 0.0,
+      "effective_tolerance": 0.1,
+      "candidate_molar_mass": 100.0869,
+      "absolute_error": 0.0009000000000014552,
+      "unit_matches": true,
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A003-007",
+      "candidate_tool_id": "E3C004",
+      "input": {
+        "formula": "Fe3O4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 231.5326,
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "expected_molar_mass": 231.531,
+      "absolute_tolerance": 0.0001,
+      "relative_tolerance": 0.0,
+      "effective_tolerance": 0.0001,
+      "candidate_molar_mass": 231.5326,
+      "absolute_error": 0.001599999999996271,
+      "unit_matches": true,
+      "directly_acceptable": false
+    },
+    {
+      "task_id": "E1B2-A003-008",
+      "candidate_tool_id": "E3C004",
+      "input": {
+        "formula": "Fe3O4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 231.5326,
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "expected_molar_mass": 231.531,
+      "absolute_tolerance": 0.1,
+      "relative_tolerance": 0.0,
+      "effective_tolerance": 0.1,
+      "candidate_molar_mass": 231.5326,
+      "absolute_error": 0.001599999999996271,
+      "unit_matches": true,
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A003-009",
+      "candidate_tool_id": "E3C004",
+      "input": {
+        "formula": "CuSO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 159.6086,
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "expected_molar_mass": 159.602,
+      "absolute_tolerance": 0.0001,
+      "relative_tolerance": 0.0,
+      "effective_tolerance": 0.0001,
+      "candidate_molar_mass": 159.6086,
+      "absolute_error": 0.006599999999991724,
+      "unit_matches": true,
+      "directly_acceptable": false
+    },
+    {
+      "task_id": "E1B2-A003-010",
+      "candidate_tool_id": "E3C004",
+      "input": {
+        "formula": "CuSO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 159.6086,
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "expected_molar_mass": 159.602,
+      "absolute_tolerance": 0.1,
+      "relative_tolerance": 0.0,
+      "effective_tolerance": 0.1,
+      "candidate_molar_mass": 159.6086,
+      "absolute_error": 0.006599999999991724,
+      "unit_matches": true,
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A003-011",
+      "candidate_tool_id": "E3C004",
+      "input": {
+        "formula": "(NH4)2SO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 132.13952,
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "expected_molar_mass": 132.134,
+      "absolute_tolerance": 0.0001,
+      "relative_tolerance": 0.0,
+      "effective_tolerance": 0.0001,
+      "candidate_molar_mass": 132.13952,
+      "absolute_error": 0.005520000000018399,
+      "unit_matches": true,
+      "directly_acceptable": false
+    },
+    {
+      "task_id": "E1B2-A003-012",
+      "candidate_tool_id": "E3C004",
+      "input": {
+        "formula": "(NH4)2SO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "molar_mass": 132.13952,
+          "unit": "g/mol"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "expected_molar_mass": 132.134,
+      "absolute_tolerance": 0.1,
+      "relative_tolerance": 0.0,
+      "effective_tolerance": 0.1,
+      "candidate_molar_mass": 132.13952,
+      "absolute_error": 0.005520000000018399,
+      "unit_matches": true,
+      "directly_acceptable": true
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "revalidation_id": "V11-CF05-E3-A003-TASK-GOLD-REVALIDATION-V1-20260809",
+  "artifact_count": 4,
+  "artifacts": [
+    {
+      "filename": "a003_direct_candidate_execution_results.json",
+      "sha256": "1b66a25cf15348d241552dd0b20047746d64dbb176e1bcbeb2a5b7e68fc403fa",
+      "bytes": 7797
+    },
+    {
+      "filename": "a003_task_acceptable_tools_registry.json",
+      "sha256": "bf481d4f98ca8627af4059509b5f54d54f6b9aab9c9e70d45bc1fd86cc5b49ec",
+      "bytes": 21864
+    },
+    {
+      "filename": "a003_task_gold_revalidation_config_snapshot.json",
+      "sha256": "f102ef2a908df7ad6e4a13a1ac327abb090530e258800632043de7c7f5dd8493",
+      "bytes": 2391
+    },
+    {
+      "filename": "a003_task_gold_revalidation_report.json",
+      "sha256": "b401e782fd081f825151b4073f7863509c614ed94c635cd84de40b7423d97df6",
+      "bytes": 1014
+    }
+  ]
+}

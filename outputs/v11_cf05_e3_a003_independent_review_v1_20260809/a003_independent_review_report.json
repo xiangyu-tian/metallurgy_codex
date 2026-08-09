@@ -1,0 +1,18 @@
+{
+  "review_id": "V11-CF05-E3-A003-INDEPENDENT-REVIEW-V1-20260809",
+  "status": "pool_and_relation_review_passed_task_gold_revalidation_required",
+  "target_tool_id": "A003",
+  "pool_structure_review": "passed",
+  "relation_separation_review": "passed",
+  "runtime_evidence_review": "passed",
+  "relation_review_count": 16,
+  "lexical_relation_count": 8,
+  "contract_mismatch_relation_count": 8,
+  "task_acceptable_set_review": "stale_revalidation_required",
+  "development_routing_run_allowed": false,
+  "confirmatory_use_allowed": false,
+  "external_api_calls": 0,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "next_gate": "recompute A003 task-level acceptable tool sets against admitted candidates before any routing run"
+}

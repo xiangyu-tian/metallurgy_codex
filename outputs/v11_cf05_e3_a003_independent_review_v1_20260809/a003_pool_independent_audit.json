@@ -1,0 +1,12 @@
+{
+  "record_count": 100,
+  "expected_grid_cell_count": 100,
+  "pool_id_unique": true,
+  "target_present_once": true,
+  "exact_neighbor_dose": true,
+  "neighbor_categories_disjoint": true,
+  "paired_neutral_bases_match": true,
+  "paired_neighbor_slots_match": true,
+  "nested_across_sizes": true,
+  "independent_pool_review_passed": true
+}
