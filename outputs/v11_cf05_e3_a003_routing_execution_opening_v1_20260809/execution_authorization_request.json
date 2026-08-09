@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A003-ROUTING-EXECUTION-OPENING-V1-20260809",
+  "decision": "pending_user_authorization",
+  "eligible_for_external_execution_authorization": true,
+  "external_data_sharing_authorized": false,
+  "external_api_execution_authorized": false,
+  "tool_execution_allowed": false,
+  "proposed_external_scope": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "request_count": 96,
+    "content": "two development task texts and the bound schema views referenced by 96 cells",
+    "independent_validation_split_included": false,
+    "metallurgy_tool_execution": false
+  },
+  "required_authorization": "explicitly approve sending the frozen A003 development task texts and schema views to the configured DeepSeek API for one non-confirmatory selector run"
+}

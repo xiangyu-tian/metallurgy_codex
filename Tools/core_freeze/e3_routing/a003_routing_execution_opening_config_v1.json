@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A003-ROUTING-EXECUTION-OPENING-V1-20260809",
+  "source_opening_id": "V11-CF05-E3-A003-ROUTING-DEVELOPMENT-OPENING-V1-20260809",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "temperature": 0,
+  "max_tokens": 256,
+  "thinking": "disabled",
+  "tool_choice": "auto",
+  "expected_cell_count": 96,
+  "expected_method_cell_count": 24,
+  "expected_full_schema_view_sizes": [17, 120],
+  "expected_top_k": 5,
+  "methods": ["full_schema", "lexical_top5", "dense_top5", "hierarchical"],
+  "development_only": true,
+  "request_blueprints_materialization_allowed": true,
+  "external_api_calls_authorized": false,
+  "external_data_sharing_authorized": false,
+  "tool_execution_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "independent_validation_split_access_allowed": false,
+  "gold_visible_to_router": false,
+  "core_frozen": false,
+  "execution_authorization_file": "a003_routing_execution_authorization_v1.json",
+  "bindings": {
+    "source_opening_manifest": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/artifact_manifest.json",
+      "sha256": "cb344949ff94ff0b78638e1fe79d91a81626868c0df77c4b0882ced180dcd862"
+    },
+    "input_tasks": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/a003_routing_input_tasks.json",
+      "sha256": "cfd01426d49bb7a83350dbbf20814902a4624a7fc5b98b969119e2cedf727fd5"
+    },
+    "selected_pools": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/a003_routing_selected_pools.json",
+      "sha256": "93d6b6a46c47e573db135db0c82d8d06a068c54040f451fe7a7d594137018064"
+    },
+    "run_cells": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/a003_routing_run_cells.json",
+      "sha256": "5040377376f34a07f18378d07a301e01fc60bedcf15edee8659f3129bb7ccbfa"
+    },
+    "selector_prompt": {
+      "path": "Tools/core_freeze/e3_routing/a003_routing_prompt_v1.json",
+      "sha256": "33b09701249e4908d6e50240de981182b75f61da6cf5a2353a38b04867899bf3"
+    },
+    "pool_schema_registry": {
+      "path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_pool_schema_registry.json",
+      "sha256": "ca7e4e5a5c9080d14e1eb08a54fa6f6644fd1ecac9f47a4ddc48237f59ad3faf"
+    },
+    "lexical_manifest": {
+      "path": "outputs/v11_cf05_e3_a003_lexical_top5_candidate_v1_20260809/artifact_manifest.json",
+      "sha256": "9f4858fa53edb48625dcaa27e1e429c3f67acf0359de9b4c5733b750eff4ddc8"
+    },
+    "lexical_views": {
+      "path": "outputs/v11_cf05_e3_a003_lexical_top5_candidate_v1_20260809/a003_lexical_top5_candidate_views.json",
+      "sha256": "e6f598c9ddf97ff8bb733389f2b7600cceb954d16dfeade1183a9e55edd505d6"
+    },
+    "lexical_readiness": {
+      "path": "outputs/v11_cf05_e3_a003_lexical_top5_candidate_v1_20260809/a003_lexical_top5_readiness_report.json",
+      "sha256": "eaf11160552641f3fe4a2723e32ccd7493f008b78cfbd0d7af4f99622584dd2d"
+    },
+    "dense_manifest": {
+      "path": "outputs/v11_cf05_e3_a003_dense_top5_candidate_v1_20260809/artifact_manifest.json",
+      "sha256": "0e1a63caa5ab6a035aa09a7d95e5c0bd451f7e2a3468d7f71c07e5048e9d3301"
+    },
+    "dense_views": {
+      "path": "outputs/v11_cf05_e3_a003_dense_top5_candidate_v1_20260809/a003_dense_top5_candidate_views.json",
+      "sha256": "a9cc8bc18a267eec170d4b0046c479f16ba068672b10748ae5b6f854d2578c41"
+    },
+    "dense_readiness": {
+      "path": "outputs/v11_cf05_e3_a003_dense_top5_candidate_v1_20260809/a003_dense_top5_readiness_report.json",
+      "sha256": "0a9ae3a8d968d53eae797b1c32b0d6e36165794f6237d8b228d61a98b44c8825"
+    },
+    "hierarchical_manifest": {
+      "path": "outputs/v11_cf05_e3_a003_hierarchical_top5_candidate_v1_20260809/artifact_manifest.json",
+      "sha256": "5cecaf32433c0f59f626021ee11e4e11391096b51a29ae362d20526879f0f0e8"
+    },
+    "hierarchical_views": {
+      "path": "outputs/v11_cf05_e3_a003_hierarchical_top5_candidate_v1_20260809/a003_hierarchical_top5_candidate_views.json",
+      "sha256": "66ee56fb611018d42a2ae5726bdcd09674ba62aea6fb654401681af66d518d3c"
+    },
+    "hierarchical_readiness": {
+      "path": "outputs/v11_cf05_e3_a003_hierarchical_top5_candidate_v1_20260809/a003_hierarchical_top5_readiness_report.json",
+      "sha256": "021246c52fd90e0612b10abd3c65d14485216960a9eea9d464e6f0ee5eb3770c"
+    }
+  }
+}

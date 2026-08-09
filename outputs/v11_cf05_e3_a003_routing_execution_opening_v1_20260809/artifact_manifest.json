@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A003-ROUTING-EXECUTION-OPENING-V1-20260809",
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "filename": "a003_routing_execution_config_snapshot.json",
+      "sha256": "daa056ddc10469ebe652e54de3f25cab0b57bf5c97ad8fdf4b5f48fdcb9b78f9",
+      "bytes": 4522
+    },
+    {
+      "filename": "a003_routing_execution_preflight.json",
+      "sha256": "2e19381fe9e85987a90e02f78c99b8365653694772e9141b50ac1225bfc00136",
+      "bytes": 1647
+    },
+    {
+      "filename": "a003_routing_request_blueprints.json",
+      "sha256": "3d4c1bd8afc7acd80f69d6458dd439cf986f9052d38924b47ce0cb1a45c5b17a",
+      "bytes": 193791
+    },
+    {
+      "filename": "a003_routing_schema_views.json",
+      "sha256": "85fcb1673253d5f892d6d3e8645a81f43bc3fac07f827d08d3dcd279435416c7",
+      "bytes": 1079643
+    },
+    {
+      "filename": "execution_authorization_request.json",
+      "sha256": "9bc2cead75bfcd178770a35c5b78b2b7723eb370ad1a875e10aeaa2598f37af4",
+      "bytes": 841
+    }
+  ]
+}

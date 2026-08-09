@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A003-ROUTING-EXECUTION-OPENING-V1-20260809",
+  "opening_status": "prepared_eligible_pending_explicit_authorization",
+  "checks": {
+    "all_bound_hashes_valid": true,
+    "all_four_methods_ready": true,
+    "exact_96_request_blueprints": true,
+    "exact_24_cells_per_method": true,
+    "full_schema_counts_are_17_or_120": true,
+    "top5_methods_have_exactly_5_schemas": true,
+    "all_selected_tools_within_bound_pool": true,
+    "gold_fields_absent": true,
+    "api_key_absent": true,
+    "external_api_calls_zero": true,
+    "tool_execution_zero": true
+  },
+  "methods": [
+    {
+      "method": "full_schema",
+      "cell_count": 24,
+      "schema_counts": [
+        17,
+        120
+      ],
+      "candidate_source": "bound_pool_full_schema",
+      "ready": true
+    },
+    {
+      "method": "lexical_top5",
+      "cell_count": 24,
+      "schema_counts": [
+        5
+      ],
+      "candidate_source": "hash_bound_candidate_views",
+      "ready": true
+    },
+    {
+      "method": "dense_top5",
+      "cell_count": 24,
+      "schema_counts": [
+        5
+      ],
+      "candidate_source": "hash_bound_candidate_views",
+      "ready": true
+    },
+    {
+      "method": "hierarchical",
+      "cell_count": 24,
+      "schema_counts": [
+        5
+      ],
+      "candidate_source": "hash_bound_candidate_views",
+      "ready": true
+    }
+  ],
+  "schema_view_count": 45,
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false
+}
