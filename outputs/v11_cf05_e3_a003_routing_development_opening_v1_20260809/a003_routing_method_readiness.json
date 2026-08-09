@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A003-ROUTING-DEVELOPMENT-OPENING-V1-20260809",
+  "required_method_count": 4,
+  "ready_method_count": 1,
+  "all_methods_ready": false,
+  "external_execution_gate_open": false,
+  "methods": [
+    {
+      "method": "full_schema",
+      "top_k": null,
+      "implementation_status": "ready",
+      "ready_for_external_development_run": true,
+      "basis": "CF-06 accepted native function-calling payloads at 17 and 120 tools",
+      "required_runtime_output": null
+    },
+    {
+      "method": "lexical_top5",
+      "top_k": 5,
+      "implementation_status": "pending_bound_catalog_implementation",
+      "ready_for_external_development_run": false,
+      "basis": "legacy lexical-card-v1 is scoped to the original registry and is not a frozen 120-tool retriever",
+      "required_runtime_output": [
+        "ordered_candidate_tool_ids",
+        "retrieval_scores",
+        "retrieval_latency_ms",
+        "retriever_config_sha256"
+      ]
+    },
+    {
+      "method": "dense_top5",
+      "top_k": 5,
+      "implementation_status": "pending_implementation",
+      "ready_for_external_development_run": false,
+      "basis": "no hash-frozen dense retriever and embedding snapshot exists",
+      "required_runtime_output": [
+        "ordered_candidate_tool_ids",
+        "retrieval_scores",
+        "retrieval_latency_ms",
+        "retriever_config_sha256"
+      ]
+    },
+    {
+      "method": "hierarchical",
+      "top_k": 5,
+      "implementation_status": "pending_implementation",
+      "ready_for_external_development_run": false,
+      "basis": "no hash-frozen domain-capability-applicability router exists",
+      "required_runtime_output": [
+        "ordered_candidate_tool_ids",
+        "retrieval_scores",
+        "retrieval_latency_ms",
+        "retriever_config_sha256"
+      ]
+    }
+  ],
+  "next_gate": "implement and hash-freeze lexical_top5, dense_top5, and hierarchical; then rebuild this package before requesting external execution authorization"
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A003-ROUTING-DEVELOPMENT-OPENING-V1-20260809",
+  "opening_status": "prepared_blocked_pending_method_implementation",
+  "design": {
+    "task_count": 2,
+    "pool_count": 12,
+    "method_count": 4,
+    "model_run_repeat_count": 1,
+    "cell_count": 96,
+    "counts_by_method": {
+      "full_schema": 24,
+      "lexical_top5": 24,
+      "dense_top5": 24,
+      "hierarchical": 24
+    },
+    "counts_by_condition": {
+      "none-0": 32,
+      "lexical-8": 32,
+      "functional_overlap-8": 32
+    }
+  },
+  "checks": {
+    "all_bound_hashes_valid": true,
+    "strict_loose_task_pair_valid": true,
+    "pool_grid_complete": true,
+    "cell_grid_complete": true,
+    "gold_fields_absent_from_run_cells": true,
+    "api_key_absent": true,
+    "tool_execution_disabled": true,
+    "external_api_calls_zero": true,
+    "all_methods_ready": false
+  },
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false
+}

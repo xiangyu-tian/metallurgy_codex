@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A003-ROUTING-DEVELOPMENT-OPENING-V1-20260809",
+  "router_visible": false,
+  "use": "offline_scoring_only",
+  "task_count": 2,
+  "tasks": [
+    {
+      "task_id": "E1B2-A003-001",
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 159.687,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "acceptable_tools": [
+        "A003"
+      ],
+      "alternative_success_must_be_reported": true
+    },
+    {
+      "task_id": "E1B2-A003-002",
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 159.687,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "alternative_success_must_be_reported": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A003-ROUTING-DEVELOPMENT-OPENING-V1-20260809",
+  "decision": "pending_not_eligible",
+  "eligible_for_external_execution_authorization": false,
+  "blocking_reason": "three preregistered routing methods lack hash-frozen implementations",
+  "required_before_authorization": [
+    "lexical_top5 implementation passes the bound 120-tool registry tests",
+    "dense_top5 implementation and embedding snapshot are hash-frozen",
+    "hierarchical implementation and taxonomy/config are hash-frozen",
+    "all four methods produce deterministic candidate views on the 96-cell opening grid",
+    "a separate user authorization explicitly approves sending the frozen inputs and schemas"
+  ],
+  "external_data_sharing_authorized": false,
+  "external_api_execution_authorized": false,
+  "tool_execution_allowed": false,
+  "request_payloads_materialized": false,
+  "bindings": {
+    "a003_routing_development_config_snapshot.json": "96f3d6df40fb9cfce99f7f3a7bea8757f03e8171226199a56d1931424d2ecac5",
+    "a003_routing_input_tasks.json": "cfd01426d49bb7a83350dbbf20814902a4624a7fc5b98b969119e2cedf727fd5",
+    "a003_routing_method_readiness.json": "c8d7fba6a99cc6432e0e25c06780182ae0357af72767fed68fa58da01d1e3928",
+    "a003_routing_opening_preflight.json": "d2a603526ccea3b583c2f5570845f7f61aefcc47a203cf9c1e5a82f175e2ad5f",
+    "a003_routing_prompt_snapshot.json": "2114aa812574e50c26b383dd4fe1afac6c354d9edd534b0c524bb31c9d81fd35",
+    "a003_routing_run_cells.json": "5040377376f34a07f18378d07a301e01fc60bedcf15edee8659f3129bb7ccbfa",
+    "a003_routing_scoring_registry.json": "b1932cd6e3d9c651a1d8ea771977499ea5c170457bc62155a9001e674f3bf56e",
+    "a003_routing_selected_pools.json": "93d6b6a46c47e573db135db0c82d8d06a068c54040f451fe7a7d594137018064"
+  }
+}

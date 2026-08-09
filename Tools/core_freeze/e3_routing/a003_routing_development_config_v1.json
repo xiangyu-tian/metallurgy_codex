@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A003-ROUTING-DEVELOPMENT-OPENING-V1-20260809",
+  "target_tool_id": "A003",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "temperature": 0,
+  "max_tokens": 256,
+  "thinking": "disabled",
+  "selected_task_ids": ["E1B2-A003-001", "E1B2-A003-002"],
+  "selected_pool_sizes": [17, 120],
+  "selected_pool_repeats": ["A", "B"],
+  "selected_conditions": [
+    {"near_neighbor_type": "none", "near_neighbor_count": 0},
+    {"near_neighbor_type": "lexical", "near_neighbor_count": 8},
+    {"near_neighbor_type": "functional_overlap", "near_neighbor_count": 8}
+  ],
+  "methods": ["full_schema", "lexical_top5", "dense_top5", "hierarchical"],
+  "top_k": 5,
+  "model_run_repeats": [1],
+  "scheduled_cell_count": 96,
+  "development_only": true,
+  "tool_execution_allowed": false,
+  "external_api_calls_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "formal_pool_use_allowed": false,
+  "gold_visible_to_router": false,
+  "independent_validation_split_access_allowed": false,
+  "core_frozen": false,
+  "method_readiness_policy": {
+    "full_schema": {
+      "implementation_status": "ready",
+      "basis": "CF-06 accepted native function-calling payloads at 17 and 120 tools"
+    },
+    "lexical_top5": {
+      "implementation_status": "pending_bound_catalog_implementation",
+      "basis": "legacy lexical-card-v1 is scoped to the original registry and is not a frozen 120-tool retriever"
+    },
+    "dense_top5": {
+      "implementation_status": "pending_implementation",
+      "basis": "no hash-frozen dense retriever and embedding snapshot exists"
+    },
+    "hierarchical": {
+      "implementation_status": "pending_implementation",
+      "basis": "no hash-frozen domain-capability-applicability router exists"
+    }
+  },
+  "execution_authorization_file": "a003_routing_execution_authorization_v1.json",
+  "bindings": {
+    "controlled_pool_manifest": {
+      "path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_controlled_pool_manifest.json",
+      "sha256": "4053401bce5175ea66c38bad85a81c2e227e50bb5a36162c47d96e4c6fc1337f"
+    },
+    "pool_schema_registry": {
+      "path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_pool_schema_registry.json",
+      "sha256": "ca7e4e5a5c9080d14e1eb08a54fa6f6644fd1ecac9f47a4ddc48237f59ad3faf"
+    },
+    "taskset": {
+      "path": "outputs/e1b_benefit_taskset_v2_20260730/e1b_benefit_tasks_v2.json",
+      "sha256": "81d90e7f9cb638ff18614a6f49d09fafc391bbe304c9917674beab307cef43c8"
+    },
+    "acceptable_tools_registry": {
+      "path": "outputs/v11_cf05_e3_a003_task_gold_revalidation_v1_20260809/a003_task_acceptable_tools_registry.json",
+      "sha256": "bf481d4f98ca8627af4059509b5f54d54f6b9aab9c9e70d45bc1fd86cc5b49ec"
+    },
+    "task_gold_revalidation_report": {
+      "path": "outputs/v11_cf05_e3_a003_task_gold_revalidation_v1_20260809/a003_task_gold_revalidation_report.json",
+      "sha256": "b401e782fd081f825151b4073f7863509c614ed94c635cd84de40b7423d97df6"
+    },
+    "cf06_runtime_report": {
+      "path": "outputs/v11_cf06_full_schema_api_runtime_r1_20260809/cf06_runtime_report.json",
+      "sha256": "e54425d0040afe5b63ca69f62be8d0f7439d2f19f2ec01d933323c37962a23bd"
+    },
+    "legacy_lexical_retriever": {
+      "path": "Tools/models_core/candidate_retrieval.py",
+      "sha256": "baf8c0bca7d0ee3f65b1ac0e7b3a8b9c8c4a292a5401fec897580b3deb4a7322"
+    }
+  }
+}

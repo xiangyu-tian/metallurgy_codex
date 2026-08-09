@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A003-ROUTING-DEVELOPMENT-OPENING-V1-20260809",
+  "router_visible": true,
+  "gold_fields_present": false,
+  "task_count": 2,
+  "tasks": [
+    {
+      "task_id": "E1B2-A003-001",
+      "task_pair_id": "PAIR-E1B2-A003-001",
+      "base_task_group_id": "A003-01",
+      "precision_policy": "strict_versioned",
+      "problem_text": "使用冻结原子量（Fe=55.845，O=15.999）计算 Fe2O3 的摩尔质量。按上述原子量计算并保留4位小数。"
+    },
+    {
+      "task_id": "E1B2-A003-002",
+      "task_pair_id": "PAIR-E1B2-A003-002",
+      "base_task_group_id": "A003-01",
+      "precision_policy": "approximate_educational",
+      "problem_text": "使用冻结原子量（Fe=55.845，O=15.999）计算 Fe2O3 的摩尔质量。给出近似结果，允许绝对误差不超过0.1 g/mol。"
+    }
+  ]
+}
