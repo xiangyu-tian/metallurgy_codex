@@ -1,0 +1,1211 @@
+{
+  "schema_version": "1.0",
+  "implementation_id": "V11-CF05-E3-A003-DENSE-TOP5-CANDIDATE-V1-20260809",
+  "method": "dense_top5",
+  "router_visible_gold": false,
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "view_count": 24,
+  "views": [
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.067,
+      "candidate_tool_ids": [
+        "A003",
+        "D010",
+        "B003",
+        "E3C005",
+        "D002"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.63541186,
+          "rank": 1
+        },
+        {
+          "tool_id": "D010",
+          "score": 0.45098132,
+          "rank": 2
+        },
+        {
+          "tool_id": "B003",
+          "score": 0.44904202,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C005",
+          "score": 0.44699913,
+          "rank": 4
+        },
+        {
+          "tool_id": "D002",
+          "score": 0.43468803,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "d22d825146d252298757a6979cc1e7cd58f5c300459d4a3a7718a571393a98a8",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.0753,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.63541186,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 0.59235835,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 0.59144264,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 0.56889409,
+          "rank": 4
+        },
+        {
+          "tool_id": "A004",
+          "score": 0.44793332,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "d22d825146d252298757a6979cc1e7cd58f5c300459d4a3a7718a571393a98a8",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.1284,
+      "candidate_tool_ids": [
+        "E3C022",
+        "E3C011",
+        "A003",
+        "E3C004",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "E3C022",
+          "score": 0.65667617,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 0.65310395,
+          "rank": 2
+        },
+        {
+          "tool_id": "A003",
+          "score": 0.63541186,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 0.54103673,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 0.49031568,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "d22d825146d252298757a6979cc1e7cd58f5c300459d4a3a7718a571393a98a8",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.14,
+      "candidate_tool_ids": [
+        "A003",
+        "B017",
+        "F001",
+        "B018",
+        "D004"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.63541186,
+          "rank": 1
+        },
+        {
+          "tool_id": "B017",
+          "score": 0.45390046,
+          "rank": 2
+        },
+        {
+          "tool_id": "F001",
+          "score": 0.44624066,
+          "rank": 3
+        },
+        {
+          "tool_id": "B018",
+          "score": 0.44114858,
+          "rank": 4
+        },
+        {
+          "tool_id": "D004",
+          "score": 0.44002897,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "d22d825146d252298757a6979cc1e7cd58f5c300459d4a3a7718a571393a98a8",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.0576,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.63541186,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 0.59235835,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 0.59144264,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 0.56889409,
+          "rank": 4
+        },
+        {
+          "tool_id": "A004",
+          "score": 0.44793332,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "d22d825146d252298757a6979cc1e7cd58f5c300459d4a3a7718a571393a98a8",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.0661,
+      "candidate_tool_ids": [
+        "E3C022",
+        "E3C011",
+        "A003",
+        "E3C004",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "E3C022",
+          "score": 0.65667617,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 0.65310395,
+          "rank": 2
+        },
+        {
+          "tool_id": "A003",
+          "score": 0.63541186,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 0.54103673,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 0.49031568,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "d22d825146d252298757a6979cc1e7cd58f5c300459d4a3a7718a571393a98a8",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.5459,
+      "candidate_tool_ids": [
+        "A003",
+        "C008",
+        "D014",
+        "B024",
+        "F008"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.63541186,
+          "rank": 1
+        },
+        {
+          "tool_id": "C008",
+          "score": 0.51732886,
+          "rank": 2
+        },
+        {
+          "tool_id": "D014",
+          "score": 0.51689684,
+          "rank": 3
+        },
+        {
+          "tool_id": "B024",
+          "score": 0.51175094,
+          "rank": 4
+        },
+        {
+          "tool_id": "F008",
+          "score": 0.48910904,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "d22d825146d252298757a6979cc1e7cd58f5c300459d4a3a7718a571393a98a8",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.1921,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.63541186,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 0.59235835,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 0.59144264,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 0.56889409,
+          "rank": 4
+        },
+        {
+          "tool_id": "C008",
+          "score": 0.51732886,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "d22d825146d252298757a6979cc1e7cd58f5c300459d4a3a7718a571393a98a8",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.1872,
+      "candidate_tool_ids": [
+        "E3C022",
+        "E3C011",
+        "A003",
+        "E3C004",
+        "C008"
+      ],
+      "candidates": [
+        {
+          "tool_id": "E3C022",
+          "score": 0.65667617,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 0.65310395,
+          "rank": 2
+        },
+        {
+          "tool_id": "A003",
+          "score": 0.63541186,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 0.54103673,
+          "rank": 4
+        },
+        {
+          "tool_id": "C008",
+          "score": 0.51732886,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "d22d825146d252298757a6979cc1e7cd58f5c300459d4a3a7718a571393a98a8",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.1822,
+      "candidate_tool_ids": [
+        "A003",
+        "C008",
+        "D014",
+        "B024",
+        "F008"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.63541186,
+          "rank": 1
+        },
+        {
+          "tool_id": "C008",
+          "score": 0.51732886,
+          "rank": 2
+        },
+        {
+          "tool_id": "D014",
+          "score": 0.51689684,
+          "rank": 3
+        },
+        {
+          "tool_id": "B024",
+          "score": 0.51175094,
+          "rank": 4
+        },
+        {
+          "tool_id": "F008",
+          "score": 0.48910904,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "d22d825146d252298757a6979cc1e7cd58f5c300459d4a3a7718a571393a98a8",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.1828,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.63541186,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 0.59235835,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 0.59144264,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 0.56889409,
+          "rank": 4
+        },
+        {
+          "tool_id": "C008",
+          "score": 0.51732886,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "d22d825146d252298757a6979cc1e7cd58f5c300459d4a3a7718a571393a98a8",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.1941,
+      "candidate_tool_ids": [
+        "E3C022",
+        "E3C011",
+        "A003",
+        "E3C004",
+        "C008"
+      ],
+      "candidates": [
+        {
+          "tool_id": "E3C022",
+          "score": 0.65667617,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 0.65310395,
+          "rank": 2
+        },
+        {
+          "tool_id": "A003",
+          "score": 0.63541186,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 0.54103673,
+          "rank": 4
+        },
+        {
+          "tool_id": "C008",
+          "score": 0.51732886,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "d22d825146d252298757a6979cc1e7cd58f5c300459d4a3a7718a571393a98a8",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.0633,
+      "candidate_tool_ids": [
+        "A003",
+        "B012",
+        "B003",
+        "E3C005",
+        "F015"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.65537232,
+          "rank": 1
+        },
+        {
+          "tool_id": "B012",
+          "score": 0.4742516,
+          "rank": 2
+        },
+        {
+          "tool_id": "B003",
+          "score": 0.46175849,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C005",
+          "score": 0.45295352,
+          "rank": 4
+        },
+        {
+          "tool_id": "F015",
+          "score": 0.44875491,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "8e570b9aa1a8aa05db1353fa02c0ee3e911d0dc9a41f5e281dbfc5b30078c1a1",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.0639,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.65537232,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 0.59674317,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 0.59060311,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 0.57510197,
+          "rank": 4
+        },
+        {
+          "tool_id": "A004",
+          "score": 0.46351445,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "8e570b9aa1a8aa05db1353fa02c0ee3e911d0dc9a41f5e281dbfc5b30078c1a1",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.062,
+      "candidate_tool_ids": [
+        "E3C022",
+        "E3C011",
+        "A003",
+        "E3C004",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "E3C022",
+          "score": 0.67872894,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 0.66603494,
+          "rank": 2
+        },
+        {
+          "tool_id": "A003",
+          "score": 0.65537232,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 0.53344107,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 0.50865972,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "8e570b9aa1a8aa05db1353fa02c0ee3e911d0dc9a41f5e281dbfc5b30078c1a1",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.072,
+      "candidate_tool_ids": [
+        "A003",
+        "B017",
+        "B018",
+        "F001",
+        "G010"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.65537232,
+          "rank": 1
+        },
+        {
+          "tool_id": "B017",
+          "score": 0.4763909,
+          "rank": 2
+        },
+        {
+          "tool_id": "B018",
+          "score": 0.46335968,
+          "rank": 3
+        },
+        {
+          "tool_id": "F001",
+          "score": 0.45896077,
+          "rank": 4
+        },
+        {
+          "tool_id": "G010",
+          "score": 0.44355983,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "8e570b9aa1a8aa05db1353fa02c0ee3e911d0dc9a41f5e281dbfc5b30078c1a1",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.0517,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.65537232,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 0.59674317,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 0.59060311,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 0.57510197,
+          "rank": 4
+        },
+        {
+          "tool_id": "A004",
+          "score": 0.46351445,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "8e570b9aa1a8aa05db1353fa02c0ee3e911d0dc9a41f5e281dbfc5b30078c1a1",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.0621,
+      "candidate_tool_ids": [
+        "E3C022",
+        "E3C011",
+        "A003",
+        "E3C004",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "E3C022",
+          "score": 0.67872894,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 0.66603494,
+          "rank": 2
+        },
+        {
+          "tool_id": "A003",
+          "score": 0.65537232,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 0.53344107,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 0.50865972,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "8e570b9aa1a8aa05db1353fa02c0ee3e911d0dc9a41f5e281dbfc5b30078c1a1",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.1811,
+      "candidate_tool_ids": [
+        "A003",
+        "D014",
+        "B024",
+        "C008",
+        "B001"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.65537232,
+          "rank": 1
+        },
+        {
+          "tool_id": "D014",
+          "score": 0.51746809,
+          "rank": 2
+        },
+        {
+          "tool_id": "B024",
+          "score": 0.50972039,
+          "rank": 3
+        },
+        {
+          "tool_id": "C008",
+          "score": 0.50739294,
+          "rank": 4
+        },
+        {
+          "tool_id": "B001",
+          "score": 0.48779991,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "8e570b9aa1a8aa05db1353fa02c0ee3e911d0dc9a41f5e281dbfc5b30078c1a1",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.4063,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "D014"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.65537232,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 0.59674317,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 0.59060311,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 0.57510197,
+          "rank": 4
+        },
+        {
+          "tool_id": "D014",
+          "score": 0.51746809,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "8e570b9aa1a8aa05db1353fa02c0ee3e911d0dc9a41f5e281dbfc5b30078c1a1",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.3112,
+      "candidate_tool_ids": [
+        "E3C022",
+        "E3C011",
+        "A003",
+        "E3C004",
+        "D014"
+      ],
+      "candidates": [
+        {
+          "tool_id": "E3C022",
+          "score": 0.67872894,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 0.66603494,
+          "rank": 2
+        },
+        {
+          "tool_id": "A003",
+          "score": 0.65537232,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 0.53344107,
+          "rank": 4
+        },
+        {
+          "tool_id": "D014",
+          "score": 0.51746809,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "8e570b9aa1a8aa05db1353fa02c0ee3e911d0dc9a41f5e281dbfc5b30078c1a1",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.3061,
+      "candidate_tool_ids": [
+        "A003",
+        "D014",
+        "B024",
+        "C008",
+        "B001"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.65537232,
+          "rank": 1
+        },
+        {
+          "tool_id": "D014",
+          "score": 0.51746809,
+          "rank": 2
+        },
+        {
+          "tool_id": "B024",
+          "score": 0.50972039,
+          "rank": 3
+        },
+        {
+          "tool_id": "C008",
+          "score": 0.50739294,
+          "rank": 4
+        },
+        {
+          "tool_id": "B001",
+          "score": 0.48779991,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "8e570b9aa1a8aa05db1353fa02c0ee3e911d0dc9a41f5e281dbfc5b30078c1a1",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.4896,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "D014"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 0.65537232,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 0.59674317,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 0.59060311,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 0.57510197,
+          "rank": 4
+        },
+        {
+          "tool_id": "D014",
+          "score": 0.51746809,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "8e570b9aa1a8aa05db1353fa02c0ee3e911d0dc9a41f5e281dbfc5b30078c1a1",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "retriever_config_sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff",
+      "retrieval_latency_ms": 0.2055,
+      "candidate_tool_ids": [
+        "E3C022",
+        "E3C011",
+        "A003",
+        "E3C004",
+        "D014"
+      ],
+      "candidates": [
+        {
+          "tool_id": "E3C022",
+          "score": 0.67872894,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 0.66603494,
+          "rank": 2
+        },
+        {
+          "tool_id": "A003",
+          "score": 0.65537232,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 0.53344107,
+          "rank": 4
+        },
+        {
+          "tool_id": "D014",
+          "score": 0.51746809,
+          "rank": 5
+        }
+      ],
+      "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+      "vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+      "query_vector_sha256": "8e570b9aa1a8aa05db1353fa02c0ee3e911d0dc9a41f5e281dbfc5b30078c1a1",
+      "execution_status": "candidate_view_only_local_embedding_no_external_api"
+    }
+  ]
+}

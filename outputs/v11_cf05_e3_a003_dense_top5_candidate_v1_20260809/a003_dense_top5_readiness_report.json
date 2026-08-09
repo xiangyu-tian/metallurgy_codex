@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "implementation_id": "V11-CF05-E3-A003-DENSE-TOP5-CANDIDATE-V1-20260809",
+  "method": "dense_top5",
+  "implementation_status": "candidate_implementation_passed_local_gate",
+  "ready_for_24_cell_dense_slice_generation": true,
+  "ready_for_external_development_run": false,
+  "external_execution_requires_separate_authorization": true,
+  "checks": {
+    "all_bound_hashes_valid": true,
+    "runtime_lock_exact": true,
+    "model_snapshot_hash_valid": true,
+    "index_document_count": 137,
+    "embedding_dimension": 512,
+    "exact_24_dense_views": true,
+    "exact_top5_each_view": true,
+    "all_candidates_within_current_pool": true,
+    "all_query_embedding_repeats_exactly_equal": true,
+    "all_ranking_repeats_equal": true,
+    "gold_fields_absent_from_candidate_views": true,
+    "acceptable_recall_gate_passed": true,
+    "target_recall_gate_passed": true,
+    "external_api_calls_zero": true,
+    "tool_execution_zero": true
+  },
+  "observed_development_metrics": {
+    "cell_count": 24,
+    "acceptable_recall_at_5": 1.0,
+    "acceptable_mrr": 0.7777777777777778,
+    "target_recall_at_5": 1.0,
+    "mean_target_rank_when_recalled": 1.6666666666666667
+  },
+  "cf05_status": "in_progress",
+  "core_frozen": false
+}

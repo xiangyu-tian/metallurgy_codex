@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "implementation_id": "V11-CF05-E3-A003-DENSE-TOP5-CANDIDATE-V1-20260809",
+  "method": "dense_top5",
+  "algorithm": "bge_small_zh_v1_5_cosine_v1",
+  "top_k": 5,
+  "embedding_model": {
+    "public_model_id": "BAAI/bge-small-zh-v1.5",
+    "fastembed_source_id": "Qdrant/bge-small-zh-v1.5",
+    "snapshot_revision": "46fbe35fd4374a00fee7de77dfddaeb6dd6a2c59",
+    "dimension": 512,
+    "maximum_tokens": 512,
+    "license": "MIT",
+    "runtime": "fastembed==0.8.0",
+    "provider": "CPUExecutionProvider",
+    "threads": 1,
+    "batch_size": 32,
+    "local_files_only": true,
+    "cache_root": "outputs/.model_cache/fastembed",
+    "snapshot_relative_path": "models--Qdrant--bge-small-zh-v1.5/snapshots/46fbe35fd4374a00fee7de77dfddaeb6dd6a2c59",
+    "expected_files": {
+      "config.json": "9088751d39abbf86ec3d19ffca92ad62ad19075f7e59712e6c71217fa125d1d3",
+      "model_optimized.onnx": "1294ea4b6331115a353d81f96b85e8c8d7fdcc284453d5b2fab5b016230aad38",
+      "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "tokenizer.json": "48cea5d44424912a6fd1ea647bf4fe50b55ab8b1e5879c3275f80e339e8fae26",
+      "tokenizer_config.json": "e6f3b96db926a37d4039995fbf5ad17de158dfb8f6343d607e4dbaad18d75f5a"
+    }
+  },
+  "query": {
+    "source": "problem_text_only",
+    "instruction_prefix": "为这个句子生成表示以用于检索相关文章："
+  },
+  "document_renderer": {
+    "version": "contract_fields_v1",
+    "field_order": [
+      "tool_name",
+      "semantic_alias",
+      "scenario",
+      "tool_type",
+      "core_method",
+      "main_input",
+      "main_output",
+      "applicable_boundary_risk",
+      "function_description",
+      "parameter_name_and_description"
+    ]
+  },
+  "similarity": "cosine_on_l2_normalized_float32",
+  "candidate_scope": "current_pool_tool_order_only",
+  "tie_break": "score_desc_then_tool_id_asc",
+  "minimum_development_acceptable_recall_at_5": 1.0,
+  "minimum_development_target_recall_at_5": 1.0,
+  "expected_dense_cell_count": 24,
+  "gold_visible_to_retriever": false,
+  "external_api_calls_authorized": false,
+  "tool_execution_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "independent_validation_split_access_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "opening_artifact_manifest": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/artifact_manifest.json",
+      "sha256": "cb344949ff94ff0b78638e1fe79d91a81626868c0df77c4b0882ced180dcd862"
+    },
+    "routing_input_tasks": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/a003_routing_input_tasks.json",
+      "sha256": "cfd01426d49bb7a83350dbbf20814902a4624a7fc5b98b969119e2cedf727fd5"
+    },
+    "routing_scoring_registry": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/a003_routing_scoring_registry.json",
+      "sha256": "b1932cd6e3d9c651a1d8ea771977499ea5c170457bc62155a9001e674f3bf56e"
+    },
+    "routing_selected_pools": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/a003_routing_selected_pools.json",
+      "sha256": "93d6b6a46c47e573db135db0c82d8d06a068c54040f451fe7a7d594137018064"
+    },
+    "routing_run_cells": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/a003_routing_run_cells.json",
+      "sha256": "5040377376f34a07f18378d07a301e01fc60bedcf15edee8659f3129bb7ccbfa"
+    },
+    "pool_schema_registry": {
+      "path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_pool_schema_registry.json",
+      "sha256": "ca7e4e5a5c9080d14e1eb08a54fa6f6644fd1ecac9f47a4ddc48237f59ad3faf"
+    },
+    "runtime_lock": {
+      "path": "Tools/core_freeze/e3_routing/dense_validation_requirements_lock.txt",
+      "sha256": "7efab320a5b9ba433a9313bda8e6431f9fbaa30f63d29071bf4dab247f953731"
+    }
+  }
+}

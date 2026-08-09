@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "implementation_id": "V11-CF05-E3-A003-DENSE-TOP5-CANDIDATE-V1-20260809",
+  "artifact_count": 10,
+  "artifacts": [
+    {
+      "filename": "a003_dense_top5_candidate_views.json",
+      "sha256": "a9cc8bc18a267eec170d4b0046c479f16ba068672b10748ae5b6f854d2578c41",
+      "bytes": 38000
+    },
+    {
+      "filename": "a003_dense_top5_config_snapshot.json",
+      "sha256": "b63b22dfe012daa3c219c0fcea0dcb33e6664cf262326dd1b93eb50152d10197",
+      "bytes": 3995
+    },
+    {
+      "filename": "a003_dense_top5_contract_documents.json",
+      "sha256": "fdc4dfcbd969390757511ab6a7f67d96f474ed5b4e9c26834db3f790ede1790f",
+      "bytes": 136630
+    },
+    {
+      "filename": "a003_dense_top5_determinism_audit.json",
+      "sha256": "e4427530af712cbf1c30880a9b31c3d225229822f0c2fefcb6936f69a32d43a8",
+      "bytes": 9876
+    },
+    {
+      "filename": "a003_dense_top5_development_diagnostics.json",
+      "sha256": "e7c1659e1fb0e4dbb4ad00f5ff06980d7c5b267582959662495b775a3da91d0c",
+      "bytes": 15286
+    },
+    {
+      "filename": "a003_dense_top5_index_snapshot.json",
+      "sha256": "4104aea9c423be91ad16b9bbabcde480bfd44d5f82700eabfb925f01a6333539",
+      "bytes": 22535
+    },
+    {
+      "filename": "a003_dense_top5_model_audit.json",
+      "sha256": "d5905fd27a0599c718f312b6255b596ccd42b63daced93ab1b8aeac2bd479ee0",
+      "bytes": 1208
+    },
+    {
+      "filename": "a003_dense_top5_readiness_report.json",
+      "sha256": "0a9ae3a8d968d53eae797b1c32b0d6e36165794f6237d8b228d61a98b44c8825",
+      "bytes": 1290
+    },
+    {
+      "filename": "a003_dense_top5_runtime_audit.json",
+      "sha256": "f33e42bc183b70b883b6f5a68a0574e110077a85abb158bd939b28b5eab243d1",
+      "bytes": 1228
+    },
+    {
+      "filename": "a003_dense_top5_vectors.npz",
+      "sha256": "fb4efbbf7ba5748b4e1165fe79050698c2f095104fa5b4ee074137e97b9b24ef",
+      "bytes": 261254
+    }
+  ]
+}

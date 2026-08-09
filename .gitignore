@@ -9,11 +9,13 @@ Thumbs.db
 venv/
 .venv/
 .venv-e3-candidates/
+.venv-e3-dense/
 .r-runtime/
 __pycache__/
 *.pyc
 *.dump
 database/backups/
+outputs/.model_cache/
 %USERPROFILE%/
 docs/superpowers/
 backend/src/views/
