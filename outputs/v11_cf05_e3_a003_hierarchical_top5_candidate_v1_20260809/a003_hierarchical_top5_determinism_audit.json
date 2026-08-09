@@ -1,0 +1,296 @@
+{
+  "schema_version": "1.0",
+  "implementation_id": "V11-CF05-E3-A003-HIERARCHICAL-TOP5-CANDIDATE-V1-20260809",
+  "cell_count": 24,
+  "all_repeated_results_equal": true,
+  "rows": [
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "A006",
+        "E3C005",
+        "B003",
+        "C002"
+      ],
+      "hierarchy_trace_sha256": "85e0ac7983ff11c6cb9d6a712b38a6183a67a98195433ec5135e9b0c4d4834a1"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C018",
+        "E3C010",
+        "E3C019"
+      ],
+      "hierarchy_trace_sha256": "d4dc7a191c845a72eff84308ef1138847efdfb2faf6e1de229db24931c33f0d6"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "hierarchy_trace_sha256": "072becd65c5cb0a3246387997707c17995d65c99f8f937ce3deeac0d54df7548"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "A001",
+        "E3C009",
+        "F017",
+        "B018"
+      ],
+      "hierarchy_trace_sha256": "2101239deeba061d261b755d249fb33ee567926da8b479fbf3ede4c605407732"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C018",
+        "E3C010",
+        "E3C019"
+      ],
+      "hierarchy_trace_sha256": "ebf00e79639e5248493e710eda0e445b615b2fe0f72c082084eb6e350ecb0ba0"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "hierarchy_trace_sha256": "577de51932c959dac9dad222cb3b6227732327cce08e3e78bfa69fc17a2ee7f0"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "A006",
+        "F008",
+        "E3C005",
+        "B001"
+      ],
+      "hierarchy_trace_sha256": "d1cfd1b366588b051a83c6061024b38409f1ce3368a729985853cb9aa91492c1"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C018",
+        "E3C010",
+        "E3C019"
+      ],
+      "hierarchy_trace_sha256": "3361354eca19b57876c9e111db81b9398918cdf80de6cc7958c337bdba896393"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "hierarchy_trace_sha256": "ddf1caf40b931e31d170a2c512ae5b7c0579ac5d20a049839b3826ae438f759f"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "A006",
+        "F008",
+        "E3C005",
+        "B001"
+      ],
+      "hierarchy_trace_sha256": "71e8054c9ae953344823c7a9c5edd564d9d6c738eacb476deec14fbd82540106"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C018",
+        "E3C010",
+        "E3C019"
+      ],
+      "hierarchy_trace_sha256": "7b7ea4fcb34bceb50ec6b4c682a8de174864ea596c345df4949050773e32200e"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "hierarchy_trace_sha256": "668bdcef163dc6958675bed13fb16f3cef65035d2b29dbc9d202585133170ef1"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "B003",
+        "B022",
+        "E3C005",
+        "B012"
+      ],
+      "hierarchy_trace_sha256": "6bd08d20942e79c9cff5e837cf15818611770755ee7a1ffd787bc53759ecf356"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C018",
+        "E3C003",
+        "E3C010",
+        "A004"
+      ],
+      "hierarchy_trace_sha256": "7841c6e16e1dd140bd652e31bedc30e63ab2e16bace5f81bbd7164c856585919"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "hierarchy_trace_sha256": "57e9c21a8b60b0a46ec975dd66efadc90c5866c195d7dcc386a25253bfd80cbb"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "A001",
+        "E3C009",
+        "D004",
+        "D009"
+      ],
+      "hierarchy_trace_sha256": "0f0d92ce2a76abca613d1cecbeacf862a65a0987f6596d601296b9ac7503505a"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C018",
+        "E3C003",
+        "E3C010",
+        "A004"
+      ],
+      "hierarchy_trace_sha256": "a8bd7a98e23534fd1e0ee560e2957034c91d3a352778ae03e04fff901c1f5713"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "hierarchy_trace_sha256": "57efd023d3a0bf44c9758e9a219f0392a46ec790bd483f33abb29f8bc35efebc"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "B003",
+        "A010",
+        "B006",
+        "B007"
+      ],
+      "hierarchy_trace_sha256": "cedce212da768f37ffbe3711af4446028fae17b66a7cd94f31e2b8aaf18235f0"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C018",
+        "E3C003",
+        "E3C010",
+        "B003"
+      ],
+      "hierarchy_trace_sha256": "7f4801d10779d20513f0248c019f22a2ad822bfa1b0989e95034bd6099189a82"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "hierarchy_trace_sha256": "48c7997e45cdd3b1a1486872f48b6f64521464957e50d41bb24e411a4eeeccfc"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "B003",
+        "A010",
+        "B006",
+        "B007"
+      ],
+      "hierarchy_trace_sha256": "cf013e1500a600118d7c81acfd2cde0e2415e65c07507127d731c0a21873dc1d"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C018",
+        "E3C003",
+        "E3C010",
+        "B003"
+      ],
+      "hierarchy_trace_sha256": "7adb8f5a7ecca40829f65b2053d949bc38e9ab4362797626467084feb197546d"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "deterministic_repeat_equal": true,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "hierarchy_trace_sha256": "a4569e7fcd4750aca916ba44a75c17b6f5a781fd0efbcad9545d25fc6013388d"
+    }
+  ]
+}

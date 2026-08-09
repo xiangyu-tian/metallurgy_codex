@@ -1,0 +1,3863 @@
+{
+  "schema_version": "1.0",
+  "implementation_id": "V11-CF05-E3-A003-HIERARCHICAL-TOP5-CANDIDATE-V1-20260809",
+  "method": "hierarchical",
+  "router_visible_gold": false,
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "view_count": 24,
+  "views": [
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 0.7033,
+      "candidate_tool_ids": [
+        "A003",
+        "A006",
+        "E3C005",
+        "B003",
+        "C002"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 103.33468048,
+          "base_lexical_score": 70.37136389,
+          "domain_score": 75.04378632,
+          "capability_score": 80.92706847,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "A006",
+          "score": 27.59866111,
+          "base_lexical_score": 15.77328073,
+          "domain_score": 75.04378632,
+          "capability_score": 18.13927284,
+          "applicability_overlap_score": 1.38629436,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:5e97b0e6ae5cdc93",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C005",
+          "score": 16.48805744,
+          "base_lexical_score": 7.30380391,
+          "domain_score": 75.04378632,
+          "capability_score": 8.3993745,
+          "applicability_overlap_score": 0,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "B003",
+          "score": 11.20903445,
+          "base_lexical_score": 6.43138694,
+          "domain_score": 7.04366267,
+          "capability_score": 7.39609498,
+          "applicability_overlap_score": 5.1881245,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:6009493398ea7e44",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "C002",
+          "score": 9.91666549,
+          "base_lexical_score": 6.85763443,
+          "domain_score": 7.88627959,
+          "capability_score": 7.88627959,
+          "applicability_overlap_score": 1.38629436,
+          "domain_id": "domain:c09cc955295c8133",
+          "capability_id": "capability:5eedf0770dfe04fb",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 3,
+          "score": 75.04378632
+        },
+        {
+          "domain_id": "domain:c09cc955295c8133",
+          "domain_label": "动力学与传递",
+          "member_count": 1,
+          "score": 7.88627959
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 4,
+          "score": 7.04366267
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 80.92706847
+        },
+        {
+          "capability_id": "capability:5e97b0e6ae5cdc93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "化学计量电子/氧当量",
+          "member_count": 1,
+          "score": 18.13927284
+        },
+        {
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "质量分数/摩尔分数归一化与基准转换",
+          "member_count": 1,
+          "score": 8.3993745
+        },
+        {
+          "capability_id": "capability:5eedf0770dfe04fb",
+          "domain_id": "domain:c09cc955295c8133",
+          "capability_label": "Arrhenius扩散系数/经验关联",
+          "member_count": 1,
+          "score": 7.88627959
+        },
+        {
+          "capability_id": "capability:6009493398ea7e44",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "热容积分与参考态转换",
+          "member_count": 1,
+          "score": 7.39609498
+        },
+        {
+          "capability_id": "capability:1b22f1e2b641364b",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "元素守恒约束下全局/局部Gibbs最小化",
+          "member_count": 1,
+          "score": 4.16039289
+        },
+        {
+          "capability_id": "capability:e50e4f07406973bf",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "van't Hoff方程积分",
+          "member_count": 1,
+          "score": 2.52585382
+        },
+        {
+          "capability_id": "capability:474065d9f1a8e610",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "绝热能量守恒+非线性求根",
+          "member_count": 1,
+          "score": 2.50724487
+        }
+      ],
+      "pruned_tool_count": 8,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 0.546,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C018",
+        "E3C010",
+        "E3C019"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 104.03565417,
+          "base_lexical_score": 70.37136389,
+          "domain_score": 82.05352316,
+          "capability_score": 80.92706847,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 103.20547129,
+          "base_lexical_score": 72.09807819,
+          "domain_score": 82.05352316,
+          "capability_score": 82.91278992,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:e06029cb247b9f93",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 88.71315622,
+          "base_lexical_score": 56.63945734,
+          "domain_score": 82.05352316,
+          "capability_score": 65.13537594,
+          "applicability_overlap_score": 21.68254275,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 69.4941153,
+          "base_lexical_score": 47.61961852,
+          "domain_score": 82.05352316,
+          "capability_score": 54.7625613,
+          "applicability_overlap_score": 5.4332644,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:a9f9931574b3cb70",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C019",
+          "score": 29.17090665,
+          "base_lexical_score": 14.83652206,
+          "domain_score": 82.05352316,
+          "capability_score": 17.06200037,
+          "applicability_overlap_score": 5.4332644,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:2f119b78b6bfa4a4",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 9,
+          "score": 82.05352316
+        },
+        {
+          "domain_id": "domain:c09cc955295c8133",
+          "domain_label": "动力学与传递",
+          "member_count": 1,
+          "score": 7.88627959
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 1,
+          "score": 4.16039289
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:e06029cb247b9f93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "分子图平均原子量求和",
+          "member_count": 1,
+          "score": 82.91278992
+        },
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 80.92706847
+        },
+        {
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "PeriodicTable同位素摩尔质量计算专用算法",
+          "member_count": 1,
+          "score": 65.13537594
+        },
+        {
+          "capability_id": "capability:a9f9931574b3cb70",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "RDKit精确摩尔质量计算（同位素）专用算法",
+          "member_count": 1,
+          "score": 54.7625613
+        },
+        {
+          "capability_id": "capability:5e97b0e6ae5cdc93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "化学计量电子/氧当量",
+          "member_count": 1,
+          "score": 18.13927284
+        },
+        {
+          "capability_id": "capability:2f119b78b6bfa4a4",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "分子质量中心计算专用算法",
+          "member_count": 1,
+          "score": 17.06200037
+        },
+        {
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "质量分数/摩尔分数归一化与基准转换",
+          "member_count": 1,
+          "score": 10.85942044
+        },
+        {
+          "capability_id": "capability:5eedf0770dfe04fb",
+          "domain_id": "domain:c09cc955295c8133",
+          "capability_label": "Arrhenius扩散系数/经验关联",
+          "member_count": 1,
+          "score": 7.88627959
+        }
+      ],
+      "pruned_tool_count": 8,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 0.6175,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 103.71181531,
+          "base_lexical_score": 70.37136389,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 93.38498765,
+          "base_lexical_score": 62.9985777,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 93.23143355,
+          "base_lexical_score": 62.8450236,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 89.83517432,
+          "base_lexical_score": 63.66459082,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 4.20731269,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 67.60520898,
+          "base_lexical_score": 40.82164963,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 5.4332644,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 10,
+          "score": 80.22309051
+        },
+        {
+          "domain_id": "domain:c09cc955295c8133",
+          "domain_label": "动力学与传递",
+          "member_count": 1,
+          "score": 7.88627959
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 1,
+          "score": 4.16039289
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 9,
+          "score": 80.22309051
+        },
+        {
+          "capability_id": "capability:5e97b0e6ae5cdc93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "化学计量电子/氧当量",
+          "member_count": 1,
+          "score": 18.13927284
+        },
+        {
+          "capability_id": "capability:5eedf0770dfe04fb",
+          "domain_id": "domain:c09cc955295c8133",
+          "capability_label": "Arrhenius扩散系数/经验关联",
+          "member_count": 1,
+          "score": 7.88627959
+        },
+        {
+          "capability_id": "capability:1b22f1e2b641364b",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "元素守恒约束下全局/局部Gibbs最小化",
+          "member_count": 1,
+          "score": 4.16039289
+        }
+      ],
+      "pruned_tool_count": 12,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 0.7327,
+      "candidate_tool_ids": [
+        "A003",
+        "A001",
+        "E3C009",
+        "F017",
+        "B018"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 103.23063856,
+          "base_lexical_score": 70.37136389,
+          "domain_score": 74.00336713,
+          "capability_score": 80.92706847,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "A001",
+          "score": 10.88398612,
+          "base_lexical_score": 2.268701,
+          "domain_score": 74.00336713,
+          "capability_score": 2.60900615,
+          "applicability_overlap_score": 1.38629436,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:6e7ac37a949e39e3",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C009",
+          "score": 7.40033671,
+          "base_lexical_score": 0.0,
+          "domain_score": 74.00336713,
+          "capability_score": 0.0,
+          "applicability_overlap_score": 0,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:1ef35354c506f234",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "F017",
+          "score": 3.85540064,
+          "base_lexical_score": 2.41984733,
+          "domain_score": 2.6601257,
+          "capability_score": 2.78282443,
+          "applicability_overlap_score": 1.22595171,
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_id": "capability:592b4e7284b98d05",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "B018",
+          "score": 3.71015746,
+          "base_lexical_score": 2.2434085,
+          "domain_score": 2.57617826,
+          "capability_score": 2.57991978,
+          "applicability_overlap_score": 1.38629436,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:0192fb15888b802e",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 3,
+          "score": 74.00336713
+        },
+        {
+          "domain_id": "domain:960b12b075f8840e",
+          "domain_label": "连铸质量与二冷",
+          "member_count": 3,
+          "score": 2.6601257
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 2,
+          "score": 2.57617826
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 80.92706847
+        },
+        {
+          "capability_id": "capability:592b4e7284b98d05",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "工艺+成分+热状态特征的GBDT/分类回归",
+          "member_count": 1,
+          "score": 2.78282443
+        },
+        {
+          "capability_id": "capability:6e7ac37a949e39e3",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "量纲分析与单位映射",
+          "member_count": 1,
+          "score": 2.60900615
+        },
+        {
+          "capability_id": "capability:0192fb15888b802e",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "F=C-P+2及受约束变体",
+          "member_count": 1,
+          "score": 2.57991978
+        },
+        {
+          "capability_id": "capability:3beead1d245591ea",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "溶液热力学活度/超额Gibbs模型",
+          "member_count": 1,
+          "score": 2.52254985
+        },
+        {
+          "capability_id": "capability:6b56a29db0d83e8a",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "成分经验式或CALPHAD",
+          "member_count": 1,
+          "score": 1.38337421
+        },
+        {
+          "capability_id": "capability:d2e5e62f27e31ca7",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "热电偶时空特征+规则+分类模型",
+          "member_count": 1,
+          "score": 1.36020376
+        },
+        {
+          "capability_id": "capability:1ef35354c506f234",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "RDKit SMILES化学表达式解析与规范化专用算法",
+          "member_count": 1,
+          "score": 0.0
+        }
+      ],
+      "pruned_tool_count": 8,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 0.6099,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C018",
+        "E3C010",
+        "E3C019"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 104.03565417,
+          "base_lexical_score": 70.37136389,
+          "domain_score": 82.05352316,
+          "capability_score": 80.92706847,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 103.20547129,
+          "base_lexical_score": 72.09807819,
+          "domain_score": 82.05352316,
+          "capability_score": 82.91278992,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:e06029cb247b9f93",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 88.71315622,
+          "base_lexical_score": 56.63945734,
+          "domain_score": 82.05352316,
+          "capability_score": 65.13537594,
+          "applicability_overlap_score": 21.68254275,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 69.4941153,
+          "base_lexical_score": 47.61961852,
+          "domain_score": 82.05352316,
+          "capability_score": 54.7625613,
+          "applicability_overlap_score": 5.4332644,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:a9f9931574b3cb70",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C019",
+          "score": 29.17090665,
+          "base_lexical_score": 14.83652206,
+          "domain_score": 82.05352316,
+          "capability_score": 17.06200037,
+          "applicability_overlap_score": 5.4332644,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:2f119b78b6bfa4a4",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 9,
+          "score": 82.05352316
+        },
+        {
+          "domain_id": "domain:960b12b075f8840e",
+          "domain_label": "连铸质量与二冷",
+          "member_count": 3,
+          "score": 2.76840317
+        },
+        {
+          "domain_id": "domain:165d244bfd43f65c",
+          "domain_label": "高炉低碳",
+          "member_count": 3,
+          "score": 0.0
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:e06029cb247b9f93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "分子图平均原子量求和",
+          "member_count": 1,
+          "score": 82.91278992
+        },
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 80.92706847
+        },
+        {
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "PeriodicTable同位素摩尔质量计算专用算法",
+          "member_count": 1,
+          "score": 65.13537594
+        },
+        {
+          "capability_id": "capability:a9f9931574b3cb70",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "RDKit精确摩尔质量计算（同位素）专用算法",
+          "member_count": 1,
+          "score": 54.7625613
+        },
+        {
+          "capability_id": "capability:2f119b78b6bfa4a4",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "分子质量中心计算专用算法",
+          "member_count": 1,
+          "score": 17.06200037
+        },
+        {
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "质量分数/摩尔分数归一化与基准转换",
+          "member_count": 1,
+          "score": 10.85942044
+        },
+        {
+          "capability_id": "capability:3af9f55cf4483990",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "输入—输出元素逐项守恒残差",
+          "member_count": 1,
+          "score": 5.37219096
+        },
+        {
+          "capability_id": "capability:592b4e7284b98d05",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "工艺+成分+热状态特征的GBDT/分类回归",
+          "member_count": 1,
+          "score": 2.90141404
+        }
+      ],
+      "pruned_tool_count": 8,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 0.7699,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 103.71181531,
+          "base_lexical_score": 70.37136389,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 93.38498765,
+          "base_lexical_score": 62.9985777,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 93.23143355,
+          "base_lexical_score": 62.8450236,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 89.83517432,
+          "base_lexical_score": 63.66459082,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 4.20731269,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 67.60520898,
+          "base_lexical_score": 40.82164963,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 5.4332644,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 10,
+          "score": 80.22309051
+        },
+        {
+          "domain_id": "domain:960b12b075f8840e",
+          "domain_label": "连铸质量与二冷",
+          "member_count": 2,
+          "score": 1.3818631
+        },
+        {
+          "domain_id": "domain:165d244bfd43f65c",
+          "domain_label": "高炉低碳",
+          "member_count": 3,
+          "score": 0.0
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 9,
+          "score": 80.22309051
+        },
+        {
+          "capability_id": "capability:6b56a29db0d83e8a",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "成分经验式或CALPHAD",
+          "member_count": 1,
+          "score": 1.38337421
+        },
+        {
+          "capability_id": "capability:d2e5e62f27e31ca7",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "热电偶时空特征+规则+分类模型",
+          "member_count": 1,
+          "score": 1.36020376
+        },
+        {
+          "capability_id": "capability:1ef35354c506f234",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "RDKit SMILES化学表达式解析与规范化专用算法",
+          "member_count": 1,
+          "score": 0.0
+        },
+        {
+          "capability_id": "capability:415faf60fe2dc5a9",
+          "domain_id": "domain:165d244bfd43f65c",
+          "capability_label": "鼓风/富氧/炉料氧输入输出平衡",
+          "member_count": 1,
+          "score": 0.0
+        },
+        {
+          "capability_id": "capability:4eb1bc8ff4e35630",
+          "domain_id": "domain:165d244bfd43f65c",
+          "capability_label": "鼓风、富氧、喷吹燃料的风口区气量平衡",
+          "member_count": 1,
+          "score": 0.0
+        },
+        {
+          "capability_id": "capability:f68bc15dec17763e",
+          "domain_id": "domain:165d244bfd43f65c",
+          "capability_label": "Ergun方程与多层料柱叠加",
+          "member_count": 1,
+          "score": 0.0
+        }
+      ],
+      "pruned_tool_count": 15,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 1.6713,
+      "candidate_tool_ids": [
+        "A003",
+        "A006",
+        "F008",
+        "E3C005",
+        "B001"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 103.33468048,
+          "base_lexical_score": 70.37136389,
+          "domain_score": 75.04378632,
+          "capability_score": 80.92706847,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "A006",
+          "score": 27.59866111,
+          "base_lexical_score": 15.77328073,
+          "domain_score": 75.04378632,
+          "capability_score": 18.13927284,
+          "applicability_overlap_score": 1.38629436,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:5e97b0e6ae5cdc93",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "F008",
+          "score": 19.76070094,
+          "base_lexical_score": 14.77207223,
+          "domain_score": 15.91052098,
+          "capability_score": 16.98788306,
+          "applicability_overlap_score": 0,
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_id": "capability:806edf60ce70bb73",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C005",
+          "score": 16.48805744,
+          "base_lexical_score": 7.30380391,
+          "domain_score": 75.04378632,
+          "capability_score": 8.3993745,
+          "applicability_overlap_score": 0,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "B001",
+          "score": 14.99310895,
+          "base_lexical_score": 9.67875828,
+          "domain_score": 11.11174223,
+          "capability_score": 11.11045028,
+          "applicability_overlap_score": 3.96217279,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:9340cad58c22d8c8",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 12,
+          "score": 75.04378632
+        },
+        {
+          "domain_id": "domain:960b12b075f8840e",
+          "domain_label": "连铸质量与二冷",
+          "member_count": 19,
+          "score": 15.91052098
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 25,
+          "score": 11.11174223
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 80.92706847
+        },
+        {
+          "capability_id": "capability:5e97b0e6ae5cdc93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "化学计量电子/氧当量",
+          "member_count": 1,
+          "score": 18.13927284
+        },
+        {
+          "capability_id": "capability:806edf60ce70bb73",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "目标表面温度/比水量经验模型",
+          "member_count": 1,
+          "score": 16.98788306
+        },
+        {
+          "capability_id": "capability:9340cad58c22d8c8",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "标准多项式热容/焓/熵表达式",
+          "member_count": 2,
+          "score": 11.11045028
+        },
+        {
+          "capability_id": "capability:6685a856cd63de39",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "反应计量加权与ΔG°=-RTlnK",
+          "member_count": 4,
+          "score": 10.91065508
+        },
+        {
+          "capability_id": "capability:6009493398ea7e44",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "热容积分与参考态转换",
+          "member_count": 3,
+          "score": 10.46521104
+        },
+        {
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "质量分数/摩尔分数归一化与基准转换",
+          "member_count": 1,
+          "score": 8.3993745
+        },
+        {
+          "capability_id": "capability:122f83ca3141d309",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "二相区杠杆规则",
+          "member_count": 1,
+          "score": 7.98048086
+        }
+      ],
+      "pruned_tool_count": 14,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 1.1772,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C018",
+        "E3C010",
+        "E3C019"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 104.03565417,
+          "base_lexical_score": 70.37136389,
+          "domain_score": 82.05352316,
+          "capability_score": 80.92706847,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 103.20547129,
+          "base_lexical_score": 72.09807819,
+          "domain_score": 82.05352316,
+          "capability_score": 82.91278992,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:e06029cb247b9f93",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 88.71315622,
+          "base_lexical_score": 56.63945734,
+          "domain_score": 82.05352316,
+          "capability_score": 65.13537594,
+          "applicability_overlap_score": 21.68254275,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 69.4941153,
+          "base_lexical_score": 47.61961852,
+          "domain_score": 82.05352316,
+          "capability_score": 54.7625613,
+          "applicability_overlap_score": 5.4332644,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:a9f9931574b3cb70",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C019",
+          "score": 29.17090665,
+          "base_lexical_score": 14.83652206,
+          "domain_score": 82.05352316,
+          "capability_score": 17.06200037,
+          "applicability_overlap_score": 5.4332644,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:2f119b78b6bfa4a4",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 19,
+          "score": 82.05352316
+        },
+        {
+          "domain_id": "domain:960b12b075f8840e",
+          "domain_label": "连铸质量与二冷",
+          "member_count": 18,
+          "score": 15.75781664
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 23,
+          "score": 11.11174223
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:e06029cb247b9f93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "分子图平均原子量求和",
+          "member_count": 1,
+          "score": 82.91278992
+        },
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 80.92706847
+        },
+        {
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "PeriodicTable同位素摩尔质量计算专用算法",
+          "member_count": 1,
+          "score": 65.13537594
+        },
+        {
+          "capability_id": "capability:a9f9931574b3cb70",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "RDKit精确摩尔质量计算（同位素）专用算法",
+          "member_count": 1,
+          "score": 54.7625613
+        },
+        {
+          "capability_id": "capability:5e97b0e6ae5cdc93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "化学计量电子/氧当量",
+          "member_count": 1,
+          "score": 18.13927284
+        },
+        {
+          "capability_id": "capability:2f119b78b6bfa4a4",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "分子质量中心计算专用算法",
+          "member_count": 1,
+          "score": 17.06200037
+        },
+        {
+          "capability_id": "capability:806edf60ce70bb73",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "目标表面温度/比水量经验模型",
+          "member_count": 1,
+          "score": 16.98788306
+        },
+        {
+          "capability_id": "capability:9340cad58c22d8c8",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "标准多项式热容/焓/熵表达式",
+          "member_count": 2,
+          "score": 11.11045028
+        }
+      ],
+      "pruned_tool_count": 9,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 1.5773,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 103.71181531,
+          "base_lexical_score": 70.37136389,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 93.38498765,
+          "base_lexical_score": 62.9985777,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 93.23143355,
+          "base_lexical_score": 62.8450236,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 89.83517432,
+          "base_lexical_score": 63.66459082,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 4.20731269,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 67.60520898,
+          "base_lexical_score": 40.82164963,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 5.4332644,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 20,
+          "score": 80.22309051
+        },
+        {
+          "domain_id": "domain:960b12b075f8840e",
+          "domain_label": "连铸质量与二冷",
+          "member_count": 17,
+          "score": 15.75234878
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 23,
+          "score": 11.11174223
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 9,
+          "score": 80.22309051
+        },
+        {
+          "capability_id": "capability:5e97b0e6ae5cdc93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "化学计量电子/氧当量",
+          "member_count": 1,
+          "score": 18.13927284
+        },
+        {
+          "capability_id": "capability:806edf60ce70bb73",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "目标表面温度/比水量经验模型",
+          "member_count": 1,
+          "score": 16.98788306
+        },
+        {
+          "capability_id": "capability:9340cad58c22d8c8",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "标准多项式热容/焓/熵表达式",
+          "member_count": 2,
+          "score": 11.11045028
+        },
+        {
+          "capability_id": "capability:6685a856cd63de39",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "反应计量加权与ΔG°=-RTlnK",
+          "member_count": 3,
+          "score": 10.91002981
+        },
+        {
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "质量分数/摩尔分数归一化与基准转换",
+          "member_count": 1,
+          "score": 8.3993745
+        },
+        {
+          "capability_id": "capability:122f83ca3141d309",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "二相区杠杆规则",
+          "member_count": 1,
+          "score": 7.98048086
+        },
+        {
+          "capability_id": "capability:d0ae4686b28ff979",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "氧化反应ΔG°-T线与氧势换算",
+          "member_count": 1,
+          "score": 7.75839765
+        }
+      ],
+      "pruned_tool_count": 19,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 1.6571,
+      "candidate_tool_ids": [
+        "A003",
+        "A006",
+        "F008",
+        "E3C005",
+        "B001"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 103.33468048,
+          "base_lexical_score": 70.37136389,
+          "domain_score": 75.04378632,
+          "capability_score": 80.92706847,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "A006",
+          "score": 27.59866111,
+          "base_lexical_score": 15.77328073,
+          "domain_score": 75.04378632,
+          "capability_score": 18.13927284,
+          "applicability_overlap_score": 1.38629436,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:5e97b0e6ae5cdc93",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "F008",
+          "score": 19.76070094,
+          "base_lexical_score": 14.77207223,
+          "domain_score": 15.91052098,
+          "capability_score": 16.98788306,
+          "applicability_overlap_score": 0,
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_id": "capability:806edf60ce70bb73",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C005",
+          "score": 16.48805744,
+          "base_lexical_score": 7.30380391,
+          "domain_score": 75.04378632,
+          "capability_score": 8.3993745,
+          "applicability_overlap_score": 0,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "B001",
+          "score": 14.99310895,
+          "base_lexical_score": 9.67875828,
+          "domain_score": 11.11174223,
+          "capability_score": 11.11045028,
+          "applicability_overlap_score": 3.96217279,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:9340cad58c22d8c8",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 12,
+          "score": 75.04378632
+        },
+        {
+          "domain_id": "domain:960b12b075f8840e",
+          "domain_label": "连铸质量与二冷",
+          "member_count": 19,
+          "score": 15.91052098
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 24,
+          "score": 11.11174223
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 80.92706847
+        },
+        {
+          "capability_id": "capability:5e97b0e6ae5cdc93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "化学计量电子/氧当量",
+          "member_count": 1,
+          "score": 18.13927284
+        },
+        {
+          "capability_id": "capability:806edf60ce70bb73",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "目标表面温度/比水量经验模型",
+          "member_count": 1,
+          "score": 16.98788306
+        },
+        {
+          "capability_id": "capability:9340cad58c22d8c8",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "标准多项式热容/焓/熵表达式",
+          "member_count": 2,
+          "score": 11.11045028
+        },
+        {
+          "capability_id": "capability:6685a856cd63de39",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "反应计量加权与ΔG°=-RTlnK",
+          "member_count": 4,
+          "score": 10.91065508
+        },
+        {
+          "capability_id": "capability:6009493398ea7e44",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "热容积分与参考态转换",
+          "member_count": 3,
+          "score": 10.46521104
+        },
+        {
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "质量分数/摩尔分数归一化与基准转换",
+          "member_count": 1,
+          "score": 8.3993745
+        },
+        {
+          "capability_id": "capability:122f83ca3141d309",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "二相区杠杆规则",
+          "member_count": 1,
+          "score": 7.98048086
+        }
+      ],
+      "pruned_tool_count": 14,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 1.1615,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C018",
+        "E3C010",
+        "E3C019"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 104.03565417,
+          "base_lexical_score": 70.37136389,
+          "domain_score": 82.05352316,
+          "capability_score": 80.92706847,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 103.20547129,
+          "base_lexical_score": 72.09807819,
+          "domain_score": 82.05352316,
+          "capability_score": 82.91278992,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:e06029cb247b9f93",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 88.71315622,
+          "base_lexical_score": 56.63945734,
+          "domain_score": 82.05352316,
+          "capability_score": 65.13537594,
+          "applicability_overlap_score": 21.68254275,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 69.4941153,
+          "base_lexical_score": 47.61961852,
+          "domain_score": 82.05352316,
+          "capability_score": 54.7625613,
+          "applicability_overlap_score": 5.4332644,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:a9f9931574b3cb70",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C019",
+          "score": 29.17090665,
+          "base_lexical_score": 14.83652206,
+          "domain_score": 82.05352316,
+          "capability_score": 17.06200037,
+          "applicability_overlap_score": 5.4332644,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:2f119b78b6bfa4a4",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 18,
+          "score": 82.05352316
+        },
+        {
+          "domain_id": "domain:960b12b075f8840e",
+          "domain_label": "连铸质量与二冷",
+          "member_count": 20,
+          "score": 15.91567705
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 22,
+          "score": 11.11174223
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:e06029cb247b9f93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "分子图平均原子量求和",
+          "member_count": 1,
+          "score": 82.91278992
+        },
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 80.92706847
+        },
+        {
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "PeriodicTable同位素摩尔质量计算专用算法",
+          "member_count": 1,
+          "score": 65.13537594
+        },
+        {
+          "capability_id": "capability:a9f9931574b3cb70",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "RDKit精确摩尔质量计算（同位素）专用算法",
+          "member_count": 1,
+          "score": 54.7625613
+        },
+        {
+          "capability_id": "capability:5e97b0e6ae5cdc93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "化学计量电子/氧当量",
+          "member_count": 1,
+          "score": 18.13927284
+        },
+        {
+          "capability_id": "capability:2f119b78b6bfa4a4",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "分子质量中心计算专用算法",
+          "member_count": 1,
+          "score": 17.06200037
+        },
+        {
+          "capability_id": "capability:806edf60ce70bb73",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "目标表面温度/比水量经验模型",
+          "member_count": 1,
+          "score": 16.98788306
+        },
+        {
+          "capability_id": "capability:9340cad58c22d8c8",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "标准多项式热容/焓/熵表达式",
+          "member_count": 2,
+          "score": 11.11045028
+        }
+      ],
+      "pruned_tool_count": 9,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 1.7362,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 103.71181531,
+          "base_lexical_score": 70.37136389,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 93.38498765,
+          "base_lexical_score": 62.9985777,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 93.23143355,
+          "base_lexical_score": 62.8450236,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 89.83517432,
+          "base_lexical_score": 63.66459082,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 4.20731269,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 67.60520898,
+          "base_lexical_score": 40.82164963,
+          "domain_score": 80.22309051,
+          "capability_score": 80.22309051,
+          "applicability_overlap_score": 5.4332644,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 19,
+          "score": 80.22309051
+        },
+        {
+          "domain_id": "domain:960b12b075f8840e",
+          "domain_label": "连铸质量与二冷",
+          "member_count": 19,
+          "score": 15.91052098
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 22,
+          "score": 11.11174223
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 9,
+          "score": 80.22309051
+        },
+        {
+          "capability_id": "capability:5e97b0e6ae5cdc93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "化学计量电子/氧当量",
+          "member_count": 1,
+          "score": 18.13927284
+        },
+        {
+          "capability_id": "capability:806edf60ce70bb73",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "目标表面温度/比水量经验模型",
+          "member_count": 1,
+          "score": 16.98788306
+        },
+        {
+          "capability_id": "capability:9340cad58c22d8c8",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "标准多项式热容/焓/熵表达式",
+          "member_count": 2,
+          "score": 11.11045028
+        },
+        {
+          "capability_id": "capability:6685a856cd63de39",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "反应计量加权与ΔG°=-RTlnK",
+          "member_count": 4,
+          "score": 10.91065508
+        },
+        {
+          "capability_id": "capability:6009493398ea7e44",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "热容积分与参考态转换",
+          "member_count": 3,
+          "score": 10.46521104
+        },
+        {
+          "capability_id": "capability:122f83ca3141d309",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "二相区杠杆规则",
+          "member_count": 1,
+          "score": 7.98048086
+        },
+        {
+          "capability_id": "capability:d0ae4686b28ff979",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "氧化反应ΔG°-T线与氧势换算",
+          "member_count": 1,
+          "score": 7.75839765
+        }
+      ],
+      "pruned_tool_count": 22,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 0.6403,
+      "candidate_tool_ids": [
+        "A003",
+        "B003",
+        "B022",
+        "E3C005",
+        "B012"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 75.47317781,
+          "base_lexical_score": 49.54243483,
+          "domain_score": 52.6245871,
+          "capability_score": 56.97380005,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "B003",
+          "score": 20.89509391,
+          "base_lexical_score": 12.22252871,
+          "domain_score": 13.67580673,
+          "capability_score": 14.05590802,
+          "applicability_overlap_score": 8.98760584,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:6009493398ea7e44",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "B022",
+          "score": 14.52141664,
+          "base_lexical_score": 8.58613668,
+          "domain_score": 13.67580673,
+          "capability_score": 9.87405718,
+          "applicability_overlap_score": 5.1857757,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:1b22f1e2b641364b",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C005",
+          "score": 14.24613752,
+          "base_lexical_score": 7.30380391,
+          "domain_score": 52.6245871,
+          "capability_score": 8.3993745,
+          "applicability_overlap_score": 0,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "B012",
+          "score": 13.92829695,
+          "base_lexical_score": 8.25689508,
+          "domain_score": 13.67580673,
+          "capability_score": 9.49542934,
+          "applicability_overlap_score": 4.80947065,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:474065d9f1a8e610",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 3,
+          "score": 52.6245871
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 4,
+          "score": 13.67580673
+        },
+        {
+          "domain_id": "domain:c09cc955295c8133",
+          "domain_label": "动力学与传递",
+          "member_count": 1,
+          "score": 5.72971616
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 56.97380005
+        },
+        {
+          "capability_id": "capability:6009493398ea7e44",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "热容积分与参考态转换",
+          "member_count": 1,
+          "score": 14.05590802
+        },
+        {
+          "capability_id": "capability:1b22f1e2b641364b",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "元素守恒约束下全局/局部Gibbs最小化",
+          "member_count": 1,
+          "score": 9.87405718
+        },
+        {
+          "capability_id": "capability:474065d9f1a8e610",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "绝热能量守恒+非线性求根",
+          "member_count": 1,
+          "score": 9.49542934
+        },
+        {
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "质量分数/摩尔分数归一化与基准转换",
+          "member_count": 1,
+          "score": 8.3993745
+        },
+        {
+          "capability_id": "capability:5eedf0770dfe04fb",
+          "domain_id": "domain:c09cc955295c8133",
+          "capability_label": "Arrhenius扩散系数/经验关联",
+          "member_count": 1,
+          "score": 5.72971616
+        },
+        {
+          "capability_id": "capability:5e97b0e6ae5cdc93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "化学计量电子/氧当量",
+          "member_count": 1,
+          "score": 5.51632764
+        },
+        {
+          "capability_id": "capability:e50e4f07406973bf",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "van't Hoff方程积分",
+          "member_count": 1,
+          "score": 2.52585382
+        }
+      ],
+      "pruned_tool_count": 8,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 0.5159,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C018",
+        "E3C003",
+        "E3C010",
+        "A004"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 75.84458631,
+          "base_lexical_score": 49.54243483,
+          "domain_score": 56.33867201,
+          "capability_score": 56.97380005,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 71.83710253,
+          "base_lexical_score": 45.00972679,
+          "domain_score": 56.33867201,
+          "capability_score": 51.76118581,
+          "applicability_overlap_score": 21.68254275,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 62.84162577,
+          "base_lexical_score": 41.37258193,
+          "domain_score": 56.33867201,
+          "capability_score": 47.57846922,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:e06029cb247b9f93",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 47.92658978,
+          "base_lexical_score": 32.87584829,
+          "domain_score": 56.33867201,
+          "capability_score": 37.80722553,
+          "applicability_overlap_score": 3.71085836,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:a9f9931574b3cb70",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "A004",
+          "score": 19.89282957,
+          "base_lexical_score": 9.4429743,
+          "domain_score": 56.33867201,
+          "capability_score": 10.85942044,
+          "applicability_overlap_score": 5.28820796,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 9,
+          "score": 56.33867201
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 1,
+          "score": 9.87405718
+        },
+        {
+          "domain_id": "domain:c09cc955295c8133",
+          "domain_label": "动力学与传递",
+          "member_count": 1,
+          "score": 5.72971616
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 56.97380005
+        },
+        {
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "PeriodicTable同位素摩尔质量计算专用算法",
+          "member_count": 1,
+          "score": 51.76118581
+        },
+        {
+          "capability_id": "capability:e06029cb247b9f93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "分子图平均原子量求和",
+          "member_count": 1,
+          "score": 47.57846922
+        },
+        {
+          "capability_id": "capability:a9f9931574b3cb70",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "RDKit精确摩尔质量计算（同位素）专用算法",
+          "member_count": 1,
+          "score": 37.80722553
+        },
+        {
+          "capability_id": "capability:2f119b78b6bfa4a4",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "分子质量中心计算专用算法",
+          "member_count": 1,
+          "score": 11.27178431
+        },
+        {
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "质量分数/摩尔分数归一化与基准转换",
+          "member_count": 1,
+          "score": 10.85942044
+        },
+        {
+          "capability_id": "capability:1b22f1e2b641364b",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "元素守恒约束下全局/局部Gibbs最小化",
+          "member_count": 1,
+          "score": 9.87405718
+        },
+        {
+          "capability_id": "capability:5eedf0770dfe04fb",
+          "domain_id": "domain:c09cc955295c8133",
+          "capability_label": "Arrhenius扩散系数/经验关联",
+          "member_count": 1,
+          "score": 5.72971616
+        }
+      ],
+      "pruned_tool_count": 8,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 0.6019,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 75.6877626,
+          "base_lexical_score": 49.54243483,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 65.41762186,
+          "base_lexical_score": 42.22633556,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 64.48446152,
+          "base_lexical_score": 41.29317522,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 60.28369011,
+          "base_lexical_score": 42.16943328,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 2.48490665,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 46.75821406,
+          "base_lexical_score": 28.03098138,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 3.71085836,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 10,
+          "score": 56.23934501
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 1,
+          "score": 9.87405718
+        },
+        {
+          "domain_id": "domain:c09cc955295c8133",
+          "domain_label": "动力学与传递",
+          "member_count": 1,
+          "score": 5.72971616
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 9,
+          "score": 56.23934501
+        },
+        {
+          "capability_id": "capability:1b22f1e2b641364b",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "元素守恒约束下全局/局部Gibbs最小化",
+          "member_count": 1,
+          "score": 9.87405718
+        },
+        {
+          "capability_id": "capability:5eedf0770dfe04fb",
+          "domain_id": "domain:c09cc955295c8133",
+          "capability_label": "Arrhenius扩散系数/经验关联",
+          "member_count": 1,
+          "score": 5.72971616
+        },
+        {
+          "capability_id": "capability:5e97b0e6ae5cdc93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "化学计量电子/氧当量",
+          "member_count": 1,
+          "score": 5.51632764
+        }
+      ],
+      "pruned_tool_count": 12,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 0.787,
+      "candidate_tool_ids": [
+        "A003",
+        "A001",
+        "E3C009",
+        "D004",
+        "D009"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 75.43584868,
+          "base_lexical_score": 49.54243483,
+          "domain_score": 52.2512957,
+          "capability_score": 56.97380005,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "A001",
+          "score": 12.71226618,
+          "base_lexical_score": 4.6347826,
+          "domain_score": 52.2512957,
+          "capability_score": 5.32999999,
+          "applicability_overlap_score": 3.57270802,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:6e7ac37a949e39e3",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C009",
+          "score": 5.22512957,
+          "base_lexical_score": 0.0,
+          "domain_score": 52.2512957,
+          "capability_score": 0.0,
+          "applicability_overlap_score": 0,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:1ef35354c506f234",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "D004",
+          "score": 4.1011964,
+          "base_lexical_score": 2.44979921,
+          "domain_score": 2.81409534,
+          "capability_score": 2.81726909,
+          "applicability_overlap_score": 1.61306768,
+          "domain_id": "domain:5c2df3a43d67e718",
+          "capability_id": "capability:74f6325bdbd226c2",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "D009",
+          "score": 4.04914686,
+          "base_lexical_score": 2.40748251,
+          "domain_score": 2.81409534,
+          "capability_score": 2.76860489,
+          "applicability_overlap_score": 1.61306768,
+          "domain_id": "domain:5c2df3a43d67e718",
+          "capability_id": "capability:9e220966088cc412",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 3,
+          "score": 52.2512957
+        },
+        {
+          "domain_id": "domain:5c2df3a43d67e718",
+          "domain_label": "转炉炼钢",
+          "member_count": 2,
+          "score": 2.81409534
+        },
+        {
+          "domain_id": "domain:960b12b075f8840e",
+          "domain_label": "连铸质量与二冷",
+          "member_count": 3,
+          "score": 2.6601257
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 56.97380005
+        },
+        {
+          "capability_id": "capability:6e7ac37a949e39e3",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "量纲分析与单位映射",
+          "member_count": 1,
+          "score": 5.32999999
+        },
+        {
+          "capability_id": "capability:74f6325bdbd226c2",
+          "domain_id": "domain:5c2df3a43d67e718",
+          "capability_label": "目标碱度/MgO约束的熔剂配平",
+          "member_count": 1,
+          "score": 2.81726909
+        },
+        {
+          "capability_id": "capability:592b4e7284b98d05",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "工艺+成分+热状态特征的GBDT/分类回归",
+          "member_count": 1,
+          "score": 2.78282443
+        },
+        {
+          "capability_id": "capability:9e220966088cc412",
+          "domain_id": "domain:5c2df3a43d67e718",
+          "capability_label": "GBDT/随机森林/时序特征+守恒约束",
+          "member_count": 1,
+          "score": 2.76860489
+        },
+        {
+          "capability_id": "capability:6b56a29db0d83e8a",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "成分经验式或CALPHAD",
+          "member_count": 1,
+          "score": 1.38337421
+        },
+        {
+          "capability_id": "capability:d2e5e62f27e31ca7",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "热电偶时空特征+规则+分类模型",
+          "member_count": 1,
+          "score": 1.36020376
+        },
+        {
+          "capability_id": "capability:1ef35354c506f234",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "RDKit SMILES化学表达式解析与规范化专用算法",
+          "member_count": 1,
+          "score": 0.0
+        }
+      ],
+      "pruned_tool_count": 8,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 0.6299,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C018",
+        "E3C003",
+        "E3C010",
+        "A004"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 75.84458631,
+          "base_lexical_score": 49.54243483,
+          "domain_score": 56.33867201,
+          "capability_score": 56.97380005,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 71.83710253,
+          "base_lexical_score": 45.00972679,
+          "domain_score": 56.33867201,
+          "capability_score": 51.76118581,
+          "applicability_overlap_score": 21.68254275,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 62.84162577,
+          "base_lexical_score": 41.37258193,
+          "domain_score": 56.33867201,
+          "capability_score": 47.57846922,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:e06029cb247b9f93",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 47.92658978,
+          "base_lexical_score": 32.87584829,
+          "domain_score": 56.33867201,
+          "capability_score": 37.80722553,
+          "applicability_overlap_score": 3.71085836,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:a9f9931574b3cb70",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "A004",
+          "score": 19.89282957,
+          "base_lexical_score": 9.4429743,
+          "domain_score": 56.33867201,
+          "capability_score": 10.85942044,
+          "applicability_overlap_score": 5.28820796,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 9,
+          "score": 56.33867201
+        },
+        {
+          "domain_id": "domain:5c2df3a43d67e718",
+          "domain_label": "转炉炼钢",
+          "member_count": 1,
+          "score": 2.76860489
+        },
+        {
+          "domain_id": "domain:960b12b075f8840e",
+          "domain_label": "连铸质量与二冷",
+          "member_count": 3,
+          "score": 2.76840317
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 56.97380005
+        },
+        {
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "PeriodicTable同位素摩尔质量计算专用算法",
+          "member_count": 1,
+          "score": 51.76118581
+        },
+        {
+          "capability_id": "capability:e06029cb247b9f93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "分子图平均原子量求和",
+          "member_count": 1,
+          "score": 47.57846922
+        },
+        {
+          "capability_id": "capability:a9f9931574b3cb70",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "RDKit精确摩尔质量计算（同位素）专用算法",
+          "member_count": 1,
+          "score": 37.80722553
+        },
+        {
+          "capability_id": "capability:2f119b78b6bfa4a4",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "分子质量中心计算专用算法",
+          "member_count": 1,
+          "score": 11.27178431
+        },
+        {
+          "capability_id": "capability:d3b5e20c04fda6d9",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "质量分数/摩尔分数归一化与基准转换",
+          "member_count": 1,
+          "score": 10.85942044
+        },
+        {
+          "capability_id": "capability:3af9f55cf4483990",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "输入—输出元素逐项守恒残差",
+          "member_count": 1,
+          "score": 5.37219096
+        },
+        {
+          "capability_id": "capability:592b4e7284b98d05",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "工艺+成分+热状态特征的GBDT/分类回归",
+          "member_count": 1,
+          "score": 2.90141404
+        }
+      ],
+      "pruned_tool_count": 8,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 0.6792,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 75.6877626,
+          "base_lexical_score": 49.54243483,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 65.41762186,
+          "base_lexical_score": 42.22633556,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 64.48446152,
+          "base_lexical_score": 41.29317522,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 60.28369011,
+          "base_lexical_score": 42.16943328,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 2.48490665,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 46.75821406,
+          "base_lexical_score": 28.03098138,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 3.71085836,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 10,
+          "score": 56.23934501
+        },
+        {
+          "domain_id": "domain:5c2df3a43d67e718",
+          "domain_label": "转炉炼钢",
+          "member_count": 1,
+          "score": 2.76860489
+        },
+        {
+          "domain_id": "domain:960b12b075f8840e",
+          "domain_label": "连铸质量与二冷",
+          "member_count": 2,
+          "score": 1.3818631
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 9,
+          "score": 56.23934501
+        },
+        {
+          "capability_id": "capability:9e220966088cc412",
+          "domain_id": "domain:5c2df3a43d67e718",
+          "capability_label": "GBDT/随机森林/时序特征+守恒约束",
+          "member_count": 1,
+          "score": 2.76860489
+        },
+        {
+          "capability_id": "capability:6b56a29db0d83e8a",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "成分经验式或CALPHAD",
+          "member_count": 1,
+          "score": 1.38337421
+        },
+        {
+          "capability_id": "capability:d2e5e62f27e31ca7",
+          "domain_id": "domain:960b12b075f8840e",
+          "capability_label": "热电偶时空特征+规则+分类模型",
+          "member_count": 1,
+          "score": 1.36020376
+        },
+        {
+          "capability_id": "capability:1ef35354c506f234",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "RDKit SMILES化学表达式解析与规范化专用算法",
+          "member_count": 1,
+          "score": 0.0
+        }
+      ],
+      "pruned_tool_count": 13,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 1.7525,
+      "candidate_tool_ids": [
+        "A003",
+        "B003",
+        "A010",
+        "B006",
+        "B007"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 75.50329324,
+          "base_lexical_score": 49.54243483,
+          "domain_score": 52.92574131,
+          "capability_score": 56.97380005,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "B003",
+          "score": 20.89186093,
+          "base_lexical_score": 12.22252871,
+          "domain_score": 14.03036387,
+          "capability_score": 13.86246457,
+          "applicability_overlap_score": 8.98760584,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:6009493398ea7e44",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "A010",
+          "score": 19.98733421,
+          "base_lexical_score": 10.81989083,
+          "domain_score": 52.92574131,
+          "capability_score": 12.44287445,
+          "applicability_overlap_score": 2.77258872,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:d2d40c385856d632",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "B006",
+          "score": 19.19611795,
+          "base_lexical_score": 11.96708727,
+          "domain_score": 14.03036387,
+          "capability_score": 13.75850536,
+          "applicability_overlap_score": 6.14858645,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:6685a856cd63de39",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "B007",
+          "score": 19.19611795,
+          "base_lexical_score": 11.96708727,
+          "domain_score": 14.03036387,
+          "capability_score": 13.75850536,
+          "applicability_overlap_score": 6.14858645,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:6685a856cd63de39",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 12,
+          "score": 52.92574131
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 25,
+          "score": 14.03036387
+        },
+        {
+          "domain_id": "domain:c09cc955295c8133",
+          "domain_label": "动力学与传递",
+          "member_count": 10,
+          "score": 9.48071751
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 56.97380005
+        },
+        {
+          "capability_id": "capability:6009493398ea7e44",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "热容积分与参考态转换",
+          "member_count": 3,
+          "score": 13.86246457
+        },
+        {
+          "capability_id": "capability:6685a856cd63de39",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "反应计量加权与ΔG°=-RTlnK",
+          "member_count": 4,
+          "score": 13.75850536
+        },
+        {
+          "capability_id": "capability:9340cad58c22d8c8",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "标准多项式热容/焓/熵表达式",
+          "member_count": 2,
+          "score": 12.55647618
+        },
+        {
+          "capability_id": "capability:d2d40c385856d632",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "一阶误差传播、Monte Carlo",
+          "member_count": 1,
+          "score": 12.44287445
+        },
+        {
+          "capability_id": "capability:d0ae4686b28ff979",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "氧化反应ΔG°-T线与氧势换算",
+          "member_count": 1,
+          "score": 10.14320718
+        },
+        {
+          "capability_id": "capability:1b22f1e2b641364b",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "元素守恒约束下全局/局部Gibbs最小化",
+          "member_count": 1,
+          "score": 9.87405718
+        },
+        {
+          "capability_id": "capability:b6d1fe53b561e553",
+          "domain_id": "domain:c09cc955295c8133",
+          "capability_label": "k=Aexp(-Ea/RT)",
+          "member_count": 1,
+          "score": 9.65502052
+        }
+      ],
+      "pruned_tool_count": 14,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 1.5132,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C018",
+        "E3C003",
+        "E3C010",
+        "B003"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 75.84458631,
+          "base_lexical_score": 49.54243483,
+          "domain_score": 56.33867201,
+          "capability_score": 56.97380005,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 71.83710253,
+          "base_lexical_score": 45.00972679,
+          "domain_score": 56.33867201,
+          "capability_score": 51.76118581,
+          "applicability_overlap_score": 21.68254275,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 62.84162577,
+          "base_lexical_score": 41.37258193,
+          "domain_score": 56.33867201,
+          "capability_score": 47.57846922,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:e06029cb247b9f93",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 47.92658978,
+          "base_lexical_score": 32.87584829,
+          "domain_score": 56.33867201,
+          "capability_score": 37.80722553,
+          "applicability_overlap_score": 3.71085836,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:a9f9931574b3cb70",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "B003",
+          "score": 20.88152499,
+          "base_lexical_score": 12.22252871,
+          "domain_score": 14.03036387,
+          "capability_score": 13.81078485,
+          "applicability_overlap_score": 8.98760584,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:6009493398ea7e44",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 19,
+          "score": 56.33867201
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 23,
+          "score": 14.03036387
+        },
+        {
+          "domain_id": "domain:c09cc955295c8133",
+          "domain_label": "动力学与传递",
+          "member_count": 10,
+          "score": 9.48071751
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 56.97380005
+        },
+        {
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "PeriodicTable同位素摩尔质量计算专用算法",
+          "member_count": 1,
+          "score": 51.76118581
+        },
+        {
+          "capability_id": "capability:e06029cb247b9f93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "分子图平均原子量求和",
+          "member_count": 1,
+          "score": 47.57846922
+        },
+        {
+          "capability_id": "capability:a9f9931574b3cb70",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "RDKit精确摩尔质量计算（同位素）专用算法",
+          "member_count": 1,
+          "score": 37.80722553
+        },
+        {
+          "capability_id": "capability:6009493398ea7e44",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "热容积分与参考态转换",
+          "member_count": 2,
+          "score": 13.81078485
+        },
+        {
+          "capability_id": "capability:6685a856cd63de39",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "反应计量加权与ΔG°=-RTlnK",
+          "member_count": 3,
+          "score": 13.75782946
+        },
+        {
+          "capability_id": "capability:9340cad58c22d8c8",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "标准多项式热容/焓/熵表达式",
+          "member_count": 2,
+          "score": 12.55647618
+        },
+        {
+          "capability_id": "capability:d2d40c385856d632",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "一阶误差传播、Monte Carlo",
+          "member_count": 1,
+          "score": 12.44287445
+        }
+      ],
+      "pruned_tool_count": 12,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 2.123,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 75.6877626,
+          "base_lexical_score": 49.54243483,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 65.41762186,
+          "base_lexical_score": 42.22633556,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 64.48446152,
+          "base_lexical_score": 41.29317522,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 60.28369011,
+          "base_lexical_score": 42.16943328,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 2.48490665,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 46.75821406,
+          "base_lexical_score": 28.03098138,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 3.71085836,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 20,
+          "score": 56.23934501
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 23,
+          "score": 14.03036387
+        },
+        {
+          "domain_id": "domain:c09cc955295c8133",
+          "domain_label": "动力学与传递",
+          "member_count": 10,
+          "score": 9.48071751
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 9,
+          "score": 56.23934501
+        },
+        {
+          "capability_id": "capability:6009493398ea7e44",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "热容积分与参考态转换",
+          "member_count": 2,
+          "score": 13.81078485
+        },
+        {
+          "capability_id": "capability:6685a856cd63de39",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "反应计量加权与ΔG°=-RTlnK",
+          "member_count": 3,
+          "score": 13.75782946
+        },
+        {
+          "capability_id": "capability:9340cad58c22d8c8",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "标准多项式热容/焓/熵表达式",
+          "member_count": 2,
+          "score": 12.55647618
+        },
+        {
+          "capability_id": "capability:d2d40c385856d632",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "一阶误差传播、Monte Carlo",
+          "member_count": 1,
+          "score": 12.44287445
+        },
+        {
+          "capability_id": "capability:d0ae4686b28ff979",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "氧化反应ΔG°-T线与氧势换算",
+          "member_count": 1,
+          "score": 10.14320718
+        },
+        {
+          "capability_id": "capability:1b22f1e2b641364b",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "元素守恒约束下全局/局部Gibbs最小化",
+          "member_count": 1,
+          "score": 9.87405718
+        },
+        {
+          "capability_id": "capability:b6d1fe53b561e553",
+          "domain_id": "domain:c09cc955295c8133",
+          "capability_label": "k=Aexp(-Ea/RT)",
+          "member_count": 1,
+          "score": 9.65502052
+        }
+      ],
+      "pruned_tool_count": 20,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 1.616,
+      "candidate_tool_ids": [
+        "A003",
+        "B003",
+        "A010",
+        "B006",
+        "B007"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 75.50329324,
+          "base_lexical_score": 49.54243483,
+          "domain_score": 52.92574131,
+          "capability_score": 56.97380005,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "B003",
+          "score": 20.89186093,
+          "base_lexical_score": 12.22252871,
+          "domain_score": 14.03036387,
+          "capability_score": 13.86246457,
+          "applicability_overlap_score": 8.98760584,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:6009493398ea7e44",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "A010",
+          "score": 19.98733421,
+          "base_lexical_score": 10.81989083,
+          "domain_score": 52.92574131,
+          "capability_score": 12.44287445,
+          "applicability_overlap_score": 2.77258872,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:d2d40c385856d632",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "B006",
+          "score": 19.19611795,
+          "base_lexical_score": 11.96708727,
+          "domain_score": 14.03036387,
+          "capability_score": 13.75850536,
+          "applicability_overlap_score": 6.14858645,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:6685a856cd63de39",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "B007",
+          "score": 19.19611795,
+          "base_lexical_score": 11.96708727,
+          "domain_score": 14.03036387,
+          "capability_score": 13.75850536,
+          "applicability_overlap_score": 6.14858645,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:6685a856cd63de39",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 12,
+          "score": 52.92574131
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 24,
+          "score": 14.03036387
+        },
+        {
+          "domain_id": "domain:c09cc955295c8133",
+          "domain_label": "动力学与传递",
+          "member_count": 10,
+          "score": 9.48071751
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 56.97380005
+        },
+        {
+          "capability_id": "capability:6009493398ea7e44",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "热容积分与参考态转换",
+          "member_count": 3,
+          "score": 13.86246457
+        },
+        {
+          "capability_id": "capability:6685a856cd63de39",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "反应计量加权与ΔG°=-RTlnK",
+          "member_count": 4,
+          "score": 13.75850536
+        },
+        {
+          "capability_id": "capability:9340cad58c22d8c8",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "标准多项式热容/焓/熵表达式",
+          "member_count": 2,
+          "score": 12.55647618
+        },
+        {
+          "capability_id": "capability:d2d40c385856d632",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "一阶误差传播、Monte Carlo",
+          "member_count": 1,
+          "score": 12.44287445
+        },
+        {
+          "capability_id": "capability:d0ae4686b28ff979",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "氧化反应ΔG°-T线与氧势换算",
+          "member_count": 1,
+          "score": 10.14320718
+        },
+        {
+          "capability_id": "capability:1b22f1e2b641364b",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "元素守恒约束下全局/局部Gibbs最小化",
+          "member_count": 1,
+          "score": 9.87405718
+        },
+        {
+          "capability_id": "capability:b6d1fe53b561e553",
+          "domain_id": "domain:c09cc955295c8133",
+          "capability_label": "k=Aexp(-Ea/RT)",
+          "member_count": 1,
+          "score": 9.65502052
+        }
+      ],
+      "pruned_tool_count": 14,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 1.6067,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C018",
+        "E3C003",
+        "E3C010",
+        "B003"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 75.84458631,
+          "base_lexical_score": 49.54243483,
+          "domain_score": 56.33867201,
+          "capability_score": 56.97380005,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C018",
+          "score": 71.83710253,
+          "base_lexical_score": 45.00972679,
+          "domain_score": 56.33867201,
+          "capability_score": 51.76118581,
+          "applicability_overlap_score": 21.68254275,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C003",
+          "score": 62.84162577,
+          "base_lexical_score": 41.37258193,
+          "domain_score": 56.33867201,
+          "capability_score": 47.57846922,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:e06029cb247b9f93",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C010",
+          "score": 47.92658978,
+          "base_lexical_score": 32.87584829,
+          "domain_score": 56.33867201,
+          "capability_score": 37.80722553,
+          "applicability_overlap_score": 3.71085836,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:a9f9931574b3cb70",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "B003",
+          "score": 20.89186093,
+          "base_lexical_score": 12.22252871,
+          "domain_score": 14.03036387,
+          "capability_score": 13.86246457,
+          "applicability_overlap_score": 8.98760584,
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_id": "capability:6009493398ea7e44",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 18,
+          "score": 56.33867201
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 22,
+          "score": 14.03036387
+        },
+        {
+          "domain_id": "domain:c09cc955295c8133",
+          "domain_label": "动力学与传递",
+          "member_count": 9,
+          "score": 9.48071751
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 1,
+          "score": 56.97380005
+        },
+        {
+          "capability_id": "capability:1d68f2d4e64d08ec",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "PeriodicTable同位素摩尔质量计算专用算法",
+          "member_count": 1,
+          "score": 51.76118581
+        },
+        {
+          "capability_id": "capability:e06029cb247b9f93",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "分子图平均原子量求和",
+          "member_count": 1,
+          "score": 47.57846922
+        },
+        {
+          "capability_id": "capability:a9f9931574b3cb70",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "RDKit精确摩尔质量计算（同位素）专用算法",
+          "member_count": 1,
+          "score": 37.80722553
+        },
+        {
+          "capability_id": "capability:6009493398ea7e44",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "热容积分与参考态转换",
+          "member_count": 3,
+          "score": 13.86246457
+        },
+        {
+          "capability_id": "capability:6685a856cd63de39",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "反应计量加权与ΔG°=-RTlnK",
+          "member_count": 4,
+          "score": 13.75850536
+        },
+        {
+          "capability_id": "capability:9340cad58c22d8c8",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "标准多项式热容/焓/熵表达式",
+          "member_count": 2,
+          "score": 12.55647618
+        },
+        {
+          "capability_id": "capability:d2d40c385856d632",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "一阶误差传播、Monte Carlo",
+          "member_count": 1,
+          "score": 12.44287445
+        }
+      ],
+      "pruned_tool_count": 14,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "retriever_config_sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3",
+      "retrieval_latency_ms": 1.781,
+      "candidate_tool_ids": [
+        "A003",
+        "E3C022",
+        "E3C004",
+        "E3C011",
+        "E3C023"
+      ],
+      "candidates": [
+        {
+          "tool_id": "A003",
+          "score": 75.6877626,
+          "base_lexical_score": 49.54243483,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 18.54704853,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 1
+        },
+        {
+          "tool_id": "E3C022",
+          "score": 65.41762186,
+          "base_lexical_score": 42.22633556,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 2
+        },
+        {
+          "tool_id": "E3C004",
+          "score": 64.48446152,
+          "base_lexical_score": 41.29317522,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 12.63896559,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 3
+        },
+        {
+          "tool_id": "E3C011",
+          "score": 60.28369011,
+          "base_lexical_score": 42.16943328,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 2.48490665,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 4
+        },
+        {
+          "tool_id": "E3C023",
+          "score": 46.75821406,
+          "base_lexical_score": 28.03098138,
+          "domain_score": 56.23934501,
+          "capability_score": 56.23934501,
+          "applicability_overlap_score": 3.71085836,
+          "domain_id": "domain:f140507633be96ab",
+          "capability_id": "capability:46257139742660c1",
+          "backfilled": false,
+          "rank": 5
+        }
+      ],
+      "selected_domains": [
+        {
+          "domain_id": "domain:f140507633be96ab",
+          "domain_label": "通用数据与校验",
+          "member_count": 19,
+          "score": 56.23934501
+        },
+        {
+          "domain_id": "domain:4f7ec376fac15931",
+          "domain_label": "热力学与相平衡",
+          "member_count": 22,
+          "score": 14.03036387
+        },
+        {
+          "domain_id": "domain:c09cc955295c8133",
+          "domain_label": "动力学与传递",
+          "member_count": 9,
+          "score": 9.48071751
+        }
+      ],
+      "selected_capabilities": [
+        {
+          "capability_id": "capability:46257139742660c1",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "元素原子量加权求和",
+          "member_count": 9,
+          "score": 56.23934501
+        },
+        {
+          "capability_id": "capability:6009493398ea7e44",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "热容积分与参考态转换",
+          "member_count": 3,
+          "score": 13.86246457
+        },
+        {
+          "capability_id": "capability:6685a856cd63de39",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "反应计量加权与ΔG°=-RTlnK",
+          "member_count": 4,
+          "score": 13.75850536
+        },
+        {
+          "capability_id": "capability:9340cad58c22d8c8",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "标准多项式热容/焓/熵表达式",
+          "member_count": 2,
+          "score": 12.55647618
+        },
+        {
+          "capability_id": "capability:d2d40c385856d632",
+          "domain_id": "domain:f140507633be96ab",
+          "capability_label": "一阶误差传播、Monte Carlo",
+          "member_count": 1,
+          "score": 12.44287445
+        },
+        {
+          "capability_id": "capability:d0ae4686b28ff979",
+          "domain_id": "domain:4f7ec376fac15931",
+          "capability_label": "氧化反应ΔG°-T线与氧势换算",
+          "member_count": 1,
+          "score": 10.14320718
+        },
+        {
+          "capability_id": "capability:b6d1fe53b561e553",
+          "domain_id": "domain:c09cc955295c8133",
+          "capability_label": "k=Aexp(-Ea/RT)",
+          "member_count": 1,
+          "score": 9.65502052
+        },
+        {
+          "capability_id": "capability:84ae81a9078d2c5f",
+          "domain_id": "domain:c09cc955295c8133",
+          "capability_label": "Fick第二定律有限差分/有限体积",
+          "member_count": 1,
+          "score": 9.57135554
+        }
+      ],
+      "pruned_tool_count": 22,
+      "backfilled_tool_ids": [],
+      "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+      "lexical_index_sha256": "48f3e764decb1e9ec317667a2db74cce9cb8e386e2812ae20bf1ed2fca03ddfa",
+      "execution_status": "candidate_view_only_no_external_api"
+    }
+  ]
+}

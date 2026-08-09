@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "implementation_id": "V11-CF05-E3-A003-HIERARCHICAL-TOP5-CANDIDATE-V1-20260809",
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "filename": "a003_hierarchical_top5_candidate_views.json",
+      "sha256": "66ee56fb611018d42a2ae5726bdcd09674ba62aea6fb654401681af66d518d3c",
+      "bytes": 139440
+    },
+    {
+      "filename": "a003_hierarchical_top5_config_snapshot.json",
+      "sha256": "5448bea1230acb1becd6f0ce34901c38ed0aec5d669f272da59bb3eac31b3b2d",
+      "bytes": 3323
+    },
+    {
+      "filename": "a003_hierarchical_top5_determinism_audit.json",
+      "sha256": "30048a8a9f48d69c92ff2821f21fa9545b27cc512efba1e7bcd6f367ac189c07",
+      "bytes": 9499
+    },
+    {
+      "filename": "a003_hierarchical_top5_development_diagnostics.json",
+      "sha256": "283b8875737e297bf8ef55eea660a9a3432fbfb404772b2fd50c64a7d702f207",
+      "bytes": 14626
+    },
+    {
+      "filename": "a003_hierarchical_top5_readiness_report.json",
+      "sha256": "021246c52fd90e0612b10abd3c65d14485216960a9eea9d464e6f0ee5eb3770c",
+      "bytes": 1226
+    },
+    {
+      "filename": "a003_hierarchical_top5_taxonomy_snapshot.json",
+      "sha256": "dcc966042e1f86066ee7cc7aa5f674870003a3d2252657ba9fb8f7f76f1bf712",
+      "bytes": 62962
+    }
+  ]
+}
