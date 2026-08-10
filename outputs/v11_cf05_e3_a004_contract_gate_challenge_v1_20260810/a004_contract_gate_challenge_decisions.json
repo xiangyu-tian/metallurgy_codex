@@ -1,0 +1,1060 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "case_id": "CG-001-SINGLE-VALID-A004",
+      "category": "valid_single_call",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "matrix": 9.0,
+            "trace": 1.0
+          },
+          "component_labels": [
+            "matrix",
+            "trace"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": true,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": false,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible",
+              "full_mapping_output_supported"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "allow_original_single_call",
+        "decision_reason": "single_call_contract_compatible_and_execution_eligible",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "matrix": 9.0,
+            "trace": 1.0
+          }
+        },
+        "output_tool_call_count": 1,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "allow_original_single_call",
+        "selected_tool_id": "A004"
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "CG-002-ZERO-CALL",
+      "category": "zero_call",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "x": 2.0,
+            "y": 3.0
+          },
+          "component_labels": [
+            "x",
+            "y"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": false,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 0,
+        "original_called_tool_ids": [],
+        "structure_violation_detected": true,
+        "original_execution_blocked": true,
+        "candidate_evaluations": [],
+        "decision": "block_no_call",
+        "decision_reason": "no_native_tool_call",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": null,
+        "selected_arguments": null,
+        "output_tool_call_count": 0,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "block_no_call",
+        "selected_tool_id": null
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "CG-003-UNKNOWN-SINGLE",
+      "category": "unknown_tool",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "x": 2.0,
+            "y": 3.0
+          },
+          "component_labels": [
+            "x",
+            "y"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": false,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "E3C999"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": true,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "E3C999",
+            "semantic_compatible": false,
+            "execution_eligible": false,
+            "reasons": [],
+            "vetoes": [
+              "missing_frozen_contract_profile"
+            ]
+          }
+        ],
+        "decision": "review_required",
+        "decision_reason": "candidate_evidence_incomplete",
+        "unresolved_candidate_evidence": true,
+        "selected_tool_id": null,
+        "selected_arguments": null,
+        "output_tool_call_count": 0,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "review_required",
+        "selected_tool_id": null
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "CG-004-MALFORMED-ARGUMENTS",
+      "category": "invalid_arguments_json",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "x": 2.0,
+            "y": 3.0
+          },
+          "component_labels": [
+            "x",
+            "y"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": false,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": true,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": false,
+            "execution_eligible": true,
+            "reasons": [
+              "normalization_kind_matches",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": [
+              "arguments_not_valid_json_object",
+              "composition_arguments_do_not_match_request"
+            ]
+          }
+        ],
+        "decision": "review_required",
+        "decision_reason": "candidate_evidence_incomplete",
+        "unresolved_candidate_evidence": true,
+        "selected_tool_id": null,
+        "selected_arguments": null,
+        "output_tool_call_count": 0,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "review_required",
+        "selected_tool_id": null
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "CG-005-WRONG-PARAMETERS",
+      "category": "parameter_mismatch",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "x": 2.0,
+            "y": 3.0
+          },
+          "component_labels": [
+            "x",
+            "y"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": false,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": true,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": false,
+            "execution_eligible": true,
+            "reasons": [
+              "normalization_kind_matches",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": [
+              "composition_arguments_do_not_match_request"
+            ]
+          }
+        ],
+        "decision": "review_required",
+        "decision_reason": "contract_adjudication_not_unique",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": null,
+        "selected_arguments": null,
+        "output_tool_call_count": 0,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "review_required",
+        "selected_tool_id": null
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "CG-006-WRONG-NORMALIZATION",
+      "category": "normalization_mismatch",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "l2_norm",
+          "component_mapping": {
+            "x": 3.0,
+            "y": 4.0
+          },
+          "component_labels": [
+            "x",
+            "y"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": false,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": true,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": false,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": [
+              "normalization_kind_mismatch:unit_sum"
+            ]
+          }
+        ],
+        "decision": "review_required",
+        "decision_reason": "contract_adjudication_not_unique",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": null,
+        "selected_arguments": null,
+        "output_tool_call_count": 0,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "review_required",
+        "selected_tool_id": null
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "CG-007-E3C005-NOT-EXECUTABLE",
+      "category": "candidate_not_execution_eligible",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "Fe": 2.0,
+            "O": 3.0
+          },
+          "component_labels": [
+            "Fe",
+            "O"
+          ],
+          "generic_labels_present": false,
+          "full_mapping_required": false,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "E3C005"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": true,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "E3C005",
+            "semantic_compatible": true,
+            "execution_eligible": false,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "review_required",
+        "decision_reason": "contract_adjudication_not_unique",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": null,
+        "selected_arguments": null,
+        "output_tool_call_count": 0,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "review_required",
+        "selected_tool_id": null
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "CG-008-E3C027-NOT-EXECUTABLE",
+      "category": "candidate_not_execution_eligible",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "l2_norm",
+          "component_mapping": {
+            "x": 3.0,
+            "y": 4.0
+          },
+          "component_labels": [
+            "x",
+            "y"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": false,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "E3C027"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": true,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "E3C027",
+            "semantic_compatible": true,
+            "execution_eligible": false,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "review_required",
+        "decision_reason": "contract_adjudication_not_unique",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": null,
+        "selected_arguments": null,
+        "output_tool_call_count": 0,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "review_required",
+        "selected_tool_id": null
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "CG-009-KNOWN-MULTICALL-UNIQUE",
+      "category": "unique_contract_adjudication",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "matrix": 0.9,
+            "trace": 0.1
+          },
+          "component_labels": [
+            "matrix",
+            "trace"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": false,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 3,
+        "original_called_tool_ids": [
+          "A004",
+          "E3C005",
+          "E3C027"
+        ],
+        "structure_violation_detected": true,
+        "original_execution_blocked": true,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": []
+          },
+          {
+            "call_index": 1,
+            "tool_id": "E3C005",
+            "semantic_compatible": false,
+            "execution_eligible": false,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches"
+            ],
+            "vetoes": [
+              "generic_component_labels_outside_element_or_species_domain"
+            ]
+          },
+          {
+            "call_index": 2,
+            "tool_id": "E3C027",
+            "semantic_compatible": false,
+            "execution_eligible": false,
+            "reasons": [
+              "composition_arguments_match_request",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": [
+              "normalization_kind_mismatch:l2_norm"
+            ]
+          }
+        ],
+        "decision": "allow_adjudicated_single_call",
+        "decision_reason": "unique_contract_compatible_execution_eligible_candidate",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "matrix": 0.9,
+            "trace": 0.1
+          }
+        },
+        "output_tool_call_count": 1,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "allow_adjudicated_single_call",
+        "selected_tool_id": "A004"
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "CG-010-DUPLICATE-VALID-A004",
+      "category": "non_unique_duplicate_calls",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "x": 2.0,
+            "y": 3.0
+          },
+          "component_labels": [
+            "x",
+            "y"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": false,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 2,
+        "original_called_tool_ids": [
+          "A004",
+          "A004"
+        ],
+        "structure_violation_detected": true,
+        "original_execution_blocked": true,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": []
+          },
+          {
+            "call_index": 1,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "review_required",
+        "decision_reason": "contract_adjudication_not_unique",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": null,
+        "selected_arguments": null,
+        "output_tool_call_count": 0,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "review_required",
+        "selected_tool_id": null
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "CG-011-DUPLICATE-ONE-VALID",
+      "category": "duplicate_tool_argument_binding",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "x": 2.0,
+            "y": 3.0
+          },
+          "component_labels": [
+            "x",
+            "y"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": false,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 2,
+        "original_called_tool_ids": [
+          "A004",
+          "A004"
+        ],
+        "structure_violation_detected": true,
+        "original_execution_blocked": true,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": false,
+            "execution_eligible": true,
+            "reasons": [
+              "normalization_kind_matches",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": [
+              "composition_arguments_do_not_match_request"
+            ]
+          },
+          {
+            "call_index": 1,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "allow_adjudicated_single_call",
+        "decision_reason": "unique_contract_compatible_execution_eligible_candidate",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "x": 2.0,
+            "y": 3.0
+          }
+        },
+        "output_tool_call_count": 1,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "allow_adjudicated_single_call",
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "x": 2.0,
+            "y": 3.0
+          }
+        }
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "CG-012-ALL-INCOMPATIBLE",
+      "category": "no_compatible_candidate",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "matrix": 0.9,
+            "trace": 0.1
+          },
+          "component_labels": [
+            "matrix",
+            "trace"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": false,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 2,
+        "original_called_tool_ids": [
+          "E3C005",
+          "E3C027"
+        ],
+        "structure_violation_detected": true,
+        "original_execution_blocked": true,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "E3C005",
+            "semantic_compatible": false,
+            "execution_eligible": false,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches"
+            ],
+            "vetoes": [
+              "generic_component_labels_outside_element_or_species_domain"
+            ]
+          },
+          {
+            "call_index": 1,
+            "tool_id": "E3C027",
+            "semantic_compatible": false,
+            "execution_eligible": false,
+            "reasons": [
+              "composition_arguments_match_request",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": [
+              "normalization_kind_mismatch:l2_norm"
+            ]
+          }
+        ],
+        "decision": "review_required",
+        "decision_reason": "contract_adjudication_not_unique",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": null,
+        "selected_arguments": null,
+        "output_tool_call_count": 0,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "review_required",
+        "selected_tool_id": null
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "CG-013-VALID-PLUS-UNKNOWN",
+      "category": "incomplete_candidate_evidence",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "x": 2.0,
+            "y": 3.0
+          },
+          "component_labels": [
+            "x",
+            "y"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": false,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 2,
+        "original_called_tool_ids": [
+          "A004",
+          "E3C999"
+        ],
+        "structure_violation_detected": true,
+        "original_execution_blocked": true,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": []
+          },
+          {
+            "call_index": 1,
+            "tool_id": "E3C999",
+            "semantic_compatible": false,
+            "execution_eligible": false,
+            "reasons": [],
+            "vetoes": [
+              "missing_frozen_contract_profile"
+            ]
+          }
+        ],
+        "decision": "review_required",
+        "decision_reason": "candidate_evidence_incomplete",
+        "unresolved_candidate_evidence": true,
+        "selected_tool_id": null,
+        "selected_arguments": null,
+        "output_tool_call_count": 0,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "review_required",
+        "selected_tool_id": null
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "CG-014-VALID-PLUS-MALFORMED",
+      "category": "incomplete_candidate_evidence",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "x": 2.0,
+            "y": 3.0
+          },
+          "component_labels": [
+            "x",
+            "y"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": false,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 2,
+        "original_called_tool_ids": [
+          "A004",
+          "E3C027"
+        ],
+        "structure_violation_detected": true,
+        "original_execution_blocked": true,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": []
+          },
+          {
+            "call_index": 1,
+            "tool_id": "E3C027",
+            "semantic_compatible": false,
+            "execution_eligible": false,
+            "reasons": [
+              "component_label_domain_compatible"
+            ],
+            "vetoes": [
+              "arguments_not_valid_json_object",
+              "composition_arguments_do_not_match_request",
+              "normalization_kind_mismatch:l2_norm"
+            ]
+          }
+        ],
+        "decision": "review_required",
+        "decision_reason": "candidate_evidence_incomplete",
+        "unresolved_candidate_evidence": true,
+        "selected_tool_id": null,
+        "selected_arguments": null,
+        "output_tool_call_count": 0,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "review_required",
+        "selected_tool_id": null
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "CG-015-ELEMENT-REQUEST-A004",
+      "category": "generic_contract_accepts_element_labels",
+      "decision_input_fields": [
+        "problem_text",
+        "raw_response"
+      ],
+      "expected_accessed_after_decision": true,
+      "decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "Fe": 2.0,
+            "O": 3.0
+          },
+          "component_labels": [
+            "Fe",
+            "O"
+          ],
+          "generic_labels_present": false,
+          "full_mapping_required": false,
+          "precision_digits": null
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": false,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "allow_original_single_call",
+        "decision_reason": "single_call_contract_compatible_and_execution_eligible",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "Fe": 2.0,
+            "O": 3.0
+          }
+        },
+        "output_tool_call_count": 1,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "expected": {
+        "decision": "allow_original_single_call",
+        "selected_tool_id": "A004"
+      },
+      "checks": {
+        "decision_matches": true,
+        "selected_tool_matches": true,
+        "selected_arguments_match": true
+      },
+      "passed": true
+    }
+  ]
+}

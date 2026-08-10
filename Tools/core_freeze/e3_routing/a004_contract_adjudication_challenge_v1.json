@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "challenge_id": "V11-CF05-E3-A004-CONTRACT-GATE-CHALLENGE-V1-20260810",
+  "development_only": true,
+  "gold_access_allowed_during_decision": false,
+  "external_api_calls_authorized": false,
+  "tool_execution_allowed": false,
+  "cases": [
+    {
+      "case_id": "CG-001-SINGLE-VALID-A004",
+      "category": "valid_single_call",
+      "input": {
+        "problem_text": "以下组分使用同一基准：{\"matrix\": 9.0, \"trace\": 1.0}。请归一化各组分，使总和为1。",
+        "raw_response": {"choices": [{"message": {"tool_calls": [{"function": {"name": "A004", "arguments": "{\"compositions\":{\"matrix\":9.0,\"trace\":1.0}}"}}]}}]}
+      },
+      "expected": {"decision": "allow_original_single_call", "selected_tool_id": "A004"}
+    },
+    {
+      "case_id": "CG-002-ZERO-CALL",
+      "category": "zero_call",
+      "input": {
+        "problem_text": "将 {\"x\": 2.0, \"y\": 3.0} 归一化使总和为1。",
+        "raw_response": {"choices": [{"message": {"content": "无法选择工具"}}]}
+      },
+      "expected": {"decision": "block_no_call", "selected_tool_id": null}
+    },
+    {
+      "case_id": "CG-003-UNKNOWN-SINGLE",
+      "category": "unknown_tool",
+      "input": {
+        "problem_text": "将 {\"x\": 2.0, \"y\": 3.0} 归一化使总和为1。",
+        "raw_response": {"choices": [{"message": {"tool_calls": [{"function": {"name": "E3C999", "arguments": "{\"compositions\":{\"x\":2.0,\"y\":3.0}}"}}]}}]}
+      },
+      "expected": {"decision": "review_required", "selected_tool_id": null}
+    },
+    {
+      "case_id": "CG-004-MALFORMED-ARGUMENTS",
+      "category": "invalid_arguments_json",
+      "input": {
+        "problem_text": "将 {\"x\": 2.0, \"y\": 3.0} 归一化使总和为1。",
+        "raw_response": {"choices": [{"message": {"tool_calls": [{"function": {"name": "A004", "arguments": "{bad json"}}]}}]}
+      },
+      "expected": {"decision": "review_required", "selected_tool_id": null}
+    },
+    {
+      "case_id": "CG-005-WRONG-PARAMETERS",
+      "category": "parameter_mismatch",
+      "input": {
+        "problem_text": "将 {\"x\": 2.0, \"y\": 3.0} 归一化使总和为1。",
+        "raw_response": {"choices": [{"message": {"tool_calls": [{"function": {"name": "A004", "arguments": "{\"compositions\":{\"x\":2.0}}"}}]}}]}
+      },
+      "expected": {"decision": "review_required", "selected_tool_id": null}
+    },
+    {
+      "case_id": "CG-006-WRONG-NORMALIZATION",
+      "category": "normalization_mismatch",
+      "input": {
+        "problem_text": "将 {\"x\": 3.0, \"y\": 4.0} 按L2二范数归一化。",
+        "raw_response": {"choices": [{"message": {"tool_calls": [{"function": {"name": "A004", "arguments": "{\"compositions\":{\"x\":3.0,\"y\":4.0}}"}}]}}]}
+      },
+      "expected": {"decision": "review_required", "selected_tool_id": null}
+    },
+    {
+      "case_id": "CG-007-E3C005-NOT-EXECUTABLE",
+      "category": "candidate_not_execution_eligible",
+      "input": {
+        "problem_text": "将元素组分 {\"Fe\": 2.0, \"O\": 3.0} 归一化使总和为1。",
+        "raw_response": {"choices": [{"message": {"tool_calls": [{"function": {"name": "E3C005", "arguments": "{\"compositions\":{\"Fe\":2.0,\"O\":3.0}}"}}]}}]}
+      },
+      "expected": {"decision": "review_required", "selected_tool_id": null}
+    },
+    {
+      "case_id": "CG-008-E3C027-NOT-EXECUTABLE",
+      "category": "candidate_not_execution_eligible",
+      "input": {
+        "problem_text": "将 {\"x\": 3.0, \"y\": 4.0} 按L2二范数归一化。",
+        "raw_response": {"choices": [{"message": {"tool_calls": [{"function": {"name": "E3C027", "arguments": "{\"compositions\":{\"x\":3.0,\"y\":4.0}}"}}]}}]}
+      },
+      "expected": {"decision": "review_required", "selected_tool_id": null}
+    },
+    {
+      "case_id": "CG-009-KNOWN-MULTICALL-UNIQUE",
+      "category": "unique_contract_adjudication",
+      "input": {
+        "problem_text": "将 {\"matrix\": 0.9, \"trace\": 0.1} 归一化使总和为1。",
+        "raw_response": {"choices": [{"message": {"tool_calls": [
+          {"function": {"name": "A004", "arguments": "{\"compositions\":{\"matrix\":0.9,\"trace\":0.1}}"}},
+          {"function": {"name": "E3C005", "arguments": "{\"compositions\":{\"matrix\":0.9,\"trace\":0.1}}"}},
+          {"function": {"name": "E3C027", "arguments": "{\"compositions\":{\"matrix\":0.9,\"trace\":0.1}}"}}
+        ]}}]}
+      },
+      "expected": {"decision": "allow_adjudicated_single_call", "selected_tool_id": "A004"}
+    },
+    {
+      "case_id": "CG-010-DUPLICATE-VALID-A004",
+      "category": "non_unique_duplicate_calls",
+      "input": {
+        "problem_text": "将 {\"x\": 2.0, \"y\": 3.0} 归一化使总和为1。",
+        "raw_response": {"choices": [{"message": {"tool_calls": [
+          {"function": {"name": "A004", "arguments": "{\"compositions\":{\"x\":2.0,\"y\":3.0}}"}},
+          {"function": {"name": "A004", "arguments": "{\"compositions\":{\"x\":2.0,\"y\":3.0}}"}}
+        ]}}]}
+      },
+      "expected": {"decision": "review_required", "selected_tool_id": null}
+    },
+    {
+      "case_id": "CG-011-DUPLICATE-ONE-VALID",
+      "category": "duplicate_tool_argument_binding",
+      "input": {
+        "problem_text": "将 {\"x\": 2.0, \"y\": 3.0} 归一化使总和为1。",
+        "raw_response": {"choices": [{"message": {"tool_calls": [
+          {"function": {"name": "A004", "arguments": "{\"compositions\":{\"x\":2.0}}"}},
+          {"function": {"name": "A004", "arguments": "{\"compositions\":{\"x\":2.0,\"y\":3.0}}"}}
+        ]}}]}
+      },
+      "expected": {
+        "decision": "allow_adjudicated_single_call",
+        "selected_tool_id": "A004",
+        "selected_arguments": {"compositions": {"x": 2.0, "y": 3.0}}
+      }
+    },
+    {
+      "case_id": "CG-012-ALL-INCOMPATIBLE",
+      "category": "no_compatible_candidate",
+      "input": {
+        "problem_text": "将 {\"matrix\": 0.9, \"trace\": 0.1} 归一化使总和为1。",
+        "raw_response": {"choices": [{"message": {"tool_calls": [
+          {"function": {"name": "E3C005", "arguments": "{\"compositions\":{\"matrix\":0.9,\"trace\":0.1}}"}},
+          {"function": {"name": "E3C027", "arguments": "{\"compositions\":{\"matrix\":0.9,\"trace\":0.1}}"}}
+        ]}}]}
+      },
+      "expected": {"decision": "review_required", "selected_tool_id": null}
+    },
+    {
+      "case_id": "CG-013-VALID-PLUS-UNKNOWN",
+      "category": "incomplete_candidate_evidence",
+      "input": {
+        "problem_text": "将 {\"x\": 2.0, \"y\": 3.0} 归一化使总和为1。",
+        "raw_response": {"choices": [{"message": {"tool_calls": [
+          {"function": {"name": "A004", "arguments": "{\"compositions\":{\"x\":2.0,\"y\":3.0}}"}},
+          {"function": {"name": "E3C999", "arguments": "{\"compositions\":{\"x\":2.0,\"y\":3.0}}"}}
+        ]}}]}
+      },
+      "expected": {"decision": "review_required", "selected_tool_id": null}
+    },
+    {
+      "case_id": "CG-014-VALID-PLUS-MALFORMED",
+      "category": "incomplete_candidate_evidence",
+      "input": {
+        "problem_text": "将 {\"x\": 2.0, \"y\": 3.0} 归一化使总和为1。",
+        "raw_response": {"choices": [{"message": {"tool_calls": [
+          {"function": {"name": "A004", "arguments": "{\"compositions\":{\"x\":2.0,\"y\":3.0}}"}},
+          {"function": {"name": "E3C027", "arguments": "{bad json"}}
+        ]}}]}
+      },
+      "expected": {"decision": "review_required", "selected_tool_id": null}
+    },
+    {
+      "case_id": "CG-015-ELEMENT-REQUEST-A004",
+      "category": "generic_contract_accepts_element_labels",
+      "input": {
+        "problem_text": "将元素组分 {\"Fe\": 2.0, \"O\": 3.0} 归一化使总和为1。",
+        "raw_response": {"choices": [{"message": {"tool_calls": [{"function": {"name": "A004", "arguments": "{\"compositions\":{\"Fe\":2.0,\"O\":3.0}}"}}]}}]}
+      },
+      "expected": {"decision": "allow_original_single_call", "selected_tool_id": "A004"}
+    }
+  ]
+}

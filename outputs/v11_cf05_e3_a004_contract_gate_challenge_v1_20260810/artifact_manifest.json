@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "challenge_id": "V11-CF05-E3-A004-CONTRACT-GATE-CHALLENGE-V1-20260810",
+  "challenge_source_sha256": "20a56cc81b988b4c1b1afde9797db576e2ab2f3f3b0dfac3cafd8a28e608d836",
+  "artifact_count": 4,
+  "artifacts": [
+    {
+      "filename": "a004_contract_gate_challenge_decisions.json",
+      "sha256": "be53f203626587a8beafeea14ed5e0345980003378cdd7af6a0b009ab6f2e5ca",
+      "bytes": 32047
+    },
+    {
+      "filename": "a004_contract_gate_challenge_profiles.json",
+      "sha256": "4552e63a4b6ee020b8e302a297532579545dc5c8e352eec68e0a88de44286463",
+      "bytes": 1663
+    },
+    {
+      "filename": "a004_contract_gate_challenge_report.json",
+      "sha256": "14e68660aa2ed829f72542091938343e7b28e0684dfc7c03662282ef7791db68",
+      "bytes": 694
+    },
+    {
+      "filename": "a004_contract_gate_challenge_snapshot.json",
+      "sha256": "7a40be75b667ecae93f3fb31352815d47e58af589ca1dc281652758c9e14acf4",
+      "bytes": 13047
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "challenge_id": "V11-CF05-E3-A004-CONTRACT-GATE-CHALLENGE-V1-20260810",
+  "analysis_status": "offline_boundary_challenge_complete",
+  "case_count": 15,
+  "passed_count": 15,
+  "failed_count": 0,
+  "pass_rate": 1.0,
+  "gold_accessed_during_decision": false,
+  "expected_outcomes_used_after_decision_only": true,
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "independent_model_validation_claim_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "interpretation": "developer-authored boundary challenge validates conservative rule behavior, not model generalization"
+}

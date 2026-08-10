@@ -13,6 +13,7 @@ from typing import Any
 
 WORKSPACE = Path(__file__).resolve().parents[3]
 CONFIG_PATH = Path(__file__).with_name("a004_contract_adjudication_config_v1.json")
+PROFILE_BINDING_NAMES = ("verified_contracts", "batch1_registry", "batch4_registry")
 ELEMENT_SYMBOLS = {
     "H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne", "Na", "Mg", "Al", "Si", "P", "S", "Cl", "Ar",
     "K", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "Ga", "Ge", "As", "Se", "Br", "Kr",
@@ -128,6 +129,16 @@ def build_profile_registry(config: dict[str, Any], docs: dict[str, Any]) -> dict
             "profile_count": len(rows), "profiles": rows, "gold_fields_present": False}
 
 
+def load_bound_profile_registry(config: dict[str, Any]) -> dict[str, Any]:
+    """Load only contract sources; task and scoring bindings are deliberately excluded."""
+    validate_config(config)
+    docs = {
+        name: load_json(validate_binding(config["bindings"][name]))
+        for name in PROFILE_BINDING_NAMES
+    }
+    return build_profile_registry(config, docs)
+
+
 def parse_calls(raw_response: Any) -> list[dict[str, Any]]:
     if not isinstance(raw_response, dict) or not raw_response.get("choices"):
         return []
@@ -197,10 +208,18 @@ def adjudicate(problem_text: str, raw_response: Any,
     requirements = extract_requirements(problem_text)
     calls = parse_calls(raw_response)
     profiles = {row["tool_id"]: row for row in profile_registry["profiles"]}
-    evaluations = [evaluate_candidate(call, requirements, profiles) for call in calls]
+    evaluations = [
+        {"call_index": index, **evaluate_candidate(call, requirements, profiles)}
+        for index, call in enumerate(calls)
+    ]
     structure_violation = len(calls) != 1
     compatible = [row for row in evaluations if row["semantic_compatible"]]
     eligible = [row for row in compatible if row["execution_eligible"]]
+    unresolved_candidate_evidence = any(
+        "missing_frozen_contract_profile" in row["vetoes"]
+        or "arguments_not_valid_json_object" in row["vetoes"]
+        for row in evaluations
+    )
     selected_tool_id = None
     selected_arguments = None
     if len(calls) == 0:
@@ -208,18 +227,21 @@ def adjudicate(problem_text: str, raw_response: Any,
     elif len(calls) == 1 and len(eligible) == 1:
         decision, reason = "allow_original_single_call", "single_call_contract_compatible_and_execution_eligible"
         selected_tool_id, selected_arguments = calls[0]["tool_id"], calls[0]["arguments"]
-    elif len(eligible) == 1:
+    elif len(eligible) == 1 and not unresolved_candidate_evidence:
         decision, reason = "allow_adjudicated_single_call", "unique_contract_compatible_execution_eligible_candidate"
         selected_tool_id = eligible[0]["tool_id"]
-        selected_arguments = next(call["arguments"] for call in calls if call["tool_id"] == selected_tool_id)
+        selected_arguments = calls[eligible[0]["call_index"]]["arguments"]
     else:
-        decision, reason = "review_required", "contract_adjudication_not_unique"
+        decision = "review_required"
+        reason = ("candidate_evidence_incomplete" if unresolved_candidate_evidence
+                  else "contract_adjudication_not_unique")
     return {
         "requirements": requirements, "original_tool_call_count": len(calls),
         "original_called_tool_ids": [call["tool_id"] for call in calls],
         "structure_violation_detected": structure_violation,
         "original_execution_blocked": structure_violation or decision == "review_required",
         "candidate_evaluations": evaluations, "decision": decision, "decision_reason": reason,
+        "unresolved_candidate_evidence": unresolved_candidate_evidence,
         "selected_tool_id": selected_tool_id, "selected_arguments": selected_arguments,
         "output_tool_call_count": 1 if selected_tool_id is not None else 0,
         "tool_executed": False, "external_api_calls": 0,
