@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-HARDCASE-CONTROLLED-OPENING-V1-20260810",
+  "router_visible": false,
+  "use": "offline_scoring_only",
+  "task_count": 2,
+  "tasks": [
+    {
+      "task_id": "E1B2-A004-007",
+      "target_tool_id": "A004",
+      "canonical_inputs": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A004-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "matrix": 0.999,
+              "trace": 0.001
+            }
+          }
+        ]
+      },
+      "acceptable_tools_development_scope": [
+        "A004"
+      ]
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "target_tool_id": "A004",
+      "canonical_inputs": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A004-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "matrix": 0.999,
+              "trace": 0.001
+            }
+          }
+        ]
+      },
+      "acceptable_tools_development_scope": [
+        "A004"
+      ]
+    }
+  ]
+}

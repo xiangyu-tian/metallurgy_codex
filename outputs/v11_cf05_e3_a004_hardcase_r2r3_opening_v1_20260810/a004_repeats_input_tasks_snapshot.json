@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-HARDCASE-CONTROLLED-OPENING-V1-20260810",
+  "router_visible": true,
+  "gold_fields_present": false,
+  "task_count": 2,
+  "tasks": [
+    {
+      "task_id": "E1B2-A004-007",
+      "task_family_id": "E1B-A004",
+      "task_pair_id": "PAIR-E1B2-A004-007",
+      "base_task_group_id": "A004-TRACE",
+      "precision_policy": "six_decimal_components",
+      "problem_text": "以下组分使用同一基准：{\"matrix\": 999.0, \"trace\": 1.0}。请归一化各组分，使总和为1；各分量保留6位小数。"
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "task_family_id": "E1B-A004",
+      "task_pair_id": "PAIR-E1B2-A004-008",
+      "base_task_group_id": "A004-TRACE",
+      "precision_policy": "six_decimal_components",
+      "problem_text": "以下组分使用同一基准：{\"matrix\": 0.999, \"trace\": 0.001}。请归一化各组分，使总和为1；各分量保留6位小数。"
+    }
+  ]
+}

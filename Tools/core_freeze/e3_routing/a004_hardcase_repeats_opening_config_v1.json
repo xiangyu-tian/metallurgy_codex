@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-HARDCASE-R2R3-OPENING-V1-20260810",
+  "source_opening_id": "V11-CF05-E3-A004-HARDCASE-CONTROLLED-OPENING-V1-20260810",
+  "source_run_id": "V11-CF05-E3-A004-HARDCASE-R1-20260810",
+  "planned_run_ids": [
+    "V11-CF05-E3-A004-HARDCASE-R2-20260810",
+    "V11-CF05-E3-A004-HARDCASE-R3-20260810"
+  ],
+  "model_run_repeats": [2, 3],
+  "base_cell_count": 48,
+  "scheduled_request_count": 96,
+  "provider_attempts_per_cell": 1,
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "task_schema_prompt_retrieval_scoring_changes_allowed": false,
+  "request_order_reordering_allowed": false,
+  "tool_execution_allowed": false,
+  "provider_retry_allowed": false,
+  "external_api_calls_authorized": false,
+  "independent_validation_split_access_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "source_opening_manifest": {"path": "outputs/v11_cf05_e3_a004_hardcase_opening_v1_20260810/artifact_manifest.json", "sha256": "48d34d72aaaff6ffdbc15e3c2a3627b494ce9a1934653a21dc002d5c244c93fe"},
+    "input_tasks": {"path": "outputs/v11_cf05_e3_a004_hardcase_opening_v1_20260810/a004_hardcase_input_tasks.json", "sha256": "74a35d2f1b53b12d804d46ec6761838d73bc41670bbbf1e77b2f1d14ac0d69ca"},
+    "candidate_views": {"path": "outputs/v11_cf05_e3_a004_hardcase_opening_v1_20260810/a004_candidate_views.json", "sha256": "80172518e2b59b021e6376dbb18b2488ff1cdbd745353e00bd44f292c58cc37b"},
+    "r1_run_cells": {"path": "outputs/v11_cf05_e3_a004_hardcase_opening_v1_20260810/a004_routing_run_cells.json", "sha256": "6c59769d4c1d7f8b525de8cc1535dde76b902f66fdc49a31afc382ebf5f34391"},
+    "selector_prompt": {"path": "outputs/v11_cf05_e3_a004_hardcase_opening_v1_20260810/a004_hardcase_prompt_snapshot.json", "sha256": "cdaee6e114e459418cb77eb064f37de836e3f71a1dc39aaaaf25bdeb372fe92a"},
+    "scoring_registry": {"path": "outputs/v11_cf05_e3_a004_hardcase_opening_v1_20260810/a004_hardcase_scoring_registry.json", "sha256": "20ab4c7aee50109123656ad2e1d767a3e5f10263b2cd5c1348df808c6bed08c6"},
+    "r1_request_results": {"path": "outputs/v11_cf05_e3_a004_hardcase_r1_20260810/a004_request_results.json", "sha256": "cae6c6c97c087e58de221248168e606a5a1f43385d64fe0245482ea370287e43"},
+    "r1_runtime_manifest": {"path": "outputs/v11_cf05_e3_a004_hardcase_r1_20260810/artifact_manifest.json", "sha256": "e777a41bd947e8be017810807e15deeb50ccf42b55b16687d6f022d2d727ff5c"},
+    "r1_overall_report": {"path": "outputs/v11_cf05_e3_a004_hardcase_r1_analysis_20260810/a004_overall_report.json", "sha256": "f5f93e4eb17246bd02a4378f3a0fb284b9a888f34b22154004e204362fd91dbd"},
+    "r1_scored_rows": {"path": "outputs/v11_cf05_e3_a004_hardcase_r1_analysis_20260810/a004_scored_rows.json", "sha256": "9062562817b881911f93543e3fda11f2f622f9a12721a83202a32dc5ea0d9c3d"},
+    "r1_analysis_manifest": {"path": "outputs/v11_cf05_e3_a004_hardcase_r1_analysis_20260810/artifact_manifest.json", "sha256": "3bf95dbaab6e1e1cbfafb4c09ddd693cc3df1d48d03a565eecf9f5235ce166fd"}
+  }
+}

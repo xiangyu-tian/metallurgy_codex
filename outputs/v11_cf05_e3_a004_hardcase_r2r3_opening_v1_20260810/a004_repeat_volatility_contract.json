@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "A004-HARDCASE-REPEAT-VOLATILITY-V1",
+  "analysis_unit": "task_id_x_condition_id_x_tool_pool_size_x_method",
+  "repeat_ids": [
+    1,
+    2,
+    3
+  ],
+  "primary_development_outcome": "complete_call_correct",
+  "secondary_outcomes": [
+    "exactly_one_tool_call",
+    "selection_correct",
+    "parameters_correct",
+    "tool_call_count"
+  ],
+  "classification": {
+    "stable_correct": "3_of_3_complete_call_correct",
+    "intermittent": "1_or_2_of_3_complete_call_correct",
+    "stable_failure": "0_of_3_complete_call_correct"
+  },
+  "required_outputs": [
+    "per_pair_repeat_outcomes",
+    "exact_three_repeat_agreement_rate",
+    "failure_frequency_per_pair",
+    "summary_by_condition",
+    "summary_by_method",
+    "summary_by_tool_pool_size",
+    "r1_failure_recurrence_audit"
+  ],
+  "r1_observed_failure_count": 1,
+  "r1_observed_failure_cell_ids": [
+    "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-DENSE_TOP5-R1"
+  ],
+  "r1_result_used_only_to_motivate_identical_repeats": true,
+  "inputs_or_scoring_tuned_after_r1": false,
+  "majority_vote_replaces_gold": false,
+  "significance_testing_allowed": false,
+  "confirmatory_inference_allowed": false
+}

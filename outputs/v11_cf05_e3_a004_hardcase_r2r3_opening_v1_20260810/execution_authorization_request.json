@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-HARDCASE-R2R3-OPENING-V1-20260810",
+  "decision": "pending_user_authorization",
+  "eligible_for_external_execution_authorization": true,
+  "external_data_sharing_authorized": false,
+  "external_api_execution_authorized": false,
+  "provider_retry_authorized": false,
+  "tool_execution_allowed": false,
+  "independent_validation_split_access_allowed": false,
+  "request_payloads_materialized": false,
+  "required_scope_if_authorized": "same 48 frozen A004 cells repeated as R2 and R3; 96 one-shot DeepSeek requests; no input, schema, prompt, retrieval, or scoring changes; no tool execution; no independent validation access",
+  "bindings": {
+    "a004_repeat_volatility_contract.json": "6feb3d146baff63431ae5db79d805cd094ffcbdea52c4c8652f76c40f488e9a1",
+    "a004_repeats_candidate_views_snapshot.json": "80172518e2b59b021e6376dbb18b2488ff1cdbd745353e00bd44f292c58cc37b",
+    "a004_repeats_config_snapshot.json": "65c48cf52e6defd88f10746f883ed9aa1e759da6df5601f223f1b7e053c9aaf8",
+    "a004_repeats_input_tasks_snapshot.json": "74a35d2f1b53b12d804d46ec6761838d73bc41670bbbf1e77b2f1d14ac0d69ca",
+    "a004_repeats_opening_preflight.json": "ca203359fdeca0f89a09ca366b240528953966eeca7300a4ca2e03e062d83187",
+    "a004_repeats_run_cells.json": "fde17b078d765e8afcdb0701fa701fe091bac1f54566203598409d1580199dcd",
+    "a004_repeats_scoring_registry_snapshot.json": "20ab4c7aee50109123656ad2e1d767a3e5f10263b2cd5c1348df808c6bed08c6",
+    "a004_repeats_selector_prompt_snapshot.json": "cdaee6e114e459418cb77eb064f37de836e3f71a1dc39aaaaf25bdeb372fe92a",
+    "a004_three_repeat_pairing_plan.json": "76fb8bc01837a5c421baeca0542b9b078968e4acb025a98aa21ddeb6aa34a881"
+  }
+}

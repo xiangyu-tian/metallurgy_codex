@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-HARDCASE-R2R3-OPENING-V1-20260810",
+  "opening_status": "prepared_local_gate_passed_pending_external_authorization",
+  "design": {
+    "base_cell_count": 48,
+    "new_repeat_count": 2,
+    "scheduled_request_count": 96,
+    "three_repeat_pairing_unit_count": 48
+  },
+  "checks": {
+    "all_bound_hashes_valid": true,
+    "source_opening_and_r1_evidence_complete": true,
+    "r2_cell_count_48": true,
+    "r3_cell_count_48": true,
+    "r1_order_preserved_in_each_repeat": true,
+    "task_schema_prompt_retrieval_scoring_unchanged": true,
+    "pairing_plan_complete_48_units": true,
+    "router_visible_artifacts_exclude_gold_fields": true,
+    "request_payloads_not_materialized": true,
+    "external_api_calls_zero": true,
+    "tool_execution_zero": true,
+    "independent_validation_access_zero": true,
+    "confirmatory_inference_disabled": true
+  },
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "independent_validation_split_accessed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false
+}
