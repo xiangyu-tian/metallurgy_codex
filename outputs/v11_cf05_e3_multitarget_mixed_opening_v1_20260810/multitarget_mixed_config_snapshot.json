@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-MULTITARGET-MIXED-OPENING-V1-20260810",
+  "pool_design": "mixed_realistic_development",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "temperature": 0,
+  "max_tokens": 256,
+  "thinking": "disabled",
+  "selected_task_ids": [
+    "E1B2-A001-001",
+    "E1B2-A001-009",
+    "E1B2-A002-001",
+    "E1B2-A002-006",
+    "E1B2-A004-001",
+    "E1B2-A004-007",
+    "E1B2-B019-001",
+    "E1B2-B019-002"
+  ],
+  "selected_pool_sizes": [
+    17,
+    120
+  ],
+  "methods": [
+    "full_schema",
+    "lexical_top5",
+    "dense_top5",
+    "hierarchical"
+  ],
+  "top_k": 5,
+  "model_run_repeats": [
+    1
+  ],
+  "scheduled_cell_count": 64,
+  "expected_candidate_view_count": 50,
+  "development_only": true,
+  "tool_execution_allowed": false,
+  "external_api_calls_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "formal_pool_use_allowed": false,
+  "gold_visible_to_router": false,
+  "independent_validation_split_access_allowed": false,
+  "full_137_registry_gold_claim_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "taskset": {
+      "path": "outputs/e1b_benefit_taskset_v2_20260730/e1b_benefit_tasks_v2.json",
+      "sha256": "81d90e7f9cb638ff18614a6f49d09fafc391bbe304c9917674beab307cef43c8"
+    },
+    "task_gold_registry": {
+      "path": "outputs/v11_cf05_e3_multitarget_task_gold_candidate_v1_20260810/multitarget_task_acceptable_tools_registry.json",
+      "sha256": "a31d2f1fb7599a01c6cf178db4397119f21c737a6256fde03f46142d51dd367b"
+    },
+    "task_gold_report": {
+      "path": "outputs/v11_cf05_e3_multitarget_task_gold_candidate_v1_20260810/multitarget_task_gold_report.json",
+      "sha256": "5cfc4c8ce94401267695c0cb449af316c30dea38f7a8c33ff1542b4f41816bc7"
+    },
+    "schema_catalog": {
+      "path": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803/e3_schema_catalog_v1_candidate.json",
+      "sha256": "78de613f974d1ee48d5e2afa8a379b534a1e28a5b6749d9fc75f015aff6dd4f6"
+    },
+    "nested_pool_manifest": {
+      "path": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803/e3_nested_pool_manifest_v1_candidate.json",
+      "sha256": "e60927cb13af9d5579358b4930304246cddae817a0117506791ad4415a4e492a"
+    },
+    "cf06_runtime_report": {
+      "path": "outputs/v11_cf06_full_schema_api_runtime_r1_20260809/cf06_runtime_report.json",
+      "sha256": "e54425d0040afe5b63ca69f62be8d0f7439d2f19f2ec01d933323c37962a23bd"
+    },
+    "lexical_config": {
+      "path": "Tools/core_freeze/e3_routing/a003_lexical_top5_config_v1.json",
+      "sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1"
+    },
+    "hierarchical_config": {
+      "path": "Tools/core_freeze/e3_routing/a003_hierarchical_top5_config_v1.json",
+      "sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3"
+    },
+    "dense_config": {
+      "path": "Tools/core_freeze/e3_routing/a003_dense_top5_config_v1.json",
+      "sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff"
+    },
+    "lexical_router_source": {
+      "path": "Tools/core_freeze/e3_routing/lexical_top5_router.py",
+      "sha256": "40c73e5f7a24f6fe253db8f102abe18e58ecb96000343e19098c9e7593c7bc43"
+    },
+    "hierarchical_router_source": {
+      "path": "Tools/core_freeze/e3_routing/hierarchical_top5_router.py",
+      "sha256": "cc57e36ca8022c61f5046e87ec435f05d53e10e0e2cff2ca81efd8fb12970ddb"
+    },
+    "dense_router_source": {
+      "path": "Tools/core_freeze/e3_routing/dense_top5_router.py",
+      "sha256": "9fde3ac5b0f095034d3983e84b3ba25f9fc27105e1042e8f331afc2279186e38"
+    },
+    "dense_runtime_lock": {
+      "path": "Tools/core_freeze/e3_routing/dense_validation_requirements_lock.txt",
+      "sha256": "7efab320a5b9ba433a9313bda8e6431f9fbaa30f63d29071bf4dab247f953731"
+    }
+  }
+}

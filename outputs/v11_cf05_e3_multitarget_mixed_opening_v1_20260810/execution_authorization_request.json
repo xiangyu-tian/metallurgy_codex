@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-MULTITARGET-MIXED-OPENING-V1-20260810",
+  "decision": "pending_user_authorization",
+  "eligible_for_external_execution_authorization": true,
+  "external_data_sharing_authorized": false,
+  "external_api_execution_authorized": false,
+  "tool_execution_allowed": false,
+  "request_payloads_materialized": false,
+  "required_scope_if_authorized": "8 frozen development tasks, 17/120 mixed-realistic schemas, four methods, 64 one-shot requests, no tool execution",
+  "bindings": {
+    "multitarget_candidate_views.json": "ec91c6bf116eef399abae6a28f1fa0b3b122b223f23137e10804fed5ad552994",
+    "multitarget_local_retrieval_gate.json": "19f7b4e607b20580460a46be934448c46ada2825034b79bcb03cbfc8fd1b80d6",
+    "multitarget_mixed_config_snapshot.json": "2fcf0dd803512ee10de4f425d2ae946f04e4a36cf0fdd23671457e636c76a611",
+    "multitarget_mixed_selected_pools.json": "32c09eee059d2c62b01fdfcedcfcb8f0d9a6183f63d4f079ed429d9502ce54c5",
+    "multitarget_opening_preflight.json": "86b6b81f40896019764223f7512395e10266fca85bce557a2ecb8b0adafe645d",
+    "multitarget_routing_input_tasks.json": "a64d0c81e9fddf2382d58439d98ea856809a69c0ea0bef346bf72828baec0937",
+    "multitarget_routing_prompt_snapshot.json": "cdaee6e114e459418cb77eb064f37de836e3f71a1dc39aaaaf25bdeb372fe92a",
+    "multitarget_routing_run_cells.json": "16be0e60bc3ec3af30bf06fd7b7492c2061cdfe2f1646f6cea4929351625cf46",
+    "multitarget_routing_scoring_registry.json": "301fe91e2f39badf90aa1e6266da1e0bd97aa8a80d231bf3648c887f40a752db"
+  }
+}

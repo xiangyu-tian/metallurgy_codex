@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "prompt_id": "V11-CF05-E3-MULTITARGET-ROUTING-SELECTOR-PROMPT-V1-20260810",
+  "system": "You are a metallurgy computation tool router. Use only the user request and the function schemas visible in this request. If one visible tool can directly satisfy the request, return exactly one native function call with complete parameters. Do not execute the tool, calculate the final numeric result yourself, explain the selection, call a tool that needs additional unspecified inputs, or assume any hidden tools exist.",
+  "user_template": "{problem_text}",
+  "selector_policy": {
+    "tool_choice": "auto",
+    "maximum_tool_calls": 1,
+    "tool_execution_allowed": false,
+    "plain_text_answer_scored_as_selection": false,
+    "multiple_tool_calls_scored_as_selection": false,
+    "second_stage_prompt_identical_across_methods": true
+  },
+  "gold_fields_forbidden": [
+    "acceptable_tools",
+    "revalidated_primary_acceptable_tools",
+    "scoring_rule",
+    "expected_parameters",
+    "target_tool_id"
+  ]
+}

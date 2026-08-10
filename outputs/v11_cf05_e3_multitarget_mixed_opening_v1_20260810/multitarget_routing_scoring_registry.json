@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-MULTITARGET-MIXED-OPENING-V1-20260810",
+  "router_visible": false,
+  "use": "offline_scoring_only",
+  "task_count": 8,
+  "tasks": [
+    {
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "canonical_inputs": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "expected_parameters": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 250.0,
+            "abs_tol": 1e-09,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "acceptable_tools_full_candidate_scope": [
+        "A001",
+        "E3C001"
+      ]
+    },
+    {
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "canonical_inputs": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "expected_parameters": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 50662.5,
+            "abs_tol": 5.06625e-08,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "acceptable_tools_full_candidate_scope": [
+        "A001",
+        "E3C001"
+      ]
+    },
+    {
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "expected_parameters": {
+        "formula": "Fe2O3"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A002-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "Fe": 2.0,
+              "O": 3.0
+            }
+          }
+        ]
+      },
+      "acceptable_tools_full_candidate_scope": [
+        "A002",
+        "E3C002"
+      ]
+    },
+    {
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "canonical_inputs": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "expected_parameters": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A002-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "K": 4.0,
+              "Fe": 1.0,
+              "C": 6.0,
+              "N": 6.0
+            }
+          }
+        ]
+      },
+      "acceptable_tools_full_candidate_scope": [
+        "A002",
+        "E3C002"
+      ]
+    },
+    {
+      "task_id": "E1B2-A004-001",
+      "source_tool_id": "A004",
+      "canonical_inputs": {
+        "compositions": {
+          "Fe": 94.0,
+          "C": 4.0,
+          "Si": 2.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "Fe": 94.0,
+          "C": 4.0,
+          "Si": 2.0
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A004-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "Fe": 0.94,
+              "C": 0.04,
+              "Si": 0.02
+            }
+          }
+        ]
+      },
+      "acceptable_tools_full_candidate_scope": [
+        "A004",
+        "E3C005"
+      ]
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "source_tool_id": "A004",
+      "canonical_inputs": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A004-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "matrix": 0.999,
+              "trace": 0.001
+            }
+          }
+        ]
+      },
+      "acceptable_tools_full_candidate_scope": [
+        "A004"
+      ]
+    },
+    {
+      "task_id": "E1B2-B019-001",
+      "source_tool_id": "B019",
+      "canonical_inputs": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "expected_parameters": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-B019-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.6,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.4,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "acceptable_tools_full_candidate_scope": [
+        "B019"
+      ]
+    },
+    {
+      "task_id": "E1B2-B019-002",
+      "source_tool_id": "B019",
+      "canonical_inputs": {
+        "overall_composition": 40.0,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "composition_basis": "percent"
+      },
+      "expected_parameters": {
+        "overall_composition": 40.0,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "composition_basis": "percent"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-B019-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.6,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.4,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "acceptable_tools_full_candidate_scope": [
+        "B019"
+      ]
+    }
+  ]
+}

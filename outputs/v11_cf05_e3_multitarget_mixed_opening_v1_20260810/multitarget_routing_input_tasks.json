@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-MULTITARGET-MIXED-OPENING-V1-20260810",
+  "router_visible": true,
+  "gold_fields_present": false,
+  "task_count": 8,
+  "tasks": [
+    {
+      "task_id": "E1B2-A001-001",
+      "task_family_id": "E1B-A001",
+      "task_pair_id": "PAIR-E1B2-A001-001",
+      "base_task_group_id": "A001-KG-G",
+      "precision_policy": "contract_numeric",
+      "problem_text": "请将 0.25 kg 换算为 g。只返回换算后的数值。"
+    },
+    {
+      "task_id": "E1B2-A001-009",
+      "task_family_id": "E1B-A001",
+      "task_pair_id": "PAIR-E1B2-A001-009",
+      "base_task_group_id": "A001-ATM-PA",
+      "precision_policy": "contract_numeric",
+      "problem_text": "请将 0.5 atm 换算为 Pa。只返回换算后的数值。"
+    },
+    {
+      "task_id": "E1B2-A002-001",
+      "task_family_id": "E1B-A002",
+      "task_pair_id": "PAIR-E1B2-A002-001",
+      "base_task_group_id": "A002-01",
+      "precision_policy": "exact_stoichiometric_counts",
+      "problem_text": "解析中性化学式 Fe2O3，返回各元素的化学计量数。"
+    },
+    {
+      "task_id": "E1B2-A002-006",
+      "task_family_id": "E1B-A002",
+      "task_pair_id": "PAIR-E1B2-A002-006",
+      "base_task_group_id": "A002-06",
+      "precision_policy": "exact_stoichiometric_counts",
+      "problem_text": "解析中性化学式 K4[Fe(CN)6]，返回各元素的化学计量数。"
+    },
+    {
+      "task_id": "E1B2-A004-001",
+      "task_family_id": "E1B-A004",
+      "task_pair_id": "PAIR-E1B2-A004-001",
+      "base_task_group_id": "A004-STEEL",
+      "precision_policy": "six_decimal_components",
+      "problem_text": "以下组分使用同一基准：{\"C\": 4.0, \"Fe\": 94.0, \"Si\": 2.0}。请归一化各组分，使总和为1；各分量保留6位小数。"
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "task_family_id": "E1B-A004",
+      "task_pair_id": "PAIR-E1B2-A004-007",
+      "base_task_group_id": "A004-TRACE",
+      "precision_policy": "six_decimal_components",
+      "problem_text": "以下组分使用同一基准：{\"matrix\": 999.0, \"trace\": 1.0}。请归一化各组分，使总和为1；各分量保留6位小数。"
+    },
+    {
+      "task_id": "E1B2-B019-001",
+      "task_family_id": "E1B-B019",
+      "task_pair_id": "PAIR-E1B2-B019-001",
+      "base_task_group_id": "B019-01",
+      "precision_policy": "fraction_explicit_six_decimal",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.4，相1边界成分为 0.2，相2边界成分为 0.7，三者均使用 fraction 标度。计算相1和相2的相分数，结果保留6位小数。"
+    },
+    {
+      "task_id": "E1B2-B019-002",
+      "task_family_id": "E1B-B019",
+      "task_pair_id": "PAIR-E1B2-B019-002",
+      "base_task_group_id": "B019-01",
+      "precision_policy": "percent_explicit_six_decimal",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 40，相1边界成分为 20，相2边界成分为 70，三者均使用 percent 标度。计算相1和相2的相分数，结果保留6位小数。"
+    }
+  ]
+}
