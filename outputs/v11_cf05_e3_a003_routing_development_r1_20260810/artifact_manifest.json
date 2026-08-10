@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A003-ROUTING-EXECUTION-OPENING-V1-20260809",
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "filename": "a003_routing_execution_config_snapshot.json",
+      "sha256": "a5a49fa113d30292800880e88f0fb9c975b5c210d6724b0494e2fb71c9ac8ca9",
+      "bytes": 4630
+    },
+    {
+      "filename": "a003_routing_request_blueprints_snapshot.json",
+      "sha256": "64b1cac793329d4f0b0020c40cc140197d8e595fa641bf33720eed2e47cdf101",
+      "bytes": 202523
+    },
+    {
+      "filename": "a003_routing_request_results.json",
+      "sha256": "4cf09128ff62b4afcddf4c085fec4fd22dc0e3e6452efb537cd1a97fe8fc9aa6",
+      "bytes": 294010
+    },
+    {
+      "filename": "a003_routing_runtime_report.json",
+      "sha256": "cf26d27faf7c4fc1aeb2b757e627b32f449e557f670316a80899040c46ddc450",
+      "bytes": 656
+    },
+    {
+      "filename": "a003_routing_schema_views_snapshot.json",
+      "sha256": "85fcb1673253d5f892d6d3e8645a81f43bc3fac07f827d08d3dcd279435416c7",
+      "bytes": 1079643
+    },
+    {
+      "filename": "execution_authorization_snapshot.json",
+      "sha256": "d36aaffe56806052527e07e77baed3ea7f8d2bb2b5177ce2b1639bacf60c1725",
+      "bytes": 1802
+    },
+    {
+      "filename": "runner_source_snapshot.py",
+      "sha256": "a9fd7f530c0b085c76b1c0b1ca47640cf14d66106027c2126b69af84187e8548",
+      "bytes": 17603
+    }
+  ]
+}

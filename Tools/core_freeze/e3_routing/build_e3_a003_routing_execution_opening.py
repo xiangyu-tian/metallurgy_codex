@@ -322,10 +322,12 @@ def build(config: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def build_outputs(output_dir: Path) -> dict[str, Any]:
+def build_outputs(
+    output_dir: Path, *, allow_existing_authorization_for_audit_rebuild: bool = False
+) -> dict[str, Any]:
     config = load_json(CONFIG_PATH)
     authorization_path = HERE / config["execution_authorization_file"]
-    if authorization_path.exists():
+    if authorization_path.exists() and not allow_existing_authorization_for_audit_rebuild:
         raise ValueError("unexpected A003 routing execution authorization file")
     built = build(config)
     output_dir.mkdir(parents=True, exist_ok=False)

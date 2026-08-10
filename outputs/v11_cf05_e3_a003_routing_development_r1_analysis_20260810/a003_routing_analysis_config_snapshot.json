@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A003-ROUTING-DEVELOPMENT-R1-ANALYSIS-20260810",
+  "opening_id": "V11-CF05-E3-A003-ROUTING-EXECUTION-OPENING-V1-20260809",
+  "expected_result_count": 96,
+  "methods": [
+    "full_schema",
+    "lexical_top5",
+    "dense_top5",
+    "hierarchical"
+  ],
+  "expected_method_count": 24,
+  "target_tool_id": "A003",
+  "selection_policy": "exactly_one_native_tool_call_in_task_acceptable_set",
+  "parameter_policy": "parsed_arguments_equal_canonical_inputs",
+  "development_only": true,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "run_artifact_manifest": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_r1_20260810/artifact_manifest.json",
+      "sha256": "3c47ee7e43fd81fb65d4a41e7a700cc4373cd15d7818a601e2d9bcf6b06b53d1"
+    },
+    "request_results": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_r1_20260810/a003_routing_request_results.json",
+      "sha256": "4cf09128ff62b4afcddf4c085fec4fd22dc0e3e6452efb537cd1a97fe8fc9aa6"
+    },
+    "runtime_report": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_r1_20260810/a003_routing_runtime_report.json",
+      "sha256": "cf26d27faf7c4fc1aeb2b757e627b32f449e557f670316a80899040c46ddc450"
+    },
+    "scoring_registry": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_opening_v1_20260809/a003_routing_scoring_registry.json",
+      "sha256": "b1932cd6e3d9c651a1d8ea771977499ea5c170457bc62155a9001e674f3bf56e"
+    }
+  }
+}

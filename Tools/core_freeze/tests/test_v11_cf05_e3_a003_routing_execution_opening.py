@@ -119,7 +119,9 @@ class V11Cf05E3A003RoutingExecutionOpeningTests(unittest.TestCase):
             builder.WORKSPACE / "outputs" / f".a003-routing-opening-test-{uuid.uuid4().hex}"
         )
         try:
-            builder.build_outputs(output_dir)
+            builder.build_outputs(
+                output_dir, allow_existing_authorization_for_audit_rebuild=True
+            )
             manifest = json.loads(
                 (output_dir / "artifact_manifest.json").read_text(encoding="utf-8")
             )

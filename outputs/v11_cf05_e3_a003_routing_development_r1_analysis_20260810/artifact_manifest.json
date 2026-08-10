@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A003-ROUTING-DEVELOPMENT-R1-ANALYSIS-20260810",
+  "artifact_count": 3,
+  "artifacts": [
+    {
+      "filename": "a003_routing_analysis_config_snapshot.json",
+      "sha256": "8246a0271621f5acbf86195ac97d61ff3e1d080beabd47730135f6ab8c3450b9",
+      "bytes": 1557
+    },
+    {
+      "filename": "a003_routing_development_analysis_report.json",
+      "sha256": "39e1421df2038e18e5966ad6bb028df98fd88157e89dbe79024bf133de861472",
+      "bytes": 14068
+    },
+    {
+      "filename": "a003_routing_scored_cells.json",
+      "sha256": "6b29c7049d4cda20ac3210d1f0023ce0723dbe8105597f16f194435149f282eb",
+      "bytes": 115960
+    }
+  ]
+}

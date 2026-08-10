@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A003-ROUTING-EXECUTION-OPENING-V1-20260809",
+  "decision": "authorized_to_execute_a003_routing_development",
+  "provider": "deepseek",
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "scheduled_request_count": 96,
+  "opening_manifest_sha256": "ce2f5aca58ee67758413a312e82b4b9d9b7505e18b8d3b9114a3157962f036b6",
+  "config_sha256": "a5a49fa113d30292800880e88f0fb9c975b5c210d6724b0494e2fb71c9ac8ca9",
+  "blueprints_sha256": "64b1cac793329d4f0b0020c40cc140197d8e595fa641bf33720eed2e47cdf101",
+  "schema_views_sha256": "85fcb1673253d5f892d6d3e8645a81f43bc3fac07f827d08d3dcd279435416c7",
+  "runner_sha256": "a9fd7f530c0b085c76b1c0b1ca47640cf14d66106027c2126b69af84187e8548",
+  "runner_git_commit": "8ffa291842ecfe35eaef373042f1aa66c7e6c9d6",
+  "external_data_sharing_authorized": true,
+  "external_api_execution_authorized": true,
+  "tool_execution_authorized": false,
+  "provider_retry_authorized": false,
+  "independent_validation_split_access_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "authorized_scope": {
+    "task_text_count": 2,
+    "schema_view_count": 45,
+    "request_count": 96,
+    "purpose": "A003 four-method non-confirmatory selector development run",
+    "metallurgy_tool_execution": false
+  },
+  "authorized_by": "xiangyu",
+  "authorized_at": "2026-08-10T12:32:33.0900703+08:00",
+  "authorization_basis": "User explicitly authorized sending 2 A003 development task texts and 45 frozen schema views as 96 one-attempt requests to https://api.deepseek.com with deepseek-v4-flash for a non-confirmatory tool-selection development experiment, with no metallurgy-tool execution, no independent-validation access, and per-response retention for offline scoring."
+}

@@ -1,0 +1,3799 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A003-ROUTING-DEVELOPMENT-R1-ANALYSIS-20260810",
+  "cell_count": 96,
+  "rows": [
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-NONE_0-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1176.5019,
+      "usage": {
+        "prompt_tokens": 3135,
+        "completion_tokens": 47,
+        "total_tokens": 3182,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3135
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1249.3835,
+      "usage": {
+        "prompt_tokens": 1112,
+        "completion_tokens": 47,
+        "total_tokens": 1159,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1112
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 845.6915,
+      "usage": {
+        "prompt_tokens": 1112,
+        "completion_tokens": 47,
+        "total_tokens": 1159,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 728
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1171.8192,
+      "usage": {
+        "prompt_tokens": 1112,
+        "completion_tokens": 47,
+        "total_tokens": 1159,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 728
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1089.6498,
+      "usage": {
+        "prompt_tokens": 3092,
+        "completion_tokens": 47,
+        "total_tokens": 3139,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 2708
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 986.5529,
+      "usage": {
+        "prompt_tokens": 917,
+        "completion_tokens": 47,
+        "total_tokens": 964,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 917
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1228.4867,
+      "usage": {
+        "prompt_tokens": 915,
+        "completion_tokens": 47,
+        "total_tokens": 962,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 531
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1123.2111,
+      "usage": {
+        "prompt_tokens": 918,
+        "completion_tokens": 47,
+        "total_tokens": 965,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 534
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1059.6367,
+      "usage": {
+        "prompt_tokens": 2688,
+        "completion_tokens": 47,
+        "total_tokens": 2735,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 1792
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1157.7543,
+      "usage": {
+        "prompt_tokens": 847,
+        "completion_tokens": 47,
+        "total_tokens": 894,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 463
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 742.0602,
+      "usage": {
+        "prompt_tokens": 847,
+        "completion_tokens": 47,
+        "total_tokens": 894,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 591
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 914.7626,
+      "usage": {
+        "prompt_tokens": 847,
+        "completion_tokens": 47,
+        "total_tokens": 894,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 463
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-NONE_0-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1088.1632,
+      "usage": {
+        "prompt_tokens": 3116,
+        "completion_tokens": 47,
+        "total_tokens": 3163,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 2860
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 971.8911,
+      "usage": {
+        "prompt_tokens": 1116,
+        "completion_tokens": 47,
+        "total_tokens": 1163,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 732
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 780.1727,
+      "usage": {
+        "prompt_tokens": 1113,
+        "completion_tokens": 47,
+        "total_tokens": 1160,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 729
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1163.656,
+      "usage": {
+        "prompt_tokens": 1080,
+        "completion_tokens": 47,
+        "total_tokens": 1127,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 696
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1580.9522,
+      "usage": {
+        "prompt_tokens": 3032,
+        "completion_tokens": 47,
+        "total_tokens": 3079,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 2776
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1207.2252,
+      "usage": {
+        "prompt_tokens": 918,
+        "completion_tokens": 47,
+        "total_tokens": 965,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 662
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1114.0849,
+      "usage": {
+        "prompt_tokens": 915,
+        "completion_tokens": 47,
+        "total_tokens": 962,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 19
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1150.1957,
+      "usage": {
+        "prompt_tokens": 918,
+        "completion_tokens": 47,
+        "total_tokens": 965,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 22
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 810.1354,
+      "usage": {
+        "prompt_tokens": 2628,
+        "completion_tokens": 47,
+        "total_tokens": 2675,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 2244
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 778.5783,
+      "usage": {
+        "prompt_tokens": 847,
+        "completion_tokens": 47,
+        "total_tokens": 894,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 79
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 978.2589,
+      "usage": {
+        "prompt_tokens": 847,
+        "completion_tokens": 47,
+        "total_tokens": 894,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 79
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 848.0342,
+      "usage": {
+        "prompt_tokens": 847,
+        "completion_tokens": 47,
+        "total_tokens": 894,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 79
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-NONE_0-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 998.7957,
+      "usage": {
+        "prompt_tokens": 20339,
+        "completion_tokens": 47,
+        "total_tokens": 20386,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 20083
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1000.2896,
+      "usage": {
+        "prompt_tokens": 1071,
+        "completion_tokens": 47,
+        "total_tokens": 1118,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 687
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1107.0675,
+      "usage": {
+        "prompt_tokens": 1106,
+        "completion_tokens": 47,
+        "total_tokens": 1153,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 722
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1489.7486,
+      "usage": {
+        "prompt_tokens": 1018,
+        "completion_tokens": 47,
+        "total_tokens": 1065,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 506
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1678.4707,
+      "usage": {
+        "prompt_tokens": 20260,
+        "completion_tokens": 47,
+        "total_tokens": 20307,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 20004
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1032.9306,
+      "usage": {
+        "prompt_tokens": 917,
+        "completion_tokens": 47,
+        "total_tokens": 964,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 21
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 881.2537,
+      "usage": {
+        "prompt_tokens": 919,
+        "completion_tokens": 47,
+        "total_tokens": 966,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 535
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 803.2139,
+      "usage": {
+        "prompt_tokens": 918,
+        "completion_tokens": 47,
+        "total_tokens": 965,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 22
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1125.3312,
+      "usage": {
+        "prompt_tokens": 19856,
+        "completion_tokens": 47,
+        "total_tokens": 19903,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664
+        },
+        "prompt_cache_hit_tokens": 1664,
+        "prompt_cache_miss_tokens": 18192
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 901.14,
+      "usage": {
+        "prompt_tokens": 847,
+        "completion_tokens": 47,
+        "total_tokens": 894,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 79
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1034.2847,
+      "usage": {
+        "prompt_tokens": 889,
+        "completion_tokens": 47,
+        "total_tokens": 936,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 633
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1057.8981,
+      "usage": {
+        "prompt_tokens": 847,
+        "completion_tokens": 47,
+        "total_tokens": 894,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 79
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-NONE_0-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1899.505,
+      "usage": {
+        "prompt_tokens": 20320,
+        "completion_tokens": 47,
+        "total_tokens": 20367,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 19936
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 943.955,
+      "usage": {
+        "prompt_tokens": 1071,
+        "completion_tokens": 47,
+        "total_tokens": 1118,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 47
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1141.7952,
+      "usage": {
+        "prompt_tokens": 1106,
+        "completion_tokens": 47,
+        "total_tokens": 1153,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 82
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1004.4609,
+      "usage": {
+        "prompt_tokens": 1018,
+        "completion_tokens": 47,
+        "total_tokens": 1065,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 122
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1738.9258,
+      "usage": {
+        "prompt_tokens": 20296,
+        "completion_tokens": 47,
+        "total_tokens": 20343,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 19912
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1140.5865,
+      "usage": {
+        "prompt_tokens": 917,
+        "completion_tokens": 47,
+        "total_tokens": 964,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 21
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1024.9798,
+      "usage": {
+        "prompt_tokens": 919,
+        "completion_tokens": 47,
+        "total_tokens": 966,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 23
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1178.33,
+      "usage": {
+        "prompt_tokens": 918,
+        "completion_tokens": 47,
+        "total_tokens": 965,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 22
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1661.5147,
+      "usage": {
+        "prompt_tokens": 19892,
+        "completion_tokens": 47,
+        "total_tokens": 19939,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 19508
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 980.0664,
+      "usage": {
+        "prompt_tokens": 847,
+        "completion_tokens": 47,
+        "total_tokens": 894,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 79
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1123.6732,
+      "usage": {
+        "prompt_tokens": 889,
+        "completion_tokens": 47,
+        "total_tokens": 936,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 121
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-001",
+      "pool_id": "E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1019.4489,
+      "usage": {
+        "prompt_tokens": 847,
+        "completion_tokens": 47,
+        "total_tokens": 894,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 79
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-NONE_0-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 841.3234,
+      "usage": {
+        "prompt_tokens": 3138,
+        "completion_tokens": 47,
+        "total_tokens": 3185,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 66
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1191.3127,
+      "usage": {
+        "prompt_tokens": 1094,
+        "completion_tokens": 47,
+        "total_tokens": 1141,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 710
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 919.4286,
+      "usage": {
+        "prompt_tokens": 1107,
+        "completion_tokens": 47,
+        "total_tokens": 1154,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 723
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1151.0968,
+      "usage": {
+        "prompt_tokens": 1094,
+        "completion_tokens": 47,
+        "total_tokens": 1141,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 710
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 949.465,
+      "usage": {
+        "prompt_tokens": 3095,
+        "completion_tokens": 47,
+        "total_tokens": 3142,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 23
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1066.2586,
+      "usage": {
+        "prompt_tokens": 921,
+        "completion_tokens": 47,
+        "total_tokens": 968,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 537
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1111.7115,
+      "usage": {
+        "prompt_tokens": 918,
+        "completion_tokens": 47,
+        "total_tokens": 965,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 22
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 990.0329,
+      "usage": {
+        "prompt_tokens": 918,
+        "completion_tokens": 47,
+        "total_tokens": 965,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 534
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 974.2939,
+      "usage": {
+        "prompt_tokens": 2691,
+        "completion_tokens": 47,
+        "total_tokens": 2738,
+        "prompt_tokens_details": {
+          "cached_tokens": 2560
+        },
+        "prompt_cache_hit_tokens": 2560,
+        "prompt_cache_miss_tokens": 131
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 732.9485,
+      "usage": {
+        "prompt_tokens": 850,
+        "completion_tokens": 47,
+        "total_tokens": 897,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 466
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 964.081,
+      "usage": {
+        "prompt_tokens": 850,
+        "completion_tokens": 47,
+        "total_tokens": 897,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 82
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1035.1258,
+      "usage": {
+        "prompt_tokens": 850,
+        "completion_tokens": 47,
+        "total_tokens": 897,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 82
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-NONE_0-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1132.7032,
+      "usage": {
+        "prompt_tokens": 3119,
+        "completion_tokens": 47,
+        "total_tokens": 3166,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 47
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 905.3959,
+      "usage": {
+        "prompt_tokens": 1174,
+        "completion_tokens": 47,
+        "total_tokens": 1221,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 790
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1347.7369,
+      "usage": {
+        "prompt_tokens": 1099,
+        "completion_tokens": 47,
+        "total_tokens": 1146,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 715
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1058.1093,
+      "usage": {
+        "prompt_tokens": 1121,
+        "completion_tokens": 47,
+        "total_tokens": 1168,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 609
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 857.7609,
+      "usage": {
+        "prompt_tokens": 3035,
+        "completion_tokens": 47,
+        "total_tokens": 3082,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 91
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 780.0046,
+      "usage": {
+        "prompt_tokens": 921,
+        "completion_tokens": 47,
+        "total_tokens": 968,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 25
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1159.7447,
+      "usage": {
+        "prompt_tokens": 918,
+        "completion_tokens": 47,
+        "total_tokens": 965,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 22
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 767.5524,
+      "usage": {
+        "prompt_tokens": 918,
+        "completion_tokens": 47,
+        "total_tokens": 965,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 22
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 966.945,
+      "usage": {
+        "prompt_tokens": 2631,
+        "completion_tokens": 47,
+        "total_tokens": 2678,
+        "prompt_tokens_details": {
+          "cached_tokens": 2560
+        },
+        "prompt_cache_hit_tokens": 2560,
+        "prompt_cache_miss_tokens": 71
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 836.9161,
+      "usage": {
+        "prompt_tokens": 850,
+        "completion_tokens": 47,
+        "total_tokens": 897,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 82
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 862.4441,
+      "usage": {
+        "prompt_tokens": 850,
+        "completion_tokens": 47,
+        "total_tokens": 897,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 82
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-17-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 803.7053,
+      "usage": {
+        "prompt_tokens": 850,
+        "completion_tokens": 47,
+        "total_tokens": 897,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 82
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-NONE_0-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1064.5011,
+      "usage": {
+        "prompt_tokens": 20342,
+        "completion_tokens": 47,
+        "total_tokens": 20389,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 118
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1251.1097,
+      "usage": {
+        "prompt_tokens": 1119,
+        "completion_tokens": 47,
+        "total_tokens": 1166,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 735
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 805.1643,
+      "usage": {
+        "prompt_tokens": 1096,
+        "completion_tokens": 47,
+        "total_tokens": 1143,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 712
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 865.5589,
+      "usage": {
+        "prompt_tokens": 1120,
+        "completion_tokens": 47,
+        "total_tokens": 1167,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 608
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1025.094,
+      "usage": {
+        "prompt_tokens": 20263,
+        "completion_tokens": 47,
+        "total_tokens": 20310,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 39
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1102.9601,
+      "usage": {
+        "prompt_tokens": 981,
+        "completion_tokens": 47,
+        "total_tokens": 1028,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 341
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1078.4148,
+      "usage": {
+        "prompt_tokens": 940,
+        "completion_tokens": 47,
+        "total_tokens": 987,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 300
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1013.6721,
+      "usage": {
+        "prompt_tokens": 981,
+        "completion_tokens": 47,
+        "total_tokens": 1028,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 85
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1516.3923,
+      "usage": {
+        "prompt_tokens": 19859,
+        "completion_tokens": 47,
+        "total_tokens": 19906,
+        "prompt_tokens_details": {
+          "cached_tokens": 19840
+        },
+        "prompt_cache_hit_tokens": 19840,
+        "prompt_cache_miss_tokens": 19
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 823.5491,
+      "usage": {
+        "prompt_tokens": 850,
+        "completion_tokens": 47,
+        "total_tokens": 897,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 82
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1236.5983,
+      "usage": {
+        "prompt_tokens": 910,
+        "completion_tokens": 47,
+        "total_tokens": 957,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 270
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-A-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 830.1111,
+      "usage": {
+        "prompt_tokens": 850,
+        "completion_tokens": 47,
+        "total_tokens": 897,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 82
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-NONE_0-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1018.1582,
+      "usage": {
+        "prompt_tokens": 20323,
+        "completion_tokens": 47,
+        "total_tokens": 20370,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 99
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-NONE_0-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 804.2137,
+      "usage": {
+        "prompt_tokens": 1119,
+        "completion_tokens": 47,
+        "total_tokens": 1166,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 95
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-NONE_0-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1059.855,
+      "usage": {
+        "prompt_tokens": 1096,
+        "completion_tokens": 47,
+        "total_tokens": 1143,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 72
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-NONE_0-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-NONE_0-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 931.5204,
+      "usage": {
+        "prompt_tokens": 1120,
+        "completion_tokens": 47,
+        "total_tokens": 1167,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 96
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1028.9211,
+      "usage": {
+        "prompt_tokens": 20299,
+        "completion_tokens": 47,
+        "total_tokens": 20346,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 75
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1423.8689,
+      "usage": {
+        "prompt_tokens": 981,
+        "completion_tokens": 47,
+        "total_tokens": 1028,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 85
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1480.75,
+      "usage": {
+        "prompt_tokens": 940,
+        "completion_tokens": 47,
+        "total_tokens": 987,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 44
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-LEXICAL_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1181.4741,
+      "usage": {
+        "prompt_tokens": 981,
+        "completion_tokens": 47,
+        "total_tokens": 1028,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 85
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-FULL-SCHEMA-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "full_schema",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1239.4617,
+      "usage": {
+        "prompt_tokens": 19895,
+        "completion_tokens": 47,
+        "total_tokens": 19942,
+        "prompt_tokens_details": {
+          "cached_tokens": 19840
+        },
+        "prompt_cache_hit_tokens": 19840,
+        "prompt_cache_miss_tokens": 55
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-LEXICAL-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "lexical_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1263.1634,
+      "usage": {
+        "prompt_tokens": 850,
+        "completion_tokens": 47,
+        "total_tokens": 897,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 82
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-DENSE-TOP5-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "dense_top5",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1139.6503,
+      "usage": {
+        "prompt_tokens": 910,
+        "completion_tokens": 47,
+        "total_tokens": 957,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 14
+      },
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A003-DEV-E1B2-A003-002-E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1-HIERARCHICAL-R1",
+      "task_id": "E1B2-A003-002",
+      "pool_id": "E3-A003-B-120-FUNCTIONAL_OVERLAP_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8,
+      "method": "hierarchical",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "selected_tool_visible": true,
+      "acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1313.6199,
+      "usage": {
+        "prompt_tokens": 850,
+        "completion_tokens": 47,
+        "total_tokens": 897,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 82
+      },
+      "tool_executed": false
+    }
+  ]
+}
