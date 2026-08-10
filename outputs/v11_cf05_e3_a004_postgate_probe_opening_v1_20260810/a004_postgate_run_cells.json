@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-POSTGATE-PROBE-OPENING-V1-20260810",
+  "router_visible": true,
+  "gold_fields_present": false,
+  "cell_count": 10,
+  "cells": [
+    {
+      "cell_id": "A004-PG-001-FROZEN5-R1",
+      "task_id": "A004-PG-001",
+      "schema_view_id": "A004-POSTGATE-FROZEN5",
+      "model_run_repeat": 1,
+      "provider_max_attempts": 1
+    },
+    {
+      "cell_id": "A004-PG-002-FROZEN5-R1",
+      "task_id": "A004-PG-002",
+      "schema_view_id": "A004-POSTGATE-FROZEN5",
+      "model_run_repeat": 1,
+      "provider_max_attempts": 1
+    },
+    {
+      "cell_id": "A004-PG-003-FROZEN5-R1",
+      "task_id": "A004-PG-003",
+      "schema_view_id": "A004-POSTGATE-FROZEN5",
+      "model_run_repeat": 1,
+      "provider_max_attempts": 1
+    },
+    {
+      "cell_id": "A004-PG-004-FROZEN5-R1",
+      "task_id": "A004-PG-004",
+      "schema_view_id": "A004-POSTGATE-FROZEN5",
+      "model_run_repeat": 1,
+      "provider_max_attempts": 1
+    },
+    {
+      "cell_id": "A004-PG-005-FROZEN5-R1",
+      "task_id": "A004-PG-005",
+      "schema_view_id": "A004-POSTGATE-FROZEN5",
+      "model_run_repeat": 1,
+      "provider_max_attempts": 1
+    },
+    {
+      "cell_id": "A004-PG-006-FROZEN5-R1",
+      "task_id": "A004-PG-006",
+      "schema_view_id": "A004-POSTGATE-FROZEN5",
+      "model_run_repeat": 1,
+      "provider_max_attempts": 1
+    },
+    {
+      "cell_id": "A004-PG-007-FROZEN5-R1",
+      "task_id": "A004-PG-007",
+      "schema_view_id": "A004-POSTGATE-FROZEN5",
+      "model_run_repeat": 1,
+      "provider_max_attempts": 1
+    },
+    {
+      "cell_id": "A004-PG-008-FROZEN5-R1",
+      "task_id": "A004-PG-008",
+      "schema_view_id": "A004-POSTGATE-FROZEN5",
+      "model_run_repeat": 1,
+      "provider_max_attempts": 1
+    },
+    {
+      "cell_id": "A004-PG-009-FROZEN5-R1",
+      "task_id": "A004-PG-009",
+      "schema_view_id": "A004-POSTGATE-FROZEN5",
+      "model_run_repeat": 1,
+      "provider_max_attempts": 1
+    },
+    {
+      "cell_id": "A004-PG-010-FROZEN5-R1",
+      "task_id": "A004-PG-010",
+      "schema_view_id": "A004-POSTGATE-FROZEN5",
+      "model_run_repeat": 1,
+      "provider_max_attempts": 1
+    }
+  ]
+}

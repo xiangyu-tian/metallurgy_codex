@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-POSTGATE-PROBE-OPENING-V1-20260810",
+  "decision": "pending_user_authorization",
+  "eligible_for_external_execution_authorization": true,
+  "external_data_sharing_authorized": false,
+  "external_api_execution_authorized": false,
+  "tool_execution_allowed": false,
+  "request_payloads_materialized": false,
+  "required_scope_if_authorized": "10 frozen A004 post-gate probes, one frozen five-tool Schema, R1 only, 10 one-shot requests, no retry, no metallurgy tool execution"
+}

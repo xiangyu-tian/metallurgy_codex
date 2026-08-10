@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-POSTGATE-PROBE-OPENING-V1-20260810",
+  "router_visible": true,
+  "gold_fields_present": false,
+  "source_candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-120-DENSE_TOP5",
+  "ordered_candidate_tool_ids": [
+    "E3C014",
+    "E3C027",
+    "A004",
+    "E3C005",
+    "B022"
+  ],
+  "openai_tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "E3C014",
+        "description": "pymatgen成分归一化：单元素质量分数；方法：质量分数/摩尔分数归一化与基准转换；输入：化学式或组成与目标元素；输出：目标元素质量分数；边界：shares mass-fraction normalization logic with A004 but returns one species only and fixes pymatgen atomic-weight conventions",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "formula_or_amounts": {
+              "type": [
+                "string",
+                "object"
+              ]
+            },
+            "species": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "formula_or_amounts",
+            "species"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "E3C027",
+        "description": "NumPy成分向量L2归一化；方法：质量分数/摩尔分数归一化与基准转换；输入：组分名称到数值的映射；输出：L2范数为1的归一化组分向量与原始范数；边界：shares A004 composition-vector normalization mechanics but enforces unit L2 norm rather than the unit-sum mass or molar fraction contract",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "compositions": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              }
+            }
+          },
+          "required": [
+            "compositions"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "A004",
+        "description": "成分归一化；功能：质量分数/摩尔分数归一化与基准转换；输入：组成、基准、容差；输出：归一化组成、偏差；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "compositions": {
+              "type": "object",
+              "description": "组分名称到质量分数或摩尔分数的映射",
+              "additionalProperties": {
+                "type": "number"
+              }
+            },
+            "tolerance": {
+              "type": "number",
+              "description": "容差；归一化偏差容差",
+              "default": 0.001
+            }
+          },
+          "required": [
+            "compositions"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "E3C005",
+        "description": "pymatgen成分分数归一化；方法：质量分数/摩尔分数归一化与基准转换；输入：组成、基准、容差；输出：归一化组成、偏差",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "compositions": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              }
+            }
+          },
+          "required": [
+            "compositions"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "B022",
+        "description": "多元多相Gibbs最小化；功能：元素守恒约束下全局/局部Gibbs最小化；输入：组元、候选相、T、P、G模型；输出：相组成、相分数、收敛诊断；适用边界：结果依赖热力学数据库版本、相名映射与计算条件；必须返回数据库和软件版本",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "request": {
+              "type": "string",
+              "description": "按候选目录摘要提供输入：组元、候选相、T、P、G模型"
+            },
+            "context": {
+              "type": "object",
+              "description": "可选上下文；字段尚未形成可执行参数契约。",
+              "properties": {}
+            }
+          },
+          "required": [
+            "request"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "openai_tools_sha256": "2a173caabf08a2493700d47058d8836eee038ac86e9e494047c48a739eaeca4d"
+}

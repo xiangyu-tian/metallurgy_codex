@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-POSTGATE-PROBE-OPENING-V1-20260810",
+  "artifact_count": 8,
+  "artifacts": [
+    {
+      "filename": "a004_postgate_config_snapshot.json",
+      "sha256": "b045eb2d9a0b2ed11092b10e35e11f909e7374da72fbf8dc7b36285d7131f25a",
+      "bytes": 3887
+    },
+    {
+      "filename": "a004_postgate_input_tasks.json",
+      "sha256": "56d0640bd9fdf7e2012727385d08a5c8d5b9490f28d867f79f092ac4b91db4c9",
+      "bytes": 2408
+    },
+    {
+      "filename": "a004_postgate_opening_preflight.json",
+      "sha256": "98196fc44b2dbd64b768bf7929c0372a07f8de013992480a8cd71ee3df6beabd",
+      "bytes": 688
+    },
+    {
+      "filename": "a004_postgate_prompt_snapshot.json",
+      "sha256": "cdaee6e114e459418cb77eb064f37de836e3f71a1dc39aaaaf25bdeb372fe92a",
+      "bytes": 1058
+    },
+    {
+      "filename": "a004_postgate_run_cells.json",
+      "sha256": "4d076cb42568f6e53234378ada3524451c0856c100c97427f89cdcde0a407533",
+      "bytes": 2265
+    },
+    {
+      "filename": "a004_postgate_schema_view.json",
+      "sha256": "287d4a75c81d17ee9fc2c1794f339e1ee15a7916ee7f2d0bab28480bc7b53e36",
+      "bytes": 4921
+    },
+    {
+      "filename": "a004_postgate_scoring_registry.json",
+      "sha256": "8e06d742298a0eee03a997b4810010fe66bb845d03b0c01803ecd1044135dd81",
+      "bytes": 2805
+    },
+    {
+      "filename": "execution_authorization_request.json",
+      "sha256": "c7d4ce7d303b8ed0ce0f4998c5e3a79a6347e7839a2440aba24b581967dc2334",
+      "bytes": 550
+    }
+  ]
+}

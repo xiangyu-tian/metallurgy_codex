@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-POSTGATE-PROBE-OPENING-V1-20260810",
+  "router_visible": false,
+  "offline_scoring_only": true,
+  "tasks": [
+    {
+      "task_id": "A004-PG-001",
+      "acceptable_tools_development_scope": [
+        "A004"
+      ],
+      "expected_parameters": {
+        "compositions": {
+          "binder": 12.5,
+          "inclusion": 0.5
+        }
+      }
+    },
+    {
+      "task_id": "A004-PG-002",
+      "acceptable_tools_development_scope": [
+        "A004"
+      ],
+      "expected_parameters": {
+        "compositions": {
+          "slag_phase": 7.25,
+          "metal_phase": 2.75
+        }
+      }
+    },
+    {
+      "task_id": "A004-PG-003",
+      "acceptable_tools_development_scope": [
+        "A004"
+      ],
+      "expected_parameters": {
+        "compositions": {
+          "coarse": 81,
+          "fine": 19
+        }
+      }
+    },
+    {
+      "task_id": "A004-PG-004",
+      "acceptable_tools_development_scope": [
+        "A004"
+      ],
+      "expected_parameters": {
+        "compositions": {
+          "primary": 0.333,
+          "secondary": 0.667
+        }
+      }
+    },
+    {
+      "task_id": "A004-PG-005",
+      "acceptable_tools_development_scope": [
+        "A004"
+      ],
+      "expected_parameters": {
+        "compositions": {
+          "alpha": 2500,
+          "beta": 125,
+          "gamma": 375
+        }
+      }
+    },
+    {
+      "task_id": "A004-PG-006",
+      "acceptable_tools_development_scope": [
+        "A004"
+      ],
+      "expected_parameters": {
+        "compositions": {
+          "liquid": 46.2,
+          "solid": 53.8
+        }
+      }
+    },
+    {
+      "task_id": "A004-PG-007",
+      "acceptable_tools_development_scope": [
+        "A004"
+      ],
+      "expected_parameters": {
+        "compositions": {
+          "matrix": 996,
+          "trace": 3,
+          "residual": 1
+        }
+      }
+    },
+    {
+      "task_id": "A004-PG-008",
+      "acceptable_tools_development_scope": [
+        "A004"
+      ],
+      "expected_parameters": {
+        "compositions": {
+          "phase_A": 1.2,
+          "phase_B": 3.4,
+          "phase_C": 5.4
+        }
+      }
+    },
+    {
+      "task_id": "A004-PG-009",
+      "acceptable_tools_development_scope": [
+        "A004"
+      ],
+      "expected_parameters": {
+        "compositions": {
+          "sample_left": 0.0004,
+          "sample_right": 0.0006
+        }
+      }
+    },
+    {
+      "task_id": "A004-PG-010",
+      "acceptable_tools_development_scope": [
+        "A004"
+      ],
+      "expected_parameters": {
+        "compositions": {
+          "recycle": 14,
+          "fresh": 86
+        }
+      }
+    }
+  ]
+}

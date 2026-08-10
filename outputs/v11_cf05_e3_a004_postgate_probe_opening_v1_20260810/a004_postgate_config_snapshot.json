@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-POSTGATE-PROBE-OPENING-V1-20260810",
+  "development_only": true,
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "temperature": 0,
+  "max_tokens": 256,
+  "thinking": "disabled",
+  "provider_max_attempts": 1,
+  "tool_choice": "auto",
+  "model_run_repeats": [
+    1
+  ],
+  "external_api_calls_authorized": false,
+  "tool_execution_allowed": false,
+  "automatic_retry_allowed": false,
+  "independent_validation_claim_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "source_candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-120-DENSE_TOP5",
+  "expected_tool_ids": [
+    "E3C014",
+    "E3C027",
+    "A004",
+    "E3C005",
+    "B022"
+  ],
+  "tasks": [
+    {
+      "task_id": "A004-PG-001",
+      "problem_text": "以下组分使用同一基准：{\"binder\": 12.5, \"inclusion\": 0.5}。请归一化各组分，使总和为1；各分量保留6位小数。"
+    },
+    {
+      "task_id": "A004-PG-002",
+      "problem_text": "以下组分使用同一基准：{\"slag_phase\": 7.25, \"metal_phase\": 2.75}。请归一化各组分，使总和为1；各分量保留6位小数。"
+    },
+    {
+      "task_id": "A004-PG-003",
+      "problem_text": "以下组分使用同一基准：{\"coarse\": 81, \"fine\": 19}。请归一化各组分，使总和为1；各分量保留6位小数。"
+    },
+    {
+      "task_id": "A004-PG-004",
+      "problem_text": "以下组分使用同一基准：{\"primary\": 0.333, \"secondary\": 0.667}。请归一化各组分，使总和为1；各分量保留6位小数。"
+    },
+    {
+      "task_id": "A004-PG-005",
+      "problem_text": "以下组分使用同一基准：{\"alpha\": 2500, \"beta\": 125, \"gamma\": 375}。请归一化各组分，使总和为1；各分量保留6位小数。"
+    },
+    {
+      "task_id": "A004-PG-006",
+      "problem_text": "以下组分使用同一基准：{\"liquid\": 46.2, \"solid\": 53.8}。请归一化各组分，使总和为1；各分量保留6位小数。"
+    },
+    {
+      "task_id": "A004-PG-007",
+      "problem_text": "以下组分使用同一基准：{\"matrix\": 996, \"trace\": 3, \"residual\": 1}。请归一化各组分，使总和为1；各分量保留6位小数。"
+    },
+    {
+      "task_id": "A004-PG-008",
+      "problem_text": "以下组分使用同一基准：{\"phase_A\": 1.2, \"phase_B\": 3.4, \"phase_C\": 5.4}。请归一化各组分，使总和为1；各分量保留6位小数。"
+    },
+    {
+      "task_id": "A004-PG-009",
+      "problem_text": "以下组分使用同一基准：{\"sample_left\": 0.0004, \"sample_right\": 0.0006}。请归一化各组分，使总和为1；各分量保留6位小数。"
+    },
+    {
+      "task_id": "A004-PG-010",
+      "problem_text": "以下组分使用同一基准：{\"recycle\": 14, \"fresh\": 86}。请归一化各组分，使总和为1；各分量保留6位小数。"
+    }
+  ],
+  "bindings": {
+    "candidate_views": {
+      "path": "outputs/v11_cf05_e3_a004_hardcase_opening_v1_20260810/a004_candidate_views.json",
+      "sha256": "80172518e2b59b021e6376dbb18b2488ff1cdbd745353e00bd44f292c58cc37b"
+    },
+    "selector_prompt": {
+      "path": "outputs/v11_cf05_e3_a004_hardcase_opening_v1_20260810/a004_hardcase_prompt_snapshot.json",
+      "sha256": "cdaee6e114e459418cb77eb064f37de836e3f71a1dc39aaaaf25bdeb372fe92a"
+    },
+    "contract_gate_source": {
+      "path": "Tools/core_freeze/e3_routing/a004_contract_adjudication.py",
+      "sha256": "85426116471ab48a559f51539fcfa024dbb738aec52ae65e10fe378a159055e5"
+    },
+    "contract_gate_config": {
+      "path": "Tools/core_freeze/e3_routing/a004_contract_adjudication_config_v1.json",
+      "sha256": "badb8744884a58a7fd9c32ca108d3ade25aeda018e3179d58542dda9f696678e"
+    }
+  }
+}
