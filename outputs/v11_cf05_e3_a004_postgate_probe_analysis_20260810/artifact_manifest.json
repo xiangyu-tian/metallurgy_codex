@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A004-POSTGATE-PROBE-ANALYSIS-V1-20260810",
+  "artifact_count": 3,
+  "artifacts": [
+    {
+      "filename": "a004_postgate_analysis_config_snapshot.json",
+      "sha256": "0b5be3031677fc6aa90d63c84f65b2c688425f6412aec5bb5cb57e2fa2459cd5",
+      "bytes": 1480
+    },
+    {
+      "filename": "a004_postgate_analysis_report.json",
+      "sha256": "8fde0de55ca6946dcac85f0ae2858e988323dc06d5fa93bc885598d64e072b18",
+      "bytes": 1074
+    },
+    {
+      "filename": "a004_postgate_per_task_scores.json",
+      "sha256": "e03c9a7c2439207b2acf1fd22d2b75fb8cbf64dad638fbd0a7c46b29150f7c46",
+      "bytes": 5501
+    }
+  ]
+}

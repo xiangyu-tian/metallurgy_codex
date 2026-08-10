@@ -1,0 +1,707 @@
+{
+  "schema_version": "1.0",
+  "run_id": "V11-CF05-E3-A004-POSTGATE-PROBE-R1-20260810",
+  "result_count": 10,
+  "results": [
+    {
+      "cell_id": "A004-PG-001-FROZEN5-R1",
+      "task_id": "A004-PG-001",
+      "model_run_repeat": 1,
+      "request_body_sha256": "114e5d48f67d0bf7805690770104591bc33e268ab11f2879e07d53c430623d92",
+      "started_at": "2026-08-10T20:45:02.477128+08:00",
+      "api_latency_ms": 2013.9488,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "9aaa53db-179d-4b9e-a56b-b6ef76719535",
+      "response_model": "deepseek-v4-flash",
+      "usage": {
+        "prompt_tokens": 1043,
+        "completion_tokens": 60,
+        "total_tokens": 1103,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 275
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "called_tool_ids": [
+        "A004"
+      ],
+      "all_arguments_json_valid": true,
+      "exactly_one_tool_call": true,
+      "raw_response": {
+        "id": "9aaa53db-179d-4b9e-a56b-b6ef76719535",
+        "object": "chat.completion",
+        "created": 1786365904,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_gUKi7PwjYxntq5oPDikk9066",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"binder\": 12.5, \"inclusion\": 0.5}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1043,
+          "completion_tokens": 60,
+          "total_tokens": 1103,
+          "prompt_tokens_details": {
+            "cached_tokens": 768
+          },
+          "prompt_cache_hit_tokens": 768,
+          "prompt_cache_miss_tokens": 275
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "A004-PG-002-FROZEN5-R1",
+      "task_id": "A004-PG-002",
+      "model_run_repeat": 1,
+      "request_body_sha256": "128d74d5c6b7af99c396f5e0ee405c8f3f6d0fdcd166887651d66e91b505d7b7",
+      "started_at": "2026-08-10T20:45:04.491887+08:00",
+      "api_latency_ms": 1748.1639,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "1b33541f-ddd8-41ec-9dd6-5149abc0802b",
+      "response_model": "deepseek-v4-flash",
+      "usage": {
+        "prompt_tokens": 1045,
+        "completion_tokens": 62,
+        "total_tokens": 1107,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 149
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "called_tool_ids": [
+        "A004"
+      ],
+      "all_arguments_json_valid": true,
+      "exactly_one_tool_call": true,
+      "raw_response": {
+        "id": "1b33541f-ddd8-41ec-9dd6-5149abc0802b",
+        "object": "chat.completion",
+        "created": 1786365906,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_1Buzu1dgcRt8gpPAbvtd8963",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"slag_phase\": 7.25, \"metal_phase\": 2.75}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1045,
+          "completion_tokens": 62,
+          "total_tokens": 1107,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 149
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "A004-PG-003-FROZEN5-R1",
+      "task_id": "A004-PG-003",
+      "model_run_repeat": 1,
+      "request_body_sha256": "9e3ce92d9afb29efc7ec4245c61449d9f82ffc0b067cb35b31875f00fea7b21a",
+      "started_at": "2026-08-10T20:45:06.247044+08:00",
+      "api_latency_ms": 1589.6335,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "3ae27cf9-0104-4e07-8a50-a21378d69c55",
+      "response_model": "deepseek-v4-flash",
+      "usage": {
+        "prompt_tokens": 1038,
+        "completion_tokens": 55,
+        "total_tokens": 1093,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 142
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "called_tool_ids": [
+        "A004"
+      ],
+      "all_arguments_json_valid": true,
+      "exactly_one_tool_call": true,
+      "raw_response": {
+        "id": "3ae27cf9-0104-4e07-8a50-a21378d69c55",
+        "object": "chat.completion",
+        "created": 1786365907,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_Mo3QovwRR2Y06XI9RKYp8740",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"coarse\": 81, \"fine\": 19}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1038,
+          "completion_tokens": 55,
+          "total_tokens": 1093,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 142
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "A004-PG-004-FROZEN5-R1",
+      "task_id": "A004-PG-004",
+      "model_run_repeat": 1,
+      "request_body_sha256": "7bfd690fedeed8cff79427399c0223de90ad5db06d2831f562d1110560d4e6f0",
+      "started_at": "2026-08-10T20:45:07.839792+08:00",
+      "api_latency_ms": 1525.9607,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "b0bb362d-c2b2-43ac-b9b9-d6d358d4b6b6",
+      "response_model": "deepseek-v4-flash",
+      "usage": {
+        "prompt_tokens": 1041,
+        "completion_tokens": 58,
+        "total_tokens": 1099,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 145
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "called_tool_ids": [
+        "A004"
+      ],
+      "all_arguments_json_valid": true,
+      "exactly_one_tool_call": true,
+      "raw_response": {
+        "id": "b0bb362d-c2b2-43ac-b9b9-d6d358d4b6b6",
+        "object": "chat.completion",
+        "created": 1786365909,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_zlGMXChSL5CZi07It2UX8433",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"primary\": 0.333, \"secondary\": 0.667}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1041,
+          "completion_tokens": 58,
+          "total_tokens": 1099,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 145
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "A004-PG-005-FROZEN5-R1",
+      "task_id": "A004-PG-005",
+      "model_run_repeat": 1,
+      "request_body_sha256": "3abadf4ce5a9cd521555d614e6863abc577a19ff52f1bcf2afa6254fac5c3eb7",
+      "started_at": "2026-08-10T20:45:09.369794+08:00",
+      "api_latency_ms": 1444.1542,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "bc361708-9e66-4ec3-a7d3-f033b1a48011",
+      "response_model": "deepseek-v4-flash",
+      "usage": {
+        "prompt_tokens": 1044,
+        "completion_tokens": 61,
+        "total_tokens": 1105,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 148
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "called_tool_ids": [
+        "A004"
+      ],
+      "all_arguments_json_valid": true,
+      "exactly_one_tool_call": true,
+      "raw_response": {
+        "id": "bc361708-9e66-4ec3-a7d3-f033b1a48011",
+        "object": "chat.completion",
+        "created": 1786365910,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_3HVZTqAD3c61zk4ZrmOh1518",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"alpha\": 2500, \"beta\": 125, \"gamma\": 375}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1044,
+          "completion_tokens": 61,
+          "total_tokens": 1105,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 148
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "A004-PG-006-FROZEN5-R1",
+      "task_id": "A004-PG-006",
+      "model_run_repeat": 1,
+      "request_body_sha256": "977fe52580dae32e170489bc20f829ea2378efb2b1ae3c190688368800195863",
+      "started_at": "2026-08-10T20:45:10.809798+08:00",
+      "api_latency_ms": 1148.1255,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "b01aad17-faa2-4d8b-bdf7-1fdaf75bccd7",
+      "response_model": "deepseek-v4-flash",
+      "usage": {
+        "prompt_tokens": 1041,
+        "completion_tokens": 58,
+        "total_tokens": 1099,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 145
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "called_tool_ids": [
+        "A004"
+      ],
+      "all_arguments_json_valid": true,
+      "exactly_one_tool_call": true,
+      "raw_response": {
+        "id": "b01aad17-faa2-4d8b-bdf7-1fdaf75bccd7",
+        "object": "chat.completion",
+        "created": 1786365912,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_pcuy3r60zNb1nIgkaYsu6703",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"liquid\": 46.2, \"solid\": 53.8}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1041,
+          "completion_tokens": 58,
+          "total_tokens": 1099,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 145
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "A004-PG-007-FROZEN5-R1",
+      "task_id": "A004-PG-007",
+      "model_run_repeat": 1,
+      "request_body_sha256": "b8d31f418149892139aa669849f8e8058fb0fcbaedd2fef8cc0d1f42ee6505d8",
+      "started_at": "2026-08-10T20:45:11.969329+08:00",
+      "api_latency_ms": 1541.7843,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "3599da21-631f-4525-9730-5f9c9fc30f87",
+      "response_model": "deepseek-v4-flash",
+      "usage": {
+        "prompt_tokens": 1044,
+        "completion_tokens": 84,
+        "total_tokens": 1128,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 148
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "called_tool_ids": [
+        "A004"
+      ],
+      "all_arguments_json_valid": true,
+      "exactly_one_tool_call": true,
+      "raw_response": {
+        "id": "3599da21-631f-4525-9730-5f9c9fc30f87",
+        "object": "chat.completion",
+        "created": 1786365913,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll normalize the composition so the components sum to 1. Let me use the A004 tool for composition normalization.",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_V2zbFjgVQuGWy9g6qtLP5469",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 996, \"trace\": 3, \"residual\": 1}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1044,
+          "completion_tokens": 84,
+          "total_tokens": 1128,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 148
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "A004-PG-008-FROZEN5-R1",
+      "task_id": "A004-PG-008",
+      "model_run_repeat": 1,
+      "request_body_sha256": "ccd9b18e85e9c04b4c715a5c2dac407991f281310af286e8001ee91891239fb8",
+      "started_at": "2026-08-10T20:45:13.515038+08:00",
+      "api_latency_ms": 1313.2436,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "f54fcce7-9b8a-4d68-ae8b-6052e7ae3bfd",
+      "response_model": "deepseek-v4-flash",
+      "usage": {
+        "prompt_tokens": 1052,
+        "completion_tokens": 69,
+        "total_tokens": 1121,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 156
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "called_tool_ids": [
+        "A004"
+      ],
+      "all_arguments_json_valid": true,
+      "exactly_one_tool_call": true,
+      "raw_response": {
+        "id": "f54fcce7-9b8a-4d68-ae8b-6052e7ae3bfd",
+        "object": "chat.completion",
+        "created": 1786365914,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_lxPjtT6LUH6gyFFclv4e2302",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"phase_A\": 1.2, \"phase_B\": 3.4, \"phase_C\": 5.4}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1052,
+          "completion_tokens": 69,
+          "total_tokens": 1121,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 156
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "A004-PG-009-FROZEN5-R1",
+      "task_id": "A004-PG-009",
+      "model_run_repeat": 1,
+      "request_body_sha256": "a57449e2a1251ee8fca4ffa884fb22e393ffa188fa272e7768fc8a3fd6a3e435",
+      "started_at": "2026-08-10T20:45:14.831051+08:00",
+      "api_latency_ms": 1409.1546,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "0a1df785-9a11-4c1b-ae9d-06432ed889a0",
+      "response_model": "deepseek-v4-flash",
+      "usage": {
+        "prompt_tokens": 1045,
+        "completion_tokens": 62,
+        "total_tokens": 1107,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 149
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "called_tool_ids": [
+        "A004"
+      ],
+      "all_arguments_json_valid": true,
+      "exactly_one_tool_call": true,
+      "raw_response": {
+        "id": "0a1df785-9a11-4c1b-ae9d-06432ed889a0",
+        "object": "chat.completion",
+        "created": 1786365916,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_XlnfMZnu0AoZ3IXwuAi25529",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"sample_left\": 0.0004, \"sample_right\": 0.0006}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1045,
+          "completion_tokens": 62,
+          "total_tokens": 1107,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 149
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "A004-PG-010-FROZEN5-R1",
+      "task_id": "A004-PG-010",
+      "model_run_repeat": 1,
+      "request_body_sha256": "de552c83e6618c248c365b1ba746a96a03b86100af1393eee17b6b4024f48e2f",
+      "started_at": "2026-08-10T20:45:16.242986+08:00",
+      "api_latency_ms": 1229.2806,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "38d4cfc6-0073-45f5-bc8e-9555968d6da1",
+      "response_model": "deepseek-v4-flash",
+      "usage": {
+        "prompt_tokens": 1038,
+        "completion_tokens": 55,
+        "total_tokens": 1093,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 142
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "called_tool_ids": [
+        "A004"
+      ],
+      "all_arguments_json_valid": true,
+      "exactly_one_tool_call": true,
+      "raw_response": {
+        "id": "38d4cfc6-0073-45f5-bc8e-9555968d6da1",
+        "object": "chat.completion",
+        "created": 1786365917,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_Du3pDNvyMA9y08f7ZxWH3288",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"recycle\": 14, \"fresh\": 86}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1038,
+          "completion_tokens": 55,
+          "total_tokens": 1093,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 142
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    }
+  ]
+}

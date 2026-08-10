@@ -1,0 +1,586 @@
+{
+  "schema_version": "1.0",
+  "run_id": "V11-CF05-E3-A004-POSTGATE-PROBE-R1-20260810",
+  "result_count": 10,
+  "results": [
+    {
+      "cell_id": "A004-PG-001-FROZEN5-R1",
+      "task_id": "A004-PG-001",
+      "raw_result_sha256": "683d111325e7ff8bab642894071f9d63d711081050897d8381dae45f0db7f15a",
+      "gate_decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "binder": 12.5,
+            "inclusion": 0.5
+          },
+          "component_labels": [
+            "binder",
+            "inclusion"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": true,
+          "precision_digits": 6
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": false,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible",
+              "full_mapping_output_supported"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "allow_original_single_call",
+        "decision_reason": "single_call_contract_compatible_and_execution_eligible",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "binder": 12.5,
+            "inclusion": 0.5
+          }
+        },
+        "output_tool_call_count": 1,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "raw_response_modified": false,
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A004-PG-002-FROZEN5-R1",
+      "task_id": "A004-PG-002",
+      "raw_result_sha256": "a0adf9df6602b393b930b2e4a3d6734f42f10760921779a3b1cf8e952d7ddb3f",
+      "gate_decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "slag_phase": 7.25,
+            "metal_phase": 2.75
+          },
+          "component_labels": [
+            "slag_phase",
+            "metal_phase"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": true,
+          "precision_digits": 6
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": false,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible",
+              "full_mapping_output_supported"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "allow_original_single_call",
+        "decision_reason": "single_call_contract_compatible_and_execution_eligible",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "slag_phase": 7.25,
+            "metal_phase": 2.75
+          }
+        },
+        "output_tool_call_count": 1,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "raw_response_modified": false,
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A004-PG-003-FROZEN5-R1",
+      "task_id": "A004-PG-003",
+      "raw_result_sha256": "aa8a503a36c6883f3c77cd44dfd618e749cec92750e970b5cc92a3e5b69c32b9",
+      "gate_decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "coarse": 81,
+            "fine": 19
+          },
+          "component_labels": [
+            "coarse",
+            "fine"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": true,
+          "precision_digits": 6
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": false,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible",
+              "full_mapping_output_supported"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "allow_original_single_call",
+        "decision_reason": "single_call_contract_compatible_and_execution_eligible",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "coarse": 81,
+            "fine": 19
+          }
+        },
+        "output_tool_call_count": 1,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "raw_response_modified": false,
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A004-PG-004-FROZEN5-R1",
+      "task_id": "A004-PG-004",
+      "raw_result_sha256": "724b0695edff6214e5601d3521f80d4adc85074a75ebf519fffc4ecbf9c0bfa1",
+      "gate_decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "primary": 0.333,
+            "secondary": 0.667
+          },
+          "component_labels": [
+            "primary",
+            "secondary"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": true,
+          "precision_digits": 6
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": false,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible",
+              "full_mapping_output_supported"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "allow_original_single_call",
+        "decision_reason": "single_call_contract_compatible_and_execution_eligible",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "primary": 0.333,
+            "secondary": 0.667
+          }
+        },
+        "output_tool_call_count": 1,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "raw_response_modified": false,
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A004-PG-005-FROZEN5-R1",
+      "task_id": "A004-PG-005",
+      "raw_result_sha256": "7d84dd1de4efc4df4c8d5b7455a9cd090386ff6e33b77352cee5f3842c6b773c",
+      "gate_decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "alpha": 2500,
+            "beta": 125,
+            "gamma": 375
+          },
+          "component_labels": [
+            "alpha",
+            "beta",
+            "gamma"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": true,
+          "precision_digits": 6
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": false,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible",
+              "full_mapping_output_supported"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "allow_original_single_call",
+        "decision_reason": "single_call_contract_compatible_and_execution_eligible",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "alpha": 2500,
+            "beta": 125,
+            "gamma": 375
+          }
+        },
+        "output_tool_call_count": 1,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "raw_response_modified": false,
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A004-PG-006-FROZEN5-R1",
+      "task_id": "A004-PG-006",
+      "raw_result_sha256": "009577bacb1cdd76d3eba98b87ddee660cffc59e09b844ecea7ecc0efca8cafb",
+      "gate_decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "liquid": 46.2,
+            "solid": 53.8
+          },
+          "component_labels": [
+            "liquid",
+            "solid"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": true,
+          "precision_digits": 6
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": false,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible",
+              "full_mapping_output_supported"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "allow_original_single_call",
+        "decision_reason": "single_call_contract_compatible_and_execution_eligible",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "liquid": 46.2,
+            "solid": 53.8
+          }
+        },
+        "output_tool_call_count": 1,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "raw_response_modified": false,
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A004-PG-007-FROZEN5-R1",
+      "task_id": "A004-PG-007",
+      "raw_result_sha256": "f4a66d5b49d994f8474838a62178cd46f7f4bbdc9819963d93da071e7a3f9d67",
+      "gate_decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "matrix": 996,
+            "trace": 3,
+            "residual": 1
+          },
+          "component_labels": [
+            "matrix",
+            "trace",
+            "residual"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": true,
+          "precision_digits": 6
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": false,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible",
+              "full_mapping_output_supported"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "allow_original_single_call",
+        "decision_reason": "single_call_contract_compatible_and_execution_eligible",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "matrix": 996,
+            "trace": 3,
+            "residual": 1
+          }
+        },
+        "output_tool_call_count": 1,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "raw_response_modified": false,
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A004-PG-008-FROZEN5-R1",
+      "task_id": "A004-PG-008",
+      "raw_result_sha256": "06e974cf01cef994bc9b671f9514314f6b801a158a9c9e71197719dd6b6361ed",
+      "gate_decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "phase_A": 1.2,
+            "phase_B": 3.4,
+            "phase_C": 5.4
+          },
+          "component_labels": [
+            "phase_A",
+            "phase_B",
+            "phase_C"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": true,
+          "precision_digits": 6
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": false,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible",
+              "full_mapping_output_supported"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "allow_original_single_call",
+        "decision_reason": "single_call_contract_compatible_and_execution_eligible",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "phase_A": 1.2,
+            "phase_B": 3.4,
+            "phase_C": 5.4
+          }
+        },
+        "output_tool_call_count": 1,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "raw_response_modified": false,
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A004-PG-009-FROZEN5-R1",
+      "task_id": "A004-PG-009",
+      "raw_result_sha256": "d02fd507a9c3cf9373bf1283e26b7222be44abc8910d61e8049a32fb6b70fdc5",
+      "gate_decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "sample_left": 0.0004,
+            "sample_right": 0.0006
+          },
+          "component_labels": [
+            "sample_left",
+            "sample_right"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": true,
+          "precision_digits": 6
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": false,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible",
+              "full_mapping_output_supported"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "allow_original_single_call",
+        "decision_reason": "single_call_contract_compatible_and_execution_eligible",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "sample_left": 0.0004,
+            "sample_right": 0.0006
+          }
+        },
+        "output_tool_call_count": 1,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "raw_response_modified": false,
+      "tool_executed": false
+    },
+    {
+      "cell_id": "A004-PG-010-FROZEN5-R1",
+      "task_id": "A004-PG-010",
+      "raw_result_sha256": "9bce8c3db7726dc0fefd68b25321295df459b752eaec452852dd29fcc72d7c10",
+      "gate_decision": {
+        "requirements": {
+          "normalization_kind": "unit_sum",
+          "component_mapping": {
+            "recycle": 14,
+            "fresh": 86
+          },
+          "component_labels": [
+            "recycle",
+            "fresh"
+          ],
+          "generic_labels_present": true,
+          "full_mapping_required": true,
+          "precision_digits": 6
+        },
+        "original_tool_call_count": 1,
+        "original_called_tool_ids": [
+          "A004"
+        ],
+        "structure_violation_detected": false,
+        "original_execution_blocked": false,
+        "candidate_evaluations": [
+          {
+            "call_index": 0,
+            "tool_id": "A004",
+            "semantic_compatible": true,
+            "execution_eligible": true,
+            "reasons": [
+              "composition_arguments_match_request",
+              "normalization_kind_matches",
+              "component_label_domain_compatible",
+              "full_mapping_output_supported"
+            ],
+            "vetoes": []
+          }
+        ],
+        "decision": "allow_original_single_call",
+        "decision_reason": "single_call_contract_compatible_and_execution_eligible",
+        "unresolved_candidate_evidence": false,
+        "selected_tool_id": "A004",
+        "selected_arguments": {
+          "compositions": {
+            "recycle": 14,
+            "fresh": 86
+          }
+        },
+        "output_tool_call_count": 1,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "raw_response_modified": false,
+      "tool_executed": false
+    }
+  ]
+}

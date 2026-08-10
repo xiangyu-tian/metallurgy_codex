@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A004-POSTGATE-PROBE-ANALYSIS-V1-20260810",
+  "development_only": true,
+  "expected_result_count": 10,
+  "tool_execution_allowed": false,
+  "external_api_calls_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "causal_gate_benefit_claim_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "raw_results": {
+      "path": "outputs/v11_cf05_e3_a004_postgate_probe_r1_20260810/a004_postgate_raw_results.json",
+      "sha256": "56e8a3c7f4319e43c35f50737be6836fcdcf401a7296cf82bac34a2b92f971ab"
+    },
+    "gate_results": {
+      "path": "outputs/v11_cf05_e3_a004_postgate_probe_r1_20260810/a004_postgate_gate_results.json",
+      "sha256": "464e0699635b6f357cd6068abe7e309eca8a258f9557b57169f28367baba7a2c"
+    },
+    "scoring_registry": {
+      "path": "outputs/v11_cf05_e3_a004_postgate_probe_opening_v1_20260810/a004_postgate_scoring_registry.json",
+      "sha256": "8e06d742298a0eee03a997b4810010fe66bb845d03b0c01803ecd1044135dd81"
+    },
+    "runtime_report": {
+      "path": "outputs/v11_cf05_e3_a004_postgate_probe_r1_20260810/a004_postgate_runtime_report.json",
+      "sha256": "2398a0cba9878d8fb80e713c4d3558e28de168155a2baaf0aafd46610278a54f"
+    },
+    "runtime_manifest": {
+      "path": "outputs/v11_cf05_e3_a004_postgate_probe_r1_20260810/artifact_manifest.json",
+      "sha256": "a058430f14a442878710bb67843ea19757931ada283251d39521255b1453878c"
+    }
+  }
+}

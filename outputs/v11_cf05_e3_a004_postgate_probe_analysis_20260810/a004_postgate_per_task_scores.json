@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "task_id": "A004-PG-001",
+      "raw_tool_call_count": 1,
+      "raw_called_tool_ids": [
+        "A004"
+      ],
+      "raw_selection_correct": true,
+      "raw_parameters_correct": true,
+      "raw_complete_call_correct": true,
+      "gate_decision": "allow_original_single_call",
+      "gate_selected_tool_id": "A004",
+      "gate_selection_correct": true,
+      "gate_parameters_correct": true,
+      "gate_complete_call_correct": true,
+      "gate_intervened": false,
+      "raw_response_modified": false
+    },
+    {
+      "task_id": "A004-PG-002",
+      "raw_tool_call_count": 1,
+      "raw_called_tool_ids": [
+        "A004"
+      ],
+      "raw_selection_correct": true,
+      "raw_parameters_correct": true,
+      "raw_complete_call_correct": true,
+      "gate_decision": "allow_original_single_call",
+      "gate_selected_tool_id": "A004",
+      "gate_selection_correct": true,
+      "gate_parameters_correct": true,
+      "gate_complete_call_correct": true,
+      "gate_intervened": false,
+      "raw_response_modified": false
+    },
+    {
+      "task_id": "A004-PG-003",
+      "raw_tool_call_count": 1,
+      "raw_called_tool_ids": [
+        "A004"
+      ],
+      "raw_selection_correct": true,
+      "raw_parameters_correct": true,
+      "raw_complete_call_correct": true,
+      "gate_decision": "allow_original_single_call",
+      "gate_selected_tool_id": "A004",
+      "gate_selection_correct": true,
+      "gate_parameters_correct": true,
+      "gate_complete_call_correct": true,
+      "gate_intervened": false,
+      "raw_response_modified": false
+    },
+    {
+      "task_id": "A004-PG-004",
+      "raw_tool_call_count": 1,
+      "raw_called_tool_ids": [
+        "A004"
+      ],
+      "raw_selection_correct": true,
+      "raw_parameters_correct": true,
+      "raw_complete_call_correct": true,
+      "gate_decision": "allow_original_single_call",
+      "gate_selected_tool_id": "A004",
+      "gate_selection_correct": true,
+      "gate_parameters_correct": true,
+      "gate_complete_call_correct": true,
+      "gate_intervened": false,
+      "raw_response_modified": false
+    },
+    {
+      "task_id": "A004-PG-005",
+      "raw_tool_call_count": 1,
+      "raw_called_tool_ids": [
+        "A004"
+      ],
+      "raw_selection_correct": true,
+      "raw_parameters_correct": true,
+      "raw_complete_call_correct": true,
+      "gate_decision": "allow_original_single_call",
+      "gate_selected_tool_id": "A004",
+      "gate_selection_correct": true,
+      "gate_parameters_correct": true,
+      "gate_complete_call_correct": true,
+      "gate_intervened": false,
+      "raw_response_modified": false
+    },
+    {
+      "task_id": "A004-PG-006",
+      "raw_tool_call_count": 1,
+      "raw_called_tool_ids": [
+        "A004"
+      ],
+      "raw_selection_correct": true,
+      "raw_parameters_correct": true,
+      "raw_complete_call_correct": true,
+      "gate_decision": "allow_original_single_call",
+      "gate_selected_tool_id": "A004",
+      "gate_selection_correct": true,
+      "gate_parameters_correct": true,
+      "gate_complete_call_correct": true,
+      "gate_intervened": false,
+      "raw_response_modified": false
+    },
+    {
+      "task_id": "A004-PG-007",
+      "raw_tool_call_count": 1,
+      "raw_called_tool_ids": [
+        "A004"
+      ],
+      "raw_selection_correct": true,
+      "raw_parameters_correct": true,
+      "raw_complete_call_correct": true,
+      "gate_decision": "allow_original_single_call",
+      "gate_selected_tool_id": "A004",
+      "gate_selection_correct": true,
+      "gate_parameters_correct": true,
+      "gate_complete_call_correct": true,
+      "gate_intervened": false,
+      "raw_response_modified": false
+    },
+    {
+      "task_id": "A004-PG-008",
+      "raw_tool_call_count": 1,
+      "raw_called_tool_ids": [
+        "A004"
+      ],
+      "raw_selection_correct": true,
+      "raw_parameters_correct": true,
+      "raw_complete_call_correct": true,
+      "gate_decision": "allow_original_single_call",
+      "gate_selected_tool_id": "A004",
+      "gate_selection_correct": true,
+      "gate_parameters_correct": true,
+      "gate_complete_call_correct": true,
+      "gate_intervened": false,
+      "raw_response_modified": false
+    },
+    {
+      "task_id": "A004-PG-009",
+      "raw_tool_call_count": 1,
+      "raw_called_tool_ids": [
+        "A004"
+      ],
+      "raw_selection_correct": true,
+      "raw_parameters_correct": true,
+      "raw_complete_call_correct": true,
+      "gate_decision": "allow_original_single_call",
+      "gate_selected_tool_id": "A004",
+      "gate_selection_correct": true,
+      "gate_parameters_correct": true,
+      "gate_complete_call_correct": true,
+      "gate_intervened": false,
+      "raw_response_modified": false
+    },
+    {
+      "task_id": "A004-PG-010",
+      "raw_tool_call_count": 1,
+      "raw_called_tool_ids": [
+        "A004"
+      ],
+      "raw_selection_correct": true,
+      "raw_parameters_correct": true,
+      "raw_complete_call_correct": true,
+      "gate_decision": "allow_original_single_call",
+      "gate_selected_tool_id": "A004",
+      "gate_selection_correct": true,
+      "gate_parameters_correct": true,
+      "gate_complete_call_correct": true,
+      "gate_intervened": false,
+      "raw_response_modified": false
+    }
+  ]
+}
