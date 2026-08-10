@@ -1,0 +1,36 @@
+{
+  "audit_id": "V11-CF05-E3-MULTITARGET-READINESS-V1-20260810",
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "filename": "multitarget_task_inventory.json",
+      "sha256": "0ca96b9b7172753956c52e7c0971256536c6eaaa2157e11fffd91983e14472b4",
+      "bytes": 4446
+    },
+    {
+      "filename": "target_readiness_matrix.json",
+      "sha256": "cf8c62a226831d7ac6e42e177d792cad7711e106262b0f088451b9fd8d29cf98",
+      "bytes": 3537
+    },
+    {
+      "filename": "neighbor_expansion_queue.json",
+      "sha256": "ff215435368cbb9cd967d24dec5478dad609bdc187405322a37a4b02509dc65c",
+      "bytes": 1672
+    },
+    {
+      "filename": "multitarget_readiness_report.json",
+      "sha256": "c49aafb56d91a6f922b3f216025b0645c351f76a84a9e19b1a241cd7e7d6b41e",
+      "bytes": 1107
+    },
+    {
+      "filename": "multitarget_readiness_config_snapshot.json",
+      "sha256": "9e2ea10835279d984e2238c6e11046905b0d09b342fc2b940dfbbdbad5693395",
+      "bytes": 2136
+    },
+    {
+      "filename": "target_readiness_matrix.csv",
+      "sha256": "484f00012c2149f3da1ff5447c2b412907fa5093e7b589badb511485a5b86524",
+      "bytes": 764
+    }
+  ]
+}

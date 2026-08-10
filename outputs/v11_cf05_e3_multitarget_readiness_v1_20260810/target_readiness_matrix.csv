@@ -1,0 +1,6 @@
+﻿target_tool_id,task_count,base_task_group_count,task_source_and_independent_reference_ready,expanded_registry_task_gold_revalidated,lexical_neighbor_count,contract_mismatch_neighbor_count,lexical_gap_to_4,contract_mismatch_gap_to_4,lexical_gap_to_8,contract_mismatch_gap_to_8,paired_4_ready,paired_8_ready,controlled_pool_constructed,development_run_completed,mixed_realistic_opening_ready,controlled_dose_opening_ready
+A001,10,5,True,False,0,1,4,3,8,7,False,False,False,False,False,False
+A002,7,7,True,False,3,1,1,3,5,7,False,False,False,False,False,False
+A003,12,6,True,True,8,8,0,0,0,0,True,True,True,True,True,True
+A004,8,4,True,False,3,3,1,1,5,5,False,False,False,False,False,False
+B019,8,4,True,False,4,0,0,4,4,8,False,False,False,False,False,False

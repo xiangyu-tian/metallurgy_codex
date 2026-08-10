@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF05-E3-MULTITARGET-READINESS-V1-20260810",
+  "target_tool_ids": [
+    "A001",
+    "A002",
+    "A003",
+    "A004",
+    "B019"
+  ],
+  "completed_development_target_ids": [
+    "A003"
+  ],
+  "task_gold_revalidated_target_ids": [
+    "A003"
+  ],
+  "controlled_pool_constructed_target_ids": [
+    "A003"
+  ],
+  "minimum_development_tasks_per_target": 2,
+  "near_neighbor_doses": [
+    0,
+    4,
+    8
+  ],
+  "expansion_priority_policy": "fewest_total_slots_to_paired4_then_higher_existing_lexical_count_then_target_id",
+  "confirmatory_use_allowed": false,
+  "external_api_calls_authorized": false,
+  "core_frozen": false,
+  "bindings": {
+    "development_taskset": {
+      "path": "outputs/e1b_benefit_taskset_v2_20260730/e1b_benefit_tasks_v2.json",
+      "sha256": "81d90e7f9cb638ff18614a6f49d09fafc391bbe304c9917674beab307cef43c8"
+    },
+    "current_gap_matrix": {
+      "path": "outputs/v11_cf05_e3_candidate_admission_batch3_v1_20260809/recalculated_gap_matrix.json",
+      "sha256": "4f2d886a229a6e843fbfa6dc9cd73591888686c0efe2010a5537af78249ed165"
+    },
+    "relation_evidence_registry": {
+      "path": "outputs/v11_cf05_e3_candidate_admission_batch3_v1_20260809/combined_relation_evidence_registry.json",
+      "sha256": "feacc1e8db0b93d2f0e6a2ae406dc66d41f88a0f153d049c7e192c7d728c469b"
+    },
+    "a003_task_gold_report": {
+      "path": "outputs/v11_cf05_e3_a003_task_gold_revalidation_v1_20260809/a003_task_gold_revalidation_report.json",
+      "sha256": "b401e782fd081f825151b4073f7863509c614ed94c635cd84de40b7423d97df6"
+    },
+    "a003_pool_report": {
+      "path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_pool_construction_report.json",
+      "sha256": "045efcf1673ec48e6ef37b1904b9c0a2c95bae80319bd038b2bd167f584d95e5"
+    },
+    "a003_development_analysis": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_r1_analysis_20260810/a003_routing_development_analysis_report.json",
+      "sha256": "39e1421df2038e18e5966ad6bb028df98fd88157e89dbe79024bf133de861472"
+    }
+  }
+}
