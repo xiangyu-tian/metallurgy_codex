@@ -52,6 +52,12 @@ def validate_binding(binding: dict[str, str]) -> Path:
 
 
 def validate_config(config: dict[str, Any]) -> None:
+    if config["provider"] != "deepseek" or config["model"] != "deepseek-v4-flash":
+        raise ValueError("provider or model changed")
+    if config["openai_base_url"] != "https://api.deepseek.com":
+        raise ValueError("OpenAI-compatible endpoint changed")
+    if config["provider_max_attempts"] != 1 or config["timeout_seconds"] != 120:
+        raise ValueError("transport attempt or timeout policy changed")
     if config["methods"] != [
         "full_schema",
         "lexical_top5",
