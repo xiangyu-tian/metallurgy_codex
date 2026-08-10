@@ -87,7 +87,7 @@ def payload_for(
         "temperature": config["temperature"],
         "max_tokens": config["max_tokens"],
         "stream": False,
-        "thinking": config["thinking"],
+        "thinking": {"type": config["thinking"]},
     }
 
 

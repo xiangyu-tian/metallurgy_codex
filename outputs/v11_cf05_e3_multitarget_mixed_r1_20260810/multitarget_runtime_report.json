@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "run_id": "V11-CF05-E3-MULTITARGET-MIXED-R1-20260810",
+  "opening_id": "V11-CF05-E3-MULTITARGET-MIXED-OPENING-V1-20260810",
+  "run_status": "development_run_complete_with_transport_failures",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "scheduled_request_count": 64,
+  "external_api_calls": 64,
+  "transport_accepted_count": 0,
+  "exactly_one_tool_call_count": 0,
+  "plain_text_or_non_single_call_count": 64,
+  "provider_error_count": 64,
+  "tool_calls_executed": 0,
+  "retries_executed": 0,
+  "independent_validation_split_accessed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-MULTITARGET-MIXED-R1-FAILURE-ANALYSIS-20260810",
+  "artifact_count": 1,
+  "artifacts": [
+    {
+      "filename": "offline_scoring_status.json",
+      "sha256": "887b4d0aaa43a261015b9d62faa5d7156551a4c23f9f14eba4e9c6a89d1dd2c7",
+      "bytes": 3010
+    }
+  ],
+  "documentation": {
+    "path": "docs/experiments/v11_cf05_e3_multitarget_mixed_r1_failure_20260810.md",
+    "sha256": "30a936d1917435550d8cdb2b069f0ceafb7bccd0388bd2a242ce79e4600c1eb6"
+  }
+}

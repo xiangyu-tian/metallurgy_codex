@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-MULTITARGET-MIXED-R1-FAILURE-ANALYSIS-20260810",
+  "run_id": "V11-CF05-E3-MULTITARGET-MIXED-R1-20260810",
+  "generated_at": "2026-08-10T19:01:25.4500046+08:00",
+  "analysis_status": "not_scoreable_transport_contract_failure",
+  "development_only": true,
+  "confirmatory_inference_allowed": false,
+  "bound_execution_artifacts": {
+    "request_results": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_r1_20260810/multitarget_request_results.json",
+      "sha256": "491610c2fe564e7adf3dbc4eddaa90d8d9d91cac8119e269623e8036dd00a919"
+    },
+    "runtime_report": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_r1_20260810/multitarget_runtime_report.json",
+      "sha256": "ef18886f175ea9feccdf258054926244c602684f8ae896fa46f2707bb8a5715d"
+    },
+    "execution_manifest": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_r1_20260810/artifact_manifest.json",
+      "sha256": "4332cd18373767f12b10e42b858c8755f338612d977566b715f9084f52e94c05"
+    }
+  },
+  "execution_summary": {
+    "scheduled_cells": 64,
+    "external_http_attempts": 64,
+    "provider_attempts_per_cell": 1,
+    "transport_accepted": 0,
+    "provider_rejected": 64,
+    "model_responses": 0,
+    "tool_calls_executed": 0,
+    "retries_executed": 0,
+    "independent_validation_split_accessed": false
+  },
+  "failure_signature": {
+    "http_status": 400,
+    "count": 64,
+    "message_prefix": "Failed to deserialize the JSON body into the target type: thinking: invalid type: string disabled, expected struct ThinkingOptions",
+    "failure_boundary": "provider_request_deserialization_before_model_inference"
+  },
+  "root_cause": {
+    "bad_wire_value": "thinking = disabled (string)",
+    "required_wire_shape": "thinking = {type: disabled} (object)",
+    "source": "run_e3_multitarget_mixed_development.payload_for",
+    "why_unit_test_missed_it": "the fake transport accepted any JSON shape and the original payload contract test did not assert the provider-specific thinking object",
+    "independent_confirmation": [
+      "DeepSeek HTTP 400 returned the expected object type for every request",
+      "the repository's working DeepSeekOpenAIAdapter.complete method emits an object",
+      "DeepSeek's official Chat Completion documentation defines thinking as an object"
+    ]
+  },
+  "offline_scoring": {
+    "eligible_cell_count": 0,
+    "excluded_cell_count": 64,
+    "selection_accuracy": null,
+    "argument_accuracy": null,
+    "method_comparisons": null,
+    "scale_effects": null,
+    "interpretation": "No routing or parameter conclusion may be drawn because no request reached model inference."
+  },
+  "disposition": {
+    "r1_is_immutable_failure_evidence": true,
+    "r1_cells_must_not_be_retried_under_r1_authorization": true,
+    "wire_contract_fix_tested_locally": true,
+    "new_execution_authorization_required": true,
+    "next_run_id": "V11-CF05-E3-MULTITARGET-MIXED-R2-20260810"
+  },
+  "cf05_status": "in_progress",
+  "core_frozen": false
+}

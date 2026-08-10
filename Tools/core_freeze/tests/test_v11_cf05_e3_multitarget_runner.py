@@ -143,6 +143,7 @@ class V11Cf05E3MultitargetRunnerTests(unittest.TestCase):
                 [tool["function"]["name"] for tool in payload["tools"]],
                 view["ordered_candidate_tool_ids"],
             )
+            self.assertEqual(payload["thinking"], {"type": self.config["thinking"]})
             self.assertNotIn("expected_tool", runner.canonical_json(payload))
             self.assertNotIn("acceptable_tools", runner.canonical_json(payload))
 
