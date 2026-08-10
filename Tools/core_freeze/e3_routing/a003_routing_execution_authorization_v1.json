@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "opening_id": "V11-CF05-E3-A003-ROUTING-EXECUTION-OPENING-V1-20260809",
-  "decision": "pending_explicit_scope_confirmation",
+  "decision": "authorized_to_execute_a003_routing_development",
   "provider": "deepseek",
   "endpoint": "https://api.deepseek.com",
   "model": "deepseek-v4-flash",
@@ -12,21 +12,21 @@
   "schema_views_sha256": "85fcb1673253d5f892d6d3e8645a81f43bc3fac07f827d08d3dcd279435416c7",
   "runner_sha256": "a9fd7f530c0b085c76b1c0b1ca47640cf14d66106027c2126b69af84187e8548",
   "runner_git_commit": "8ffa291842ecfe35eaef373042f1aa66c7e6c9d6",
-  "external_data_sharing_authorized": false,
-  "external_api_execution_authorized": false,
+  "external_data_sharing_authorized": true,
+  "external_api_execution_authorized": true,
   "tool_execution_authorized": false,
   "provider_retry_authorized": false,
   "independent_validation_split_access_authorized": false,
   "confirmatory_inference_allowed": false,
   "core_frozen": false,
-  "proposed_scope": {
+  "authorized_scope": {
     "task_text_count": 2,
     "schema_view_count": 45,
     "request_count": 96,
     "purpose": "A003 four-method non-confirmatory selector development run",
     "metallurgy_tool_execution": false
   },
-  "authorization_requested_from": "xiangyu",
-  "authorization_request_prepared_at": "2026-08-10T12:27:39.6125362+08:00",
-  "authorization_basis": "Pending an explicit user statement that names the DeepSeek endpoint, the 96-request count, the two A003 development task texts, the 45 frozen schema views, and the prohibitions on metallurgy-tool execution and independent-validation access."
+  "authorized_by": "xiangyu",
+  "authorized_at": "2026-08-10T12:32:33.0900703+08:00",
+  "authorization_basis": "User explicitly authorized sending 2 A003 development task texts and 45 frozen schema views as 96 one-attempt requests to https://api.deepseek.com with deepseek-v4-flash for a non-confirmatory tool-selection development experiment, with no metallurgy-tool execution, no independent-validation access, and per-response retention for offline scoring."
 }
