@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "run_id": "V11-CF05-E3-MULTITARGET-MIXED-R1-20260810",
+  "opening_id": "V11-CF05-E3-MULTITARGET-MIXED-OPENING-V1-20260810",
+  "decision": "authorized_to_execute_multitarget_mixed_development",
+  "provider": "deepseek",
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "scheduled_request_count": 64,
+  "opening_manifest_sha256": "0b27fff6f21ce0b1414708b54897ffdffa1ca9c23458b78ee89e7814df7c43c0",
+  "runtime_config_sha256": "b93b44c2ada9ae0b0f184a8806f3126356f4cfc78924012a62acca013ce18966",
+  "runner_sha256": "e47f8cd0b8dd870140da9662895a79010e6d6c5c5ce5a0d2217cfd8e38b34506",
+  "runner_git_commit": "71fccccfa52919c9d33cb47f81524fcff50ae94d",
+  "external_data_sharing_authorized": true,
+  "external_api_execution_authorized": true,
+  "tool_execution_authorized": false,
+  "provider_retry_authorized": false,
+  "independent_validation_split_access_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "authorized_scope": {
+    "frozen_development_task_count": 8,
+    "tool_pool_sizes": [
+      17,
+      120
+    ],
+    "pool_design": "mixed_realistic",
+    "methods": [
+      "full_schema",
+      "lexical_top5",
+      "dense_top5",
+      "hierarchical"
+    ],
+    "candidate_view_count": 50,
+    "request_count": 64,
+    "provider_attempts_per_cell": 1,
+    "metallurgy_tool_execution": false,
+    "independent_validation_split_access": false,
+    "purpose": "non-confirmatory offline-scored routing development"
+  },
+  "authorized_by": "xiangyu-tian",
+  "authorized_at": "2026-08-10T18:58:56.5060470+08:00",
+  "authorization_basis": "同意将8条冻结开发任务、17/120现实混合工具Schema及三种Top-5候选视图，以64个一次性请求发送至DeepSeek，使用deepseek-v4-flash；每个单元只尝试一次，不执行冶金工具，不访问独立验证集，并保存逐条响应用于离线评分"
+}
