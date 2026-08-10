@@ -1,0 +1,26 @@
+[
+  {
+    "tool_pool_size": 17,
+    "cell_count": 72,
+    "transport_acceptance_rate": 1,
+    "single_tool_call_rate": 1,
+    "target_tool_selection_accuracy": 1,
+    "parameter_accuracy": 1,
+    "complete_call_accuracy": 1,
+    "mean_api_latency_ms": 1070.2884111111111,
+    "mean_prompt_tokens": 1541.5,
+    "mean_completion_tokens": 58
+  },
+  {
+    "tool_pool_size": 120,
+    "cell_count": 72,
+    "transport_acceptance_rate": 1,
+    "single_tool_call_rate": 0.9583333333333334,
+    "target_tool_selection_accuracy": 0.9583333333333334,
+    "parameter_accuracy": 0.9583333333333334,
+    "complete_call_accuracy": 0.9583333333333334,
+    "mean_api_latency_ms": 1219.7031625,
+    "mean_prompt_tokens": 6034.583333333333,
+    "mean_completion_tokens": 69.54166666666667
+  }
+]

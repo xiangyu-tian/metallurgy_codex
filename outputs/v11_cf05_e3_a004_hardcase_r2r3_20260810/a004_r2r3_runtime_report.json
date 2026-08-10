@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "run_id": "V11-CF05-E3-A004-HARDCASE-R2R3-20260810",
+  "opening_id": "V11-CF05-E3-A004-HARDCASE-R2R3-OPENING-V1-20260810",
+  "run_status": "development_repeats_complete_pending_offline_volatility_analysis",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "scheduled_request_count": 96,
+  "external_api_calls": 96,
+  "transport_accepted_count": 96,
+  "exactly_one_tool_call_count": 94,
+  "non_single_tool_call_count": 2,
+  "provider_error_count": 0,
+  "by_repeat": [
+    {
+      "model_run_repeat": 2,
+      "request_count": 48,
+      "transport_accepted_count": 48,
+      "exactly_one_tool_call_count": 47,
+      "provider_error_count": 0
+    },
+    {
+      "model_run_repeat": 3,
+      "request_count": 48,
+      "transport_accepted_count": 48,
+      "exactly_one_tool_call_count": 47,
+      "provider_error_count": 0
+    }
+  ],
+  "tool_calls_executed": 0,
+  "retries_executed": 0,
+  "independent_validation_split_accessed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false
+}

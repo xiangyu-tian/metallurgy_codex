@@ -1,0 +1,29 @@
+{
+  "r1_failure_cell_id": "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-DENSE_TOP5-R1",
+  "r2_failure_recurred": true,
+  "r3_failure_recurred": true,
+  "classification": "stable_failure",
+  "tool_call_count_by_repeat": [
+    3,
+    3,
+    3
+  ],
+  "called_tool_ids_by_repeat": [
+    [
+      "A004",
+      "E3C005",
+      "E3C027"
+    ],
+    [
+      "A004",
+      "E3C005",
+      "E3C027"
+    ],
+    [
+      "A004",
+      "E3C005",
+      "E3C027"
+    ]
+  ],
+  "exact_same_called_tool_sequence_all_repeats": true
+}

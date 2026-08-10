@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A004-HARDCASE-R1R2R3-VOLATILITY-20260810",
+  "artifact_count": 12,
+  "artifacts": [
+    {
+      "filename": "a004_all_three_repeat_scored_rows.json",
+      "sha256": "8c043c5bcd156e5f5ea09b3f68139a49561889ae25763c5af1cc55749b87a5a2",
+      "bytes": 215771
+    },
+    {
+      "filename": "a004_by_condition_method_size_three_repeats.json",
+      "sha256": "b50c4bdd9e56ed7de6fc08280c0bbaca9b2b86dddcef443c599e08d70be32e10",
+      "bytes": 9996
+    },
+    {
+      "filename": "a004_by_condition_three_repeats.json",
+      "sha256": "b4abffaa62d9c268432db5c2943634ee9d59891cb730d126f1f8d18aae64517d",
+      "bytes": 1149
+    },
+    {
+      "filename": "a004_by_method_three_repeats.json",
+      "sha256": "687314f4f2876fcccdf6e3c3cfcc6c7701692fae73d33280319fa6370a4663b1",
+      "bytes": 1565
+    },
+    {
+      "filename": "a004_by_repeat.json",
+      "sha256": "d6ba9a76c63c821f73f89f95c63e00a8d01f885144598ef101653801f256f97c",
+      "bytes": 1334
+    },
+    {
+      "filename": "a004_by_size_three_repeats.json",
+      "sha256": "73d7d43dfefc9bee1720292339083f9e8c13ef9ecc461d5702e0d3d8db94e948",
+      "bytes": 802
+    },
+    {
+      "filename": "a004_pairing_summary.json",
+      "sha256": "e02ba99ee050abc6b7b4bd41f41184e59396e805e18c30ba24c969eae841be1e",
+      "bytes": 213
+    },
+    {
+      "filename": "a004_per_pair_repeat_outcomes.json",
+      "sha256": "f6ff4fea7027c5a7027a67942912916aa22445fb10c24e93eaf4d1011476395a",
+      "bytes": 54544
+    },
+    {
+      "filename": "a004_r1_failure_recurrence.json",
+      "sha256": "c10e819900d999b6e49506596896ec96fad34946e33e87032363a8312beda20c",
+      "bytes": 545
+    },
+    {
+      "filename": "a004_r2r3_scored_rows.json",
+      "sha256": "646981055b32fa7404be9d2fc2dcf35ee846f483a5df04134cd4edaafa482292",
+      "bytes": 143874
+    },
+    {
+      "filename": "a004_three_repeat_overall_report.json",
+      "sha256": "18b976a97a7f57c9d140b2f2cbb2c438a670a00bf4989b4b311e29634872ae59",
+      "bytes": 1897
+    },
+    {
+      "filename": "a004_volatility_analysis_config_snapshot.json",
+      "sha256": "d74f5fdb9319234e94c8edc0b0b663c9d879cf5aa5f40011269b34bdf1f2287d",
+      "bytes": 2523
+    }
+  ]
+}

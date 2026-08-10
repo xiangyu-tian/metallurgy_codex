@@ -1,0 +1,8 @@
+{
+  "pairing_unit_count": 48,
+  "stable_correct_count": 47,
+  "intermittent_count": 0,
+  "stable_failure_count": 1,
+  "exact_three_repeat_agreement_count": 48,
+  "exact_three_repeat_agreement_rate": 1.0
+}

@@ -1,0 +1,1931 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-NONE_0-17-FULL_SCHEMA",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-NONE_0-17-FULL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-NONE_0-17-FULL_SCHEMA-R1",
+        "A004-HARD-E1B2-A004-007-NONE_0-17-FULL_SCHEMA-R2",
+        "A004-HARD-E1B2-A004-007-NONE_0-17-FULL_SCHEMA-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-NONE_0-17-LEXICAL_TOP5",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-007-17-LEXICAL_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-NONE_0-17-LEXICAL_TOP5-R1",
+        "A004-HARD-E1B2-A004-007-NONE_0-17-LEXICAL_TOP5-R2",
+        "A004-HARD-E1B2-A004-007-NONE_0-17-LEXICAL_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-NONE_0-17-DENSE_TOP5",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-007-17-DENSE_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-NONE_0-17-DENSE_TOP5-R1",
+        "A004-HARD-E1B2-A004-007-NONE_0-17-DENSE_TOP5-R2",
+        "A004-HARD-E1B2-A004-007-NONE_0-17-DENSE_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-NONE_0-17-HIERARCHICAL",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-007-17-HIERARCHICAL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-NONE_0-17-HIERARCHICAL-R1",
+        "A004-HARD-E1B2-A004-007-NONE_0-17-HIERARCHICAL-R2",
+        "A004-HARD-E1B2-A004-007-NONE_0-17-HIERARCHICAL-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-NONE_0-120-FULL_SCHEMA",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-NONE_0-120-FULL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-NONE_0-120-FULL_SCHEMA-R1",
+        "A004-HARD-E1B2-A004-007-NONE_0-120-FULL_SCHEMA-R2",
+        "A004-HARD-E1B2-A004-007-NONE_0-120-FULL_SCHEMA-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-NONE_0-120-LEXICAL_TOP5",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-007-120-LEXICAL_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-NONE_0-120-LEXICAL_TOP5-R1",
+        "A004-HARD-E1B2-A004-007-NONE_0-120-LEXICAL_TOP5-R2",
+        "A004-HARD-E1B2-A004-007-NONE_0-120-LEXICAL_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-NONE_0-120-DENSE_TOP5",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-007-120-DENSE_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-NONE_0-120-DENSE_TOP5-R1",
+        "A004-HARD-E1B2-A004-007-NONE_0-120-DENSE_TOP5-R2",
+        "A004-HARD-E1B2-A004-007-NONE_0-120-DENSE_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-NONE_0-120-HIERARCHICAL",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-007-120-HIERARCHICAL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-NONE_0-120-HIERARCHICAL-R1",
+        "A004-HARD-E1B2-A004-007-NONE_0-120-HIERARCHICAL-R2",
+        "A004-HARD-E1B2-A004-007-NONE_0-120-HIERARCHICAL-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-LEXICAL_4-17-FULL_SCHEMA",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-17-FULL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-17-FULL_SCHEMA-R1",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-17-FULL_SCHEMA-R2",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-17-FULL_SCHEMA-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-LEXICAL_4-17-LEXICAL_TOP5",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-007-17-LEXICAL_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-17-LEXICAL_TOP5-R1",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-17-LEXICAL_TOP5-R2",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-17-LEXICAL_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-LEXICAL_4-17-DENSE_TOP5",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-007-17-DENSE_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-17-DENSE_TOP5-R1",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-17-DENSE_TOP5-R2",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-17-DENSE_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-LEXICAL_4-17-HIERARCHICAL",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-007-17-HIERARCHICAL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-17-HIERARCHICAL-R1",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-17-HIERARCHICAL-R2",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-17-HIERARCHICAL-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-LEXICAL_4-120-FULL_SCHEMA",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-120-FULL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-120-FULL_SCHEMA-R1",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-120-FULL_SCHEMA-R2",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-120-FULL_SCHEMA-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-LEXICAL_4-120-LEXICAL_TOP5",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-007-120-LEXICAL_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-120-LEXICAL_TOP5-R1",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-120-LEXICAL_TOP5-R2",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-120-LEXICAL_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-LEXICAL_4-120-DENSE_TOP5",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-007-120-DENSE_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-120-DENSE_TOP5-R1",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-120-DENSE_TOP5-R2",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-120-DENSE_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-LEXICAL_4-120-HIERARCHICAL",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-007-120-HIERARCHICAL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-120-HIERARCHICAL-R1",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-120-HIERARCHICAL-R2",
+        "A004-HARD-E1B2-A004-007-LEXICAL_4-120-HIERARCHICAL-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-FULL_SCHEMA",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-17-FULL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-FULL_SCHEMA-R1",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-FULL_SCHEMA-R2",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-FULL_SCHEMA-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-LEXICAL_TOP5",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-007-17-LEXICAL_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-LEXICAL_TOP5-R1",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-LEXICAL_TOP5-R2",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-LEXICAL_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-DENSE_TOP5",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-007-17-DENSE_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-DENSE_TOP5-R1",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-DENSE_TOP5-R2",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-DENSE_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-HIERARCHICAL",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-007-17-HIERARCHICAL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-HIERARCHICAL-R1",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-HIERARCHICAL-R2",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-HIERARCHICAL-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-FULL_SCHEMA",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-120-FULL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-FULL_SCHEMA-R1",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-FULL_SCHEMA-R2",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-FULL_SCHEMA-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-LEXICAL_TOP5",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-007-120-LEXICAL_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-LEXICAL_TOP5-R1",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-LEXICAL_TOP5-R2",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-LEXICAL_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-DENSE_TOP5",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-007-120-DENSE_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-DENSE_TOP5-R1",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-DENSE_TOP5-R2",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-DENSE_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-HIERARCHICAL",
+      "task_id": "E1B2-A004-007",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-007-120-HIERARCHICAL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-HIERARCHICAL-R1",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-HIERARCHICAL-R2",
+        "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-HIERARCHICAL-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-NONE_0-17-FULL_SCHEMA",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-NONE_0-17-FULL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-NONE_0-17-FULL_SCHEMA-R1",
+        "A004-HARD-E1B2-A004-008-NONE_0-17-FULL_SCHEMA-R2",
+        "A004-HARD-E1B2-A004-008-NONE_0-17-FULL_SCHEMA-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-NONE_0-17-LEXICAL_TOP5",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-008-17-LEXICAL_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-NONE_0-17-LEXICAL_TOP5-R1",
+        "A004-HARD-E1B2-A004-008-NONE_0-17-LEXICAL_TOP5-R2",
+        "A004-HARD-E1B2-A004-008-NONE_0-17-LEXICAL_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-NONE_0-17-DENSE_TOP5",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-008-17-DENSE_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-NONE_0-17-DENSE_TOP5-R1",
+        "A004-HARD-E1B2-A004-008-NONE_0-17-DENSE_TOP5-R2",
+        "A004-HARD-E1B2-A004-008-NONE_0-17-DENSE_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-NONE_0-17-HIERARCHICAL",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-008-17-HIERARCHICAL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-NONE_0-17-HIERARCHICAL-R1",
+        "A004-HARD-E1B2-A004-008-NONE_0-17-HIERARCHICAL-R2",
+        "A004-HARD-E1B2-A004-008-NONE_0-17-HIERARCHICAL-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-NONE_0-120-FULL_SCHEMA",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-NONE_0-120-FULL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-NONE_0-120-FULL_SCHEMA-R1",
+        "A004-HARD-E1B2-A004-008-NONE_0-120-FULL_SCHEMA-R2",
+        "A004-HARD-E1B2-A004-008-NONE_0-120-FULL_SCHEMA-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-NONE_0-120-LEXICAL_TOP5",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-008-120-LEXICAL_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-NONE_0-120-LEXICAL_TOP5-R1",
+        "A004-HARD-E1B2-A004-008-NONE_0-120-LEXICAL_TOP5-R2",
+        "A004-HARD-E1B2-A004-008-NONE_0-120-LEXICAL_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-NONE_0-120-DENSE_TOP5",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-008-120-DENSE_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-NONE_0-120-DENSE_TOP5-R1",
+        "A004-HARD-E1B2-A004-008-NONE_0-120-DENSE_TOP5-R2",
+        "A004-HARD-E1B2-A004-008-NONE_0-120-DENSE_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-NONE_0-120-HIERARCHICAL",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-008-120-HIERARCHICAL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-NONE_0-120-HIERARCHICAL-R1",
+        "A004-HARD-E1B2-A004-008-NONE_0-120-HIERARCHICAL-R2",
+        "A004-HARD-E1B2-A004-008-NONE_0-120-HIERARCHICAL-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-LEXICAL_4-17-FULL_SCHEMA",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-17-FULL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-17-FULL_SCHEMA-R1",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-17-FULL_SCHEMA-R2",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-17-FULL_SCHEMA-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-LEXICAL_4-17-LEXICAL_TOP5",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-008-17-LEXICAL_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-17-LEXICAL_TOP5-R1",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-17-LEXICAL_TOP5-R2",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-17-LEXICAL_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-LEXICAL_4-17-DENSE_TOP5",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-008-17-DENSE_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-17-DENSE_TOP5-R1",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-17-DENSE_TOP5-R2",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-17-DENSE_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-LEXICAL_4-17-HIERARCHICAL",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-008-17-HIERARCHICAL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-17-HIERARCHICAL-R1",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-17-HIERARCHICAL-R2",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-17-HIERARCHICAL-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-LEXICAL_4-120-FULL_SCHEMA",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-120-FULL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-120-FULL_SCHEMA-R1",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-120-FULL_SCHEMA-R2",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-120-FULL_SCHEMA-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-LEXICAL_4-120-LEXICAL_TOP5",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-008-120-LEXICAL_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-120-LEXICAL_TOP5-R1",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-120-LEXICAL_TOP5-R2",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-120-LEXICAL_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-LEXICAL_4-120-DENSE_TOP5",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-008-120-DENSE_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-120-DENSE_TOP5-R1",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-120-DENSE_TOP5-R2",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-120-DENSE_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-LEXICAL_4-120-HIERARCHICAL",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-008-120-HIERARCHICAL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-120-HIERARCHICAL-R1",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-120-HIERARCHICAL-R2",
+        "A004-HARD-E1B2-A004-008-LEXICAL_4-120-HIERARCHICAL-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-FULL_SCHEMA",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-17-FULL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-FULL_SCHEMA-R1",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-FULL_SCHEMA-R2",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-FULL_SCHEMA-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-LEXICAL_TOP5",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-17-LEXICAL_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-LEXICAL_TOP5-R1",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-LEXICAL_TOP5-R2",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-LEXICAL_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-DENSE_TOP5",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-17-DENSE_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-DENSE_TOP5-R1",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-DENSE_TOP5-R2",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-DENSE_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-HIERARCHICAL",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-17-HIERARCHICAL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-HIERARCHICAL-R1",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-HIERARCHICAL-R2",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-HIERARCHICAL-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-FULL_SCHEMA",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-120-FULL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-FULL_SCHEMA-R1",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-FULL_SCHEMA-R2",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-FULL_SCHEMA-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-LEXICAL_TOP5",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-120-LEXICAL_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-LEXICAL_TOP5-R1",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-LEXICAL_TOP5-R2",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-LEXICAL_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-DENSE_TOP5",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-120-DENSE_TOP5",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-DENSE_TOP5-R1",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-DENSE_TOP5-R2",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-DENSE_TOP5-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        false,
+        false,
+        false
+      ],
+      "complete_call_correct_count": 0,
+      "failure_frequency": 1.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_failure",
+      "tool_call_count_by_repeat": [
+        3,
+        3,
+        3
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004",
+          "E3C005",
+          "E3C027"
+        ],
+        [
+          "A004",
+          "E3C005",
+          "E3C027"
+        ],
+        [
+          "A004",
+          "E3C005",
+          "E3C027"
+        ]
+      ]
+    },
+    {
+      "pairing_unit_id": "PAIR-A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-HIERARCHICAL",
+      "task_id": "E1B2-A004-008",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-120-HIERARCHICAL",
+      "cell_ids": [
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-HIERARCHICAL-R1",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-HIERARCHICAL-R2",
+        "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-HIERARCHICAL-R3"
+      ],
+      "complete_call_correct_by_repeat": [
+        true,
+        true,
+        true
+      ],
+      "complete_call_correct_count": 3,
+      "failure_frequency": 0.0,
+      "exact_three_repeat_agreement": true,
+      "classification": "stable_correct",
+      "tool_call_count_by_repeat": [
+        1,
+        1,
+        1
+      ],
+      "called_tool_ids_by_repeat": [
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ],
+        [
+          "A004"
+        ]
+      ]
+    }
+  ]
+}

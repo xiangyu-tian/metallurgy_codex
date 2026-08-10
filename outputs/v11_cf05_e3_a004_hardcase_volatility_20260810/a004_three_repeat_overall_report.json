@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A004-HARDCASE-R1R2R3-VOLATILITY-20260810",
+  "analysis_status": "three_repeat_development_volatility_analysis_complete",
+  "all_repeat_cell_count": 144,
+  "overall": {
+    "cell_count": 144,
+    "transport_acceptance_rate": 1,
+    "single_tool_call_rate": 0.9791666666666666,
+    "target_tool_selection_accuracy": 0.9791666666666666,
+    "parameter_accuracy": 0.9791666666666666,
+    "complete_call_accuracy": 0.9791666666666666,
+    "mean_api_latency_ms": 1144.9957868055556,
+    "mean_prompt_tokens": 3788.0416666666665,
+    "mean_completion_tokens": 63.770833333333336
+  },
+  "pairing_summary": {
+    "pairing_unit_count": 48,
+    "stable_correct_count": 47,
+    "intermittent_count": 0,
+    "stable_failure_count": 1,
+    "exact_three_repeat_agreement_count": 48,
+    "exact_three_repeat_agreement_rate": 1.0
+  },
+  "r1_failure_recurrence": {
+    "r1_failure_cell_id": "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-DENSE_TOP5-R1",
+    "r2_failure_recurred": true,
+    "r3_failure_recurred": true,
+    "classification": "stable_failure",
+    "tool_call_count_by_repeat": [
+      3,
+      3,
+      3
+    ],
+    "called_tool_ids_by_repeat": [
+      [
+        "A004",
+        "E3C005",
+        "E3C027"
+      ],
+      [
+        "A004",
+        "E3C005",
+        "E3C027"
+      ],
+      [
+        "A004",
+        "E3C005",
+        "E3C027"
+      ]
+    ],
+    "exact_same_called_tool_sequence_all_repeats": true
+  },
+  "tool_calls_executed": 0,
+  "retries_executed": 0,
+  "independent_validation_split_accessed": false,
+  "significance_testing_performed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "interpretation": "development evidence of a reproducible local failure; not a confirmatory H3 or H4 result"
+}

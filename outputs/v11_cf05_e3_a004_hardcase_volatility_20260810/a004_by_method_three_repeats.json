@@ -1,0 +1,50 @@
+[
+  {
+    "method": "dense_top5",
+    "cell_count": 36,
+    "transport_acceptance_rate": 1,
+    "single_tool_call_rate": 0.9166666666666666,
+    "target_tool_selection_accuracy": 0.9166666666666666,
+    "parameter_accuracy": 0.9166666666666666,
+    "complete_call_accuracy": 0.9166666666666666,
+    "mean_api_latency_ms": 1177.7930055555555,
+    "mean_prompt_tokens": 1075.8333333333333,
+    "mean_completion_tokens": 67.75
+  },
+  {
+    "method": "full_schema",
+    "cell_count": 36,
+    "transport_acceptance_rate": 1,
+    "single_tool_call_rate": 1,
+    "target_tool_selection_accuracy": 1,
+    "parameter_accuracy": 1,
+    "complete_call_accuracy": 1,
+    "mean_api_latency_ms": 1123.411975,
+    "mean_prompt_tokens": 11833.5,
+    "mean_completion_tokens": 58.52777777777778
+  },
+  {
+    "method": "hierarchical",
+    "cell_count": 36,
+    "transport_acceptance_rate": 1,
+    "single_tool_call_rate": 1,
+    "target_tool_selection_accuracy": 1,
+    "parameter_accuracy": 1,
+    "complete_call_accuracy": 1,
+    "mean_api_latency_ms": 1153.561611111111,
+    "mean_prompt_tokens": 1116,
+    "mean_completion_tokens": 64.22222222222223
+  },
+  {
+    "method": "lexical_top5",
+    "cell_count": 36,
+    "transport_acceptance_rate": 1,
+    "single_tool_call_rate": 1,
+    "target_tool_selection_accuracy": 1,
+    "parameter_accuracy": 1,
+    "complete_call_accuracy": 1,
+    "mean_api_latency_ms": 1125.2165555555555,
+    "mean_prompt_tokens": 1126.8333333333333,
+    "mean_completion_tokens": 64.58333333333333
+  }
+]

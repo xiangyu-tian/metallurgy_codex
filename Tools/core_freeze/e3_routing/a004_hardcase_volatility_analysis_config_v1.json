@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A004-HARDCASE-R1R2R3-VOLATILITY-20260810",
+  "repeat_run_id": "V11-CF05-E3-A004-HARDCASE-R2R3-20260810",
+  "expected_pairing_unit_count": 48,
+  "expected_repeat_result_count": 96,
+  "expected_all_result_count": 144,
+  "model_run_repeats": [1, 2, 3],
+  "development_only": true,
+  "significance_testing_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "r1_request_results": {"path": "outputs/v11_cf05_e3_a004_hardcase_r1_20260810/a004_request_results.json", "sha256": "cae6c6c97c087e58de221248168e606a5a1f43385d64fe0245482ea370287e43"},
+    "r1_scored_rows": {"path": "outputs/v11_cf05_e3_a004_hardcase_r1_analysis_20260810/a004_scored_rows.json", "sha256": "9062562817b881911f93543e3fda11f2f622f9a12721a83202a32dc5ea0d9c3d"},
+    "repeat_request_results": {"path": "outputs/v11_cf05_e3_a004_hardcase_r2r3_20260810/a004_r2r3_request_results.json", "sha256": "11ff70073edc86e25258c008cee42cce89c93334a8482142165be56933fc9677"},
+    "repeat_runtime_report": {"path": "outputs/v11_cf05_e3_a004_hardcase_r2r3_20260810/a004_r2r3_runtime_report.json", "sha256": "f1a5bb5199c2967e5d81a3bb5cc8e5ecf67ba5094accb9807c066aeba533e340"},
+    "repeat_runtime_manifest": {"path": "outputs/v11_cf05_e3_a004_hardcase_r2r3_20260810/artifact_manifest.json", "sha256": "f64b6b489f95ade0c807fab18b2150de6f2a434fb556341fd088ecc75dbc197c"},
+    "scoring_registry": {"path": "outputs/v11_cf05_e3_a004_hardcase_r2r3_opening_v1_20260810/a004_repeats_scoring_registry_snapshot.json", "sha256": "20ab4c7aee50109123656ad2e1d767a3e5f10263b2cd5c1348df808c6bed08c6"},
+    "candidate_views": {"path": "outputs/v11_cf05_e3_a004_hardcase_r2r3_opening_v1_20260810/a004_repeats_candidate_views_snapshot.json", "sha256": "80172518e2b59b021e6376dbb18b2488ff1cdbd745353e00bd44f292c58cc37b"},
+    "pairing_plan": {"path": "outputs/v11_cf05_e3_a004_hardcase_r2r3_opening_v1_20260810/a004_three_repeat_pairing_plan.json", "sha256": "76fb8bc01837a5c421baeca0542b9b078968e4acb025a98aa21ddeb6aa34a881"},
+    "volatility_contract": {"path": "outputs/v11_cf05_e3_a004_hardcase_r2r3_opening_v1_20260810/a004_repeat_volatility_contract.json", "sha256": "6feb3d146baff63431ae5db79d805cd094ffcbdea52c4c8652f76c40f488e9a1"}
+  }
+}
