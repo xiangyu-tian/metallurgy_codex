@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "V11-CF05-E3-A004-STRUCTURE-CONTRACT-GATE-V1-20260810",
+  "development_only": true,
+  "gold_access_allowed_during_decision": false,
+  "tool_execution_allowed": false,
+  "external_api_calls_authorized": false,
+  "automatic_retry_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "structure_policy": {
+    "required_tool_call_count": 1,
+    "zero_calls_action": "block_no_call",
+    "multiple_calls_action": "block_then_contract_adjudication",
+    "unresolved_action": "review_required"
+  },
+  "semantic_contract_annotations": {
+    "A004": {
+      "normalization_kind": "unit_sum",
+      "label_domain": "generic_nonnegative_components",
+      "returns_full_mapping": true,
+      "execution_eligible": true
+    },
+    "E3C005": {
+      "normalization_kind": "unit_sum",
+      "label_domain": "chemical_elements_or_species",
+      "returns_full_mapping": true,
+      "execution_eligible": false
+    },
+    "E3C027": {
+      "normalization_kind": "l2_norm",
+      "label_domain": "generic_numeric_components",
+      "returns_full_mapping": true,
+      "execution_eligible": false
+    }
+  },
+  "bindings": {
+    "verified_contracts": {
+      "path": "Tools/core_freeze/verified_core/contracts_v1.json",
+      "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"
+    },
+    "batch1_registry": {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch1_v1_20260803/candidate_registration_registry.json",
+      "sha256": "285283c5ab3099cdfe5f0f84452475ac6e868bf76db5d4695ebfe5fcb0d6623c"
+    },
+    "batch4_registry": {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch4_v1_20260810/candidate_registration_registry.json",
+      "sha256": "87afcd02a1022b350abcc3d0b7f0d788e4158bf7df2786fdd9d094bd62c2d303"
+    },
+    "input_tasks": {
+      "path": "outputs/v11_cf05_e3_a004_hardcase_opening_v1_20260810/a004_hardcase_input_tasks.json",
+      "sha256": "74a35d2f1b53b12d804d46ec6761838d73bc41670bbbf1e77b2f1d14ac0d69ca"
+    },
+    "candidate_views": {
+      "path": "outputs/v11_cf05_e3_a004_hardcase_opening_v1_20260810/a004_candidate_views.json",
+      "sha256": "80172518e2b59b021e6376dbb18b2488ff1cdbd745353e00bd44f292c58cc37b"
+    },
+    "r1_request_results": {
+      "path": "outputs/v11_cf05_e3_a004_hardcase_r1_20260810/a004_request_results.json",
+      "sha256": "cae6c6c97c087e58de221248168e606a5a1f43385d64fe0245482ea370287e43"
+    },
+    "r2r3_request_results": {
+      "path": "outputs/v11_cf05_e3_a004_hardcase_r2r3_20260810/a004_r2r3_request_results.json",
+      "sha256": "11ff70073edc86e25258c008cee42cce89c93334a8482142165be56933fc9677"
+    },
+    "offline_scoring_registry": {
+      "path": "outputs/v11_cf05_e3_a004_hardcase_opening_v1_20260810/a004_hardcase_scoring_registry.json",
+      "sha256": "20ab4c7aee50109123656ad2e1d767a3e5f10263b2cd5c1348df808c6bed08c6"
+    },
+    "volatility_report": {
+      "path": "outputs/v11_cf05_e3_a004_hardcase_volatility_20260810/a004_three_repeat_overall_report.json",
+      "sha256": "18b976a97a7f57c9d140b2f2cbb2c438a670a00bf4989b4b311e29634872ae59"
+    }
+  }
+}

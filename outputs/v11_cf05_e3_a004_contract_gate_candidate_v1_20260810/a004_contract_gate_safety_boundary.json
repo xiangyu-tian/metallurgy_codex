@@ -1,0 +1,23 @@
+{
+  "structure_gate": "blocks every response whose tool_call_count is not exactly one",
+  "semantic_gate_inputs": [
+    "problem_text",
+    "native_tool_calls",
+    "frozen_contract_profiles"
+  ],
+  "semantic_gate_forbidden_inputs": [
+    "acceptable_tools",
+    "expected_parameters",
+    "scoring_rule",
+    "target_tool_id"
+  ],
+  "unresolved_policy": "review_required",
+  "automatic_retry_allowed": false,
+  "tool_execution_during_replay": false,
+  "limitations": [
+    "contract annotations cover only A004, E3C005 and E3C027",
+    "the replay set was used to develop this candidate",
+    "100% replay accuracy is not an independent estimate",
+    "unprofiled or non-unique compatible candidates must not be auto-executed"
+  ]
+}

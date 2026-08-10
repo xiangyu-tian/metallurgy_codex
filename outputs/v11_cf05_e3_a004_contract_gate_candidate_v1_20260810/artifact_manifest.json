@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "V11-CF05-E3-A004-STRUCTURE-CONTRACT-GATE-V1-20260810",
+  "artifact_count": 8,
+  "artifacts": [
+    {
+      "filename": "a004_adjudicated_events.json",
+      "sha256": "6b07f987b9ab42ec4b0c0245540fb8d4785d860152877945bab5185101b1e0dd",
+      "bytes": 7658
+    },
+    {
+      "filename": "a004_contract_adjudication_config_snapshot.json",
+      "sha256": "7ab4a9556820c2c58f025f28d6ca3c634a18c18ce2dd361884e5c96a0dcae5ee",
+      "bytes": 3221
+    },
+    {
+      "filename": "a004_contract_gate_report.json",
+      "sha256": "ac844d39ded64c8285a78979b96b2083276db8dbedb9d51db8a4975818bda472",
+      "bytes": 988
+    },
+    {
+      "filename": "a004_contract_gate_safety_boundary.json",
+      "sha256": "d8222dbf4dc01e6dfa2c256fbb00ea8ea00e7774a2e6ac56db68b233c3f04ca7",
+      "bytes": 757
+    },
+    {
+      "filename": "a004_contract_profile_registry.json",
+      "sha256": "4552e63a4b6ee020b8e302a297532579545dc5c8e352eec68e0a88de44286463",
+      "bytes": 1663
+    },
+    {
+      "filename": "a004_replay_decisions.json",
+      "sha256": "ff30c10570b3305da855c197ff9daadc7f8f0adb2f3733913ea91c90ef7d0600",
+      "bytes": 267536
+    },
+    {
+      "filename": "a004_request_requirements.json",
+      "sha256": "b48a686e76fc8ff349a38dc40d6c172c09e2223e78a693bd3b74724088bdbf0f",
+      "bytes": 635
+    },
+    {
+      "filename": "a004_structure_violation_events.json",
+      "sha256": "6b07f987b9ab42ec4b0c0245540fb8d4785d860152877945bab5185101b1e0dd",
+      "bytes": 7658
+    }
+  ]
+}

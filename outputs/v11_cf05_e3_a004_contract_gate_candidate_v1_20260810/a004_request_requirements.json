@@ -1,0 +1,30 @@
+{
+  "E1B2-A004-007": {
+    "normalization_kind": "unit_sum",
+    "component_mapping": {
+      "matrix": 999.0,
+      "trace": 1.0
+    },
+    "component_labels": [
+      "matrix",
+      "trace"
+    ],
+    "generic_labels_present": true,
+    "full_mapping_required": true,
+    "precision_digits": 6
+  },
+  "E1B2-A004-008": {
+    "normalization_kind": "unit_sum",
+    "component_mapping": {
+      "matrix": 0.999,
+      "trace": 0.001
+    },
+    "component_labels": [
+      "matrix",
+      "trace"
+    ],
+    "generic_labels_present": true,
+    "full_mapping_required": true,
+    "precision_digits": 6
+  }
+}
