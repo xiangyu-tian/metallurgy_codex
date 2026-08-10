@@ -32,7 +32,7 @@
 - `a003_routing_request_blueprints.json`保存96个单元及其Schema视图引用；
 - 每个单元记录可重建的API请求体SHA-256；
 - 测试逐单元重建完整请求体并复算哈希；
-- `thinking=disabled`作为适配器设置单独冻结，不混入API请求体哈希。
+- `stream=false`和`thinking={"type":"disabled"}`均进入实际API请求体哈希；适配器配置另行校验同一thinking模式。
 
 96个单元仍使用完全相同的第二阶段系统提示、模型、温度、最大输出长度和`tool_choice=auto`。方法间唯一允许变化的是可见Schema集合。
 

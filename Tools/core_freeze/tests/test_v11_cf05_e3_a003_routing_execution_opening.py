@@ -71,6 +71,8 @@ class V11Cf05E3A003RoutingExecutionOpeningTests(unittest.TestCase):
                 "tool_choice": material["tool_choice"],
                 "temperature": material["temperature"],
                 "max_tokens": material["max_tokens"],
+                "stream": material["stream"],
+                "thinking": material["thinking"],
             }
             self.assertEqual(builder.json_hash(body), cell["request_body_sha256"])
             self.assertEqual(cell["adapter_settings"], {"thinking": "disabled"})

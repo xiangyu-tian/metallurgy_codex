@@ -6,7 +6,7 @@
   "external_api_calls": 0,
   "tool_calls_executed": 0,
   "cell_count": 96,
-  "materialization_contract": "messages=system prompt plus user_problem_text; tools=schema view tools; all other API request fields are copied from request_body_materialization; adapter_settings are validated separately and are not request-body fields",
+  "materialization_contract": "messages=system prompt plus user_problem_text; tools=schema view tools; all other API request fields are copied from request_body_materialization; adapter_settings independently validate the same frozen thinking mode",
   "cells": [
     {
       "cell_id": "A003-DEV-E1B2-A003-001-E3-A003-A-17-NONE_0-CANDIDATE-V1-FULL-SCHEMA-R1",
@@ -47,7 +47,7 @@
         "E3C005",
         "B012"
       ],
-      "request_body_sha256": "d6c633abb3cc8ed5fc60572245fcef37a5ea0cddbcfc817bf998f99810759aa1",
+      "request_body_sha256": "33b3d6486c8177259839c064fac05810917e4e70e2f095be704e5ad4f19ba4e8",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -55,7 +55,11 @@
         "schema_view_id": "schema-381676ebfd362e54",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -88,7 +92,7 @@
         "C002",
         "B003"
       ],
-      "request_body_sha256": "77ca961d05372a65e4bdae19f1b5b7205828d0cc117070fa6a8159a921e33a8c",
+      "request_body_sha256": "08350f9bdd09e378bd91a371756b5f9eb832814af000587fc16fbfb69ebb373b",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -96,7 +100,11 @@
         "schema_view_id": "schema-95cb564560ae2646",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -129,7 +137,7 @@
         "E3C005",
         "D002"
       ],
-      "request_body_sha256": "6b6b65eef51c7f3eed73eb41547fa5ad2973bc779a4b82a05f8c57a0ad5e227e",
+      "request_body_sha256": "2c8811dadcda93b47bd2d6020da6a5e52c7dfac014497123374d3bdce687f0f3",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -137,7 +145,11 @@
         "schema_view_id": "schema-37300aa93a666824",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -170,7 +182,7 @@
         "B003",
         "C002"
       ],
-      "request_body_sha256": "3b7d67ce83939bc0b24cb600bcd1d05ce4ce9390099f0e9d04114b193639e29c",
+      "request_body_sha256": "403a15df6ef3201008f62cc12804553d69be0e32ee23fa202bbc72e3f10b6b44",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -178,7 +190,11 @@
         "schema_view_id": "schema-411a608ade940cd4",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -223,7 +239,7 @@
         "E3C018",
         "D007"
       ],
-      "request_body_sha256": "683935ba7770770a5a007cbbe2c73e2fab8ada4fa1139d1a337e6e533348b71a",
+      "request_body_sha256": "7383e1516e71f02ab8d8f99f69f96a16667931f8dee3eccf162c4e5a05221269",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -231,7 +247,11 @@
         "schema_view_id": "schema-39a3e2e2bfd4e644",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -264,7 +284,7 @@
         "E3C010",
         "A006"
       ],
-      "request_body_sha256": "52b3508f89bb3bb48ede49f5313a45467798f6f20df0ddd5b6d0343c4187e072",
+      "request_body_sha256": "4045fbfc56b19a4c4ff8431b14a2e4c6e0773180d5c845fe6ebf6c5cacbbcbbd",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -272,7 +292,11 @@
         "schema_view_id": "schema-021bcbf3a05a42b7",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -305,7 +329,7 @@
         "E3C018",
         "A004"
       ],
-      "request_body_sha256": "66d24be127e5fb417209dbac06c3cc9e563af1b1e31861cdeaef446ae0fdae49",
+      "request_body_sha256": "945f1e9e58b7d426e0abdad101fe2126d651cbac6e7b9bf2a46e1618ad877cc2",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -313,7 +337,11 @@
         "schema_view_id": "schema-05466f2768e30c75",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -346,7 +374,7 @@
         "E3C010",
         "E3C019"
       ],
-      "request_body_sha256": "25c1c9c8b0f3805fd813ba7ddeba1b2285af969b0f8d098138957c2941652ec8",
+      "request_body_sha256": "e94132568c34edc7fada4c0475287e20ac5f7fa1143125225067bf3ef391e27a",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -354,7 +382,11 @@
         "schema_view_id": "schema-f7f7840f25765089",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -399,7 +431,7 @@
         "E3C021",
         "D007"
       ],
-      "request_body_sha256": "dfa5ead184e30976652ad1d667a5d3a98fe6083211dd9188e7fd73906fbe3af4",
+      "request_body_sha256": "93c1923a137646747dc4382f738f7dce15127d45ab50b54d70a47e77b2ae6d68",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -407,7 +439,11 @@
         "schema_view_id": "schema-3aaf5f42108732ce",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -440,7 +476,7 @@
         "E3C004",
         "E3C023"
       ],
-      "request_body_sha256": "a66fd1bb5789678bd06917e23593529fdccb66a1b8e0ff246faeca74055c1b83",
+      "request_body_sha256": "79213de8f2e49e1331b22e3fb6d3642f79b1ce4e0929b1dc951c3abba2baaffb",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -448,7 +484,11 @@
         "schema_view_id": "schema-789c80ff6e03d0f8",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -481,7 +521,7 @@
         "E3C004",
         "E3C023"
       ],
-      "request_body_sha256": "7a5ab1404acb0069b34c6e423b334c5bfde691ab8047d920429309b95eb02af1",
+      "request_body_sha256": "a40c49eed993d12893a2a668277b61fd7889645c7cf4e22ff7c8b31caebb9260",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -489,7 +529,11 @@
         "schema_view_id": "schema-20f280d9fa5e67d2",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -522,7 +566,7 @@
         "E3C011",
         "E3C023"
       ],
-      "request_body_sha256": "d7e11542ff5120d2b1385ca6bb87e5165ba167c8aa2f214452b29bf9cb67eb2b",
+      "request_body_sha256": "042c2b0539b9cda5b1c265a51d159dded2100fc6e4ec6bb99d13730445f5cbd4",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -530,7 +574,11 @@
         "schema_view_id": "schema-7565f0e6ff1c4c21",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -575,7 +623,7 @@
         "G004",
         "C010"
       ],
-      "request_body_sha256": "b468478e82a7343015ed8fd601e1ea8f4ea660a169ba36f9687955acc86b6f50",
+      "request_body_sha256": "1daffaf375ea7e6539b417839e024eb07e2c7abfef6c995a3c114005fd942a7e",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -583,7 +631,11 @@
         "schema_view_id": "schema-f96cc175abcb4576",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -616,7 +668,7 @@
         "B018",
         "B017"
       ],
-      "request_body_sha256": "8f1f8403aaf0f75d9d0d6f73307e5d83bcf94e25fa02419a76bb12dafdafda26",
+      "request_body_sha256": "c61fb47a134272b26404a37ae428786f7bff7834ba15c9f2ad63959ec752c307",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -624,7 +676,11 @@
         "schema_view_id": "schema-747f96cbb128934b",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -657,7 +713,7 @@
         "B018",
         "D004"
       ],
-      "request_body_sha256": "2faef5b1268ca34c9463a309f36531da401f9c1a8fd7096bda314265c6a42fe2",
+      "request_body_sha256": "39ccd0f1a9a52b44574d25cfcdff156baa1ca6a36c27742072f8be1bb91ac624",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -665,7 +721,11 @@
         "schema_view_id": "schema-60c4439665cb04ec",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -698,7 +758,7 @@
         "F017",
         "B018"
       ],
-      "request_body_sha256": "9909d8060692e70d814127bde4d59c9e9516693b8f38477358af1fd0ed1098be",
+      "request_body_sha256": "326b470da4c30ada94011046a4ec938e8c943dc8ce033dfaaa8f3dca47518d3d",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -706,7 +766,11 @@
         "schema_view_id": "schema-d6e779a4ca6633cf",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -751,7 +815,7 @@
         "E014",
         "E004"
       ],
-      "request_body_sha256": "015d8b725db14ddc8ee912e0f72578c148524dad58ae9ad34deb9e5803f01368",
+      "request_body_sha256": "54ee3effa1ecf6d6dafeceda7f3b1380cb07ec7f4cb56fe011c5064448d9c5ea",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -759,7 +823,11 @@
         "schema_view_id": "schema-b9d52e66198f8a83",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -792,7 +860,7 @@
         "E3C010",
         "E3C019"
       ],
-      "request_body_sha256": "a1216e296def1683e6c50ee4a2767418f623e99673db2b754ff21a3b3ddeaab8",
+      "request_body_sha256": "d4542770456af2a463b1b1c86828dd355ab79c69d4f274f023c091fe8b4d557b",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -800,7 +868,11 @@
         "schema_view_id": "schema-d9b1522bf05fe034",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -833,7 +905,7 @@
         "E3C018",
         "A004"
       ],
-      "request_body_sha256": "66d24be127e5fb417209dbac06c3cc9e563af1b1e31861cdeaef446ae0fdae49",
+      "request_body_sha256": "945f1e9e58b7d426e0abdad101fe2126d651cbac6e7b9bf2a46e1618ad877cc2",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -841,7 +913,11 @@
         "schema_view_id": "schema-05466f2768e30c75",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -874,7 +950,7 @@
         "E3C010",
         "E3C019"
       ],
-      "request_body_sha256": "25c1c9c8b0f3805fd813ba7ddeba1b2285af969b0f8d098138957c2941652ec8",
+      "request_body_sha256": "e94132568c34edc7fada4c0475287e20ac5f7fa1143125225067bf3ef391e27a",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -882,7 +958,11 @@
         "schema_view_id": "schema-f7f7840f25765089",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -927,7 +1007,7 @@
         "E014",
         "E004"
       ],
-      "request_body_sha256": "b793f00dcbd3539bba04904059e4eebe010ceb6669e7437f7ae2666803eb559d",
+      "request_body_sha256": "f02b7424cd5121be6c93500e6909d30a719cfc90f2d223dcb18d604dab67ec6d",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -935,7 +1015,11 @@
         "schema_view_id": "schema-90579ce8e2990c5c",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -968,7 +1052,7 @@
         "E3C004",
         "E3C023"
       ],
-      "request_body_sha256": "a66fd1bb5789678bd06917e23593529fdccb66a1b8e0ff246faeca74055c1b83",
+      "request_body_sha256": "79213de8f2e49e1331b22e3fb6d3642f79b1ce4e0929b1dc951c3abba2baaffb",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -976,7 +1060,11 @@
         "schema_view_id": "schema-789c80ff6e03d0f8",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -1009,7 +1097,7 @@
         "E3C004",
         "E3C023"
       ],
-      "request_body_sha256": "7a5ab1404acb0069b34c6e423b334c5bfde691ab8047d920429309b95eb02af1",
+      "request_body_sha256": "a40c49eed993d12893a2a668277b61fd7889645c7cf4e22ff7c8b31caebb9260",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -1017,7 +1105,11 @@
         "schema_view_id": "schema-20f280d9fa5e67d2",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -1050,7 +1142,7 @@
         "E3C011",
         "E3C023"
       ],
-      "request_body_sha256": "d7e11542ff5120d2b1385ca6bb87e5165ba167c8aa2f214452b29bf9cb67eb2b",
+      "request_body_sha256": "042c2b0539b9cda5b1c265a51d159dded2100fc6e4ec6bb99d13730445f5cbd4",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -1058,7 +1150,11 @@
         "schema_view_id": "schema-7565f0e6ff1c4c21",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -1206,7 +1302,7 @@
         "G007",
         "F016"
       ],
-      "request_body_sha256": "45f029e7e4e7de407e80bea96041ff80682ccdc40474d44527cde864c0153094",
+      "request_body_sha256": "5ec488dafa0ee8e10d64a51c1e429bf4716cd44432842c183365f837c29681b2",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -1214,7 +1310,11 @@
         "schema_view_id": "schema-ced0f3160715eec1",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -1247,7 +1347,7 @@
         "B001",
         "B006"
       ],
-      "request_body_sha256": "8e395738121a277bb6ee5652b9f5894e8d56f6162400daa0d36da62c8e415bc0",
+      "request_body_sha256": "9674ef5ff668c7b1b1d15dfec3041caf149d71ac566240995d1032c1fc4721ec",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -1255,7 +1355,11 @@
         "schema_view_id": "schema-2cfa717be50d8f3d",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -1288,7 +1392,7 @@
         "B024",
         "F008"
       ],
-      "request_body_sha256": "2afa50c6b4765d0e6e51f30bcbc046e2402016de03908a7846506fb84b28ea63",
+      "request_body_sha256": "d81a40b26726439618442b7114822fb0d022c278dac4b39243876279f0f0596d",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -1296,7 +1400,11 @@
         "schema_view_id": "schema-e038a10ae9e9637f",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -1329,7 +1437,7 @@
         "E3C005",
         "B001"
       ],
-      "request_body_sha256": "2dc8a72ff410f82465888ca04b5019045d1acce004001f619c600984164bdc2e",
+      "request_body_sha256": "6d0d6d5510446fa4280fe7ce370cf04f6355deb35693cb117ae21ebc321d9b3f",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -1337,7 +1445,11 @@
         "schema_view_id": "schema-a97ee363e6bc6ab8",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -1485,7 +1597,7 @@
         "F003",
         "B007"
       ],
-      "request_body_sha256": "5ed664e2f45f416c7a4bf3df287e8966ae27fad4df999d6e2cb3f6cf931644bd",
+      "request_body_sha256": "0a8195fd9394fbe41a86f2714ec11a3cb6cc46f914fb9c9b1b2b45b4794c1304",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -1493,7 +1605,11 @@
         "schema_view_id": "schema-13b9bafbff27c21c",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -1526,7 +1642,7 @@
         "E3C010",
         "A006"
       ],
-      "request_body_sha256": "52b3508f89bb3bb48ede49f5313a45467798f6f20df0ddd5b6d0343c4187e072",
+      "request_body_sha256": "4045fbfc56b19a4c4ff8431b14a2e4c6e0773180d5c845fe6ebf6c5cacbbcbbd",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -1534,7 +1650,11 @@
         "schema_view_id": "schema-021bcbf3a05a42b7",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -1567,7 +1687,7 @@
         "E3C018",
         "C008"
       ],
-      "request_body_sha256": "18b0921892e03d30e919aceacfa3f08a39be0ac7c1696a37d5e30883373f59de",
+      "request_body_sha256": "5b23f71134df499002aabb8c0821f9057efca3fb55107bd57f561728bbff57fa",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -1575,7 +1695,11 @@
         "schema_view_id": "schema-1134125b90c809e8",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -1608,7 +1732,7 @@
         "E3C010",
         "E3C019"
       ],
-      "request_body_sha256": "25c1c9c8b0f3805fd813ba7ddeba1b2285af969b0f8d098138957c2941652ec8",
+      "request_body_sha256": "e94132568c34edc7fada4c0475287e20ac5f7fa1143125225067bf3ef391e27a",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -1616,7 +1740,11 @@
         "schema_view_id": "schema-f7f7840f25765089",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -1764,7 +1892,7 @@
         "F003",
         "B007"
       ],
-      "request_body_sha256": "ac6433f97952df7e313943f1eb0393c4ad157d0cfa90625d542d40e7f8050036",
+      "request_body_sha256": "0ccc595170ec69f4712a6a64720fad794c875e550d90e4b67b8bb9d98d64e6c2",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -1772,7 +1900,11 @@
         "schema_view_id": "schema-bc75de0413d20aaa",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -1805,7 +1937,7 @@
         "E3C004",
         "E3C023"
       ],
-      "request_body_sha256": "a66fd1bb5789678bd06917e23593529fdccb66a1b8e0ff246faeca74055c1b83",
+      "request_body_sha256": "79213de8f2e49e1331b22e3fb6d3642f79b1ce4e0929b1dc951c3abba2baaffb",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -1813,7 +1945,11 @@
         "schema_view_id": "schema-789c80ff6e03d0f8",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -1846,7 +1982,7 @@
         "E3C004",
         "C008"
       ],
-      "request_body_sha256": "4267262c74fd00835b4cf6a4a1fd18a2ce41c7727bee548cc8531c517827565a",
+      "request_body_sha256": "9787841680a2a9bc5ff47ee5e39e2228605697886e2661d4f9edef903b38d9c4",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -1854,7 +1990,11 @@
         "schema_view_id": "schema-9c978d2ca26c7162",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -1887,7 +2027,7 @@
         "E3C011",
         "E3C023"
       ],
-      "request_body_sha256": "d7e11542ff5120d2b1385ca6bb87e5165ba167c8aa2f214452b29bf9cb67eb2b",
+      "request_body_sha256": "042c2b0539b9cda5b1c265a51d159dded2100fc6e4ec6bb99d13730445f5cbd4",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -1895,7 +2035,11 @@
         "schema_view_id": "schema-7565f0e6ff1c4c21",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2043,7 +2187,7 @@
         "B025",
         "A003"
       ],
-      "request_body_sha256": "1fb6fbd7a1a64d354fe2dcc58db00b830c6ec92e00c60083607904e5df596786",
+      "request_body_sha256": "a2837a82ec532366f36a61a46177dd75f23e82498a713eb637366c3dfb309d59",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2051,7 +2195,11 @@
         "schema_view_id": "schema-5c8877b115f69ffe",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2084,7 +2232,7 @@
         "B001",
         "B006"
       ],
-      "request_body_sha256": "8e395738121a277bb6ee5652b9f5894e8d56f6162400daa0d36da62c8e415bc0",
+      "request_body_sha256": "9674ef5ff668c7b1b1d15dfec3041caf149d71ac566240995d1032c1fc4721ec",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2092,7 +2240,11 @@
         "schema_view_id": "schema-2cfa717be50d8f3d",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2125,7 +2277,7 @@
         "B024",
         "F008"
       ],
-      "request_body_sha256": "2afa50c6b4765d0e6e51f30bcbc046e2402016de03908a7846506fb84b28ea63",
+      "request_body_sha256": "d81a40b26726439618442b7114822fb0d022c278dac4b39243876279f0f0596d",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2133,7 +2285,11 @@
         "schema_view_id": "schema-e038a10ae9e9637f",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2166,7 +2322,7 @@
         "E3C005",
         "B001"
       ],
-      "request_body_sha256": "2dc8a72ff410f82465888ca04b5019045d1acce004001f619c600984164bdc2e",
+      "request_body_sha256": "6d0d6d5510446fa4280fe7ce370cf04f6355deb35693cb117ae21ebc321d9b3f",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2174,7 +2330,11 @@
         "schema_view_id": "schema-a97ee363e6bc6ab8",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2322,7 +2482,7 @@
         "E001",
         "A003"
       ],
-      "request_body_sha256": "400391747e4bda08bab845249d813bd8b26d605d3fc4936ab982172bd8ea0fd5",
+      "request_body_sha256": "e1065f625c8877ec44c3ef94a5eaf8ed71966d83e0584d0a6b045a1c163e5755",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2330,7 +2490,11 @@
         "schema_view_id": "schema-39aa3e94cba60c8a",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2363,7 +2527,7 @@
         "E3C010",
         "A006"
       ],
-      "request_body_sha256": "52b3508f89bb3bb48ede49f5313a45467798f6f20df0ddd5b6d0343c4187e072",
+      "request_body_sha256": "4045fbfc56b19a4c4ff8431b14a2e4c6e0773180d5c845fe6ebf6c5cacbbcbbd",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2371,7 +2535,11 @@
         "schema_view_id": "schema-021bcbf3a05a42b7",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2404,7 +2572,7 @@
         "E3C018",
         "C008"
       ],
-      "request_body_sha256": "18b0921892e03d30e919aceacfa3f08a39be0ac7c1696a37d5e30883373f59de",
+      "request_body_sha256": "5b23f71134df499002aabb8c0821f9057efca3fb55107bd57f561728bbff57fa",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2412,7 +2580,11 @@
         "schema_view_id": "schema-1134125b90c809e8",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2445,7 +2617,7 @@
         "E3C010",
         "E3C019"
       ],
-      "request_body_sha256": "25c1c9c8b0f3805fd813ba7ddeba1b2285af969b0f8d098138957c2941652ec8",
+      "request_body_sha256": "e94132568c34edc7fada4c0475287e20ac5f7fa1143125225067bf3ef391e27a",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2453,7 +2625,11 @@
         "schema_view_id": "schema-f7f7840f25765089",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2601,7 +2777,7 @@
         "E001",
         "A003"
       ],
-      "request_body_sha256": "6abcb8b68f3083972b1cc07d67033ba4df4336d585195bb71e3dc38d92ed8519",
+      "request_body_sha256": "a2afe93ef51ceae6b8ca149534c297f5909805e3ad23eb76032614a13131dcb6",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2609,7 +2785,11 @@
         "schema_view_id": "schema-dc3d5b043ff9ffed",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2642,7 +2822,7 @@
         "E3C004",
         "E3C023"
       ],
-      "request_body_sha256": "a66fd1bb5789678bd06917e23593529fdccb66a1b8e0ff246faeca74055c1b83",
+      "request_body_sha256": "79213de8f2e49e1331b22e3fb6d3642f79b1ce4e0929b1dc951c3abba2baaffb",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2650,7 +2830,11 @@
         "schema_view_id": "schema-789c80ff6e03d0f8",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2683,7 +2867,7 @@
         "E3C004",
         "C008"
       ],
-      "request_body_sha256": "4267262c74fd00835b4cf6a4a1fd18a2ce41c7727bee548cc8531c517827565a",
+      "request_body_sha256": "9787841680a2a9bc5ff47ee5e39e2228605697886e2661d4f9edef903b38d9c4",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2691,7 +2875,11 @@
         "schema_view_id": "schema-9c978d2ca26c7162",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2724,7 +2912,7 @@
         "E3C011",
         "E3C023"
       ],
-      "request_body_sha256": "d7e11542ff5120d2b1385ca6bb87e5165ba167c8aa2f214452b29bf9cb67eb2b",
+      "request_body_sha256": "042c2b0539b9cda5b1c265a51d159dded2100fc6e4ec6bb99d13730445f5cbd4",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2732,7 +2920,11 @@
         "schema_view_id": "schema-7565f0e6ff1c4c21",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2777,7 +2969,7 @@
         "E3C005",
         "B012"
       ],
-      "request_body_sha256": "5879329fc49b005e54557677027a21db0f4cad131f0f7092eb97c2366876e73a",
+      "request_body_sha256": "ade6c0e6062c31ba8b776e73613806bcae5db315dd5a531e202fbde7b71740a9",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2785,7 +2977,11 @@
         "schema_view_id": "schema-381676ebfd362e54",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2818,7 +3014,7 @@
         "B012",
         "E3C005"
       ],
-      "request_body_sha256": "c168c3d2e7c349f5f4a090a07d548231784f73dec856495aa64fe81f3979b928",
+      "request_body_sha256": "e8775aaa5491ac2a6bde8714281734765052d6e73b36ef545bbccb13ec149199",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2826,7 +3022,11 @@
         "schema_view_id": "schema-2bb0eb7765ac403c",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2859,7 +3059,7 @@
         "E3C005",
         "F015"
       ],
-      "request_body_sha256": "b422bd32405d62b1fd0da708e5fc24a22cae6c9a24abfe6e2a212c81dab555f6",
+      "request_body_sha256": "d39a13c7b0648d456c5b12d9daeac881adc2fba3110c8b41443fd5065afd0797",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2867,7 +3067,11 @@
         "schema_view_id": "schema-012d057da1f8bbc5",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2900,7 +3104,7 @@
         "E3C005",
         "B012"
       ],
-      "request_body_sha256": "8f55f5f9190e31d9bc65e8c08f1ffc9b3c4eceae4196ce8ef3219c977c9b1f82",
+      "request_body_sha256": "255105cde2d5ccf837929583beeb4a3441e419c814b7b88e193442f5f8e02c7e",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2908,7 +3112,11 @@
         "schema_view_id": "schema-1b64e7fab70560fe",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2953,7 +3161,7 @@
         "E3C018",
         "D007"
       ],
-      "request_body_sha256": "66142e37072df49ec39331e91332aa9cbda3ea07b03832f3a09b93fba8ac105a",
+      "request_body_sha256": "0392779fac16227e4cd5acbc770467e3c6f404032defe4833045c048cd2ff301",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -2961,7 +3169,11 @@
         "schema_view_id": "schema-39a3e2e2bfd4e644",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -2994,7 +3206,7 @@
         "E3C010",
         "E3C019"
       ],
-      "request_body_sha256": "8d6bdb481afa5c02cde4bc1946d1845efd7f3adb0667f926cbdb06bec0cd2339",
+      "request_body_sha256": "c231370788583235fb185d988bdaab7e236f6097ce67dd288aa42fe3cf7a5dec",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3002,7 +3214,11 @@
         "schema_view_id": "schema-1fb62de2e2bf2c33",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3035,7 +3251,7 @@
         "E3C018",
         "A004"
       ],
-      "request_body_sha256": "cf4c1bb78c257c09ea9025b64e0239d3a89d71bf118aeb7c280c02639a1012d3",
+      "request_body_sha256": "23898afb1560f1470de3156ef2431a4afc4e0f9ea03384bdfe6a48b2ebbde1c6",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3043,7 +3259,11 @@
         "schema_view_id": "schema-05466f2768e30c75",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3076,7 +3296,7 @@
         "E3C010",
         "A004"
       ],
-      "request_body_sha256": "fa916cdfff8a9b6032fd944fe2a5a8378ca02d34b89a6c07a81069af4c19d83e",
+      "request_body_sha256": "db463a45c22c8efd58166b6edb7e213754e6c2cdfd3e71a80de5ee36e19ff239",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3084,7 +3304,11 @@
         "schema_view_id": "schema-6e245a764e5691e1",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3129,7 +3353,7 @@
         "E3C021",
         "D007"
       ],
-      "request_body_sha256": "1ad41cfc49dda8f7dbd1aed5fa709d15a9506ba255c5a308ee813775ad3b6029",
+      "request_body_sha256": "a79137d842fe593c59f78254d5ed4a4663401174632cdd2939be8306e5f8a000",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3137,7 +3361,11 @@
         "schema_view_id": "schema-3aaf5f42108732ce",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3170,7 +3398,7 @@
         "E3C004",
         "E3C023"
       ],
-      "request_body_sha256": "da1f6a4c5eb36c2698be814355dbe03227a7b125fd5cb2a29699e032de1dbf47",
+      "request_body_sha256": "d79eafbcd5541ef0e8a35d105acdf7afc7ce40eb77de0593aa35a2223666db52",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3178,7 +3406,11 @@
         "schema_view_id": "schema-dd6df741aaed4693",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3211,7 +3443,7 @@
         "E3C004",
         "E3C023"
       ],
-      "request_body_sha256": "c0215b7786eae395c6df5f6df8b9b391d206d51ba38b5bde2689acd2e4a87b0a",
+      "request_body_sha256": "53012c88d3e0e841a7ada2b060d5b92503ff2a5ffab415cc687b8976c0b97104",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3219,7 +3451,11 @@
         "schema_view_id": "schema-20f280d9fa5e67d2",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3252,7 +3488,7 @@
         "E3C011",
         "E3C023"
       ],
-      "request_body_sha256": "c1f9db460780bca53bca114380705579ae96e6ac7ae8c242fead01409943d803",
+      "request_body_sha256": "928a747a626fa31711a6a2e1b7645bd861f35e97b4415fb9232de459d68b26db",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3260,7 +3496,11 @@
         "schema_view_id": "schema-7565f0e6ff1c4c21",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3305,7 +3545,7 @@
         "G004",
         "C010"
       ],
-      "request_body_sha256": "fb9f3818f80197d56371a928334a6fe2c899ee97f854985f339972e2a04794e8",
+      "request_body_sha256": "470db8e95eb326a3452644a991086c7cde09316abba4bd30854a9c1aa2921889",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3313,7 +3553,11 @@
         "schema_view_id": "schema-f96cc175abcb4576",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3346,7 +3590,7 @@
         "F017",
         "D009"
       ],
-      "request_body_sha256": "b8bf0071a9448cb8ef7300c43c1bb9ad6964cf1ed63ca20d8ed19cc41566d685",
+      "request_body_sha256": "e1e6369b71232e83feef4bc095cfcc4ee6647debf769f297b52157f1554235a4",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3354,7 +3598,11 @@
         "schema_view_id": "schema-e0077a2a75f8a970",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3387,7 +3635,7 @@
         "F001",
         "G010"
       ],
-      "request_body_sha256": "c86f1933f107363109e7ad94b23ce2a14155940061d3f306b3a7d7c5eb430052",
+      "request_body_sha256": "561a40f4b4a0570105f21aa7533191490180b171cd75070e95e1bfe6e363b04f",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3395,7 +3643,11 @@
         "schema_view_id": "schema-fa2bbf9ccd57ae14",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3428,7 +3680,7 @@
         "D004",
         "D009"
       ],
-      "request_body_sha256": "4519fcb56600afa7992e5b785d17e541ccb45433c6605a260e591335a2901aa9",
+      "request_body_sha256": "391e1e88524d2cbbd49af18c09093830caf9931f6e221361a45979c7297b9199",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3436,7 +3688,11 @@
         "schema_view_id": "schema-8d07a5e3bf8c4bde",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3481,7 +3737,7 @@
         "E014",
         "E004"
       ],
-      "request_body_sha256": "e6a64f89d06df21bf257eb88721ac5d64a2610ebb85aa71e4330ef191d05fb10",
+      "request_body_sha256": "de40c470c64c574ef979e7170d7cbead533db6a41e7261ad2eb3a35ff8f93834",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3489,7 +3745,11 @@
         "schema_view_id": "schema-b9d52e66198f8a83",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3522,7 +3782,7 @@
         "E3C010",
         "E3C019"
       ],
-      "request_body_sha256": "8d6bdb481afa5c02cde4bc1946d1845efd7f3adb0667f926cbdb06bec0cd2339",
+      "request_body_sha256": "c231370788583235fb185d988bdaab7e236f6097ce67dd288aa42fe3cf7a5dec",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3530,7 +3790,11 @@
         "schema_view_id": "schema-1fb62de2e2bf2c33",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3563,7 +3827,7 @@
         "E3C018",
         "A004"
       ],
-      "request_body_sha256": "cf4c1bb78c257c09ea9025b64e0239d3a89d71bf118aeb7c280c02639a1012d3",
+      "request_body_sha256": "23898afb1560f1470de3156ef2431a4afc4e0f9ea03384bdfe6a48b2ebbde1c6",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3571,7 +3835,11 @@
         "schema_view_id": "schema-05466f2768e30c75",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3604,7 +3872,7 @@
         "E3C010",
         "A004"
       ],
-      "request_body_sha256": "fa916cdfff8a9b6032fd944fe2a5a8378ca02d34b89a6c07a81069af4c19d83e",
+      "request_body_sha256": "db463a45c22c8efd58166b6edb7e213754e6c2cdfd3e71a80de5ee36e19ff239",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3612,7 +3880,11 @@
         "schema_view_id": "schema-6e245a764e5691e1",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3657,7 +3929,7 @@
         "E014",
         "E004"
       ],
-      "request_body_sha256": "219ffb404092bd4f485ba9bba860e42183e0688616dab7d67181ae4736391f25",
+      "request_body_sha256": "ca180b85e4fac82c95bef3e2d8337ba2481c4188509d0fa5f3bf778221ca25b8",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3665,7 +3937,11 @@
         "schema_view_id": "schema-90579ce8e2990c5c",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3698,7 +3974,7 @@
         "E3C004",
         "E3C023"
       ],
-      "request_body_sha256": "da1f6a4c5eb36c2698be814355dbe03227a7b125fd5cb2a29699e032de1dbf47",
+      "request_body_sha256": "d79eafbcd5541ef0e8a35d105acdf7afc7ce40eb77de0593aa35a2223666db52",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3706,7 +3982,11 @@
         "schema_view_id": "schema-dd6df741aaed4693",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3739,7 +4019,7 @@
         "E3C004",
         "E3C023"
       ],
-      "request_body_sha256": "c0215b7786eae395c6df5f6df8b9b391d206d51ba38b5bde2689acd2e4a87b0a",
+      "request_body_sha256": "53012c88d3e0e841a7ada2b060d5b92503ff2a5ffab415cc687b8976c0b97104",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3747,7 +4027,11 @@
         "schema_view_id": "schema-20f280d9fa5e67d2",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3780,7 +4064,7 @@
         "E3C011",
         "E3C023"
       ],
-      "request_body_sha256": "c1f9db460780bca53bca114380705579ae96e6ac7ae8c242fead01409943d803",
+      "request_body_sha256": "928a747a626fa31711a6a2e1b7645bd861f35e97b4415fb9232de459d68b26db",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3788,7 +4072,11 @@
         "schema_view_id": "schema-7565f0e6ff1c4c21",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3936,7 +4224,7 @@
         "G007",
         "F016"
       ],
-      "request_body_sha256": "5440b66176b9a12f9fd78e0f98db28a521679836132b910d09d0fbf060243524",
+      "request_body_sha256": "90fb3a24ea382993b96cdfe1a0488f67e3bd8f1f114ac90cd1bf80ac7eb3865b",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3944,7 +4232,11 @@
         "schema_view_id": "schema-ced0f3160715eec1",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -3977,7 +4269,7 @@
         "B007",
         "B009"
       ],
-      "request_body_sha256": "2b01959edad1957859156c056ea376caf7d0b11d65417acc5fe80023e3c5164e",
+      "request_body_sha256": "07afb2ac705e9c69532611f5970e4372f8a1619a429594827e522ff58efc2668",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -3985,7 +4277,11 @@
         "schema_view_id": "schema-4275d0f9fc791763",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -4018,7 +4314,7 @@
         "C008",
         "B001"
       ],
-      "request_body_sha256": "3f009c0d124e8f34d8299e2bde38c7807e113a41e243b9e2cabb45978085e039",
+      "request_body_sha256": "5480db0c95559fcda8abc439d086805a506a114dd5f06ec049186f1e3ae7f5ff",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -4026,7 +4322,11 @@
         "schema_view_id": "schema-e7ce51935bf28977",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -4059,7 +4359,7 @@
         "B006",
         "B007"
       ],
-      "request_body_sha256": "c688d8bf3ddac9f5664f60f9b30e7bd18ead7b9fc11bbe03bfdb5360fb3fa1ba",
+      "request_body_sha256": "5d0b18bfc7349d69cc70cf39e5df15643ee2d5f2d0ae2e9b6288340043a974b5",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -4067,7 +4367,11 @@
         "schema_view_id": "schema-5330acc65e1c4829",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -4215,7 +4519,7 @@
         "F003",
         "B007"
       ],
-      "request_body_sha256": "2d139986450190216eeaeb022265443e00f1c05b213ab84baca27fa46a15f92d",
+      "request_body_sha256": "b60b12fb1cce84fa98b2261b1c00a945b0f2dd452e224b9273b6256b58e32038",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -4223,7 +4527,11 @@
         "schema_view_id": "schema-13b9bafbff27c21c",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -4256,7 +4564,7 @@
         "E3C010",
         "B003"
       ],
-      "request_body_sha256": "f53fcf3c67110bba4cb563bc9524e4d8ece249c75531ac824a46b7c154c7a300",
+      "request_body_sha256": "1d606f45f44a603477102be9505cc54b0a68843704c5f294289dfaadd06a1b0f",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -4264,7 +4572,11 @@
         "schema_view_id": "schema-d968c7af4090073a",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -4297,7 +4609,7 @@
         "E3C018",
         "D014"
       ],
-      "request_body_sha256": "2ec7d685a3514279e802176fa99126856ce28bbb8baf96bf6415d5ecf7f23d7a",
+      "request_body_sha256": "e59c515696b394aecceea176fc0683726f96f838c21371924a4928ba638375c6",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -4305,7 +4617,11 @@
         "schema_view_id": "schema-6fc4d97e1fb5fed1",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -4338,7 +4654,7 @@
         "E3C010",
         "B003"
       ],
-      "request_body_sha256": "f53fcf3c67110bba4cb563bc9524e4d8ece249c75531ac824a46b7c154c7a300",
+      "request_body_sha256": "1d606f45f44a603477102be9505cc54b0a68843704c5f294289dfaadd06a1b0f",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -4346,7 +4662,11 @@
         "schema_view_id": "schema-d968c7af4090073a",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -4494,7 +4814,7 @@
         "F003",
         "B007"
       ],
-      "request_body_sha256": "3dde500c2199513fee465525cf50ff4a94faebb13fc3d6039023935d45bc9447",
+      "request_body_sha256": "09d5f6efe615b5fad0604867ca8ec23b79f2731044a83cde6a50337e97efbd82",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -4502,7 +4822,11 @@
         "schema_view_id": "schema-bc75de0413d20aaa",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -4535,7 +4859,7 @@
         "E3C004",
         "E3C023"
       ],
-      "request_body_sha256": "da1f6a4c5eb36c2698be814355dbe03227a7b125fd5cb2a29699e032de1dbf47",
+      "request_body_sha256": "d79eafbcd5541ef0e8a35d105acdf7afc7ce40eb77de0593aa35a2223666db52",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -4543,7 +4867,11 @@
         "schema_view_id": "schema-dd6df741aaed4693",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -4576,7 +4904,7 @@
         "E3C004",
         "D014"
       ],
-      "request_body_sha256": "0d572627458b635251493bd6f42890fb0cd9421a10078aa5eb4c0808fa3e06a2",
+      "request_body_sha256": "aaf7649a31baf2f59b6043f5916a3bd0182b60900e06fd2c304b4d6b120dbffe",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -4584,7 +4912,11 @@
         "schema_view_id": "schema-48a8e5b89c03e33f",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -4617,7 +4949,7 @@
         "E3C011",
         "E3C023"
       ],
-      "request_body_sha256": "c1f9db460780bca53bca114380705579ae96e6ac7ae8c242fead01409943d803",
+      "request_body_sha256": "928a747a626fa31711a6a2e1b7645bd861f35e97b4415fb9232de459d68b26db",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -4625,7 +4957,11 @@
         "schema_view_id": "schema-7565f0e6ff1c4c21",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -4773,7 +5109,7 @@
         "B025",
         "A003"
       ],
-      "request_body_sha256": "5d96b663e7f3b5a8bdf52bb24d5c7094fc14ebca447e8f358a16108e8ce46c6f",
+      "request_body_sha256": "65b07ac0b7e6534c247734008dfff0a244855c74725a3a183ddb11bea75ef333",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -4781,7 +5117,11 @@
         "schema_view_id": "schema-5c8877b115f69ffe",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -4814,7 +5154,7 @@
         "B007",
         "B009"
       ],
-      "request_body_sha256": "2b01959edad1957859156c056ea376caf7d0b11d65417acc5fe80023e3c5164e",
+      "request_body_sha256": "07afb2ac705e9c69532611f5970e4372f8a1619a429594827e522ff58efc2668",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -4822,7 +5162,11 @@
         "schema_view_id": "schema-4275d0f9fc791763",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -4855,7 +5199,7 @@
         "C008",
         "B001"
       ],
-      "request_body_sha256": "3f009c0d124e8f34d8299e2bde38c7807e113a41e243b9e2cabb45978085e039",
+      "request_body_sha256": "5480db0c95559fcda8abc439d086805a506a114dd5f06ec049186f1e3ae7f5ff",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -4863,7 +5207,11 @@
         "schema_view_id": "schema-e7ce51935bf28977",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -4896,7 +5244,7 @@
         "B006",
         "B007"
       ],
-      "request_body_sha256": "c688d8bf3ddac9f5664f60f9b30e7bd18ead7b9fc11bbe03bfdb5360fb3fa1ba",
+      "request_body_sha256": "5d0b18bfc7349d69cc70cf39e5df15643ee2d5f2d0ae2e9b6288340043a974b5",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -4904,7 +5252,11 @@
         "schema_view_id": "schema-5330acc65e1c4829",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -5052,7 +5404,7 @@
         "E001",
         "A003"
       ],
-      "request_body_sha256": "776f2244eb8948c1fb442a75ac8f361f803a59a19c82d65829963ac03df78d6a",
+      "request_body_sha256": "de4e1b98000ae14dca3d81f55b3aa15f0d359800ee254646a1182aa7af43949c",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -5060,7 +5412,11 @@
         "schema_view_id": "schema-39aa3e94cba60c8a",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -5093,7 +5449,7 @@
         "E3C010",
         "B003"
       ],
-      "request_body_sha256": "f53fcf3c67110bba4cb563bc9524e4d8ece249c75531ac824a46b7c154c7a300",
+      "request_body_sha256": "1d606f45f44a603477102be9505cc54b0a68843704c5f294289dfaadd06a1b0f",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -5101,7 +5457,11 @@
         "schema_view_id": "schema-d968c7af4090073a",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -5134,7 +5494,7 @@
         "E3C018",
         "D014"
       ],
-      "request_body_sha256": "2ec7d685a3514279e802176fa99126856ce28bbb8baf96bf6415d5ecf7f23d7a",
+      "request_body_sha256": "e59c515696b394aecceea176fc0683726f96f838c21371924a4928ba638375c6",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -5142,7 +5502,11 @@
         "schema_view_id": "schema-6fc4d97e1fb5fed1",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -5175,7 +5539,7 @@
         "E3C010",
         "B003"
       ],
-      "request_body_sha256": "f53fcf3c67110bba4cb563bc9524e4d8ece249c75531ac824a46b7c154c7a300",
+      "request_body_sha256": "1d606f45f44a603477102be9505cc54b0a68843704c5f294289dfaadd06a1b0f",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -5183,7 +5547,11 @@
         "schema_view_id": "schema-d968c7af4090073a",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -5331,7 +5699,7 @@
         "E001",
         "A003"
       ],
-      "request_body_sha256": "6594a715d0534aeb82982c16fe4ee2fff097315c19eb7c3f97c5ae2f78334823",
+      "request_body_sha256": "4f922f8d4f5b84692e4fb89cb85f202d9c70ba8552f72a6489d141b3da354698",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -5339,7 +5707,11 @@
         "schema_view_id": "schema-dc3d5b043ff9ffed",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -5372,7 +5744,7 @@
         "E3C004",
         "E3C023"
       ],
-      "request_body_sha256": "da1f6a4c5eb36c2698be814355dbe03227a7b125fd5cb2a29699e032de1dbf47",
+      "request_body_sha256": "d79eafbcd5541ef0e8a35d105acdf7afc7ce40eb77de0593aa35a2223666db52",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -5380,7 +5752,11 @@
         "schema_view_id": "schema-dd6df741aaed4693",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -5413,7 +5789,7 @@
         "E3C004",
         "D014"
       ],
-      "request_body_sha256": "0d572627458b635251493bd6f42890fb0cd9421a10078aa5eb4c0808fa3e06a2",
+      "request_body_sha256": "aaf7649a31baf2f59b6043f5916a3bd0182b60900e06fd2c304b4d6b120dbffe",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -5421,7 +5797,11 @@
         "schema_view_id": "schema-48a8e5b89c03e33f",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"
@@ -5454,7 +5834,7 @@
         "E3C011",
         "E3C023"
       ],
-      "request_body_sha256": "c1f9db460780bca53bca114380705579ae96e6ac7ae8c242fead01409943d803",
+      "request_body_sha256": "928a747a626fa31711a6a2e1b7645bd861f35e97b4415fb9232de459d68b26db",
       "request_body_materialization": {
         "model": "deepseek-v4-flash",
         "system_prompt_sha256": "06f2e16e12ff70666f4f2ac722f591fa5245a86384797b1f137dc2e0f861532d",
@@ -5462,7 +5842,11 @@
         "schema_view_id": "schema-7565f0e6ff1c4c21",
         "tool_choice": "auto",
         "temperature": 0,
-        "max_tokens": 256
+        "max_tokens": 256,
+        "stream": false,
+        "thinking": {
+          "type": "disabled"
+        }
       },
       "adapter_settings": {
         "thinking": "disabled"

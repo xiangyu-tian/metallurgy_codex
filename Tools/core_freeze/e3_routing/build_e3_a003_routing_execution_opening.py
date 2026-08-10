@@ -183,6 +183,8 @@ def build(config: dict[str, Any]) -> dict[str, Any]:
             "tool_choice": config["tool_choice"],
             "temperature": config["temperature"],
             "max_tokens": config["max_tokens"],
+            "stream": False,
+            "thinking": {"type": config["thinking"]},
         }
         blueprints.append(
             {
@@ -201,6 +203,8 @@ def build(config: dict[str, Any]) -> dict[str, Any]:
                     "tool_choice": config["tool_choice"],
                     "temperature": config["temperature"],
                     "max_tokens": config["max_tokens"],
+                    "stream": False,
+                    "thinking": {"type": config["thinking"]},
                 },
                 "adapter_settings": {"thinking": config["thinking"]},
                 "execution_status": "not_executed_pending_explicit_authorization",
@@ -232,7 +236,7 @@ def build(config: dict[str, Any]) -> dict[str, Any]:
         "materialization_contract": (
             "messages=system prompt plus user_problem_text; tools=schema view tools; "
             "all other API request fields are copied from request_body_materialization; "
-            "adapter_settings are validated separately and are not request-body fields"
+            "adapter_settings independently validate the same frozen thinking mode"
         ),
         "cells": blueprints,
     }
