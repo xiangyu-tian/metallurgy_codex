@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "run_id": "V11-CF05-E3-A004-POSTGATE-PROBE-R1-20260810",
+  "opening_id": "V11-CF05-E3-A004-POSTGATE-PROBE-OPENING-V1-20260810",
+  "provider": "deepseek",
+  "openai_base_url": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "temperature": 0,
+  "max_tokens": 256,
+  "thinking": "disabled",
+  "timeout_seconds": 120,
+  "provider_max_attempts": 1,
+  "tool_choice": "auto",
+  "scheduled_request_count": 10,
+  "development_only": true,
+  "tool_execution_allowed": false,
+  "provider_retry_allowed": false,
+  "independent_validation_claim_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "opening_manifest": {"path": "outputs/v11_cf05_e3_a004_postgate_probe_opening_v1_20260810/artifact_manifest.json", "sha256": "242a3f8023c4c30ada08f12d40bc542907610ab88203f841f5679cce5b6680b1"},
+    "opening_config": {"path": "outputs/v11_cf05_e3_a004_postgate_probe_opening_v1_20260810/a004_postgate_config_snapshot.json", "sha256": "b045eb2d9a0b2ed11092b10e35e11f909e7374da72fbf8dc7b36285d7131f25a"},
+    "input_tasks": {"path": "outputs/v11_cf05_e3_a004_postgate_probe_opening_v1_20260810/a004_postgate_input_tasks.json", "sha256": "56d0640bd9fdf7e2012727385d08a5c8d5b9490f28d867f79f092ac4b91db4c9"},
+    "schema_view": {"path": "outputs/v11_cf05_e3_a004_postgate_probe_opening_v1_20260810/a004_postgate_schema_view.json", "sha256": "287d4a75c81d17ee9fc2c1794f339e1ee15a7916ee7f2d0bab28480bc7b53e36"},
+    "selector_prompt": {"path": "outputs/v11_cf05_e3_a004_postgate_probe_opening_v1_20260810/a004_postgate_prompt_snapshot.json", "sha256": "cdaee6e114e459418cb77eb064f37de836e3f71a1dc39aaaaf25bdeb372fe92a"},
+    "run_cells": {"path": "outputs/v11_cf05_e3_a004_postgate_probe_opening_v1_20260810/a004_postgate_run_cells.json", "sha256": "4d076cb42568f6e53234378ada3524451c0856c100c97427f89cdcde0a407533"},
+    "contract_gate_source": {"path": "Tools/core_freeze/e3_routing/a004_contract_adjudication.py", "sha256": "85426116471ab48a559f51539fcfa024dbb738aec52ae65e10fe378a159055e5"},
+    "contract_gate_config": {"path": "Tools/core_freeze/e3_routing/a004_contract_adjudication_config_v1.json", "sha256": "badb8744884a58a7fd9c32ca108d3ade25aeda018e3179d58542dda9f696678e"}
+  }
+}
