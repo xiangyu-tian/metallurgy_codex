@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-HARDCASE-CONTROLLED-OPENING-V1-20260810",
+  "artifact_count": 12,
+  "artifacts": [
+    {
+      "filename": "a004_candidate_views.json",
+      "sha256": "80172518e2b59b021e6376dbb18b2488ff1cdbd745353e00bd44f292c58cc37b",
+      "bytes": 816584
+    },
+    {
+      "filename": "a004_controlled_selected_pools.json",
+      "sha256": "651d85f0b0bb90d64453fcf602c075d4c8c99e866d53114c4ca5fc50fd5f8899",
+      "bytes": 10424
+    },
+    {
+      "filename": "a004_hardcase_config_snapshot.json",
+      "sha256": "54666faa730e2e8ed590e4d875924541148b8aa725f1ed8ba257948cdf0d99bf",
+      "bytes": 5184
+    },
+    {
+      "filename": "a004_hardcase_input_tasks.json",
+      "sha256": "74a35d2f1b53b12d804d46ec6761838d73bc41670bbbf1e77b2f1d14ac0d69ca",
+      "bytes": 997
+    },
+    {
+      "filename": "a004_hardcase_prompt_snapshot.json",
+      "sha256": "cdaee6e114e459418cb77eb064f37de836e3f71a1dc39aaaaf25bdeb372fe92a",
+      "bytes": 1058
+    },
+    {
+      "filename": "a004_hardcase_scoring_registry.json",
+      "sha256": "20ab4c7aee50109123656ad2e1d767a3e5f10263b2cd5c1348df808c6bed08c6",
+      "bytes": 1733
+    },
+    {
+      "filename": "a004_local_retrieval_gate.json",
+      "sha256": "fc7c9e443a4664cb9279075e9048c23f259a070300c34dbd573ee8eacceb4ac8",
+      "bytes": 8579
+    },
+    {
+      "filename": "a004_opening_preflight.json",
+      "sha256": "93179a2c32f43fa32d939e735a7a0065bfd2c563337a8138ed9fe99531322dfc",
+      "bytes": 1149
+    },
+    {
+      "filename": "a004_pool_schema_registry.json",
+      "sha256": "833568ec6270bbc38187202209bb38141f892524c3cb10aef7e8845f11068921",
+      "bytes": 262833
+    },
+    {
+      "filename": "a004_relation_evidence_snapshot.json",
+      "sha256": "190d0fa240b530360c4c85f39e109935b44cb5e961329fa8952514ae3fd59ca8",
+      "bytes": 2059
+    },
+    {
+      "filename": "a004_routing_run_cells.json",
+      "sha256": "6c59769d4c1d7f8b525de8cc1535dde76b902f66fdc49a31afc382ebf5f34391",
+      "bytes": 38119
+    },
+    {
+      "filename": "execution_authorization_request.json",
+      "sha256": "15b88304000ca1afb0180df8ed94c59b80d5d820502db7c1a9e88aff33eff718",
+      "bytes": 1780
+    }
+  ]
+}

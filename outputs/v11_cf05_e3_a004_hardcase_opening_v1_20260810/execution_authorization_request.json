@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-HARDCASE-CONTROLLED-OPENING-V1-20260810",
+  "decision": "pending_user_authorization",
+  "eligible_for_external_execution_authorization": true,
+  "external_data_sharing_authorized": false,
+  "external_api_execution_authorized": false,
+  "tool_execution_allowed": false,
+  "request_payloads_materialized": false,
+  "required_scope_if_authorized": "2 frozen A004 hard cases, none-0/lexical-4/contract-mismatch-4 controlled pools at 17/120, four methods, 48 one-shot requests, no tool execution",
+  "bindings": {
+    "a004_candidate_views.json": "80172518e2b59b021e6376dbb18b2488ff1cdbd745353e00bd44f292c58cc37b",
+    "a004_controlled_selected_pools.json": "651d85f0b0bb90d64453fcf602c075d4c8c99e866d53114c4ca5fc50fd5f8899",
+    "a004_hardcase_config_snapshot.json": "54666faa730e2e8ed590e4d875924541148b8aa725f1ed8ba257948cdf0d99bf",
+    "a004_hardcase_input_tasks.json": "74a35d2f1b53b12d804d46ec6761838d73bc41670bbbf1e77b2f1d14ac0d69ca",
+    "a004_hardcase_prompt_snapshot.json": "cdaee6e114e459418cb77eb064f37de836e3f71a1dc39aaaaf25bdeb372fe92a",
+    "a004_hardcase_scoring_registry.json": "20ab4c7aee50109123656ad2e1d767a3e5f10263b2cd5c1348df808c6bed08c6",
+    "a004_local_retrieval_gate.json": "fc7c9e443a4664cb9279075e9048c23f259a070300c34dbd573ee8eacceb4ac8",
+    "a004_opening_preflight.json": "93179a2c32f43fa32d939e735a7a0065bfd2c563337a8138ed9fe99531322dfc",
+    "a004_pool_schema_registry.json": "833568ec6270bbc38187202209bb38141f892524c3cb10aef7e8845f11068921",
+    "a004_relation_evidence_snapshot.json": "190d0fa240b530360c4c85f39e109935b44cb5e961329fa8952514ae3fd59ca8",
+    "a004_routing_run_cells.json": "6c59769d4c1d7f8b525de8cc1535dde76b902f66fdc49a31afc382ebf5f34391"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-HARDCASE-CONTROLLED-OPENING-V1-20260810",
+  "relation_count": 8,
+  "lexical_count": 4,
+  "contract_mismatch_count": 4,
+  "relations": [
+    {
+      "target_tool_id": "A004",
+      "neighbor_tool_id": "A003",
+      "relation_type": "lexical",
+      "evidence_source": "bound_base_neighbor_matrix",
+      "relation_evidence_passed": true
+    },
+    {
+      "target_tool_id": "A004",
+      "neighbor_tool_id": "E3C012",
+      "relation_type": "lexical",
+      "evidence_source": "bound_combined_relation_registry",
+      "relation_evidence_passed": true
+    },
+    {
+      "target_tool_id": "A004",
+      "neighbor_tool_id": "E3C013",
+      "relation_type": "lexical",
+      "evidence_source": "bound_combined_relation_registry",
+      "relation_evidence_passed": true
+    },
+    {
+      "target_tool_id": "A004",
+      "neighbor_tool_id": "E3C026",
+      "relation_type": "lexical",
+      "evidence_source": "bound_combined_relation_registry",
+      "relation_evidence_passed": true
+    },
+    {
+      "target_tool_id": "A004",
+      "neighbor_tool_id": "E3C005",
+      "relation_type": "contract_mismatch",
+      "evidence_source": "bound_combined_relation_registry",
+      "relation_evidence_passed": true
+    },
+    {
+      "target_tool_id": "A004",
+      "neighbor_tool_id": "E3C014",
+      "relation_type": "contract_mismatch",
+      "evidence_source": "bound_combined_relation_registry",
+      "relation_evidence_passed": true
+    },
+    {
+      "target_tool_id": "A004",
+      "neighbor_tool_id": "E3C015",
+      "relation_type": "contract_mismatch",
+      "evidence_source": "bound_combined_relation_registry",
+      "relation_evidence_passed": true
+    },
+    {
+      "target_tool_id": "A004",
+      "neighbor_tool_id": "E3C027",
+      "relation_type": "contract_mismatch",
+      "evidence_source": "bound_combined_relation_registry",
+      "relation_evidence_passed": true
+    }
+  ],
+  "confirmatory_use_allowed": false
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-HARDCASE-CONTROLLED-OPENING-V1-20260810",
+  "opening_status": "prepared_local_gate_passed_pending_external_authorization",
+  "design": {
+    "task_count": 2,
+    "condition_count": 3,
+    "pool_count": 6,
+    "method_count": 4,
+    "candidate_view_count": 42,
+    "cell_count": 48
+  },
+  "checks": {
+    "all_bound_hashes_valid": true,
+    "two_a004_only_hard_cases": true,
+    "relation_evidence_4_plus_4_complete": true,
+    "controlled_pool_grid_complete": true,
+    "nested_17_in_120_each_condition": true,
+    "condition_doses_uncontaminated": true,
+    "candidate_view_grid_complete": true,
+    "run_cell_grid_complete": true,
+    "gold_fields_absent_from_router_artifacts": true,
+    "all_top5_methods_passed_local_recall_gate": true,
+    "external_api_calls_zero": true,
+    "tool_execution_zero": true,
+    "formal_catalog_unchanged_at_120": true
+  },
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "confirmatory_inference_allowed": false,
+  "formal_pool_use_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false
+}

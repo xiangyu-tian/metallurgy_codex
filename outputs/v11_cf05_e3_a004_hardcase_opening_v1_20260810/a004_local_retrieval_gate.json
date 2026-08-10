@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-HARDCASE-CONTROLLED-OPENING-V1-20260810",
+  "development_diagnostic_only": true,
+  "summaries": [
+    {
+      "method": "lexical_top5",
+      "cell_count": 12,
+      "target_recall_at_5": 1.0,
+      "local_gate_passed": true
+    },
+    {
+      "method": "dense_top5",
+      "cell_count": 12,
+      "target_recall_at_5": 1.0,
+      "local_gate_passed": true
+    },
+    {
+      "method": "hierarchical",
+      "cell_count": 12,
+      "target_recall_at_5": 1.0,
+      "local_gate_passed": true
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "none_0",
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "none_0",
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "none_0",
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "none_0",
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "none_0",
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "none_0",
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "none_0",
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "none_0",
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "none_0",
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "none_0",
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "none_0",
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "none_0",
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "lexical_4",
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "lexical_4",
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "lexical_4",
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "lexical_4",
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "lexical_4",
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "lexical_4",
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "lexical_4",
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "lexical_4",
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "lexical_4",
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "lexical_4",
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "lexical_4",
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "lexical_4",
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "contract_mismatch_4",
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "contract_mismatch_4",
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "contract_mismatch_4",
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "contract_mismatch_4",
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "contract_mismatch_4",
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "contract_mismatch_4",
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "contract_mismatch_4",
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "contract_mismatch_4",
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "condition_id": "contract_mismatch_4",
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "contract_mismatch_4",
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "contract_mismatch_4",
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "condition_id": "contract_mismatch_4",
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "target_tool_id": "A004",
+      "target_recalled_at_5": true
+    }
+  ],
+  "all_top5_methods_passed": true,
+  "confirmatory_inference_allowed": false
+}
