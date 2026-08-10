@@ -21,9 +21,9 @@ if str(TOOLS_DIR) not in sys.path:
 from models_core.llm_adapters import DeepSeekOpenAIAdapter, LLMAdapterError  # noqa: E402
 
 
-CONFIG_PATH = Path(__file__).with_name("multitarget_runtime_config_v1.json")
+CONFIG_PATH = Path(__file__).with_name("multitarget_runtime_config_v2.json")
 EXPECTED_OPENING_ID = "V11-CF05-E3-MULTITARGET-MIXED-OPENING-V1-20260810"
-EXPECTED_RUN_ID = "V11-CF05-E3-MULTITARGET-MIXED-R1-20260810"
+EXPECTED_RUN_ID = "V11-CF05-E3-MULTITARGET-MIXED-R2-20260810"
 EXPECTED_DECISION = "authorized_to_execute_multitarget_mixed_development"
 
 
