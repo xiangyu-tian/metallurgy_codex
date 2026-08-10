@@ -1,0 +1,1166 @@
+{
+  "rows": [
+    {
+      "task_id": "E1B2-A001-001",
+      "target_tool_id": "A001",
+      "candidate_tool_id": "E3C001",
+      "input": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "value": 250.0,
+          "source_unit": "kg",
+          "target_unit": "g",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "质量"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "value": 250.0
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "expected": 250.0,
+            "actual": 250.0,
+            "absolute_error": 0.0,
+            "effective_tolerance": 1e-09,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A001-002",
+      "target_tool_id": "A001",
+      "candidate_tool_id": "E3C001",
+      "input": {
+        "value": 12.5,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "value": 12500.0,
+          "source_unit": "kg",
+          "target_unit": "g",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "质量"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "value": 12500.0
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "expected": 12500.0,
+            "actual": 12500.0,
+            "absolute_error": 0.0,
+            "effective_tolerance": 1.25e-08,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A001-003",
+      "target_tool_id": "A001",
+      "candidate_tool_id": "E3C001",
+      "input": {
+        "value": 0.75,
+        "source_unit": "t",
+        "target_unit": "kg"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "value": 750.0,
+          "source_unit": "t",
+          "target_unit": "kg",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "质量"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "value": 750.0
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "expected": 750.0,
+            "actual": 750.0,
+            "absolute_error": 0.0,
+            "effective_tolerance": 1e-09,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A001-004",
+      "target_tool_id": "A001",
+      "candidate_tool_id": "E3C001",
+      "input": {
+        "value": 3.2,
+        "source_unit": "t",
+        "target_unit": "kg"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "value": 3200.0,
+          "source_unit": "t",
+          "target_unit": "kg",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "质量"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "value": 3200.0
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "expected": 3200.0,
+            "actual": 3200.0,
+            "absolute_error": 0.0,
+            "effective_tolerance": 3.2e-09,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A001-005",
+      "target_tool_id": "A001",
+      "candidate_tool_id": "E3C001",
+      "input": {
+        "value": 0.0125,
+        "source_unit": "m",
+        "target_unit": "mm"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "value": 12.5,
+          "source_unit": "m",
+          "target_unit": "mm",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "长度"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "value": 12.5
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "expected": 12.5,
+            "actual": 12.5,
+            "absolute_error": 0.0,
+            "effective_tolerance": 1e-09,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A001-006",
+      "target_tool_id": "A001",
+      "candidate_tool_id": "E3C001",
+      "input": {
+        "value": 2.75,
+        "source_unit": "m",
+        "target_unit": "mm"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "value": 2750.0,
+          "source_unit": "m",
+          "target_unit": "mm",
+          "conversion_factor": 1000.0,
+          "conversion_offset": 0.0,
+          "category": "长度"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "value": 2750.0
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "expected": 2750.0,
+            "actual": 2750.0,
+            "absolute_error": 0.0,
+            "effective_tolerance": 2.75e-09,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A001-007",
+      "target_tool_id": "A001",
+      "candidate_tool_id": "E3C001",
+      "input": {
+        "value": 0.0012,
+        "source_unit": "MPa",
+        "target_unit": "Pa"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "value": 1200.0,
+          "source_unit": "MPa",
+          "target_unit": "Pa",
+          "conversion_factor": 1000000.0,
+          "conversion_offset": 0.0,
+          "category": "压强"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "value": 1200.0
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "expected": 1200.0,
+            "actual": 1200.0,
+            "absolute_error": 0.0,
+            "effective_tolerance": 1.2e-09,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A001-008",
+      "target_tool_id": "A001",
+      "candidate_tool_id": "E3C001",
+      "input": {
+        "value": 3.45,
+        "source_unit": "MPa",
+        "target_unit": "Pa"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "value": 3450000.0,
+          "source_unit": "MPa",
+          "target_unit": "Pa",
+          "conversion_factor": 1000000.0,
+          "conversion_offset": 0.0,
+          "category": "压强"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "value": 3450000.0
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "expected": 3450000.0,
+            "actual": 3450000.0,
+            "absolute_error": 0.0,
+            "effective_tolerance": 3.45e-06,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A001-009",
+      "target_tool_id": "A001",
+      "candidate_tool_id": "E3C001",
+      "input": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "value": 50662.5,
+          "source_unit": "atm",
+          "target_unit": "Pa",
+          "conversion_factor": 101325.0,
+          "conversion_offset": 0.0,
+          "category": "压强"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "value": 50662.5
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "expected": 50662.5,
+            "actual": 50662.5,
+            "absolute_error": 0.0,
+            "effective_tolerance": 5.06625e-08,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A001-010",
+      "target_tool_id": "A001",
+      "candidate_tool_id": "E3C001",
+      "input": {
+        "value": 1.2,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "value": 121590.0,
+          "source_unit": "atm",
+          "target_unit": "Pa",
+          "conversion_factor": 101325.0,
+          "conversion_offset": 0.0,
+          "category": "压强"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "value": 121590.0
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "expected": 121590.0,
+            "actual": 121590.0,
+            "absolute_error": 0.0,
+            "effective_tolerance": 1.2159e-07,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A002-001",
+      "target_tool_id": "A002",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "Fe2O3"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Fe": 2.0,
+            "O": 3.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "elements": {
+          "Fe": 2.0,
+          "O": 3.0
+        }
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "expected": {
+              "Fe": 2.0,
+              "O": 3.0
+            },
+            "actual": {
+              "Fe": 2.0,
+              "O": 3.0
+            },
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A002-002",
+      "target_tool_id": "A002",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "Fe2(SO4)3"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Fe": 2.0,
+            "S": 3.0,
+            "O": 12.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "elements": {
+          "Fe": 2.0,
+          "S": 3.0,
+          "O": 12.0
+        }
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "expected": {
+              "Fe": 2.0,
+              "S": 3.0,
+              "O": 12.0
+            },
+            "actual": {
+              "Fe": 2.0,
+              "S": 3.0,
+              "O": 12.0
+            },
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A002-003",
+      "target_tool_id": "A002",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Cu": 1.0,
+            "N": 4.0,
+            "H": 12.0,
+            "S": 1.0,
+            "O": 4.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "elements": {
+          "Cu": 1.0,
+          "N": 4.0,
+          "H": 12.0,
+          "S": 1.0,
+          "O": 4.0
+        }
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "expected": {
+              "Cu": 1.0,
+              "N": 4.0,
+              "H": 12.0,
+              "S": 1.0,
+              "O": 4.0
+            },
+            "actual": {
+              "Cu": 1.0,
+              "N": 4.0,
+              "H": 12.0,
+              "S": 1.0,
+              "O": 4.0
+            },
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A002-004",
+      "target_tool_id": "A002",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "Ca(OH)2"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Ca": 1.0,
+            "O": 2.0,
+            "H": 2.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "elements": {
+          "Ca": 1.0,
+          "O": 2.0,
+          "H": 2.0
+        }
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "expected": {
+              "Ca": 1.0,
+              "O": 2.0,
+              "H": 2.0
+            },
+            "actual": {
+              "Ca": 1.0,
+              "O": 2.0,
+              "H": 2.0
+            },
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A002-005",
+      "target_tool_id": "A002",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "(NH4)2SO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "N": 2.0,
+            "H": 8.0,
+            "S": 1.0,
+            "O": 4.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "elements": {
+          "N": 2.0,
+          "H": 8.0,
+          "S": 1.0,
+          "O": 4.0
+        }
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "expected": {
+              "N": 2.0,
+              "H": 8.0,
+              "S": 1.0,
+              "O": 4.0
+            },
+            "actual": {
+              "N": 2.0,
+              "H": 8.0,
+              "S": 1.0,
+              "O": 4.0
+            },
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A002-006",
+      "target_tool_id": "A002",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "K": 4.0,
+            "Fe": 1.0,
+            "C": 6.0,
+            "N": 6.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "elements": {
+          "K": 4.0,
+          "Fe": 1.0,
+          "C": 6.0,
+          "N": 6.0
+        }
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "expected": {
+              "K": 4.0,
+              "Fe": 1.0,
+              "C": 6.0,
+              "N": 6.0
+            },
+            "actual": {
+              "K": 4.0,
+              "Fe": 1.0,
+              "C": 6.0,
+              "N": 6.0
+            },
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A002-007",
+      "target_tool_id": "A002",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "Ca3(PO4)2"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Ca": 3.0,
+            "P": 2.0,
+            "O": 8.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "elements": {
+          "Ca": 3.0,
+          "P": 2.0,
+          "O": 8.0
+        }
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "expected": {
+              "Ca": 3.0,
+              "P": 2.0,
+              "O": 8.0
+            },
+            "actual": {
+              "Ca": 3.0,
+              "P": 2.0,
+              "O": 8.0
+            },
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A004-001",
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C005",
+      "input": {
+        "compositions": {
+          "Fe": 94.0,
+          "C": 4.0,
+          "Si": 2.0
+        }
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "normalized": {
+            "Fe": 0.94,
+            "C": 0.04,
+            "Si": 0.02
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "normalized": {
+          "Fe": 0.94,
+          "C": 0.04,
+          "Si": 0.02
+        }
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "expected": {
+              "Fe": 0.94,
+              "C": 0.04,
+              "Si": 0.02
+            },
+            "actual": {
+              "Fe": 0.94,
+              "C": 0.04,
+              "Si": 0.02
+            },
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A004-002",
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C005",
+      "input": {
+        "compositions": {
+          "Fe": 188.0,
+          "C": 8.0,
+          "Si": 4.0
+        }
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "normalized": {
+            "Fe": 0.94,
+            "C": 0.04,
+            "Si": 0.02
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "normalized": {
+          "Fe": 0.94,
+          "C": 0.04,
+          "Si": 0.02
+        }
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "expected": {
+              "Fe": 0.94,
+              "C": 0.04,
+              "Si": 0.02
+            },
+            "actual": {
+              "Fe": 0.94,
+              "C": 0.04,
+              "Si": 0.02
+            },
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A004-003",
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C005",
+      "input": {
+        "compositions": {
+          "A": 2.0,
+          "B": 3.0
+        }
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "normalized": {
+            "A": 0.4,
+            "B": 0.6
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "normalized": {
+          "A": 0.4,
+          "B": 0.6
+        }
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "expected": {
+              "A": 0.4,
+              "B": 0.6
+            },
+            "actual": {
+              "A": 0.4,
+              "B": 0.6
+            },
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A004-004",
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C005",
+      "input": {
+        "compositions": {
+          "A": 20.0,
+          "B": 30.0
+        }
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "normalized": {
+            "A": 0.4,
+            "B": 0.6
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "normalized": {
+          "A": 0.4,
+          "B": 0.6
+        }
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "expected": {
+              "A": 0.4,
+              "B": 0.6
+            },
+            "actual": {
+              "A": 0.4,
+              "B": 0.6
+            },
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A004-005",
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C005",
+      "input": {
+        "compositions": {
+          "A": 1.0,
+          "B": 1.0,
+          "C": 2.0
+        }
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "normalized": {
+            "A": 0.25,
+            "B": 0.25,
+            "C": 0.5
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "normalized": {
+          "A": 0.25,
+          "B": 0.25,
+          "C": 0.5
+        }
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "expected": {
+              "A": 0.25,
+              "B": 0.25,
+              "C": 0.5
+            },
+            "actual": {
+              "A": 0.25,
+              "B": 0.25,
+              "C": 0.5
+            },
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A004-006",
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C005",
+      "input": {
+        "compositions": {
+          "A": 0.25,
+          "B": 0.25,
+          "C": 0.5
+        }
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "normalized": {
+            "A": 0.25,
+            "B": 0.25,
+            "C": 0.5
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "projected_task_output": {
+        "normalized": {
+          "A": 0.25,
+          "B": 0.25,
+          "C": 0.5
+        }
+      },
+      "scoring": {
+        "passed": true,
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "expected": {
+              "A": 0.25,
+              "B": 0.25,
+              "C": 0.5
+            },
+            "actual": {
+              "A": 0.25,
+              "B": 0.25,
+              "C": 0.5
+            },
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": true
+          }
+        ]
+      },
+      "directly_acceptable": true
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C005",
+      "input": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "NORMALIZATION_ERROR",
+        "error": "ValueError: Can't parse Element or Species from 'trace'"
+      },
+      "projected_task_output": {
+        "normalized": null
+      },
+      "scoring": {
+        "passed": false,
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "expected": {
+              "matrix": 0.999,
+              "trace": 0.001
+            },
+            "actual": null,
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": false
+          }
+        ]
+      },
+      "directly_acceptable": false
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C005",
+      "input": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "NORMALIZATION_ERROR",
+        "error": "ValueError: Can't parse Element or Species from 'trace'"
+      },
+      "projected_task_output": {
+        "normalized": null
+      },
+      "scoring": {
+        "passed": false,
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "expected": {
+              "matrix": 0.999,
+              "trace": 0.001
+            },
+            "actual": null,
+            "absolute_error": null,
+            "effective_tolerance": null,
+            "passed": false
+          }
+        ]
+      },
+      "directly_acceptable": false
+    }
+  ]
+}

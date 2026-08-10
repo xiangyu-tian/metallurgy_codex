@@ -1,0 +1,2311 @@
+{
+  "tasks": [
+    {
+      "task_id": "E1B2-A001-001",
+      "target_tool_id": "A001",
+      "problem_text": "请将 0.25 kg 换算为 g。只返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 250.0,
+            "abs_tol": 1e-09,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A001"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A001",
+        "E3C001"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C001",
+          "input": {
+            "value": 0.25,
+            "source_unit": "kg",
+            "target_unit": "g"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "value": 250.0,
+              "source_unit": "kg",
+              "target_unit": "g",
+              "conversion_factor": 1000.0,
+              "conversion_offset": 0.0,
+              "category": "质量"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "value": 250.0
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "value",
+                "op": "approx",
+                "expected": 250.0,
+                "actual": 250.0,
+                "absolute_error": 0.0,
+                "effective_tolerance": 1e-09,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A001-002",
+      "target_tool_id": "A001",
+      "problem_text": "请将 12.5 kg 换算为 g。只返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 12.5,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 12500.0,
+            "abs_tol": 1.25e-08,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A001"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A001",
+        "E3C001"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C001",
+          "input": {
+            "value": 12.5,
+            "source_unit": "kg",
+            "target_unit": "g"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "value": 12500.0,
+              "source_unit": "kg",
+              "target_unit": "g",
+              "conversion_factor": 1000.0,
+              "conversion_offset": 0.0,
+              "category": "质量"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "value": 12500.0
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "value",
+                "op": "approx",
+                "expected": 12500.0,
+                "actual": 12500.0,
+                "absolute_error": 0.0,
+                "effective_tolerance": 1.25e-08,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A001-003",
+      "target_tool_id": "A001",
+      "problem_text": "请将 0.75 t 换算为 kg。只返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 0.75,
+        "source_unit": "t",
+        "target_unit": "kg"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 750.0,
+            "abs_tol": 1e-09,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A001"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A001",
+        "E3C001"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C001",
+          "input": {
+            "value": 0.75,
+            "source_unit": "t",
+            "target_unit": "kg"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "value": 750.0,
+              "source_unit": "t",
+              "target_unit": "kg",
+              "conversion_factor": 1000.0,
+              "conversion_offset": 0.0,
+              "category": "质量"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "value": 750.0
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "value",
+                "op": "approx",
+                "expected": 750.0,
+                "actual": 750.0,
+                "absolute_error": 0.0,
+                "effective_tolerance": 1e-09,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A001-004",
+      "target_tool_id": "A001",
+      "problem_text": "请将 3.2 t 换算为 kg。只返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 3.2,
+        "source_unit": "t",
+        "target_unit": "kg"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 3200.0,
+            "abs_tol": 3.2e-09,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A001"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A001",
+        "E3C001"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C001",
+          "input": {
+            "value": 3.2,
+            "source_unit": "t",
+            "target_unit": "kg"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "value": 3200.0,
+              "source_unit": "t",
+              "target_unit": "kg",
+              "conversion_factor": 1000.0,
+              "conversion_offset": 0.0,
+              "category": "质量"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "value": 3200.0
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "value",
+                "op": "approx",
+                "expected": 3200.0,
+                "actual": 3200.0,
+                "absolute_error": 0.0,
+                "effective_tolerance": 3.2e-09,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A001-005",
+      "target_tool_id": "A001",
+      "problem_text": "请将 0.0125 m 换算为 mm。只返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 0.0125,
+        "source_unit": "m",
+        "target_unit": "mm"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 12.5,
+            "abs_tol": 1e-09,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A001"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A001",
+        "E3C001"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C001",
+          "input": {
+            "value": 0.0125,
+            "source_unit": "m",
+            "target_unit": "mm"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "value": 12.5,
+              "source_unit": "m",
+              "target_unit": "mm",
+              "conversion_factor": 1000.0,
+              "conversion_offset": 0.0,
+              "category": "长度"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "value": 12.5
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "value",
+                "op": "approx",
+                "expected": 12.5,
+                "actual": 12.5,
+                "absolute_error": 0.0,
+                "effective_tolerance": 1e-09,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A001-006",
+      "target_tool_id": "A001",
+      "problem_text": "请将 2.75 m 换算为 mm。只返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 2.75,
+        "source_unit": "m",
+        "target_unit": "mm"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 2750.0,
+            "abs_tol": 2.75e-09,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A001"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A001",
+        "E3C001"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C001",
+          "input": {
+            "value": 2.75,
+            "source_unit": "m",
+            "target_unit": "mm"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "value": 2750.0,
+              "source_unit": "m",
+              "target_unit": "mm",
+              "conversion_factor": 1000.0,
+              "conversion_offset": 0.0,
+              "category": "长度"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "value": 2750.0
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "value",
+                "op": "approx",
+                "expected": 2750.0,
+                "actual": 2750.0,
+                "absolute_error": 0.0,
+                "effective_tolerance": 2.75e-09,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A001-007",
+      "target_tool_id": "A001",
+      "problem_text": "请将 0.0012 MPa 换算为 Pa。只返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 0.0012,
+        "source_unit": "MPa",
+        "target_unit": "Pa"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 1200.0,
+            "abs_tol": 1.2e-09,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A001"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A001",
+        "E3C001"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C001",
+          "input": {
+            "value": 0.0012,
+            "source_unit": "MPa",
+            "target_unit": "Pa"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "value": 1200.0,
+              "source_unit": "MPa",
+              "target_unit": "Pa",
+              "conversion_factor": 1000000.0,
+              "conversion_offset": 0.0,
+              "category": "压强"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "value": 1200.0
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "value",
+                "op": "approx",
+                "expected": 1200.0,
+                "actual": 1200.0,
+                "absolute_error": 0.0,
+                "effective_tolerance": 1.2e-09,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A001-008",
+      "target_tool_id": "A001",
+      "problem_text": "请将 3.45 MPa 换算为 Pa。只返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 3.45,
+        "source_unit": "MPa",
+        "target_unit": "Pa"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 3450000.0,
+            "abs_tol": 3.45e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A001"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A001",
+        "E3C001"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C001",
+          "input": {
+            "value": 3.45,
+            "source_unit": "MPa",
+            "target_unit": "Pa"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "value": 3450000.0,
+              "source_unit": "MPa",
+              "target_unit": "Pa",
+              "conversion_factor": 1000000.0,
+              "conversion_offset": 0.0,
+              "category": "压强"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "value": 3450000.0
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "value",
+                "op": "approx",
+                "expected": 3450000.0,
+                "actual": 3450000.0,
+                "absolute_error": 0.0,
+                "effective_tolerance": 3.45e-06,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A001-009",
+      "target_tool_id": "A001",
+      "problem_text": "请将 0.5 atm 换算为 Pa。只返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 50662.5,
+            "abs_tol": 5.06625e-08,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A001"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A001",
+        "E3C001"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C001",
+          "input": {
+            "value": 0.5,
+            "source_unit": "atm",
+            "target_unit": "Pa"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "value": 50662.5,
+              "source_unit": "atm",
+              "target_unit": "Pa",
+              "conversion_factor": 101325.0,
+              "conversion_offset": 0.0,
+              "category": "压强"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "value": 50662.5
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "value",
+                "op": "approx",
+                "expected": 50662.5,
+                "actual": 50662.5,
+                "absolute_error": 0.0,
+                "effective_tolerance": 5.06625e-08,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A001-010",
+      "target_tool_id": "A001",
+      "problem_text": "请将 1.2 atm 换算为 Pa。只返回换算后的数值。",
+      "canonical_inputs": {
+        "value": 1.2,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A001-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "value",
+            "op": "approx",
+            "value": 121590.0,
+            "abs_tol": 1.2159e-07,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A001"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A001",
+        "E3C001"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C001",
+          "input": {
+            "value": 1.2,
+            "source_unit": "atm",
+            "target_unit": "Pa"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "value": 121590.0,
+              "source_unit": "atm",
+              "target_unit": "Pa",
+              "conversion_factor": 101325.0,
+              "conversion_offset": 0.0,
+              "category": "压强"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "value": 121590.0
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "value",
+                "op": "approx",
+                "expected": 121590.0,
+                "actual": 121590.0,
+                "absolute_error": 0.0,
+                "effective_tolerance": 1.2159e-07,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A002-001",
+      "target_tool_id": "A002",
+      "problem_text": "解析中性化学式 Fe2O3，返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A002-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "Fe": 2.0,
+              "O": 3.0
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A002"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A002",
+        "E3C002"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C002",
+          "input": {
+            "formula": "Fe2O3"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "Fe": 2.0,
+                "O": 3.0
+              }
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "elements": {
+              "Fe": 2.0,
+              "O": 3.0
+            }
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "elements",
+                "op": "equal",
+                "expected": {
+                  "Fe": 2.0,
+                  "O": 3.0
+                },
+                "actual": {
+                  "Fe": 2.0,
+                  "O": 3.0
+                },
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A002-002",
+      "target_tool_id": "A002",
+      "problem_text": "解析中性化学式 Fe2(SO4)3，返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "Fe2(SO4)3"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A002-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "Fe": 2.0,
+              "S": 3.0,
+              "O": 12.0
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A002"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A002",
+        "E3C002"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C002",
+          "input": {
+            "formula": "Fe2(SO4)3"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "Fe": 2.0,
+                "S": 3.0,
+                "O": 12.0
+              }
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "elements": {
+              "Fe": 2.0,
+              "S": 3.0,
+              "O": 12.0
+            }
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "elements",
+                "op": "equal",
+                "expected": {
+                  "Fe": 2.0,
+                  "S": 3.0,
+                  "O": 12.0
+                },
+                "actual": {
+                  "Fe": 2.0,
+                  "S": 3.0,
+                  "O": 12.0
+                },
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A002-003",
+      "target_tool_id": "A002",
+      "problem_text": "解析中性化学式 [Cu(NH3)4]SO4，返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A002-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "Cu": 1.0,
+              "N": 4.0,
+              "H": 12.0,
+              "S": 1.0,
+              "O": 4.0
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A002"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A002",
+        "E3C002"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C002",
+          "input": {
+            "formula": "[Cu(NH3)4]SO4"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "Cu": 1.0,
+                "N": 4.0,
+                "H": 12.0,
+                "S": 1.0,
+                "O": 4.0
+              }
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "elements": {
+              "Cu": 1.0,
+              "N": 4.0,
+              "H": 12.0,
+              "S": 1.0,
+              "O": 4.0
+            }
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "elements",
+                "op": "equal",
+                "expected": {
+                  "Cu": 1.0,
+                  "N": 4.0,
+                  "H": 12.0,
+                  "S": 1.0,
+                  "O": 4.0
+                },
+                "actual": {
+                  "Cu": 1.0,
+                  "N": 4.0,
+                  "H": 12.0,
+                  "S": 1.0,
+                  "O": 4.0
+                },
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A002-004",
+      "target_tool_id": "A002",
+      "problem_text": "解析中性化学式 Ca(OH)2，返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "Ca(OH)2"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A002-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "Ca": 1.0,
+              "O": 2.0,
+              "H": 2.0
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A002"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A002",
+        "E3C002"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C002",
+          "input": {
+            "formula": "Ca(OH)2"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "Ca": 1.0,
+                "O": 2.0,
+                "H": 2.0
+              }
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "elements": {
+              "Ca": 1.0,
+              "O": 2.0,
+              "H": 2.0
+            }
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "elements",
+                "op": "equal",
+                "expected": {
+                  "Ca": 1.0,
+                  "O": 2.0,
+                  "H": 2.0
+                },
+                "actual": {
+                  "Ca": 1.0,
+                  "O": 2.0,
+                  "H": 2.0
+                },
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A002-005",
+      "target_tool_id": "A002",
+      "problem_text": "解析中性化学式 (NH4)2SO4，返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "(NH4)2SO4"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A002-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "N": 2.0,
+              "H": 8.0,
+              "S": 1.0,
+              "O": 4.0
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A002"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A002",
+        "E3C002"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C002",
+          "input": {
+            "formula": "(NH4)2SO4"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "N": 2.0,
+                "H": 8.0,
+                "S": 1.0,
+                "O": 4.0
+              }
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "elements": {
+              "N": 2.0,
+              "H": 8.0,
+              "S": 1.0,
+              "O": 4.0
+            }
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "elements",
+                "op": "equal",
+                "expected": {
+                  "N": 2.0,
+                  "H": 8.0,
+                  "S": 1.0,
+                  "O": 4.0
+                },
+                "actual": {
+                  "N": 2.0,
+                  "H": 8.0,
+                  "S": 1.0,
+                  "O": 4.0
+                },
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A002-006",
+      "target_tool_id": "A002",
+      "problem_text": "解析中性化学式 K4[Fe(CN)6]，返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A002-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "K": 4.0,
+              "Fe": 1.0,
+              "C": 6.0,
+              "N": 6.0
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A002"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A002",
+        "E3C002"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C002",
+          "input": {
+            "formula": "K4[Fe(CN)6]"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "K": 4.0,
+                "Fe": 1.0,
+                "C": 6.0,
+                "N": 6.0
+              }
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "elements": {
+              "K": 4.0,
+              "Fe": 1.0,
+              "C": 6.0,
+              "N": 6.0
+            }
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "elements",
+                "op": "equal",
+                "expected": {
+                  "K": 4.0,
+                  "Fe": 1.0,
+                  "C": 6.0,
+                  "N": 6.0
+                },
+                "actual": {
+                  "K": 4.0,
+                  "Fe": 1.0,
+                  "C": 6.0,
+                  "N": 6.0
+                },
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A002-007",
+      "target_tool_id": "A002",
+      "problem_text": "解析中性化学式 Ca3(PO4)2，返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "Ca3(PO4)2"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A002-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "elements",
+            "op": "equal",
+            "value": {
+              "Ca": 3.0,
+              "P": 2.0,
+              "O": 8.0
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A002"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A002",
+        "E3C002"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C002",
+          "input": {
+            "formula": "Ca3(PO4)2"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "Ca": 3.0,
+                "P": 2.0,
+                "O": 8.0
+              }
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "elements": {
+              "Ca": 3.0,
+              "P": 2.0,
+              "O": 8.0
+            }
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "elements",
+                "op": "equal",
+                "expected": {
+                  "Ca": 3.0,
+                  "P": 2.0,
+                  "O": 8.0
+                },
+                "actual": {
+                  "Ca": 3.0,
+                  "P": 2.0,
+                  "O": 8.0
+                },
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A004-001",
+      "target_tool_id": "A004",
+      "problem_text": "以下组分使用同一基准：{\"C\": 4.0, \"Fe\": 94.0, \"Si\": 2.0}。请归一化各组分，使总和为1；各分量保留6位小数。",
+      "canonical_inputs": {
+        "compositions": {
+          "Fe": 94.0,
+          "C": 4.0,
+          "Si": 2.0
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A004-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "Fe": 0.94,
+              "C": 0.04,
+              "Si": 0.02
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A004"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A004",
+        "E3C005"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C005",
+          "input": {
+            "compositions": {
+              "Fe": 94.0,
+              "C": 4.0,
+              "Si": 2.0
+            }
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "normalized": {
+                "Fe": 0.94,
+                "C": 0.04,
+                "Si": 0.02
+              }
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "normalized": {
+              "Fe": 0.94,
+              "C": 0.04,
+              "Si": 0.02
+            }
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "normalized",
+                "op": "equal",
+                "expected": {
+                  "Fe": 0.94,
+                  "C": 0.04,
+                  "Si": 0.02
+                },
+                "actual": {
+                  "Fe": 0.94,
+                  "C": 0.04,
+                  "Si": 0.02
+                },
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A004-002",
+      "target_tool_id": "A004",
+      "problem_text": "以下组分使用同一基准：{\"C\": 8.0, \"Fe\": 188.0, \"Si\": 4.0}。请归一化各组分，使总和为1；各分量保留6位小数。",
+      "canonical_inputs": {
+        "compositions": {
+          "Fe": 188.0,
+          "C": 8.0,
+          "Si": 4.0
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A004-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "Fe": 0.94,
+              "C": 0.04,
+              "Si": 0.02
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A004"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A004",
+        "E3C005"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C005",
+          "input": {
+            "compositions": {
+              "Fe": 188.0,
+              "C": 8.0,
+              "Si": 4.0
+            }
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "normalized": {
+                "Fe": 0.94,
+                "C": 0.04,
+                "Si": 0.02
+              }
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "normalized": {
+              "Fe": 0.94,
+              "C": 0.04,
+              "Si": 0.02
+            }
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "normalized",
+                "op": "equal",
+                "expected": {
+                  "Fe": 0.94,
+                  "C": 0.04,
+                  "Si": 0.02
+                },
+                "actual": {
+                  "Fe": 0.94,
+                  "C": 0.04,
+                  "Si": 0.02
+                },
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A004-003",
+      "target_tool_id": "A004",
+      "problem_text": "以下组分使用同一基准：{\"A\": 2.0, \"B\": 3.0}。请归一化各组分，使总和为1；各分量保留6位小数。",
+      "canonical_inputs": {
+        "compositions": {
+          "A": 2.0,
+          "B": 3.0
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A004-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "A": 0.4,
+              "B": 0.6
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A004"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A004",
+        "E3C005"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C005",
+          "input": {
+            "compositions": {
+              "A": 2.0,
+              "B": 3.0
+            }
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "normalized": {
+                "A": 0.4,
+                "B": 0.6
+              }
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "normalized": {
+              "A": 0.4,
+              "B": 0.6
+            }
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "normalized",
+                "op": "equal",
+                "expected": {
+                  "A": 0.4,
+                  "B": 0.6
+                },
+                "actual": {
+                  "A": 0.4,
+                  "B": 0.6
+                },
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A004-004",
+      "target_tool_id": "A004",
+      "problem_text": "以下组分使用同一基准：{\"A\": 20.0, \"B\": 30.0}。请归一化各组分，使总和为1；各分量保留6位小数。",
+      "canonical_inputs": {
+        "compositions": {
+          "A": 20.0,
+          "B": 30.0
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A004-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "A": 0.4,
+              "B": 0.6
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A004"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A004",
+        "E3C005"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C005",
+          "input": {
+            "compositions": {
+              "A": 20.0,
+              "B": 30.0
+            }
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "normalized": {
+                "A": 0.4,
+                "B": 0.6
+              }
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "normalized": {
+              "A": 0.4,
+              "B": 0.6
+            }
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "normalized",
+                "op": "equal",
+                "expected": {
+                  "A": 0.4,
+                  "B": 0.6
+                },
+                "actual": {
+                  "A": 0.4,
+                  "B": 0.6
+                },
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A004-005",
+      "target_tool_id": "A004",
+      "problem_text": "以下组分使用同一基准：{\"A\": 1.0, \"B\": 1.0, \"C\": 2.0}。请归一化各组分，使总和为1；各分量保留6位小数。",
+      "canonical_inputs": {
+        "compositions": {
+          "A": 1.0,
+          "B": 1.0,
+          "C": 2.0
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A004-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "A": 0.25,
+              "B": 0.25,
+              "C": 0.5
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A004"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A004",
+        "E3C005"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C005",
+          "input": {
+            "compositions": {
+              "A": 1.0,
+              "B": 1.0,
+              "C": 2.0
+            }
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "normalized": {
+                "A": 0.25,
+                "B": 0.25,
+                "C": 0.5
+              }
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "normalized": {
+              "A": 0.25,
+              "B": 0.25,
+              "C": 0.5
+            }
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "normalized",
+                "op": "equal",
+                "expected": {
+                  "A": 0.25,
+                  "B": 0.25,
+                  "C": 0.5
+                },
+                "actual": {
+                  "A": 0.25,
+                  "B": 0.25,
+                  "C": 0.5
+                },
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A004-006",
+      "target_tool_id": "A004",
+      "problem_text": "以下组分使用同一基准：{\"A\": 0.25, \"B\": 0.25, \"C\": 0.5}。请归一化各组分，使总和为1；各分量保留6位小数。",
+      "canonical_inputs": {
+        "compositions": {
+          "A": 0.25,
+          "B": 0.25,
+          "C": 0.5
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A004-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "A": 0.25,
+              "B": 0.25,
+              "C": 0.5
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A004"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A004",
+        "E3C005"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C005",
+          "input": {
+            "compositions": {
+              "A": 0.25,
+              "B": 0.25,
+              "C": 0.5
+            }
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "normalized": {
+                "A": 0.25,
+                "B": 0.25,
+                "C": 0.5
+              }
+            },
+            "error_code": null,
+            "error": null
+          },
+          "projected_task_output": {
+            "normalized": {
+              "A": 0.25,
+              "B": 0.25,
+              "C": 0.5
+            }
+          },
+          "scoring": {
+            "passed": true,
+            "checks": [
+              {
+                "path": "normalized",
+                "op": "equal",
+                "expected": {
+                  "A": 0.25,
+                  "B": 0.25,
+                  "C": 0.5
+                },
+                "actual": {
+                  "A": 0.25,
+                  "B": 0.25,
+                  "C": 0.5
+                },
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": true
+              }
+            ]
+          },
+          "directly_acceptable": true
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A004-007",
+      "target_tool_id": "A004",
+      "problem_text": "以下组分使用同一基准：{\"matrix\": 999.0, \"trace\": 1.0}。请归一化各组分，使总和为1；各分量保留6位小数。",
+      "canonical_inputs": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A004-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "matrix": 0.999,
+              "trace": 0.001
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A004"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A004"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C005",
+          "input": {
+            "compositions": {
+              "matrix": 999.0,
+              "trace": 1.0
+            }
+          },
+          "execution": {
+            "success": false,
+            "result": null,
+            "error_code": "NORMALIZATION_ERROR",
+            "error": "ValueError: Can't parse Element or Species from 'trace'"
+          },
+          "projected_task_output": {
+            "normalized": null
+          },
+          "scoring": {
+            "passed": false,
+            "checks": [
+              {
+                "path": "normalized",
+                "op": "equal",
+                "expected": {
+                  "matrix": 0.999,
+                  "trace": 0.001
+                },
+                "actual": null,
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": false
+              }
+            ]
+          },
+          "directly_acceptable": false
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-A004-008",
+      "target_tool_id": "A004",
+      "problem_text": "以下组分使用同一基准：{\"matrix\": 0.999, \"trace\": 0.001}。请归一化各组分，使总和为1；各分量保留6位小数。",
+      "canonical_inputs": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A004-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "normalized",
+            "op": "equal",
+            "value": {
+              "matrix": 0.999,
+              "trace": 0.001
+            }
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A004"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A004"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C005",
+          "input": {
+            "compositions": {
+              "matrix": 0.999,
+              "trace": 0.001
+            }
+          },
+          "execution": {
+            "success": false,
+            "result": null,
+            "error_code": "NORMALIZATION_ERROR",
+            "error": "ValueError: Can't parse Element or Species from 'trace'"
+          },
+          "projected_task_output": {
+            "normalized": null
+          },
+          "scoring": {
+            "passed": false,
+            "checks": [
+              {
+                "path": "normalized",
+                "op": "equal",
+                "expected": {
+                  "matrix": 0.999,
+                  "trace": 0.001
+                },
+                "actual": null,
+                "absolute_error": null,
+                "effective_tolerance": null,
+                "passed": false
+              }
+            ]
+          },
+          "directly_acceptable": false
+        }
+      ],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-B019-001",
+      "target_tool_id": "B019",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.4，相1边界成分为 0.2，相2边界成分为 0.7，三者均使用 fraction 标度。计算相1和相2的相分数，结果保留6位小数。",
+      "canonical_inputs": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-B019-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.6,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.4,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "B019"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "B019"
+      ],
+      "direct_candidate_evaluations": [],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-B019-002",
+      "target_tool_id": "B019",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 40，相1边界成分为 20，相2边界成分为 70，三者均使用 percent 标度。计算相1和相2的相分数，结果保留6位小数。",
+      "canonical_inputs": {
+        "overall_composition": 40.0,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "composition_basis": "percent"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-B019-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.6,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.4,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "B019"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "B019"
+      ],
+      "direct_candidate_evaluations": [],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-B019-003",
+      "target_tool_id": "B019",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.55，相1边界成分为 0.1，相2边界成分为 0.9，三者均使用 fraction 标度。计算相1和相2的相分数，结果保留6位小数。",
+      "canonical_inputs": {
+        "overall_composition": 0.55,
+        "phase1_composition": 0.1,
+        "phase2_composition": 0.9,
+        "composition_basis": "fraction"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-B019-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.4375,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.5625,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "B019"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "B019"
+      ],
+      "direct_candidate_evaluations": [],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-B019-004",
+      "target_tool_id": "B019",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 55，相1边界成分为 10，相2边界成分为 90，三者均使用 percent 标度。计算相1和相2的相分数，结果保留6位小数。",
+      "canonical_inputs": {
+        "overall_composition": 55.00000000000001,
+        "phase1_composition": 10.0,
+        "phase2_composition": 90.0,
+        "composition_basis": "percent"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-B019-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.4375,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.5625,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "B019"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "B019"
+      ],
+      "direct_candidate_evaluations": [],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-B019-005",
+      "target_tool_id": "B019",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.25，相1边界成分为 0.25，相2边界成分为 0.8，三者均使用 fraction 标度。计算相1和相2的相分数，结果保留6位小数。",
+      "canonical_inputs": {
+        "overall_composition": 0.25,
+        "phase1_composition": 0.25,
+        "phase2_composition": 0.8,
+        "composition_basis": "fraction"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-B019-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 1.0,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.0,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "B019"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "B019"
+      ],
+      "direct_candidate_evaluations": [],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-B019-006",
+      "target_tool_id": "B019",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 25，相1边界成分为 25，相2边界成分为 80，三者均使用 percent 标度。计算相1和相2的相分数，结果保留6位小数。",
+      "canonical_inputs": {
+        "overall_composition": 25.0,
+        "phase1_composition": 25.0,
+        "phase2_composition": 80.0,
+        "composition_basis": "percent"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-B019-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 1.0,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.0,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "B019"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "B019"
+      ],
+      "direct_candidate_evaluations": [],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-B019-007",
+      "target_tool_id": "B019",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.6，相1边界成分为 0.85，相2边界成分为 0.35，三者均使用 fraction 标度。计算相1和相2的相分数，结果保留6位小数。",
+      "canonical_inputs": {
+        "overall_composition": 0.6,
+        "phase1_composition": 0.85,
+        "phase2_composition": 0.35,
+        "composition_basis": "fraction"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-B019-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.5,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.5,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "B019"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "B019"
+      ],
+      "direct_candidate_evaluations": [],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    },
+    {
+      "task_id": "E1B2-B019-008",
+      "target_tool_id": "B019",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 60，相1边界成分为 85，相2边界成分为 35，三者均使用 percent 标度。计算相1和相2的相分数，结果保留6位小数。",
+      "canonical_inputs": {
+        "overall_composition": 60.0,
+        "phase1_composition": 85.0,
+        "phase2_composition": 35.0,
+        "composition_basis": "percent"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-B019-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "phase1_fraction",
+            "op": "approx",
+            "value": 0.5,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          },
+          {
+            "path": "phase2_fraction",
+            "op": "approx",
+            "value": 0.5,
+            "abs_tol": 1e-06,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "B019"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "B019"
+      ],
+      "direct_candidate_evaluations": [],
+      "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+      "full_137_registry_gold_claim_allowed": false
+    }
+  ]
+}

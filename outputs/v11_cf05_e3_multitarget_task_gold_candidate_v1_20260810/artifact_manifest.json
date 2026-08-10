@@ -1,0 +1,31 @@
+{
+  "revalidation_id": "V11-CF05-E3-MULTITARGET-TASK-GOLD-CANDIDATE-V1-20260810",
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "filename": "candidate_scope_screening.json",
+      "sha256": "3c59e91d7be8775eef2c420a8597d9a569c2be7f61874d3f8d08eb84919aeb4a",
+      "bytes": 2201
+    },
+    {
+      "filename": "direct_candidate_execution_results.json",
+      "sha256": "586896dda83fad25b6fddacf6fbce82a44f1e54deac744cbc288230dd2353066",
+      "bytes": 27371
+    },
+    {
+      "filename": "multitarget_task_acceptable_tools_registry.json",
+      "sha256": "a31d2f1fb7599a01c6cf178db4397119f21c737a6256fde03f46142d51dd367b",
+      "bytes": 66814
+    },
+    {
+      "filename": "multitarget_task_gold_config_snapshot.json",
+      "sha256": "a9c265a01729d26870e7e8dcd481b0714a817e69c48d86ca3d7d3ceae6a19950",
+      "bytes": 3648
+    },
+    {
+      "filename": "multitarget_task_gold_report.json",
+      "sha256": "5cfc4c8ce94401267695c0cb449af316c30dea38f7a8c33ff1542b4f41816bc7",
+      "bytes": 2403
+    }
+  ]
+}

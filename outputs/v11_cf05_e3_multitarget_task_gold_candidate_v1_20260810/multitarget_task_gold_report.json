@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "revalidation_id": "V11-CF05-E3-MULTITARGET-TASK-GOLD-CANDIDATE-V1-20260810",
+  "status": "non_a003_task_gold_candidate_revalidated_for_development_scope",
+  "selection_estimand": "single_tool_direct_contract_satisfaction",
+  "candidate_scope": "target_plus_registered_relation_neighbors_plus_base_algorithmic_lexical_candidates",
+  "target_count": 4,
+  "task_count": 33,
+  "execution_count": 25,
+  "all_direct_candidate_executions_succeeded": false,
+  "observed_contract_inapplicable_task_ids": [
+    "E1B2-A004-007",
+    "E1B2-A004-008"
+  ],
+  "expected_contract_inapplicable_task_ids": [
+    "E1B2-A004-007",
+    "E1B2-A004-008"
+  ],
+  "unexpected_execution_failure_task_ids": [],
+  "missing_expected_failure_task_ids": [],
+  "all_execution_outcomes_match_policy": true,
+  "target_summaries": [
+    {
+      "target_tool_id": "A001",
+      "task_count": 10,
+      "direct_candidate_acceptance_counts": {
+        "E3C001": 10
+      },
+      "singleton_acceptable_set_count": 0,
+      "multiple_acceptable_set_count": 10
+    },
+    {
+      "target_tool_id": "A002",
+      "task_count": 7,
+      "direct_candidate_acceptance_counts": {
+        "E3C002": 7
+      },
+      "singleton_acceptable_set_count": 0,
+      "multiple_acceptable_set_count": 7
+    },
+    {
+      "target_tool_id": "A004",
+      "task_count": 8,
+      "direct_candidate_acceptance_counts": {
+        "E3C005": 6
+      },
+      "singleton_acceptable_set_count": 2,
+      "multiple_acceptable_set_count": 6
+    },
+    {
+      "target_tool_id": "B019",
+      "task_count": 8,
+      "direct_candidate_acceptance_counts": {},
+      "singleton_acceptable_set_count": 8,
+      "multiple_acceptable_set_count": 0
+    }
+  ],
+  "full_137_registry_gold_claim_allowed": false,
+  "development_mixed_realistic_opening_allowed": true,
+  "environment": {
+    "python_version": "3.11.15",
+    "expected_versions": {
+      "pint": "0.25.3",
+      "pymatgen": "2026.5.4"
+    },
+    "actual_versions": {
+      "pint": "0.25.3",
+      "pymatgen": "2026.5.4"
+    },
+    "environment_match": true
+  },
+  "external_api_calls": 0,
+  "tool_executions": 25,
+  "confirmatory_use_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "next_gate": "build the no-API 17/120 mixed-realistic multi-target development opening package"
+}
