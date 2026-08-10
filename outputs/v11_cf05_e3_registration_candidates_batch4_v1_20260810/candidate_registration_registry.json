@@ -1,0 +1,106 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH4-V1-20260810",
+  "candidate_count": 2,
+  "candidates": [
+    {
+      "candidate_tool_id": "E3C026",
+      "provisional_candidate_id": "SRC-SCIPY-001",
+      "target_tool_id": "A004",
+      "semantic_alias": "scipy_composition_score_softmax",
+      "callable_identity": "scipy.special.softmax",
+      "source_reference": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.softmax.html",
+      "tool_id": "E3C026",
+      "tool_name": "SciPy成分归一化Softmax",
+      "scenario": "通用数据与校验",
+      "core_method": "SciPy成分归一化Softmax专用算法",
+      "main_input": "组分名称到未归一化得分的映射",
+      "main_output": "和为1的Softmax归一化组分概率映射",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "real_finite_composition_score_vectors"
+      ],
+      "data_or_model_version": "scipy-1.17.1-special-softmax",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "scipy",
+      "package_version": "1.17.1",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C026",
+          "description": "SciPy成分归一化Softmax；方法：SciPy成分归一化Softmax专用算法；输入：组分名称到未归一化得分的映射；输出：和为1的Softmax归一化组分概率映射；边界：composition-normalization wording overlaps A004, but softmax exponentiates arbitrary scores instead of dividing measured nonnegative composition amounts by their sum",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "scores": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "number"
+                }
+              }
+            },
+            "required": [
+              "scores"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch4",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    },
+    {
+      "candidate_tool_id": "E3C027",
+      "provisional_candidate_id": "SRC-NUMPY-001",
+      "target_tool_id": "A004",
+      "semantic_alias": "numpy_composition_l2_normalization",
+      "callable_identity": "numpy.linalg.vector_norm(ord=2) plus vector division",
+      "source_reference": "https://numpy.org/doc/stable/reference/generated/numpy.linalg.vector_norm.html",
+      "tool_id": "E3C027",
+      "tool_name": "NumPy成分向量L2归一化",
+      "scenario": "通用数据与校验",
+      "core_method": "质量分数/摩尔分数归一化与基准转换",
+      "main_input": "组分名称到数值的映射",
+      "main_output": "L2范数为1的归一化组分向量与原始范数",
+      "lifecycle_status": "candidate_registered_nonformal",
+      "supported_systems": [
+        "finite_nonzero_composition_vectors_under_l2_norm"
+      ],
+      "data_or_model_version": "numpy-2.4.6-linalg-vector-norm",
+      "service_status": "available_in_isolated_candidate_environment",
+      "package": "numpy",
+      "package_version": "2.4.6",
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "E3C027",
+          "description": "NumPy成分向量L2归一化；方法：质量分数/摩尔分数归一化与基准转换；输入：组分名称到数值的映射；输出：L2范数为1的归一化组分向量与原始范数；边界：shares A004 composition-vector normalization mechanics but enforces unit L2 norm rather than the unit-sum mass or molar fraction contract",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "compositions": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "number"
+                }
+              }
+            },
+            "required": [
+              "compositions"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "runtime_adapter": "Tools.core_freeze.e3_routing.candidate_runtime_adapters:invoke_batch4",
+      "runtime_contract_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_catalog_entry": false,
+      "formal_execution_allowed": false,
+      "formal_pool_inclusion_allowed": false
+    }
+  ]
+}

@@ -573,6 +573,80 @@ def invoke_molmass_isotope_spectrum(params: dict[str, Any]) -> dict[str, Any]:
         return _failure("ISOTOPE_SPECTRUM_ERROR", f"{type(exc).__name__}: {str(exc)[:240]}")
 
 
+def _finite_numeric_mapping(params: Any, field: str) -> dict[str, float] | None:
+    import math
+
+    if not isinstance(params, dict) or set(params) != {field}:
+        return None
+    raw = params.get(field)
+    if not isinstance(raw, dict) or not raw:
+        return None
+    converted: dict[str, float] = {}
+    for key, value in raw.items():
+        if not isinstance(key, str) or not key or isinstance(value, bool) or not isinstance(value, (int, float)):
+            return None
+        number = float(value)
+        if not math.isfinite(number):
+            return None
+        converted[key] = number
+    return converted
+
+
+def invoke_scipy_composition_softmax(params: dict[str, Any]) -> dict[str, Any]:
+    scores = _finite_numeric_mapping(params, "scores")
+    if scores is None:
+        return _failure("INVALID_SCORES", "scores must be a non-empty finite numeric mapping")
+    try:
+        from scipy.special import softmax
+
+        labels = list(scores)
+        values = softmax([scores[label] for label in labels])
+        probabilities = {label: float(value) for label, value in zip(labels, values)}
+        return {
+            "success": True,
+            "result": {
+                "probabilities": probabilities,
+                "probability_sum": float(sum(probabilities.values())),
+                "normalization": "softmax",
+            },
+            "error_code": None,
+            "error": None,
+        }
+    except Exception as exc:
+        return _failure("SOFTMAX_ERROR", f"{type(exc).__name__}: {str(exc)[:240]}")
+
+
+def invoke_numpy_l2_composition_normalization(params: dict[str, Any]) -> dict[str, Any]:
+    compositions = _finite_numeric_mapping(params, "compositions")
+    if compositions is None:
+        return _failure(
+            "INVALID_COMPOSITIONS", "compositions must be a non-empty finite numeric mapping"
+        )
+    try:
+        import numpy as np
+
+        labels = list(compositions)
+        values = np.asarray([compositions[label] for label in labels], dtype=float)
+        norm = float(np.linalg.vector_norm(values, ord=2))
+        if norm == 0:
+            return _failure("ZERO_L2_NORM", "an all-zero composition vector cannot be L2-normalized")
+        normalized = values / norm
+        return {
+            "success": True,
+            "result": {
+                "normalized": {
+                    label: float(value) for label, value in zip(labels, normalized)
+                },
+                "original_l2_norm": norm,
+                "normalization": "l2",
+            },
+            "error_code": None,
+            "error": None,
+        }
+    except Exception as exc:
+        return _failure("L2_NORMALIZATION_ERROR", f"{type(exc).__name__}: {str(exc)[:240]}")
+
+
 ADAPTERS: dict[str, Callable[[dict[str, Any]], dict[str, Any]]] = {
     "E3C001": invoke_pint_unit_conversion,
     "E3C002": invoke_pymatgen_formula_parser,
@@ -608,6 +682,12 @@ BATCH3_ADAPTERS: dict[str, Callable[[dict[str, Any]], dict[str, Any]]] = {
 }
 
 
+BATCH4_ADAPTERS: dict[str, Callable[[dict[str, Any]], dict[str, Any]]] = {
+    "E3C026": invoke_scipy_composition_softmax,
+    "E3C027": invoke_numpy_l2_composition_normalization,
+}
+
+
 def invoke(candidate_tool_id: str, params: dict[str, Any]) -> dict[str, Any]:
     adapter = ADAPTERS.get(candidate_tool_id)
     if adapter is None:
@@ -626,4 +706,11 @@ def invoke_batch3(candidate_tool_id: str, params: dict[str, Any]) -> dict[str, A
     adapter = BATCH3_ADAPTERS.get(candidate_tool_id)
     if adapter is None:
         return _failure("UNKNOWN_CANDIDATE_TOOL", f"unknown batch-3 candidate: {candidate_tool_id}")
+    return adapter(params)
+
+
+def invoke_batch4(candidate_tool_id: str, params: dict[str, Any]) -> dict[str, Any]:
+    adapter = BATCH4_ADAPTERS.get(candidate_tool_id)
+    if adapter is None:
+        return _failure("UNKNOWN_CANDIDATE_TOOL", f"unknown batch-4 candidate: {candidate_tool_id}")
     return adapter(params)

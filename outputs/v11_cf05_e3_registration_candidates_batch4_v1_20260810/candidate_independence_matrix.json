@@ -1,0 +1,24 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH4-V1-20260810",
+  "row_count": 2,
+  "rows": [
+    {
+      "candidate_tool_id": "E3C026",
+      "package": "scipy",
+      "callable_identity": "scipy.special.softmax",
+      "semantic_alias": "scipy_composition_score_softmax",
+      "same_callable_renaming": false,
+      "distinct_input_or_output_contract": true,
+      "source_reference": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.softmax.html"
+    },
+    {
+      "candidate_tool_id": "E3C027",
+      "package": "numpy",
+      "callable_identity": "numpy.linalg.vector_norm(ord=2) plus vector division",
+      "semantic_alias": "numpy_composition_l2_normalization",
+      "same_callable_renaming": false,
+      "distinct_input_or_output_contract": true,
+      "source_reference": "https://numpy.org/doc/stable/reference/generated/numpy.linalg.vector_norm.html"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH4-V1-20260810",
+  "row_count": 2,
+  "rows": [
+    {
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C026",
+      "candidate_tool_name": "SciPy成分归一化Softmax",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": false,
+      "name_bigram_dice": 0.4,
+      "contract_text_bigram_dice": 0.144928,
+      "input_bigram_dice": 0.0,
+      "output_bigram_dice": 0.24,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": true,
+      "provable_contract_mismatch_neighbor": false,
+      "relation_policy": "lexical",
+      "relation_mechanism": "composition-normalization wording overlaps A004, but softmax exponentiates arbitrary scores instead of dividing measured nonnegative composition amounts by their sum",
+      "runtime_evidence_case_ids": [
+        "E3-B4-E3C026-N01",
+        "E3-B4-E3C026-B01",
+        "E3-B4-E3C026-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "lexical",
+      "formal_relation_admission": false
+    },
+    {
+      "target_tool_id": "A004",
+      "candidate_tool_id": "E3C027",
+      "candidate_tool_name": "NumPy成分向量L2归一化",
+      "candidate_lifecycle_status": "candidate_registered_nonformal",
+      "same_scenario": true,
+      "same_core_method": true,
+      "name_bigram_dice": 0.352941,
+      "contract_text_bigram_dice": 0.486486,
+      "input_bigram_dice": 0.0,
+      "output_bigram_dice": 0.26087,
+      "structured_contract_available": true,
+      "structured_mismatch_dimensions": [
+        "supported_systems",
+        "service_status"
+      ],
+      "algorithmic_lexical_candidate": false,
+      "provable_contract_mismatch_neighbor": true,
+      "relation_policy": "contract_mismatch",
+      "relation_mechanism": "shares A004 composition-vector normalization mechanics but enforces unit L2 norm rather than the unit-sum mass or molar fraction contract",
+      "runtime_evidence_case_ids": [
+        "E3-B4-E3C027-N01",
+        "E3-B4-E3C027-B01",
+        "E3-B4-E3C027-F01"
+      ],
+      "relation_evidence_passed": true,
+      "registration_candidate_relation": "contract_mismatch",
+      "formal_relation_admission": false
+    }
+  ]
+}

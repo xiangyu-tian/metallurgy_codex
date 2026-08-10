@@ -1,0 +1,147 @@
+{
+  "package_id": "V11-CF05-E3-REGISTRATION-CANDIDATES-BATCH4-V1-20260810",
+  "case_count": 6,
+  "rows": [
+    {
+      "candidate_tool_id": "E3C026",
+      "case_id": "E3-B4-E3C026-N01",
+      "case_kind": "normal",
+      "input": {
+        "scores": {
+          "Fe": 2.0,
+          "C": 1.0,
+          "Si": 0.0
+        }
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "probabilities": {
+            "Fe": 0.6652409557748218,
+            "C": 0.24472847105479764,
+            "Si": 0.09003057317038046
+          },
+          "probability_sum": 0.9999999999999999,
+          "normalization": "softmax"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C026",
+      "case_id": "E3-B4-E3C026-B01",
+      "case_kind": "boundary",
+      "input": {
+        "scores": {
+          "Fe": 1000.0,
+          "C": -1000.0
+        }
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "probabilities": {
+            "Fe": 1.0,
+            "C": 0.0
+          },
+          "probability_sum": 1.0,
+          "normalization": "softmax"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C026",
+      "case_id": "E3-B4-E3C026-F01",
+      "case_kind": "failure",
+      "input": {
+        "scores": {}
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "INVALID_SCORES",
+        "error": "scores must be a non-empty finite numeric mapping"
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C027",
+      "case_id": "E3-B4-E3C027-N01",
+      "case_kind": "normal",
+      "input": {
+        "compositions": {
+          "Fe": 3.0,
+          "C": 4.0
+        }
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "normalized": {
+            "Fe": 0.6,
+            "C": 0.8
+          },
+          "original_l2_norm": 5.0,
+          "normalization": "l2"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C027",
+      "case_id": "E3-B4-E3C027-B01",
+      "case_kind": "boundary",
+      "input": {
+        "compositions": {
+          "Fe": 1.0,
+          "C": 0.0
+        }
+      },
+      "expected_success": true,
+      "execution": {
+        "success": true,
+        "result": {
+          "normalized": {
+            "Fe": 1.0,
+            "C": 0.0
+          },
+          "original_l2_norm": 1.0,
+          "normalization": "l2"
+        },
+        "error_code": null,
+        "error": null
+      },
+      "contract_outcome_pass": true
+    },
+    {
+      "candidate_tool_id": "E3C027",
+      "case_id": "E3-B4-E3C027-F01",
+      "case_kind": "failure",
+      "input": {
+        "compositions": {
+          "Fe": 0.0,
+          "C": 0.0
+        }
+      },
+      "expected_success": false,
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ZERO_L2_NORM",
+        "error": "an all-zero composition vector cannot be L2-normalized"
+      },
+      "contract_outcome_pass": true
+    }
+  ]
+}

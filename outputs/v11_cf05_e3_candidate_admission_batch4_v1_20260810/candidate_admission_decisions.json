@@ -1,0 +1,57 @@
+{
+  "decision_id": "V11-CF05-E3-CANDIDATE-ADMISSION-BATCH4-V1-20260810",
+  "admitted": [
+    {
+      "candidate_tool_id": "E3C026",
+      "target_tool_id": "A004",
+      "relation_type": "lexical",
+      "relation_mechanism": "composition-normalization wording overlaps A004, but softmax exponentiates arbitrary scores instead of dividing measured nonnegative composition amounts by their sum",
+      "callable_identity": "scipy.special.softmax",
+      "runtime_evidence_case_ids": [
+        "E3-B4-E3C026-N01",
+        "E3-B4-E3C026-B01",
+        "E3-B4-E3C026-F01"
+      ],
+      "checks": {
+        "target_is_a004": true,
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "independent_callable": true,
+        "distinct_contract": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    },
+    {
+      "candidate_tool_id": "E3C027",
+      "target_tool_id": "A004",
+      "relation_type": "contract_mismatch",
+      "relation_mechanism": "shares A004 composition-vector normalization mechanics but enforces unit L2 norm rather than the unit-sum mass or molar fraction contract",
+      "callable_identity": "numpy.linalg.vector_norm(ord=2) plus vector division",
+      "runtime_evidence_case_ids": [
+        "E3-B4-E3C027-N01",
+        "E3-B4-E3C027-B01",
+        "E3-B4-E3C027-F01"
+      ],
+      "checks": {
+        "target_is_a004": true,
+        "runtime_contract_passed": true,
+        "normal_boundary_failure_present": true,
+        "relation_evidence_passed": true,
+        "relation_type_allowed": true,
+        "frozen_threshold_passed": true,
+        "independent_callable": true,
+        "distinct_contract": true,
+        "formal_pool_inclusion_disabled": true
+      },
+      "decision": "admit_to_relation_evidence_registry",
+      "relation_registry_admitted": true,
+      "formal_pool_inclusion": false
+    }
+  ]
+}
