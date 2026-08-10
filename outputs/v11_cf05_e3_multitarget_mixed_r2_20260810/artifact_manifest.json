@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "run_id": "V11-CF05-E3-MULTITARGET-MIXED-R2-20260810",
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "filename": "execution_authorization_snapshot.json",
+      "sha256": "d656e450754acc235ff4f0609e3bad95f5dd5447fb11ba455a75272ea6c6e4d3",
+      "bytes": 2194
+    },
+    {
+      "filename": "multitarget_request_results.json",
+      "sha256": "5225577ef82e509548302a83f3efd5198bff6f20a936b743c1add8d41c87ebd2",
+      "bytes": 200308
+    },
+    {
+      "filename": "multitarget_runtime_config_snapshot.json",
+      "sha256": "1d63c0d19b11563ac26cd35e7a01738d0782c6c29d1457597937b53cb9dc0cd3",
+      "bytes": 2733
+    },
+    {
+      "filename": "multitarget_runtime_report.json",
+      "sha256": "460fe8a3fad19fccf7344294e5a6f4856e17896ede3f0a673e6699b368887491",
+      "bytes": 709
+    },
+    {
+      "filename": "runner_source_snapshot.py",
+      "sha256": "94feb70278545f357cc5924c86fbddcb0f8bd549d54a16fa7447778c50db4ea3",
+      "bytes": 16528
+    }
+  ]
+}

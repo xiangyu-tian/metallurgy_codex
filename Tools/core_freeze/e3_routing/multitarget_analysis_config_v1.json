@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-MULTITARGET-MIXED-R2-ANALYSIS-20260810",
+  "run_id": "V11-CF05-E3-MULTITARGET-MIXED-R2-20260810",
+  "expected_result_count": 64,
+  "expected_task_count": 8,
+  "methods": [
+    "full_schema",
+    "lexical_top5",
+    "dense_top5",
+    "hierarchical"
+  ],
+  "tool_pool_sizes": [
+    17,
+    120
+  ],
+  "development_only": true,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "request_results": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_r2_20260810/multitarget_request_results.json",
+      "sha256": "5225577ef82e509548302a83f3efd5198bff6f20a936b743c1add8d41c87ebd2"
+    },
+    "runtime_report": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_r2_20260810/multitarget_runtime_report.json",
+      "sha256": "460fe8a3fad19fccf7344294e5a6f4856e17896ede3f0a673e6699b368887491"
+    },
+    "execution_manifest": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_r2_20260810/artifact_manifest.json",
+      "sha256": "86382feaa6206ebe4962e3667b99aa079d40b93f4f26d3ce7ed54b7c1767e1e9"
+    },
+    "scoring_registry": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_opening_v1_20260810/multitarget_routing_scoring_registry.json",
+      "sha256": "301fe91e2f39badf90aa1e6266da1e0bd97aa8a80d231bf3648c887f40a752db"
+    },
+    "candidate_views": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_opening_v1_20260810/multitarget_candidate_views.json",
+      "sha256": "ec91c6bf116eef399abae6a28f1fa0b3b122b223f23137e10804fed5ad552994"
+    }
+  }
+}

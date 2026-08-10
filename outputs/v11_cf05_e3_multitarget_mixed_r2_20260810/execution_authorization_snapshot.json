@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "run_id": "V11-CF05-E3-MULTITARGET-MIXED-R2-20260810",
+  "opening_id": "V11-CF05-E3-MULTITARGET-MIXED-OPENING-V1-20260810",
+  "decision": "authorized_to_execute_multitarget_mixed_development",
+  "provider": "deepseek",
+  "endpoint": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "scheduled_request_count": 64,
+  "opening_manifest_sha256": "0b27fff6f21ce0b1414708b54897ffdffa1ca9c23458b78ee89e7814df7c43c0",
+  "runtime_config_sha256": "1d63c0d19b11563ac26cd35e7a01738d0782c6c29d1457597937b53cb9dc0cd3",
+  "runner_sha256": "94feb70278545f357cc5924c86fbddcb0f8bd549d54a16fa7447778c50db4ea3",
+  "runner_git_commit": "eb35e8ad06f41c50899ef0762fd764840462d1b0",
+  "external_data_sharing_authorized": true,
+  "external_api_execution_authorized": true,
+  "tool_execution_authorized": false,
+  "provider_retry_authorized": false,
+  "independent_validation_split_access_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "authorized_scope": {
+    "frozen_development_task_count": 8,
+    "tool_pool_sizes": [
+      17,
+      120
+    ],
+    "pool_design": "mixed_realistic",
+    "methods": [
+      "full_schema",
+      "lexical_top5",
+      "dense_top5",
+      "hierarchical"
+    ],
+    "candidate_view_count": 50,
+    "request_count": 64,
+    "provider_attempts_per_cell": 1,
+    "metallurgy_tool_execution": false,
+    "independent_validation_split_access": false,
+    "purpose": "non-confirmatory offline-scored routing development"
+  },
+  "r2_change_control": {
+    "superseded_run": "V11-CF05-E3-MULTITARGET-MIXED-R1-20260810",
+    "only_change": "DeepSeek thinking wire value changed from string to object_with_type",
+    "task_changed": false,
+    "schema_changed": false,
+    "prompt_changed": false,
+    "scoring_changed": false
+  },
+  "authorized_by": "xiangyu-tian",
+  "authorized_at": "2026-08-10T19:05:38.7037415+08:00",
+  "authorization_basis": "同意执行R2；承接此前已明确的8条冻结开发任务、17/120现实混合工具Schema、三种Top-5候选视图、64个一次性DeepSeek请求、deepseek-v4-flash、零冶金工具执行、零独立验证集访问和逐条响应离线评分范围"
+}

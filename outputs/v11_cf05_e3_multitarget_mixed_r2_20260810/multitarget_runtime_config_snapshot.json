@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "run_id": "V11-CF05-E3-MULTITARGET-MIXED-R2-20260810",
+  "opening_id": "V11-CF05-E3-MULTITARGET-MIXED-OPENING-V1-20260810",
+  "provider": "deepseek",
+  "openai_base_url": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "temperature": 0,
+  "max_tokens": 256,
+  "thinking": "disabled",
+  "timeout_seconds": 120,
+  "provider_max_attempts": 1,
+  "tool_choice": "auto",
+  "scheduled_request_count": 64,
+  "development_only": true,
+  "tool_execution_allowed": false,
+  "provider_retry_allowed": false,
+  "independent_validation_split_access_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "supersedes_failed_run": "V11-CF05-E3-MULTITARGET-MIXED-R1-20260810",
+  "wire_contract_fix": {
+    "field": "thinking",
+    "r1_wire_shape": "string",
+    "r2_wire_shape": "object_with_type",
+    "task_schema_prompt_or_scoring_changes": false
+  },
+  "bindings": {
+    "opening_manifest": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_opening_v1_20260810/artifact_manifest.json",
+      "sha256": "0b27fff6f21ce0b1414708b54897ffdffa1ca9c23458b78ee89e7814df7c43c0"
+    },
+    "opening_config": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_opening_v1_20260810/multitarget_mixed_config_snapshot.json",
+      "sha256": "2fcf0dd803512ee10de4f425d2ae946f04e4a36cf0fdd23671457e636c76a611"
+    },
+    "input_tasks": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_opening_v1_20260810/multitarget_routing_input_tasks.json",
+      "sha256": "a64d0c81e9fddf2382d58439d98ea856809a69c0ea0bef346bf72828baec0937"
+    },
+    "candidate_views": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_opening_v1_20260810/multitarget_candidate_views.json",
+      "sha256": "ec91c6bf116eef399abae6a28f1fa0b3b122b223f23137e10804fed5ad552994"
+    },
+    "run_cells": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_opening_v1_20260810/multitarget_routing_run_cells.json",
+      "sha256": "16be0e60bc3ec3af30bf06fd7b7492c2061cdfe2f1646f6cea4929351625cf46"
+    },
+    "selector_prompt": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_opening_v1_20260810/multitarget_routing_prompt_snapshot.json",
+      "sha256": "cdaee6e114e459418cb77eb064f37de836e3f71a1dc39aaaaf25bdeb372fe92a"
+    },
+    "scoring_registry": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_opening_v1_20260810/multitarget_routing_scoring_registry.json",
+      "sha256": "301fe91e2f39badf90aa1e6266da1e0bd97aa8a80d231bf3648c887f40a752db"
+    },
+    "opening_preflight": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_opening_v1_20260810/multitarget_opening_preflight.json",
+      "sha256": "86b6b81f40896019764223f7512395e10266fca85bce557a2ecb8b0adafe645d"
+    }
+  }
+}

@@ -1,0 +1,2850 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-MULTITARGET-MIXED-R2-ANALYSIS-20260810",
+  "cell_count": 64,
+  "rows": [
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "expected_parameters": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1307.4127,
+      "usage": {
+        "prompt_tokens": 3372,
+        "completion_tokens": 79,
+        "total_tokens": 3451,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3372
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-A001-001-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "expected_parameters": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1101.3514,
+      "usage": {
+        "prompt_tokens": 1115,
+        "completion_tokens": 79,
+        "total_tokens": 1194,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1115
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-A001-001-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "expected_parameters": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1378.3895,
+      "usage": {
+        "prompt_tokens": 1224,
+        "completion_tokens": 79,
+        "total_tokens": 1303,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1224
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-A001-001-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "expected_parameters": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 932.4038,
+      "usage": {
+        "prompt_tokens": 1115,
+        "completion_tokens": 79,
+        "total_tokens": 1194,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 91
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "expected_parameters": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1361.5083,
+      "usage": {
+        "prompt_tokens": 20638,
+        "completion_tokens": 79,
+        "total_tokens": 20717,
+        "prompt_tokens_details": {
+          "cached_tokens": 3328
+        },
+        "prompt_cache_hit_tokens": 3328,
+        "prompt_cache_miss_tokens": 17310
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-A001-001-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "expected_parameters": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 946.4984,
+      "usage": {
+        "prompt_tokens": 1115,
+        "completion_tokens": 79,
+        "total_tokens": 1194,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 731
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-A001-001-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "expected_parameters": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1222.4192,
+      "usage": {
+        "prompt_tokens": 1121,
+        "completion_tokens": 89,
+        "total_tokens": 1210,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 865
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-A001-001-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "expected_parameters": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1156.3095,
+      "usage": {
+        "prompt_tokens": 1115,
+        "completion_tokens": 79,
+        "total_tokens": 1194,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 731
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "expected_parameters": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1295.6708,
+      "usage": {
+        "prompt_tokens": 3372,
+        "completion_tokens": 79,
+        "total_tokens": 3451,
+        "prompt_tokens_details": {
+          "cached_tokens": 3328
+        },
+        "prompt_cache_hit_tokens": 3328,
+        "prompt_cache_miss_tokens": 44
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-A001-009-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "expected_parameters": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1110.0423,
+      "usage": {
+        "prompt_tokens": 1167,
+        "completion_tokens": 79,
+        "total_tokens": 1246,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 783
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-A001-009-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "expected_parameters": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 962.3504,
+      "usage": {
+        "prompt_tokens": 1337,
+        "completion_tokens": 79,
+        "total_tokens": 1416,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 953
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-A001-009-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "expected_parameters": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1465.6488,
+      "usage": {
+        "prompt_tokens": 1049,
+        "completion_tokens": 79,
+        "total_tokens": 1128,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 665
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "expected_parameters": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1177.5214,
+      "usage": {
+        "prompt_tokens": 20638,
+        "completion_tokens": 79,
+        "total_tokens": 20717,
+        "prompt_tokens_details": {
+          "cached_tokens": 20608
+        },
+        "prompt_cache_hit_tokens": 20608,
+        "prompt_cache_miss_tokens": 30
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-A001-009-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "expected_parameters": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1217.2692,
+      "usage": {
+        "prompt_tokens": 1143,
+        "completion_tokens": 79,
+        "total_tokens": 1222,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 759
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-A001-009-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "expected_parameters": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 885.7398,
+      "usage": {
+        "prompt_tokens": 1136,
+        "completion_tokens": 79,
+        "total_tokens": 1215,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 880
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-A001-009-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A001",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A001"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "expected_parameters": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1031.6465,
+      "usage": {
+        "prompt_tokens": 1143,
+        "completion_tokens": 79,
+        "total_tokens": 1222,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 119
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "expected_parameters": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 878.2774,
+      "usage": {
+        "prompt_tokens": 3370,
+        "completion_tokens": 47,
+        "total_tokens": 3417,
+        "prompt_tokens_details": {
+          "cached_tokens": 3328
+        },
+        "prompt_cache_hit_tokens": 3328,
+        "prompt_cache_miss_tokens": 42
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-A002-001-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "expected_parameters": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1030.1149,
+      "usage": {
+        "prompt_tokens": 1175,
+        "completion_tokens": 47,
+        "total_tokens": 1222,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 919
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-A002-001-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "expected_parameters": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1275.5171,
+      "usage": {
+        "prompt_tokens": 1003,
+        "completion_tokens": 47,
+        "total_tokens": 1050,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 747
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-A002-001-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "expected_parameters": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1084.0406,
+      "usage": {
+        "prompt_tokens": 1175,
+        "completion_tokens": 47,
+        "total_tokens": 1222,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 23
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "expected_parameters": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1532.9663,
+      "usage": {
+        "prompt_tokens": 20636,
+        "completion_tokens": 47,
+        "total_tokens": 20683,
+        "prompt_tokens_details": {
+          "cached_tokens": 20608
+        },
+        "prompt_cache_hit_tokens": 20608,
+        "prompt_cache_miss_tokens": 28
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-A002-001-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "expected_parameters": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1120.0272,
+      "usage": {
+        "prompt_tokens": 1049,
+        "completion_tokens": 47,
+        "total_tokens": 1096,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 793
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-A002-001-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "expected_parameters": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 971.1911,
+      "usage": {
+        "prompt_tokens": 1098,
+        "completion_tokens": 47,
+        "total_tokens": 1145,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 714
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-A002-001-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "expected_parameters": {
+        "formula": "Fe2O3"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 891.4925,
+      "usage": {
+        "prompt_tokens": 1025,
+        "completion_tokens": 47,
+        "total_tokens": 1072,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 513
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "expected_parameters": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1044.7521,
+      "usage": {
+        "prompt_tokens": 3374,
+        "completion_tokens": 52,
+        "total_tokens": 3426,
+        "prompt_tokens_details": {
+          "cached_tokens": 3328
+        },
+        "prompt_cache_hit_tokens": 3328,
+        "prompt_cache_miss_tokens": 46
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-A002-006-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "expected_parameters": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1162.2584,
+      "usage": {
+        "prompt_tokens": 1010,
+        "completion_tokens": 52,
+        "total_tokens": 1062,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 498
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-A002-006-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "expected_parameters": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1014.9151,
+      "usage": {
+        "prompt_tokens": 1099,
+        "completion_tokens": 52,
+        "total_tokens": 1151,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 715
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-A002-006-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "expected_parameters": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 993.0618,
+      "usage": {
+        "prompt_tokens": 1179,
+        "completion_tokens": 52,
+        "total_tokens": 1231,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 27
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "expected_parameters": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1110.4143,
+      "usage": {
+        "prompt_tokens": 20640,
+        "completion_tokens": 52,
+        "total_tokens": 20692,
+        "prompt_tokens_details": {
+          "cached_tokens": 20608
+        },
+        "prompt_cache_hit_tokens": 20608,
+        "prompt_cache_miss_tokens": 32
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-A002-006-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "expected_parameters": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1149.8157,
+      "usage": {
+        "prompt_tokens": 1090,
+        "completion_tokens": 52,
+        "total_tokens": 1142,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 706
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-A002-006-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "expected_parameters": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1613.395,
+      "usage": {
+        "prompt_tokens": 1096,
+        "completion_tokens": 52,
+        "total_tokens": 1148,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 712
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-A002-006-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A002"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "expected_parameters": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 904.1558,
+      "usage": {
+        "prompt_tokens": 1029,
+        "completion_tokens": 52,
+        "total_tokens": 1081,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 517
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-001-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-001",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "C": 4.0,
+          "Fe": 94.0,
+          "Si": 2.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "Fe": 94.0,
+          "C": 4.0,
+          "Si": 2.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1186.1139,
+      "usage": {
+        "prompt_tokens": 3403,
+        "completion_tokens": 66,
+        "total_tokens": 3469,
+        "prompt_tokens_details": {
+          "cached_tokens": 3328
+        },
+        "prompt_cache_hit_tokens": 3328,
+        "prompt_cache_miss_tokens": 75
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-001-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-001",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-A004-001-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "C": 4.0,
+          "Fe": 94.0,
+          "Si": 2.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "Fe": 94.0,
+          "C": 4.0,
+          "Si": 2.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1134.1351,
+      "usage": {
+        "prompt_tokens": 1291,
+        "completion_tokens": 66,
+        "total_tokens": 1357,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1035
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-001-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-001",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-A004-001-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "C": 4.0,
+          "Fe": 94.0,
+          "Si": 2.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "Fe": 94.0,
+          "C": 4.0,
+          "Si": 2.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1403.389,
+      "usage": {
+        "prompt_tokens": 1226,
+        "completion_tokens": 66,
+        "total_tokens": 1292,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 970
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-001-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-001",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-A004-001-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "C": 4.0,
+          "Fe": 94.0,
+          "Si": 2.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "Fe": 94.0,
+          "C": 4.0,
+          "Si": 2.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 878.5768,
+      "usage": {
+        "prompt_tokens": 1291,
+        "completion_tokens": 66,
+        "total_tokens": 1357,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 11
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-001-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-001",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "C": 4.0,
+          "Fe": 94.0,
+          "Si": 2.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "Fe": 94.0,
+          "C": 4.0,
+          "Si": 2.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1132.8692,
+      "usage": {
+        "prompt_tokens": 20669,
+        "completion_tokens": 66,
+        "total_tokens": 20735,
+        "prompt_tokens_details": {
+          "cached_tokens": 20608
+        },
+        "prompt_cache_hit_tokens": 20608,
+        "prompt_cache_miss_tokens": 61
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-001-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-001",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-A004-001-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "C": 4.0,
+          "Fe": 94.0,
+          "Si": 2.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "Fe": 94.0,
+          "C": 4.0,
+          "Si": 2.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1195.6373,
+      "usage": {
+        "prompt_tokens": 1318,
+        "completion_tokens": 66,
+        "total_tokens": 1384,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 678
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-001-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-001",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-A004-001-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "C": 4.0,
+          "Fe": 94.0,
+          "Si": 2.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "Fe": 94.0,
+          "C": 4.0,
+          "Si": 2.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1457.9404,
+      "usage": {
+        "prompt_tokens": 1297,
+        "completion_tokens": 66,
+        "total_tokens": 1363,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1041
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-001-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-001",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-A004-001-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "C": 4.0,
+          "Fe": 94.0,
+          "Si": 2.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "Fe": 94.0,
+          "C": 4.0,
+          "Si": 2.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1267.2796,
+      "usage": {
+        "prompt_tokens": 1272,
+        "completion_tokens": 66,
+        "total_tokens": 1338,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 632
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-007-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-007",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1035.6645,
+      "usage": {
+        "prompt_tokens": 3395,
+        "completion_tokens": 58,
+        "total_tokens": 3453,
+        "prompt_tokens_details": {
+          "cached_tokens": 3328
+        },
+        "prompt_cache_hit_tokens": 3328,
+        "prompt_cache_miss_tokens": 67
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-007-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-A004-007-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1319.023,
+      "usage": {
+        "prompt_tokens": 1333,
+        "completion_tokens": 58,
+        "total_tokens": 1391,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 693
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-007-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-A004-007-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 827.1157,
+      "usage": {
+        "prompt_tokens": 1218,
+        "completion_tokens": 58,
+        "total_tokens": 1276,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 66
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-007-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-007",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-A004-007-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 869.834,
+      "usage": {
+        "prompt_tokens": 1253,
+        "completion_tokens": 58,
+        "total_tokens": 1311,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 357
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-007-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-007",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1179.9852,
+      "usage": {
+        "prompt_tokens": 20661,
+        "completion_tokens": 58,
+        "total_tokens": 20719,
+        "prompt_tokens_details": {
+          "cached_tokens": 20608
+        },
+        "prompt_cache_hit_tokens": 20608,
+        "prompt_cache_miss_tokens": 53
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-007-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-A004-007-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 805.6007,
+      "usage": {
+        "prompt_tokens": 1292,
+        "completion_tokens": 58,
+        "total_tokens": 1350,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 396
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-007-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-A004-007-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 914.7065,
+      "usage": {
+        "prompt_tokens": 1282,
+        "completion_tokens": 58,
+        "total_tokens": 1340,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 898
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A004-007-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-007",
+      "source_tool_id": "A004",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-A004-007-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "A004"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "expected_parameters": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 968.0836,
+      "usage": {
+        "prompt_tokens": 1245,
+        "completion_tokens": 70,
+        "total_tokens": 1315,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 349
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-B019-001",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "expected_parameters": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1242.1636,
+      "usage": {
+        "prompt_tokens": 3419,
+        "completion_tokens": 109,
+        "total_tokens": 3528,
+        "prompt_tokens_details": {
+          "cached_tokens": 3328
+        },
+        "prompt_cache_hit_tokens": 3328,
+        "prompt_cache_miss_tokens": 91
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-B019-001",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-B019-001-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "B"
+      },
+      "expected_parameters": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1056.594,
+      "usage": {
+        "prompt_tokens": 1388,
+        "completion_tokens": 125,
+        "total_tokens": 1513,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1132
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-B019-001",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-B019-001-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "B"
+      },
+      "expected_parameters": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1445.5211,
+      "usage": {
+        "prompt_tokens": 1338,
+        "completion_tokens": 125,
+        "total_tokens": 1463,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1082
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-B019-001",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-B019-001-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "B"
+      },
+      "expected_parameters": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1455.1286,
+      "usage": {
+        "prompt_tokens": 1261,
+        "completion_tokens": 125,
+        "total_tokens": 1386,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 749
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-B019-001",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "B"
+      },
+      "expected_parameters": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1451.7771,
+      "usage": {
+        "prompt_tokens": 20685,
+        "completion_tokens": 125,
+        "total_tokens": 20810,
+        "prompt_tokens_details": {
+          "cached_tokens": 20608
+        },
+        "prompt_cache_hit_tokens": 20608,
+        "prompt_cache_miss_tokens": 77
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-B019-001",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-B019-001-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "B"
+      },
+      "expected_parameters": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1196.063,
+      "usage": {
+        "prompt_tokens": 1289,
+        "completion_tokens": 125,
+        "total_tokens": 1414,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 777
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-B019-001",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-B019-001-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "expected_parameters": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 847.4554,
+      "usage": {
+        "prompt_tokens": 1290,
+        "completion_tokens": 109,
+        "total_tokens": 1399,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1034
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-B019-001",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-B019-001-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "B"
+      },
+      "expected_parameters": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1380.2179,
+      "usage": {
+        "prompt_tokens": 1313,
+        "completion_tokens": 125,
+        "total_tokens": 1438,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 801
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-B019-002",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "expected_parameters": {
+        "overall_composition": 40.0,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "composition_basis": "percent"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1044.1836,
+      "usage": {
+        "prompt_tokens": 3413,
+        "completion_tokens": 102,
+        "total_tokens": 3515,
+        "prompt_tokens_details": {
+          "cached_tokens": 3328
+        },
+        "prompt_cache_hit_tokens": 3328,
+        "prompt_cache_miss_tokens": 85
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-B019-002",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-B019-002-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent",
+        "component": "B"
+      },
+      "expected_parameters": {
+        "overall_composition": 40.0,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "composition_basis": "percent"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1190.6845,
+      "usage": {
+        "prompt_tokens": 1382,
+        "completion_tokens": 118,
+        "total_tokens": 1500,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 102
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-B019-002",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-B019-002-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "expected_parameters": {
+        "overall_composition": 40.0,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "composition_basis": "percent"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1061.5217,
+      "usage": {
+        "prompt_tokens": 1334,
+        "completion_tokens": 102,
+        "total_tokens": 1436,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 822
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-B019-002",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-17-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-B019-002-17",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent",
+        "component": "B"
+      },
+      "expected_parameters": {
+        "overall_composition": 40.0,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "composition_basis": "percent"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1252.9829,
+      "usage": {
+        "prompt_tokens": 1255,
+        "completion_tokens": 118,
+        "total_tokens": 1373,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 103
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-B019-002",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-FULL-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent",
+        "component": "B"
+      },
+      "expected_parameters": {
+        "overall_composition": 40.0,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "composition_basis": "percent"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1147.3005,
+      "usage": {
+        "prompt_tokens": 20679,
+        "completion_tokens": 118,
+        "total_tokens": 20797,
+        "prompt_tokens_details": {
+          "cached_tokens": 20608
+        },
+        "prompt_cache_hit_tokens": 20608,
+        "prompt_cache_miss_tokens": 71
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-B019-002",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-LEXICAL_TOP5-E1B2-B019-002-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent",
+        "component": "B"
+      },
+      "expected_parameters": {
+        "overall_composition": 40.0,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "composition_basis": "percent"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1750.0162,
+      "usage": {
+        "prompt_tokens": 1290,
+        "completion_tokens": 118,
+        "total_tokens": 1408,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 650
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-B019-002",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-DENSE_TOP5-E1B2-B019-002-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "expected_parameters": {
+        "overall_composition": 40.0,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "composition_basis": "percent"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 974.853,
+      "usage": {
+        "prompt_tokens": 1293,
+        "completion_tokens": 102,
+        "total_tokens": 1395,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1037
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-B019-002",
+      "source_tool_id": "B019",
+      "pool_id": "E3-BASE-POOL-120-CANDIDATE-V1",
+      "pool_design": "mixed_realistic",
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-HIERARCHICAL-E1B2-B019-002-120",
+      "transport_accepted": true,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "B019",
+      "selected_tool_visible": true,
+      "acceptable_tools_visible": [
+        "B019"
+      ],
+      "selection_correct": true,
+      "target_tool_selected": true,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent",
+        "component": "B"
+      },
+      "expected_parameters": {
+        "overall_composition": 40.0,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "composition_basis": "percent"
+      },
+      "parameters_correct": true,
+      "complete_call_correct": true,
+      "api_latency_ms": 1840.6456,
+      "usage": {
+        "prompt_tokens": 1307,
+        "completion_tokens": 118,
+        "total_tokens": 1425,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 667
+      },
+      "tool_executed": false,
+      "retry_count": 0
+    }
+  ]
+}

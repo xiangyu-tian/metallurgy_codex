@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-MULTITARGET-MIXED-R2-ANALYSIS-20260810",
+  "artifact_count": 3,
+  "artifacts": [
+    {
+      "filename": "multitarget_analysis_config_snapshot.json",
+      "sha256": "16f7ba487f09cf9c682b508354d9b3c5931ada543c94e39ee04d6e964f62e3af",
+      "bytes": 1606
+    },
+    {
+      "filename": "multitarget_development_analysis_report.json",
+      "sha256": "4f684c9cc0346655d03f2fc31229b7174e9054a6971f9f95b53691608917638c",
+      "bytes": 16626
+    },
+    {
+      "filename": "multitarget_scored_cells.json",
+      "sha256": "4e7204b111b71ffed9c4d96a2783898e0fc5b34286fd5a38ed60fb2a24738a34",
+      "bytes": 86393
+    }
+  ]
+}
