@@ -1,0 +1,41 @@
+[
+  {
+    "cell_id": "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-DENSE_TOP5-R1",
+    "task_id": "E1B2-A004-008",
+    "target_tool_id": "A004",
+    "condition_id": "contract_mismatch_4",
+    "near_neighbor_type": "contract_mismatch",
+    "near_neighbor_count": 4,
+    "tool_pool_size": 120,
+    "method": "dense_top5",
+    "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-120-DENSE_TOP5",
+    "transport_accepted": true,
+    "tool_call_count": 3,
+    "exactly_one_tool_call": false,
+    "selected_tool_id": null,
+    "selected_tool_visible": false,
+    "selection_correct": false,
+    "arguments": null,
+    "expected_parameters": {
+      "compositions": {
+        "matrix": 0.999,
+        "trace": 0.001
+      }
+    },
+    "parameters_correct": false,
+    "complete_call_correct": false,
+    "api_latency_ms": 2114.8127,
+    "usage": {
+      "prompt_tokens": 1041,
+      "completion_tokens": 152,
+      "total_tokens": 1193,
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      },
+      "prompt_cache_hit_tokens": 256,
+      "prompt_cache_miss_tokens": 785
+    },
+    "tool_executed": false,
+    "retry_count": 0
+  }
+]

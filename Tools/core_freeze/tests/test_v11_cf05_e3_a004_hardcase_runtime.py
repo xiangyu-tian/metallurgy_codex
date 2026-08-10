@@ -44,6 +44,20 @@ class V11Cf05E3A004HardcaseRuntimeTests(unittest.TestCase):
         self.assertEqual(parsed["selected_tool_id"], "A004")
         self.assertTrue(parsed["arguments_json_valid"])
 
+    def test_committed_runtime_output_is_hash_complete(self):
+        output_dir = runner.WORKSPACE / "outputs" / "v11_cf05_e3_a004_hardcase_r1_20260810"
+        report = runner.load_json(output_dir / "a004_runtime_report.json")
+        self.assertEqual(report["external_api_calls"], 48)
+        self.assertEqual(report["transport_accepted_count"], 48)
+        self.assertEqual(report["exactly_one_tool_call_count"], 47)
+        self.assertEqual(report["tool_calls_executed"], 0)
+        self.assertEqual(report["retries_executed"], 0)
+        manifest = runner.load_json(output_dir / "artifact_manifest.json")
+        for row in manifest["artifacts"]:
+            path = output_dir / row["filename"]
+            self.assertTrue(path.is_file())
+            self.assertEqual(runner.file_hash(path), row["sha256"])
+
 
 if __name__ == "__main__":
     unittest.main()

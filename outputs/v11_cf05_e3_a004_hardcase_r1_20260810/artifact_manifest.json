@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "run_id": "V11-CF05-E3-A004-HARDCASE-R1-20260810",
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "filename": "a004_request_results.json",
+      "sha256": "cae6c6c97c087e58de221248168e606a5a1f43385d64fe0245482ea370287e43",
+      "bytes": 158928
+    },
+    {
+      "filename": "a004_runtime_config_snapshot.json",
+      "sha256": "2325d3fda75dbc937b89e2691790ddd32d1cb02296367572a2051623f3b8bed7",
+      "bytes": 2267
+    },
+    {
+      "filename": "a004_runtime_report.json",
+      "sha256": "43aa4ef256e72d8b286f304f1629c376af5c7f29dd609fe9ea175775ab550184",
+      "bytes": 712
+    },
+    {
+      "filename": "execution_authorization_snapshot.json",
+      "sha256": "140caccdb3332b9f0c5465c8c456474eb18bb1050172fd4ce7ccbef320ce0615",
+      "bytes": 2015
+    },
+    {
+      "filename": "runner_source_snapshot.py",
+      "sha256": "6695cae923352c719d7c43c0f415f5bdce17c1cc103a3a500dc859045d40fc7a",
+      "bytes": 17110
+    }
+  ]
+}

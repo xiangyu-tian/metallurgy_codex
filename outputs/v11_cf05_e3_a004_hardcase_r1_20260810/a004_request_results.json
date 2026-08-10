@@ -1,0 +1,5152 @@
+{
+  "schema_version": "1.0",
+  "run_id": "V11-CF05-E3-A004-HARDCASE-R1-20260810",
+  "opening_id": "V11-CF05-E3-A004-HARDCASE-CONTROLLED-OPENING-V1-20260810",
+  "authorization_decision": "authorized_to_execute_a004_hardcase_development",
+  "result_count": 48,
+  "results": [
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-NONE_0-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-NONE_0-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-NONE_0-17-FULL",
+      "selected_schema_tool_ids": [
+        "A004",
+        "A001",
+        "A002",
+        "A005",
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010",
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "G013",
+        "G014",
+        "G015",
+        "E3C001"
+      ],
+      "request_body_sha256": "e7fcb91c8f8219498c88955b86785b291e5f732404cd42c412c250a39999d420",
+      "started_at": "2026-08-10T19:44:32.311653+08:00",
+      "api_latency_ms": 923.8352,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "d5f82624-6cea-4ace-b0b4-680727170240",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3141,
+        "completion_tokens": 58,
+        "total_tokens": 3199,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 2757
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "d5f82624-6cea-4ace-b0b4-680727170240",
+        "object": "chat.completion",
+        "created": 1786362273,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_u052cjfxp3XzZOZbLiFg7238",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3141,
+          "completion_tokens": 58,
+          "total_tokens": 3199,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 2757
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-NONE_0-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-NONE_0-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-007-17-LEXICAL_TOP5",
+      "selected_schema_tool_ids": [
+        "A004",
+        "B001",
+        "A009",
+        "A001",
+        "B004"
+      ],
+      "request_body_sha256": "40694dfb484f0d4c06ff0ba269d984c603e252ee27bdbdc7cecdfc8c7acd1459",
+      "started_at": "2026-08-10T19:44:33.238124+08:00",
+      "api_latency_ms": 810.6444,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "d814a3d6-2250-4431-9949-a6b9157cba4f",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1129,
+        "completion_tokens": 58,
+        "total_tokens": 1187,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 745
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "d814a3d6-2250-4431-9949-a6b9157cba4f",
+        "object": "chat.completion",
+        "created": 1786362274,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_OzG0PPAaejcLvOLxVM1o3651",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1129,
+          "completion_tokens": 58,
+          "total_tokens": 1187,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 745
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-NONE_0-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-NONE_0-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-007-17-DENSE_TOP5",
+      "selected_schema_tool_ids": [
+        "A004",
+        "E3C001",
+        "A002",
+        "A001",
+        "A006"
+      ],
+      "request_body_sha256": "16717e7a9093e956bf4678c910ba40379a6d77abd307e6139c5f4dfa315e9674",
+      "started_at": "2026-08-10T19:44:34.052356+08:00",
+      "api_latency_ms": 1218.7288,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "4d5917a0-ddae-4ef5-b56e-a6d396b3c651",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1037,
+        "completion_tokens": 58,
+        "total_tokens": 1095,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 653
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "4d5917a0-ddae-4ef5-b56e-a6d396b3c651",
+        "object": "chat.completion",
+        "created": 1786362275,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_JJ9VmDhpd23hnwGKsQAj8933",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1037,
+          "completion_tokens": 58,
+          "total_tokens": 1095,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 653
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-NONE_0-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-NONE_0-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-007-17-HIERARCHICAL",
+      "selected_schema_tool_ids": [
+        "A004",
+        "A009",
+        "A002",
+        "A008",
+        "A010"
+      ],
+      "request_body_sha256": "569b4def703db9f681883f6fec4b3f56f0d1766d058b461eb15affa1ac50bd46",
+      "started_at": "2026-08-10T19:44:35.274923+08:00",
+      "api_latency_ms": 1083.0112,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "306ee157-53cb-4339-8a06-5ece8937d312",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1070,
+        "completion_tokens": 58,
+        "total_tokens": 1128,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 686
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "306ee157-53cb-4339-8a06-5ece8937d312",
+        "object": "chat.completion",
+        "created": 1786362276,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_HJiEdewHIj24sM6rMwD78887",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1070,
+          "completion_tokens": 58,
+          "total_tokens": 1128,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 686
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-NONE_0-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-NONE_0-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-NONE_0-120-FULL",
+      "selected_schema_tool_ids": [
+        "A004",
+        "A001",
+        "A002",
+        "A005",
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010",
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "B005",
+        "B006",
+        "B007",
+        "B008",
+        "B009",
+        "B010",
+        "B011",
+        "B012",
+        "B013",
+        "B014",
+        "B015",
+        "B016",
+        "B017",
+        "B018",
+        "B019",
+        "B020",
+        "B021",
+        "B022",
+        "B023",
+        "B024",
+        "B025",
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C009",
+        "C010",
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012",
+        "D013",
+        "D014",
+        "D015",
+        "D016",
+        "D017",
+        "D018",
+        "D019",
+        "D020",
+        "E001",
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007",
+        "E008",
+        "E009",
+        "E010",
+        "E011",
+        "E012",
+        "E013",
+        "E014",
+        "E015",
+        "E016",
+        "E017",
+        "E018",
+        "E019",
+        "E020",
+        "F001",
+        "F002",
+        "F003",
+        "F004",
+        "F005",
+        "F006",
+        "F007",
+        "F008",
+        "F009",
+        "F010",
+        "F011",
+        "F012",
+        "F013",
+        "F014",
+        "F015",
+        "F016",
+        "F017",
+        "F018",
+        "F019",
+        "F020",
+        "G001",
+        "G002",
+        "G003",
+        "G004",
+        "G005",
+        "G006",
+        "G007",
+        "G008",
+        "G009",
+        "G010",
+        "G011",
+        "G012",
+        "G013",
+        "G014",
+        "G015",
+        "E3C001"
+      ],
+      "request_body_sha256": "615dbcea0034b269c09bc7892735e2dc13b3aa56ac6bb8d08a13f9728957982c",
+      "started_at": "2026-08-10T19:44:36.360729+08:00",
+      "api_latency_ms": 1472.7419,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "f8704f59-ee19-469e-a326-6b1cb09a1e26",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20656,
+        "completion_tokens": 58,
+        "total_tokens": 20714,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 20272
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "f8704f59-ee19-469e-a326-6b1cb09a1e26",
+        "object": "chat.completion",
+        "created": 1786362277,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_67WIU56GGsxY3BSrMgbR1198",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20656,
+          "completion_tokens": 58,
+          "total_tokens": 20714,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 20272
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-NONE_0-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-NONE_0-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-007-120-LEXICAL_TOP5",
+      "selected_schema_tool_ids": [
+        "B019",
+        "A004",
+        "C002",
+        "D005",
+        "C008"
+      ],
+      "request_body_sha256": "8a5b68f2fd8cf0c16eaadb8af59efd8b403428f025304710a872e8859e4f87ac",
+      "started_at": "2026-08-10T19:44:37.837612+08:00",
+      "api_latency_ms": 995.5096,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "2ea75209-bd33-463f-b369-f853c792ded3",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1292,
+        "completion_tokens": 68,
+        "total_tokens": 1360,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 652
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "I'll normalize the compositions using the A004 tool.",
+      "raw_response": {
+        "id": "2ea75209-bd33-463f-b369-f853c792ded3",
+        "object": "chat.completion",
+        "created": 1786362279,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll normalize the compositions using the A004 tool.",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_LKRroSWCMyQ7BwHPjUsG4108",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1292,
+          "completion_tokens": 68,
+          "total_tokens": 1360,
+          "prompt_tokens_details": {
+            "cached_tokens": 640
+          },
+          "prompt_cache_hit_tokens": 640,
+          "prompt_cache_miss_tokens": 652
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-NONE_0-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-NONE_0-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-007-120-DENSE_TOP5",
+      "selected_schema_tool_ids": [
+        "A004",
+        "B022",
+        "B019",
+        "B015",
+        "D011"
+      ],
+      "request_body_sha256": "012385dd3c9ec2630ebc365b155b963ec696d05ce7b645a826167615247b5808",
+      "started_at": "2026-08-10T19:44:38.835474+08:00",
+      "api_latency_ms": 1023.9915,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "41aaac72-3215-4f3b-9acd-c70cd2bece53",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1282,
+        "completion_tokens": 58,
+        "total_tokens": 1340,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 2
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "41aaac72-3215-4f3b-9acd-c70cd2bece53",
+        "object": "chat.completion",
+        "created": 1786362280,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_6UcukOQ03RKLqUvFqOp70047",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1282,
+          "completion_tokens": 58,
+          "total_tokens": 1340,
+          "prompt_tokens_details": {
+            "cached_tokens": 1280
+          },
+          "prompt_cache_hit_tokens": 1280,
+          "prompt_cache_miss_tokens": 2
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-NONE_0-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-NONE_0-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-007-120-HIERARCHICAL",
+      "selected_schema_tool_ids": [
+        "B019",
+        "A004",
+        "C002",
+        "C008",
+        "B001"
+      ],
+      "request_body_sha256": "d66c93e8817c721faf9b5de7d88bc71fc4bde54d9ca1f6548ed794d949d2055b",
+      "started_at": "2026-08-10T19:44:39.862278+08:00",
+      "api_latency_ms": 1274.3288,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "ae84103d-fdf8-4b34-80aa-ae075380be89",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1286,
+        "completion_tokens": 68,
+        "total_tokens": 1354,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 646
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "I'll normalize the composition using the A004 tool.",
+      "raw_response": {
+        "id": "ae84103d-fdf8-4b34-80aa-ae075380be89",
+        "object": "chat.completion",
+        "created": 1786362281,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll normalize the composition using the A004 tool.",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_B9hTsFt22cK4vb49vclV1342",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1286,
+          "completion_tokens": 68,
+          "total_tokens": 1354,
+          "prompt_tokens_details": {
+            "cached_tokens": 640
+          },
+          "prompt_cache_hit_tokens": 640,
+          "prompt_cache_miss_tokens": 646
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-LEXICAL_4-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-LEXICAL_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-17-FULL",
+      "selected_schema_tool_ids": [
+        "A004",
+        "A001",
+        "A002",
+        "A005",
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010",
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "A003",
+        "E3C012",
+        "E3C013",
+        "E3C026"
+      ],
+      "request_body_sha256": "e6b986a14a6a4d97e67a701080e10800326e7818e9fdb2285aa332c8d284035e",
+      "started_at": "2026-08-10T19:44:41.139373+08:00",
+      "api_latency_ms": 882.5391,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "8006752e-02d6-4a89-9497-212b17a0f7f1",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3055,
+        "completion_tokens": 58,
+        "total_tokens": 3113,
+        "prompt_tokens_details": {
+          "cached_tokens": 2432
+        },
+        "prompt_cache_hit_tokens": 2432,
+        "prompt_cache_miss_tokens": 623
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "8006752e-02d6-4a89-9497-212b17a0f7f1",
+        "object": "chat.completion",
+        "created": 1786362282,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_Mx67b7fHSnU81avL5N2Z0874",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3055,
+          "completion_tokens": 58,
+          "total_tokens": 3113,
+          "prompt_tokens_details": {
+            "cached_tokens": 2432
+          },
+          "prompt_cache_hit_tokens": 2432,
+          "prompt_cache_miss_tokens": 623
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-LEXICAL_4-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-LEXICAL_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-007-17-LEXICAL_TOP5",
+      "selected_schema_tool_ids": [
+        "E3C026",
+        "A004",
+        "E3C013",
+        "E3C012",
+        "A003"
+      ],
+      "request_body_sha256": "04241df584224831318e353a05aad7291c2e24ee2964858da871bae3b685d878",
+      "started_at": "2026-08-10T19:44:42.026742+08:00",
+      "api_latency_ms": 850.4065,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "1ad0e58d-565d-49dc-9a81-07443fb1483b",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1015,
+        "completion_tokens": 58,
+        "total_tokens": 1073,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 759
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "1ad0e58d-565d-49dc-9a81-07443fb1483b",
+        "object": "chat.completion",
+        "created": 1786362283,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_QT5bdQgEvgrmc7iaYYSz4772",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1015,
+          "completion_tokens": 58,
+          "total_tokens": 1073,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 759
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-LEXICAL_4-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-LEXICAL_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-007-17-DENSE_TOP5",
+      "selected_schema_tool_ids": [
+        "E3C012",
+        "E3C026",
+        "A004",
+        "E3C013",
+        "A002"
+      ],
+      "request_body_sha256": "190c7598ce24ebbd00fb4e01fdd913b74ef1aef4f78c62522b1fdfbb32bea481",
+      "started_at": "2026-08-10T19:44:42.881574+08:00",
+      "api_latency_ms": 984.3398,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "4bb66d47-eefa-4e1a-8847-5c07eeae84d5",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1028,
+        "completion_tokens": 58,
+        "total_tokens": 1086,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 772
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "4bb66d47-eefa-4e1a-8847-5c07eeae84d5",
+        "object": "chat.completion",
+        "created": 1786362284,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_FG0xaDQrRVZPqMEtvb6j1547",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1028,
+          "completion_tokens": 58,
+          "total_tokens": 1086,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 772
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-LEXICAL_4-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-LEXICAL_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-007-17-HIERARCHICAL",
+      "selected_schema_tool_ids": [
+        "E3C026",
+        "A004",
+        "E3C013",
+        "E3C012",
+        "A003"
+      ],
+      "request_body_sha256": "04241df584224831318e353a05aad7291c2e24ee2964858da871bae3b685d878",
+      "started_at": "2026-08-10T19:44:43.868921+08:00",
+      "api_latency_ms": 1178.7665,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "bb6ebe7f-dee7-4cc5-86dc-d3aad3246f81",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1015,
+        "completion_tokens": 58,
+        "total_tokens": 1073,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 119
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "bb6ebe7f-dee7-4cc5-86dc-d3aad3246f81",
+        "object": "chat.completion",
+        "created": 1786362285,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_H8tV7HxLL8HBn6NvwCrx3829",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1015,
+          "completion_tokens": 58,
+          "total_tokens": 1073,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 119
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-LEXICAL_4-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-LEXICAL_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-120-FULL",
+      "selected_schema_tool_ids": [
+        "A004",
+        "A001",
+        "A002",
+        "A005",
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010",
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "B005",
+        "B006",
+        "B007",
+        "B008",
+        "B009",
+        "B010",
+        "B011",
+        "B012",
+        "B013",
+        "B014",
+        "B015",
+        "B016",
+        "B017",
+        "B018",
+        "B019",
+        "B020",
+        "B021",
+        "B022",
+        "B023",
+        "B024",
+        "B025",
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C009",
+        "C010",
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012",
+        "D013",
+        "D014",
+        "D015",
+        "D016",
+        "D017",
+        "D018",
+        "D019",
+        "D020",
+        "E001",
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007",
+        "E008",
+        "E009",
+        "E010",
+        "E011",
+        "E012",
+        "E013",
+        "E014",
+        "E015",
+        "E016",
+        "E017",
+        "E018",
+        "E019",
+        "E020",
+        "F001",
+        "F002",
+        "F003",
+        "F004",
+        "F005",
+        "F006",
+        "F007",
+        "F008",
+        "F009",
+        "F010",
+        "F011",
+        "F012",
+        "F013",
+        "F014",
+        "F015",
+        "F016",
+        "F017",
+        "F018",
+        "F019",
+        "F020",
+        "G001",
+        "G002",
+        "G003",
+        "G004",
+        "G005",
+        "G006",
+        "G007",
+        "G008",
+        "G009",
+        "G010",
+        "G011",
+        "G012",
+        "A003",
+        "E3C012",
+        "E3C013",
+        "E3C026"
+      ],
+      "request_body_sha256": "be173ec33b3231b04e4d2de70d57ec02985ceb8d61be9d97073c9fb215af6730",
+      "started_at": "2026-08-10T19:44:45.052255+08:00",
+      "api_latency_ms": 1586.3757,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "5195c2b0-1d36-457d-8030-1809db424f71",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20570,
+        "completion_tokens": 58,
+        "total_tokens": 20628,
+        "prompt_tokens_details": {
+          "cached_tokens": 14208
+        },
+        "prompt_cache_hit_tokens": 14208,
+        "prompt_cache_miss_tokens": 6362
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "5195c2b0-1d36-457d-8030-1809db424f71",
+        "object": "chat.completion",
+        "created": 1786362286,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_atmmNJnAgG1P2uuI0I0i1947",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20570,
+          "completion_tokens": 58,
+          "total_tokens": 20628,
+          "prompt_tokens_details": {
+            "cached_tokens": 14208
+          },
+          "prompt_cache_hit_tokens": 14208,
+          "prompt_cache_miss_tokens": 6362
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-LEXICAL_4-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-LEXICAL_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-007-120-LEXICAL_TOP5",
+      "selected_schema_tool_ids": [
+        "B019",
+        "E3C026",
+        "A004",
+        "E3C013",
+        "E3C012"
+      ],
+      "request_body_sha256": "d6e9803bed5550adaf92915e8badc21c132bda0a79c026bbd4f1b02b050f111b",
+      "started_at": "2026-08-10T19:44:46.644109+08:00",
+      "api_latency_ms": 1262.2063,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "22d50258-a631-46bf-a62d-c54a18c089db",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1193,
+        "completion_tokens": 68,
+        "total_tokens": 1261,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 681
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "I'll normalize the composition using the A004 tool.",
+      "raw_response": {
+        "id": "22d50258-a631-46bf-a62d-c54a18c089db",
+        "object": "chat.completion",
+        "created": 1786362288,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll normalize the composition using the A004 tool.",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_MeJU4lh8BhsWUB0LrBVC8635",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1193,
+          "completion_tokens": 68,
+          "total_tokens": 1261,
+          "prompt_tokens_details": {
+            "cached_tokens": 512
+          },
+          "prompt_cache_hit_tokens": 512,
+          "prompt_cache_miss_tokens": 681
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-LEXICAL_4-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-LEXICAL_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-007-120-DENSE_TOP5",
+      "selected_schema_tool_ids": [
+        "E3C012",
+        "E3C026",
+        "A004",
+        "E3C013",
+        "B022"
+      ],
+      "request_body_sha256": "4930d729dab1041ace0e5614af045aa65e8ca5dc639f07cf448c97966416462e",
+      "started_at": "2026-08-10T19:44:47.909303+08:00",
+      "api_latency_ms": 1333.3029,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "de871575-f571-4367-b635-b10bfa4492dd",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1075,
+        "completion_tokens": 58,
+        "total_tokens": 1133,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 819
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "de871575-f571-4367-b635-b10bfa4492dd",
+        "object": "chat.completion",
+        "created": 1786362289,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_YuztWWXknVtAZFlH4s3o9002",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1075,
+          "completion_tokens": 58,
+          "total_tokens": 1133,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 819
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-LEXICAL_4-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-LEXICAL_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-007-120-HIERARCHICAL",
+      "selected_schema_tool_ids": [
+        "B019",
+        "E3C026",
+        "A004",
+        "E3C013",
+        "E3C012"
+      ],
+      "request_body_sha256": "d6e9803bed5550adaf92915e8badc21c132bda0a79c026bbd4f1b02b050f111b",
+      "started_at": "2026-08-10T19:44:49.248300+08:00",
+      "api_latency_ms": 868.6496,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "a323116c-b05f-4ec3-8723-657e43bc7950",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1193,
+        "completion_tokens": 68,
+        "total_tokens": 1261,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 41
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "I'll normalize the composition using the A004 tool.",
+      "raw_response": {
+        "id": "a323116c-b05f-4ec3-8723-657e43bc7950",
+        "object": "chat.completion",
+        "created": 1786362290,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll normalize the composition using the A004 tool.",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_PcqWljuE17V9SN72auQm1219",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1193,
+          "completion_tokens": 68,
+          "total_tokens": 1261,
+          "prompt_tokens_details": {
+            "cached_tokens": 1152
+          },
+          "prompt_cache_hit_tokens": 1152,
+          "prompt_cache_miss_tokens": 41
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-17-FULL",
+      "selected_schema_tool_ids": [
+        "A004",
+        "A001",
+        "A002",
+        "A005",
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010",
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "E3C005",
+        "E3C014",
+        "E3C015",
+        "E3C027"
+      ],
+      "request_body_sha256": "fc2193f612303c41c71736b986698bd5f8abe8ab2e3bcd74a6b2884b9219902c",
+      "started_at": "2026-08-10T19:44:50.120366+08:00",
+      "api_latency_ms": 929.8762,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "244c8eb4-0506-41e4-a165-ee37945dfacd",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3032,
+        "completion_tokens": 58,
+        "total_tokens": 3090,
+        "prompt_tokens_details": {
+          "cached_tokens": 2432
+        },
+        "prompt_cache_hit_tokens": 2432,
+        "prompt_cache_miss_tokens": 600
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "244c8eb4-0506-41e4-a165-ee37945dfacd",
+        "object": "chat.completion",
+        "created": 1786362291,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_P0HpahJys80NmaDK5GN40539",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3032,
+          "completion_tokens": 58,
+          "total_tokens": 3090,
+          "prompt_tokens_details": {
+            "cached_tokens": 2432
+          },
+          "prompt_cache_hit_tokens": 2432,
+          "prompt_cache_miss_tokens": 600
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-007-17-LEXICAL_TOP5",
+      "selected_schema_tool_ids": [
+        "E3C027",
+        "A004",
+        "E3C005",
+        "E3C015",
+        "E3C014"
+      ],
+      "request_body_sha256": "390a581e39e16111e29a41c83576d443dc55a8858747e7b718742c64206f80cf",
+      "started_at": "2026-08-10T19:44:51.053125+08:00",
+      "api_latency_ms": 860.8734,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "f7ad9645-9af4-4880-8756-ec0339a387bd",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 992,
+        "completion_tokens": 58,
+        "total_tokens": 1050,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 736
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "f7ad9645-9af4-4880-8756-ec0339a387bd",
+        "object": "chat.completion",
+        "created": 1786362292,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_YBcXeA5BGcj6iGptMcLX6421",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 992,
+          "completion_tokens": 58,
+          "total_tokens": 1050,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 736
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-007-17-DENSE_TOP5",
+      "selected_schema_tool_ids": [
+        "E3C027",
+        "E3C014",
+        "A004",
+        "E3C005",
+        "E3C015"
+      ],
+      "request_body_sha256": "540093955c0b446d149acadd5a1de9832ef7e850735d3dd1c35926f23437c857",
+      "started_at": "2026-08-10T19:44:51.916691+08:00",
+      "api_latency_ms": 1126.6066,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "d2edfe31-5c74-4a43-a52a-4dce22704a5c",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 992,
+        "completion_tokens": 58,
+        "total_tokens": 1050,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 736
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "d2edfe31-5c74-4a43-a52a-4dce22704a5c",
+        "object": "chat.completion",
+        "created": 1786362293,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_DbSePGaJ8F6dJeu1S9ao0098",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 992,
+          "completion_tokens": 58,
+          "total_tokens": 1050,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 736
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-007-17-HIERARCHICAL",
+      "selected_schema_tool_ids": [
+        "E3C027",
+        "A004",
+        "E3C005",
+        "E3C015",
+        "E3C014"
+      ],
+      "request_body_sha256": "390a581e39e16111e29a41c83576d443dc55a8858747e7b718742c64206f80cf",
+      "started_at": "2026-08-10T19:44:53.048260+08:00",
+      "api_latency_ms": 732.7746,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "7de39de9-e56a-415b-971c-9b306d99003d",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 992,
+        "completion_tokens": 58,
+        "total_tokens": 1050,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 96
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "7de39de9-e56a-415b-971c-9b306d99003d",
+        "object": "chat.completion",
+        "created": 1786362294,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_KeW0AgZkLgOJrHyPyp8n0213",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 992,
+          "completion_tokens": 58,
+          "total_tokens": 1050,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 96
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-120-FULL",
+      "selected_schema_tool_ids": [
+        "A004",
+        "A001",
+        "A002",
+        "A005",
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010",
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "B005",
+        "B006",
+        "B007",
+        "B008",
+        "B009",
+        "B010",
+        "B011",
+        "B012",
+        "B013",
+        "B014",
+        "B015",
+        "B016",
+        "B017",
+        "B018",
+        "B019",
+        "B020",
+        "B021",
+        "B022",
+        "B023",
+        "B024",
+        "B025",
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C009",
+        "C010",
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012",
+        "D013",
+        "D014",
+        "D015",
+        "D016",
+        "D017",
+        "D018",
+        "D019",
+        "D020",
+        "E001",
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007",
+        "E008",
+        "E009",
+        "E010",
+        "E011",
+        "E012",
+        "E013",
+        "E014",
+        "E015",
+        "E016",
+        "E017",
+        "E018",
+        "E019",
+        "E020",
+        "F001",
+        "F002",
+        "F003",
+        "F004",
+        "F005",
+        "F006",
+        "F007",
+        "F008",
+        "F009",
+        "F010",
+        "F011",
+        "F012",
+        "F013",
+        "F014",
+        "F015",
+        "F016",
+        "F017",
+        "F018",
+        "F019",
+        "F020",
+        "G001",
+        "G002",
+        "G003",
+        "G004",
+        "G005",
+        "G006",
+        "G007",
+        "G008",
+        "G009",
+        "G010",
+        "G011",
+        "G012",
+        "E3C005",
+        "E3C014",
+        "E3C015",
+        "E3C027"
+      ],
+      "request_body_sha256": "99b4b8d385bdc1692aa98eea79e2d7ef92deae8f1d0fe8280ddd8806736d3cd6",
+      "started_at": "2026-08-10T19:44:53.786590+08:00",
+      "api_latency_ms": 1062.9638,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "845239ca-0401-420d-86b2-8cd1cbadd8e2",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20547,
+        "completion_tokens": 58,
+        "total_tokens": 20605,
+        "prompt_tokens_details": {
+          "cached_tokens": 19968
+        },
+        "prompt_cache_hit_tokens": 19968,
+        "prompt_cache_miss_tokens": 579
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "845239ca-0401-420d-86b2-8cd1cbadd8e2",
+        "object": "chat.completion",
+        "created": 1786362295,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_YBtMDieDwVKdJ3ynDWtB0860",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20547,
+          "completion_tokens": 58,
+          "total_tokens": 20605,
+          "prompt_tokens_details": {
+            "cached_tokens": 19968
+          },
+          "prompt_cache_hit_tokens": 19968,
+          "prompt_cache_miss_tokens": 579
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-007-120-LEXICAL_TOP5",
+      "selected_schema_tool_ids": [
+        "B019",
+        "E3C027",
+        "A004",
+        "E3C005",
+        "E3C015"
+      ],
+      "request_body_sha256": "785ea1ab5db7aa01a5c3156672095c8aff3742ca662e3d721b2e2e1ab8f5013f",
+      "started_at": "2026-08-10T19:44:54.856104+08:00",
+      "api_latency_ms": 1315.3991,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "79104a47-75c5-4570-9e60-453ecb3fe3ec",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1140,
+        "completion_tokens": 78,
+        "total_tokens": 1218,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 628
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "I'll normalize the composition so the components sum to 1. Let me use the composition normalization tool.",
+      "raw_response": {
+        "id": "79104a47-75c5-4570-9e60-453ecb3fe3ec",
+        "object": "chat.completion",
+        "created": 1786362296,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll normalize the composition so the components sum to 1. Let me use the composition normalization tool.",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_QDfxwVwVTBO6kT7X7geI6853",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1140,
+          "completion_tokens": 78,
+          "total_tokens": 1218,
+          "prompt_tokens_details": {
+            "cached_tokens": 512
+          },
+          "prompt_cache_hit_tokens": 512,
+          "prompt_cache_miss_tokens": 628
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-007-120-DENSE_TOP5",
+      "selected_schema_tool_ids": [
+        "E3C027",
+        "E3C014",
+        "A004",
+        "E3C005",
+        "B022"
+      ],
+      "request_body_sha256": "c18d2e53bfa649d525f4cbd5339b47a788cfddb2262d5d5183a4697ed998b771",
+      "started_at": "2026-08-10T19:44:56.180906+08:00",
+      "api_latency_ms": 1757.4486,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "5b4e4336-ddd0-4f82-bca3-dd87922426c3",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1041,
+        "completion_tokens": 81,
+        "total_tokens": 1122,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 657
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "I'll normalize the composition so the components sum to 1. Let me use the A004 tool for composition normalization.",
+      "raw_response": {
+        "id": "5b4e4336-ddd0-4f82-bca3-dd87922426c3",
+        "object": "chat.completion",
+        "created": 1786362297,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll normalize the composition so the components sum to 1. Let me use the A004 tool for composition normalization.",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_JRcfLhfv324w6FIV5iEX3473",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1041,
+          "completion_tokens": 81,
+          "total_tokens": 1122,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 657
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-007-CONTRACT_MISMATCH_4-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-007",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-007-120-HIERARCHICAL",
+      "selected_schema_tool_ids": [
+        "B019",
+        "E3C027",
+        "A004",
+        "E3C005",
+        "E3C015"
+      ],
+      "request_body_sha256": "785ea1ab5db7aa01a5c3156672095c8aff3742ca662e3d721b2e2e1ab8f5013f",
+      "started_at": "2026-08-10T19:44:57.942787+08:00",
+      "api_latency_ms": 1557.278,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "ea157023-023d-4721-a209-55959f1016c2",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1140,
+        "completion_tokens": 78,
+        "total_tokens": 1218,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 116
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 999.0,
+          "trace": 1.0
+        }
+      },
+      "plain_text_content": "I'll normalize the composition so the components sum to 1. Let me use the composition normalization tool.",
+      "raw_response": {
+        "id": "ea157023-023d-4721-a209-55959f1016c2",
+        "object": "chat.completion",
+        "created": 1786362299,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll normalize the composition so the components sum to 1. Let me use the composition normalization tool.",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_4CJFXy90NarVYqYbIFjj2317",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 999.0, \"trace\": 1.0}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1140,
+          "completion_tokens": 78,
+          "total_tokens": 1218,
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 116
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-NONE_0-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-NONE_0-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-NONE_0-17-FULL",
+      "selected_schema_tool_ids": [
+        "A004",
+        "A001",
+        "A002",
+        "A005",
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010",
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "G013",
+        "G014",
+        "G015",
+        "E3C001"
+      ],
+      "request_body_sha256": "81606b91a8be4a5d79c95b1a5555f4734dd8849cd22ba6e08a2d00375d158e9a",
+      "started_at": "2026-08-10T19:44:59.504713+08:00",
+      "api_latency_ms": 1207.727,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "2efb2cbb-b22c-4e68-9a3e-e5b9a1004a82",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3141,
+        "completion_tokens": 58,
+        "total_tokens": 3199,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 69
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "2efb2cbb-b22c-4e68-9a3e-e5b9a1004a82",
+        "object": "chat.completion",
+        "created": 1786362300,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_1OUXPtDTBLVhRx343KDG3356",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3141,
+          "completion_tokens": 58,
+          "total_tokens": 3199,
+          "prompt_tokens_details": {
+            "cached_tokens": 3072
+          },
+          "prompt_cache_hit_tokens": 3072,
+          "prompt_cache_miss_tokens": 69
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-NONE_0-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-NONE_0-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-008-17-LEXICAL_TOP5",
+      "selected_schema_tool_ids": [
+        "A004",
+        "B001",
+        "A009",
+        "A001",
+        "B004"
+      ],
+      "request_body_sha256": "55a87a3900ef2f04cad91957003e9b7732a1041bfc14230f5f6819a136fb7388",
+      "started_at": "2026-08-10T19:45:00.716437+08:00",
+      "api_latency_ms": 1404.9811,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "ba34dbdd-5831-4922-869e-8801fe13fc86",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1129,
+        "completion_tokens": 58,
+        "total_tokens": 1187,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 105
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "ba34dbdd-5831-4922-869e-8801fe13fc86",
+        "object": "chat.completion",
+        "created": 1786362302,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_2Q3SUZwcAJuaI6VdOluW7489",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1129,
+          "completion_tokens": 58,
+          "total_tokens": 1187,
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 105
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-NONE_0-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-NONE_0-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-008-17-DENSE_TOP5",
+      "selected_schema_tool_ids": [
+        "A004",
+        "E3C001",
+        "A002",
+        "A001",
+        "A006"
+      ],
+      "request_body_sha256": "281506230f3a4b284be09117da71c6ffccf28168a826f3ef8d819091cd2256c1",
+      "started_at": "2026-08-10T19:45:02.127672+08:00",
+      "api_latency_ms": 1702.9946,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "c3318570-577c-422e-8432-ef97c0620825",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1037,
+        "completion_tokens": 58,
+        "total_tokens": 1095,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 653
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "c3318570-577c-422e-8432-ef97c0620825",
+        "object": "chat.completion",
+        "created": 1786362303,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_mjx2BgvjB6bMXlplf3Rx0198",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1037,
+          "completion_tokens": 58,
+          "total_tokens": 1095,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 653
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-NONE_0-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-NONE_0-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-008-17-HIERARCHICAL",
+      "selected_schema_tool_ids": [
+        "A004",
+        "A009",
+        "A002",
+        "A008",
+        "A010"
+      ],
+      "request_body_sha256": "0b3ac3f4fb501a54aa9af89a8de36f64a9c6580d0c8d3ba16c6f5e21c3ed4760",
+      "started_at": "2026-08-10T19:45:03.835545+08:00",
+      "api_latency_ms": 1462.7355,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "e7d498af-c33c-4b7d-9ae6-7ebbe9758405",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1070,
+        "completion_tokens": 58,
+        "total_tokens": 1128,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 46
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "e7d498af-c33c-4b7d-9ae6-7ebbe9758405",
+        "object": "chat.completion",
+        "created": 1786362305,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_QdxoUmS6Tvtb2A14KA4p6574",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1070,
+          "completion_tokens": 58,
+          "total_tokens": 1128,
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 46
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-NONE_0-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-NONE_0-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-NONE_0-120-FULL",
+      "selected_schema_tool_ids": [
+        "A004",
+        "A001",
+        "A002",
+        "A005",
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010",
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "B005",
+        "B006",
+        "B007",
+        "B008",
+        "B009",
+        "B010",
+        "B011",
+        "B012",
+        "B013",
+        "B014",
+        "B015",
+        "B016",
+        "B017",
+        "B018",
+        "B019",
+        "B020",
+        "B021",
+        "B022",
+        "B023",
+        "B024",
+        "B025",
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C009",
+        "C010",
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012",
+        "D013",
+        "D014",
+        "D015",
+        "D016",
+        "D017",
+        "D018",
+        "D019",
+        "D020",
+        "E001",
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007",
+        "E008",
+        "E009",
+        "E010",
+        "E011",
+        "E012",
+        "E013",
+        "E014",
+        "E015",
+        "E016",
+        "E017",
+        "E018",
+        "E019",
+        "E020",
+        "F001",
+        "F002",
+        "F003",
+        "F004",
+        "F005",
+        "F006",
+        "F007",
+        "F008",
+        "F009",
+        "F010",
+        "F011",
+        "F012",
+        "F013",
+        "F014",
+        "F015",
+        "F016",
+        "F017",
+        "F018",
+        "F019",
+        "F020",
+        "G001",
+        "G002",
+        "G003",
+        "G004",
+        "G005",
+        "G006",
+        "G007",
+        "G008",
+        "G009",
+        "G010",
+        "G011",
+        "G012",
+        "G013",
+        "G014",
+        "G015",
+        "E3C001"
+      ],
+      "request_body_sha256": "aeab91386e86bdf9976e5ea96dd03efb1a572098f1a96040afb4b89eed174c3f",
+      "started_at": "2026-08-10T19:45:05.302330+08:00",
+      "api_latency_ms": 1427.7784,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "84234d27-c23c-4255-bc5b-1e789c17ae22",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20656,
+        "completion_tokens": 58,
+        "total_tokens": 20714,
+        "prompt_tokens_details": {
+          "cached_tokens": 20608
+        },
+        "prompt_cache_hit_tokens": 20608,
+        "prompt_cache_miss_tokens": 48
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "84234d27-c23c-4255-bc5b-1e789c17ae22",
+        "object": "chat.completion",
+        "created": 1786362306,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_RNi8Zh3LrhobyFuuuqhq2195",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20656,
+          "completion_tokens": 58,
+          "total_tokens": 20714,
+          "prompt_tokens_details": {
+            "cached_tokens": 20608
+          },
+          "prompt_cache_hit_tokens": 20608,
+          "prompt_cache_miss_tokens": 48
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-NONE_0-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-NONE_0-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-008-120-LEXICAL_TOP5",
+      "selected_schema_tool_ids": [
+        "B019",
+        "A004",
+        "C002",
+        "D005",
+        "C008"
+      ],
+      "request_body_sha256": "b775ce74f0400860f118a3e54ff3a7c481eff86f635f9e688f8e46e2cb3d1c9c",
+      "started_at": "2026-08-10T19:45:06.734441+08:00",
+      "api_latency_ms": 1866.2883,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "36092a34-8dea-4df9-a5fa-d49ff17e726a",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1292,
+        "completion_tokens": 58,
+        "total_tokens": 1350,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 396
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "36092a34-8dea-4df9-a5fa-d49ff17e726a",
+        "object": "chat.completion",
+        "created": 1786362308,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_UsYyOhMFSRUBMWfvUfhw9276",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1292,
+          "completion_tokens": 58,
+          "total_tokens": 1350,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 396
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-NONE_0-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-NONE_0-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-008-120-DENSE_TOP5",
+      "selected_schema_tool_ids": [
+        "A004",
+        "B022",
+        "B019",
+        "D011",
+        "B015"
+      ],
+      "request_body_sha256": "91655dc3ced401a94b379c9aabab914600c94f9787f728d535a25fd15546da4d",
+      "started_at": "2026-08-10T19:45:08.604463+08:00",
+      "api_latency_ms": 1744.5658,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "0f476fa2-9a5e-45cd-9603-49dfc06640c7",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1282,
+        "completion_tokens": 58,
+        "total_tokens": 1340,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 770
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "0f476fa2-9a5e-45cd-9603-49dfc06640c7",
+        "object": "chat.completion",
+        "created": 1786362309,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_ju4lMNiuQYHek5Nirb3e9010",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1282,
+          "completion_tokens": 58,
+          "total_tokens": 1340,
+          "prompt_tokens_details": {
+            "cached_tokens": 512
+          },
+          "prompt_cache_hit_tokens": 512,
+          "prompt_cache_miss_tokens": 770
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-NONE_0-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-NONE_0-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "none_0",
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0,
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-NONE_0-E1B2-A004-008-120-HIERARCHICAL",
+      "selected_schema_tool_ids": [
+        "B019",
+        "A004",
+        "C002",
+        "C008",
+        "B001"
+      ],
+      "request_body_sha256": "0d951b531e409960eb02f3503d9661490aff49e0f5972a6ab7b804c28f306a81",
+      "started_at": "2026-08-10T19:45:10.352394+08:00",
+      "api_latency_ms": 1796.8128,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "88c74d79-a89c-4ca4-8949-65cf6e652f7f",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1286,
+        "completion_tokens": 58,
+        "total_tokens": 1344,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 390
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "88c74d79-a89c-4ca4-8949-65cf6e652f7f",
+        "object": "chat.completion",
+        "created": 1786362311,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_imkJjJDAr7wY83t3Ok3H1140",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1286,
+          "completion_tokens": 58,
+          "total_tokens": 1344,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 390
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-LEXICAL_4-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-LEXICAL_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-17-FULL",
+      "selected_schema_tool_ids": [
+        "A004",
+        "A001",
+        "A002",
+        "A005",
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010",
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "A003",
+        "E3C012",
+        "E3C013",
+        "E3C026"
+      ],
+      "request_body_sha256": "e796873265710fbd2687ae5e8211324a4b4fdcd18ccb2f0ef970d26d5d738cf3",
+      "started_at": "2026-08-10T19:45:12.150240+08:00",
+      "api_latency_ms": 1355.5781,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "59393764-2ad1-43fb-9f45-42ea41f2e1dc",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3055,
+        "completion_tokens": 58,
+        "total_tokens": 3113,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 111
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "59393764-2ad1-43fb-9f45-42ea41f2e1dc",
+        "object": "chat.completion",
+        "created": 1786362313,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_cyK3A0VXZrGyOYL6tpNf7248",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3055,
+          "completion_tokens": 58,
+          "total_tokens": 3113,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 111
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-LEXICAL_4-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-LEXICAL_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-008-17-LEXICAL_TOP5",
+      "selected_schema_tool_ids": [
+        "E3C026",
+        "A004",
+        "E3C013",
+        "E3C012",
+        "A003"
+      ],
+      "request_body_sha256": "d8927d64d8a65d875872b24c2cf00d34a0d99176624247ae5fad244be19e8678",
+      "started_at": "2026-08-10T19:45:13.513283+08:00",
+      "api_latency_ms": 1288.7577,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "34971b47-9274-4283-ad02-a36c4ab9f9fc",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1015,
+        "completion_tokens": 58,
+        "total_tokens": 1073,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 119
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "34971b47-9274-4283-ad02-a36c4ab9f9fc",
+        "object": "chat.completion",
+        "created": 1786362314,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_IWJRO0cLwFFqJFMDPYyF8454",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1015,
+          "completion_tokens": 58,
+          "total_tokens": 1073,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 119
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-LEXICAL_4-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-LEXICAL_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-008-17-DENSE_TOP5",
+      "selected_schema_tool_ids": [
+        "E3C012",
+        "E3C026",
+        "A004",
+        "E3C013",
+        "A002"
+      ],
+      "request_body_sha256": "7c1e6105db0d83c92edd803e370df7fc8ddb0239d29e996af178f18c69b5b478",
+      "started_at": "2026-08-10T19:45:14.806219+08:00",
+      "api_latency_ms": 1842.4514,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "9bd2025f-b220-494f-984a-96f1623777d5",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1028,
+        "completion_tokens": 58,
+        "total_tokens": 1086,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 260
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "9bd2025f-b220-494f-984a-96f1623777d5",
+        "object": "chat.completion",
+        "created": 1786362316,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_BjFjcuDthomnCqi1iGUc3709",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1028,
+          "completion_tokens": 58,
+          "total_tokens": 1086,
+          "prompt_tokens_details": {
+            "cached_tokens": 768
+          },
+          "prompt_cache_hit_tokens": 768,
+          "prompt_cache_miss_tokens": 260
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-LEXICAL_4-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-LEXICAL_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-008-17-HIERARCHICAL",
+      "selected_schema_tool_ids": [
+        "E3C026",
+        "A004",
+        "E3C013",
+        "E3C012",
+        "A003"
+      ],
+      "request_body_sha256": "d8927d64d8a65d875872b24c2cf00d34a0d99176624247ae5fad244be19e8678",
+      "started_at": "2026-08-10T19:45:16.652540+08:00",
+      "api_latency_ms": 1343.4567,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "b166aa9c-4461-4a6a-b063-5ece871ec41f",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1015,
+        "completion_tokens": 58,
+        "total_tokens": 1073,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 119
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "b166aa9c-4461-4a6a-b063-5ece871ec41f",
+        "object": "chat.completion",
+        "created": 1786362318,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_w9DspiCzz3vqaosqBqNJ9939",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1015,
+          "completion_tokens": 58,
+          "total_tokens": 1073,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 119
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-LEXICAL_4-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-LEXICAL_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-120-FULL",
+      "selected_schema_tool_ids": [
+        "A004",
+        "A001",
+        "A002",
+        "A005",
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010",
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "B005",
+        "B006",
+        "B007",
+        "B008",
+        "B009",
+        "B010",
+        "B011",
+        "B012",
+        "B013",
+        "B014",
+        "B015",
+        "B016",
+        "B017",
+        "B018",
+        "B019",
+        "B020",
+        "B021",
+        "B022",
+        "B023",
+        "B024",
+        "B025",
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C009",
+        "C010",
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012",
+        "D013",
+        "D014",
+        "D015",
+        "D016",
+        "D017",
+        "D018",
+        "D019",
+        "D020",
+        "E001",
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007",
+        "E008",
+        "E009",
+        "E010",
+        "E011",
+        "E012",
+        "E013",
+        "E014",
+        "E015",
+        "E016",
+        "E017",
+        "E018",
+        "E019",
+        "E020",
+        "F001",
+        "F002",
+        "F003",
+        "F004",
+        "F005",
+        "F006",
+        "F007",
+        "F008",
+        "F009",
+        "F010",
+        "F011",
+        "F012",
+        "F013",
+        "F014",
+        "F015",
+        "F016",
+        "F017",
+        "F018",
+        "F019",
+        "F020",
+        "G001",
+        "G002",
+        "G003",
+        "G004",
+        "G005",
+        "G006",
+        "G007",
+        "G008",
+        "G009",
+        "G010",
+        "G011",
+        "G012",
+        "A003",
+        "E3C012",
+        "E3C013",
+        "E3C026"
+      ],
+      "request_body_sha256": "3b079851b8b92f4f68e01e0db6b2372d3c6246241fc7c1c00135f9f8ea6c4d0a",
+      "started_at": "2026-08-10T19:45:18.001589+08:00",
+      "api_latency_ms": 1330.317,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "9a8c05ed-0951-48e5-8415-cbdb4dd36ec1",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20570,
+        "completion_tokens": 58,
+        "total_tokens": 20628,
+        "prompt_tokens_details": {
+          "cached_tokens": 20480
+        },
+        "prompt_cache_hit_tokens": 20480,
+        "prompt_cache_miss_tokens": 90
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "9a8c05ed-0951-48e5-8415-cbdb4dd36ec1",
+        "object": "chat.completion",
+        "created": 1786362319,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_rjxgaZIzGhvGETpgqeQQ4346",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20570,
+          "completion_tokens": 58,
+          "total_tokens": 20628,
+          "prompt_tokens_details": {
+            "cached_tokens": 20480
+          },
+          "prompt_cache_hit_tokens": 20480,
+          "prompt_cache_miss_tokens": 90
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-LEXICAL_4-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-LEXICAL_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-008-120-LEXICAL_TOP5",
+      "selected_schema_tool_ids": [
+        "B019",
+        "E3C026",
+        "A004",
+        "E3C013",
+        "E3C012"
+      ],
+      "request_body_sha256": "8932a12361faa0544ca4942d698949fc46e42875472fe3b48b9bc900ff1349de",
+      "started_at": "2026-08-10T19:45:19.336994+08:00",
+      "api_latency_ms": 1595.2591,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "8382e8b2-5d66-4a47-9679-c90db6bf96db",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1193,
+        "completion_tokens": 68,
+        "total_tokens": 1261,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 41
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "I'll normalize the composition using the A004 tool.",
+      "raw_response": {
+        "id": "8382e8b2-5d66-4a47-9679-c90db6bf96db",
+        "object": "chat.completion",
+        "created": 1786362320,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll normalize the composition using the A004 tool.",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_PYgggYb24W98sPonnrNP1976",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1193,
+          "completion_tokens": 68,
+          "total_tokens": 1261,
+          "prompt_tokens_details": {
+            "cached_tokens": 1152
+          },
+          "prompt_cache_hit_tokens": 1152,
+          "prompt_cache_miss_tokens": 41
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-LEXICAL_4-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-LEXICAL_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-008-120-DENSE_TOP5",
+      "selected_schema_tool_ids": [
+        "E3C012",
+        "E3C026",
+        "A004",
+        "E3C013",
+        "B022"
+      ],
+      "request_body_sha256": "bca61e0cad2b6a2683b6144a2c60e3e7d5cf838ca3b9bdaaafa6d2c8007e2414",
+      "started_at": "2026-08-10T19:45:20.936677+08:00",
+      "api_latency_ms": 1264.3236,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "957e0b49-5461-4a12-9556-585ca168463d",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1075,
+        "completion_tokens": 58,
+        "total_tokens": 1133,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 51
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "957e0b49-5461-4a12-9556-585ca168463d",
+        "object": "chat.completion",
+        "created": 1786362322,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_X1r6QK0dvxOqXC4kLRXn7701",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1075,
+          "completion_tokens": 58,
+          "total_tokens": 1133,
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 51
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-LEXICAL_4-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-LEXICAL_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "lexical_4",
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-LEXICAL_4-E1B2-A004-008-120-HIERARCHICAL",
+      "selected_schema_tool_ids": [
+        "B019",
+        "E3C026",
+        "A004",
+        "E3C013",
+        "E3C012"
+      ],
+      "request_body_sha256": "8932a12361faa0544ca4942d698949fc46e42875472fe3b48b9bc900ff1349de",
+      "started_at": "2026-08-10T19:45:22.205832+08:00",
+      "api_latency_ms": 1440.768,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "6240874c-1478-4264-ac35-8763b42b5cd4",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1193,
+        "completion_tokens": 68,
+        "total_tokens": 1261,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 41
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "I'll normalize the composition using the A004 tool.",
+      "raw_response": {
+        "id": "6240874c-1478-4264-ac35-8763b42b5cd4",
+        "object": "chat.completion",
+        "created": 1786362323,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll normalize the composition using the A004 tool.",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_OKlRMnhNyx3Cu3qeOWc84986",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1193,
+          "completion_tokens": 68,
+          "total_tokens": 1261,
+          "prompt_tokens_details": {
+            "cached_tokens": 1152
+          },
+          "prompt_cache_hit_tokens": 1152,
+          "prompt_cache_miss_tokens": 41
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-17-FULL",
+      "selected_schema_tool_ids": [
+        "A004",
+        "A001",
+        "A002",
+        "A005",
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010",
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "E3C005",
+        "E3C014",
+        "E3C015",
+        "E3C027"
+      ],
+      "request_body_sha256": "63be0e0d2e26c5c85d94f93b2388790bf40ec75c5a0d06dbd165a1719f472c5d",
+      "started_at": "2026-08-10T19:45:23.649853+08:00",
+      "api_latency_ms": 1384.2924,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "6e38c658-c67b-4163-ac66-88e31c5e2912",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3032,
+        "completion_tokens": 58,
+        "total_tokens": 3090,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 88
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "6e38c658-c67b-4163-ac66-88e31c5e2912",
+        "object": "chat.completion",
+        "created": 1786362325,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_KlzbAJOIzPRJZv9sTNOL0481",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3032,
+          "completion_tokens": 58,
+          "total_tokens": 3090,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 88
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-17-LEXICAL_TOP5",
+      "selected_schema_tool_ids": [
+        "E3C027",
+        "A004",
+        "E3C005",
+        "E3C015",
+        "E3C014"
+      ],
+      "request_body_sha256": "6668fb04cfc97a196d2894e9c209bbef45026b64813787c87fed06458a9edc84",
+      "started_at": "2026-08-10T19:45:25.043522+08:00",
+      "api_latency_ms": 1443.3055,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "74429e53-5576-447a-a58f-f48d2d30983c",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 992,
+        "completion_tokens": 58,
+        "total_tokens": 1050,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 96
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "74429e53-5576-447a-a58f-f48d2d30983c",
+        "object": "chat.completion",
+        "created": 1786362326,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_pk9aSNWOSqNvMp3pZvcA3020",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 992,
+          "completion_tokens": 58,
+          "total_tokens": 1050,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 96
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-17-DENSE_TOP5",
+      "selected_schema_tool_ids": [
+        "E3C014",
+        "E3C027",
+        "A004",
+        "E3C005",
+        "E3C015"
+      ],
+      "request_body_sha256": "e56bab22a75118899f0aeb387e138822512f813c38fef366a33d284613019654",
+      "started_at": "2026-08-10T19:45:26.487002+08:00",
+      "api_latency_ms": 1621.085,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "bf56a21d-0cca-45db-bc90-8e3d83dd01da",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 992,
+        "completion_tokens": 58,
+        "total_tokens": 1050,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 736
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "bf56a21d-0cca-45db-bc90-8e3d83dd01da",
+        "object": "chat.completion",
+        "created": 1786362328,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_yt2nxfcC53ZAy6ltwAWK0810",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 992,
+          "completion_tokens": 58,
+          "total_tokens": 1050,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 736
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-17",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 17,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-17-HIERARCHICAL",
+      "selected_schema_tool_ids": [
+        "E3C027",
+        "A004",
+        "E3C005",
+        "E3C015",
+        "E3C014"
+      ],
+      "request_body_sha256": "6668fb04cfc97a196d2894e9c209bbef45026b64813787c87fed06458a9edc84",
+      "started_at": "2026-08-10T19:45:28.120179+08:00",
+      "api_latency_ms": 1390.1467,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "682b39f8-65de-439e-b7ac-a8805ec31272",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 992,
+        "completion_tokens": 58,
+        "total_tokens": 1050,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 96
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "682b39f8-65de-439e-b7ac-a8805ec31272",
+        "object": "chat.completion",
+        "created": 1786362329,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_HHSLJqNn1hWgOndBs9fV0441",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 992,
+          "completion_tokens": 58,
+          "total_tokens": 1050,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 96
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "full_schema",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-120-FULL",
+      "selected_schema_tool_ids": [
+        "A004",
+        "A001",
+        "A002",
+        "A005",
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010",
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "B005",
+        "B006",
+        "B007",
+        "B008",
+        "B009",
+        "B010",
+        "B011",
+        "B012",
+        "B013",
+        "B014",
+        "B015",
+        "B016",
+        "B017",
+        "B018",
+        "B019",
+        "B020",
+        "B021",
+        "B022",
+        "B023",
+        "B024",
+        "B025",
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C009",
+        "C010",
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012",
+        "D013",
+        "D014",
+        "D015",
+        "D016",
+        "D017",
+        "D018",
+        "D019",
+        "D020",
+        "E001",
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007",
+        "E008",
+        "E009",
+        "E010",
+        "E011",
+        "E012",
+        "E013",
+        "E014",
+        "E015",
+        "E016",
+        "E017",
+        "E018",
+        "E019",
+        "E020",
+        "F001",
+        "F002",
+        "F003",
+        "F004",
+        "F005",
+        "F006",
+        "F007",
+        "F008",
+        "F009",
+        "F010",
+        "F011",
+        "F012",
+        "F013",
+        "F014",
+        "F015",
+        "F016",
+        "F017",
+        "F018",
+        "F019",
+        "F020",
+        "G001",
+        "G002",
+        "G003",
+        "G004",
+        "G005",
+        "G006",
+        "G007",
+        "G008",
+        "G009",
+        "G010",
+        "G011",
+        "G012",
+        "E3C005",
+        "E3C014",
+        "E3C015",
+        "E3C027"
+      ],
+      "request_body_sha256": "193111cc577799e167679b222508457aad40b86160a9427d906a860b068cc0e3",
+      "started_at": "2026-08-10T19:45:29.515746+08:00",
+      "api_latency_ms": 1531.2211,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "6d4e96d0-355e-4cef-8482-82ae45b7f1b4",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20547,
+        "completion_tokens": 58,
+        "total_tokens": 20605,
+        "prompt_tokens_details": {
+          "cached_tokens": 20480
+        },
+        "prompt_cache_hit_tokens": 20480,
+        "prompt_cache_miss_tokens": 67
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "6d4e96d0-355e-4cef-8482-82ae45b7f1b4",
+        "object": "chat.completion",
+        "created": 1786362330,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_cDzDJLS1iow88vhABFZN4567",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20547,
+          "completion_tokens": 58,
+          "total_tokens": 20605,
+          "prompt_tokens_details": {
+            "cached_tokens": 20480
+          },
+          "prompt_cache_hit_tokens": 20480,
+          "prompt_cache_miss_tokens": 67
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "lexical_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-120-LEXICAL_TOP5",
+      "selected_schema_tool_ids": [
+        "B019",
+        "E3C027",
+        "A004",
+        "E3C005",
+        "E3C015"
+      ],
+      "request_body_sha256": "c4a6568022798e93a993e5c425a09f7bf96b9e1494d7ea97143ae61228970825",
+      "started_at": "2026-08-10T19:45:31.054231+08:00",
+      "api_latency_ms": 1457.5675,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "315a0fba-7277-4951-bfaf-41cedb933b93",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1140,
+        "completion_tokens": 78,
+        "total_tokens": 1218,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 116
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "I'll normalize the composition so that the sum equals 1. Let me use the composition normalization tool.",
+      "raw_response": {
+        "id": "315a0fba-7277-4951-bfaf-41cedb933b93",
+        "object": "chat.completion",
+        "created": 1786362332,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll normalize the composition so that the sum equals 1. Let me use the composition normalization tool.",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_a6kc2P8va9uGtXYT40El5290",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1140,
+          "completion_tokens": 78,
+          "total_tokens": 1218,
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 116
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "dense_top5",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-120-DENSE_TOP5",
+      "selected_schema_tool_ids": [
+        "E3C014",
+        "E3C027",
+        "A004",
+        "E3C005",
+        "B022"
+      ],
+      "request_body_sha256": "fd1aaeb764f56b850e0ab1aa203176062d353f7ffd2dd869e030367966679807",
+      "started_at": "2026-08-10T19:45:32.522994+08:00",
+      "api_latency_ms": 2114.8127,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "c78cbd27-0ba8-400f-891a-827cea6ad217",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1041,
+        "completion_tokens": 152,
+        "total_tokens": 1193,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 785
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 3,
+      "exactly_one_tool_call": false,
+      "selected_tool_id": null,
+      "arguments_json_valid": false,
+      "arguments": null,
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "c78cbd27-0ba8-400f-891a-827cea6ad217",
+        "object": "chat.completion",
+        "created": 1786362333,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_VhmSQalig0EjzlRBMKmT8538",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                },
+                {
+                  "index": 1,
+                  "id": "call_01_21II6Z6ySslaSHu2v1Py3738",
+                  "type": "function",
+                  "function": {
+                    "name": "E3C005",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                },
+                {
+                  "index": 2,
+                  "id": "call_02_bo3z3Ny5z5YSHCh8sqy15562",
+                  "type": "function",
+                  "function": {
+                    "name": "E3C027",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1041,
+          "completion_tokens": 152,
+          "total_tokens": 1193,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 785
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A004-HARD-E1B2-A004-008-CONTRACT_MISMATCH_4-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A004-008",
+      "pool_id": "A004-CONTRACT_MISMATCH_4-120",
+      "pool_design": "controlled_dose_development",
+      "condition_id": "contract_mismatch_4",
+      "near_neighbor_type": "contract_mismatch",
+      "near_neighbor_count": 4,
+      "tool_pool_size": 120,
+      "method": "hierarchical",
+      "candidate_view_id": "VIEW-A004-CONTRACT_MISMATCH_4-E1B2-A004-008-120-HIERARCHICAL",
+      "selected_schema_tool_ids": [
+        "B019",
+        "E3C027",
+        "A004",
+        "E3C005",
+        "E3C015"
+      ],
+      "request_body_sha256": "c4a6568022798e93a993e5c425a09f7bf96b9e1494d7ea97143ae61228970825",
+      "started_at": "2026-08-10T19:45:34.643183+08:00",
+      "api_latency_ms": 1975.319,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "151d51b7-e592-44eb-b59d-5c7084a76f08",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1140,
+        "completion_tokens": 78,
+        "total_tokens": 1218,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 116
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A004",
+      "arguments_json_valid": true,
+      "arguments": {
+        "compositions": {
+          "matrix": 0.999,
+          "trace": 0.001
+        }
+      },
+      "plain_text_content": "I'll normalize the composition so that the sum equals 1. Let me use the composition normalization tool.",
+      "raw_response": {
+        "id": "151d51b7-e592-44eb-b59d-5c7084a76f08",
+        "object": "chat.completion",
+        "created": 1786362336,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll normalize the composition so that the sum equals 1. Let me use the composition normalization tool.",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_kzGZYrf226KRPWbSoMox7357",
+                  "type": "function",
+                  "function": {
+                    "name": "A004",
+                    "arguments": "{\"compositions\": {\"matrix\": 0.999, \"trace\": 0.001}}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1140,
+          "completion_tokens": 78,
+          "total_tokens": 1218,
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 116
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "confirmatory_inference_allowed": false
+    }
+  ]
+}

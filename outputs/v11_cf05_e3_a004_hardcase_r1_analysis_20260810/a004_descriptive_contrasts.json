@@ -1,0 +1,12 @@
+[
+  {
+    "contrast": "lexical_4_minus_none_0",
+    "complete_call_accuracy_difference": 0,
+    "interpretation": "development_descriptive_only_no_confirmatory_inference"
+  },
+  {
+    "contrast": "contract_mismatch_4_minus_none_0",
+    "complete_call_accuracy_difference": -0.0625,
+    "interpretation": "development_descriptive_only_no_confirmatory_inference"
+  }
+]

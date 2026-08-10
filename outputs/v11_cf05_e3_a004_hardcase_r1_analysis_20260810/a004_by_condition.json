@@ -1,0 +1,38 @@
+[
+  {
+    "condition_id": "contract_mismatch_4",
+    "cell_count": 16,
+    "transport_acceptance_rate": 1,
+    "single_tool_call_rate": 0.9375,
+    "target_tool_selection_accuracy": 0.9375,
+    "parameter_accuracy": 0.9375,
+    "complete_call_accuracy": 0.9375,
+    "mean_api_latency_ms": 1391.3106375,
+    "mean_prompt_tokens": 3734.5,
+    "mean_completion_tokens": 70.3125
+  },
+  {
+    "condition_id": "lexical_4",
+    "cell_count": 16,
+    "transport_acceptance_rate": 1,
+    "single_tool_call_rate": 1,
+    "target_tool_selection_accuracy": 1,
+    "parameter_accuracy": 1,
+    "complete_call_accuracy": 1,
+    "mean_api_latency_ms": 1275.468625,
+    "mean_prompt_tokens": 3768,
+    "mean_completion_tokens": 60.5
+  },
+  {
+    "condition_id": "none_0",
+    "cell_count": 16,
+    "transport_acceptance_rate": 1,
+    "single_tool_call_rate": 1,
+    "target_tool_selection_accuracy": 1,
+    "parameter_accuracy": 1,
+    "complete_call_accuracy": 1,
+    "mean_api_latency_ms": 1338.5421812499999,
+    "mean_prompt_tokens": 3861.625,
+    "mean_completion_tokens": 59.25
+  }
+]

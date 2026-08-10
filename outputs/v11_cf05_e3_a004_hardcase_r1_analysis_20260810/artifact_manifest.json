@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A004-HARDCASE-R1-ANALYSIS-20260810",
+  "artifact_count": 9,
+  "artifacts": [
+    {
+      "filename": "a004_analysis_config_snapshot.json",
+      "sha256": "0c289e73feb3e5f74b69c3af980c743e1fc40934c6abb89fccfbd300d42dd067",
+      "bytes": 1643
+    },
+    {
+      "filename": "a004_by_condition.json",
+      "sha256": "a54750af6b7a42c7377766f23f024a8a29721a86cf4c3a01177c409e20da22e9",
+      "bytes": 1112
+    },
+    {
+      "filename": "a004_by_condition_method_size.json",
+      "sha256": "3afcb5e394ef962efdbba305253871f56baee18828a860834f63cfa507d33628",
+      "bytes": 9898
+    },
+    {
+      "filename": "a004_by_method.json",
+      "sha256": "5946b15ad9e9bc509da2c7dba1ace0a31ee492ab02e06a218cad729c647215e3",
+      "bytes": 1545
+    },
+    {
+      "filename": "a004_by_size.json",
+      "sha256": "b554bf1fbfe73ba6cec7fb57e0e81946739b2379bb1fb3203f2056a1acad6771",
+      "bytes": 800
+    },
+    {
+      "filename": "a004_descriptive_contrasts.json",
+      "sha256": "28c43b8220aba910706cef7375bb38755f83cc6d3f700ce5a91ab461e77e17d3",
+      "bytes": 379
+    },
+    {
+      "filename": "a004_failure_rows.json",
+      "sha256": "a38983266cd08088f2ad3b68ac92969ca2678527361c0e4f13c4408c12421d5e",
+      "bytes": 1197
+    },
+    {
+      "filename": "a004_overall_report.json",
+      "sha256": "f5f93e4eb17246bd02a4378f3a0fb284b9a888f34b22154004e204362fd91dbd",
+      "bytes": 1026
+    },
+    {
+      "filename": "a004_scored_rows.json",
+      "sha256": "9062562817b881911f93543e3fda11f2f622f9a12721a83202a32dc5ea0d9c3d",
+      "bytes": 63800
+    }
+  ]
+}
