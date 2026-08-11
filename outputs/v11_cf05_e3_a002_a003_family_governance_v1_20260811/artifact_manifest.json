@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "governance_id": "V11-CF05-E3-A002-A003-FAMILY-GOVERNANCE-CANDIDATE-V1-20260811",
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "filename": "a002_a003_family_governance_candidate.json",
+      "sha256": "5c353433d1b77fadcaf34f53da552d8f5b92566e0d22510fc64f0594eea42090",
+      "bytes": 1742
+    },
+    {
+      "filename": "a002_a003_family_governance_config_snapshot.json",
+      "sha256": "60a1d334e7aa1d68ee76d367c04a38ffe06cc7d9366398bfd94f8613b8a48097",
+      "bytes": 2735
+    },
+    {
+      "filename": "a002_a003_family_governance_report.json",
+      "sha256": "ae71eb043e7aedf1932175f42d0433cbdb9a108621f09ac8351d24fe7fb49762",
+      "bytes": 972
+    },
+    {
+      "filename": "a002_a003_metric_decision_table.json",
+      "sha256": "2eca9c8c05d2fcf7c6a7be665fe5f9f4a51e5d9c72ed17d43ca28498011ebdf6",
+      "bytes": 1853
+    },
+    {
+      "filename": "a003_existing_results_governance_reclassification.json",
+      "sha256": "bd96bdade3c82d691c4a4539d33bab8b0ae4c6cb48445d87ca5155357b4787a6",
+      "bytes": 42715
+    }
+  ]
+}

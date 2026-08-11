@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "governance_id": "V11-CF05-E3-A002-A003-FAMILY-GOVERNANCE-CANDIDATE-V1-20260811",
+  "status": "candidate_pending_project_approval",
+  "family_id": "CHEMICAL_FORMULA_ANALYSIS-V1",
+  "members": [
+    {
+      "tool_id": "A002",
+      "role": "parser_superset",
+      "primary_task_output": "elements"
+    },
+    {
+      "tool_id": "A003",
+      "role": "dedicated_molar_mass_view",
+      "primary_task_output": "molar_mass_with_unit"
+    }
+  ],
+  "relation_type": "asymmetric_output_overlap",
+  "counting": {
+    "callable_endpoint_count": 2,
+    "family_deduplicated_capability_count": 1,
+    "h4_primary_scale_axis": "endpoint_schema_count",
+    "h4_companion_scale_axis": "family_deduplicated_capability_count",
+    "rule": "Keep both schemas when measuring routing load; deduplicate the family when claiming independent scientific capability count."
+  },
+  "metrics": {
+    "primary": "primary_acceptable_tool_selection_accuracy",
+    "secondary": [
+      "tool_family_selection_accuracy",
+      "alternative_success_rate",
+      "scientific_success_including_alternatives"
+    ],
+    "primary_support_may_be_changed_by_secondary_metrics": false
+  },
+  "h3": {
+    "eligible_as_symmetric_functional_neighbor_pair": false,
+    "allowed_role": "asymmetric_overlap_secondary_analysis"
+  },
+  "task_policy": {
+    "a002_element_tasks": {
+      "primary": [
+        "A002"
+      ],
+      "a003_alternative": false
+    },
+    "a003_molar_mass_tasks": {
+      "primary": "task_specific_frozen_set",
+      "a002_alternative": true
+    }
+  },
+  "formal_catalog_mutated": false,
+  "formal_gold_mutated": false,
+  "protocol_mutated": false,
+  "core_frozen": false
+}

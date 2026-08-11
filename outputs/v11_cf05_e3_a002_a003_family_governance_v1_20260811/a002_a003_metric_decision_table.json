@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "case_id": "A003-TASK-SELECT-A003",
+      "task_primary_tool": "A003",
+      "selected_tool": "A003",
+      "primary_selection_correct": true,
+      "tool_family_selection_correct": true,
+      "alternative_success": false,
+      "scientific_success_including_alternatives": true,
+      "error_class": "none_primary_success"
+    },
+    {
+      "case_id": "A003-TASK-SELECT-A002",
+      "task_primary_tool": "A003",
+      "selected_tool": "A002",
+      "primary_selection_correct": false,
+      "tool_family_selection_correct": true,
+      "alternative_success": true,
+      "scientific_success_including_alternatives": true,
+      "error_class": "endpoint_preference_only"
+    },
+    {
+      "case_id": "A002-TASK-SELECT-A002",
+      "task_primary_tool": "A002",
+      "selected_tool": "A002",
+      "primary_selection_correct": true,
+      "tool_family_selection_correct": true,
+      "alternative_success": false,
+      "scientific_success_including_alternatives": true,
+      "error_class": "none_primary_success"
+    },
+    {
+      "case_id": "A002-TASK-SELECT-A003",
+      "task_primary_tool": "A002",
+      "selected_tool": "A003",
+      "primary_selection_correct": false,
+      "tool_family_selection_correct": true,
+      "alternative_success": false,
+      "scientific_success_including_alternatives": false,
+      "error_class": "same_family_scientific_failure"
+    },
+    {
+      "case_id": "A003-TASK-SELECT-UNRELATED",
+      "task_primary_tool": "A003",
+      "selected_tool": "B019",
+      "primary_selection_correct": false,
+      "tool_family_selection_correct": false,
+      "alternative_success": false,
+      "scientific_success_including_alternatives": false,
+      "error_class": "scientific_selection_failure"
+    }
+  ]
+}
