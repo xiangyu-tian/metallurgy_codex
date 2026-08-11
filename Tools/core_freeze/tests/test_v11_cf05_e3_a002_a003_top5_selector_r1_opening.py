@@ -9,7 +9,6 @@ from Tools.core_freeze.e3_routing.e3_transport_policy import validate_selector_p
 
 WORKSPACE = Path(__file__).resolve().parents[3]
 OUTPUT = WORKSPACE / "outputs/v11_cf05_e3_a002_a003_top5_selector_r1_opening_v1_20260811"
-AUTHORIZATION = WORKSPACE / "Tools/core_freeze/e3_routing/a002_a003_top5_selector_r1_execution_authorization_v1.json"
 
 
 def load(filename: str):
@@ -34,7 +33,8 @@ def test_opening_is_complete_but_unauthorized():
     assert report["external_api_calls"] == 0
     assert report["tool_calls_executed"] == 0
     assert report["external_api_execution_authorized"] is False
-    assert not AUTHORIZATION.exists()
+    # The immutable opening remains pre-authorization even after a separately
+    # hash-bound authorization record is created later in the lifecycle.
 
 
 def test_all_192_payloads_obey_transport_policy_and_expose_five_tools():

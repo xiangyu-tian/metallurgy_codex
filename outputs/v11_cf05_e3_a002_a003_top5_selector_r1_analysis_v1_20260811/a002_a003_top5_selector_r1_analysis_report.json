@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R1-ANALYSIS-V1-20260811",
+  "status": "development_r1_scored_with_terminal_transport_failures",
+  "denominator_policy": "intention_to_treat_all_192_scheduled_cells",
+  "result_count": 192,
+  "overall": {
+    "transport_accepted": 0.994792,
+    "exactly_one_tool_call": 0.979167,
+    "primary_endpoint_hit": 0.979167,
+    "family_hit": 0.979167,
+    "scientific_hit": 0.979167,
+    "arguments_exact": 0.979167,
+    "primary_end_to_end": 0.979167,
+    "scientific_end_to_end": 0.979167
+  },
+  "method_primary_end_to_end": {
+    "dense_top5": 1.0,
+    "hierarchical": 0.96875,
+    "lexical_top5": 0.96875
+  },
+  "scale_difference_120_minus_17": {
+    "transport_accepted": -0.010417,
+    "exactly_one_tool_call": -0.041667,
+    "primary_endpoint_hit": -0.041667,
+    "family_hit": -0.041667,
+    "scientific_hit": -0.041667,
+    "arguments_exact": -0.041667,
+    "primary_end_to_end": -0.041667,
+    "scientific_end_to_end": -0.041667
+  },
+  "error_counts": {
+    "multiple_tool_calls": 3,
+    "none": 188,
+    "provider_error_terminal": 1
+  },
+  "all_single_calls_primary_correct": true,
+  "primary_endpoint_hit_rate_given_single_call": 1.0,
+  "reasoning_content_observed_count": 0,
+  "external_api_calls_in_source_run": 192,
+  "external_api_calls_in_analysis": 0,
+  "tool_calls_executed": 0,
+  "retries_executed": 0,
+  "independent_validation_split_accessed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "interpretation": "All 188 single tool calls selected a primary acceptable endpoint with exact arguments. The four intention-to-treat failures were three dual-call responses selecting both A002 and the equivalent E3C002 endpoint, plus one terminal provider HTTP 522. All occurred on the complex Cu(NH3)4SO4 element-count task at 120 tools; they are retained as failures and were not retried.",
+  "next_gate": "preserve R1 unchanged, commit the runtime and offline scoring evidence, then decide whether a separately authorized repeat is needed for variability rather than retrying failed cells"
+}

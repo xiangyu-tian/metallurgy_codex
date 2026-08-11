@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R1-ANALYSIS-V1-20260811",
+  "expected_result_count": 192,
+  "methods": [
+    "lexical_top5",
+    "dense_top5",
+    "hierarchical"
+  ],
+  "denominator_policy": "intention_to_treat_all_192_scheduled_cells",
+  "provider_failures_and_non_single_calls_count_as_incorrect": true,
+  "automatic_retry_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "independent_validation_split_access_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "runtime_results": {
+      "path": "outputs/v11_cf05_e3_a002_a003_top5_selector_r1_results_v1_20260811/a002_a003_top5_selector_r1_results.json",
+      "sha256": "aad08353639bf39f03f4438dc150039514deefb23d60f502639c5da0d8606575"
+    },
+    "runtime_report": {
+      "path": "outputs/v11_cf05_e3_a002_a003_top5_selector_r1_results_v1_20260811/a002_a003_top5_selector_r1_runtime_report.json",
+      "sha256": "09864b9abbe20056b89ce7e617b931d71dd4678f48704168dca6964d89c9b7bc"
+    },
+    "runtime_manifest": {
+      "path": "outputs/v11_cf05_e3_a002_a003_top5_selector_r1_results_v1_20260811/artifact_manifest.json",
+      "sha256": "b5c0c5f0043525f333efce05826651bb7d0782f92bb739321e5765d972a0fc88"
+    },
+    "scoring_registry": {
+      "path": "outputs/v11_cf05_e3_a002_a003_pool_views_v1_20260811/a002_a003_pool_specific_scoring_registry.json",
+      "sha256": "c9624b222dca0b78a01e8a3e25440d221965db3ceb758d2a70c5faea428e3702"
+    },
+    "router_tasks": {
+      "path": "outputs/v11_cf05_e3_a002_a003_pool_views_v1_20260811/a002_a003_router_visible_tasks.json",
+      "sha256": "624e198bf44b193c76d9c0b6cffd251db1fa86e8a4cac6e12f05c9f4c1bcbd80"
+    },
+    "governance_adoption": {
+      "path": "Tools/core_freeze/e3_routing/a002_a003_family_governance_adoption_v1.json",
+      "sha256": "0508045caaf7336c316b7d86f5286f5a97b396c41c5bd9aae46231c5ba69ff99"
+    },
+    "execution_authorization": {
+      "path": "Tools/core_freeze/e3_routing/a002_a003_top5_selector_r1_execution_authorization_v1.json",
+      "sha256": "802ad58f99b5ad10268754c4b6c7de3e0ab0ea07a26a10c09d1c97a945336350"
+    }
+  }
+}

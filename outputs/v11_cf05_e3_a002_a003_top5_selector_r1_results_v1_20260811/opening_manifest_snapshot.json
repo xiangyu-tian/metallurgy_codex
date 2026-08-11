@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R1-OPENING-V1-20260811",
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "filename": "a002_a003_top5_selector_r1_config_snapshot.json",
+      "sha256": "6e18117ae9a60d419976f57b7ae7f1dccead95a0c3ce8cbd26dc8655b2472d46",
+      "bytes": 2431
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_opening_report.json",
+      "sha256": "9e6ca343340ca65435ad558cb8e4b116624bab71895f30af4f33205be0e899b3",
+      "bytes": 927
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_prompt_snapshot.json",
+      "sha256": "6ece25e251b4c0d6e43bf45c6962aa1f97bf3ec954c4a04f2d3ae8e9155f156a",
+      "bytes": 1056
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_request_payloads.json",
+      "sha256": "a30305d7a1334d48e298f891942aeee8cb6bea6f67c033042a8141067ac75f52",
+      "bytes": 1062833
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_run_cells.json",
+      "sha256": "8d698bab65ba8f2449ad15fc3a065f8021663e08a740a4c1111e13f93b77aaf4",
+      "bytes": 160512
+    },
+    {
+      "filename": "execution_authorization_request.json",
+      "sha256": "b283fe220004577141aa8b321f87dda4e04698992e47b8441de11297c31c80de",
+      "bytes": 924
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R1-OPENING-V1-20260811",
+  "decision": "authorized_to_execute_a002_a003_top5_selector_r1",
+  "provider": "deepseek",
+  "endpoint_source": "runtime_environment",
+  "model": "deepseek-v4-flash",
+  "scheduled_request_count": 192,
+  "opening_manifest_sha256": "16c0d707950aade0cd3be76d08f2c88ef07695cb95480e095683cb5a101ab501",
+  "request_payloads_sha256": "a30305d7a1334d48e298f891942aeee8cb6bea6f67c033042a8141067ac75f52",
+  "runner_sha256": "a8f4bf2df1e6b16a06e6fb9b6f10761c63d0c20b10a7c59770a1303563f73e85",
+  "runner_git_commit": "37c0fd0802e2e90c14c4847ba969ef6d555dd2db",
+  "external_data_sharing_authorized": true,
+  "external_api_execution_authorized": true,
+  "tool_execution_authorized": false,
+  "provider_retry_authorized": false,
+  "independent_validation_split_access_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "authorized_scope": {
+    "task_text_count": 16,
+    "schema_view_count": 192,
+    "request_count": 192,
+    "method_cell_counts": {
+      "lexical_top5": 64,
+      "dense_top5": 64,
+      "hierarchical": 64
+    },
+    "visible_tools_per_request": 5,
+    "model_run_repeat": "R1",
+    "explicit_thinking": {"type": "disabled"},
+    "max_tokens": 256,
+    "request_attempts_per_cell": 1,
+    "automatic_retry": false,
+    "metallurgy_tool_execution": false,
+    "independent_validation_split_access": false,
+    "purpose": "non-confirmatory A002/A003 Top-5 selector development run with per-response offline scoring"
+  },
+  "authorized_by": "xiangyu",
+  "authorized_at": "2026-08-11T14:44:31.8814027+08:00",
+  "authorization_record_type": "project_execution_authorization_not_cryptographic_signature",
+  "authorization_basis": "User explicitly authorized sending 16 frozen A002/A003 development task texts and 192 corresponding five-tool Schema views to DeepSeek with deepseek-v4-flash for R1, explicit thinking disabled, max_tokens=256, one attempt per cell, no retry, no metallurgy-tool execution, no independent-validation access, and per-response retention for offline scoring."
+}

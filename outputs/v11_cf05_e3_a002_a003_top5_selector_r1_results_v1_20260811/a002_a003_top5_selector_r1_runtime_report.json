@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R1-OPENING-V1-20260811",
+  "run_status": "development_run_complete_with_terminal_transport_failures",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "scheduled_request_count": 192,
+  "external_api_calls": 192,
+  "transport_accepted_count": 191,
+  "exactly_one_tool_call_count": 188,
+  "plain_text_or_non_single_call_count": 4,
+  "provider_error_count": 1,
+  "reasoning_content_observed_count": 0,
+  "explicit_thinking_disabled": true,
+  "max_tokens": 256,
+  "tool_calls_executed": 0,
+  "retries_executed": 0,
+  "independent_validation_split_accessed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R1-ANALYSIS-V1-20260811",
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "filename": "a002_a003_top5_selector_r1_analysis_config_snapshot.json",
+      "sha256": "2c8a34c2fafa0db294c9d4c76cffdaefb4a682a15b87b34c94149dbae46762da",
+      "bytes": 2178
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_analysis_report.json",
+      "sha256": "c3d07812a4e52d586f2c3ecc35815b2508908de199cc9c7d5c31f348b6103ef3",
+      "bytes": 2196
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_scored_rows.csv",
+      "sha256": "0fe1389674a82e6fa48e4c5187a6f062bac37bcf2a6d2235d7f220ed365ba4fd",
+      "bytes": 55434
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_scored_rows.json",
+      "sha256": "ccad65ce23df15b40219e51ac5244cca260bb94572769639676999ab3a11de7c",
+      "bytes": 193332
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_summary.csv",
+      "sha256": "000a7523517de1f1a2b1e00c3237b54f5499e6f5993eac29e5ff77bd8774a300",
+      "bytes": 2707
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_summary.json",
+      "sha256": "18e2af1299c793d7cfe8770e25271f5badb941653fb9c2dd315f1da5f931f6c9",
+      "bytes": 16151
+    }
+  ]
+}
