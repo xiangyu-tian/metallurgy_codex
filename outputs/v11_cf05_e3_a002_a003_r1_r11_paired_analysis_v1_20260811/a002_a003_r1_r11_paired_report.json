@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A002-A003-R1-R11-PAIRED-ANALYSIS-V1-20260811",
+  "status": "development_paired_transport_correction_complete",
+  "pair_count": 64,
+  "r11_primary_endpoint_selection_accuracy": 1.0,
+  "r11_primary_end_to_end_success_rate": 1.0,
+  "r1_to_r11_primary_endpoint_delta": 0.078125,
+  "r1_to_r11_primary_end_to_end_delta": 0.09375,
+  "r1_end_to_end_failure_count": 6,
+  "r11_end_to_end_failure_count": 0,
+  "r1_failures_recovered_count": 6,
+  "r11_reasoning_content_observed_count": 0,
+  "r11_length_termination_count": 0,
+  "interpretation": "Within this development-only paired single-axis run, explicit thinking disable removed the R1 length/truncation failures and restored all 64 cells. The R1 17-to-120 decline was therefore a transport-budget artifact in this taskset, not observed A002/A003 endpoint confusion.",
+  "limitations": [
+    "single model run repeat",
+    "eight formula pairs",
+    "controlled lexical-8 A/B pools",
+    "development data only",
+    "not a confirmatory H4 result"
+  ],
+  "external_api_calls_in_r11": 64,
+  "tool_calls_executed": 0,
+  "retries_executed": 0,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "next_gate": "accept explicit thinking disable as the frozen transport policy for later development runs; return to CF-05 route-method development rather than increase token budget"
+}

@@ -1,0 +1,5319 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-R11-OPENING-V1-20260811",
+  "result_count": 64,
+  "results": [
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-FE2O3",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "e091e59587448cffbfdb66a0943c5623a974958432bcd39bfa5106f8433c5136",
+      "started_at": "2026-08-11T03:36:02.635974+00:00",
+      "api_latency_ms": 1574.271,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "59cab7d6-7684-4c3c-a1e3-0eca0cf3b549",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3101,
+        "completion_tokens": 47,
+        "total_tokens": 3148,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3101
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "59cab7d6-7684-4c3c-a1e3-0eca0cf3b549",
+        "object": "chat.completion",
+        "created": 1786419364,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_k3KcPogrSjD1VGD5wH1g6949",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"Fe2O3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3101,
+          "completion_tokens": 47,
+          "total_tokens": 3148,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 3101
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-FE2O3",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "c7e890c8b31c6c10674b32a78383138d7a18f26fbe977271587047f902564463",
+      "started_at": "2026-08-11T03:36:04.213723+00:00",
+      "api_latency_ms": 1994.7793,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "df0a547f-9a22-480d-8b96-6e6b213e4949",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3041,
+        "completion_tokens": 47,
+        "total_tokens": 3088,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3041
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "df0a547f-9a22-480d-8b96-6e6b213e4949",
+        "object": "chat.completion",
+        "created": 1786419366,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_kATuZs8iaUJVvbArnCuj1382",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"Fe2O3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3041,
+          "completion_tokens": 47,
+          "total_tokens": 3088,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 3041
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-FE2O3",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "1cc1d847f6ece18b1ba0df9af0c208ac69e7a9df762b82c1f8a8a70509e32eac",
+      "started_at": "2026-08-11T03:36:06.209218+00:00",
+      "api_latency_ms": 1481.3107,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "2d7bf35f-c3fe-46c4-be27-8e293e3ac673",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20269,
+        "completion_tokens": 47,
+        "total_tokens": 20316,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 20013
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "2d7bf35f-c3fe-46c4-be27-8e293e3ac673",
+        "object": "chat.completion",
+        "created": 1786419367,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_CZWITJfQML8gYCPR7aET7241",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"Fe2O3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20269,
+          "completion_tokens": 47,
+          "total_tokens": 20316,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 20013
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-FE2O3",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "c28887f68a070c805bb1dddc1633a8558dcc9958142d026cf5b07f7af5b01eb5",
+      "started_at": "2026-08-11T03:36:07.694203+00:00",
+      "api_latency_ms": 3862.1447,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "ede4a362-7eae-4170-bef6-753ecacb2f47",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20305,
+        "completion_tokens": 47,
+        "total_tokens": 20352,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 20049
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "ede4a362-7eae-4170-bef6-753ecacb2f47",
+        "object": "chat.completion",
+        "created": 1786419372,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_wOdUxHMvf7PWHUJFSyFt7741",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"Fe2O3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20305,
+          "completion_tokens": 47,
+          "total_tokens": 20352,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 20049
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-FE2O3",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "c40b48448c1fe3e9aaf81ada34902b4277b1fd37580aecb53054f7f56dd7cbb7",
+      "started_at": "2026-08-11T03:36:11.565125+00:00",
+      "api_latency_ms": 1263.1885,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "13dfe885-865a-41b7-a57a-6fab62e57785",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3108,
+        "completion_tokens": 47,
+        "total_tokens": 3155,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 36
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "13dfe885-865a-41b7-a57a-6fab62e57785",
+        "object": "chat.completion",
+        "created": 1786419373,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_tVWISJS9Z7HZ95Zz1Y2v8469",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"Fe2O3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3108,
+          "completion_tokens": 47,
+          "total_tokens": 3155,
+          "prompt_tokens_details": {
+            "cached_tokens": 3072
+          },
+          "prompt_cache_hit_tokens": 3072,
+          "prompt_cache_miss_tokens": 36
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-FE2O3",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "51b2d5a89fcaa7822b9c7b5d5698bcb5daf14aac0bb7261b1c727a6340299432",
+      "started_at": "2026-08-11T03:36:12.830408+00:00",
+      "api_latency_ms": 1434.6567,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "af5e5a6c-f77e-4e11-bfae-c0ab81a6dedd",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3048,
+        "completion_tokens": 47,
+        "total_tokens": 3095,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 104
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "af5e5a6c-f77e-4e11-bfae-c0ab81a6dedd",
+        "object": "chat.completion",
+        "created": 1786419374,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_S0t6OaQpqrZqCvhEM3Sa2755",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"Fe2O3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3048,
+          "completion_tokens": 47,
+          "total_tokens": 3095,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 104
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-FE2O3",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "1d2ee03a92d4346bed5380909fc060e21594bcfa7581ed84896b6f89ff9704b0",
+      "started_at": "2026-08-11T03:36:14.269172+00:00",
+      "api_latency_ms": 1561.3172,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "3184e806-2886-4dd8-92cd-4be37a035efa",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20276,
+        "completion_tokens": 47,
+        "total_tokens": 20323,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 52
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "3184e806-2886-4dd8-92cd-4be37a035efa",
+        "object": "chat.completion",
+        "created": 1786419376,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_FbIOgnC14RJDkzHcoZtQ0476",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"Fe2O3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20276,
+          "completion_tokens": 47,
+          "total_tokens": 20323,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 52
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-FE2O3",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "d5413a50bcc298eabe02886ad98e231e244935588eb4487be61568917a69d438",
+      "started_at": "2026-08-11T03:36:15.836876+00:00",
+      "api_latency_ms": 1418.9153,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "79fe6911-051f-4379-aa09-07a643fda113",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20312,
+        "completion_tokens": 47,
+        "total_tokens": 20359,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 88
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "79fe6911-051f-4379-aa09-07a643fda113",
+        "object": "chat.completion",
+        "created": 1786419377,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_wDlfxcPf6ZLmchF6FEPg9699",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"Fe2O3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20312,
+          "completion_tokens": 47,
+          "total_tokens": 20359,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 88
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-H2SO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "80403800e387efd74cd80d0e513047109010501de41af8e84cfa86c1ff6eda62",
+      "started_at": "2026-08-11T03:36:17.258539+00:00",
+      "api_latency_ms": 6141.5633,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "d2f6559e-65cc-4af7-ba16-eff8ebc2d528",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3107,
+        "completion_tokens": 47,
+        "total_tokens": 3154,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 2851
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "H2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "d2f6559e-65cc-4af7-ba16-eff8ebc2d528",
+        "object": "chat.completion",
+        "created": 1786419383,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_f7ZdxREfAxLWAvh3qicS8994",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"H2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3107,
+          "completion_tokens": 47,
+          "total_tokens": 3154,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 2851
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-H2SO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "9fcc19cd8b36bf536fc57e01c93c5df28c88ceba5c7cff2a7b34cfc415137628",
+      "started_at": "2026-08-11T03:36:23.402711+00:00",
+      "api_latency_ms": 2175.4705,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "03ce6cd0-2af8-4a4d-9c0f-f2bf698a30e2",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3047,
+        "completion_tokens": 47,
+        "total_tokens": 3094,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 103
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "H2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "03ce6cd0-2af8-4a4d-9c0f-f2bf698a30e2",
+        "object": "chat.completion",
+        "created": 1786419386,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_t9IfOJ8h7zCqPCXBxvTu3053",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"H2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3047,
+          "completion_tokens": 47,
+          "total_tokens": 3094,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 103
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-H2SO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "abf220eef630fd2e89dd02114fe4f9edc2e0bed314375006d0a1044602cab216",
+      "started_at": "2026-08-11T03:36:25.581706+00:00",
+      "api_latency_ms": 2270.9686,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "85158488-d253-4d2c-a720-1ef427f554fd",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20275,
+        "completion_tokens": 47,
+        "total_tokens": 20322,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 51
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "H2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "85158488-d253-4d2c-a720-1ef427f554fd",
+        "object": "chat.completion",
+        "created": 1786419388,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_EkXFjdoP1uhlGfc8pTbS7962",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"H2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20275,
+          "completion_tokens": 47,
+          "total_tokens": 20322,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 51
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-H2SO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "83dc742d525f78a240782818bb9bb150785060cbac3e0e1ad4c3a54dbd2cc5f6",
+      "started_at": "2026-08-11T03:36:27.855167+00:00",
+      "api_latency_ms": 1963.2049,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "efe53b64-6e58-4649-98dc-140c3404bae5",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20311,
+        "completion_tokens": 47,
+        "total_tokens": 20358,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 87
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "H2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "efe53b64-6e58-4649-98dc-140c3404bae5",
+        "object": "chat.completion",
+        "created": 1786419390,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_IPcnvtII5nHDGZOYButA0486",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"H2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20311,
+          "completion_tokens": 47,
+          "total_tokens": 20358,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 87
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-H2SO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "09a09280fe6b91dcb2636f1b7ad81701b4472947da7db801cdb59ad00d1c86f2",
+      "started_at": "2026-08-11T03:36:29.820714+00:00",
+      "api_latency_ms": 2714.2902,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "a5c61b98-cc66-4f0a-bbae-bf19904acc60",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3114,
+        "completion_tokens": 47,
+        "total_tokens": 3161,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 42
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "H2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "a5c61b98-cc66-4f0a-bbae-bf19904acc60",
+        "object": "chat.completion",
+        "created": 1786419393,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_VB2yusKOI1NP4ndKNjcX2771",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"H2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3114,
+          "completion_tokens": 47,
+          "total_tokens": 3161,
+          "prompt_tokens_details": {
+            "cached_tokens": 3072
+          },
+          "prompt_cache_hit_tokens": 3072,
+          "prompt_cache_miss_tokens": 42
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-H2SO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "37a6905917bd7d891dc2c3a82bb0cc15c6adc2137248cc73b69e6138e62c5171",
+      "started_at": "2026-08-11T03:36:32.538014+00:00",
+      "api_latency_ms": 2045.1901,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "1f984afc-b3d3-41b5-b944-5bf1588292e9",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3054,
+        "completion_tokens": 47,
+        "total_tokens": 3101,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 110
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "H2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "1f984afc-b3d3-41b5-b944-5bf1588292e9",
+        "object": "chat.completion",
+        "created": 1786419395,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_kDXrZ2hICRAHIuQVYZjE3826",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"H2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3054,
+          "completion_tokens": 47,
+          "total_tokens": 3101,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 110
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-H2SO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "f295500cecccb750fe743c5856baa434708c323963fe1ae5c784cd1c27b53d39",
+      "started_at": "2026-08-11T03:36:34.584426+00:00",
+      "api_latency_ms": 3691.7097,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "dbc178d5-de15-4b4a-8642-93d7b1b828d5",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20282,
+        "completion_tokens": 47,
+        "total_tokens": 20329,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 58
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "H2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "dbc178d5-de15-4b4a-8642-93d7b1b828d5",
+        "object": "chat.completion",
+        "created": 1786419398,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_83ImYXOKQo7MLzYWb5jm4215",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"H2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20282,
+          "completion_tokens": 47,
+          "total_tokens": 20329,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 58
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-H2SO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "c1c01b540629402fc989208dcddb562d26101b777e3f0bd0f3901ac12b26877c",
+      "started_at": "2026-08-11T03:36:38.280818+00:00",
+      "api_latency_ms": 1933.9999,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "05135ed3-2d11-4487-8929-0f70206402f1",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20318,
+        "completion_tokens": 47,
+        "total_tokens": 20365,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 94
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "H2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "05135ed3-2d11-4487-8929-0f70206402f1",
+        "object": "chat.completion",
+        "created": 1786419400,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_eYt3ENRSonLA46Ck8R1m9621",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"H2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20318,
+          "completion_tokens": 47,
+          "total_tokens": 20365,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 94
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CACO3",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "d6c34ddc5451e133c293fc5c83299b6d854d2272cdbb1dc22b603eb22c6377e7",
+      "started_at": "2026-08-11T03:36:40.218029+00:00",
+      "api_latency_ms": 1998.2071,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "beea7006-8e8b-49ae-8568-1e5d4af141c7",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3106,
+        "completion_tokens": 46,
+        "total_tokens": 3152,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 162
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CaCO3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "beea7006-8e8b-49ae-8568-1e5d4af141c7",
+        "object": "chat.completion",
+        "created": 1786419402,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_un5rA7tNsi7Ero7EbbjX9481",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"CaCO3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3106,
+          "completion_tokens": 46,
+          "total_tokens": 3152,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 162
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CACO3",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "449b8022dffa100d426970d6e2b6aaffe18427143b8588b0f2b10ba97c806214",
+      "started_at": "2026-08-11T03:36:42.219326+00:00",
+      "api_latency_ms": 1473.1034,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "2ead5667-f6c0-40c2-a10b-8b3c2cf80ec0",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3046,
+        "completion_tokens": 46,
+        "total_tokens": 3092,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 102
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CaCO3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "2ead5667-f6c0-40c2-a10b-8b3c2cf80ec0",
+        "object": "chat.completion",
+        "created": 1786419404,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_pTvnpaybaYWZtQxVIS7M8752",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"CaCO3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3046,
+          "completion_tokens": 46,
+          "total_tokens": 3092,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 102
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CACO3",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "4c832208fbc5ebb46f8e9fdf1c0e222fa3e434822ed0601f9c9b69d0c9bf732f",
+      "started_at": "2026-08-11T03:36:43.695766+00:00",
+      "api_latency_ms": 1716.64,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "16fbf883-3bd6-4169-a56b-2711274a6d55",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20274,
+        "completion_tokens": 46,
+        "total_tokens": 20320,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 50
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CaCO3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "16fbf883-3bd6-4169-a56b-2711274a6d55",
+        "object": "chat.completion",
+        "created": 1786419406,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_wUIQibRNyJneEgsKy3eY3083",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"CaCO3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20274,
+          "completion_tokens": 46,
+          "total_tokens": 20320,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 50
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CACO3",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "f8395c0f09bbce3297b0de95d92ea9aef266649971e295e04c8ee30e68f83e5d",
+      "started_at": "2026-08-11T03:36:45.417491+00:00",
+      "api_latency_ms": 2032.1537,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "9581782a-b9db-423b-9110-5e977a73f9a2",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20310,
+        "completion_tokens": 46,
+        "total_tokens": 20356,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 86
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CaCO3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "9581782a-b9db-423b-9110-5e977a73f9a2",
+        "object": "chat.completion",
+        "created": 1786419408,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_tah3qHoN6TvCDT9fU8ke3119",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"CaCO3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20310,
+          "completion_tokens": 46,
+          "total_tokens": 20356,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 86
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CACO3",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "1ab6256dae29650b0ee766dc116cb68ee7ca97fa8fc9feb42e596ded154a323d",
+      "started_at": "2026-08-11T03:36:47.453286+00:00",
+      "api_latency_ms": 1662.9455,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "b705cd45-67fc-4b82-9495-32b75aab58e6",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3113,
+        "completion_tokens": 46,
+        "total_tokens": 3159,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 41
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CaCO3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "b705cd45-67fc-4b82-9495-32b75aab58e6",
+        "object": "chat.completion",
+        "created": 1786419409,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_MTWdsufVyOfGGtJGE2Vp7120",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"CaCO3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3113,
+          "completion_tokens": 46,
+          "total_tokens": 3159,
+          "prompt_tokens_details": {
+            "cached_tokens": 3072
+          },
+          "prompt_cache_hit_tokens": 3072,
+          "prompt_cache_miss_tokens": 41
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CACO3",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "d336850190282702759153de890688fe0042adc5510617f1650f2f1264591297",
+      "started_at": "2026-08-11T03:36:49.124364+00:00",
+      "api_latency_ms": 1417.3894,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "3ad7ab43-d3e2-48ce-8fb7-c70360035b05",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3053,
+        "completion_tokens": 46,
+        "total_tokens": 3099,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 109
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CaCO3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "3ad7ab43-d3e2-48ce-8fb7-c70360035b05",
+        "object": "chat.completion",
+        "created": 1786419411,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_Za4JGHDYWZxfVoBd13jm3949",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"CaCO3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3053,
+          "completion_tokens": 46,
+          "total_tokens": 3099,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 109
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CACO3",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "d97fade4178cc88d47cd30028dca1691ffa840cbc889c575149f3e3c34d423bc",
+      "started_at": "2026-08-11T03:36:50.546269+00:00",
+      "api_latency_ms": 1822.901,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "f7342ca6-7ab9-4b01-8c83-2377b1ea0ea1",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20281,
+        "completion_tokens": 46,
+        "total_tokens": 20327,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 57
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CaCO3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "f7342ca6-7ab9-4b01-8c83-2377b1ea0ea1",
+        "object": "chat.completion",
+        "created": 1786419413,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_NmnR5RrA10Y7FDRnOG2E0303",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"CaCO3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20281,
+          "completion_tokens": 46,
+          "total_tokens": 20327,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 57
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CACO3",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "e52670901b3c6dfda56d22b6a6e0af531269868bff6563516edde3b0218e33e5",
+      "started_at": "2026-08-11T03:36:52.372348+00:00",
+      "api_latency_ms": 2159.3637,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "c5e4351d-8fe3-4fd3-bbe9-45e8a1552ee1",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20317,
+        "completion_tokens": 46,
+        "total_tokens": 20363,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 93
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CaCO3"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "c5e4351d-8fe3-4fd3-bbe9-45e8a1552ee1",
+        "object": "chat.completion",
+        "created": 1786419415,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_kriAzE5TFpq3tONWCpqP8584",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"CaCO3\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20317,
+          "completion_tokens": 46,
+          "total_tokens": 20363,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 93
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CUSO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "41426596174d8c29e72520c7e436676d5ba8b2659c9d5d3486f97686b11dcf8b",
+      "started_at": "2026-08-11T03:36:54.535911+00:00",
+      "api_latency_ms": 1923.8531,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "39879187-7b7a-4181-a1c3-2c8039745085",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3106,
+        "completion_tokens": 46,
+        "total_tokens": 3152,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 162
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CuSO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "39879187-7b7a-4181-a1c3-2c8039745085",
+        "object": "chat.completion",
+        "created": 1786419416,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_OR0xEK05AvmxfTdXhciV2053",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"CuSO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3106,
+          "completion_tokens": 46,
+          "total_tokens": 3152,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 162
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CUSO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "6d50a9fd255fa62fe6033acf6e655ec53566cdb68f24e44ea424e5dd22e6ff89",
+      "started_at": "2026-08-11T03:36:56.464563+00:00",
+      "api_latency_ms": 1775.4106,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "7bb85d2d-1e70-4612-a170-1a8286066b22",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3046,
+        "completion_tokens": 46,
+        "total_tokens": 3092,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 102
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CuSO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "7bb85d2d-1e70-4612-a170-1a8286066b22",
+        "object": "chat.completion",
+        "created": 1786419418,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_LUP9sapjM5AIUFYBMwC00451",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"CuSO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3046,
+          "completion_tokens": 46,
+          "total_tokens": 3092,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 102
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CUSO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "521b42f4da17e66971cd4d7cade7b3820bbf353b286fd863986f00604766612c",
+      "started_at": "2026-08-11T03:36:58.247495+00:00",
+      "api_latency_ms": 3885.5111,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "4d4e3458-f77a-4dd5-bebf-0e531d0ffad5",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20274,
+        "completion_tokens": 46,
+        "total_tokens": 20320,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 50
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CuSO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "4d4e3458-f77a-4dd5-bebf-0e531d0ffad5",
+        "object": "chat.completion",
+        "created": 1786419421,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_8ULjyQrye0XnSpwT68lj0495",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"CuSO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20274,
+          "completion_tokens": 46,
+          "total_tokens": 20320,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 50
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CUSO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "2aa54d4ac2cde27f751136e041146f41c2e6f0a7aaaec5a9e81e7fc048166934",
+      "started_at": "2026-08-11T03:37:02.137034+00:00",
+      "api_latency_ms": 2119.1651,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "73b38b7b-da5b-412d-818f-a6626c798ad5",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20310,
+        "completion_tokens": 46,
+        "total_tokens": 20356,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 86
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CuSO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "73b38b7b-da5b-412d-818f-a6626c798ad5",
+        "object": "chat.completion",
+        "created": 1786419424,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_27mVf8AduIzavfMj3VcU5868",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"CuSO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20310,
+          "completion_tokens": 46,
+          "total_tokens": 20356,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 86
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CUSO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "36115fa40659665601b07302e3eb02dabb3331908ad0b65f3ac6b32becda0a6b",
+      "started_at": "2026-08-11T03:37:04.259657+00:00",
+      "api_latency_ms": 2120.4902,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "8420d4eb-26ec-445f-8a89-8ec805ae7e82",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3113,
+        "completion_tokens": 46,
+        "total_tokens": 3159,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 41
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CuSO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "8420d4eb-26ec-445f-8a89-8ec805ae7e82",
+        "object": "chat.completion",
+        "created": 1786419426,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_zg3pFJ67tjCcPoRmLPtl1668",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"CuSO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3113,
+          "completion_tokens": 46,
+          "total_tokens": 3159,
+          "prompt_tokens_details": {
+            "cached_tokens": 3072
+          },
+          "prompt_cache_hit_tokens": 3072,
+          "prompt_cache_miss_tokens": 41
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CUSO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "632a602d29a938bdfecba0c7b1199f82f5541c7e4eb9907a5581d0a80e279a4e",
+      "started_at": "2026-08-11T03:37:06.384074+00:00",
+      "api_latency_ms": 1745.8721,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "324d29a7-8db4-4ad3-917f-734727f8c441",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3053,
+        "completion_tokens": 46,
+        "total_tokens": 3099,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 109
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CuSO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "324d29a7-8db4-4ad3-917f-734727f8c441",
+        "object": "chat.completion",
+        "created": 1786419428,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_Jsu9uRIGESz7VTIllMLe2953",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"CuSO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3053,
+          "completion_tokens": 46,
+          "total_tokens": 3099,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 109
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CUSO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "62690d0bacf0b1e6d346109a9648ec269b2b1ab7df41b5feb67a9eff189e0b2d",
+      "started_at": "2026-08-11T03:37:08.133312+00:00",
+      "api_latency_ms": 2405.2702,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "0aff03ca-11f6-423f-b2d0-557193b6f838",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20281,
+        "completion_tokens": 46,
+        "total_tokens": 20327,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 57
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CuSO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "0aff03ca-11f6-423f-b2d0-557193b6f838",
+        "object": "chat.completion",
+        "created": 1786419431,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_WAJgmmmT0xDWimPg6z8e3581",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"CuSO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20281,
+          "completion_tokens": 46,
+          "total_tokens": 20327,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 57
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CUSO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "b369b502ef87c4e8eecf08bd45051d734c142dc35d2712bd04ed370a3bc7faa4",
+      "started_at": "2026-08-11T03:37:10.542591+00:00",
+      "api_latency_ms": 2305.7703,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "52ad671e-39a1-41a8-9dec-b37e2745e7dc",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20317,
+        "completion_tokens": 46,
+        "total_tokens": 20363,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 93
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "CuSO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "52ad671e-39a1-41a8-9dec-b37e2745e7dc",
+        "object": "chat.completion",
+        "created": 1786419433,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_WcJM89XSnTXYCHlsG9wb4567",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"CuSO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20317,
+          "completion_tokens": 46,
+          "total_tokens": 20363,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 93
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-NH4_2SO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "b3bfae3abeae1ea9e5af1a90a4a2f8177211346ec6ef06d44960899d3f9fca9e",
+      "started_at": "2026-08-11T03:37:12.852127+00:00",
+      "api_latency_ms": 1923.3428,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "fb8310ec-c733-4f0d-ba63-9f1cfc16df13",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3116,
+        "completion_tokens": 50,
+        "total_tokens": 3166,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 172
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "(NH4)2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "fb8310ec-c733-4f0d-ba63-9f1cfc16df13",
+        "object": "chat.completion",
+        "created": 1786419435,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_vfRCSlNIwHtv8xCt4KpM3711",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"(NH4)2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3116,
+          "completion_tokens": 50,
+          "total_tokens": 3166,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 172
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-NH4_2SO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "2c8abf2c3c828ed5cd3f70cedb8ec4b98dd66a37a9a22e6eb859be609915fd36",
+      "started_at": "2026-08-11T03:37:14.779529+00:00",
+      "api_latency_ms": 1405.6509,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "7d89c5f5-922e-47a8-8803-bc253d0bfce1",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3056,
+        "completion_tokens": 50,
+        "total_tokens": 3106,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 112
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "(NH4)2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "7d89c5f5-922e-47a8-8803-bc253d0bfce1",
+        "object": "chat.completion",
+        "created": 1786419436,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_xDHw0pnFZElV6dgSJULn5351",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"(NH4)2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3056,
+          "completion_tokens": 50,
+          "total_tokens": 3106,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 112
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-NH4_2SO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "027275e3cf704023bf5f18908e8057076102de557ce9ea01dac2bd26d8b2c4cd",
+      "started_at": "2026-08-11T03:37:16.188725+00:00",
+      "api_latency_ms": 2210.8347,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "2017fa95-8851-4274-84cc-00ebcef4775c",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20284,
+        "completion_tokens": 50,
+        "total_tokens": 20334,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 60
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "(NH4)2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "2017fa95-8851-4274-84cc-00ebcef4775c",
+        "object": "chat.completion",
+        "created": 1786419438,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_UylbMnlk9QBGE64u2BYs9773",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"(NH4)2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20284,
+          "completion_tokens": 50,
+          "total_tokens": 20334,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 60
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-NH4_2SO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "a5de9465dc5b769c959ffa202142d5de9ce7740cd5dd5bbca0a387ae044f1c05",
+      "started_at": "2026-08-11T03:37:18.404922+00:00",
+      "api_latency_ms": 3072.3245,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "66e76146-3819-4fe3-bf2f-92e357dadd47",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20320,
+        "completion_tokens": 50,
+        "total_tokens": 20370,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 96
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "(NH4)2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "66e76146-3819-4fe3-bf2f-92e357dadd47",
+        "object": "chat.completion",
+        "created": 1786419441,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_jwlrr1myQUo8x1DNA0vh9882",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"(NH4)2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20320,
+          "completion_tokens": 50,
+          "total_tokens": 20370,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 96
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-NH4_2SO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "f0c6ff2d740cebd0fdac082768488d47a0ad8d4482f1f36cd5d7d6eaebfdd477",
+      "started_at": "2026-08-11T03:37:21.481239+00:00",
+      "api_latency_ms": 2072.3132,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "aae74410-9bc8-42f4-a066-1aff3f76dce0",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3123,
+        "completion_tokens": 50,
+        "total_tokens": 3173,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 51
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "(NH4)2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "aae74410-9bc8-42f4-a066-1aff3f76dce0",
+        "object": "chat.completion",
+        "created": 1786419444,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_8zs1nVI1JrfbhGQpPhfK6948",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"(NH4)2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3123,
+          "completion_tokens": 50,
+          "total_tokens": 3173,
+          "prompt_tokens_details": {
+            "cached_tokens": 3072
+          },
+          "prompt_cache_hit_tokens": 3072,
+          "prompt_cache_miss_tokens": 51
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-NH4_2SO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "3581c89b4ba63831167af6c17bb1e949d1b7eb213579c56add77fab94721e934",
+      "started_at": "2026-08-11T03:37:23.558061+00:00",
+      "api_latency_ms": 2103.9813,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "2157fdc2-66eb-48d6-9b7b-06ba59e888f6",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3063,
+        "completion_tokens": 50,
+        "total_tokens": 3113,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 119
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "(NH4)2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "2157fdc2-66eb-48d6-9b7b-06ba59e888f6",
+        "object": "chat.completion",
+        "created": 1786419446,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_dp2UHlfn8PMGx4K7WNFm7605",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"(NH4)2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3063,
+          "completion_tokens": 50,
+          "total_tokens": 3113,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 119
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-NH4_2SO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "744903223297245b54b11a49c8edcb8406e4e974ef99e62eca5a5c326e5477ed",
+      "started_at": "2026-08-11T03:37:25.667895+00:00",
+      "api_latency_ms": 2797.5489,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "7ce0b655-3302-4e60-80dc-f62bc33a7969",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20291,
+        "completion_tokens": 50,
+        "total_tokens": 20341,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 67
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "(NH4)2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "7ce0b655-3302-4e60-80dc-f62bc33a7969",
+        "object": "chat.completion",
+        "created": 1786419448,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_0QFRQihvh754wvK5A06E9751",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"(NH4)2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20291,
+          "completion_tokens": 50,
+          "total_tokens": 20341,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 67
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-NH4_2SO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "1b4e009513bd029ec1b903c06ea549ccd4c215d5836f8d07aac762c25cca731c",
+      "started_at": "2026-08-11T03:37:28.468603+00:00",
+      "api_latency_ms": 3457.8499,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "50339e8d-fc2f-4188-828a-4de236196dd1",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20327,
+        "completion_tokens": 50,
+        "total_tokens": 20377,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 103
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "(NH4)2SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "50339e8d-fc2f-4188-828a-4de236196dd1",
+        "object": "chat.completion",
+        "created": 1786419452,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_RE6aygIrzDXGS1tTMh4X4934",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"(NH4)2SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20327,
+          "completion_tokens": 50,
+          "total_tokens": 20377,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 103
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CA_OH_2",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "4e150d3abc3410d8e57a60adb8ffe3445e58b57c6f1ff06dc4663390800e7da1",
+      "started_at": "2026-08-11T03:37:31.935924+00:00",
+      "api_latency_ms": 3177.056,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "14c0340f-9152-4899-92b0-c55a5d6efa56",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3107,
+        "completion_tokens": 47,
+        "total_tokens": 3154,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 163
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Ca(OH)2"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "14c0340f-9152-4899-92b0-c55a5d6efa56",
+        "object": "chat.completion",
+        "created": 1786419455,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_bHOWt3kHyEGjhwr9QeEc2258",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"Ca(OH)2\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3107,
+          "completion_tokens": 47,
+          "total_tokens": 3154,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 163
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CA_OH_2",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "b5c6951b2a64fabe97eb7a7469b215db3c7729e38938fc1f7a4e929a2158b8a6",
+      "started_at": "2026-08-11T03:37:35.121855+00:00",
+      "api_latency_ms": 2399.7048,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "d719d002-ecba-416d-96a8-10b57fdd5161",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3047,
+        "completion_tokens": 47,
+        "total_tokens": 3094,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 103
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Ca(OH)2"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "d719d002-ecba-416d-96a8-10b57fdd5161",
+        "object": "chat.completion",
+        "created": 1786419457,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_VyJqG0FTdM3sbgqWcwvt1736",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"Ca(OH)2\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3047,
+          "completion_tokens": 47,
+          "total_tokens": 3094,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 103
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CA_OH_2",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "1b3228326c723fa39a70d597de7fc4740aa8620aa2e469664037d3778c11cd6c",
+      "started_at": "2026-08-11T03:37:37.522833+00:00",
+      "api_latency_ms": 3537.109,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "e82a061a-5e8b-47cb-b056-e65f2655513a",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20275,
+        "completion_tokens": 47,
+        "total_tokens": 20322,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 51
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Ca(OH)2"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "e82a061a-5e8b-47cb-b056-e65f2655513a",
+        "object": "chat.completion",
+        "created": 1786419461,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_IPMvsCiFT6nuKh1ZGpYN1275",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"Ca(OH)2\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20275,
+          "completion_tokens": 47,
+          "total_tokens": 20322,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 51
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CA_OH_2",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "96b48f91169bb0886b055869cb522e1e4727131ae7e1705477a5d1640b0a168a",
+      "started_at": "2026-08-11T03:37:41.079656+00:00",
+      "api_latency_ms": 1132.536,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "d42c4318-b8ab-4427-8c19-5757e42c5aef",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20311,
+        "completion_tokens": 47,
+        "total_tokens": 20358,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 87
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Ca(OH)2"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "d42c4318-b8ab-4427-8c19-5757e42c5aef",
+        "object": "chat.completion",
+        "created": 1786419463,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_zBc3mGpxBnaS5hs3AxVm9588",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"Ca(OH)2\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20311,
+          "completion_tokens": 47,
+          "total_tokens": 20358,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 87
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CA_OH_2",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "db50e5291732f811ab88fc535affae9b9e3cc6487c9759118a7a30d1470037b3",
+      "started_at": "2026-08-11T03:37:42.219031+00:00",
+      "api_latency_ms": 2948.6036,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "378595fb-2f09-42ed-8489-e5f39a3a8ebd",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3114,
+        "completion_tokens": 47,
+        "total_tokens": 3161,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 42
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Ca(OH)2"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "378595fb-2f09-42ed-8489-e5f39a3a8ebd",
+        "object": "chat.completion",
+        "created": 1786419465,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_5g8PNkOEwfsZmkJezSXs8656",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"Ca(OH)2\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3114,
+          "completion_tokens": 47,
+          "total_tokens": 3161,
+          "prompt_tokens_details": {
+            "cached_tokens": 3072
+          },
+          "prompt_cache_hit_tokens": 3072,
+          "prompt_cache_miss_tokens": 42
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CA_OH_2",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "65a1fdc9ff83fddd9196653d9383567d932fd13e51e91e6ca0894463001fdc53",
+      "started_at": "2026-08-11T03:37:45.181692+00:00",
+      "api_latency_ms": 2486.4226,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "33969d46-56fa-4775-ac2b-e33a91fced78",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3054,
+        "completion_tokens": 47,
+        "total_tokens": 3101,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 110
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Ca(OH)2"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "33969d46-56fa-4775-ac2b-e33a91fced78",
+        "object": "chat.completion",
+        "created": 1786419468,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_HCzI3ZvWgSVoEVqasDMf9801",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"Ca(OH)2\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3054,
+          "completion_tokens": 47,
+          "total_tokens": 3101,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 110
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CA_OH_2",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "8143fe62b9859d2637b9e08ac18ea48a6722c2cc039f003f35adc4bac8e00ec3",
+      "started_at": "2026-08-11T03:37:47.677174+00:00",
+      "api_latency_ms": 2444.5286,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "11bd0f38-9c1e-4c8b-96f5-54ebd20a7d89",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20282,
+        "completion_tokens": 47,
+        "total_tokens": 20329,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 58
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Ca(OH)2"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "11bd0f38-9c1e-4c8b-96f5-54ebd20a7d89",
+        "object": "chat.completion",
+        "created": 1786419470,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_w0IkX3JKcr8V4VOdyNxt5905",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"Ca(OH)2\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20282,
+          "completion_tokens": 47,
+          "total_tokens": 20329,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 58
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CA_OH_2",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "bea23a1d867f059367f4e64ddd99e32b817349172e87bf8219b189db5960ce27",
+      "started_at": "2026-08-11T03:37:50.131497+00:00",
+      "api_latency_ms": 4426.5254,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "bc36c6d4-bbce-441f-8e93-8f84bf3d1747",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20318,
+        "completion_tokens": 47,
+        "total_tokens": 20365,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 94
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "Ca(OH)2"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "bc36c6d4-bbce-441f-8e93-8f84bf3d1747",
+        "object": "chat.completion",
+        "created": 1786419474,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_C2hxCu9MnNGgbnwXnbuD4585",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"Ca(OH)2\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20318,
+          "completion_tokens": 47,
+          "total_tokens": 20365,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 94
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CU_NH3_4_SO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "328bd640da73145742d0a6c0620792b83b661a2bc388a4f5cc0b46bc79f6e3a3",
+      "started_at": "2026-08-11T03:37:54.562444+00:00",
+      "api_latency_ms": 1200.8508,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "4dce1be6-be31-4e7b-b99e-bc91bfc3cba3",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3125,
+        "completion_tokens": 53,
+        "total_tokens": 3178,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 181
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "4dce1be6-be31-4e7b-b99e-bc91bfc3cba3",
+        "object": "chat.completion",
+        "created": 1786419476,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_yXtaOkVr37psbrr4Fh9x5857",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"[Cu(NH3)4]SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3125,
+          "completion_tokens": 53,
+          "total_tokens": 3178,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 181
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CU_NH3_4_SO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "e02be3a28105746acd784a03f59d11a6455bb4aa19f0b1afb1091092d5786b34",
+      "started_at": "2026-08-11T03:37:55.768908+00:00",
+      "api_latency_ms": 1370.4763,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "89923645-8ab2-483b-8245-067091504f48",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3065,
+        "completion_tokens": 53,
+        "total_tokens": 3118,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 121
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "89923645-8ab2-483b-8245-067091504f48",
+        "object": "chat.completion",
+        "created": 1786419477,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_v46oCLmrOLIJQYED6O032150",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"[Cu(NH3)4]SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3065,
+          "completion_tokens": 53,
+          "total_tokens": 3118,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 121
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CU_NH3_4_SO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "6427eaf7f477eb0e551e8106453617898f5ca3c9dcfd43257e67c186a7bc4b1e",
+      "started_at": "2026-08-11T03:37:57.145257+00:00",
+      "api_latency_ms": 821.008,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "6be469d5-b20d-4e45-a3a7-07bab6a1d6b4",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20293,
+        "completion_tokens": 53,
+        "total_tokens": 20346,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 69
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "6be469d5-b20d-4e45-a3a7-07bab6a1d6b4",
+        "object": "chat.completion",
+        "created": 1786419478,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_Ut6rXENZYmwk1g5RAIy81704",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"[Cu(NH3)4]SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20293,
+          "completion_tokens": 53,
+          "total_tokens": 20346,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 69
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CU_NH3_4_SO4",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "5ad227a38c8eadbf50b27211212313ef357f5651762325e7d7f23ea2e7a50694",
+      "started_at": "2026-08-11T03:37:57.973675+00:00",
+      "api_latency_ms": 1300.552,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "b1bb4f4c-6c90-41c1-bd20-63d197ba672b",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20329,
+        "completion_tokens": 53,
+        "total_tokens": 20382,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 105
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "b1bb4f4c-6c90-41c1-bd20-63d197ba672b",
+        "object": "chat.completion",
+        "created": 1786419480,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_kNoqwF9HyEJsPvwOCd4m9400",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"[Cu(NH3)4]SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20329,
+          "completion_tokens": 53,
+          "total_tokens": 20382,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 105
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CU_NH3_4_SO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "e56da84b8d91a1e0cfe84c38ee6e298939b0b87201f9fd9b919d35408ddb6d96",
+      "started_at": "2026-08-11T03:37:59.279571+00:00",
+      "api_latency_ms": 2445.232,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "782f2bac-9f3a-4f21-ab2a-b0c5cd9f9fa5",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3132,
+        "completion_tokens": 53,
+        "total_tokens": 3185,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 60
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "782f2bac-9f3a-4f21-ab2a-b0c5cd9f9fa5",
+        "object": "chat.completion",
+        "created": 1786419481,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_GYDcvS8lEXAOODtvYGhh2290",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"[Cu(NH3)4]SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3132,
+          "completion_tokens": 53,
+          "total_tokens": 3185,
+          "prompt_tokens_details": {
+            "cached_tokens": 3072
+          },
+          "prompt_cache_hit_tokens": 3072,
+          "prompt_cache_miss_tokens": 60
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CU_NH3_4_SO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "9e907199c325b2965e9696bfe4ebf59e4c20e98388ce31587ff0d0eecf134795",
+      "started_at": "2026-08-11T03:38:01.730228+00:00",
+      "api_latency_ms": 1129.2475,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "fbd6e227-8589-4d74-8d0e-14954081b5e8",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3072,
+        "completion_tokens": 53,
+        "total_tokens": 3125,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 128
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "fbd6e227-8589-4d74-8d0e-14954081b5e8",
+        "object": "chat.completion",
+        "created": 1786419483,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_hZYzlQ8TgtTOSoejsUJC5172",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"[Cu(NH3)4]SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3072,
+          "completion_tokens": 53,
+          "total_tokens": 3125,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 128
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CU_NH3_4_SO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "16c187e8f22e7b49c29db526999150954277f5a96c8ce0a72168620739e2b7fd",
+      "started_at": "2026-08-11T03:38:02.865420+00:00",
+      "api_latency_ms": 5133.9812,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "1b502826-f448-41fe-a255-f72440fee150",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20300,
+        "completion_tokens": 53,
+        "total_tokens": 20353,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 76
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "1b502826-f448-41fe-a255-f72440fee150",
+        "object": "chat.completion",
+        "created": 1786419488,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_266PEE0VnNbChxy6sjbE7102",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"[Cu(NH3)4]SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20300,
+          "completion_tokens": 53,
+          "total_tokens": 20353,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 76
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CU_NH3_4_SO4",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "31f8bad3af031ef36d9a11751ead7fb438fc8baf26f5a7584a788fa9afbd6c7d",
+      "started_at": "2026-08-11T03:38:08.008109+00:00",
+      "api_latency_ms": 1970.7355,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "978743b7-7c72-48e8-8c7a-9c3b7918b4fc",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20336,
+        "completion_tokens": 53,
+        "total_tokens": 20389,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 112
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "978743b7-7c72-48e8-8c7a-9c3b7918b4fc",
+        "object": "chat.completion",
+        "created": 1786419490,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_dY74fRwP6kqRXm6q4Kvv8277",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"[Cu(NH3)4]SO4\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20336,
+          "completion_tokens": 53,
+          "total_tokens": 20389,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 112
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-FES",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "e846fd290a4625d40d6134342b3a95588273e38b80f6ec1eb2a658a5cdd86421",
+      "started_at": "2026-08-11T03:38:09.989612+00:00",
+      "api_latency_ms": 2286.6175,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "5a0d33b1-eec2-4177-b292-9314ba3ccb9c",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3099,
+        "completion_tokens": 45,
+        "total_tokens": 3144,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 155
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "FeS"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "5a0d33b1-eec2-4177-b292-9314ba3ccb9c",
+        "object": "chat.completion",
+        "created": 1786419492,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_7qRAzvxtZSvqJXrnmsLG4879",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"FeS\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3099,
+          "completion_tokens": 45,
+          "total_tokens": 3144,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 155
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-FES",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "346a395bf77a60fbb2e7cb5e3b41e7b44168f8fd8efd5be3cfecb438df2ea251",
+      "started_at": "2026-08-11T03:38:12.281932+00:00",
+      "api_latency_ms": 1099.1413,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "16028242-9b37-4b0c-8f79-69af33dc43da",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3039,
+        "completion_tokens": 45,
+        "total_tokens": 3084,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 95
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "FeS"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "16028242-9b37-4b0c-8f79-69af33dc43da",
+        "object": "chat.completion",
+        "created": 1786419494,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_x9GcvK1N5OCj4Ez9dOsl0769",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"FeS\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3039,
+          "completion_tokens": 45,
+          "total_tokens": 3084,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 95
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-FES",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "713cbbbb75e7d1418d9465c1a0e7de8a47b7946037b56e64b004c76f8b8b19e5",
+      "started_at": "2026-08-11T03:38:13.384756+00:00",
+      "api_latency_ms": 2376.1013,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "7fb04d72-2ddd-4f4c-b89e-41a0526a0d1f",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20267,
+        "completion_tokens": 45,
+        "total_tokens": 20312,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 43
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "FeS"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "7fb04d72-2ddd-4f4c-b89e-41a0526a0d1f",
+        "object": "chat.completion",
+        "created": 1786419496,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_rgkhQMayFo5KZJ0vzxMl7820",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"FeS\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20267,
+          "completion_tokens": 45,
+          "total_tokens": 20312,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 43
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-FES",
+      "pair_variant": "element_stoichiometry",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "83c12695b753483d788c84b88643d31a1a695ceebd58ffeae564c06e91baea7f",
+      "started_at": "2026-08-11T03:38:15.768036+00:00",
+      "api_latency_ms": 1462.7099,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "54130658-3566-4af6-be4b-c2a48639961b",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20303,
+        "completion_tokens": 45,
+        "total_tokens": 20348,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 79
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A002",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "FeS"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "54130658-3566-4af6-be4b-c2a48639961b",
+        "object": "chat.completion",
+        "created": 1786419497,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_UjzhVSmHVy3hIt8eYPhm7534",
+                  "type": "function",
+                  "function": {
+                    "name": "A002",
+                    "arguments": "{\"formula\": \"FeS\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20303,
+          "completion_tokens": 45,
+          "total_tokens": 20348,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 79
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-FES",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "620f66046a51270a5944a142db202309e2a8f5d985afaf6ae6319d129f253a1d",
+      "started_at": "2026-08-11T03:38:17.235966+00:00",
+      "api_latency_ms": 2150.953,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "2342f9f3-ce96-48ff-b3e8-b5353389b12d",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3106,
+        "completion_tokens": 45,
+        "total_tokens": 3151,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 34
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "FeS"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "2342f9f3-ce96-48ff-b3e8-b5353389b12d",
+        "object": "chat.completion",
+        "created": 1786419499,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_uiWrEW5kaBzlLkhoKQLS5272",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"FeS\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3106,
+          "completion_tokens": 45,
+          "total_tokens": 3151,
+          "prompt_tokens_details": {
+            "cached_tokens": 3072
+          },
+          "prompt_cache_hit_tokens": 3072,
+          "prompt_cache_miss_tokens": 34
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-FES",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "30c56290d6ff5e3c37253fcb44bd3b769f2a834f84f275bd326abb8f56336d06",
+      "started_at": "2026-08-11T03:38:19.394384+00:00",
+      "api_latency_ms": 1626.7379,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "a35dfb54-7ac6-4d97-b786-aa46b30a9f12",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3046,
+        "completion_tokens": 45,
+        "total_tokens": 3091,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 102
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "FeS"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "a35dfb54-7ac6-4d97-b786-aa46b30a9f12",
+        "object": "chat.completion",
+        "created": 1786419501,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_nNooMw9VJ8WmzaJhgeR31990",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"FeS\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3046,
+          "completion_tokens": 45,
+          "total_tokens": 3091,
+          "prompt_tokens_details": {
+            "cached_tokens": 2944
+          },
+          "prompt_cache_hit_tokens": 2944,
+          "prompt_cache_miss_tokens": 102
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-FES",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "b725131b2412afe57bc461cba83d714ce810bccd357f609bda1f8d7b0aeedd85",
+      "started_at": "2026-08-11T03:38:21.026550+00:00",
+      "api_latency_ms": 4920.3442,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "d6322762-fd5e-44e7-ac65-d5ab8168b217",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20274,
+        "completion_tokens": 45,
+        "total_tokens": 20319,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 50
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "FeS"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "d6322762-fd5e-44e7-ac65-d5ab8168b217",
+        "object": "chat.completion",
+        "created": 1786419505,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_SonmfDESPke7rCxDIpr96301",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"FeS\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20274,
+          "completion_tokens": 45,
+          "total_tokens": 20319,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 50
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-FES",
+      "pair_variant": "molar_mass",
+      "view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "method": "full_schema",
+      "model_run_repeat": "R1.1",
+      "payload_sha256": "21a85f16bcf9a0a3636e96a56f5d5e666b6cb00f2aea2ff4ed28ac86555bbadc",
+      "started_at": "2026-08-11T03:38:25.951732+00:00",
+      "api_latency_ms": 1300.5938,
+      "transport_accepted": true,
+      "provider_error": null,
+      "response_id": "0b0d5168-062f-4cca-901d-5cbeba119d65",
+      "response_model": "deepseek-v4-flash",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 20310,
+        "completion_tokens": 45,
+        "total_tokens": 20355,
+        "prompt_tokens_details": {
+          "cached_tokens": 20224
+        },
+        "prompt_cache_hit_tokens": 20224,
+        "prompt_cache_miss_tokens": 86
+      },
+      "response_shape_valid": true,
+      "tool_call_count": 1,
+      "exactly_one_tool_call": true,
+      "selected_tool_id": "A003",
+      "arguments_json_valid": true,
+      "arguments": {
+        "formula": "FeS"
+      },
+      "plain_text_content": "",
+      "raw_response": {
+        "id": "0b0d5168-062f-4cca-901d-5cbeba119d65",
+        "object": "chat.completion",
+        "created": 1786419508,
+        "model": "deepseek-v4-flash",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_5WmrhKmmGee1tq0LwtRW5531",
+                  "type": "function",
+                  "function": {
+                    "name": "A003",
+                    "arguments": "{\"formula\": \"FeS\"}"
+                  }
+                }
+              ]
+            },
+            "logprobs": null,
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 20310,
+          "completion_tokens": 45,
+          "total_tokens": 20355,
+          "prompt_tokens_details": {
+            "cached_tokens": 20224
+          },
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 86
+        },
+        "system_fingerprint": "fp_a18b46594c_prod0820_fp8_kvcache_20260402"
+      },
+      "tool_executed": false,
+      "retry_count": 0,
+      "source_r1_response_reused": false,
+      "confirmatory_inference_allowed": false
+    }
+  ]
+}

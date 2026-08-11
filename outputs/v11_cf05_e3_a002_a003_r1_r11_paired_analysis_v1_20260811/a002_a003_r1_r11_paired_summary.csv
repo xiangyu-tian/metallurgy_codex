@@ -1,0 +1,14 @@
+﻿group_type,n,r1_primary_endpoint_hit_rate,r11_primary_endpoint_hit_rate,delta_primary_endpoint_hit_rate,r1_family_hit_rate,r11_family_hit_rate,delta_family_hit_rate,r1_scientific_hit_rate,r11_scientific_hit_rate,delta_scientific_hit_rate,r1_arguments_exact_rate,r11_arguments_exact_rate,delta_arguments_exact_rate,r1_primary_end_to_end_rate,r11_primary_end_to_end_rate,delta_primary_end_to_end_rate,r1_scientific_end_to_end_rate,r11_scientific_end_to_end_rate,delta_scientific_end_to_end_rate,recovered_end_to_end_failure_count,tool_pool_size,pool_repeat,pair_variant
+overall,64,0.921875,1.0,0.078125,0.921875,1.0,0.078125,0.921875,1.0,0.078125,0.90625,1.0,0.09375,0.90625,1.0,0.09375,0.90625,1.0,0.09375,6,,,
+pool_size,32,0.84375,1.0,0.15625,0.84375,1.0,0.15625,0.84375,1.0,0.15625,0.8125,1.0,0.1875,0.8125,1.0,0.1875,0.8125,1.0,0.1875,6,120,,
+pool_size,32,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,0,17,,
+pool_size_repeat,16,0.75,1.0,0.25,0.75,1.0,0.25,0.75,1.0,0.25,0.6875,1.0,0.3125,0.6875,1.0,0.3125,0.6875,1.0,0.3125,5,120,A,
+pool_size_repeat,16,0.9375,1.0,0.0625,0.9375,1.0,0.0625,0.9375,1.0,0.0625,0.9375,1.0,0.0625,0.9375,1.0,0.0625,0.9375,1.0,0.0625,1,120,B,
+pool_size_repeat,16,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,0,17,A,
+pool_size_repeat,16,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,0,17,B,
+pair_variant,32,0.9375,1.0,0.0625,0.9375,1.0,0.0625,0.9375,1.0,0.0625,0.90625,1.0,0.09375,0.90625,1.0,0.09375,0.90625,1.0,0.09375,3,,,element_stoichiometry
+pair_variant,32,0.90625,1.0,0.09375,0.90625,1.0,0.09375,0.90625,1.0,0.09375,0.90625,1.0,0.09375,0.90625,1.0,0.09375,0.90625,1.0,0.09375,3,,,molar_mass
+pool_size_pair_variant,16,0.875,1.0,0.125,0.875,1.0,0.125,0.875,1.0,0.125,0.8125,1.0,0.1875,0.8125,1.0,0.1875,0.8125,1.0,0.1875,3,120,,element_stoichiometry
+pool_size_pair_variant,16,0.8125,1.0,0.1875,0.8125,1.0,0.1875,0.8125,1.0,0.1875,0.8125,1.0,0.1875,0.8125,1.0,0.1875,0.8125,1.0,0.1875,3,120,,molar_mass
+pool_size_pair_variant,16,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,0,17,,element_stoichiometry
+pool_size_pair_variant,16,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,0,17,,molar_mass

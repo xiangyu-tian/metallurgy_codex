@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-R11-OPENING-V1-20260811",
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "filename": "a002_a003_full_schema_r11_config_snapshot.json",
+      "sha256": "4897517255e6fc2a5cf5bb6757d4689e0db3fdfa69c96a19f190e4b93fdf8ea5",
+      "bytes": 1912
+    },
+    {
+      "filename": "a002_a003_full_schema_r11_opening_report.json",
+      "sha256": "ac8654207f77e9ff80a7e86639d1a2f608ab5fa485a5fa859c545d922a299923",
+      "bytes": 948
+    },
+    {
+      "filename": "a002_a003_full_schema_r11_prompt_snapshot.json",
+      "sha256": "6ece25e251b4c0d6e43bf45c6962aa1f97bf3ec954c4a04f2d3ae8e9155f156a",
+      "bytes": 1056
+    },
+    {
+      "filename": "a002_a003_full_schema_r11_request_payloads.json",
+      "sha256": "29fa87300a85f65e85d66562f85d5b6669e12b95e7fc5c705b597be0a06a7b27",
+      "bytes": 5194455
+    },
+    {
+      "filename": "a002_a003_full_schema_r11_run_cells.json",
+      "sha256": "18df0ebca99f0b5b007b983038a4d169fc0bc5df1a9eae6bae7d927931359d12",
+      "bytes": 45876
+    },
+    {
+      "filename": "a002_a003_full_schema_r11_single_axis_audit.json",
+      "sha256": "25f0d330adc96ee073442e23578e8ea4373397ab3c9873e1e3afc3ca75999b04",
+      "bytes": 40083
+    },
+    {
+      "filename": "execution_authorization_request.json",
+      "sha256": "dff7b2636469f03932d9f4e9d956b5f7bd4d1c8117702f82b1405b996616f833",
+      "bytes": 981
+    }
+  ]
+}

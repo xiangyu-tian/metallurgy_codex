@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A002-A003-R1-R11-PAIRED-ANALYSIS-V1-20260811",
+  "artifact_count": 8,
+  "artifacts": [
+    {
+      "filename": "a002_a003_r11_scored_rows.json",
+      "sha256": "dc0e4743df507bfcacd07559c14085f804ae6228dcfa52913d50cd001bc16960",
+      "bytes": 55255
+    },
+    {
+      "filename": "a002_a003_r11_summary.json",
+      "sha256": "4bddd3f0d4e801790edf3c1c9d54e7e8db4e31baf16d287829aba95911baeba5",
+      "bytes": 8372
+    },
+    {
+      "filename": "a002_a003_r1_r11_paired_analysis_config_snapshot.json",
+      "sha256": "0a2e22068d64a001c2965ad4250009eb4c86ba979f18678789c8041b158bf413",
+      "bytes": 1530
+    },
+    {
+      "filename": "a002_a003_r1_r11_paired_report.json",
+      "sha256": "12d5b6e4091ab1cbab52c22aa2ae3c8bd727a1e1140a458adc00f065be2ff3d7",
+      "bytes": 1459
+    },
+    {
+      "filename": "a002_a003_r1_r11_paired_rows.csv",
+      "sha256": "a2109038a3bc174d8bdf04ba2fb4a1fb961bca22939403ea78938466f1866290",
+      "bytes": 18549
+    },
+    {
+      "filename": "a002_a003_r1_r11_paired_rows.json",
+      "sha256": "67f2333f7cf286efadfa6b97f08b9c8f4b6da5a37697fc2988b9534025a0557d",
+      "bytes": 76916
+    },
+    {
+      "filename": "a002_a003_r1_r11_paired_summary.csv",
+      "sha256": "b2a079aebc554a3c1561178dc31fe92590f8342d918a5042cab9c1574031943f",
+      "bytes": 2273
+    },
+    {
+      "filename": "a002_a003_r1_r11_paired_summary.json",
+      "sha256": "f4ccbfe1ea21c5cc03bdebd926b26ca98416b440bd2fcd0d58d404407c872413",
+      "bytes": 12311
+    }
+  ]
+}

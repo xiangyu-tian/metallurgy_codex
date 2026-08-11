@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-R11-OPENING-V1-20260811",
+  "artifact_count": 9,
+  "artifacts": [
+    {
+      "filename": "a002_a003_full_schema_r11_results.json",
+      "sha256": "bd51aec53a84de8316dd4ca4a74db5c79ac0faf6baf31c46a86e37c77e954cf3",
+      "bytes": 185513
+    },
+    {
+      "filename": "a002_a003_full_schema_r11_runtime_report.json",
+      "sha256": "032268e39c546df75d38af99ba3a9544ac2f65cbd8b8b0ed5f929be94c679085",
+      "bytes": 797
+    },
+    {
+      "filename": "execution_authorization_snapshot.json",
+      "sha256": "0ce73245d584fb5f77ca336992fb365545a267ba79598ccf8019799ed4bb2271",
+      "bytes": 1930
+    },
+    {
+      "filename": "opening_config_snapshot.json",
+      "sha256": "4897517255e6fc2a5cf5bb6757d4689e0db3fdfa69c96a19f190e4b93fdf8ea5",
+      "bytes": 1912
+    },
+    {
+      "filename": "opening_manifest_snapshot.json",
+      "sha256": "3c58a6e319555580252d4381afe0700e9dfc1f4ad89397055e8cd8906f425a84",
+      "bytes": 1477
+    },
+    {
+      "filename": "opening_prompt_snapshot.json",
+      "sha256": "6ece25e251b4c0d6e43bf45c6962aa1f97bf3ec954c4a04f2d3ae8e9155f156a",
+      "bytes": 1056
+    },
+    {
+      "filename": "opening_run_cells_snapshot.json",
+      "sha256": "18df0ebca99f0b5b007b983038a4d169fc0bc5df1a9eae6bae7d927931359d12",
+      "bytes": 45876
+    },
+    {
+      "filename": "opening_single_axis_audit_snapshot.json",
+      "sha256": "25f0d330adc96ee073442e23578e8ea4373397ab3c9873e1e3afc3ca75999b04",
+      "bytes": 40083
+    },
+    {
+      "filename": "runner_source_snapshot.py",
+      "sha256": "4b8ecc57ffebd007fa8a942825cb7908aea090daac45950809d203400c7e2355",
+      "bytes": 12470
+    }
+  ]
+}
