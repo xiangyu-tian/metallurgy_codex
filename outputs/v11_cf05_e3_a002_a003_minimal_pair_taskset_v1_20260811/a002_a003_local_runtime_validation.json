@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "pair_key": "FE2O3",
+      "formula": "Fe2O3",
+      "a002_execution_success": true,
+      "a003_execution_success": true,
+      "a002_elements_match_independent_reference": true,
+      "a003_elements_absent": true,
+      "a002_mass_matches_independent_reference": true,
+      "a003_mass_matches_independent_reference": true,
+      "a002_explicit_unit_absent": true,
+      "a003_explicit_unit_matches": true,
+      "passed": true
+    },
+    {
+      "pair_key": "H2SO4",
+      "formula": "H2SO4",
+      "a002_execution_success": true,
+      "a003_execution_success": true,
+      "a002_elements_match_independent_reference": true,
+      "a003_elements_absent": true,
+      "a002_mass_matches_independent_reference": true,
+      "a003_mass_matches_independent_reference": true,
+      "a002_explicit_unit_absent": true,
+      "a003_explicit_unit_matches": true,
+      "passed": true
+    },
+    {
+      "pair_key": "CACO3",
+      "formula": "CaCO3",
+      "a002_execution_success": true,
+      "a003_execution_success": true,
+      "a002_elements_match_independent_reference": true,
+      "a003_elements_absent": true,
+      "a002_mass_matches_independent_reference": true,
+      "a003_mass_matches_independent_reference": true,
+      "a002_explicit_unit_absent": true,
+      "a003_explicit_unit_matches": true,
+      "passed": true
+    },
+    {
+      "pair_key": "CUSO4",
+      "formula": "CuSO4",
+      "a002_execution_success": true,
+      "a003_execution_success": true,
+      "a002_elements_match_independent_reference": true,
+      "a003_elements_absent": true,
+      "a002_mass_matches_independent_reference": true,
+      "a003_mass_matches_independent_reference": true,
+      "a002_explicit_unit_absent": true,
+      "a003_explicit_unit_matches": true,
+      "passed": true
+    },
+    {
+      "pair_key": "NH4_2SO4",
+      "formula": "(NH4)2SO4",
+      "a002_execution_success": true,
+      "a003_execution_success": true,
+      "a002_elements_match_independent_reference": true,
+      "a003_elements_absent": true,
+      "a002_mass_matches_independent_reference": true,
+      "a003_mass_matches_independent_reference": true,
+      "a002_explicit_unit_absent": true,
+      "a003_explicit_unit_matches": true,
+      "passed": true
+    },
+    {
+      "pair_key": "CA_OH_2",
+      "formula": "Ca(OH)2",
+      "a002_execution_success": true,
+      "a003_execution_success": true,
+      "a002_elements_match_independent_reference": true,
+      "a003_elements_absent": true,
+      "a002_mass_matches_independent_reference": true,
+      "a003_mass_matches_independent_reference": true,
+      "a002_explicit_unit_absent": true,
+      "a003_explicit_unit_matches": true,
+      "passed": true
+    },
+    {
+      "pair_key": "CU_NH3_4_SO4",
+      "formula": "[Cu(NH3)4]SO4",
+      "a002_execution_success": true,
+      "a003_execution_success": true,
+      "a002_elements_match_independent_reference": true,
+      "a003_elements_absent": true,
+      "a002_mass_matches_independent_reference": true,
+      "a003_mass_matches_independent_reference": true,
+      "a002_explicit_unit_absent": true,
+      "a003_explicit_unit_matches": true,
+      "passed": true
+    },
+    {
+      "pair_key": "FES",
+      "formula": "FeS",
+      "a002_execution_success": true,
+      "a003_execution_success": true,
+      "a002_elements_match_independent_reference": true,
+      "a003_elements_absent": true,
+      "a002_mass_matches_independent_reference": true,
+      "a003_mass_matches_independent_reference": true,
+      "a002_explicit_unit_absent": true,
+      "a003_explicit_unit_matches": true,
+      "passed": true
+    }
+  ]
+}

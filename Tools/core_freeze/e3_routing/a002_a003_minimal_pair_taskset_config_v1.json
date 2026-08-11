@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "taskset_id": "V11-CF05-E3-A002-A003-MINIMAL-PAIR-TASKSET-CANDIDATE-V1-20260811",
+  "development_only": true,
+  "family_id": "CHEMICAL_FORMULA_ANALYSIS-V1",
+  "pair_count": 8,
+  "task_count": 16,
+  "molar_mass_abs_tolerance": 0.0001,
+  "reference_method": "manual_stoichiometric_expansion_times_frozen_contract_atomic_weights",
+  "formula_specs": [
+    {"pair_key": "FE2O3", "formula": "Fe2O3", "expansion": {"Fe": 2, "O": 3}},
+    {"pair_key": "H2SO4", "formula": "H2SO4", "expansion": {"H": 2, "S": 1, "O": 4}},
+    {"pair_key": "CACO3", "formula": "CaCO3", "expansion": {"Ca": 1, "C": 1, "O": 3}},
+    {"pair_key": "CUSO4", "formula": "CuSO4", "expansion": {"Cu": 1, "S": 1, "O": 4}},
+    {"pair_key": "NH4_2SO4", "formula": "(NH4)2SO4", "expansion": {"N": 2, "H": 8, "S": 1, "O": 4}},
+    {"pair_key": "CA_OH_2", "formula": "Ca(OH)2", "expansion": {"Ca": 1, "O": 2, "H": 2}},
+    {"pair_key": "CU_NH3_4_SO4", "formula": "[Cu(NH3)4]SO4", "expansion": {"Cu": 1, "N": 4, "H": 12, "S": 1, "O": 4}},
+    {"pair_key": "FES", "formula": "FeS", "expansion": {"Fe": 1, "S": 1}}
+  ],
+  "local_deterministic_tool_execution_allowed": true,
+  "external_api_calls_allowed": false,
+  "automatic_retry_allowed": false,
+  "full_catalog_acceptable_set_claim_allowed": false,
+  "formal_gold_mutation_allowed": false,
+  "confirmatory_use_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "governance_adoption": {
+      "path": "Tools/core_freeze/e3_routing/a002_a003_family_governance_adoption_v1.json",
+      "sha256": "0508045caaf7336c316b7d86f5286f5a97b396c41c5bd9aae46231c5ba69ff99"
+    },
+    "verified_contracts": {
+      "path": "Tools/core_freeze/verified_core/contracts_v1.json",
+      "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"
+    },
+    "runtime_source": {
+      "path": "Tools/models_core/models_a.py",
+      "sha256": "4de1fa8779bbbb0a76b094fd24e05a8f769bfbce67d953c9094927d0a30389e1"
+    }
+  }
+}

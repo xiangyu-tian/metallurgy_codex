@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0",
+  "references": [
+    {
+      "pair_key": "FE2O3",
+      "formula": "Fe2O3",
+      "manual_expansion": {
+        "Fe": 2,
+        "O": 3
+      },
+      "atomic_weights": {
+        "Fe": 55.845,
+        "O": 15.999
+      },
+      "mass_contributions": {
+        "Fe": 111.69,
+        "O": 47.997
+      },
+      "molar_mass": 159.687,
+      "unit": "g/mol",
+      "reference_method": "manual_expansion_and_arithmetic_not_tool_runtime_output",
+      "oracle_independent_of_tool_runtime": true
+    },
+    {
+      "pair_key": "H2SO4",
+      "formula": "H2SO4",
+      "manual_expansion": {
+        "H": 2,
+        "S": 1,
+        "O": 4
+      },
+      "atomic_weights": {
+        "H": 1.008,
+        "S": 32.06,
+        "O": 15.999
+      },
+      "mass_contributions": {
+        "H": 2.016,
+        "S": 32.06,
+        "O": 63.996
+      },
+      "molar_mass": 98.072,
+      "unit": "g/mol",
+      "reference_method": "manual_expansion_and_arithmetic_not_tool_runtime_output",
+      "oracle_independent_of_tool_runtime": true
+    },
+    {
+      "pair_key": "CACO3",
+      "formula": "CaCO3",
+      "manual_expansion": {
+        "Ca": 1,
+        "C": 1,
+        "O": 3
+      },
+      "atomic_weights": {
+        "Ca": 40.078,
+        "C": 12.011,
+        "O": 15.999
+      },
+      "mass_contributions": {
+        "Ca": 40.078,
+        "C": 12.011,
+        "O": 47.997
+      },
+      "molar_mass": 100.086,
+      "unit": "g/mol",
+      "reference_method": "manual_expansion_and_arithmetic_not_tool_runtime_output",
+      "oracle_independent_of_tool_runtime": true
+    },
+    {
+      "pair_key": "CUSO4",
+      "formula": "CuSO4",
+      "manual_expansion": {
+        "Cu": 1,
+        "S": 1,
+        "O": 4
+      },
+      "atomic_weights": {
+        "Cu": 63.546,
+        "S": 32.06,
+        "O": 15.999
+      },
+      "mass_contributions": {
+        "Cu": 63.546,
+        "S": 32.06,
+        "O": 63.996
+      },
+      "molar_mass": 159.602,
+      "unit": "g/mol",
+      "reference_method": "manual_expansion_and_arithmetic_not_tool_runtime_output",
+      "oracle_independent_of_tool_runtime": true
+    },
+    {
+      "pair_key": "NH4_2SO4",
+      "formula": "(NH4)2SO4",
+      "manual_expansion": {
+        "N": 2,
+        "H": 8,
+        "S": 1,
+        "O": 4
+      },
+      "atomic_weights": {
+        "N": 14.007,
+        "H": 1.008,
+        "S": 32.06,
+        "O": 15.999
+      },
+      "mass_contributions": {
+        "N": 28.014,
+        "H": 8.064,
+        "S": 32.06,
+        "O": 63.996
+      },
+      "molar_mass": 132.134,
+      "unit": "g/mol",
+      "reference_method": "manual_expansion_and_arithmetic_not_tool_runtime_output",
+      "oracle_independent_of_tool_runtime": true
+    },
+    {
+      "pair_key": "CA_OH_2",
+      "formula": "Ca(OH)2",
+      "manual_expansion": {
+        "Ca": 1,
+        "O": 2,
+        "H": 2
+      },
+      "atomic_weights": {
+        "Ca": 40.078,
+        "O": 15.999,
+        "H": 1.008
+      },
+      "mass_contributions": {
+        "Ca": 40.078,
+        "O": 31.998,
+        "H": 2.016
+      },
+      "molar_mass": 74.092,
+      "unit": "g/mol",
+      "reference_method": "manual_expansion_and_arithmetic_not_tool_runtime_output",
+      "oracle_independent_of_tool_runtime": true
+    },
+    {
+      "pair_key": "CU_NH3_4_SO4",
+      "formula": "[Cu(NH3)4]SO4",
+      "manual_expansion": {
+        "Cu": 1,
+        "N": 4,
+        "H": 12,
+        "S": 1,
+        "O": 4
+      },
+      "atomic_weights": {
+        "Cu": 63.546,
+        "N": 14.007,
+        "H": 1.008,
+        "S": 32.06,
+        "O": 15.999
+      },
+      "mass_contributions": {
+        "Cu": 63.546,
+        "N": 56.028,
+        "H": 12.096,
+        "S": 32.06,
+        "O": 63.996
+      },
+      "molar_mass": 227.726,
+      "unit": "g/mol",
+      "reference_method": "manual_expansion_and_arithmetic_not_tool_runtime_output",
+      "oracle_independent_of_tool_runtime": true
+    },
+    {
+      "pair_key": "FES",
+      "formula": "FeS",
+      "manual_expansion": {
+        "Fe": 1,
+        "S": 1
+      },
+      "atomic_weights": {
+        "Fe": 55.845,
+        "S": 32.06
+      },
+      "mass_contributions": {
+        "Fe": 55.845,
+        "S": 32.06
+      },
+      "molar_mass": 87.905,
+      "unit": "g/mol",
+      "reference_method": "manual_expansion_and_arithmetic_not_tool_runtime_output",
+      "oracle_independent_of_tool_runtime": true
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "taskset_id": "V11-CF05-E3-A002-A003-MINIMAL-PAIR-TASKSET-CANDIDATE-V1-20260811",
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "filename": "a002_a003_governance_adoption_snapshot.json",
+      "sha256": "f50c338611ecec4a342ce8858e483a847e757ff7e29923f883522661b900355e",
+      "bytes": 2198
+    },
+    {
+      "filename": "a002_a003_independent_reference_ledger.json",
+      "sha256": "2d122dec81f438e2b07847e1d5f7330d03478570e087eff6c214451ef75414d5",
+      "bytes": 4595
+    },
+    {
+      "filename": "a002_a003_local_runtime_validation.json",
+      "sha256": "5b6349b18e907c968e2fa04dcdd45328f41bc48f0115d5b4d1fa4facce52aa2d",
+      "bytes": 3769
+    },
+    {
+      "filename": "a002_a003_minimal_pair_config_snapshot.json",
+      "sha256": "7a9edc2a0f5b4d734d0368fe9fc600cb8dc0ed9e647ad0ff25f21842802b0c35",
+      "bytes": 2533
+    },
+    {
+      "filename": "a002_a003_minimal_pair_taskset_candidate.json",
+      "sha256": "4f843e12e50ca70e77885e2cce9debf9bcc8ae096fe01a22c01f6d8c09987183",
+      "bytes": 29397
+    },
+    {
+      "filename": "a002_a003_minimal_pair_taskset_report.json",
+      "sha256": "918233df90bcf7e3ce13fcda9a8dee967402a156a4a00366e5dbc0e19c8c1d74",
+      "bytes": 946
+    }
+  ]
+}

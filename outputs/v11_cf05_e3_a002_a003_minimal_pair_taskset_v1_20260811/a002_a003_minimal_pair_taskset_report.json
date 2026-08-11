@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "taskset_id": "V11-CF05-E3-A002-A003-MINIMAL-PAIR-TASKSET-CANDIDATE-V1-20260811",
+  "status": "development_minimal_pair_taskset_candidate_built",
+  "governance_record_id": "V11-CF05-E3-A002-A003-FAMILY-GOVERNANCE-ADOPTION-V1-20260811",
+  "pair_count": 8,
+  "task_count": 16,
+  "element_task_count": 8,
+  "molar_mass_task_count": 8,
+  "identical_pair_stem_count": 8,
+  "pair_minimality_passed": true,
+  "independent_reference_count": 8,
+  "runtime_validation_passed_count": 8,
+  "local_tool_calls_executed": 16,
+  "full_catalog_acceptable_set_frozen": false,
+  "requires_pool_specific_acceptable_tool_revalidation": true,
+  "formal_gold_mutated": false,
+  "external_api_calls": 0,
+  "confirmatory_use_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "next_gate": "construct hash-bound 17/120 development routing views and revalidate pool-specific acceptable tools"
+}
