@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "package_id": "V11-CF05-E3-A002-A003-POOL-VIEWS-V1-20260811",
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "filename": "a002_a003_direct_candidate_execution_results.json",
+      "sha256": "f53b9d1e91ef526f1380a82a20deefa2c97b1a0038930b7c9b3174738befd14d",
+      "bytes": 13863
+    },
+    {
+      "filename": "a002_a003_pool_specific_scoring_registry.json",
+      "sha256": "c9624b222dca0b78a01e8a3e25440d221965db3ceb758d2a70c5faea428e3702",
+      "bytes": 50035
+    },
+    {
+      "filename": "a002_a003_pool_view_config_snapshot.json",
+      "sha256": "cf8053655cd2ef14fe5ca7715413cab5e609ea329a553b359d96945ce8d61069",
+      "bytes": 3531
+    },
+    {
+      "filename": "a002_a003_pool_view_report.json",
+      "sha256": "a97b4d7de6b2a0430fda881de258b5ca928149279645f828ebbda45c7a92f753",
+      "bytes": 1308
+    },
+    {
+      "filename": "a002_a003_router_visible_tasks.json",
+      "sha256": "624e198bf44b193c76d9c0b6cffd251db1fa86e8a4cac6e12f05c9f4c1bcbd80",
+      "bytes": 6716
+    },
+    {
+      "filename": "a002_a003_selected_pool_views.json",
+      "sha256": "6137c9e56f53df7785ecb97f50826adbdfb7dcc82c0cf01c100fa989796e8389",
+      "bytes": 311426
+    },
+    {
+      "filename": "a002_a003_signature_compatibility_screen.json",
+      "sha256": "b4840f0f02f085993b486edd7039a8c8430d97afff46c2d9a5d829a61e91a5c6",
+      "bytes": 3789
+    }
+  ]
+}

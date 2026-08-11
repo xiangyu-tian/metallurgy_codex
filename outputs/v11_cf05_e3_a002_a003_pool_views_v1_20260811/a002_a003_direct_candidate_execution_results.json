@@ -1,0 +1,551 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "Fe2O3"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Fe": 2.0,
+            "O": 3.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": true
+    },
+    {
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "Fe2O3"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "Fe2O3"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Fe": 2.0,
+            "O": 3.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "Fe2O3"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "H2SO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "H": 2.0,
+            "S": 1.0,
+            "O": 4.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": true
+    },
+    {
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "H2SO4"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "H2SO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "H": 2.0,
+            "S": 1.0,
+            "O": 4.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "H2SO4"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "CaCO3"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Ca": 1.0,
+            "C": 1.0,
+            "O": 3.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": true
+    },
+    {
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "CaCO3"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "CaCO3"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Ca": 1.0,
+            "C": 1.0,
+            "O": 3.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "CaCO3"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "CuSO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Cu": 1.0,
+            "S": 1.0,
+            "O": 4.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": true
+    },
+    {
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "CuSO4"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "CuSO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Cu": 1.0,
+            "S": 1.0,
+            "O": 4.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "CuSO4"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "(NH4)2SO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "N": 2.0,
+            "H": 8.0,
+            "S": 1.0,
+            "O": 4.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": true
+    },
+    {
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "(NH4)2SO4"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "(NH4)2SO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "N": 2.0,
+            "H": 8.0,
+            "S": 1.0,
+            "O": 4.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "(NH4)2SO4"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "Ca(OH)2"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Ca": 1.0,
+            "O": 2.0,
+            "H": 2.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": true
+    },
+    {
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "Ca(OH)2"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "Ca(OH)2"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Ca": 1.0,
+            "O": 2.0,
+            "H": 2.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "Ca(OH)2"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Cu": 1.0,
+            "N": 4.0,
+            "H": 12.0,
+            "S": 1.0,
+            "O": 4.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": true
+    },
+    {
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_FORMULA_ERROR",
+        "error": "ParseException: Expected end of text, found '['  (at char 0), (line:1, col:1)"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Cu": 1.0,
+            "N": 4.0,
+            "H": 12.0,
+            "S": 1.0,
+            "O": 4.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "[Cu(NH3)4]SO4"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_FORMULA_ERROR",
+        "error": "ParseException: Expected end of text, found '['  (at char 0), (line:1, col:1)"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "FeS"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Fe": 1.0,
+            "S": 1.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": true
+    },
+    {
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "FeS"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "candidate_tool_id": "E3C002",
+      "input": {
+        "formula": "FeS"
+      },
+      "execution": {
+        "success": true,
+        "result": {
+          "elements": {
+            "Fe": 1.0,
+            "S": 1.0
+          }
+        },
+        "error_code": null,
+        "error": null
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    },
+    {
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "candidate_tool_id": "E3C018",
+      "input": {
+        "formula": "FeS"
+      },
+      "execution": {
+        "success": false,
+        "result": null,
+        "error_code": "ISOTOPE_REQUIRED",
+        "error": "at least one isotope label is required"
+      },
+      "directly_satisfies_frozen_scoring_rule": false
+    }
+  ]
+}

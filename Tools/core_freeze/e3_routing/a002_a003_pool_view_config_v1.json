@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "package_id": "V11-CF05-E3-A002-A003-POOL-VIEWS-V1-20260811",
+  "taskset_id": "V11-CF05-E3-A002-A003-MINIMAL-PAIR-TASKSET-CANDIDATE-V1-20260811",
+  "family_id": "CHEMICAL_FORMULA_ANALYSIS-V1",
+  "selected_pool_condition": {
+    "pool_design": "controlled_dose",
+    "tool_pool_sizes": [17, 120],
+    "pool_repeats": ["A", "B"],
+    "near_neighbor_type": "lexical",
+    "near_neighbor_count": 8
+  },
+  "required_visible_endpoints": ["A002", "A003"],
+  "direct_signature_candidate_ids": ["E3C002", "E3C018"],
+  "candidate_runtime": {
+    "E3C002": "batch1",
+    "E3C018": "batch3"
+  },
+  "primary_endpoint_policy": {
+    "element_stoichiometry": ["A002"],
+    "molar_mass": ["A003"]
+  },
+  "alternative_success_policy": {
+    "element_stoichiometry": [],
+    "molar_mass": ["A002"]
+  },
+  "pool_specific_candidate_rule": "a candidate may enter the pool-specific primary set only when it is visible, accepts exactly the canonical formula input, executes successfully, and directly satisfies every frozen output check",
+  "derived_or_multi_step_tools_primary_acceptable": false,
+  "router_visible_task_fields": ["task_id", "pair_id", "pair_variant", "problem_text", "canonical_inputs"],
+  "local_candidate_execution_allowed": true,
+  "external_api_calls_allowed": false,
+  "automatic_retry_allowed": false,
+  "formal_gold_mutation_allowed": false,
+  "confirmatory_use_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "taskset": {
+      "path": "outputs/v11_cf05_e3_a002_a003_minimal_pair_taskset_v1_20260811/a002_a003_minimal_pair_taskset_candidate.json",
+      "sha256": "4f843e12e50ca70e77885e2cce9debf9bcc8ae096fe01a22c01f6d8c09987183"
+    },
+    "taskset_manifest": {
+      "path": "outputs/v11_cf05_e3_a002_a003_minimal_pair_taskset_v1_20260811/artifact_manifest.json",
+      "sha256": "c186ce78998e10ffcf269c6722483cf2e31b0749aa6efe3360790809ff19f201"
+    },
+    "independent_references": {
+      "path": "outputs/v11_cf05_e3_a002_a003_minimal_pair_taskset_v1_20260811/a002_a003_independent_reference_ledger.json",
+      "sha256": "2d122dec81f438e2b07847e1d5f7330d03478570e087eff6c214451ef75414d5"
+    },
+    "governance_adoption": {
+      "path": "Tools/core_freeze/e3_routing/a002_a003_family_governance_adoption_v1.json",
+      "sha256": "0508045caaf7336c316b7d86f5286f5a97b396c41c5bd9aae46231c5ba69ff99"
+    },
+    "pool_manifest": {
+      "path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_controlled_pool_manifest.json",
+      "sha256": "4053401bce5175ea66c38bad85a81c2e227e50bb5a36162c47d96e4c6fc1337f"
+    },
+    "schema_registry": {
+      "path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_pool_schema_registry.json",
+      "sha256": "ca7e4e5a5c9080d14e1eb08a54fa6f6644fd1ecac9f47a4ddc48237f59ad3faf"
+    },
+    "candidate_environment_batch1": {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch1_v1_20260803/candidate_environment_verification.json",
+      "sha256": "d6d7bf3863f279a87bd7c82621f9a86eb55a287d43e854f183b690a31b068d3e"
+    },
+    "candidate_environment_batch3": {
+      "path": "outputs/v11_cf05_e3_registration_candidates_batch3_v1_20260803/candidate_environment_verification.json",
+      "sha256": "5a962635b2f814dab66358fd764123a8334a3c7d48000960cc44e55932a0db6b"
+    }
+  }
+}

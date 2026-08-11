@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "tasks": [
+    {
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-FE2O3",
+      "pair_variant": "element_stoichiometry",
+      "problem_text": "给定中性化学式 Fe2O3，采用冻结原子量（Fe=55.845，O=15.999）。任务：解析该化学式，仅返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      }
+    },
+    {
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-FE2O3",
+      "pair_variant": "molar_mass",
+      "problem_text": "给定中性化学式 Fe2O3，采用冻结原子量（Fe=55.845，O=15.999）。任务：计算该化学式的摩尔质量，返回数值和单位 g/mol，数值保留4位小数。",
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      }
+    },
+    {
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-H2SO4",
+      "pair_variant": "element_stoichiometry",
+      "problem_text": "给定中性化学式 H2SO4，采用冻结原子量（H=1.008，S=32.06，O=15.999）。任务：解析该化学式，仅返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "H2SO4"
+      }
+    },
+    {
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-H2SO4",
+      "pair_variant": "molar_mass",
+      "problem_text": "给定中性化学式 H2SO4，采用冻结原子量（H=1.008，S=32.06，O=15.999）。任务：计算该化学式的摩尔质量，返回数值和单位 g/mol，数值保留4位小数。",
+      "canonical_inputs": {
+        "formula": "H2SO4"
+      }
+    },
+    {
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CACO3",
+      "pair_variant": "element_stoichiometry",
+      "problem_text": "给定中性化学式 CaCO3，采用冻结原子量（Ca=40.078，C=12.011，O=15.999）。任务：解析该化学式，仅返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "CaCO3"
+      }
+    },
+    {
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CACO3",
+      "pair_variant": "molar_mass",
+      "problem_text": "给定中性化学式 CaCO3，采用冻结原子量（Ca=40.078，C=12.011，O=15.999）。任务：计算该化学式的摩尔质量，返回数值和单位 g/mol，数值保留4位小数。",
+      "canonical_inputs": {
+        "formula": "CaCO3"
+      }
+    },
+    {
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CUSO4",
+      "pair_variant": "element_stoichiometry",
+      "problem_text": "给定中性化学式 CuSO4，采用冻结原子量（Cu=63.546，S=32.06，O=15.999）。任务：解析该化学式，仅返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "CuSO4"
+      }
+    },
+    {
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CUSO4",
+      "pair_variant": "molar_mass",
+      "problem_text": "给定中性化学式 CuSO4，采用冻结原子量（Cu=63.546，S=32.06，O=15.999）。任务：计算该化学式的摩尔质量，返回数值和单位 g/mol，数值保留4位小数。",
+      "canonical_inputs": {
+        "formula": "CuSO4"
+      }
+    },
+    {
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-NH4_2SO4",
+      "pair_variant": "element_stoichiometry",
+      "problem_text": "给定中性化学式 (NH4)2SO4，采用冻结原子量（N=14.007，H=1.008，S=32.06，O=15.999）。任务：解析该化学式，仅返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "(NH4)2SO4"
+      }
+    },
+    {
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-NH4_2SO4",
+      "pair_variant": "molar_mass",
+      "problem_text": "给定中性化学式 (NH4)2SO4，采用冻结原子量（N=14.007，H=1.008，S=32.06，O=15.999）。任务：计算该化学式的摩尔质量，返回数值和单位 g/mol，数值保留4位小数。",
+      "canonical_inputs": {
+        "formula": "(NH4)2SO4"
+      }
+    },
+    {
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CA_OH_2",
+      "pair_variant": "element_stoichiometry",
+      "problem_text": "给定中性化学式 Ca(OH)2，采用冻结原子量（Ca=40.078，O=15.999，H=1.008）。任务：解析该化学式，仅返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "Ca(OH)2"
+      }
+    },
+    {
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CA_OH_2",
+      "pair_variant": "molar_mass",
+      "problem_text": "给定中性化学式 Ca(OH)2，采用冻结原子量（Ca=40.078，O=15.999，H=1.008）。任务：计算该化学式的摩尔质量，返回数值和单位 g/mol，数值保留4位小数。",
+      "canonical_inputs": {
+        "formula": "Ca(OH)2"
+      }
+    },
+    {
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-CU_NH3_4_SO4",
+      "pair_variant": "element_stoichiometry",
+      "problem_text": "给定中性化学式 [Cu(NH3)4]SO4，采用冻结原子量（Cu=63.546，N=14.007，H=1.008，S=32.06，O=15.999）。任务：解析该化学式，仅返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "[Cu(NH3)4]SO4"
+      }
+    },
+    {
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-CU_NH3_4_SO4",
+      "pair_variant": "molar_mass",
+      "problem_text": "给定中性化学式 [Cu(NH3)4]SO4，采用冻结原子量（Cu=63.546，N=14.007，H=1.008，S=32.06，O=15.999）。任务：计算该化学式的摩尔质量，返回数值和单位 g/mol，数值保留4位小数。",
+      "canonical_inputs": {
+        "formula": "[Cu(NH3)4]SO4"
+      }
+    },
+    {
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pair_id": "PAIR-A002-A003-FES",
+      "pair_variant": "element_stoichiometry",
+      "problem_text": "给定中性化学式 FeS，采用冻结原子量（Fe=55.845，S=32.06）。任务：解析该化学式，仅返回各元素的化学计量数。",
+      "canonical_inputs": {
+        "formula": "FeS"
+      }
+    },
+    {
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pair_id": "PAIR-A002-A003-FES",
+      "pair_variant": "molar_mass",
+      "problem_text": "给定中性化学式 FeS，采用冻结原子量（Fe=55.845，S=32.06）。任务：计算该化学式的摩尔质量，返回数值和单位 g/mol，数值保留4位小数。",
+      "canonical_inputs": {
+        "formula": "FeS"
+      }
+    }
+  ]
+}

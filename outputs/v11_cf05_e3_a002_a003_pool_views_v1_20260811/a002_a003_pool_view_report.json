@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "package_id": "V11-CF05-E3-A002-A003-POOL-VIEWS-V1-20260811",
+  "status": "hash_frozen_pool_views_and_pool_specific_gold_candidate_built",
+  "task_count": 16,
+  "view_count": 4,
+  "scoring_unit_count": 64,
+  "selected_pool_sizes": [
+    17,
+    120
+  ],
+  "selected_pool_repeats": [
+    "A",
+    "B"
+  ],
+  "all_views_contain_both_family_endpoints": true,
+  "signature_compatible_tools_across_selected_pools": [
+    "A002",
+    "A003",
+    "E3C002",
+    "E3C018"
+  ],
+  "candidate_execution_count": 32,
+  "candidate_environment": {
+    "python_version": "3.11.15",
+    "expected_versions": {
+      "pymatgen": "2026.5.4",
+      "periodictable": "2.1.0"
+    },
+    "actual_versions": {
+      "pymatgen": "2026.5.4",
+      "periodictable": "2.1.0"
+    },
+    "environment_match": true
+  },
+  "e3c002_direct_acceptance_task_count": 8,
+  "e3c018_direct_acceptance_task_count": 0,
+  "pool_specific_acceptable_sets_revalidated": true,
+  "full_catalog_acceptable_set_frozen": false,
+  "external_api_calls": 0,
+  "confirmatory_use_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "next_gate": "build an unauthorized development opening package from these hash-bound tasks, views, and pool-specific scoring rows"
+}

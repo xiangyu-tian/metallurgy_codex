@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "tool_id": "A003",
+      "required_input_keys": [
+        "formula"
+      ],
+      "direct_signature_compatible": true
+    },
+    {
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "tool_id": "A002",
+      "required_input_keys": [
+        "formula"
+      ],
+      "direct_signature_compatible": true
+    },
+    {
+      "source_pool_id": "E3-A003-A-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "A",
+      "tool_id": "E3C018",
+      "required_input_keys": [
+        "formula"
+      ],
+      "direct_signature_compatible": true
+    },
+    {
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "tool_id": "E3C018",
+      "required_input_keys": [
+        "formula"
+      ],
+      "direct_signature_compatible": true
+    },
+    {
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "tool_id": "A003",
+      "required_input_keys": [
+        "formula"
+      ],
+      "direct_signature_compatible": true
+    },
+    {
+      "source_pool_id": "E3-A003-B-17-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 17,
+      "pool_repeat": "B",
+      "tool_id": "A002",
+      "required_input_keys": [
+        "formula"
+      ],
+      "direct_signature_compatible": true
+    },
+    {
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "tool_id": "A002",
+      "required_input_keys": [
+        "formula"
+      ],
+      "direct_signature_compatible": true
+    },
+    {
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "tool_id": "E3C002",
+      "required_input_keys": [
+        "formula"
+      ],
+      "direct_signature_compatible": true
+    },
+    {
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "tool_id": "E3C018",
+      "required_input_keys": [
+        "formula"
+      ],
+      "direct_signature_compatible": true
+    },
+    {
+      "source_pool_id": "E3-A003-A-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "A",
+      "tool_id": "A003",
+      "required_input_keys": [
+        "formula"
+      ],
+      "direct_signature_compatible": true
+    },
+    {
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "tool_id": "A002",
+      "required_input_keys": [
+        "formula"
+      ],
+      "direct_signature_compatible": true
+    },
+    {
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "tool_id": "E3C018",
+      "required_input_keys": [
+        "formula"
+      ],
+      "direct_signature_compatible": true
+    },
+    {
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "tool_id": "E3C002",
+      "required_input_keys": [
+        "formula"
+      ],
+      "direct_signature_compatible": true
+    },
+    {
+      "source_pool_id": "E3-A003-B-120-LEXICAL_8-CANDIDATE-V1",
+      "tool_pool_size": 120,
+      "pool_repeat": "B",
+      "tool_id": "A003",
+      "required_input_keys": [
+        "formula"
+      ],
+      "direct_signature_compatible": true
+    }
+  ]
+}
