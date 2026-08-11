@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R2-R3-OPENING-V1-20260811",
+  "decision": "authorized_to_execute_a002_a003_top5_selector_r2_r3",
+  "provider": "deepseek",
+  "endpoint_source": "runtime_environment",
+  "model": "deepseek-v4-flash",
+  "scheduled_request_count": 384,
+  "opening_manifest_sha256": "c5f51f31420418e2ce5dade287454b5428d08b6706acad1cf3d8cee472c25810",
+  "request_payloads_sha256": "00b526048a6135bcc7a6f5be9bc89d2382cc5e4cce8af01389c549adb646dd81",
+  "runner_sha256": "5a09a23413de08902d5f2d6a84180e75d1a4ae3bab216c4fe51e5af21c189244",
+  "runner_git_commit": "c941750ac42ba6e2932f833509f31c3aad94e111",
+  "external_data_sharing_authorized": true,
+  "external_api_execution_authorized": true,
+  "tool_execution_authorized": false,
+  "provider_retry_authorized": false,
+  "independent_validation_split_access_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "authorized_scope": {
+    "task_text_count": 16,
+    "schema_view_count": 192,
+    "request_count": 384,
+    "complete_repeat_counts": {
+      "R2": 192,
+      "R3": 192
+    },
+    "method_cell_counts_per_repeat": {
+      "R2": {
+        "lexical_top5": 64,
+        "dense_top5": 64,
+        "hierarchical": 64
+      },
+      "R3": {
+        "lexical_top5": 64,
+        "dense_top5": 64,
+        "hierarchical": 64
+      }
+    },
+    "visible_tools_per_request": 5,
+    "model_run_repeats": ["R2", "R3"],
+    "explicit_thinking": {"type": "disabled"},
+    "max_tokens": 256,
+    "request_attempts_per_cell": 1,
+    "automatic_retry": false,
+    "metallurgy_tool_execution": false,
+    "independent_validation_split_access": false,
+    "purpose": "non-confirmatory complete R2/R3 variability assessment with per-response offline scoring"
+  },
+  "authorized_by": "xiangyu",
+  "authorized_at": "2026-08-11T15:06:00.7104906+08:00",
+  "authorization_record_type": "project_execution_authorization_not_cryptographic_signature",
+  "authorization_basis": "User explicitly authorized sending the same 16 frozen A002/A003 development task texts and 192 corresponding five-tool Schema views once in R2 and once in R3, for 384 one-attempt requests total, to DeepSeek using deepseek-v4-flash with payloads identical to R1, explicit thinking disabled, max_tokens=256, no retry, no metallurgy-tool execution, no independent-validation access, and per-response retention for three-repeat variability analysis."
+}
