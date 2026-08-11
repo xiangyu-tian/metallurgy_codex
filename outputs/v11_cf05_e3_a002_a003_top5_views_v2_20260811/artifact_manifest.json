@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "package_id": "V11-CF05-E3-A002-A003-TOP5-VIEWS-V2-20260811",
+  "artifact_count": 9,
+  "artifacts": [
+    {
+      "filename": "a002_a003_top5_method_summary.json",
+      "sha256": "e3ff8362d6d7604aefe3f7ac7663f534d7d7d3d194246a15b278f7a7e5740dee",
+      "bytes": 817
+    },
+    {
+      "filename": "a002_a003_top5_retrieval_results.json",
+      "sha256": "6901a7ebfb59a9f06d765a451df4f020d4564522af9b117f601985831b0d59cb",
+      "bytes": 1064243
+    },
+    {
+      "filename": "a002_a003_top5_schema_views.json",
+      "sha256": "f8bcb2eb51321bb09e7ec932db0dc2aaa169294e8de30b327fb6a6a620517331",
+      "bytes": 869670
+    },
+    {
+      "filename": "a002_a003_top5_views_config_snapshot.json",
+      "sha256": "466afac0f719318b109d6d28ca7725a1a24adc5f1442e905eb26ae17abbcb92f",
+      "bytes": 3126
+    },
+    {
+      "filename": "a002_a003_top5_views_report.json",
+      "sha256": "7f653c79f5401df07990e0cfb0923db97a64ce4c6dbb4c4489af0601c963100d",
+      "bytes": 1578
+    },
+    {
+      "filename": "dense_index_snapshot.json",
+      "sha256": "4104aea9c423be91ad16b9bbabcde480bfd44d5f82700eabfb925f01a6333539",
+      "bytes": 22535
+    },
+    {
+      "filename": "dense_query_policy_snapshot.json",
+      "sha256": "0e33e7c2d274d643ab83a6e526b60f0f4a3e19b9fa2009196fa993d3f46c3d38",
+      "bytes": 1676
+    },
+    {
+      "filename": "hierarchical_taxonomy_snapshot.json",
+      "sha256": "dcc966042e1f86066ee7cc7aa5f674870003a3d2252657ba9fb8f7f76f1bf712",
+      "bytes": 62962
+    },
+    {
+      "filename": "lexical_index_snapshot.json",
+      "sha256": "da1448911c5f7772f19db35566c8e1c970c323f735cd308247c5963c5bfd2d53",
+      "bytes": 29086
+    }
+  ]
+}

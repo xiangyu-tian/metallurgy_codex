@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "development_id": "V11-CF05-E3-A002-A003-DENSE-QUERY-DEVELOPMENT-V1-20260811",
+  "candidate_summaries": [
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "candidate_order": 1,
+      "role": "frozen_v1_reference",
+      "instruction_prefix": "为这个句子生成表示以用于检索相关文章：",
+      "cell_count": 64,
+      "primary_acceptable_recall_at_5_count": 62,
+      "primary_acceptable_recall_at_5_rate": 0.96875,
+      "mean_reciprocal_rank_of_nearest_primary_acceptable_tool": 0.8742559523809523,
+      "failed_cells": [
+        {
+          "task_id": "E3-MP-FE2O3-ELEMENTS",
+          "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+          "nearest_primary_acceptable_rank": 7
+        },
+        {
+          "task_id": "E3-MP-FE2O3-ELEMENTS",
+          "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+          "nearest_primary_acceptable_rank": 7
+        }
+      ]
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "candidate_order": 2,
+      "role": "predeclared_development_candidate",
+      "instruction_prefix": "为这个问题检索能够直接产生所请求输出的专业计算工具：",
+      "cell_count": 64,
+      "primary_acceptable_recall_at_5_count": 64,
+      "primary_acceptable_recall_at_5_rate": 1.0,
+      "mean_reciprocal_rank_of_nearest_primary_acceptable_tool": 0.921875,
+      "failed_cells": []
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "candidate_order": 3,
+      "role": "predeclared_development_candidate",
+      "instruction_prefix": "为这个任务检索能够直接完成该任务的专业计算工具：",
+      "cell_count": 64,
+      "primary_acceptable_recall_at_5_count": 64,
+      "primary_acceptable_recall_at_5_rate": 1.0,
+      "mean_reciprocal_rank_of_nearest_primary_acceptable_tool": 0.921875,
+      "failed_cells": []
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "candidate_order": 4,
+      "role": "predeclared_development_ablation",
+      "instruction_prefix": "",
+      "cell_count": 64,
+      "primary_acceptable_recall_at_5_count": 64,
+      "primary_acceptable_recall_at_5_rate": 1.0,
+      "mean_reciprocal_rank_of_nearest_primary_acceptable_tool": 0.8630208333333333,
+      "failed_cells": []
+    }
+  ],
+  "selected_candidate_id": "dense_v2_direct_output_tool",
+  "selected_by_predeclared_rule": true,
+  "selected_candidate_passes_64_of_64_recall_gate": true,
+  "fresh_index_exactly_equals_frozen_index": true,
+  "frozen_vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+  "gold_visible_to_retriever": false,
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "independent_validation_split_accessed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false
+}

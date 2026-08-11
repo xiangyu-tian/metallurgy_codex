@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "V11-CF05-E3-A003-DENSE-TOP5-QUERY-POLICY-V2-20260811",
+  "base_dense_implementation_id": "V11-CF05-E3-A003-DENSE-TOP5-CANDIDATE-V1-20260809",
+  "query_source": "problem_text_only",
+  "instruction_prefix": "为这个问题检索能够直接产生所请求输出的专业计算工具：",
+  "selection_basis": {
+    "development_set_only": true,
+    "predeclared_candidate_id": "dense_v2_direct_output_tool",
+    "predeclared_selection_rule_applied": true,
+    "primary_acceptable_recall_at_5_count": 64,
+    "development_cell_count": 64,
+    "mean_reciprocal_rank_of_nearest_primary_acceptable_tool": 0.921875
+  },
+  "changes_embedding_model": false,
+  "changes_document_renderer": false,
+  "changes_frozen_index": false,
+  "changes_similarity_or_tie_break": false,
+  "external_api_calls_authorized": false,
+  "independent_validation_split_access_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "base_dense_config": {
+      "path": "Tools/core_freeze/e3_routing/a003_dense_top5_config_v1.json",
+      "sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff"
+    },
+    "development_summary": {
+      "path": "outputs/v11_cf05_e3_a002_a003_dense_query_development_v1_20260811/dense_query_candidate_summary.json",
+      "sha256": "33ff651e98bb4f1a9680df1e71e2cd267e85c1c9737c67d8038b2e3ddbe23721"
+    },
+    "development_evaluator": {
+      "path": "Tools/core_freeze/e3_routing/evaluate_a002_a003_dense_query_candidates.py",
+      "sha256": "2a987e3bc46061375ed20a59c2ff7e16c469db16d0cfe9e0e17d5f755d809300"
+    }
+  }
+}

@@ -1,0 +1,567 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF05-E3-A002-A003-DENSE-REPRO-AUDIT-V1-20260811",
+  "process_count": 3,
+  "all_process_results_exactly_equal": true,
+  "fresh_index_exactly_equals_frozen_index": true,
+  "fresh_and_frozen_rankings_exactly_equal": true,
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "runs": [
+    {
+      "process_repeat": 1,
+      "result_signature_sha256": "ff88c51977e736733814c78005ac411cae9ea9b4a2f978218853077a02ad1ee0",
+      "result": {
+        "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+        "fresh_equals_frozen": true,
+        "fresh_vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+        "frozen_vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+        "query_vector_sha256": "a11e5fea8caa9abad323390479f74a0b6f1b669ac4bcc303468fc278e0840190",
+        "rankings": {
+          "A002-A003-120-A-LEXICAL8-V1": {
+            "fresh": [
+              {
+                "score": 0.54930615,
+                "tool_id": "B017"
+              },
+              {
+                "score": 0.54568589,
+                "tool_id": "D003"
+              },
+              {
+                "score": 0.5448975,
+                "tool_id": "A006"
+              },
+              {
+                "score": 0.54464412,
+                "tool_id": "B024"
+              },
+              {
+                "score": 0.54321253,
+                "tool_id": "B016"
+              },
+              {
+                "score": 0.54316151,
+                "tool_id": "B015"
+              },
+              {
+                "score": 0.5424493,
+                "tool_id": "A002"
+              },
+              {
+                "score": 0.53588909,
+                "tool_id": "D015"
+              },
+              {
+                "score": 0.53122324,
+                "tool_id": "C008"
+              },
+              {
+                "score": 0.53111517,
+                "tool_id": "D020"
+              }
+            ],
+            "frozen": [
+              {
+                "score": 0.54930615,
+                "tool_id": "B017"
+              },
+              {
+                "score": 0.54568589,
+                "tool_id": "D003"
+              },
+              {
+                "score": 0.5448975,
+                "tool_id": "A006"
+              },
+              {
+                "score": 0.54464412,
+                "tool_id": "B024"
+              },
+              {
+                "score": 0.54321253,
+                "tool_id": "B016"
+              },
+              {
+                "score": 0.54316151,
+                "tool_id": "B015"
+              },
+              {
+                "score": 0.5424493,
+                "tool_id": "A002"
+              },
+              {
+                "score": 0.53588909,
+                "tool_id": "D015"
+              },
+              {
+                "score": 0.53122324,
+                "tool_id": "C008"
+              },
+              {
+                "score": 0.53111517,
+                "tool_id": "D020"
+              }
+            ]
+          },
+          "A002-A003-120-B-LEXICAL8-V1": {
+            "fresh": [
+              {
+                "score": 0.54930615,
+                "tool_id": "B017"
+              },
+              {
+                "score": 0.54568589,
+                "tool_id": "D003"
+              },
+              {
+                "score": 0.5448975,
+                "tool_id": "A006"
+              },
+              {
+                "score": 0.54464412,
+                "tool_id": "B024"
+              },
+              {
+                "score": 0.54321253,
+                "tool_id": "B016"
+              },
+              {
+                "score": 0.54316151,
+                "tool_id": "B015"
+              },
+              {
+                "score": 0.5424493,
+                "tool_id": "A002"
+              },
+              {
+                "score": 0.53588909,
+                "tool_id": "D015"
+              },
+              {
+                "score": 0.53122324,
+                "tool_id": "C008"
+              },
+              {
+                "score": 0.53111517,
+                "tool_id": "D020"
+              }
+            ],
+            "frozen": [
+              {
+                "score": 0.54930615,
+                "tool_id": "B017"
+              },
+              {
+                "score": 0.54568589,
+                "tool_id": "D003"
+              },
+              {
+                "score": 0.5448975,
+                "tool_id": "A006"
+              },
+              {
+                "score": 0.54464412,
+                "tool_id": "B024"
+              },
+              {
+                "score": 0.54321253,
+                "tool_id": "B016"
+              },
+              {
+                "score": 0.54316151,
+                "tool_id": "B015"
+              },
+              {
+                "score": 0.5424493,
+                "tool_id": "A002"
+              },
+              {
+                "score": 0.53588909,
+                "tool_id": "D015"
+              },
+              {
+                "score": 0.53122324,
+                "tool_id": "C008"
+              },
+              {
+                "score": 0.53111517,
+                "tool_id": "D020"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "process_repeat": 2,
+      "result_signature_sha256": "ff88c51977e736733814c78005ac411cae9ea9b4a2f978218853077a02ad1ee0",
+      "result": {
+        "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+        "fresh_equals_frozen": true,
+        "fresh_vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+        "frozen_vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+        "query_vector_sha256": "a11e5fea8caa9abad323390479f74a0b6f1b669ac4bcc303468fc278e0840190",
+        "rankings": {
+          "A002-A003-120-A-LEXICAL8-V1": {
+            "fresh": [
+              {
+                "score": 0.54930615,
+                "tool_id": "B017"
+              },
+              {
+                "score": 0.54568589,
+                "tool_id": "D003"
+              },
+              {
+                "score": 0.5448975,
+                "tool_id": "A006"
+              },
+              {
+                "score": 0.54464412,
+                "tool_id": "B024"
+              },
+              {
+                "score": 0.54321253,
+                "tool_id": "B016"
+              },
+              {
+                "score": 0.54316151,
+                "tool_id": "B015"
+              },
+              {
+                "score": 0.5424493,
+                "tool_id": "A002"
+              },
+              {
+                "score": 0.53588909,
+                "tool_id": "D015"
+              },
+              {
+                "score": 0.53122324,
+                "tool_id": "C008"
+              },
+              {
+                "score": 0.53111517,
+                "tool_id": "D020"
+              }
+            ],
+            "frozen": [
+              {
+                "score": 0.54930615,
+                "tool_id": "B017"
+              },
+              {
+                "score": 0.54568589,
+                "tool_id": "D003"
+              },
+              {
+                "score": 0.5448975,
+                "tool_id": "A006"
+              },
+              {
+                "score": 0.54464412,
+                "tool_id": "B024"
+              },
+              {
+                "score": 0.54321253,
+                "tool_id": "B016"
+              },
+              {
+                "score": 0.54316151,
+                "tool_id": "B015"
+              },
+              {
+                "score": 0.5424493,
+                "tool_id": "A002"
+              },
+              {
+                "score": 0.53588909,
+                "tool_id": "D015"
+              },
+              {
+                "score": 0.53122324,
+                "tool_id": "C008"
+              },
+              {
+                "score": 0.53111517,
+                "tool_id": "D020"
+              }
+            ]
+          },
+          "A002-A003-120-B-LEXICAL8-V1": {
+            "fresh": [
+              {
+                "score": 0.54930615,
+                "tool_id": "B017"
+              },
+              {
+                "score": 0.54568589,
+                "tool_id": "D003"
+              },
+              {
+                "score": 0.5448975,
+                "tool_id": "A006"
+              },
+              {
+                "score": 0.54464412,
+                "tool_id": "B024"
+              },
+              {
+                "score": 0.54321253,
+                "tool_id": "B016"
+              },
+              {
+                "score": 0.54316151,
+                "tool_id": "B015"
+              },
+              {
+                "score": 0.5424493,
+                "tool_id": "A002"
+              },
+              {
+                "score": 0.53588909,
+                "tool_id": "D015"
+              },
+              {
+                "score": 0.53122324,
+                "tool_id": "C008"
+              },
+              {
+                "score": 0.53111517,
+                "tool_id": "D020"
+              }
+            ],
+            "frozen": [
+              {
+                "score": 0.54930615,
+                "tool_id": "B017"
+              },
+              {
+                "score": 0.54568589,
+                "tool_id": "D003"
+              },
+              {
+                "score": 0.5448975,
+                "tool_id": "A006"
+              },
+              {
+                "score": 0.54464412,
+                "tool_id": "B024"
+              },
+              {
+                "score": 0.54321253,
+                "tool_id": "B016"
+              },
+              {
+                "score": 0.54316151,
+                "tool_id": "B015"
+              },
+              {
+                "score": 0.5424493,
+                "tool_id": "A002"
+              },
+              {
+                "score": 0.53588909,
+                "tool_id": "D015"
+              },
+              {
+                "score": 0.53122324,
+                "tool_id": "C008"
+              },
+              {
+                "score": 0.53111517,
+                "tool_id": "D020"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "process_repeat": 3,
+      "result_signature_sha256": "ff88c51977e736733814c78005ac411cae9ea9b4a2f978218853077a02ad1ee0",
+      "result": {
+        "document_sha256": "93ab1b400a75ed388d521efa76d38aa6d65b24a9c858851ecc114ad13c1a6cfa",
+        "fresh_equals_frozen": true,
+        "fresh_vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+        "frozen_vector_sha256": "1e7b46159661d87df427121b5d7867194375dd78b0c81bc0382e4400dbb39317",
+        "query_vector_sha256": "a11e5fea8caa9abad323390479f74a0b6f1b669ac4bcc303468fc278e0840190",
+        "rankings": {
+          "A002-A003-120-A-LEXICAL8-V1": {
+            "fresh": [
+              {
+                "score": 0.54930615,
+                "tool_id": "B017"
+              },
+              {
+                "score": 0.54568589,
+                "tool_id": "D003"
+              },
+              {
+                "score": 0.5448975,
+                "tool_id": "A006"
+              },
+              {
+                "score": 0.54464412,
+                "tool_id": "B024"
+              },
+              {
+                "score": 0.54321253,
+                "tool_id": "B016"
+              },
+              {
+                "score": 0.54316151,
+                "tool_id": "B015"
+              },
+              {
+                "score": 0.5424493,
+                "tool_id": "A002"
+              },
+              {
+                "score": 0.53588909,
+                "tool_id": "D015"
+              },
+              {
+                "score": 0.53122324,
+                "tool_id": "C008"
+              },
+              {
+                "score": 0.53111517,
+                "tool_id": "D020"
+              }
+            ],
+            "frozen": [
+              {
+                "score": 0.54930615,
+                "tool_id": "B017"
+              },
+              {
+                "score": 0.54568589,
+                "tool_id": "D003"
+              },
+              {
+                "score": 0.5448975,
+                "tool_id": "A006"
+              },
+              {
+                "score": 0.54464412,
+                "tool_id": "B024"
+              },
+              {
+                "score": 0.54321253,
+                "tool_id": "B016"
+              },
+              {
+                "score": 0.54316151,
+                "tool_id": "B015"
+              },
+              {
+                "score": 0.5424493,
+                "tool_id": "A002"
+              },
+              {
+                "score": 0.53588909,
+                "tool_id": "D015"
+              },
+              {
+                "score": 0.53122324,
+                "tool_id": "C008"
+              },
+              {
+                "score": 0.53111517,
+                "tool_id": "D020"
+              }
+            ]
+          },
+          "A002-A003-120-B-LEXICAL8-V1": {
+            "fresh": [
+              {
+                "score": 0.54930615,
+                "tool_id": "B017"
+              },
+              {
+                "score": 0.54568589,
+                "tool_id": "D003"
+              },
+              {
+                "score": 0.5448975,
+                "tool_id": "A006"
+              },
+              {
+                "score": 0.54464412,
+                "tool_id": "B024"
+              },
+              {
+                "score": 0.54321253,
+                "tool_id": "B016"
+              },
+              {
+                "score": 0.54316151,
+                "tool_id": "B015"
+              },
+              {
+                "score": 0.5424493,
+                "tool_id": "A002"
+              },
+              {
+                "score": 0.53588909,
+                "tool_id": "D015"
+              },
+              {
+                "score": 0.53122324,
+                "tool_id": "C008"
+              },
+              {
+                "score": 0.53111517,
+                "tool_id": "D020"
+              }
+            ],
+            "frozen": [
+              {
+                "score": 0.54930615,
+                "tool_id": "B017"
+              },
+              {
+                "score": 0.54568589,
+                "tool_id": "D003"
+              },
+              {
+                "score": 0.5448975,
+                "tool_id": "A006"
+              },
+              {
+                "score": 0.54464412,
+                "tool_id": "B024"
+              },
+              {
+                "score": 0.54321253,
+                "tool_id": "B016"
+              },
+              {
+                "score": 0.54316151,
+                "tool_id": "B015"
+              },
+              {
+                "score": 0.5424493,
+                "tool_id": "A002"
+              },
+              {
+                "score": 0.53588909,
+                "tool_id": "D015"
+              },
+              {
+                "score": 0.53122324,
+                "tool_id": "C008"
+              },
+              {
+                "score": 0.53111517,
+                "tool_id": "D020"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

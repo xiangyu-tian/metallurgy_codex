@@ -1,0 +1,1929 @@
+{
+  "schema_version": "1.0",
+  "algorithm": "contract_hierarchy_bm25_v1",
+  "taxonomy_sha256": "ec3df35803aa1cf1b9861b36c64f606b8d8a6e75cdb1fb348859ee8164058d35",
+  "tool_count": 137,
+  "domain_count": 7,
+  "capability_count": 111,
+  "domains": [
+    {
+      "domain_id": "domain:165d244bfd43f65c",
+      "domain_label": "高炉低碳",
+      "tool_ids": [
+        "E001",
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007",
+        "E008",
+        "E009",
+        "E010",
+        "E011",
+        "E012",
+        "E013",
+        "E014",
+        "E015",
+        "E016",
+        "E017",
+        "E018",
+        "E019",
+        "E020"
+      ]
+    },
+    {
+      "domain_id": "domain:28509404753ef417",
+      "domain_label": "仿真/优化/智能体支撑",
+      "tool_ids": [
+        "G001",
+        "G002",
+        "G003",
+        "G004",
+        "G005",
+        "G006",
+        "G007",
+        "G008",
+        "G009",
+        "G010",
+        "G011",
+        "G012",
+        "G013",
+        "G014",
+        "G015"
+      ]
+    },
+    {
+      "domain_id": "domain:4f7ec376fac15931",
+      "domain_label": "热力学与相平衡",
+      "tool_ids": [
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "B005",
+        "B006",
+        "B007",
+        "B008",
+        "B009",
+        "B010",
+        "B011",
+        "B012",
+        "B013",
+        "B014",
+        "B015",
+        "B016",
+        "B017",
+        "B018",
+        "B019",
+        "B020",
+        "B021",
+        "B022",
+        "B023",
+        "B024",
+        "B025"
+      ]
+    },
+    {
+      "domain_id": "domain:5c2df3a43d67e718",
+      "domain_label": "转炉炼钢",
+      "tool_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012",
+        "D013",
+        "D014",
+        "D015",
+        "D016",
+        "D017",
+        "D018",
+        "D019",
+        "D020"
+      ]
+    },
+    {
+      "domain_id": "domain:960b12b075f8840e",
+      "domain_label": "连铸质量与二冷",
+      "tool_ids": [
+        "F001",
+        "F002",
+        "F003",
+        "F004",
+        "F005",
+        "F006",
+        "F007",
+        "F008",
+        "F009",
+        "F010",
+        "F011",
+        "F012",
+        "F013",
+        "F014",
+        "F015",
+        "F016",
+        "F017",
+        "F018",
+        "F019",
+        "F020"
+      ]
+    },
+    {
+      "domain_id": "domain:c09cc955295c8133",
+      "domain_label": "动力学与传递",
+      "tool_ids": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C009",
+        "C010"
+      ]
+    },
+    {
+      "domain_id": "domain:f140507633be96ab",
+      "domain_label": "通用数据与校验",
+      "tool_ids": [
+        "A001",
+        "A002",
+        "A003",
+        "A004",
+        "A005",
+        "A006",
+        "A007",
+        "A008",
+        "A009",
+        "A010",
+        "E3C002",
+        "E3C003",
+        "E3C004",
+        "E3C005",
+        "E3C006",
+        "E3C008",
+        "E3C009",
+        "E3C010",
+        "E3C011",
+        "E3C018",
+        "E3C019",
+        "E3C020",
+        "E3C021",
+        "E3C022",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "capability_id": "capability:0192fb15888b802e",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "F=C-P+2及受约束变体",
+      "tool_ids": [
+        "B018"
+      ]
+    },
+    {
+      "capability_id": "capability:059657f8fd448338",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "C/O/H/N平衡与反应平衡",
+      "tool_ids": [
+        "E010"
+      ]
+    },
+    {
+      "capability_id": "capability:122f83ca3141d309",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "二相区杠杆规则",
+      "tool_ids": [
+        "B019"
+      ]
+    },
+    {
+      "capability_id": "capability:138e3d93ec39fd1d",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "滤波、频域特征、变点/孤立森林",
+      "tool_ids": [
+        "F013"
+      ]
+    },
+    {
+      "capability_id": "capability:14b2e8e31ba60d02",
+      "domain_id": "domain:28509404753ef417",
+      "label": "局部导数、Morris/Sobol可选",
+      "tool_ids": [
+        "G009"
+      ]
+    },
+    {
+      "capability_id": "capability:16143adc5316a8f7",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "Stokes上浮+流场修正",
+      "tool_ids": [
+        "F018"
+      ]
+    },
+    {
+      "capability_id": "capability:17daf76c945073b0",
+      "domain_id": "domain:28509404753ef417",
+      "label": "边界层/温度梯度尺度+网格无关性规则",
+      "tool_ids": [
+        "G001"
+      ]
+    },
+    {
+      "capability_id": "capability:1b22f1e2b641364b",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "元素守恒约束下全局/局部Gibbs最小化",
+      "tool_ids": [
+        "B022"
+      ]
+    },
+    {
+      "capability_id": "capability:1d094419fb6b8696",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "温度场固相率阈值或回归代理",
+      "tool_ids": [
+        "F006"
+      ]
+    },
+    {
+      "capability_id": "capability:1d1ed78e96cedff0",
+      "domain_id": "domain:28509404753ef417",
+      "label": "特征距离、孤立森林、共形预测/不确定度阈值",
+      "tool_ids": [
+        "G015"
+      ]
+    },
+    {
+      "capability_id": "capability:1d68f2d4e64d08ec",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "PeriodicTable同位素摩尔质量计算专用算法",
+      "tool_ids": [
+        "E3C018"
+      ]
+    },
+    {
+      "capability_id": "capability:1ef35354c506f234",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "RDKit SMILES化学表达式解析与规范化专用算法",
+      "tool_ids": [
+        "E3C009"
+      ]
+    },
+    {
+      "capability_id": "capability:20ac25efe674fcf8",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "物料热平衡+回归校正",
+      "tool_ids": [
+        "E008"
+      ]
+    },
+    {
+      "capability_id": "capability:21d00c833eb35e85",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "高低温区热收支",
+      "tool_ids": [
+        "E007"
+      ]
+    },
+    {
+      "capability_id": "capability:2b8329381a185371",
+      "domain_id": "domain:28509404753ef417",
+      "label": "能力矩阵+输入完整度+风险+成本+历史成功率评分",
+      "tool_ids": [
+        "G014"
+      ]
+    },
+    {
+      "capability_id": "capability:2f119b78b6bfa4a4",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "分子质量中心计算专用算法",
+      "tool_ids": [
+        "E3C019"
+      ]
+    },
+    {
+      "capability_id": "capability:31d5d789e0527822",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "硫容量/分配比关联",
+      "tool_ids": [
+        "D011"
+      ]
+    },
+    {
+      "capability_id": "capability:32199f50f0345dc1",
+      "domain_id": "domain:28509404753ef417",
+      "label": "模板渲染+参数/边界条件校验",
+      "tool_ids": [
+        "G005"
+      ]
+    },
+    {
+      "capability_id": "capability:32d0167e2e90040e",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "物理约束回归/高斯过程",
+      "tool_ids": [
+        "B021"
+      ]
+    },
+    {
+      "capability_id": "capability:38fa9427f1627a7c",
+      "domain_id": "domain:c09cc955295c8133",
+      "label": "膜扩散/界面反应/产物层扩散串联",
+      "tool_ids": [
+        "C006"
+      ]
+    },
+    {
+      "capability_id": "capability:3af9f55cf4483990",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "输入—输出元素逐项守恒残差",
+      "tool_ids": [
+        "A005"
+      ]
+    },
+    {
+      "capability_id": "capability:3beead1d245591ea",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "溶液热力学活度/超额Gibbs模型",
+      "tool_ids": [
+        "B014",
+        "B015",
+        "B016",
+        "B017"
+      ]
+    },
+    {
+      "capability_id": "capability:3bf33ecf2b05b7bb",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "温度场驱动热弹塑性/裂纹判据",
+      "tool_ids": [
+        "F014"
+      ]
+    },
+    {
+      "capability_id": "capability:3e256a3e9fbade15",
+      "domain_id": "domain:28509404753ef417",
+      "label": "JSON规则/表达式树/物料能量与工艺边界",
+      "tool_ids": [
+        "G013"
+      ]
+    },
+    {
+      "capability_id": "capability:3fd75e732f917539",
+      "domain_id": "domain:28509404753ef417",
+      "label": "输入分布采样+模型批量执行",
+      "tool_ids": [
+        "G010"
+      ]
+    },
+    {
+      "capability_id": "capability:415faf60fe2dc5a9",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "鼓风/富氧/炉料氧输入输出平衡",
+      "tool_ids": [
+        "E004"
+      ]
+    },
+    {
+      "capability_id": "capability:41649af9b4bbb02f",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "氧化态与电中性约束",
+      "tool_ids": [
+        "A007"
+      ]
+    },
+    {
+      "capability_id": "capability:46257139742660c1",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "元素原子量加权求和",
+      "tool_ids": [
+        "A003",
+        "E3C004",
+        "E3C011",
+        "E3C020",
+        "E3C021",
+        "E3C022",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ]
+    },
+    {
+      "capability_id": "capability:474065d9f1a8e610",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "绝热能量守恒+非线性求根",
+      "tool_ids": [
+        "B012"
+      ]
+    },
+    {
+      "capability_id": "capability:47822ea74238cf9b",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "氧化产物+熔剂+夹带估算",
+      "tool_ids": [
+        "D005"
+      ]
+    },
+    {
+      "capability_id": "capability:49315edc45ff4d5b",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "浇注温度-液相线温度",
+      "tool_ids": [
+        "F003"
+      ]
+    },
+    {
+      "capability_id": "capability:4eb1bc8ff4e35630",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "鼓风、富氧、喷吹燃料的风口区气量平衡",
+      "tool_ids": [
+        "E012"
+      ]
+    },
+    {
+      "capability_id": "capability:576cc0f973fbd9ba",
+      "domain_id": "domain:28509404753ef417",
+      "label": "参数网格/试验设计+容器队列+失败重试",
+      "tool_ids": [
+        "G006"
+      ]
+    },
+    {
+      "capability_id": "capability:5888b227c1412a3e",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "RDKit SMARTS化学查询式解析专用算法",
+      "tool_ids": [
+        "E3C008"
+      ]
+    },
+    {
+      "capability_id": "capability:592b4e7284b98d05",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "工艺+成分+热状态特征的GBDT/分类回归",
+      "tool_ids": [
+        "F015",
+        "F016",
+        "F017",
+        "F020"
+      ]
+    },
+    {
+      "capability_id": "capability:5995c981d8bd6267",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "冷却水热平衡/热电偶反演/经验关联",
+      "tool_ids": [
+        "F007"
+      ]
+    },
+    {
+      "capability_id": "capability:5a81870e35c1965e",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "理论耗氧与实际供氧比",
+      "tool_ids": [
+        "D016"
+      ]
+    },
+    {
+      "capability_id": "capability:5e97b0e6ae5cdc93",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "化学计量电子/氧当量",
+      "tool_ids": [
+        "A006"
+      ]
+    },
+    {
+      "capability_id": "capability:5eedf0770dfe04fb",
+      "domain_id": "domain:c09cc955295c8133",
+      "label": "Arrhenius扩散系数/经验关联",
+      "tool_ids": [
+        "C002"
+      ]
+    },
+    {
+      "capability_id": "capability:6009493398ea7e44",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "热容积分与参考态转换",
+      "tool_ids": [
+        "B003",
+        "B004",
+        "B005"
+      ]
+    },
+    {
+      "capability_id": "capability:61d93dbb2e0a3e01",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "一维瞬态导热+潜热/等效比热",
+      "tool_ids": [
+        "F005"
+      ]
+    },
+    {
+      "capability_id": "capability:63813f974e758ddb",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "相律、相区邻接、杠杆规则、自由能最小",
+      "tool_ids": [
+        "B025"
+      ]
+    },
+    {
+      "capability_id": "capability:642c841a209b0968",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "Scheil-Gulliver逐步凝固",
+      "tool_ids": [
+        "B024"
+      ]
+    },
+    {
+      "capability_id": "capability:6685a856cd63de39",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "反应计量加权与ΔG°=-RTlnK",
+      "tool_ids": [
+        "B006",
+        "B007",
+        "B008",
+        "B009"
+      ]
+    },
+    {
+      "capability_id": "capability:6875925e5eff9c4a",
+      "domain_id": "domain:28509404753ef417",
+      "label": "高斯过程/TPE采集函数",
+      "tool_ids": [
+        "G011"
+      ]
+    },
+    {
+      "capability_id": "capability:68f5a8d9b10e2d72",
+      "domain_id": "domain:c09cc955295c8133",
+      "label": "D^n-D0^n=Kt",
+      "tool_ids": [
+        "C005"
+      ]
+    },
+    {
+      "capability_id": "capability:694d9f2bf4983d7c",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "矿、焦、煤、熔剂、热风、产品/炉渣/煤气总物料平衡",
+      "tool_ids": [
+        "E001"
+      ]
+    },
+    {
+      "capability_id": "capability:6b56a29db0d83e8a",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "成分经验式或CALPHAD",
+      "tool_ids": [
+        "F001",
+        "F002"
+      ]
+    },
+    {
+      "capability_id": "capability:6c4fdd5a8f3ab42b",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "规则填补/插值/KNN/模型填补",
+      "tool_ids": [
+        "A008"
+      ]
+    },
+    {
+      "capability_id": "capability:6d1fe5ec5c97b9ce",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "分段供氧/枪位非线性或动态优化",
+      "tool_ids": [
+        "D018"
+      ]
+    },
+    {
+      "capability_id": "capability:6d5cae05df047133",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "风口区绝热热平衡",
+      "tool_ids": [
+        "E013"
+      ]
+    },
+    {
+      "capability_id": "capability:6e7ac37a949e39e3",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "量纲分析与单位映射",
+      "tool_ids": [
+        "A001",
+        "E3C006"
+      ]
+    },
+    {
+      "capability_id": "capability:6e9883fe8af47761",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "规则库+历史最优炉次相似检索",
+      "tool_ids": [
+        "D017"
+      ]
+    },
+    {
+      "capability_id": "capability:6f56118d78c6aa2a",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "Si/Mn/C/P/Fe氧化化学计量",
+      "tool_ids": [
+        "D003"
+      ]
+    },
+    {
+      "capability_id": "capability:6f7b937ba0eb2189",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "焦炭/煤/COG等碳输入输出平衡",
+      "tool_ids": [
+        "E003"
+      ]
+    },
+    {
+      "capability_id": "capability:74f6325bdbd226c2",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "目标碱度/MgO约束的熔剂配平",
+      "tool_ids": [
+        "D004"
+      ]
+    },
+    {
+      "capability_id": "capability:75ede38b6e562eab",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "单调分段插值/样条",
+      "tool_ids": [
+        "B020"
+      ]
+    },
+    {
+      "capability_id": "capability:7b9faa41add65614",
+      "domain_id": "domain:28509404753ef417",
+      "label": "NSGA-II/ε约束/Pyomo",
+      "tool_ids": [
+        "G012"
+      ]
+    },
+    {
+      "capability_id": "capability:7e2bd5b9498fc267",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "渣-钢磷分配经验/热力学关联",
+      "tool_ids": [
+        "D010"
+      ]
+    },
+    {
+      "capability_id": "capability:7f2d8a449338cb9f",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "铁收支与直接/间接还原分解",
+      "tool_ids": [
+        "E002"
+      ]
+    },
+    {
+      "capability_id": "capability:7f6a1c2abde4f075",
+      "domain_id": "domain:28509404753ef417",
+      "label": "刚性/非刚性ODE自适应积分",
+      "tool_ids": [
+        "G004"
+      ]
+    },
+    {
+      "capability_id": "capability:806edf60ce70bb73",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "目标表面温度/比水量经验模型",
+      "tool_ids": [
+        "F008"
+      ]
+    },
+    {
+      "capability_id": "capability:84ae81a9078d2c5f",
+      "domain_id": "domain:c09cc955295c8133",
+      "label": "Fick第二定律有限差分/有限体积",
+      "tool_ids": [
+        "C003"
+      ]
+    },
+    {
+      "capability_id": "capability:84bb8080a6e9fadb",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "CaO/SiO2及多元碱度指标",
+      "tool_ids": [
+        "D006"
+      ]
+    },
+    {
+      "capability_id": "capability:852c01079d8454b5",
+      "domain_id": "domain:c09cc955295c8133",
+      "label": "串并联、Maxwell-Eucken等混合规则",
+      "tool_ids": [
+        "C009"
+      ]
+    },
+    {
+      "capability_id": "capability:85baeea1137a440a",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "时滞特征+GBDT/时序模型+物料平衡约束",
+      "tool_ids": [
+        "E017",
+        "E018"
+      ]
+    },
+    {
+      "capability_id": "capability:8658e494b5e3806a",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "最小二乘/贝叶斯反演",
+      "tool_ids": [
+        "F010"
+      ]
+    },
+    {
+      "capability_id": "capability:86c4abee727edb93",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "铁、碳、硅、锰、磷等元素收支",
+      "tool_ids": [
+        "D001"
+      ]
+    },
+    {
+      "capability_id": "capability:87ea48cebbb168ed",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "铁氧化物平衡+渣铁收支",
+      "tool_ids": [
+        "D014"
+      ]
+    },
+    {
+      "capability_id": "capability:90879ea9f6848a22",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "pycalphad/OpenCalphad/Thermo-Calc/FactSage适配器",
+      "tool_ids": [
+        "B023"
+      ]
+    },
+    {
+      "capability_id": "capability:91b9e1bd3a7bed12",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "平衡/Scheil固相率曲线",
+      "tool_ids": [
+        "F004"
+      ]
+    },
+    {
+      "capability_id": "capability:91f02f4cd36fe830",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "化学式词法解析、括号展开、元素计数",
+      "tool_ids": [
+        "A002"
+      ]
+    },
+    {
+      "capability_id": "capability:9340cad58c22d8c8",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "标准多项式热容/焓/熵表达式",
+      "tool_ids": [
+        "B001",
+        "B002"
+      ]
+    },
+    {
+      "capability_id": "capability:9441ac185745c0f3",
+      "domain_id": "domain:c09cc955295c8133",
+      "label": "X=1-exp[-(kt)^n]",
+      "tool_ids": [
+        "C004"
+      ]
+    },
+    {
+      "capability_id": "capability:9e220966088cc412",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "GBDT/随机森林/时序特征+守恒约束",
+      "tool_ids": [
+        "D008",
+        "D009"
+      ]
+    },
+    {
+      "capability_id": "capability:a6fd1005a9ada237",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "热平衡约束下最小成本/最小波动优化",
+      "tool_ids": [
+        "D020"
+      ]
+    },
+    {
+      "capability_id": "capability:a82ac335a8c1f64c",
+      "domain_id": "domain:28509404753ef417",
+      "label": "CFL/Fourier数/扩散稳定性条件",
+      "tool_ids": [
+        "G002"
+      ]
+    },
+    {
+      "capability_id": "capability:a8db800e6779f50f",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "ηCO=CO2/(CO+CO2)等指标",
+      "tool_ids": [
+        "E011"
+      ]
+    },
+    {
+      "capability_id": "capability:a9985e0c08f8a662",
+      "domain_id": "domain:c09cc955295c8133",
+      "label": "Sherwood/Reynolds/Schmidt关联",
+      "tool_ids": [
+        "C010"
+      ]
+    },
+    {
+      "capability_id": "capability:a9f9931574b3cb70",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "RDKit精确摩尔质量计算（同位素）专用算法",
+      "tool_ids": [
+        "E3C010"
+      ]
+    },
+    {
+      "capability_id": "capability:b1260dfa25bc8750",
+      "domain_id": "domain:28509404753ef417",
+      "label": "高斯过程/GBDT/神经网络降阶",
+      "tool_ids": [
+        "G007"
+      ]
+    },
+    {
+      "capability_id": "capability:b17f1152cc612d8f",
+      "domain_id": "domain:c09cc955295c8133",
+      "label": "组分—温度经验关联或回归",
+      "tool_ids": [
+        "C008"
+      ]
+    },
+    {
+      "capability_id": "capability:b2e5c1975cf1de14",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "氧化平衡+活度修正",
+      "tool_ids": [
+        "D012",
+        "D013"
+      ]
+    },
+    {
+      "capability_id": "capability:b6d1fe53b561e553",
+      "domain_id": "domain:c09cc955295c8133",
+      "label": "k=Aexp(-Ea/RT)",
+      "tool_ids": [
+        "C001"
+      ]
+    },
+    {
+      "capability_id": "capability:b7ce6787e404646b",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "压差/风量/料柱修正指数",
+      "tool_ids": [
+        "E015"
+      ]
+    },
+    {
+      "capability_id": "capability:bca94d3e6c3f5e24",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "CO/CO2生成化学计量与状态方程",
+      "tool_ids": [
+        "D015"
+      ]
+    },
+    {
+      "capability_id": "capability:c009260a6f8dfecc",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "线性/混合整数最小成本配料",
+      "tool_ids": [
+        "D019"
+      ]
+    },
+    {
+      "capability_id": "capability:c6886ecbf1530e79",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "分阶段脱碳动力学+氧供给约束",
+      "tool_ids": [
+        "D007"
+      ]
+    },
+    {
+      "capability_id": "capability:c9208c5336425eae",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "IQR、鲁棒Z分数、Isolation Forest",
+      "tool_ids": [
+        "A009"
+      ]
+    },
+    {
+      "capability_id": "capability:d0ae4686b28ff979",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "氧化反应ΔG°-T线与氧势换算",
+      "tool_ids": [
+        "B011"
+      ]
+    },
+    {
+      "capability_id": "capability:d2d40c385856d632",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "一阶误差传播、Monte Carlo",
+      "tool_ids": [
+        "A010"
+      ]
+    },
+    {
+      "capability_id": "capability:d2e5e62f27e31ca7",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "热电偶时空特征+规则+分类模型",
+      "tool_ids": [
+        "F012"
+      ]
+    },
+    {
+      "capability_id": "capability:d3b5e20c04fda6d9",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "质量分数/摩尔分数归一化与基准转换",
+      "tool_ids": [
+        "A004",
+        "E3C005"
+      ]
+    },
+    {
+      "capability_id": "capability:d8fd469c4d0c44a1",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "pymatgen Composition化学式解析",
+      "tool_ids": [
+        "E3C002"
+      ]
+    },
+    {
+      "capability_id": "capability:d9458de522babcc1",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "喷吹气/湿分/还原生成水的氢平衡",
+      "tool_ids": [
+        "E005"
+      ]
+    },
+    {
+      "capability_id": "capability:ddb2c067dcee3ee0",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "固定碳/热值/置换比经验模型",
+      "tool_ids": [
+        "E009"
+      ]
+    },
+    {
+      "capability_id": "capability:e06029cb247b9f93",
+      "domain_id": "domain:f140507633be96ab",
+      "label": "分子图平均原子量求和",
+      "tool_ids": [
+        "E3C003"
+      ]
+    },
+    {
+      "capability_id": "capability:e43ceac4c531a3c8",
+      "domain_id": "domain:28509404753ef417",
+      "label": "多维规则网格/散点插值+缓存",
+      "tool_ids": [
+        "G008"
+      ]
+    },
+    {
+      "capability_id": "capability:e4e47e1a537949ba",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "布料矩阵、径向矿焦比和粒度分布",
+      "tool_ids": [
+        "E016"
+      ]
+    },
+    {
+      "capability_id": "capability:e50e4f07406973bf",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "van't Hoff方程积分",
+      "tool_ids": [
+        "B010"
+      ]
+    },
+    {
+      "capability_id": "capability:e770ec000a38d146",
+      "domain_id": "domain:4f7ec376fac15931",
+      "label": "理想气体化学势+Gibbs最小化",
+      "tool_ids": [
+        "B013"
+      ]
+    },
+    {
+      "capability_id": "capability:e79db8d32408b813",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "产量、凝固终点、温度、质量风险多目标优化",
+      "tool_ids": [
+        "F011"
+      ]
+    },
+    {
+      "capability_id": "capability:e814ec3ee7fd5ff5",
+      "domain_id": "domain:c09cc955295c8133",
+      "label": "质量增重平方律",
+      "tool_ids": [
+        "C007"
+      ]
+    },
+    {
+      "capability_id": "capability:f3ae05918df28a3b",
+      "domain_id": "domain:28509404753ef417",
+      "label": "一维导热有限差分/有限体积",
+      "tool_ids": [
+        "G003"
+      ]
+    },
+    {
+      "capability_id": "capability:f5b89e4e8af6a5d6",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "活动数据×排放因子；工序边界与分配规则",
+      "tool_ids": [
+        "E020"
+      ]
+    },
+    {
+      "capability_id": "capability:f68bc15dec17763e",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "Ergun方程与多层料柱叠加",
+      "tool_ids": [
+        "E014"
+      ]
+    },
+    {
+      "capability_id": "capability:f6add092f296de42",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "label": "显热、反应热、熔化热、散热能量平衡",
+      "tool_ids": [
+        "D002"
+      ]
+    },
+    {
+      "capability_id": "capability:fa9df74ce314773f",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "多变量时序特征+可解释分类器",
+      "tool_ids": [
+        "E019"
+      ]
+    },
+    {
+      "capability_id": "capability:fae9d9ae89261b0b",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "各区换热模型+温度/回温约束",
+      "tool_ids": [
+        "F009"
+      ]
+    },
+    {
+      "capability_id": "capability:fc5c7df6fc77bdeb",
+      "domain_id": "domain:165d244bfd43f65c",
+      "label": "Rist操作线与还原平衡",
+      "tool_ids": [
+        "E006"
+      ]
+    },
+    {
+      "capability_id": "capability:fe07a7edda681bc5",
+      "domain_id": "domain:960b12b075f8840e",
+      "label": "电磁力尺度分析+历史回归",
+      "tool_ids": [
+        "F019"
+      ]
+    }
+  ],
+  "tool_nodes": [
+    {
+      "tool_id": "A001",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:6e7ac37a949e39e3",
+      "applicability_signature_sha256": "11d29dff395d2c92dbb8a10c4f04ce20c0ae793f79f9656145f1fcd3f5d0776f"
+    },
+    {
+      "tool_id": "A002",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:91f02f4cd36fe830",
+      "applicability_signature_sha256": "082c0add915d96680f1ed2e07b22cbafcdde503dd174624213379b0d85a9743e"
+    },
+    {
+      "tool_id": "A003",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:46257139742660c1",
+      "applicability_signature_sha256": "9ba3768d8e69a981e72d9706c9c8f499025338d40138271dad06317c63fb862c"
+    },
+    {
+      "tool_id": "A004",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:d3b5e20c04fda6d9",
+      "applicability_signature_sha256": "39305c6d03afdc680fc45b7d7c5c574e0dc7963fa7555e7c143db604e7168c19"
+    },
+    {
+      "tool_id": "A005",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:3af9f55cf4483990",
+      "applicability_signature_sha256": "685e8d718deb292fc17d36828debaced3f362b6692ad49a9e30920712912bf76"
+    },
+    {
+      "tool_id": "A006",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:5e97b0e6ae5cdc93",
+      "applicability_signature_sha256": "10d996856b12032e68d4c6bff3789961189fe521b5efa00e77ee901320195e2e"
+    },
+    {
+      "tool_id": "A007",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:41649af9b4bbb02f",
+      "applicability_signature_sha256": "2d88d9a46f4bf855fa40ab682e0a59c328f11b7b4b98c5878a68ffc469b0ee5b"
+    },
+    {
+      "tool_id": "A008",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:6c4fdd5a8f3ab42b",
+      "applicability_signature_sha256": "2f0ae2e17d9e1b27089cacbe39b996bccad828322a83cdd75fad7d80edefbf33"
+    },
+    {
+      "tool_id": "A009",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:c9208c5336425eae",
+      "applicability_signature_sha256": "9e2306a4f2f0551285cc6537f643259adfc8041ed71ff481edbe8461f0803890"
+    },
+    {
+      "tool_id": "A010",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:d2d40c385856d632",
+      "applicability_signature_sha256": "3998e653a0478fda0d6a1ff142c4ed4f842c113144d6365d5b5b2ec031e67f00"
+    },
+    {
+      "tool_id": "B001",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:9340cad58c22d8c8",
+      "applicability_signature_sha256": "17f84fd705166eb9a731b5d898e3c022c4e8bd393513a0e8b01517406e5af3d4"
+    },
+    {
+      "tool_id": "B002",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:9340cad58c22d8c8",
+      "applicability_signature_sha256": "ee0b211dbb8e520f9bd95b5187d38934c1be30b0de8fab7829b092820b10bad8"
+    },
+    {
+      "tool_id": "B003",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:6009493398ea7e44",
+      "applicability_signature_sha256": "895061691ede7223947390d4a2c6e8fddf2564a4c79d7a24659bf77537930c52"
+    },
+    {
+      "tool_id": "B004",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:6009493398ea7e44",
+      "applicability_signature_sha256": "4ce8be74490029f21741ed5758b66dc2d636352e6ed196a09c138915c8c49678"
+    },
+    {
+      "tool_id": "B005",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:6009493398ea7e44",
+      "applicability_signature_sha256": "6db1b2474c5b9c5f6927af7979bdc3f741795d5ff9881a2d48d507c956d2d66a"
+    },
+    {
+      "tool_id": "B006",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:6685a856cd63de39",
+      "applicability_signature_sha256": "66719bace564592b84aea5633409cd5e6e0b036bd90631a82e36ba51fd933b84"
+    },
+    {
+      "tool_id": "B007",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:6685a856cd63de39",
+      "applicability_signature_sha256": "66719bace564592b84aea5633409cd5e6e0b036bd90631a82e36ba51fd933b84"
+    },
+    {
+      "tool_id": "B008",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:6685a856cd63de39",
+      "applicability_signature_sha256": "b7e3fe2bb3e5ce2097e48d2ed96346624816600e9bad018c49d212996c627fd6"
+    },
+    {
+      "tool_id": "B009",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:6685a856cd63de39",
+      "applicability_signature_sha256": "b29c0b157b16d9bc3134326be71a0ed44f21d943aec6130a60a36bb2f15ebe09"
+    },
+    {
+      "tool_id": "B010",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:e50e4f07406973bf",
+      "applicability_signature_sha256": "d2204c5e2140c9283926965fa4bfa8d60eb226129bdeb3c8e3acffeb15e2b748"
+    },
+    {
+      "tool_id": "B011",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:d0ae4686b28ff979",
+      "applicability_signature_sha256": "264dbbcde868dc932a4ce1c97387e2a4897a6f85f4fd25f4e433f247bcc77a48"
+    },
+    {
+      "tool_id": "B012",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:474065d9f1a8e610",
+      "applicability_signature_sha256": "c6bf6f4fa9e40f36bb9a3f0fec9105d54c5c340fe0f6bf9b04ddd9f18f314067"
+    },
+    {
+      "tool_id": "B013",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:e770ec000a38d146",
+      "applicability_signature_sha256": "be66f490cceb3f09fa9e0c91dbfe4bfdf1b417e0fed796daf00cf53a3db1a55e"
+    },
+    {
+      "tool_id": "B014",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:3beead1d245591ea",
+      "applicability_signature_sha256": "13e4a1f918ea9841e2340bb40e6da64389b150f3e2444cdd5f01db2f66f2c56f"
+    },
+    {
+      "tool_id": "B015",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:3beead1d245591ea",
+      "applicability_signature_sha256": "13e4a1f918ea9841e2340bb40e6da64389b150f3e2444cdd5f01db2f66f2c56f"
+    },
+    {
+      "tool_id": "B016",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:3beead1d245591ea",
+      "applicability_signature_sha256": "13e4a1f918ea9841e2340bb40e6da64389b150f3e2444cdd5f01db2f66f2c56f"
+    },
+    {
+      "tool_id": "B017",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:3beead1d245591ea",
+      "applicability_signature_sha256": "13e4a1f918ea9841e2340bb40e6da64389b150f3e2444cdd5f01db2f66f2c56f"
+    },
+    {
+      "tool_id": "B018",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:0192fb15888b802e",
+      "applicability_signature_sha256": "9ed93bf1aac120d5ac28936e7896e7248c796503cdf80479094b761a494d8b7c"
+    },
+    {
+      "tool_id": "B019",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:122f83ca3141d309",
+      "applicability_signature_sha256": "101b568168c082572bb446d8ea9ccf8e8f90be44c1075346ef44c7ccdcbd99d2"
+    },
+    {
+      "tool_id": "B020",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:75ede38b6e562eab",
+      "applicability_signature_sha256": "eac62c2df14d8584423b7e7afaed3467b8663825d6c6b8827943e882c0d775be"
+    },
+    {
+      "tool_id": "B021",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:32d0167e2e90040e",
+      "applicability_signature_sha256": "3600933183563f5534801c0ad0a6fd5817c8e189492b2dbe59c7016be4d14fca"
+    },
+    {
+      "tool_id": "B022",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:1b22f1e2b641364b",
+      "applicability_signature_sha256": "495119b1334984ade7aca2f92bb07f286d613b388b88140e44aeadd2a7bc0277"
+    },
+    {
+      "tool_id": "B023",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:90879ea9f6848a22",
+      "applicability_signature_sha256": "3195778c38e7fc0b175c0ca07042b2cab4366621bea60302c6011a8d3169ba21"
+    },
+    {
+      "tool_id": "B024",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:642c841a209b0968",
+      "applicability_signature_sha256": "ad2f061faa347bbeac4489da16f10dc7b0ea904725fc51a9298cbbd04c9b3d01"
+    },
+    {
+      "tool_id": "B025",
+      "domain_id": "domain:4f7ec376fac15931",
+      "capability_id": "capability:63813f974e758ddb",
+      "applicability_signature_sha256": "37430e1cd56ccbf3c70624c0ad60179e561f2640bab94c6405c49801811b4281"
+    },
+    {
+      "tool_id": "C001",
+      "domain_id": "domain:c09cc955295c8133",
+      "capability_id": "capability:b6d1fe53b561e553",
+      "applicability_signature_sha256": "b72db6ae049c13d89749bbe9a17ab5b349860a6b5af8c87dbfcba9c8c6cbcb74"
+    },
+    {
+      "tool_id": "C002",
+      "domain_id": "domain:c09cc955295c8133",
+      "capability_id": "capability:5eedf0770dfe04fb",
+      "applicability_signature_sha256": "827234eec642cd793b55c75dafd83eef80ac5f9636ceff460ce6dca745bab869"
+    },
+    {
+      "tool_id": "C003",
+      "domain_id": "domain:c09cc955295c8133",
+      "capability_id": "capability:84ae81a9078d2c5f",
+      "applicability_signature_sha256": "b170640cb595ff5b73e44e053c66461bc67f38f97f3967300b5c15d1d66ba63e"
+    },
+    {
+      "tool_id": "C004",
+      "domain_id": "domain:c09cc955295c8133",
+      "capability_id": "capability:9441ac185745c0f3",
+      "applicability_signature_sha256": "3c99a5a9a73a985292792bfe0d12e625ba780ad7f035aeff203c15c01b3e09c8"
+    },
+    {
+      "tool_id": "C005",
+      "domain_id": "domain:c09cc955295c8133",
+      "capability_id": "capability:68f5a8d9b10e2d72",
+      "applicability_signature_sha256": "90203d61de72bb431bfaae91d7e4cf24c298ba45ec85d50e2f9f0b28fd926acd"
+    },
+    {
+      "tool_id": "C006",
+      "domain_id": "domain:c09cc955295c8133",
+      "capability_id": "capability:38fa9427f1627a7c",
+      "applicability_signature_sha256": "9a7477989687bcd46f6357dad4a4dbffb164f6c6d9723b6d9e88be779ae95297"
+    },
+    {
+      "tool_id": "C007",
+      "domain_id": "domain:c09cc955295c8133",
+      "capability_id": "capability:e814ec3ee7fd5ff5",
+      "applicability_signature_sha256": "99c71be8959171dc4dd2b03a46b6d68d551f9af667a8642b297c7b423ac3139a"
+    },
+    {
+      "tool_id": "C008",
+      "domain_id": "domain:c09cc955295c8133",
+      "capability_id": "capability:b17f1152cc612d8f",
+      "applicability_signature_sha256": "327ad1adf38edf04ead2ac99f439562e8de90cfe1be5433f339be39322916bbf"
+    },
+    {
+      "tool_id": "C009",
+      "domain_id": "domain:c09cc955295c8133",
+      "capability_id": "capability:852c01079d8454b5",
+      "applicability_signature_sha256": "24c4a54bba9d70a1b4a704e903b3eb1f9fbae55830acf5ab3acc8e4c0d7a196a"
+    },
+    {
+      "tool_id": "C010",
+      "domain_id": "domain:c09cc955295c8133",
+      "capability_id": "capability:a9985e0c08f8a662",
+      "applicability_signature_sha256": "589d9e9adee59fb4667b4471d6b8efaa18699406a7e6ebd1780c85e811922f15"
+    },
+    {
+      "tool_id": "D001",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:86c4abee727edb93",
+      "applicability_signature_sha256": "6ea97b3a6939a73d3d4ff3ae62c3ac8fa6542a38274315a3b6dc299421ac54ef"
+    },
+    {
+      "tool_id": "D002",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:f6add092f296de42",
+      "applicability_signature_sha256": "cc36eeda6b9a3df49d36200d75a1c453f9723ba9dbb825288d0e78c487a70bce"
+    },
+    {
+      "tool_id": "D003",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:6f56118d78c6aa2a",
+      "applicability_signature_sha256": "3426be4e273ea3958e6491683a6544d509be45ba620e2146c0a9165c649032e4"
+    },
+    {
+      "tool_id": "D004",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:74f6325bdbd226c2",
+      "applicability_signature_sha256": "b68b549953beda57ed02ffd230ae3f35eb2385258c4d2888c453495e900ba378"
+    },
+    {
+      "tool_id": "D005",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:47822ea74238cf9b",
+      "applicability_signature_sha256": "e29dd993ca55df3b333df932a2045c27cd094a7c3d0dd7721e943c5acd972edf"
+    },
+    {
+      "tool_id": "D006",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:84bb8080a6e9fadb",
+      "applicability_signature_sha256": "6294a9b3872459956f740f4cb6e27c5890ffa59aa535ba0971848c282f093a5d"
+    },
+    {
+      "tool_id": "D007",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:c6886ecbf1530e79",
+      "applicability_signature_sha256": "f338f5632720d040ad257c18da1ca34b9db9a7212c2608b24ed69c1c51355a5d"
+    },
+    {
+      "tool_id": "D008",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:9e220966088cc412",
+      "applicability_signature_sha256": "c0da5cc781195330775388a31c3e963ddc9e705c67a148f310031da808420a05"
+    },
+    {
+      "tool_id": "D009",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:9e220966088cc412",
+      "applicability_signature_sha256": "c0da5cc781195330775388a31c3e963ddc9e705c67a148f310031da808420a05"
+    },
+    {
+      "tool_id": "D010",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:7e2bd5b9498fc267",
+      "applicability_signature_sha256": "76ff29db9a4d54a2cd0a226572899d288973c9b8d22b48a811c0679797c71489"
+    },
+    {
+      "tool_id": "D011",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:31d5d789e0527822",
+      "applicability_signature_sha256": "1994d85600f883ed998a2cf7378aedfb4c314498a6e559be63691a00f64f61b0"
+    },
+    {
+      "tool_id": "D012",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:b2e5c1975cf1de14",
+      "applicability_signature_sha256": "76b566adfb3bac85c338b9e065acd6c223fc88eb366978fd83cd64f797315dd4"
+    },
+    {
+      "tool_id": "D013",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:b2e5c1975cf1de14",
+      "applicability_signature_sha256": "76b566adfb3bac85c338b9e065acd6c223fc88eb366978fd83cd64f797315dd4"
+    },
+    {
+      "tool_id": "D014",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:87ea48cebbb168ed",
+      "applicability_signature_sha256": "e07168334d10737434a5f153ff5db47e91ff26f207792a109dbcf5752176e4d6"
+    },
+    {
+      "tool_id": "D015",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:bca94d3e6c3f5e24",
+      "applicability_signature_sha256": "55c932d2b78022d10ea161b9d65bbcf511e4fd28123cf6965796c8d895335532"
+    },
+    {
+      "tool_id": "D016",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:5a81870e35c1965e",
+      "applicability_signature_sha256": "d636cca1e340bb47450b27853dc3a9bbf9242dbe9c8670649475da3169b91015"
+    },
+    {
+      "tool_id": "D017",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:6e9883fe8af47761",
+      "applicability_signature_sha256": "52a712e9e7a6b95d3840e39a36a81b5dd2d3fa76b29466409f243df592fbba52"
+    },
+    {
+      "tool_id": "D018",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:6d1fe5ec5c97b9ce",
+      "applicability_signature_sha256": "b502c5c140d9a260ef5ba30333e2c4bce7d7abad466be50979c31f6b924212eb"
+    },
+    {
+      "tool_id": "D019",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:c009260a6f8dfecc",
+      "applicability_signature_sha256": "f9228ad3722c2aa093af8d7920f9351545b56c22e45e9251bc710939494ba1f3"
+    },
+    {
+      "tool_id": "D020",
+      "domain_id": "domain:5c2df3a43d67e718",
+      "capability_id": "capability:a6fd1005a9ada237",
+      "applicability_signature_sha256": "b47c3e96c6f5d7a4c75e64c3ecc90e13bc8ebe9678f04790c98711fd622b0d8f"
+    },
+    {
+      "tool_id": "E001",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:694d9f2bf4983d7c",
+      "applicability_signature_sha256": "58f0881e5f50e5446054ca81fd809f4c24f76ccc32089d1d4c6a9e77fa2588e2"
+    },
+    {
+      "tool_id": "E002",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:7f2d8a449338cb9f",
+      "applicability_signature_sha256": "c4f738da193f51025effa55930c80058463bea83dc4b307df2ed08d1a45420fd"
+    },
+    {
+      "tool_id": "E003",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:6f7b937ba0eb2189",
+      "applicability_signature_sha256": "4497b54c9ff7507f07dd14efa2f2559737c88d940bf29accdb0664fffed166c5"
+    },
+    {
+      "tool_id": "E004",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:415faf60fe2dc5a9",
+      "applicability_signature_sha256": "9003b67bf84101f9a7852102ce3f6c179cd3602d218d44ee9e4d42033f067b06"
+    },
+    {
+      "tool_id": "E005",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:d9458de522babcc1",
+      "applicability_signature_sha256": "83952f86f37c96f39622cb50477eda268e139ac31a944e7d812e2340bbecb5ce"
+    },
+    {
+      "tool_id": "E006",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:fc5c7df6fc77bdeb",
+      "applicability_signature_sha256": "b042a6ef8ebd1d24e9c5ab90654d0097065720615a0eba6fe05b67cdbe7262fe"
+    },
+    {
+      "tool_id": "E007",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:21d00c833eb35e85",
+      "applicability_signature_sha256": "414f11cbe666f025daa68b34706fe3a47ece6478b2b398de002a3a099b3745bb"
+    },
+    {
+      "tool_id": "E008",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:20ac25efe674fcf8",
+      "applicability_signature_sha256": "f674d1f887f1a692054affdbcabdff006af8b0e142456f3f7e16e4287ee1d89e"
+    },
+    {
+      "tool_id": "E009",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:ddb2c067dcee3ee0",
+      "applicability_signature_sha256": "f43c58f40dac1445ecb2a0ebb33390400e8b58a9229ca7db1b72f097c4f956f1"
+    },
+    {
+      "tool_id": "E010",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:059657f8fd448338",
+      "applicability_signature_sha256": "8128fadf31987b5e81c1ae522e2935314fbb62bc26637a9208cbc88540a28a44"
+    },
+    {
+      "tool_id": "E011",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:a8db800e6779f50f",
+      "applicability_signature_sha256": "879041f943e45c148a53058013ab4d4eff94817c1202e46213100c37d43bc921"
+    },
+    {
+      "tool_id": "E012",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:4eb1bc8ff4e35630",
+      "applicability_signature_sha256": "a3ca518d491914a62652e8339d01e92f46ebc9e4d670238ea948c27ecb05ce9d"
+    },
+    {
+      "tool_id": "E013",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:6d5cae05df047133",
+      "applicability_signature_sha256": "f0af5d4938a11702908cec0d6124d62b1099997441fd1d27fa943367a591b09b"
+    },
+    {
+      "tool_id": "E014",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:f68bc15dec17763e",
+      "applicability_signature_sha256": "7f12b9a6d1cc6dc4a8a51b72f76a88963f719e11550febb4eacb94eb0ac8b998"
+    },
+    {
+      "tool_id": "E015",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:b7ce6787e404646b",
+      "applicability_signature_sha256": "2950f56f1154c2c00d095f8149c779304837957800efae87a477a37298173637"
+    },
+    {
+      "tool_id": "E016",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:e4e47e1a537949ba",
+      "applicability_signature_sha256": "6c030038b1d17264707b67a97c6cdd243991d6fa27ba64a0631ec2217c68e5f2"
+    },
+    {
+      "tool_id": "E017",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:85baeea1137a440a",
+      "applicability_signature_sha256": "4f367ed7f49b75badf5f33b3d5d2c2fb75d66b82c23d6eafcba55dd4cbc8cde4"
+    },
+    {
+      "tool_id": "E018",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:85baeea1137a440a",
+      "applicability_signature_sha256": "4f367ed7f49b75badf5f33b3d5d2c2fb75d66b82c23d6eafcba55dd4cbc8cde4"
+    },
+    {
+      "tool_id": "E019",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:fa9df74ce314773f",
+      "applicability_signature_sha256": "3c81bf6e65725681ca5a3b871ea996eb4b81d552b669db280a878b8221dacdaa"
+    },
+    {
+      "tool_id": "E020",
+      "domain_id": "domain:165d244bfd43f65c",
+      "capability_id": "capability:f5b89e4e8af6a5d6",
+      "applicability_signature_sha256": "cc878c4ccc68d587d8457ca1251ac91603b4bb0c6c0743aa943bcb93f61e21f7"
+    },
+    {
+      "tool_id": "E3C002",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:d8fd469c4d0c44a1",
+      "applicability_signature_sha256": "b881cbff3767267d50b87ea826ba4172bb70d1b2b0d06c44a49401bfec32d07d"
+    },
+    {
+      "tool_id": "E3C003",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:e06029cb247b9f93",
+      "applicability_signature_sha256": "e767f832a4a53679823a97657b9117c2948df2af2c1594263264c923afa015f6"
+    },
+    {
+      "tool_id": "E3C004",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:46257139742660c1",
+      "applicability_signature_sha256": "58070293a8b51c2ecc36d4b2b0deed3351003c6c3333d2a30c9e1d3fb065ed4a"
+    },
+    {
+      "tool_id": "E3C005",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:d3b5e20c04fda6d9",
+      "applicability_signature_sha256": "450952b913826d7cab74273e04d8ebb548f243f53f6d8792c8696307fb417e7a"
+    },
+    {
+      "tool_id": "E3C006",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:6e7ac37a949e39e3",
+      "applicability_signature_sha256": "7e79d2d920173ac998d0236751e4947e9281d11cdde12e50076d85c65807b00a"
+    },
+    {
+      "tool_id": "E3C008",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:5888b227c1412a3e",
+      "applicability_signature_sha256": "1485fddeeb0932162b657311aa5257430f0200366f806f5f6948c35ede3557f3"
+    },
+    {
+      "tool_id": "E3C009",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:1ef35354c506f234",
+      "applicability_signature_sha256": "00f06022fbcfd29369d568eb1d95e4cd0c081562407692abf21b0b2a96e88b7e"
+    },
+    {
+      "tool_id": "E3C010",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:a9f9931574b3cb70",
+      "applicability_signature_sha256": "f7cd2dbb4f406af21c6a6cdee1ae2a175a932ad72c76fed6a894aa69aa19d9e8"
+    },
+    {
+      "tool_id": "E3C011",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:46257139742660c1",
+      "applicability_signature_sha256": "4cf260345266ef54208ea964d66e275ae3677ed8b304d4658205e38b5e010aa6"
+    },
+    {
+      "tool_id": "E3C018",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:1d68f2d4e64d08ec",
+      "applicability_signature_sha256": "6b53b72506b07a72b94be682f29ea41ae3692abb2866576b7ab552b2aefa45b0"
+    },
+    {
+      "tool_id": "E3C019",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:2f119b78b6bfa4a4",
+      "applicability_signature_sha256": "440cb18b931467eb7cb9f6b7f9ebf46b7accd54fea476b4841d0cb44c794e4f1"
+    },
+    {
+      "tool_id": "E3C020",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:46257139742660c1",
+      "applicability_signature_sha256": "b2c121c566bad7a78b3a9332a94762f0cc435e2e9a834ce87f837901822a191f"
+    },
+    {
+      "tool_id": "E3C021",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:46257139742660c1",
+      "applicability_signature_sha256": "1a8dc5ee9444193a5d04ab3f8b2ab24a7aa85eb64356f97c13524fc1c0b4f251"
+    },
+    {
+      "tool_id": "E3C022",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:46257139742660c1",
+      "applicability_signature_sha256": "e0f6ef4c4ad90697557ed114e8f56752a4601a49b208eddee2cf9138fc07adca"
+    },
+    {
+      "tool_id": "E3C023",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:46257139742660c1",
+      "applicability_signature_sha256": "efef3e120566b7dd404d76c3574baed451f6693127fe2f7214f93a15ee186830"
+    },
+    {
+      "tool_id": "E3C024",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:46257139742660c1",
+      "applicability_signature_sha256": "62b07ddc9677514341bdc35debe234fbc2ae120c8e04e22190e5af18f8ccb4f5"
+    },
+    {
+      "tool_id": "E3C025",
+      "domain_id": "domain:f140507633be96ab",
+      "capability_id": "capability:46257139742660c1",
+      "applicability_signature_sha256": "51a5f661dd8163855fa99f295f6bda59b89729f8ff77410b09d1e821f188d304"
+    },
+    {
+      "tool_id": "F001",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:6b56a29db0d83e8a",
+      "applicability_signature_sha256": "0ad962ab02eeeda93ee565037bba555d9bfc486dd56ec16347102a45b2cafce5"
+    },
+    {
+      "tool_id": "F002",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:6b56a29db0d83e8a",
+      "applicability_signature_sha256": "0ad962ab02eeeda93ee565037bba555d9bfc486dd56ec16347102a45b2cafce5"
+    },
+    {
+      "tool_id": "F003",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:49315edc45ff4d5b",
+      "applicability_signature_sha256": "0d970285ac3d57b7f0295b9b58d451bd7676adeb07974fdbf3d0afbe95731bc3"
+    },
+    {
+      "tool_id": "F004",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:91b9e1bd3a7bed12",
+      "applicability_signature_sha256": "57887ff30e6fdc85e68e3d11cab87873251bdb056b3881766d9cf1ea25941748"
+    },
+    {
+      "tool_id": "F005",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:61d93dbb2e0a3e01",
+      "applicability_signature_sha256": "60cdbe3dce8e48a0146946501d1a249658bd7fa75db417276a66e6e86d73a5d2"
+    },
+    {
+      "tool_id": "F006",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:1d094419fb6b8696",
+      "applicability_signature_sha256": "c604bfb92725a620ab6508fd52b30c5fe9f5a817c62058efd7e1f69f9cd9e1a7"
+    },
+    {
+      "tool_id": "F007",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:5995c981d8bd6267",
+      "applicability_signature_sha256": "6fcc9468dab34dbd7bacee7109517ce2bd0514b939ae9aaf203aaa9552c1ec80"
+    },
+    {
+      "tool_id": "F008",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:806edf60ce70bb73",
+      "applicability_signature_sha256": "9724b2082ad0a3ee212bb0d9d6761280620937b17dcd643c8628cb7be2948363"
+    },
+    {
+      "tool_id": "F009",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:fae9d9ae89261b0b",
+      "applicability_signature_sha256": "a7f132c209a48edabc687b66ce766449af8784529943cb46f1880dff5341ea67"
+    },
+    {
+      "tool_id": "F010",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:8658e494b5e3806a",
+      "applicability_signature_sha256": "eee49ae79b6414ba83f0090da7466f66a593aaf8e21ea213d9fd172acad32fd4"
+    },
+    {
+      "tool_id": "F011",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:e79db8d32408b813",
+      "applicability_signature_sha256": "dc31054fad3b924883eb8821d316bc8ad7d10a333f43dfc20aebc1833dce6cc2"
+    },
+    {
+      "tool_id": "F012",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:d2e5e62f27e31ca7",
+      "applicability_signature_sha256": "89449ace173d9a34efaa56cdcd65181e0500ede65f43b349e4dc10de533af4d8"
+    },
+    {
+      "tool_id": "F013",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:138e3d93ec39fd1d",
+      "applicability_signature_sha256": "b31ad2f9a2d68aef9669751f41ec0adc738658bddf0899c30fbb616e5b0363b8"
+    },
+    {
+      "tool_id": "F014",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:3bf33ecf2b05b7bb",
+      "applicability_signature_sha256": "e2c7f7b1710e6bdbae4b76667774118e16f765e4a6ae951f6c74464a260890ab"
+    },
+    {
+      "tool_id": "F015",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:592b4e7284b98d05",
+      "applicability_signature_sha256": "f5e77ac31c2c46a6ce2bc6058fe10642c298edcc8883dc908ba4ed8c5f00a8c6"
+    },
+    {
+      "tool_id": "F016",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:592b4e7284b98d05",
+      "applicability_signature_sha256": "f5e77ac31c2c46a6ce2bc6058fe10642c298edcc8883dc908ba4ed8c5f00a8c6"
+    },
+    {
+      "tool_id": "F017",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:592b4e7284b98d05",
+      "applicability_signature_sha256": "f5e77ac31c2c46a6ce2bc6058fe10642c298edcc8883dc908ba4ed8c5f00a8c6"
+    },
+    {
+      "tool_id": "F018",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:16143adc5316a8f7",
+      "applicability_signature_sha256": "78dbe06678b611815e296aaf8cfec73d0c35a995d9a62a08f54733997e740034"
+    },
+    {
+      "tool_id": "F019",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:fe07a7edda681bc5",
+      "applicability_signature_sha256": "4be78851a6789267c8b427e56ccaea5697f56cdec8e6dfd3b6881790966c4895"
+    },
+    {
+      "tool_id": "F020",
+      "domain_id": "domain:960b12b075f8840e",
+      "capability_id": "capability:592b4e7284b98d05",
+      "applicability_signature_sha256": "f5e77ac31c2c46a6ce2bc6058fe10642c298edcc8883dc908ba4ed8c5f00a8c6"
+    },
+    {
+      "tool_id": "G001",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:17daf76c945073b0",
+      "applicability_signature_sha256": "c604fa38aee83d694f4c0946480ee8a41f6927c4fefae8aa2c0c664032205128"
+    },
+    {
+      "tool_id": "G002",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:a82ac335a8c1f64c",
+      "applicability_signature_sha256": "3e80d108d71cca4b188c37aba1a2fb18e03324d6017b84340ede2dcf1750bd4e"
+    },
+    {
+      "tool_id": "G003",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:f3ae05918df28a3b",
+      "applicability_signature_sha256": "d68a42a859752cd0c02b10c9a8364f682ba4c66bd5dd2e561cf5aa14d66bbf97"
+    },
+    {
+      "tool_id": "G004",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:7f6a1c2abde4f075",
+      "applicability_signature_sha256": "f677d07f3590e9506b34e6047aaed29710d9785c18ee9488eb8fe309143eae22"
+    },
+    {
+      "tool_id": "G005",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:32199f50f0345dc1",
+      "applicability_signature_sha256": "b88b461bcd52fe3aa168c675af77819ab307f6a8d605ae446bb26cfc6a9c4dc4"
+    },
+    {
+      "tool_id": "G006",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:576cc0f973fbd9ba",
+      "applicability_signature_sha256": "0e637004697e5ca9e60a4e5bc67fc734d6120ccd7eb4128ac54ef237fec26c9f"
+    },
+    {
+      "tool_id": "G007",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:b1260dfa25bc8750",
+      "applicability_signature_sha256": "d2364053cdcb3d4aa50956e75365e7657a125fa274dadac4329fff4350ec9938"
+    },
+    {
+      "tool_id": "G008",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:e43ceac4c531a3c8",
+      "applicability_signature_sha256": "5449c4785d1cdc8ed6db4f2b91289a680a4c6409f64247731c264ef7a852bc5f"
+    },
+    {
+      "tool_id": "G009",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:14b2e8e31ba60d02",
+      "applicability_signature_sha256": "c1bbf7a91dcc807a02e1eae89ee227142418726f3dab8702e5fc870de2d4464a"
+    },
+    {
+      "tool_id": "G010",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:3fd75e732f917539",
+      "applicability_signature_sha256": "15b818b3b7bf44d734b96366fee3dde41d76ee029c7837c1fdee9e7a29852bf7"
+    },
+    {
+      "tool_id": "G011",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:6875925e5eff9c4a",
+      "applicability_signature_sha256": "62afce8ebcdaf046a383fc514db7ddb5273981997a7efa402b4e0e42da7b388e"
+    },
+    {
+      "tool_id": "G012",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:7b9faa41add65614",
+      "applicability_signature_sha256": "1b6eaabfe57bfabe19b2f651a91c0937c9eda92efa54ef3d63032f4613f839d0"
+    },
+    {
+      "tool_id": "G013",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:3e256a3e9fbade15",
+      "applicability_signature_sha256": "1f834a3972e2f0a2e1e21e965e1bbc33f579b2879e8c8180f2b24c3471ea48f7"
+    },
+    {
+      "tool_id": "G014",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:2b8329381a185371",
+      "applicability_signature_sha256": "093d005a3187025ad5a31dced9a3688954c9202405fdc4f0534f96bc3de1328b"
+    },
+    {
+      "tool_id": "G015",
+      "domain_id": "domain:28509404753ef417",
+      "capability_id": "capability:1d1ed78e96cedff0",
+      "applicability_signature_sha256": "9272bf8369be818dbbcf3da0b2c36add3f0f5f07d2818629834cc1832d78f205"
+    }
+  ]
+}

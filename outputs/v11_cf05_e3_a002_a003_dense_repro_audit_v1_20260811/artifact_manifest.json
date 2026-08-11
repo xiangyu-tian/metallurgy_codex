@@ -1,0 +1,12 @@
+{
+    "schema_version":  "1.0",
+    "audit_id":  "V11-CF05-E3-A002-A003-DENSE-REPRO-AUDIT-V1-20260811",
+    "artifact_count":  1,
+    "artifacts":  [
+                      {
+                          "filename":  "dense_cross_process_reproducibility_audit.json",
+                          "sha256":  "c13416989a19044c7797f41aa7b05493a7d9797fb0388d7ef07dabc82bb5f05f",
+                          "bytes":  16026
+                      }
+                  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "package_id": "V11-CF05-E3-A002-A003-TOP5-VIEWS-V1-20260811",
+  "methods": ["lexical_top5", "dense_top5", "hierarchical"],
+  "top_k": 5,
+  "task_count": 16,
+  "pool_view_count": 4,
+  "expected_retrieval_cell_count": 192,
+  "query_source": "problem_text_only",
+  "gold_visible_to_retriever": false,
+  "local_retrieval_only": true,
+  "external_api_calls_authorized": false,
+  "tool_execution_allowed": false,
+  "independent_validation_split_access_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "tasks": {"path": "outputs/v11_cf05_e3_a002_a003_pool_views_v1_20260811/a002_a003_router_visible_tasks.json", "sha256": "624e198bf44b193c76d9c0b6cffd251db1fa86e8a4cac6e12f05c9f4c1bcbd80"},
+    "pool_views": {"path": "outputs/v11_cf05_e3_a002_a003_pool_views_v1_20260811/a002_a003_selected_pool_views.json", "sha256": "6137c9e56f53df7785ecb97f50826adbdfb7dcc82c0cf01c100fa989796e8389"},
+    "scoring_registry": {"path": "outputs/v11_cf05_e3_a002_a003_pool_views_v1_20260811/a002_a003_pool_specific_scoring_registry.json", "sha256": "c9624b222dca0b78a01e8a3e25440d221965db3ceb758d2a70c5faea428e3702"},
+    "schema_registry": {"path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_pool_schema_registry.json", "sha256": "ca7e4e5a5c9080d14e1eb08a54fa6f6644fd1ecac9f47a4ddc48237f59ad3faf"},
+    "lexical_config": {"path": "Tools/core_freeze/e3_routing/a003_lexical_top5_config_v1.json", "sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1"},
+    "dense_config": {"path": "Tools/core_freeze/e3_routing/a003_dense_top5_config_v1.json", "sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff"},
+    "hierarchical_config": {"path": "Tools/core_freeze/e3_routing/a003_hierarchical_top5_config_v1.json", "sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3"},
+    "lexical_source": {"path": "Tools/core_freeze/e3_routing/lexical_top5_router.py", "sha256": "40c73e5f7a24f6fe253db8f102abe18e58ecb96000343e19098c9e7593c7bc43"},
+    "dense_source": {"path": "Tools/core_freeze/e3_routing/dense_top5_router.py", "sha256": "9fde3ac5b0f095034d3983e84b3ba25f9fc27105e1042e8f331afc2279186e38"},
+    "hierarchical_source": {"path": "Tools/core_freeze/e3_routing/hierarchical_top5_router.py", "sha256": "cc57e36ca8022c61f5046e87ec435f05d53e10e0e2cff2ca81efd8fb12970ddb"},
+    "transport_policy": {"path": "Tools/core_freeze/e3_routing/e3_selector_transport_policy_v1.json", "sha256": "5b9691dc1e38bd6c1d7f3d719f25006efa552a7950849a90c04d30f09d5852d5"}
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "package_id": "V11-CF05-E3-A002-A003-TOP5-VIEWS-V2-20260811",
+  "status": "top5_views_built_development_opening_eligible",
+  "task_count": 16,
+  "pool_view_count": 4,
+  "method_count": 3,
+  "retrieval_cell_count": 192,
+  "schema_view_count": 192,
+  "router_initialization_ms": 16513.5719,
+  "method_summary": [
+    {
+      "method": "lexical_top5",
+      "cell_count": 64,
+      "primary_acceptable_recall_at_5_count": 64,
+      "primary_acceptable_recall_at_5_rate": 1.0,
+      "family_recall_at_5_rate": 1.0,
+      "scientific_recall_at_5_rate": 1.0
+    },
+    {
+      "method": "dense_top5",
+      "cell_count": 64,
+      "primary_acceptable_recall_at_5_count": 64,
+      "primary_acceptable_recall_at_5_rate": 1.0,
+      "family_recall_at_5_rate": 1.0,
+      "scientific_recall_at_5_rate": 1.0
+    },
+    {
+      "method": "hierarchical",
+      "cell_count": 64,
+      "primary_acceptable_recall_at_5_count": 64,
+      "primary_acceptable_recall_at_5_rate": 1.0,
+      "family_recall_at_5_rate": 1.0,
+      "scientific_recall_at_5_rate": 1.0
+    }
+  ],
+  "all_cells_primary_acceptable_recall_at_5": true,
+  "transport_policy_id": "V11-CF05-E3-SELECTOR-TRANSPORT-POLICY-V1-20260811",
+  "gold_visible_to_retriever": false,
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "next_gate": "build a hash-bound 192-request Top-5 selector opening only if all primary acceptable recall gates pass"
+}

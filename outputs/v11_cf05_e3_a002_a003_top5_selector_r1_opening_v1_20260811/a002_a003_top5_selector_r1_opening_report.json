@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R1-OPENING-V1-20260811",
+  "status": "execution_ready_but_external_api_unauthorized",
+  "task_count": 16,
+  "schema_view_count": 192,
+  "scheduled_cell_count": 192,
+  "method_cell_counts": {
+    "lexical_top5": 64,
+    "dense_top5": 64,
+    "hierarchical": 64
+  },
+  "visible_tools_per_request": 5,
+  "explicit_thinking_disabled_count": 192,
+  "transport_policy_id": "V11-CF05-E3-SELECTOR-TRANSPORT-POLICY-V1-20260811",
+  "request_payloads_materialized": true,
+  "gold_visible_to_router": false,
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "external_api_execution_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "next_gate": "obtain separate explicit authorization binding this exact 192-request manifest before external execution"
+}

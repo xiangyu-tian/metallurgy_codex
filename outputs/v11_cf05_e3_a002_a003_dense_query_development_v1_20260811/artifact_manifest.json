@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "artifacts": [
+    {
+      "filename": "dense_query_candidate_results.json",
+      "sha256": "0a910b59bcad38106e66e9a1a8002478a648c5add91f33be0a5171cb9800055d",
+      "bytes": 105905
+    },
+    {
+      "filename": "dense_query_candidate_summary.json",
+      "sha256": "33ff651e98bb4f1a9680df1e71e2cd267e85c1c9737c67d8038b2e3ddbe23721",
+      "bytes": 2884
+    },
+    {
+      "filename": "dense_query_development_config_snapshot.json",
+      "sha256": "1e99bc30dbae43363a9d77d5ca774e52ccbc72b67386e347ff73af2d530b1a17",
+      "bytes": 2883
+    }
+  ]
+}

@@ -1,0 +1,3845 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A006",
+        "A002",
+        "B022",
+        "E3C003",
+        "A003"
+      ],
+      "nearest_primary_acceptable_rank": 2,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "E3C003",
+        "E014",
+        "A003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B017",
+        "D003",
+        "A006",
+        "B024",
+        "B016"
+      ],
+      "nearest_primary_acceptable_rank": 7,
+      "primary_acceptable_recall_at_5": false
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B017",
+        "D003",
+        "A006",
+        "B024",
+        "B016"
+      ],
+      "nearest_primary_acceptable_rank": 7,
+      "primary_acceptable_recall_at_5": false
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "E3C003",
+        "A003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "E3C003",
+        "A003",
+        "E014"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B015",
+        "B017",
+        "B024",
+        "B016"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B015",
+        "B017",
+        "B024",
+        "B016"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "E3C003",
+        "A003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "E3C003",
+        "A003",
+        "E014"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B017",
+        "B015",
+        "B016",
+        "A002",
+        "B024"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B017",
+        "B015",
+        "B016",
+        "A002",
+        "B024"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "E3C003",
+        "A003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "E014",
+        "E3C003",
+        "A003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B024",
+        "B017",
+        "A002",
+        "B015",
+        "B016"
+      ],
+      "nearest_primary_acceptable_rank": 3,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B024",
+        "B017",
+        "A002",
+        "B015",
+        "B016"
+      ],
+      "nearest_primary_acceptable_rank": 3,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "A003",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "A003",
+        "E3C003",
+        "E014"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B015",
+        "B017",
+        "B016",
+        "A006"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B015",
+        "B017",
+        "B016",
+        "A006"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "E3C003",
+        "A003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "E3C003",
+        "A003",
+        "E014"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B017",
+        "B015",
+        "B016",
+        "A002",
+        "B024"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B017",
+        "B015",
+        "B016",
+        "A002",
+        "B024"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "A003",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "A003",
+        "E3C003",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B015",
+        "B017",
+        "B016",
+        "A006"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B015",
+        "B017",
+        "B016",
+        "A006"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "E3C003",
+        "A003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "E3C003",
+        "E014",
+        "A003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B024",
+        "B017",
+        "D003",
+        "A002",
+        "B015"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B024",
+        "B017",
+        "D003",
+        "A002",
+        "B015"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C003",
+        "E3C010",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A006",
+        "A002",
+        "E3C003",
+        "B022",
+        "A003"
+      ],
+      "nearest_primary_acceptable_rank": 2,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C003",
+        "A003",
+        "E3C009",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "D003",
+        "B024",
+        "A006",
+        "A002",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "D003",
+        "B024",
+        "A006",
+        "A002",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "A003",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "A003",
+        "E3C003",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B024",
+        "D003",
+        "A006",
+        "B015"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B024",
+        "D003",
+        "A006",
+        "B015"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "A003",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "A003",
+        "E3C003",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B024",
+        "D003",
+        "A006",
+        "B015"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B024",
+        "D003",
+        "A006",
+        "B015"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "E3C003",
+        "A003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C003",
+        "E3C009",
+        "A003",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B024",
+        "A002",
+        "D003",
+        "A006",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 2,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B024",
+        "A002",
+        "D003",
+        "A006",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 2,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "A003",
+        "B022",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "A003",
+        "E3C019",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "D003",
+        "A006",
+        "B015",
+        "B024"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "D003",
+        "A006",
+        "B015",
+        "B024"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "A003",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "A003",
+        "E3C003",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B017",
+        "B024",
+        "D003",
+        "A006"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B017",
+        "B024",
+        "D003",
+        "A006"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "E3C019",
+        "A003",
+        "B022"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "E3C019",
+        "A003",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B015",
+        "D003",
+        "E3C002",
+        "E3C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B015",
+        "D003",
+        "E3C002",
+        "E3C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A006",
+        "A002",
+        "B022",
+        "E3C003",
+        "A003"
+      ],
+      "nearest_primary_acceptable_rank": 2,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C003",
+        "E3C009",
+        "A003",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B024",
+        "D003",
+        "A006",
+        "A002",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B024",
+        "D003",
+        "A006",
+        "A002",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A006",
+        "A002",
+        "E3C003",
+        "A003",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 2,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C003",
+        "A003",
+        "E3C009",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A006",
+        "D003",
+        "B024",
+        "A002",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A006",
+        "D003",
+        "B024",
+        "A002",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "A003",
+        "B022",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A003",
+        "E3C009",
+        "E3C019",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B024",
+        "D003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B024",
+        "D003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "A003",
+        "B022",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A003",
+        "E3C009",
+        "E3C019",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B024",
+        "D003",
+        "B016"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B024",
+        "D003",
+        "B016"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "A003",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A003",
+        "E3C009",
+        "E3C003",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B024",
+        "A002",
+        "A006",
+        "D003",
+        "E3C008"
+      ],
+      "nearest_primary_acceptable_rank": 2,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B024",
+        "A002",
+        "A006",
+        "D003",
+        "E3C008"
+      ],
+      "nearest_primary_acceptable_rank": 2,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "A003",
+        "E3C019",
+        "B022"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A003",
+        "E3C009",
+        "E3C019",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "D003",
+        "B015",
+        "B016"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "D003",
+        "B015",
+        "B016"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "A003",
+        "B022",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A003",
+        "E3C009",
+        "E3C003",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B024",
+        "B015",
+        "B016"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B024",
+        "B015",
+        "B016"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "A003",
+        "E3C019",
+        "B022"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A003",
+        "E3C009",
+        "E3C019",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "E3C008",
+        "B015",
+        "E3C002"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "E3C008",
+        "B015",
+        "E3C002"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A006",
+        "A002",
+        "E3C003",
+        "A003",
+        "B022"
+      ],
+      "nearest_primary_acceptable_rank": 2,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C003",
+        "E3C009",
+        "A003",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B024",
+        "A006",
+        "D003",
+        "A002",
+        "E3C008"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B024",
+        "A006",
+        "D003",
+        "A002",
+        "E3C008"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C003",
+        "E3C018",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "A003",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A003",
+        "E3C009",
+        "E3C003",
+        "E014"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "D003",
+        "B015",
+        "B016",
+        "B017",
+        "A002"
+      ],
+      "nearest_primary_acceptable_rank": 5,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FE2O3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "D003",
+        "B015",
+        "B016",
+        "B017",
+        "A002"
+      ],
+      "nearest_primary_acceptable_rank": 5,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FE2O3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "A003",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "A003",
+        "E3C003",
+        "C004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B015",
+        "B016",
+        "B017",
+        "B024"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-H2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B015",
+        "B016",
+        "B017",
+        "B024"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-H2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "A003",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "A003",
+        "E3C003",
+        "C004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B015",
+        "B017",
+        "B016",
+        "A002",
+        "B024"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CACO3-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B015",
+        "B017",
+        "B016",
+        "A002",
+        "B024"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CACO3-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "A003",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "A003",
+        "E3C003",
+        "E014"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B015",
+        "B024",
+        "A002",
+        "B017",
+        "B016"
+      ],
+      "nearest_primary_acceptable_rank": 3,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CUSO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B015",
+        "B024",
+        "A002",
+        "B017",
+        "B016"
+      ],
+      "nearest_primary_acceptable_rank": 3,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CUSO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "A003",
+        "B022",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "A003",
+        "E3C003",
+        "C004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B017",
+        "B015",
+        "B016",
+        "A002",
+        "B024"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-NH4_2SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B017",
+        "B015",
+        "B016",
+        "A002",
+        "B024"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-NH4_2SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "A003",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "A003",
+        "C004",
+        "E014"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B017",
+        "B015",
+        "B016",
+        "A002",
+        "B024"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CA_OH_2-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "B017",
+        "B015",
+        "B016",
+        "A002",
+        "B024"
+      ],
+      "nearest_primary_acceptable_rank": 4,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CA_OH_2-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "A003",
+        "B022",
+        "E3C003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "A003",
+        "E3C003",
+        "E3C019"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B015",
+        "B017",
+        "B016",
+        "D003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CU_NH3_4_SO4-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A002",
+        "B015",
+        "B017",
+        "B016",
+        "D003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-CU_NH3_4_SO4-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "A006",
+        "B022",
+        "E3C003",
+        "A003"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A002",
+        "E3C009",
+        "E3C003",
+        "A003",
+        "C004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "D003",
+        "B024",
+        "A002",
+        "B015",
+        "B017"
+      ],
+      "nearest_primary_acceptable_rank": 3,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FES-ELEMENTS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "D003",
+        "B024",
+        "A002",
+        "B015",
+        "B017"
+      ],
+      "nearest_primary_acceptable_rank": 3,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-A-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-17-B-LEXICAL8-V1",
+      "tool_pool_size": 17,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "A004"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-A-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "task_id": "E3-MP-FES-MOLAR-MASS",
+      "pool_view_id": "A002-A003-120-B-LEXICAL8-V1",
+      "tool_pool_size": 120,
+      "selected_tool_ids": [
+        "A003",
+        "E3C010",
+        "E3C018",
+        "E3C003",
+        "C008"
+      ],
+      "nearest_primary_acceptable_rank": 1,
+      "primary_acceptable_recall_at_5": true
+    }
+  ]
+}

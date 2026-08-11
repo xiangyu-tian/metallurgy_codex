@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "package_id": "V11-CF05-E3-A002-A003-TOP5-VIEWS-V1-20260811",
+  "artifact_count": 8,
+  "artifacts": [
+    {
+      "filename": "a002_a003_top5_method_summary.json",
+      "sha256": "54f5577c1d13e9dcca725ea476443663e2a6ced08c88b4de1da50a6ef1905f02",
+      "bytes": 829
+    },
+    {
+      "filename": "a002_a003_top5_retrieval_results.json",
+      "sha256": "43a25b496ef2cd04dc1a119bead54ac0e039c246cb686de118ad4719d6ad876f",
+      "bytes": 1064182
+    },
+    {
+      "filename": "a002_a003_top5_schema_views.json",
+      "sha256": "819943a72c1e5e8f020c7ce6f3aaa2a8b93b3805f08dd665e92551befcb920fe",
+      "bytes": 870620
+    },
+    {
+      "filename": "a002_a003_top5_views_config_snapshot.json",
+      "sha256": "c76cdb13de0300425e3f847c14d3b2b25ba2747723cc5f4ad6f5d1454fc72ad8",
+      "bytes": 2889
+    },
+    {
+      "filename": "a002_a003_top5_views_report.json",
+      "sha256": "068cc14178a78d2e47a2e2aae9dfa779ec27a59223a639f8709413353037685e",
+      "bytes": 1581
+    },
+    {
+      "filename": "dense_index_snapshot.json",
+      "sha256": "4104aea9c423be91ad16b9bbabcde480bfd44d5f82700eabfb925f01a6333539",
+      "bytes": 22535
+    },
+    {
+      "filename": "hierarchical_taxonomy_snapshot.json",
+      "sha256": "dcc966042e1f86066ee7cc7aa5f674870003a3d2252657ba9fb8f7f76f1bf712",
+      "bytes": 62962
+    },
+    {
+      "filename": "lexical_index_snapshot.json",
+      "sha256": "da1448911c5f7772f19db35566c8e1c970c323f735cd308247c5963c5bfd2d53",
+      "bytes": 29086
+    }
+  ]
+}

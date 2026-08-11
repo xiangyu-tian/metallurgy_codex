@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R1-OPENING-V1-20260811",
+  "decision": "pending_user_authorization",
+  "eligible_for_external_execution_authorization": true,
+  "data_to_be_sent": "16 frozen A002/A003 development task texts and 192 corresponding five-tool Schema views from lexical, dense-v2 and hierarchical retrieval",
+  "provider": "deepseek",
+  "endpoint_source": "runtime_environment_not_stored_in_artifact",
+  "model": "deepseek-v4-flash",
+  "request_count": 192,
+  "thinking": {
+    "type": "disabled"
+  },
+  "max_tokens": 256,
+  "request_attempts_per_cell": 1,
+  "automatic_retry_allowed": false,
+  "tool_execution_allowed": false,
+  "independent_validation_split_access_allowed": false,
+  "external_api_execution_authorized": false,
+  "required_authorization": "explicit user approval binding this opening manifest before any request is sent"
+}

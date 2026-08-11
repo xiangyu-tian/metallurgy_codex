@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "development_id": "V11-CF05-E3-A002-A003-DENSE-QUERY-DEVELOPMENT-V1-20260811",
+  "task_count": 16,
+  "pool_view_count": 4,
+  "expected_cell_count_per_candidate": 64,
+  "top_k": 5,
+  "candidate_query_instructions": [
+    {
+      "candidate_id": "dense_v1_article_retrieval",
+      "instruction_prefix": "为这个句子生成表示以用于检索相关文章：",
+      "role": "frozen_v1_reference"
+    },
+    {
+      "candidate_id": "dense_v2_direct_output_tool",
+      "instruction_prefix": "为这个问题检索能够直接产生所请求输出的专业计算工具：",
+      "role": "predeclared_development_candidate"
+    },
+    {
+      "candidate_id": "dense_v3_direct_task_tool",
+      "instruction_prefix": "为这个任务检索能够直接完成该任务的专业计算工具：",
+      "role": "predeclared_development_candidate"
+    },
+    {
+      "candidate_id": "dense_v4_no_instruction",
+      "instruction_prefix": "",
+      "role": "predeclared_development_ablation"
+    }
+  ],
+  "selection_rule": [
+    "maximize_primary_acceptable_recall_at_5_count",
+    "maximize_mean_reciprocal_rank_of_nearest_primary_acceptable_tool",
+    "prefer_earlier_predeclared_candidate_order"
+  ],
+  "gold_used_only_after_retrieval_for_development_scoring": true,
+  "external_api_calls_authorized": false,
+  "tool_execution_allowed": false,
+  "independent_validation_split_access_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "tasks": {
+      "path": "outputs/v11_cf05_e3_a002_a003_pool_views_v1_20260811/a002_a003_router_visible_tasks.json",
+      "sha256": "624e198bf44b193c76d9c0b6cffd251db1fa86e8a4cac6e12f05c9f4c1bcbd80"
+    },
+    "pool_views": {
+      "path": "outputs/v11_cf05_e3_a002_a003_pool_views_v1_20260811/a002_a003_selected_pool_views.json",
+      "sha256": "6137c9e56f53df7785ecb97f50826adbdfb7dcc82c0cf01c100fa989796e8389"
+    },
+    "scoring_registry": {
+      "path": "outputs/v11_cf05_e3_a002_a003_pool_views_v1_20260811/a002_a003_pool_specific_scoring_registry.json",
+      "sha256": "c9624b222dca0b78a01e8a3e25440d221965db3ceb758d2a70c5faea428e3702"
+    },
+    "schema_registry": {
+      "path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_pool_schema_registry.json",
+      "sha256": "ca7e4e5a5c9080d14e1eb08a54fa6f6644fd1ecac9f47a4ddc48237f59ad3faf"
+    },
+    "dense_v1_config": {
+      "path": "Tools/core_freeze/e3_routing/a003_dense_top5_config_v1.json",
+      "sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff"
+    },
+    "frozen_dense_vectors": {
+      "path": "outputs/v11_cf05_e3_a003_dense_top5_candidate_v1_20260809/a003_dense_top5_vectors.npz",
+      "sha256": "fb4efbbf7ba5748b4e1165fe79050698c2f095104fa5b4ee074137e97b9b24ef"
+    }
+  }
+}
