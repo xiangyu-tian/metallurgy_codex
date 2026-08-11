@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF05-E3-B019-PARAMETER-FIDELITY-AUDIT-V1-20260811",
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "filename": "b019_formal_schema_candidate.json",
+      "sha256": "e68a42b7be7df4e9374bb61ab6e79b4c5662e9b52eb86a6d375323a19dd9ae87",
+      "bytes": 2324
+    },
+    {
+      "filename": "b019_parameter_audit_config_snapshot.json",
+      "sha256": "84581dc74a0724a80cfac89745098c74e8ece7ebc18537541531844fc0c427fb",
+      "bytes": 1889
+    },
+    {
+      "filename": "b019_parameter_fidelity_report.json",
+      "sha256": "48361e9f8ea67ff9d12339eeac642956cf9d6461d54f03ed72c6841a387f2485",
+      "bytes": 1394
+    },
+    {
+      "filename": "b019_per_cell_parameter_audit.json",
+      "sha256": "3c843bbad1102f8a34689107b12b14a9a6e9584e41aea6ab564940846be23557",
+      "bytes": 13005
+    },
+    {
+      "filename": "b019_source_schema_snapshot.json",
+      "sha256": "2679de898643624de7abb1b37b0df2d304f3684f29c8780e13c2c368e10ce66a",
+      "bytes": 2428
+    },
+    {
+      "filename": "b019_verified_contract_snapshot.json",
+      "sha256": "3fab700fc1c5ccfc833f94313156cd5f628623767e7d7f6434544463e78af413",
+      "bytes": 2472
+    }
+  ]
+}

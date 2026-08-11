@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF05-E3-B019-PARAMETER-FIDELITY-AUDIT-V1-20260811",
+  "tool_id": "B019",
+  "candidate_status": "contract_aligned_formal_schema_candidate",
+  "source_catalog_candidate_id": null,
+  "source_contract_id": "VC-B019-1.0.0",
+  "source_contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d",
+  "formal_catalog_mutated": false,
+  "changes": [
+    "composition_basis becomes required",
+    "composition_basis enum excludes auto",
+    "component default B removed",
+    "component allowed only when request-grounded",
+    "additionalProperties set to false"
+  ],
+  "openai_tool": {
+    "type": "function",
+    "function": {
+      "name": "B019",
+      "description": "杠杆规则计算；功能：二相区杠杆规则；输入：总体成分、两相边界成分；输出：相分数、守恒残差；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "overall_composition": {
+            "type": "number",
+            "description": "总体成分；总体成分；三个成分值必须使用同一标度"
+          },
+          "phase1_composition": {
+            "type": "number",
+            "description": "相1成分；相1边界成分；与总体成分使用同一标度"
+          },
+          "phase2_composition": {
+            "type": "number",
+            "description": "相2成分；相2边界成分；与总体成分使用同一标度"
+          },
+          "composition_basis": {
+            "type": "string",
+            "description": "成分标度；确认性任务必须显式为 fraction（0—1）或 percent（0—100），禁止 auto",
+            "enum": [
+              "fraction",
+              "percent"
+            ]
+          },
+          "component": {
+            "type": "string",
+            "description": "可选组元标签；仅当请求显式提供组元名称时传入，否则必须省略"
+          }
+        },
+        "required": [
+          "overall_composition",
+          "phase1_composition",
+          "phase2_composition",
+          "composition_basis"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

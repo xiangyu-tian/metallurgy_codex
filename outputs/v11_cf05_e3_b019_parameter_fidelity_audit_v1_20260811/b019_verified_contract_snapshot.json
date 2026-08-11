@@ -1,0 +1,70 @@
+{
+  "contract_id": "VC-B019-1.0.0",
+  "tool_id": "B019",
+  "tool_version": "1.0.0",
+  "tool_status": "verified_core",
+  "scientific_family": "热力学与相平衡",
+  "scientific_function": "二元两相区杠杆规则",
+  "required_inputs": [
+    "overall_composition",
+    "phase1_composition",
+    "phase2_composition",
+    "composition_basis"
+  ],
+  "optional_inputs": [
+    "component"
+  ],
+  "input_units": {
+    "overall_composition": "fraction 或 percent",
+    "phase1_composition": "与 overall_composition 相同",
+    "phase2_composition": "与 overall_composition 相同"
+  },
+  "output_contract": {
+    "phase1_fraction": "(C2 - C0) / (C2 - C1)",
+    "phase2_fraction": "(C0 - C1) / (C2 - C1)",
+    "conservation_residual": "abs(f1*C1 + f2*C2 - C0)"
+  },
+  "supported_systems": [
+    "binary_two_phase_tie_line"
+  ],
+  "composition_constraints": [
+    "C0 位于 C1 与 C2 之间（含端点）",
+    "C1 与 C2 不相等",
+    "composition_basis 必须在确认性任务中显式为 fraction 或 percent"
+  ],
+  "model_assumptions": [
+    "输入是同一组元在同一温度压力下同一基准的总体及两相平衡成分",
+    "系统位于二元两相区且相边界值已由独立来源给定"
+  ],
+  "data_or_model_version": "lever-rule-algebra-v1",
+  "service_status": "available",
+  "validation_rules": [
+    "fraction 标度范围为 0—1，percent 标度范围为 0—100",
+    "两个相分数之和必须为 1",
+    "相分数加权成分必须重构总体成分",
+    "auto 仅为旧调用兼容，不得用于确认性任务生成"
+  ],
+  "reference_sources": [
+    {
+      "source_id": "LEVER-RULE-DERIVATION",
+      "title": "Algebraic solution of f1+f2=1 and C0=f1*C1+f2*C2",
+      "url": "metallurgy://local/independent-reference/lever-rule-v1"
+    }
+  ],
+  "verification_scope": {
+    "component_count": 2,
+    "phase_count": 2,
+    "composition_basis": [
+      "fraction",
+      "percent"
+    ],
+    "tie_line_endpoints": "externally supplied; their scientific validity is outside this calculator"
+  },
+  "known_limitations": [
+    "工具不验证输入是否确实来自相图同一条等温连线",
+    "不适用于多元系、多于两相、亚稳态或非平衡问题",
+    "auto 标度不能检测调用方混用小数和百分数"
+  ],
+  "contract_version": "1.0",
+  "contract_hash": "f6f33ee40ad36dab31a45b64a92fe7719b90603f81984abbc4e22875f1413c9d"
+}

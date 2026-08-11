@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF05-E3-B019-PARAMETER-FIDELITY-AUDIT-V1-20260811",
+  "audit_status": "development_parameter_fidelity_audit_complete",
+  "cell_count": 16,
+  "legacy_selection_correct_count": 16,
+  "legacy_parameters_correct_count": 16,
+  "strict_parameter_evidence_fidelity_count": 5,
+  "strict_parameter_evidence_fidelity_rate": 0.3125,
+  "ungrounded_optional_parameter_count": 11,
+  "legacy_parameter_false_positive_count": 11,
+  "ungrounded_component_values": {
+    "B": 11
+  },
+  "ungrounded_by_method": {
+    "lexical_top5": 4,
+    "dense_top5": 1,
+    "hierarchical": 4,
+    "full_schema": 2
+  },
+  "ungrounded_by_tool_pool_size": {
+    "17": 5,
+    "120": 6
+  },
+  "schema_contract_findings": {
+    "composition_basis_required_by_contract": true,
+    "composition_basis_required_by_source_schema": false,
+    "source_schema_allows_auto": true,
+    "source_component_default": "B"
+  },
+  "scientific_result_error_inferred": false,
+  "interpretation": "B019 selection and required numeric values were correct, but eleven calls added an ungrounded component='B'; legacy scoring therefore overstates parameter evidence fidelity",
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "confirmatory_inference_allowed": false,
+  "formal_catalog_mutated": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false
+}
