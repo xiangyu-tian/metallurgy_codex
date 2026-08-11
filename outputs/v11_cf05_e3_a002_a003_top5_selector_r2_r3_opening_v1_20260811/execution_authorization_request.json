@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R2-R3-OPENING-V1-20260811",
+  "decision": "pending_user_authorization",
+  "eligible_for_external_execution_authorization": true,
+  "data_to_be_sent": "the same 16 frozen A002/A003 development task texts and the same 192 five-tool Schema views as R1, each once in R2 and once in R3",
+  "provider": "deepseek",
+  "endpoint_source": "runtime_environment_not_stored_in_artifact",
+  "model": "deepseek-v4-flash",
+  "request_count": 384,
+  "complete_repeat_counts": {
+    "R2": 192,
+    "R3": 192
+  },
+  "failed_r1_cells_only": false,
+  "payloads_identical_to_r1": true,
+  "thinking": {
+    "type": "disabled"
+  },
+  "max_tokens": 256,
+  "request_attempts_per_cell": 1,
+  "automatic_retry_allowed": false,
+  "tool_execution_allowed": false,
+  "independent_validation_split_access_allowed": false,
+  "external_api_execution_authorized": false,
+  "required_authorization": "explicit user approval binding this R2/R3 manifest before any request is sent"
+}

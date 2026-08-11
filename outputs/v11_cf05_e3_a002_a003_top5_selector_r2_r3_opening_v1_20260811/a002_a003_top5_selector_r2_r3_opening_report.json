@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R2-R3-OPENING-V1-20260811",
+  "source_opening_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R1-OPENING-V1-20260811",
+  "status": "complete_repeats_execution_ready_but_external_api_unauthorized",
+  "purpose": "complete-run variability assessment_not_failed-cell_retry",
+  "source_cell_count": 192,
+  "model_run_repeats": [
+    "R2",
+    "R3"
+  ],
+  "scheduled_cell_count": 384,
+  "repeat_cell_counts": {
+    "R2": 192,
+    "R3": 192
+  },
+  "method_cell_counts_per_repeat": {
+    "R2": {
+      "lexical_top5": 64,
+      "dense_top5": 64,
+      "hierarchical": 64
+    },
+    "R3": {
+      "lexical_top5": 64,
+      "dense_top5": 64,
+      "hierarchical": 64
+    }
+  },
+  "payloads_exactly_equal_to_r1_count": 384,
+  "failed_r1_cells_only": false,
+  "source_r1_responses_reused": 0,
+  "transport_policy_id": "V11-CF05-E3-SELECTOR-TRANSPORT-POLICY-V1-20260811",
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "external_api_execution_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "next_gate": "obtain separate explicit authorization binding the exact 384-request manifest before external execution"
+}
