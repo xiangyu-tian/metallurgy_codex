@@ -1,0 +1,14 @@
+﻿group_type,n,primary_endpoint_hit_count,primary_endpoint_hit_rate,family_hit_count,family_hit_rate,alternative_hit_count,alternative_hit_rate,scientific_hit_count,scientific_hit_rate,arguments_exact_count,arguments_exact_rate,primary_end_to_end_count,primary_end_to_end_rate,scientific_end_to_end_count,scientific_end_to_end_rate,tool_pool_size,pool_repeat,pair_variant
+overall,64,59,0.921875,59,0.921875,0,0.0,59,0.921875,58,0.90625,58,0.90625,58,0.90625,,,
+pool_size,32,27,0.84375,27,0.84375,0,0.0,27,0.84375,26,0.8125,26,0.8125,26,0.8125,120,,
+pool_size,32,32,1.0,32,1.0,0,0.0,32,1.0,32,1.0,32,1.0,32,1.0,17,,
+pool_size_repeat,16,12,0.75,12,0.75,0,0.0,12,0.75,11,0.6875,11,0.6875,11,0.6875,120,A,
+pool_size_repeat,16,15,0.9375,15,0.9375,0,0.0,15,0.9375,15,0.9375,15,0.9375,15,0.9375,120,B,
+pool_size_repeat,16,16,1.0,16,1.0,0,0.0,16,1.0,16,1.0,16,1.0,16,1.0,17,A,
+pool_size_repeat,16,16,1.0,16,1.0,0,0.0,16,1.0,16,1.0,16,1.0,16,1.0,17,B,
+pair_variant,32,30,0.9375,30,0.9375,0,0.0,30,0.9375,29,0.90625,29,0.90625,29,0.90625,,,element_stoichiometry
+pair_variant,32,29,0.90625,29,0.90625,0,0.0,29,0.90625,29,0.90625,29,0.90625,29,0.90625,,,molar_mass
+pool_size_pair_variant,16,14,0.875,14,0.875,0,0.0,14,0.875,13,0.8125,13,0.8125,13,0.8125,120,,element_stoichiometry
+pool_size_pair_variant,16,13,0.8125,13,0.8125,0,0.0,13,0.8125,13,0.8125,13,0.8125,13,0.8125,120,,molar_mass
+pool_size_pair_variant,16,16,1.0,16,1.0,0,0.0,16,1.0,16,1.0,16,1.0,16,1.0,17,,element_stoichiometry
+pool_size_pair_variant,16,16,1.0,16,1.0,0,0.0,16,1.0,16,1.0,16,1.0,16,1.0,17,,molar_mass

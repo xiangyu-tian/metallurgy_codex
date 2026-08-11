@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-R1-ANALYSIS-V1-20260811",
+  "opening_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-R1-OPENING-V1-20260811",
+  "expected_result_count": 64,
+  "primary_metric": "primary_endpoint_selection_accuracy",
+  "secondary_metrics": [
+    "tool_family_selection_accuracy",
+    "alternative_success_rate",
+    "scientific_success_including_alternatives"
+  ],
+  "selection_metrics_are_tool_id_only": true,
+  "end_to_end_metrics_require_exact_canonical_arguments": true,
+  "alternative_success_is_exclusive_of_primary_endpoint_success": true,
+  "missing_or_non_single_call_is_failure": true,
+  "development_only": true,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "runtime_results": {
+      "path": "outputs/v11_cf05_e3_a002_a003_full_schema_r1_results_v1_20260811/a002_a003_full_schema_r1_results.json",
+      "sha256": "e94055c0b51bf99c4f6fc9a158babfb6b726be71cb601fbb4ddf46c7ce78ff13"
+    },
+    "runtime_manifest": {
+      "path": "outputs/v11_cf05_e3_a002_a003_full_schema_r1_results_v1_20260811/artifact_manifest.json",
+      "sha256": "7a8534ef199c1e55ff0ce439f521341ed7a8e91637df66c7702d7477a12e464f"
+    },
+    "scoring_registry": {
+      "path": "outputs/v11_cf05_e3_a002_a003_pool_views_v1_20260811/a002_a003_pool_specific_scoring_registry.json",
+      "sha256": "c9624b222dca0b78a01e8a3e25440d221965db3ceb758d2a70c5faea428e3702"
+    },
+    "router_tasks": {
+      "path": "outputs/v11_cf05_e3_a002_a003_pool_views_v1_20260811/a002_a003_router_visible_tasks.json",
+      "sha256": "624e198bf44b193c76d9c0b6cffd251db1fa86e8a4cac6e12f05c9f4c1bcbd80"
+    },
+    "governance_adoption": {
+      "path": "Tools/core_freeze/e3_routing/a002_a003_family_governance_adoption_v1.json",
+      "sha256": "0508045caaf7336c316b7d86f5286f5a97b396c41c5bd9aae46231c5ba69ff99"
+    }
+  }
+}

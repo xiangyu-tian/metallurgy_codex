@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-R1-ANALYSIS-V1-20260811",
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "filename": "a002_a003_full_schema_r1_analysis_config_snapshot.json",
+      "sha256": "25aea90b03a6ef411e61e0bdaacce01357d6ecdd9a00989af6f3cb192d5e97b9",
+      "bytes": 1925
+    },
+    {
+      "filename": "a002_a003_full_schema_r1_analysis_report.json",
+      "sha256": "8f3742fe99cbd545f2f2abf7e5f24d8f85287416bbd6fa71b177f004add0bbf6",
+      "bytes": 1770
+    },
+    {
+      "filename": "a002_a003_full_schema_r1_scored_rows.csv",
+      "sha256": "a702ca1ed65ac95a48429d584574a8350a6614190f792179cdc889fd8249b438",
+      "bytes": 16340
+    },
+    {
+      "filename": "a002_a003_full_schema_r1_scored_rows.json",
+      "sha256": "9084d352089470dfa373f5d624647efe9a2deb87cb2ac7a4f78207f8aec0563b",
+      "bytes": 55352
+    },
+    {
+      "filename": "a002_a003_full_schema_r1_summary.csv",
+      "sha256": "99b5327946a406cc57724c6b0f3e315a221ee88680c245357781dce02054cbd1",
+      "bytes": 1581
+    },
+    {
+      "filename": "a002_a003_full_schema_r1_summary.json",
+      "sha256": "3c19cb3bdbca43237a350c84b0aab0b8ce8f7960e3ea20a4b4190ef376f5cdc4",
+      "bytes": 8528
+    }
+  ]
+}

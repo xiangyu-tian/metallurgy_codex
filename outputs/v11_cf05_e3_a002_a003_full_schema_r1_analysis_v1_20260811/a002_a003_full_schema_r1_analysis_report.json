@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-R1-ANALYSIS-V1-20260811",
+  "status": "development_r1_scored_transport_confound_detected",
+  "result_count": 64,
+  "overall": {
+    "primary_endpoint_hit": 0.921875,
+    "family_hit": 0.921875,
+    "alternative_hit": 0.0,
+    "scientific_hit": 0.921875,
+    "arguments_exact": 0.90625,
+    "primary_end_to_end": 0.90625,
+    "scientific_end_to_end": 0.90625
+  },
+  "scale_difference_120_minus_17": {
+    "primary_endpoint_hit": -0.15625,
+    "family_hit": -0.15625,
+    "alternative_hit": 0.0,
+    "scientific_hit": -0.15625,
+    "arguments_exact": -0.1875,
+    "primary_end_to_end": -0.1875,
+    "scientific_end_to_end": -0.1875
+  },
+  "error_counts": {
+    "invalid_arguments_json": 1,
+    "no_single_tool_call_length": 5,
+    "none": 58
+  },
+  "length_terminated_no_call_count": 5,
+  "reasoning_content_observed_count": 64,
+  "transport_confound": {
+    "detected": true,
+    "description": "opening config declared thinking disabled, but the materialized payload omitted an explicit thinking field and provider responses contained reasoning content/tokens; all six end-to-end failures occurred at 120 tools and were length-related or truncated arguments",
+    "confirmatory_interpretation_allowed": false
+  },
+  "external_api_calls": 64,
+  "tool_calls_executed": 0,
+  "retries_executed": 0,
+  "independent_validation_split_accessed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "next_gate": "freeze a transport-corrected development R1.1 payload with explicit thinking disabled and sufficient output budget, then request separate authorization; do not retry or overwrite R1"
+}

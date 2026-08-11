@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-R1-OPENING-V1-20260811",
+  "artifact_count": 8,
+  "artifacts": [
+    {
+      "filename": "a002_a003_full_schema_r1_results.json",
+      "sha256": "e94055c0b51bf99c4f6fc9a158babfb6b726be71cb601fbb4ddf46c7ce78ff13",
+      "bytes": 214786
+    },
+    {
+      "filename": "a002_a003_full_schema_r1_runtime_report.json",
+      "sha256": "be92875c694620b66085849311ea18be899e39c5dab494f7d1adc103e1bb40fc",
+      "bytes": 658
+    },
+    {
+      "filename": "execution_authorization_snapshot.json",
+      "sha256": "4d937eddf60df0b7702030791b0ca0bf3749f7de7118569a7121b75e0846f550",
+      "bytes": 1755
+    },
+    {
+      "filename": "opening_config_snapshot.json",
+      "sha256": "f3ce812b99975d598bac0524dbcd57fa97d46c3578bb565c50a3c1b4080fa480",
+      "bytes": 1795
+    },
+    {
+      "filename": "opening_manifest_snapshot.json",
+      "sha256": "77472874d68bf258ea95a15a9517a9fd6d48ace2b46e885d178c0be8d051a25b",
+      "bytes": 1278
+    },
+    {
+      "filename": "opening_prompt_snapshot.json",
+      "sha256": "6ece25e251b4c0d6e43bf45c6962aa1f97bf3ec954c4a04f2d3ae8e9155f156a",
+      "bytes": 1056
+    },
+    {
+      "filename": "opening_run_cells_snapshot.json",
+      "sha256": "342677344908f97bc42d683ef5bd51c39815bbc87607ae926879c20377c147ab",
+      "bytes": 39236
+    },
+    {
+      "filename": "runner_source_snapshot.py",
+      "sha256": "308ef077b91cb6780f6c730a7f86a00b8491f018ba492a063647ff74b77acdd3",
+      "bytes": 12806
+    }
+  ]
+}
