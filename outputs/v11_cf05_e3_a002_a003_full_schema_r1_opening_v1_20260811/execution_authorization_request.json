@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-R1-OPENING-V1-20260811",
+  "decision": "pending_user_authorization",
+  "eligible_for_external_execution_authorization": true,
+  "data_to_be_sent": "16 frozen task texts and four frozen 17/120 full-schema views as 64 one-attempt requests",
+  "provider": "deepseek",
+  "endpoint_source": "runtime_environment_not_stored_in_artifact",
+  "model": "deepseek-v4-flash",
+  "request_count": 64,
+  "automatic_retry_allowed": false,
+  "tool_execution_allowed": false,
+  "independent_validation_split_access_allowed": false,
+  "external_api_execution_authorized": false,
+  "required_authorization": "explicit user approval binding this opening package manifest before any request is sent"
+}

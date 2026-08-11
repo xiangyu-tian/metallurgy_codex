@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-R1-OPENING-V1-20260811",
+  "status": "execution_ready_but_external_api_unauthorized",
+  "task_count": 16,
+  "view_count": 4,
+  "scheduled_cell_count": 64,
+  "counts_by_pool_size": {
+    "17": 32,
+    "120": 32
+  },
+  "counts_by_pair_variant": {
+    "element_stoichiometry": 32,
+    "molar_mass": 32
+  },
+  "request_payloads_materialized": true,
+  "payload_hashes_unique": true,
+  "gold_fields_absent_from_router_package": true,
+  "api_key_absent": true,
+  "tool_execution_allowed": false,
+  "external_api_calls": 0,
+  "external_api_execution_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "next_gate": "obtain separate explicit authorization for the exact 64 frozen requests, then execute each cell once without tool execution or retry"
+}
