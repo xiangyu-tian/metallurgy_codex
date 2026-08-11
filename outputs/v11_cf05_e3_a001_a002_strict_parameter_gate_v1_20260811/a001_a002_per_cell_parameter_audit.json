@@ -1,0 +1,1205 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "method": "full_schema",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "method": "lexical_top5",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "method": "dense_top5",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "method": "hierarchical",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "method": "full_schema",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "method": "lexical_top5",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "method": "dense_top5",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-001-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A001-001",
+      "source_tool_id": "A001",
+      "method": "hierarchical",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.25,
+        "source_unit": "kg",
+        "target_unit": "g"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "method": "full_schema",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.5,
+          "source_unit": "atm",
+          "target_unit": "Pa"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "method": "lexical_top5",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.5,
+          "source_unit": "atm",
+          "target_unit": "Pa"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "method": "dense_top5",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.5,
+          "source_unit": "atm",
+          "target_unit": "Pa"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "method": "hierarchical",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.5,
+          "source_unit": "atm",
+          "target_unit": "Pa"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "method": "full_schema",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.5,
+          "source_unit": "atm",
+          "target_unit": "Pa"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "method": "lexical_top5",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.5,
+          "source_unit": "atm",
+          "target_unit": "Pa"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "method": "dense_top5",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.5,
+          "source_unit": "atm",
+          "target_unit": "Pa"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A001-009-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A001-009",
+      "source_tool_id": "A001",
+      "method": "hierarchical",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A001",
+        "required_parameters": {
+          "value": 0.5,
+          "source_unit": "atm",
+          "target_unit": "Pa"
+        }
+      },
+      "selected_tool_id": "A001",
+      "arguments": {
+        "value": 0.5,
+        "source_unit": "atm",
+        "target_unit": "Pa"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": null,
+      "reasons": [
+        "unit_pair_inside_verified_contract",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "method": "full_schema",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "Fe2O3"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "method": "lexical_top5",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "Fe2O3"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "method": "dense_top5",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "Fe2O3"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "method": "hierarchical",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "Fe2O3"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "method": "full_schema",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "Fe2O3"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "method": "lexical_top5",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "Fe2O3"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "method": "dense_top5",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "Fe2O3"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-001-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A002-001",
+      "source_tool_id": "A002",
+      "method": "hierarchical",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "Fe2O3"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "Fe2O3"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "method": "full_schema",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "K4[Fe(CN)6]"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "method": "lexical_top5",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "K4[Fe(CN)6]"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "method": "dense_top5",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "K4[Fe(CN)6]"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "method": "hierarchical",
+      "tool_pool_size": 17,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "K4[Fe(CN)6]"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "method": "full_schema",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "K4[Fe(CN)6]"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "method": "lexical_top5",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "K4[Fe(CN)6]"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "method": "dense_top5",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "K4[Fe(CN)6]"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-A002-006-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-A002-006",
+      "source_tool_id": "A002",
+      "method": "hierarchical",
+      "tool_pool_size": 120,
+      "legacy_parameters_correct": true,
+      "request_evidence": {
+        "parse_complete": true,
+        "inferred_tool_id": "A002",
+        "required_parameters": {
+          "formula": "K4[Fe(CN)6]"
+        }
+      },
+      "selected_tool_id": "A002",
+      "arguments": {
+        "formula": "K4[Fe(CN)6]"
+      },
+      "missing_required_parameters": [],
+      "unknown_parameters": [],
+      "formula_structural_validation": {
+        "passed": true,
+        "error": null
+      },
+      "reasons": [
+        "formula_inside_verified_neutral_grammar",
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass",
+      "execution_ready": true,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "strict_parameter_evidence_fidelity": true,
+      "gold_used_during_decision": false,
+      "gold_used_after_decision_for_offline_evaluation": true
+    }
+  ]
+}

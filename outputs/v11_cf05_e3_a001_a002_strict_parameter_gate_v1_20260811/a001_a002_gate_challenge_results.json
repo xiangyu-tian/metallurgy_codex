@@ -1,0 +1,543 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "case_id": "A001-PASS-EXACT",
+      "category": "exact_request_grounding",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "inferred_tool_id": "A001",
+          "required_parameters": {
+            "value": 0.25,
+            "source_unit": "kg",
+            "target_unit": "g"
+          }
+        },
+        "selected_tool_id": "A001",
+        "arguments": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        },
+        "missing_required_parameters": [],
+        "unknown_parameters": [],
+        "formula_structural_validation": null,
+        "reasons": [
+          "unit_pair_inside_verified_contract",
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [],
+        "decision": "candidate_pass",
+        "execution_ready": true,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A001-VALUE-MISMATCH",
+      "category": "request_argument_mismatch",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "inferred_tool_id": "A001",
+          "required_parameters": {
+            "value": 0.25,
+            "source_unit": "kg",
+            "target_unit": "g"
+          }
+        },
+        "selected_tool_id": "A001",
+        "arguments": {
+          "value": 25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        },
+        "missing_required_parameters": [],
+        "unknown_parameters": [],
+        "formula_structural_validation": null,
+        "reasons": [],
+        "vetoes": [
+          "request_argument_mismatch:value"
+        ],
+        "decision": "review_required",
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A001-UNIT-MISMATCH",
+      "category": "request_argument_mismatch",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "inferred_tool_id": "A001",
+          "required_parameters": {
+            "value": 0.25,
+            "source_unit": "kg",
+            "target_unit": "g"
+          }
+        },
+        "selected_tool_id": "A001",
+        "arguments": {
+          "value": 0.25,
+          "source_unit": "g",
+          "target_unit": "kg"
+        },
+        "missing_required_parameters": [],
+        "unknown_parameters": [],
+        "formula_structural_validation": null,
+        "reasons": [],
+        "vetoes": [
+          "request_argument_mismatch:source_unit",
+          "request_argument_mismatch:target_unit",
+          "unit_pair_outside_verified_contract"
+        ],
+        "decision": "review_required",
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A001-MISSING-TARGET",
+      "category": "missing_required_parameter",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "inferred_tool_id": "A001",
+          "required_parameters": {
+            "value": 0.25,
+            "source_unit": "kg",
+            "target_unit": "g"
+          }
+        },
+        "selected_tool_id": "A001",
+        "arguments": {
+          "value": 0.25,
+          "source_unit": "kg"
+        },
+        "missing_required_parameters": [
+          "target_unit"
+        ],
+        "unknown_parameters": [],
+        "formula_structural_validation": null,
+        "reasons": [],
+        "vetoes": [
+          "missing_required:target_unit"
+        ],
+        "decision": "review_required",
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A001-UNKNOWN-PARAMETER",
+      "category": "unknown_parameter",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "inferred_tool_id": "A001",
+          "required_parameters": {
+            "value": 0.25,
+            "source_unit": "kg",
+            "target_unit": "g"
+          }
+        },
+        "selected_tool_id": "A001",
+        "arguments": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g",
+          "rounding": 2
+        },
+        "missing_required_parameters": [],
+        "unknown_parameters": [
+          "rounding"
+        ],
+        "formula_structural_validation": null,
+        "reasons": [
+          "unit_pair_inside_verified_contract",
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [
+          "unknown_parameter:rounding"
+        ],
+        "decision": "review_required",
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A001-UNVERIFIED-PAIR",
+      "category": "outside_verified_contract",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "inferred_tool_id": "A001",
+          "required_parameters": {
+            "value": 1.0,
+            "source_unit": "kg",
+            "target_unit": "lb"
+          }
+        },
+        "selected_tool_id": "A001",
+        "arguments": {
+          "value": 1,
+          "source_unit": "kg",
+          "target_unit": "lb"
+        },
+        "missing_required_parameters": [],
+        "unknown_parameters": [],
+        "formula_structural_validation": null,
+        "reasons": [
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [
+          "unit_pair_outside_verified_contract"
+        ],
+        "decision": "review_required",
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A001-WRONG-TOOL",
+      "category": "wrong_tool",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "inferred_tool_id": "A001",
+          "required_parameters": {
+            "value": 0.25,
+            "source_unit": "kg",
+            "target_unit": "g"
+          }
+        },
+        "selected_tool_id": "A002",
+        "arguments": {
+          "value": 0.25,
+          "source_unit": "kg",
+          "target_unit": "g"
+        },
+        "missing_required_parameters": [],
+        "unknown_parameters": [],
+        "formula_structural_validation": null,
+        "reasons": [
+          "unit_pair_inside_verified_contract",
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [
+          "selected_tool_does_not_match_request_intent"
+        ],
+        "decision": "review_required",
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A001-UNPARSEABLE",
+      "category": "unparseable_request",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": false,
+          "inferred_tool_id": null,
+          "required_parameters": null
+        },
+        "selected_tool_id": "A001",
+        "arguments": {
+          "value": 1,
+          "source_unit": "kg",
+          "target_unit": "g"
+        },
+        "missing_required_parameters": [],
+        "unknown_parameters": [],
+        "formula_structural_validation": null,
+        "reasons": [],
+        "vetoes": [
+          "request_not_deterministically_parseable"
+        ],
+        "decision": "review_required",
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A002-PASS-SIMPLE",
+      "category": "exact_request_grounding",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "inferred_tool_id": "A002",
+          "required_parameters": {
+            "formula": "Fe2O3"
+          }
+        },
+        "selected_tool_id": "A002",
+        "arguments": {
+          "formula": "Fe2O3"
+        },
+        "missing_required_parameters": [],
+        "unknown_parameters": [],
+        "formula_structural_validation": {
+          "passed": true,
+          "error": null
+        },
+        "reasons": [
+          "formula_inside_verified_neutral_grammar",
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [],
+        "decision": "candidate_pass",
+        "execution_ready": true,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A002-PASS-NESTED",
+      "category": "valid_nested_formula",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "inferred_tool_id": "A002",
+          "required_parameters": {
+            "formula": "[Cu(NH3)4]SO4"
+          }
+        },
+        "selected_tool_id": "A002",
+        "arguments": {
+          "formula": "[Cu(NH3)4]SO4"
+        },
+        "missing_required_parameters": [],
+        "unknown_parameters": [],
+        "formula_structural_validation": {
+          "passed": true,
+          "error": null
+        },
+        "reasons": [
+          "formula_inside_verified_neutral_grammar",
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [],
+        "decision": "candidate_pass",
+        "execution_ready": true,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A002-FORMULA-MISMATCH",
+      "category": "request_argument_mismatch",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "inferred_tool_id": "A002",
+          "required_parameters": {
+            "formula": "Fe2O3"
+          }
+        },
+        "selected_tool_id": "A002",
+        "arguments": {
+          "formula": "Fe3O4"
+        },
+        "missing_required_parameters": [],
+        "unknown_parameters": [],
+        "formula_structural_validation": {
+          "passed": true,
+          "error": null
+        },
+        "reasons": [
+          "formula_inside_verified_neutral_grammar"
+        ],
+        "vetoes": [
+          "request_argument_mismatch:formula"
+        ],
+        "decision": "review_required",
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A002-MISSING-FORMULA",
+      "category": "missing_required_parameter",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "inferred_tool_id": "A002",
+          "required_parameters": {
+            "formula": "Fe2O3"
+          }
+        },
+        "selected_tool_id": "A002",
+        "arguments": {},
+        "missing_required_parameters": [
+          "formula"
+        ],
+        "unknown_parameters": [],
+        "formula_structural_validation": null,
+        "reasons": [],
+        "vetoes": [
+          "missing_required:formula"
+        ],
+        "decision": "review_required",
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A002-INVALID-GRAMMAR",
+      "category": "outside_verified_contract",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "inferred_tool_id": "A002",
+          "required_parameters": {
+            "formula": "Fe2O3abc"
+          }
+        },
+        "selected_tool_id": "A002",
+        "arguments": {
+          "formula": "Fe2O3abc"
+        },
+        "missing_required_parameters": [],
+        "unknown_parameters": [],
+        "formula_structural_validation": {
+          "passed": false,
+          "error": "化学式含非法字符或语法，位置 5: 'a'"
+        },
+        "reasons": [
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [
+          "formula_outside_verified_neutral_grammar"
+        ],
+        "decision": "review_required",
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A002-UNKNOWN-PARAMETER",
+      "category": "unknown_parameter",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "inferred_tool_id": "A002",
+          "required_parameters": {
+            "formula": "Fe2O3"
+          }
+        },
+        "selected_tool_id": "A002",
+        "arguments": {
+          "formula": "Fe2O3",
+          "charge": 0
+        },
+        "missing_required_parameters": [],
+        "unknown_parameters": [
+          "charge"
+        ],
+        "formula_structural_validation": {
+          "passed": true,
+          "error": null
+        },
+        "reasons": [
+          "formula_inside_verified_neutral_grammar",
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [
+          "unknown_parameter:charge"
+        ],
+        "decision": "review_required",
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A002-WRONG-TOOL",
+      "category": "wrong_tool",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "inferred_tool_id": "A002",
+          "required_parameters": {
+            "formula": "Fe2O3"
+          }
+        },
+        "selected_tool_id": "A001",
+        "arguments": {
+          "formula": "Fe2O3"
+        },
+        "missing_required_parameters": [],
+        "unknown_parameters": [],
+        "formula_structural_validation": {
+          "passed": true,
+          "error": null
+        },
+        "reasons": [
+          "formula_inside_verified_neutral_grammar",
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [
+          "selected_tool_does_not_match_request_intent"
+        ],
+        "decision": "review_required",
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "A002-UNPARSEABLE",
+      "category": "unparseable_request",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": false,
+          "inferred_tool_id": null,
+          "required_parameters": null
+        },
+        "selected_tool_id": "A002",
+        "arguments": {
+          "formula": "Fe2O3"
+        },
+        "missing_required_parameters": [],
+        "unknown_parameters": [],
+        "formula_structural_validation": null,
+        "reasons": [],
+        "vetoes": [
+          "request_not_deterministically_parseable"
+        ],
+        "decision": "review_required",
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    }
+  ]
+}

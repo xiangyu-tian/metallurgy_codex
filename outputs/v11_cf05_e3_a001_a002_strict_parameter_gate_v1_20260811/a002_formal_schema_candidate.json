@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "V11-CF05-E3-A001-A002-STRICT-PARAMETER-GATE-V1-20260811",
+  "tool_id": "A002",
+  "candidate_status": "contract_aligned_formal_schema_candidate",
+  "source_contract_id": "VC-A002-1.0.0",
+  "source_contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d",
+  "formal_catalog_mutated": false,
+  "changes": [
+    "additionalProperties set to false",
+    "parameter evidence description tightened"
+  ],
+  "openai_tool": {
+    "type": "function",
+    "function": {
+      "name": "A002",
+      "description": "化学式解析；功能：化学式词法解析、括号展开、元素计数；输入：化学式字符串；输出：元素—计量数字典、解析警告；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "type": "string",
+            "description": "请求中显式给出的中性化学式；必须逐字符一致并通过冻结的完整词法消费规则"
+          }
+        },
+        "required": [
+          "formula"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

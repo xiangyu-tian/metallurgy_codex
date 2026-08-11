@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "V11-CF05-E3-A001-A002-STRICT-PARAMETER-GATE-V1-20260811",
+  "analysis_status": "development_audit_and_strict_gate_replay_complete",
+  "cell_count": 32,
+  "unique_task_count": 4,
+  "legacy_parameters_correct_count": 32,
+  "strict_parameter_evidence_fidelity_count": 32,
+  "execution_ready_count": 32,
+  "review_required_count": 0,
+  "by_tool": {
+    "A001": {
+      "cell_count": 16,
+      "unique_task_count": 2,
+      "legacy_parameters_correct_count": 16,
+      "strict_parameter_evidence_fidelity_count": 16,
+      "execution_ready_count": 16
+    },
+    "A002": {
+      "cell_count": 16,
+      "unique_task_count": 2,
+      "legacy_parameters_correct_count": 16,
+      "strict_parameter_evidence_fidelity_count": 16,
+      "execution_ready_count": 16
+    }
+  },
+  "challenge_case_count": 16,
+  "challenge_passed_count": 16,
+  "challenge_categories": {
+    "exact_request_grounding": 2,
+    "request_argument_mismatch": 3,
+    "missing_required_parameter": 2,
+    "unknown_parameter": 2,
+    "outside_verified_contract": 2,
+    "wrong_tool": 2,
+    "unparseable_request": 2,
+    "valid_nested_formula": 1
+  },
+  "schema_contract_findings": {
+    "A001": {
+      "required_parameters_match_contract": true,
+      "source_additional_properties_explicitly_false": false,
+      "source_default_parameters": {}
+    },
+    "A002": {
+      "required_parameters_match_contract": true,
+      "source_additional_properties_explicitly_false": false,
+      "source_default_parameters": {}
+    }
+  },
+  "runtime_mutation_required": false,
+  "gold_used_during_decision": false,
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "formal_catalog_mutated": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "interpretation": "All observed calls across four unique development tasks are request-grounded and contract-ready. This is implementation evidence, not broad task-distribution evidence; remaining hardening is a formal-schema additionalProperties closure plus deterministic request and capability gating."
+}

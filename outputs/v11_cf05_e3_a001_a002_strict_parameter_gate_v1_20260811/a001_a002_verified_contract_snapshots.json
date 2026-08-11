@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "tools": {
+    "A001": {
+      "contract_id": "VC-A001-1.0.0",
+      "tool_id": "A001",
+      "tool_version": "1.0.0",
+      "tool_status": "verified_core",
+      "scientific_family": "通用数据与校验",
+      "scientific_function": "同量纲标量单位换算",
+      "required_inputs": [
+        "value",
+        "source_unit",
+        "target_unit"
+      ],
+      "optional_inputs": [],
+      "input_units": {
+        "value": "由 source_unit 声明"
+      },
+      "output_contract": {
+        "value": "target = source × conversion_factor + conversion_offset",
+        "conversion_factor": "源单位 SI 因子 / 目标单位 SI 因子",
+        "conversion_offset": "源值为 0 时的目标值",
+        "category": "注册表量纲类别"
+      },
+      "supported_systems": [
+        "SI",
+        "contract_verified_non_SI_subset"
+      ],
+      "composition_constraints": [],
+      "model_assumptions": [
+        "输入为有限标量",
+        "源单位和目标单位量纲一致"
+      ],
+      "data_or_model_version": "a001-unit-registry-1.0.0",
+      "service_status": "available",
+      "validation_rules": [
+        "只在 verification_scope.unit_pairs 内生成确认性任务",
+        "量纲不一致必须失败",
+        "未知单位必须失败",
+        "仿射温标必须同时返回乘法因子和偏移量"
+      ],
+      "reference_sources": [
+        {
+          "source_id": "BIPM-SI-9",
+          "title": "The International System of Units, 9th edition",
+          "url": "https://www.bipm.org/en/publications/si-brochure"
+        },
+        {
+          "source_id": "NIST-SP811",
+          "title": "NIST Guide for the Use of the International System of Units",
+          "url": "https://www.nist.gov/pml/special-publication-811"
+        }
+      ],
+      "verification_scope": {
+        "unit_pairs": [
+          [
+            "kg",
+            "g"
+          ],
+          [
+            "t",
+            "kg"
+          ],
+          [
+            "m",
+            "mm"
+          ],
+          [
+            "MPa",
+            "Pa"
+          ],
+          [
+            "atm",
+            "Pa"
+          ],
+          [
+            "kJ",
+            "J"
+          ],
+          [
+            "°C",
+            "K"
+          ],
+          [
+            "°F",
+            "°C"
+          ]
+        ],
+        "numeric_domain": "finite IEEE-754 values that do not overflow the target representation"
+      },
+      "known_limitations": [
+        "注册表中的其他单位尚未进入本批独立参考覆盖",
+        "合理值边界告警不是数值正确性的证明"
+      ],
+      "contract_version": "1.0",
+      "contract_hash": "9813ec8a16776821e8ffa51d9c29c73df5e883563fd3eb821fba09bc992a3e29"
+    },
+    "A002": {
+      "contract_id": "VC-A002-1.0.0",
+      "tool_id": "A002",
+      "tool_version": "1.0.0",
+      "tool_status": "verified_core",
+      "scientific_family": "通用数据与校验",
+      "scientific_function": "受限中性化学式的元素计量解析",
+      "required_inputs": [
+        "formula"
+      ],
+      "optional_inputs": [],
+      "input_units": {},
+      "output_contract": {
+        "elements": "元素符号到正计量数的映射",
+        "molar_mass": "按冻结原子量快照计算的 g/mol 数值",
+        "mass_fractions": "各元素质量贡献 / 总摩尔质量"
+      },
+      "supported_systems": [
+        "neutral_formula_grammar_v1"
+      ],
+      "composition_constraints": [
+        "所有显式计量数必须大于 0"
+      ],
+      "model_assumptions": [
+        "元素符号使用 IUPAC 大小写",
+        "括号必须成对且非空"
+      ],
+      "data_or_model_version": "neutral-formula-grammar-v1",
+      "service_status": "available",
+      "validation_rules": [
+        "词法分析必须完整消费输入",
+        "支持圆括号、方括号和花括号嵌套",
+        "拒绝未知元素、前置系数、空括号、零或负计量数"
+      ],
+      "reference_sources": [
+        {
+          "source_id": "IUPAC-ELEMENTS",
+          "title": "IUPAC Periodic Table of Elements",
+          "url": "https://iupac.org/what-we-do/periodic-table-of-elements/"
+        }
+      ],
+      "verification_scope": {
+        "grammar": "sequence := (element [positive_number] | bracketed_group [positive_number])+",
+        "brackets": [
+          "()",
+          "[]",
+          "{}"
+        ],
+        "number_format": "positive integer or unsigned decimal",
+        "elements": "symbols present in the frozen atomic-weight table"
+      },
+      "known_limitations": [
+        "不支持水合物点号、离子电荷、同位素、相态、反应系数和加合物语法",
+        "语法可解析不等于化合物在物理上存在"
+      ],
+      "contract_version": "1.0",
+      "contract_hash": "339026b71b23b787c1f57e10e0bf1ba42940eeaf3fa5dbd09d3986c2327acb5d"
+    }
+  }
+}
