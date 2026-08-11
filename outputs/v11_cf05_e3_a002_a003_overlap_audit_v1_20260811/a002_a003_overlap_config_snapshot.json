@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF05-E3-A002-A003-OVERLAP-AUDIT-V1-20260811",
+  "development_only": true,
+  "source_tool_id": "A002",
+  "target_tool_id": "A003",
+  "expected_task_count": 12,
+  "primary_direct_acceptance_requires_explicit_unit": true,
+  "alternative_success_allows_verified_contract_implied_unit": true,
+  "local_deterministic_tool_execution_allowed": true,
+  "external_api_calls_allowed": false,
+  "automatic_retry_allowed": false,
+  "formal_catalog_mutation_allowed": false,
+  "formal_gold_mutation_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "a003_task_registry": {
+      "path": "outputs/v11_cf05_e3_a003_task_gold_revalidation_v1_20260809/a003_task_acceptable_tools_registry.json",
+      "sha256": "bf481d4f98ca8627af4059509b5f54d54f6b9aab9c9e70d45bc1fd86cc5b49ec"
+    },
+    "a003_task_registry_manifest": {
+      "path": "outputs/v11_cf05_e3_a003_task_gold_revalidation_v1_20260809/artifact_manifest.json",
+      "sha256": "fa60ab298d43506e933e41de97a9f03befa9a897c4cb5a3f1f3506df85c0bdd0"
+    },
+    "schema_catalog": {
+      "path": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803/e3_schema_catalog_v1_candidate.json",
+      "sha256": "78de613f974d1ee48d5e2afa8a379b534a1e28a5b6749d9fc75f015aff6dd4f6"
+    },
+    "verified_contracts": {
+      "path": "Tools/core_freeze/verified_core/contracts_v1.json",
+      "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"
+    },
+    "runtime_source": {
+      "path": "Tools/models_core/models_a.py",
+      "sha256": "4de1fa8779bbbb0a76b094fd24e05a8f769bfbce67d953c9094927d0a30389e1"
+    }
+  }
+}

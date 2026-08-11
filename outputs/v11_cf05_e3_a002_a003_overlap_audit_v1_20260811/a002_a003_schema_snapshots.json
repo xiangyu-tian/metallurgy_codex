@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "tools": {
+    "A002": {
+      "tool_id": "A002",
+      "semantic_alias": "parse_chemical_formula",
+      "tool_name": "化学式解析",
+      "scenario": "通用数据与校验",
+      "tool_type": "确定性公式/规则",
+      "core_method": "化学式词法解析、括号展开、元素计数",
+      "main_input": "化学式字符串",
+      "main_output": "元素—计量数字典、解析警告",
+      "applicable_boundary_risk": "仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "priority": "P0",
+      "source_row": 3,
+      "lifecycle_status": "verified_executable_core",
+      "schema_fidelity": "runtime_parameter_schema",
+      "formal_execution_allowed": true,
+      "formal_target_allowed": true,
+      "family_review_status": "provisionally_independent",
+      "family_group_id": null,
+      "api_visible_lifecycle_label": false,
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "A002",
+          "description": "化学式解析；功能：化学式词法解析、括号展开、元素计数；输入：化学式字符串；输出：元素—计量数字典、解析警告；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "formula": {
+                "type": "string",
+                "description": "化学式；示例: 如 Fe2(SO4)3, CaCO3, Mg(OH)2"
+              }
+            },
+            "required": [
+              "formula"
+            ]
+          }
+        }
+      }
+    },
+    "A003": {
+      "tool_id": "A003",
+      "semantic_alias": "calc_molar_mass",
+      "tool_name": "摩尔质量计算",
+      "scenario": "通用数据与校验",
+      "tool_type": "确定性公式/规则",
+      "core_method": "元素原子量加权求和",
+      "main_input": "化学式/元素组成",
+      "main_output": "摩尔质量",
+      "applicable_boundary_risk": "仅在显式输入范围和单位体系内使用；超界必须返回警告",
+      "priority": "P0",
+      "source_row": 4,
+      "lifecycle_status": "verified_executable_core",
+      "schema_fidelity": "runtime_parameter_schema",
+      "formal_execution_allowed": true,
+      "formal_target_allowed": true,
+      "family_review_status": "provisionally_independent",
+      "family_group_id": null,
+      "api_visible_lifecycle_label": false,
+      "openai_tool": {
+        "type": "function",
+        "function": {
+          "name": "A003",
+          "description": "摩尔质量计算；功能：元素原子量加权求和；输入：化学式/元素组成；输出：摩尔质量；适用边界：仅在显式输入范围和单位体系内使用；超界必须返回警告",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "formula": {
+                "type": "string",
+                "description": "化学式；示例: 如 Fe2O3, H2SO4, CaCO3"
+              }
+            },
+            "required": [
+              "formula"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

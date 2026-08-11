@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF05-E3-A002-A003-OVERLAP-AUDIT-V1-20260811",
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "filename": "a002_a003_contract_snapshots.json",
+      "sha256": "46d9abf3d1d308f73d846d46e121f9ee2a4b16b0bcdf8f9979c03bd1718c2c4e",
+      "bytes": 4615
+    },
+    {
+      "filename": "a002_a003_family_relation_candidate.json",
+      "sha256": "a395e07c65ae15bd5f915fc6a11e5280c7a63c5eaa1a0b03caccf09997af2256",
+      "bytes": 791
+    },
+    {
+      "filename": "a002_a003_overlap_audit_report.json",
+      "sha256": "1a887f2ae48d834c209e5a1f60b3fc72185cc9b5a11143f476b8710de68d5400",
+      "bytes": 1098
+    },
+    {
+      "filename": "a002_a003_overlap_config_snapshot.json",
+      "sha256": "4856c90cc67979027861d3099080525c859368af2ab07a3fd1aa728d8c291b22",
+      "bytes": 1708
+    },
+    {
+      "filename": "a002_a003_per_task_execution_audit.json",
+      "sha256": "201d1b47b568056bd99f855dc7dcc4f7b237f71540c7bb2b0a104e571d319c6d",
+      "bytes": 22243
+    },
+    {
+      "filename": "a002_a003_schema_snapshots.json",
+      "sha256": "4551929f1ff58e8e09a675c347f56cc56a5c58c1a4171ddc069b6193ef20c140",
+      "bytes": 3259
+    },
+    {
+      "filename": "a003_acceptable_tools_rc2_candidate.json",
+      "sha256": "36f7333478f98d1ee85c98a7f32822fbcd6fdb4b254eeedab4a1a66f5e9c0cd7",
+      "bytes": 26764
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF05-E3-A002-A003-OVERLAP-AUDIT-V1-20260811",
+  "tool_pair": [
+    "A002",
+    "A003"
+  ],
+  "relation_type": "asymmetric_output_overlap",
+  "shared_input_contract": [
+    "formula"
+  ],
+  "shared_scientific_output": [
+    "molar_mass"
+  ],
+  "a002_additional_outputs": [
+    "elements",
+    "mass_fractions"
+  ],
+  "a003_additional_outputs": [
+    "unit"
+  ],
+  "direction": "A002 can numerically satisfy A003 tasks; A003 cannot satisfy A002 element-count tasks",
+  "independent_tool_count_recommendation": "do_not_count_as_independent_until_family_governance_review",
+  "h3_role_recommendation": "asymmetric_overlap_or_alternative_success_case_not_symmetric_near_neighbor_gold",
+  "formal_catalog_mutated": false
+}

@@ -1,0 +1,745 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "task_id": "E1B2-A003-001",
+      "formula": "Fe2O3",
+      "expected_molar_mass": 159.687,
+      "absolute_tolerance": 0.0001,
+      "relative_tolerance": 0.0,
+      "evaluations": {
+        "A002": {
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "Fe": 2.0,
+                "O": 3.0
+              },
+              "element_count": 2,
+              "total_atoms": 5.0,
+              "molar_mass": 159.687,
+              "mass_fractions": {
+                "Fe": 0.699431,
+                "O": 0.300569
+              },
+              "formula_display": "Fe2O3",
+              "is_stoichiometric": true
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 159.687,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.0001,
+          "numeric_passed": true,
+          "explicit_unit": null,
+          "contract_implies_g_per_mol": true,
+          "primary_direct_acceptable": false,
+          "alternative_success": true
+        },
+        "A003": {
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 159.687,
+              "formula": "Fe2O3",
+              "unit": "g/mol"
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 159.687,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.0001,
+          "numeric_passed": true,
+          "explicit_unit": "g/mol",
+          "contract_implies_g_per_mol": false,
+          "primary_direct_acceptable": true,
+          "alternative_success": true
+        }
+      },
+      "a002_a003_numeric_equal": true
+    },
+    {
+      "task_id": "E1B2-A003-002",
+      "formula": "Fe2O3",
+      "expected_molar_mass": 159.687,
+      "absolute_tolerance": 0.1,
+      "relative_tolerance": 0.0,
+      "evaluations": {
+        "A002": {
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "Fe": 2.0,
+                "O": 3.0
+              },
+              "element_count": 2,
+              "total_atoms": 5.0,
+              "molar_mass": 159.687,
+              "mass_fractions": {
+                "Fe": 0.699431,
+                "O": 0.300569
+              },
+              "formula_display": "Fe2O3",
+              "is_stoichiometric": true
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 159.687,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.1,
+          "numeric_passed": true,
+          "explicit_unit": null,
+          "contract_implies_g_per_mol": true,
+          "primary_direct_acceptable": false,
+          "alternative_success": true
+        },
+        "A003": {
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 159.687,
+              "formula": "Fe2O3",
+              "unit": "g/mol"
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 159.687,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.1,
+          "numeric_passed": true,
+          "explicit_unit": "g/mol",
+          "contract_implies_g_per_mol": false,
+          "primary_direct_acceptable": true,
+          "alternative_success": true
+        }
+      },
+      "a002_a003_numeric_equal": true
+    },
+    {
+      "task_id": "E1B2-A003-003",
+      "formula": "H2SO4",
+      "expected_molar_mass": 98.072,
+      "absolute_tolerance": 0.0001,
+      "relative_tolerance": 0.0,
+      "evaluations": {
+        "A002": {
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "H": 2.0,
+                "S": 1.0,
+                "O": 4.0
+              },
+              "element_count": 3,
+              "total_atoms": 7.0,
+              "molar_mass": 98.072,
+              "mass_fractions": {
+                "H": 0.020556,
+                "S": 0.326903,
+                "O": 0.652541
+              },
+              "formula_display": "H2SO4",
+              "is_stoichiometric": true
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 98.072,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.0001,
+          "numeric_passed": true,
+          "explicit_unit": null,
+          "contract_implies_g_per_mol": true,
+          "primary_direct_acceptable": false,
+          "alternative_success": true
+        },
+        "A003": {
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 98.072,
+              "formula": "H2SO4",
+              "unit": "g/mol"
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 98.072,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.0001,
+          "numeric_passed": true,
+          "explicit_unit": "g/mol",
+          "contract_implies_g_per_mol": false,
+          "primary_direct_acceptable": true,
+          "alternative_success": true
+        }
+      },
+      "a002_a003_numeric_equal": true
+    },
+    {
+      "task_id": "E1B2-A003-004",
+      "formula": "H2SO4",
+      "expected_molar_mass": 98.072,
+      "absolute_tolerance": 0.1,
+      "relative_tolerance": 0.0,
+      "evaluations": {
+        "A002": {
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "H": 2.0,
+                "S": 1.0,
+                "O": 4.0
+              },
+              "element_count": 3,
+              "total_atoms": 7.0,
+              "molar_mass": 98.072,
+              "mass_fractions": {
+                "H": 0.020556,
+                "S": 0.326903,
+                "O": 0.652541
+              },
+              "formula_display": "H2SO4",
+              "is_stoichiometric": true
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 98.072,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.1,
+          "numeric_passed": true,
+          "explicit_unit": null,
+          "contract_implies_g_per_mol": true,
+          "primary_direct_acceptable": false,
+          "alternative_success": true
+        },
+        "A003": {
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 98.072,
+              "formula": "H2SO4",
+              "unit": "g/mol"
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 98.072,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.1,
+          "numeric_passed": true,
+          "explicit_unit": "g/mol",
+          "contract_implies_g_per_mol": false,
+          "primary_direct_acceptable": true,
+          "alternative_success": true
+        }
+      },
+      "a002_a003_numeric_equal": true
+    },
+    {
+      "task_id": "E1B2-A003-005",
+      "formula": "CaCO3",
+      "expected_molar_mass": 100.086,
+      "absolute_tolerance": 0.0001,
+      "relative_tolerance": 0.0,
+      "evaluations": {
+        "A002": {
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "Ca": 1.0,
+                "C": 1.0,
+                "O": 3.0
+              },
+              "element_count": 3,
+              "total_atoms": 5.0,
+              "molar_mass": 100.086,
+              "mass_fractions": {
+                "Ca": 0.400436,
+                "C": 0.120007,
+                "O": 0.479558
+              },
+              "formula_display": "CaCO3",
+              "is_stoichiometric": true
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 100.086,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.0001,
+          "numeric_passed": true,
+          "explicit_unit": null,
+          "contract_implies_g_per_mol": true,
+          "primary_direct_acceptable": false,
+          "alternative_success": true
+        },
+        "A003": {
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 100.086,
+              "formula": "CaCO3",
+              "unit": "g/mol"
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 100.086,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.0001,
+          "numeric_passed": true,
+          "explicit_unit": "g/mol",
+          "contract_implies_g_per_mol": false,
+          "primary_direct_acceptable": true,
+          "alternative_success": true
+        }
+      },
+      "a002_a003_numeric_equal": true
+    },
+    {
+      "task_id": "E1B2-A003-006",
+      "formula": "CaCO3",
+      "expected_molar_mass": 100.086,
+      "absolute_tolerance": 0.1,
+      "relative_tolerance": 0.0,
+      "evaluations": {
+        "A002": {
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "Ca": 1.0,
+                "C": 1.0,
+                "O": 3.0
+              },
+              "element_count": 3,
+              "total_atoms": 5.0,
+              "molar_mass": 100.086,
+              "mass_fractions": {
+                "Ca": 0.400436,
+                "C": 0.120007,
+                "O": 0.479558
+              },
+              "formula_display": "CaCO3",
+              "is_stoichiometric": true
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 100.086,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.1,
+          "numeric_passed": true,
+          "explicit_unit": null,
+          "contract_implies_g_per_mol": true,
+          "primary_direct_acceptable": false,
+          "alternative_success": true
+        },
+        "A003": {
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 100.086,
+              "formula": "CaCO3",
+              "unit": "g/mol"
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 100.086,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.1,
+          "numeric_passed": true,
+          "explicit_unit": "g/mol",
+          "contract_implies_g_per_mol": false,
+          "primary_direct_acceptable": true,
+          "alternative_success": true
+        }
+      },
+      "a002_a003_numeric_equal": true
+    },
+    {
+      "task_id": "E1B2-A003-007",
+      "formula": "Fe3O4",
+      "expected_molar_mass": 231.531,
+      "absolute_tolerance": 0.0001,
+      "relative_tolerance": 0.0,
+      "evaluations": {
+        "A002": {
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "Fe": 3.0,
+                "O": 4.0
+              },
+              "element_count": 2,
+              "total_atoms": 7.0,
+              "molar_mass": 231.531,
+              "mass_fractions": {
+                "Fe": 0.723596,
+                "O": 0.276404
+              },
+              "formula_display": "Fe3O4",
+              "is_stoichiometric": true
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 231.531,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.0001,
+          "numeric_passed": true,
+          "explicit_unit": null,
+          "contract_implies_g_per_mol": true,
+          "primary_direct_acceptable": false,
+          "alternative_success": true
+        },
+        "A003": {
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 231.531,
+              "formula": "Fe3O4",
+              "unit": "g/mol"
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 231.531,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.0001,
+          "numeric_passed": true,
+          "explicit_unit": "g/mol",
+          "contract_implies_g_per_mol": false,
+          "primary_direct_acceptable": true,
+          "alternative_success": true
+        }
+      },
+      "a002_a003_numeric_equal": true
+    },
+    {
+      "task_id": "E1B2-A003-008",
+      "formula": "Fe3O4",
+      "expected_molar_mass": 231.531,
+      "absolute_tolerance": 0.1,
+      "relative_tolerance": 0.0,
+      "evaluations": {
+        "A002": {
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "Fe": 3.0,
+                "O": 4.0
+              },
+              "element_count": 2,
+              "total_atoms": 7.0,
+              "molar_mass": 231.531,
+              "mass_fractions": {
+                "Fe": 0.723596,
+                "O": 0.276404
+              },
+              "formula_display": "Fe3O4",
+              "is_stoichiometric": true
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 231.531,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.1,
+          "numeric_passed": true,
+          "explicit_unit": null,
+          "contract_implies_g_per_mol": true,
+          "primary_direct_acceptable": false,
+          "alternative_success": true
+        },
+        "A003": {
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 231.531,
+              "formula": "Fe3O4",
+              "unit": "g/mol"
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 231.531,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.1,
+          "numeric_passed": true,
+          "explicit_unit": "g/mol",
+          "contract_implies_g_per_mol": false,
+          "primary_direct_acceptable": true,
+          "alternative_success": true
+        }
+      },
+      "a002_a003_numeric_equal": true
+    },
+    {
+      "task_id": "E1B2-A003-009",
+      "formula": "CuSO4",
+      "expected_molar_mass": 159.602,
+      "absolute_tolerance": 0.0001,
+      "relative_tolerance": 0.0,
+      "evaluations": {
+        "A002": {
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "Cu": 1.0,
+                "S": 1.0,
+                "O": 4.0
+              },
+              "element_count": 3,
+              "total_atoms": 6.0,
+              "molar_mass": 159.602,
+              "mass_fractions": {
+                "Cu": 0.398153,
+                "S": 0.200875,
+                "O": 0.400972
+              },
+              "formula_display": "CuSO4",
+              "is_stoichiometric": true
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 159.602,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.0001,
+          "numeric_passed": true,
+          "explicit_unit": null,
+          "contract_implies_g_per_mol": true,
+          "primary_direct_acceptable": false,
+          "alternative_success": true
+        },
+        "A003": {
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 159.602,
+              "formula": "CuSO4",
+              "unit": "g/mol"
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 159.602,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.0001,
+          "numeric_passed": true,
+          "explicit_unit": "g/mol",
+          "contract_implies_g_per_mol": false,
+          "primary_direct_acceptable": true,
+          "alternative_success": true
+        }
+      },
+      "a002_a003_numeric_equal": true
+    },
+    {
+      "task_id": "E1B2-A003-010",
+      "formula": "CuSO4",
+      "expected_molar_mass": 159.602,
+      "absolute_tolerance": 0.1,
+      "relative_tolerance": 0.0,
+      "evaluations": {
+        "A002": {
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "Cu": 1.0,
+                "S": 1.0,
+                "O": 4.0
+              },
+              "element_count": 3,
+              "total_atoms": 6.0,
+              "molar_mass": 159.602,
+              "mass_fractions": {
+                "Cu": 0.398153,
+                "S": 0.200875,
+                "O": 0.400972
+              },
+              "formula_display": "CuSO4",
+              "is_stoichiometric": true
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 159.602,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.1,
+          "numeric_passed": true,
+          "explicit_unit": null,
+          "contract_implies_g_per_mol": true,
+          "primary_direct_acceptable": false,
+          "alternative_success": true
+        },
+        "A003": {
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 159.602,
+              "formula": "CuSO4",
+              "unit": "g/mol"
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 159.602,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.1,
+          "numeric_passed": true,
+          "explicit_unit": "g/mol",
+          "contract_implies_g_per_mol": false,
+          "primary_direct_acceptable": true,
+          "alternative_success": true
+        }
+      },
+      "a002_a003_numeric_equal": true
+    },
+    {
+      "task_id": "E1B2-A003-011",
+      "formula": "(NH4)2SO4",
+      "expected_molar_mass": 132.134,
+      "absolute_tolerance": 0.0001,
+      "relative_tolerance": 0.0,
+      "evaluations": {
+        "A002": {
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "N": 2.0,
+                "H": 8.0,
+                "S": 1.0,
+                "O": 4.0
+              },
+              "element_count": 4,
+              "total_atoms": 15.0,
+              "molar_mass": 132.134,
+              "mass_fractions": {
+                "N": 0.212012,
+                "H": 0.061029,
+                "S": 0.242632,
+                "O": 0.484327
+              },
+              "formula_display": "(NH4)2SO4",
+              "is_stoichiometric": true
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 132.134,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.0001,
+          "numeric_passed": true,
+          "explicit_unit": null,
+          "contract_implies_g_per_mol": true,
+          "primary_direct_acceptable": false,
+          "alternative_success": true
+        },
+        "A003": {
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 132.134,
+              "formula": "(NH4)2SO4",
+              "unit": "g/mol"
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 132.134,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.0001,
+          "numeric_passed": true,
+          "explicit_unit": "g/mol",
+          "contract_implies_g_per_mol": false,
+          "primary_direct_acceptable": true,
+          "alternative_success": true
+        }
+      },
+      "a002_a003_numeric_equal": true
+    },
+    {
+      "task_id": "E1B2-A003-012",
+      "formula": "(NH4)2SO4",
+      "expected_molar_mass": 132.134,
+      "absolute_tolerance": 0.1,
+      "relative_tolerance": 0.0,
+      "evaluations": {
+        "A002": {
+          "execution": {
+            "success": true,
+            "result": {
+              "elements": {
+                "N": 2.0,
+                "H": 8.0,
+                "S": 1.0,
+                "O": 4.0
+              },
+              "element_count": 4,
+              "total_atoms": 15.0,
+              "molar_mass": 132.134,
+              "mass_fractions": {
+                "N": 0.212012,
+                "H": 0.061029,
+                "S": 0.242632,
+                "O": 0.484327
+              },
+              "formula_display": "(NH4)2SO4",
+              "is_stoichiometric": true
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 132.134,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.1,
+          "numeric_passed": true,
+          "explicit_unit": null,
+          "contract_implies_g_per_mol": true,
+          "primary_direct_acceptable": false,
+          "alternative_success": true
+        },
+        "A003": {
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 132.134,
+              "formula": "(NH4)2SO4",
+              "unit": "g/mol"
+            },
+            "error": null,
+            "error_code": null
+          },
+          "molar_mass": 132.134,
+          "absolute_error": 0.0,
+          "effective_tolerance": 0.1,
+          "numeric_passed": true,
+          "explicit_unit": "g/mol",
+          "contract_implies_g_per_mol": false,
+          "primary_direct_acceptable": true,
+          "alternative_success": true
+        }
+      },
+      "a002_a003_numeric_equal": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF05-E3-A002-A003-OVERLAP-AUDIT-V1-20260811",
+  "audit_status": "development_overlap_audit_complete",
+  "task_count": 12,
+  "local_tool_calls_executed": 24,
+  "a002_numeric_pass_count": 12,
+  "a002_a003_numeric_equal_count": 12,
+  "a002_explicit_unit_count": 0,
+  "a002_primary_direct_acceptable_count": 0,
+  "a002_alternative_success_count": 12,
+  "primary_acceptable_sets_changed": false,
+  "alternative_success_sets_expanded": true,
+  "relation_classification": "asymmetric_output_overlap",
+  "runtime_mutation_performed": false,
+  "formal_catalog_mutated": false,
+  "formal_gold_mutated": false,
+  "external_api_calls": 0,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "interpretation": "A002 reproduces A003 molar-mass values on all frozen tasks but omits an explicit unit field. Under the frozen primary policy it remains non-primary; under verified-contract semantics it is alternative success. The pair is asymmetric overlap, not two cleanly independent tools."
+}

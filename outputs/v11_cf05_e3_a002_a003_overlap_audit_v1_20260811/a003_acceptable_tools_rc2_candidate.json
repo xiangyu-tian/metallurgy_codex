@@ -1,0 +1,906 @@
+{
+  "schema_version": "1.0",
+  "status": "candidate_not_formal_gold",
+  "tasks": [
+    {
+      "task_id": "E1B2-A003-001",
+      "target_tool_id": "A003",
+      "problem_text": "使用冻结原子量（Fe=55.845，O=15.999）计算 Fe2O3 的摩尔质量。按上述原子量计算并保留4位小数。",
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 159.687,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A003"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A003"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C004",
+          "input": {
+            "formula": "Fe2O3"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 159.6882,
+              "unit": "g/mol"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "expected_molar_mass": 159.687,
+          "absolute_tolerance": 0.0001,
+          "relative_tolerance": 0.0,
+          "effective_tolerance": 0.0001,
+          "candidate_molar_mass": 159.6882,
+          "absolute_error": 0.0011999999999829924,
+          "unit_matches": true,
+          "directly_acceptable": false
+        }
+      ],
+      "derived_or_multi_step_tools_primary_acceptable": false,
+      "derived_or_multi_step_neighbor_ids": [
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "alternative_success_must_be_reported": true,
+      "primary_acceptable_tools_rc2_candidate": [
+        "A003"
+      ],
+      "alternative_success_tools_rc2_candidate": [
+        "A002",
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "a002_primary_exclusion_reason": "runtime_payload_omits_explicit_unit_required_by_primary_policy",
+      "formal_gold_mutated": false
+    },
+    {
+      "task_id": "E1B2-A003-002",
+      "target_tool_id": "A003",
+      "problem_text": "使用冻结原子量（Fe=55.845，O=15.999）计算 Fe2O3 的摩尔质量。给出近似结果，允许绝对误差不超过0.1 g/mol。",
+      "canonical_inputs": {
+        "formula": "Fe2O3"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 159.687,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A003"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C004",
+          "input": {
+            "formula": "Fe2O3"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 159.6882,
+              "unit": "g/mol"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "expected_molar_mass": 159.687,
+          "absolute_tolerance": 0.1,
+          "relative_tolerance": 0.0,
+          "effective_tolerance": 0.1,
+          "candidate_molar_mass": 159.6882,
+          "absolute_error": 0.0011999999999829924,
+          "unit_matches": true,
+          "directly_acceptable": true
+        }
+      ],
+      "derived_or_multi_step_tools_primary_acceptable": false,
+      "derived_or_multi_step_neighbor_ids": [
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "alternative_success_must_be_reported": true,
+      "primary_acceptable_tools_rc2_candidate": [
+        "A003",
+        "E3C004"
+      ],
+      "alternative_success_tools_rc2_candidate": [
+        "A002",
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "a002_primary_exclusion_reason": "runtime_payload_omits_explicit_unit_required_by_primary_policy",
+      "formal_gold_mutated": false
+    },
+    {
+      "task_id": "E1B2-A003-003",
+      "target_tool_id": "A003",
+      "problem_text": "使用冻结原子量（H=1.008，S=32.06，O=15.999）计算 H2SO4 的摩尔质量。按上述原子量计算并保留4位小数。",
+      "canonical_inputs": {
+        "formula": "H2SO4"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 98.072,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A003"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A003"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C004",
+          "input": {
+            "formula": "H2SO4"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 98.07848,
+              "unit": "g/mol"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "expected_molar_mass": 98.072,
+          "absolute_tolerance": 0.0001,
+          "relative_tolerance": 0.0,
+          "effective_tolerance": 0.0001,
+          "candidate_molar_mass": 98.07848,
+          "absolute_error": 0.0064799999999962665,
+          "unit_matches": true,
+          "directly_acceptable": false
+        }
+      ],
+      "derived_or_multi_step_tools_primary_acceptable": false,
+      "derived_or_multi_step_neighbor_ids": [
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "alternative_success_must_be_reported": true,
+      "primary_acceptable_tools_rc2_candidate": [
+        "A003"
+      ],
+      "alternative_success_tools_rc2_candidate": [
+        "A002",
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "a002_primary_exclusion_reason": "runtime_payload_omits_explicit_unit_required_by_primary_policy",
+      "formal_gold_mutated": false
+    },
+    {
+      "task_id": "E1B2-A003-004",
+      "target_tool_id": "A003",
+      "problem_text": "使用冻结原子量（H=1.008，S=32.06，O=15.999）计算 H2SO4 的摩尔质量。给出近似结果，允许绝对误差不超过0.1 g/mol。",
+      "canonical_inputs": {
+        "formula": "H2SO4"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 98.072,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A003"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C004",
+          "input": {
+            "formula": "H2SO4"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 98.07848,
+              "unit": "g/mol"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "expected_molar_mass": 98.072,
+          "absolute_tolerance": 0.1,
+          "relative_tolerance": 0.0,
+          "effective_tolerance": 0.1,
+          "candidate_molar_mass": 98.07848,
+          "absolute_error": 0.0064799999999962665,
+          "unit_matches": true,
+          "directly_acceptable": true
+        }
+      ],
+      "derived_or_multi_step_tools_primary_acceptable": false,
+      "derived_or_multi_step_neighbor_ids": [
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "alternative_success_must_be_reported": true,
+      "primary_acceptable_tools_rc2_candidate": [
+        "A003",
+        "E3C004"
+      ],
+      "alternative_success_tools_rc2_candidate": [
+        "A002",
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "a002_primary_exclusion_reason": "runtime_payload_omits_explicit_unit_required_by_primary_policy",
+      "formal_gold_mutated": false
+    },
+    {
+      "task_id": "E1B2-A003-005",
+      "target_tool_id": "A003",
+      "problem_text": "使用冻结原子量（Ca=40.078，C=12.011，O=15.999）计算 CaCO3 的摩尔质量。按上述原子量计算并保留4位小数。",
+      "canonical_inputs": {
+        "formula": "CaCO3"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 100.086,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A003"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A003"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C004",
+          "input": {
+            "formula": "CaCO3"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 100.0869,
+              "unit": "g/mol"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "expected_molar_mass": 100.086,
+          "absolute_tolerance": 0.0001,
+          "relative_tolerance": 0.0,
+          "effective_tolerance": 0.0001,
+          "candidate_molar_mass": 100.0869,
+          "absolute_error": 0.0009000000000014552,
+          "unit_matches": true,
+          "directly_acceptable": false
+        }
+      ],
+      "derived_or_multi_step_tools_primary_acceptable": false,
+      "derived_or_multi_step_neighbor_ids": [
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "alternative_success_must_be_reported": true,
+      "primary_acceptable_tools_rc2_candidate": [
+        "A003"
+      ],
+      "alternative_success_tools_rc2_candidate": [
+        "A002",
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "a002_primary_exclusion_reason": "runtime_payload_omits_explicit_unit_required_by_primary_policy",
+      "formal_gold_mutated": false
+    },
+    {
+      "task_id": "E1B2-A003-006",
+      "target_tool_id": "A003",
+      "problem_text": "使用冻结原子量（Ca=40.078，C=12.011，O=15.999）计算 CaCO3 的摩尔质量。给出近似结果，允许绝对误差不超过0.1 g/mol。",
+      "canonical_inputs": {
+        "formula": "CaCO3"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 100.086,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A003"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C004",
+          "input": {
+            "formula": "CaCO3"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 100.0869,
+              "unit": "g/mol"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "expected_molar_mass": 100.086,
+          "absolute_tolerance": 0.1,
+          "relative_tolerance": 0.0,
+          "effective_tolerance": 0.1,
+          "candidate_molar_mass": 100.0869,
+          "absolute_error": 0.0009000000000014552,
+          "unit_matches": true,
+          "directly_acceptable": true
+        }
+      ],
+      "derived_or_multi_step_tools_primary_acceptable": false,
+      "derived_or_multi_step_neighbor_ids": [
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "alternative_success_must_be_reported": true,
+      "primary_acceptable_tools_rc2_candidate": [
+        "A003",
+        "E3C004"
+      ],
+      "alternative_success_tools_rc2_candidate": [
+        "A002",
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "a002_primary_exclusion_reason": "runtime_payload_omits_explicit_unit_required_by_primary_policy",
+      "formal_gold_mutated": false
+    },
+    {
+      "task_id": "E1B2-A003-007",
+      "target_tool_id": "A003",
+      "problem_text": "使用冻结原子量（Fe=55.845，O=15.999）计算 Fe3O4 的摩尔质量。按上述原子量计算并保留4位小数。",
+      "canonical_inputs": {
+        "formula": "Fe3O4"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 231.531,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A003"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A003"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C004",
+          "input": {
+            "formula": "Fe3O4"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 231.5326,
+              "unit": "g/mol"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "expected_molar_mass": 231.531,
+          "absolute_tolerance": 0.0001,
+          "relative_tolerance": 0.0,
+          "effective_tolerance": 0.0001,
+          "candidate_molar_mass": 231.5326,
+          "absolute_error": 0.001599999999996271,
+          "unit_matches": true,
+          "directly_acceptable": false
+        }
+      ],
+      "derived_or_multi_step_tools_primary_acceptable": false,
+      "derived_or_multi_step_neighbor_ids": [
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "alternative_success_must_be_reported": true,
+      "primary_acceptable_tools_rc2_candidate": [
+        "A003"
+      ],
+      "alternative_success_tools_rc2_candidate": [
+        "A002",
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "a002_primary_exclusion_reason": "runtime_payload_omits_explicit_unit_required_by_primary_policy",
+      "formal_gold_mutated": false
+    },
+    {
+      "task_id": "E1B2-A003-008",
+      "target_tool_id": "A003",
+      "problem_text": "使用冻结原子量（Fe=55.845，O=15.999）计算 Fe3O4 的摩尔质量。给出近似结果，允许绝对误差不超过0.1 g/mol。",
+      "canonical_inputs": {
+        "formula": "Fe3O4"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 231.531,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A003"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C004",
+          "input": {
+            "formula": "Fe3O4"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 231.5326,
+              "unit": "g/mol"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "expected_molar_mass": 231.531,
+          "absolute_tolerance": 0.1,
+          "relative_tolerance": 0.0,
+          "effective_tolerance": 0.1,
+          "candidate_molar_mass": 231.5326,
+          "absolute_error": 0.001599999999996271,
+          "unit_matches": true,
+          "directly_acceptable": true
+        }
+      ],
+      "derived_or_multi_step_tools_primary_acceptable": false,
+      "derived_or_multi_step_neighbor_ids": [
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "alternative_success_must_be_reported": true,
+      "primary_acceptable_tools_rc2_candidate": [
+        "A003",
+        "E3C004"
+      ],
+      "alternative_success_tools_rc2_candidate": [
+        "A002",
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "a002_primary_exclusion_reason": "runtime_payload_omits_explicit_unit_required_by_primary_policy",
+      "formal_gold_mutated": false
+    },
+    {
+      "task_id": "E1B2-A003-009",
+      "target_tool_id": "A003",
+      "problem_text": "使用冻结原子量（Cu=63.546，S=32.06，O=15.999）计算 CuSO4 的摩尔质量。按上述原子量计算并保留4位小数。",
+      "canonical_inputs": {
+        "formula": "CuSO4"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 159.602,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A003"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A003"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C004",
+          "input": {
+            "formula": "CuSO4"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 159.6086,
+              "unit": "g/mol"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "expected_molar_mass": 159.602,
+          "absolute_tolerance": 0.0001,
+          "relative_tolerance": 0.0,
+          "effective_tolerance": 0.0001,
+          "candidate_molar_mass": 159.6086,
+          "absolute_error": 0.006599999999991724,
+          "unit_matches": true,
+          "directly_acceptable": false
+        }
+      ],
+      "derived_or_multi_step_tools_primary_acceptable": false,
+      "derived_or_multi_step_neighbor_ids": [
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "alternative_success_must_be_reported": true,
+      "primary_acceptable_tools_rc2_candidate": [
+        "A003"
+      ],
+      "alternative_success_tools_rc2_candidate": [
+        "A002",
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "a002_primary_exclusion_reason": "runtime_payload_omits_explicit_unit_required_by_primary_policy",
+      "formal_gold_mutated": false
+    },
+    {
+      "task_id": "E1B2-A003-010",
+      "target_tool_id": "A003",
+      "problem_text": "使用冻结原子量（Cu=63.546，S=32.06，O=15.999）计算 CuSO4 的摩尔质量。给出近似结果，允许绝对误差不超过0.1 g/mol。",
+      "canonical_inputs": {
+        "formula": "CuSO4"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 159.602,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A003"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C004",
+          "input": {
+            "formula": "CuSO4"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 159.6086,
+              "unit": "g/mol"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "expected_molar_mass": 159.602,
+          "absolute_tolerance": 0.1,
+          "relative_tolerance": 0.0,
+          "effective_tolerance": 0.1,
+          "candidate_molar_mass": 159.6086,
+          "absolute_error": 0.006599999999991724,
+          "unit_matches": true,
+          "directly_acceptable": true
+        }
+      ],
+      "derived_or_multi_step_tools_primary_acceptable": false,
+      "derived_or_multi_step_neighbor_ids": [
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "alternative_success_must_be_reported": true,
+      "primary_acceptable_tools_rc2_candidate": [
+        "A003",
+        "E3C004"
+      ],
+      "alternative_success_tools_rc2_candidate": [
+        "A002",
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "a002_primary_exclusion_reason": "runtime_payload_omits_explicit_unit_required_by_primary_policy",
+      "formal_gold_mutated": false
+    },
+    {
+      "task_id": "E1B2-A003-011",
+      "target_tool_id": "A003",
+      "problem_text": "使用冻结原子量（N=14.007，H=1.008，S=32.06，O=15.999）计算 (NH4)2SO4 的摩尔质量。按上述原子量计算并保留4位小数。",
+      "canonical_inputs": {
+        "formula": "(NH4)2SO4"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 132.134,
+            "abs_tol": 0.0001,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A003"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A003"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C004",
+          "input": {
+            "formula": "(NH4)2SO4"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 132.13952,
+              "unit": "g/mol"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "expected_molar_mass": 132.134,
+          "absolute_tolerance": 0.0001,
+          "relative_tolerance": 0.0,
+          "effective_tolerance": 0.0001,
+          "candidate_molar_mass": 132.13952,
+          "absolute_error": 0.005520000000018399,
+          "unit_matches": true,
+          "directly_acceptable": false
+        }
+      ],
+      "derived_or_multi_step_tools_primary_acceptable": false,
+      "derived_or_multi_step_neighbor_ids": [
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "alternative_success_must_be_reported": true,
+      "primary_acceptable_tools_rc2_candidate": [
+        "A003"
+      ],
+      "alternative_success_tools_rc2_candidate": [
+        "A002",
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "a002_primary_exclusion_reason": "runtime_payload_omits_explicit_unit_required_by_primary_policy",
+      "formal_gold_mutated": false
+    },
+    {
+      "task_id": "E1B2-A003-012",
+      "target_tool_id": "A003",
+      "problem_text": "使用冻结原子量（N=14.007，H=1.008，S=32.06，O=15.999）计算 (NH4)2SO4 的摩尔质量。给出近似结果，允许绝对误差不超过0.1 g/mol。",
+      "canonical_inputs": {
+        "formula": "(NH4)2SO4"
+      },
+      "scoring_rule": {
+        "rule_id": "E1B-A003-PRIMARY-v2",
+        "type": "structured_path_checks",
+        "checks": [
+          {
+            "path": "molar_mass",
+            "op": "approx",
+            "value": 132.134,
+            "abs_tol": 0.1,
+            "rel_tol": 0.0
+          }
+        ]
+      },
+      "original_acceptable_tools": [
+        "A003"
+      ],
+      "revalidated_primary_acceptable_tools": [
+        "A003",
+        "E3C004"
+      ],
+      "direct_candidate_evaluations": [
+        {
+          "candidate_tool_id": "E3C004",
+          "input": {
+            "formula": "(NH4)2SO4"
+          },
+          "execution": {
+            "success": true,
+            "result": {
+              "molar_mass": 132.13952,
+              "unit": "g/mol"
+            },
+            "error_code": null,
+            "error": null
+          },
+          "expected_molar_mass": 132.134,
+          "absolute_tolerance": 0.1,
+          "relative_tolerance": 0.0,
+          "effective_tolerance": 0.1,
+          "candidate_molar_mass": 132.13952,
+          "absolute_error": 0.005520000000018399,
+          "unit_matches": true,
+          "directly_acceptable": true
+        }
+      ],
+      "derived_or_multi_step_tools_primary_acceptable": false,
+      "derived_or_multi_step_neighbor_ids": [
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "alternative_success_must_be_reported": true,
+      "primary_acceptable_tools_rc2_candidate": [
+        "A003",
+        "E3C004"
+      ],
+      "alternative_success_tools_rc2_candidate": [
+        "A002",
+        "E3C020",
+        "E3C021",
+        "E3C023",
+        "E3C024",
+        "E3C025"
+      ],
+      "a002_primary_exclusion_reason": "runtime_payload_omits_explicit_unit_required_by_primary_policy",
+      "formal_gold_mutated": false
+    }
+  ]
+}
