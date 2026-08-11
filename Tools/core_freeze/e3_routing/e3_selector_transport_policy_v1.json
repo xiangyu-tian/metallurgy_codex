@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "V11-CF05-E3-SELECTOR-TRANSPORT-POLICY-V1-20260811",
+  "decision": "adopted_for_future_e3_selector_runs",
+  "record_type": "project_policy_record_not_cryptographic_signature",
+  "approved_at": "2026-08-11T11:43:28.5410839+08:00",
+  "approver_role": "project_owner",
+  "approval_source": "user_confirmed_continuation_after_r1_r11_paired_result",
+  "scope": "future_E3_tool_selection_development_runs_and_candidate_confirmatory_openings",
+  "wire_payload_requirements": {
+    "thinking": {"type": "disabled"},
+    "thinking_field_must_be_explicitly_present": true,
+    "selector_default_max_tokens": 256,
+    "max_tokens_change_requires_new_opening_version": true,
+    "temperature": 0,
+    "tool_choice": "auto",
+    "maximum_requested_tool_calls": 1
+  },
+  "runtime_requirements": {
+    "automatic_retry_allowed": false,
+    "metallurgy_tool_execution_allowed": false,
+    "raw_response_retention_required": true,
+    "reasoning_content_and_token_audit_required": true,
+    "finish_reason_audit_required": true,
+    "payload_sha256_required": true
+  },
+  "failure_policy": {
+    "missing_explicit_thinking_field": "reject_before_external_execution",
+    "reasoning_content_observed_when_disabled": "mark_transport_policy_violation_and_stop_interpretation",
+    "length_termination": "record_as_terminal_failure_without_retry",
+    "truncated_arguments": "record_as_terminal_end_to_end_failure_without_repair",
+    "post_hoc_overwrite_of_prior_run": "prohibited"
+  },
+  "interpretation_policy": {
+    "uncorrected_r1_allowed_use": "transport_diagnostic_only",
+    "uncorrected_r1_scale_inference_allowed": false,
+    "r11_allowed_use": "development_transport_validation",
+    "confirmatory_claim_allowed_from_r11": false
+  },
+  "evidence": {
+    "paired_report": {
+      "path": "outputs/v11_cf05_e3_a002_a003_r1_r11_paired_analysis_v1_20260811/a002_a003_r1_r11_paired_report.json",
+      "sha256": "12d5b6e4091ab1cbab52c22aa2ae3c8bd727a1e1140a458adc00f065be2ff3d7"
+    },
+    "paired_manifest": {
+      "path": "outputs/v11_cf05_e3_a002_a003_r1_r11_paired_analysis_v1_20260811/artifact_manifest.json",
+      "sha256": "869f7eb87e824a27897927a3fe7902b6dc2dd06a39a953bc000fe105ae2326b1"
+    },
+    "r11_runtime_report": {
+      "path": "outputs/v11_cf05_e3_a002_a003_full_schema_r11_results_v1_20260811/a002_a003_full_schema_r11_runtime_report.json",
+      "sha256": "032268e39c546df75d38af99ba3a9544ac2f65cbd8b8b0ed5f929be94c679085"
+    }
+  },
+  "external_api_calls_authorized_by_this_policy": false,
+  "formal_protocol_mutated": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false
+}
