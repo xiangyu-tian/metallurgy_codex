@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "decision_id": "V11-CF05-E3-DEVELOPMENT-METHOD-DECISION-CANDIDATE-V1-20260811",
+  "decision_status": "candidate_pending_project_owner_adoption",
+  "recommended_decision": "freeze_current_method_candidates_and_stop_taskset_specific_tuning",
+  "methods": [
+    "full_schema",
+    "lexical_top5",
+    "dense_top5",
+    "hierarchical"
+  ],
+  "top_k": 5,
+  "external_api_calls_authorized": false,
+  "independent_validation_split_access_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "bindings": {
+    "full_schema_config": {
+      "path": "Tools/core_freeze/e3_routing/a002_a003_full_schema_r1_opening_config_v1.json",
+      "sha256": "7e74b731e464e9d0e32d329da3197261aa07415a9dd2bb6ef8d6365191acab4f"
+    },
+    "lexical_config": {
+      "path": "Tools/core_freeze/e3_routing/a003_lexical_top5_config_v1.json",
+      "sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1"
+    },
+    "dense_config": {
+      "path": "Tools/core_freeze/e3_routing/a003_dense_top5_config_v1.json",
+      "sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff"
+    },
+    "dense_query_policy": {
+      "path": "Tools/core_freeze/e3_routing/a003_dense_top5_query_policy_v2.json",
+      "sha256": "0085f786393f364c6e523b9185b5793ab6de7903913f25a92aee480c6f47c9fe"
+    },
+    "hierarchical_config": {
+      "path": "Tools/core_freeze/e3_routing/a003_hierarchical_top5_config_v1.json",
+      "sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3"
+    },
+    "lexical_source": {
+      "path": "Tools/core_freeze/e3_routing/lexical_top5_router.py",
+      "sha256": "40c73e5f7a24f6fe253db8f102abe18e58ecb96000343e19098c9e7593c7bc43"
+    },
+    "dense_source": {
+      "path": "Tools/core_freeze/e3_routing/dense_top5_router.py",
+      "sha256": "9fde3ac5b0f095034d3983e84b3ba25f9fc27105e1042e8f331afc2279186e38"
+    },
+    "hierarchical_source": {
+      "path": "Tools/core_freeze/e3_routing/hierarchical_top5_router.py",
+      "sha256": "cc57e36ca8022c61f5046e87ec435f05d53e10e0e2cff2ca81efd8fb12970ddb"
+    },
+    "top5_views_config": {
+      "path": "Tools/core_freeze/e3_routing/a002_a003_top5_views_config_v2.json",
+      "sha256": "70b1a234519f9da093b55fc8748f88d5d4a8d6e01c32aeba12aeb75eb2164809"
+    },
+    "transport_policy": {
+      "path": "Tools/core_freeze/e3_routing/e3_selector_transport_policy_v1.json",
+      "sha256": "5b9691dc1e38bd6c1d7f3d719f25006efa552a7950849a90c04d30f09d5852d5"
+    },
+    "family_governance": {
+      "path": "Tools/core_freeze/e3_routing/a002_a003_family_governance_adoption_v1.json",
+      "sha256": "0508045caaf7336c316b7d86f5286f5a97b396c41c5bd9aae46231c5ba69ff99"
+    },
+    "a003_analysis": {
+      "path": "outputs/v11_cf05_e3_a003_routing_development_r1_analysis_20260810/a003_routing_development_analysis_report.json",
+      "sha256": "39e1421df2038e18e5966ad6bb028df98fd88157e89dbe79024bf133de861472"
+    },
+    "a004_volatility": {
+      "path": "outputs/v11_cf05_e3_a004_hardcase_volatility_20260810/a004_three_repeat_overall_report.json",
+      "sha256": "18b976a97a7f57c9d140b2f2cbb2c438a670a00bf4989b4b311e29634872ae59"
+    },
+    "a004_postgate": {
+      "path": "outputs/v11_cf05_e3_a004_postgate_probe_analysis_20260810/a004_postgate_analysis_report.json",
+      "sha256": "8fde0de55ca6946dcac85f0ae2858e988323dc06d5fa93bc885598d64e072b18"
+    },
+    "multitarget_analysis": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_r2_analysis_20260810/multitarget_development_analysis_report.json",
+      "sha256": "4f684c9cc0346655d03f2fc31229b7174e9054a6971f9f95b53691608917638c"
+    },
+    "a002_a003_variability": {
+      "path": "outputs/v11_cf05_e3_a002_a003_top5_selector_r1_r3_variability_v1_20260811/a002_a003_top5_selector_r1_r3_analysis_report.json",
+      "sha256": "edbe9092f40102bd61bf73dd422e83249e7b5ea0599533fe6ae5527d8864746f"
+    }
+  }
+}

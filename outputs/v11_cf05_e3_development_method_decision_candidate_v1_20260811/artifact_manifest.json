@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "decision_id": "V11-CF05-E3-DEVELOPMENT-METHOD-DECISION-CANDIDATE-V1-20260811",
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "filename": "cf05_development_decision_config_snapshot.json",
+      "sha256": "8083d494d8d7184199c3cc99b94f40f3da49d07f742d8dafe9cff7c6ecbdbd50",
+      "bytes": 4035
+    },
+    {
+      "filename": "cf05_development_decision_report.json",
+      "sha256": "c3f8cf7a788ce5febc0e54653a77df5d6ab6b0a9ffc3039807efde8e9eedc12d",
+      "bytes": 490
+    },
+    {
+      "filename": "cf05_development_evidence_matrix.json",
+      "sha256": "19aad7c85fe3efb53a54750d1abdb9e1a4582ca2d299b621517faa5900e1060d",
+      "bytes": 1723
+    },
+    {
+      "filename": "cf05_development_method_freeze_candidate.json",
+      "sha256": "0a31a10d2bf442032413740ed8fec2f0375054681ccd74cc32c32ab677f99fc5",
+      "bytes": 1334
+    },
+    {
+      "filename": "cf05_method_artifact_manifest.json",
+      "sha256": "34e659ef7d31260bb9e3cdafbbf544a4295af40e5b709080069f3efdd7c33d3b",
+      "bytes": 4269
+    },
+    {
+      "filename": "cf05_residual_risk_register.json",
+      "sha256": "6afa46fbebd2bdb3c218b40b8f7992f6bb24bcd07481f4c34a027bf0962cac0c",
+      "bytes": 2283
+    }
+  ]
+}

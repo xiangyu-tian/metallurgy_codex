@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "records": [
+    {
+      "evidence_id": "E3-A003-CONTROLLED-PIPELINE",
+      "scope": "single target; 0/8 neighbor conditions; 17/120 tools; four methods",
+      "cells": 96,
+      "primary_observation": "complete_call_accuracy=1.0; ceiling observed",
+      "allowed_use": "pipeline and scoring validation",
+      "confirmatory_use": false
+    },
+    {
+      "evidence_id": "E3-MULTITARGET-MIXED-R2",
+      "scope": "A001/A002/A004/B019; mixed realistic; 17/120 tools; four methods",
+      "cells": 64,
+      "primary_observation": "complete_call_accuracy=1.0; ceiling observed",
+      "allowed_use": "multi-target execution validation",
+      "confirmatory_use": false
+    },
+    {
+      "evidence_id": "E3-A004-HARDCASE-R1-R3",
+      "scope": "A004 hard cases; three repeats",
+      "cells": 144,
+      "primary_observation": "47/48 stable correct; 1/48 stable multi-call failure",
+      "allowed_use": "local failure reproducibility and volatility estimation",
+      "confirmatory_use": false
+    },
+    {
+      "evidence_id": "E3-A002-A003-TOP5-R1-R3",
+      "scope": "16 minimal-difference tasks; 17/120 tools; three Top-5 methods; three repeats",
+      "cells": 576,
+      "primary_observation": "186/192 stable correct; 2 stable failures; 4 variable units",
+      "allowed_use": "Top-5 stability and residual-risk localization",
+      "confirmatory_use": false
+    },
+    {
+      "evidence_id": "E3-A004-POSTGATE-PROBES",
+      "scope": "10 new development probes",
+      "cells": 10,
+      "primary_observation": "10/10 correct; zero false block",
+      "allowed_use": "gate safety check only",
+      "confirmatory_use": false
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "risks": [
+    {
+      "risk_id": "CF05-RISK-001",
+      "severity": "material_local",
+      "description": "Equivalent or overlapping endpoints can elicit multiple tool calls on complex chemistry requests at 120-tool scale.",
+      "evidence": "A004 has one stable three-repeat multi-call unit; A002/A003 has two stable and four variable units, all localized to complex requests.",
+      "treatment": "Retain as intention-to-treat failure; do not post-hoc choose one call; disclose and test on independent data.",
+      "blocks_method_candidate_freeze": false,
+      "blocks_cf05_overall_pass": false
+    },
+    {
+      "risk_id": "CF05-RISK-002",
+      "severity": "design_blocker",
+      "description": "The full five-target formal 0/4/8 controlled-neighbor matrix is not yet evidenced as complete.",
+      "evidence": "A003 has the complete controlled slice; other targets provide mixed and partial hard-case slices.",
+      "treatment": "Complete a no-leakage pool-coverage audit before CF-05 can be marked passed.",
+      "blocks_method_candidate_freeze": false,
+      "blocks_cf05_overall_pass": true
+    },
+    {
+      "risk_id": "CF05-RISK-003",
+      "severity": "inference_limitation",
+      "description": "Several development slices show ceiling performance and cannot discriminate routing methods.",
+      "evidence": "A003 and four-target mixed-realistic slices both achieved 100% across methods.",
+      "treatment": "Do not tune further on these tasks; use frozen independent validation for method comparison.",
+      "blocks_method_candidate_freeze": false,
+      "blocks_cf05_overall_pass": false
+    },
+    {
+      "risk_id": "CF05-RISK-004",
+      "severity": "external_validity",
+      "description": "Only five tools are verified executable while the remaining catalog entries primarily provide frozen Schema-level routing distractors.",
+      "evidence": "Current v1.1 catalog governance distinguishes verified executables from Schema-only entries.",
+      "treatment": "Limit claims to routing-scale evidence and verified-core execution; do not call all 120 entries validated engines.",
+      "blocks_method_candidate_freeze": false,
+      "blocks_cf05_overall_pass": false
+    }
+  ]
+}

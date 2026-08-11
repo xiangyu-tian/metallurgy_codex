@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "methods": [
+    {
+      "method": "full_schema",
+      "top_k": null,
+      "artifacts": [
+        {
+          "role": "full_schema_config",
+          "path": "Tools/core_freeze/e3_routing/a002_a003_full_schema_r1_opening_config_v1.json",
+          "sha256": "7e74b731e464e9d0e32d329da3197261aa07415a9dd2bb6ef8d6365191acab4f"
+        },
+        {
+          "role": "transport_policy",
+          "path": "Tools/core_freeze/e3_routing/e3_selector_transport_policy_v1.json",
+          "sha256": "5b9691dc1e38bd6c1d7f3d719f25006efa552a7950849a90c04d30f09d5852d5"
+        }
+      ],
+      "candidate_freeze_action": "freeze_after_project_owner_adoption",
+      "taskset_specific_retuning_allowed_after_adoption": false
+    },
+    {
+      "method": "lexical_top5",
+      "top_k": 5,
+      "artifacts": [
+        {
+          "role": "lexical_config",
+          "path": "Tools/core_freeze/e3_routing/a003_lexical_top5_config_v1.json",
+          "sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1"
+        },
+        {
+          "role": "lexical_source",
+          "path": "Tools/core_freeze/e3_routing/lexical_top5_router.py",
+          "sha256": "40c73e5f7a24f6fe253db8f102abe18e58ecb96000343e19098c9e7593c7bc43"
+        },
+        {
+          "role": "transport_policy",
+          "path": "Tools/core_freeze/e3_routing/e3_selector_transport_policy_v1.json",
+          "sha256": "5b9691dc1e38bd6c1d7f3d719f25006efa552a7950849a90c04d30f09d5852d5"
+        }
+      ],
+      "candidate_freeze_action": "freeze_after_project_owner_adoption",
+      "taskset_specific_retuning_allowed_after_adoption": false
+    },
+    {
+      "method": "dense_top5",
+      "top_k": 5,
+      "artifacts": [
+        {
+          "role": "dense_config",
+          "path": "Tools/core_freeze/e3_routing/a003_dense_top5_config_v1.json",
+          "sha256": "76761d16cdff060dbc31fb2f83b3e0155761dc0b8ac57ef2a849d76a0d8304ff"
+        },
+        {
+          "role": "dense_query_policy",
+          "path": "Tools/core_freeze/e3_routing/a003_dense_top5_query_policy_v2.json",
+          "sha256": "0085f786393f364c6e523b9185b5793ab6de7903913f25a92aee480c6f47c9fe"
+        },
+        {
+          "role": "dense_source",
+          "path": "Tools/core_freeze/e3_routing/dense_top5_router.py",
+          "sha256": "9fde3ac5b0f095034d3983e84b3ba25f9fc27105e1042e8f331afc2279186e38"
+        },
+        {
+          "role": "transport_policy",
+          "path": "Tools/core_freeze/e3_routing/e3_selector_transport_policy_v1.json",
+          "sha256": "5b9691dc1e38bd6c1d7f3d719f25006efa552a7950849a90c04d30f09d5852d5"
+        }
+      ],
+      "candidate_freeze_action": "freeze_after_project_owner_adoption",
+      "taskset_specific_retuning_allowed_after_adoption": false
+    },
+    {
+      "method": "hierarchical",
+      "top_k": 5,
+      "artifacts": [
+        {
+          "role": "hierarchical_config",
+          "path": "Tools/core_freeze/e3_routing/a003_hierarchical_top5_config_v1.json",
+          "sha256": "0e645ce4915270298dd0d15c776beb7195727fd8a9a18f1eeabb4d64fc3b40c3"
+        },
+        {
+          "role": "hierarchical_source",
+          "path": "Tools/core_freeze/e3_routing/hierarchical_top5_router.py",
+          "sha256": "cc57e36ca8022c61f5046e87ec435f05d53e10e0e2cff2ca81efd8fb12970ddb"
+        },
+        {
+          "role": "lexical_config",
+          "path": "Tools/core_freeze/e3_routing/a003_lexical_top5_config_v1.json",
+          "sha256": "ada60f34df47c0d0fa51f3cd4beedac0782de4b179d89660e05e6fe57e879da1"
+        },
+        {
+          "role": "lexical_source",
+          "path": "Tools/core_freeze/e3_routing/lexical_top5_router.py",
+          "sha256": "40c73e5f7a24f6fe253db8f102abe18e58ecb96000343e19098c9e7593c7bc43"
+        },
+        {
+          "role": "transport_policy",
+          "path": "Tools/core_freeze/e3_routing/e3_selector_transport_policy_v1.json",
+          "sha256": "5b9691dc1e38bd6c1d7f3d719f25006efa552a7950849a90c04d30f09d5852d5"
+        }
+      ],
+      "candidate_freeze_action": "freeze_after_project_owner_adoption",
+      "taskset_specific_retuning_allowed_after_adoption": false
+    }
+  ]
+}

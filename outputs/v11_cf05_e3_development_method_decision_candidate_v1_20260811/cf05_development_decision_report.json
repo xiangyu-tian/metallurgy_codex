@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "decision_id": "V11-CF05-E3-DEVELOPMENT-METHOD-DECISION-CANDIDATE-V1-20260811",
+  "status": "decision_candidate_complete_pending_project_owner_adoption",
+  "method_count": 4,
+  "evidence_record_count": 5,
+  "residual_risk_count": 4,
+  "cf05_overall_blocker_count": 1,
+  "external_api_calls": 0,
+  "independent_validation_split_accessed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false
+}
