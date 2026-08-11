@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "method": "lexical_top5",
+      "n": 64,
+      "stable_correct_count": 62,
+      "stable_failure_count": 2,
+      "variable_correctness_count": 0,
+      "variable_correctness_rate": 0.0,
+      "exact_outcome_stable_count": 64,
+      "exact_outcome_stable_rate": 1.0
+    },
+    {
+      "method": "dense_top5",
+      "n": 64,
+      "stable_correct_count": 62,
+      "stable_failure_count": 0,
+      "variable_correctness_count": 2,
+      "variable_correctness_rate": 0.03125,
+      "exact_outcome_stable_count": 62,
+      "exact_outcome_stable_rate": 0.96875
+    },
+    {
+      "method": "hierarchical",
+      "n": 64,
+      "stable_correct_count": 62,
+      "stable_failure_count": 0,
+      "variable_correctness_count": 2,
+      "variable_correctness_rate": 0.03125,
+      "exact_outcome_stable_count": 62,
+      "exact_outcome_stable_rate": 0.96875
+    }
+  ]
+}

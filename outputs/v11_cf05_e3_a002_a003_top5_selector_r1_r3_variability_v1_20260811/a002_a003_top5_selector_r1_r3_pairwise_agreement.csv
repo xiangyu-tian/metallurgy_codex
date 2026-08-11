@@ -1,0 +1,4 @@
+﻿repeat_left,repeat_right,n,primary_end_to_end_agreement_count,primary_end_to_end_agreement_rate,both_correct_count,left_only_correct_count,right_only_correct_count,both_incorrect_count
+R1,R2,192,189,0.984375,186,2,1,3
+R1,R3,192,190,0.989583,188,0,2,2
+R2,R3,192,189,0.984375,187,0,3,2

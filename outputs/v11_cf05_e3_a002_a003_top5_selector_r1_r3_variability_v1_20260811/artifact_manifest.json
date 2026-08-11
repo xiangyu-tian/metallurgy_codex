@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R1-R3-VARIABILITY-V1-20260811",
+  "artifact_count": 12,
+  "artifacts": [
+    {
+      "filename": "a002_a003_top5_selector_r1_r3_analysis_report.json",
+      "sha256": "edbe9092f40102bd61bf73dd422e83249e7b5ea0599533fe6ae5527d8864746f",
+      "bytes": 1864
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_r3_method_variability.csv",
+      "sha256": "6c484a48f98556e7fadcc22ee93a0111e6e43f49f656380d79bfc156ca66319d",
+      "bytes": 280
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_r3_method_variability.json",
+      "sha256": "5ea5bd21d1f0a2cdd54a4432ace78e18fa281bec30ea141538f87ec5e6967022",
+      "bytes": 950
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_r3_pairwise_agreement.csv",
+      "sha256": "954394f2c2bf566156765ac933888c4df12370409126ef3903d254631d0d80a8",
+      "bytes": 291
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_r3_pairwise_agreement.json",
+      "sha256": "c6741784de8f6416ac2790df2f2021c437267bac3d6bea7ceaf836d74a0e0442",
+      "bytes": 1056
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_r3_scored_rows.csv",
+      "sha256": "06adf6528c6440b4018073d0d353bfcf3e88caf54426a18cbddc9f8a08dbfb39",
+      "bytes": 215757
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_r3_scored_rows.json",
+      "sha256": "0b14f3b76ecdff22f19e2dd749a651a0ebc9aca42c17f1c657a2b32822b3880f",
+      "bytes": 663525
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_r3_summary.csv",
+      "sha256": "52f85be1eeda9870c0bc36fff5976383d61533cdd3742cd8c8e5d1ab1974023c",
+      "bytes": 3240
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_r3_summary.json",
+      "sha256": "cfa0da27765b22146d9531ee82a9ab7ba15d7a62da959892dfc75ab23a7b5390",
+      "bytes": 19583
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_r3_unit_variability.csv",
+      "sha256": "e5c0179157b1337eb29ef28f0f6ab32cfceab35df79dfd0e9eed464fc987ee64",
+      "bytes": 55648
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_r3_unit_variability.json",
+      "sha256": "bf532d33d816271778a7525e52c07860d2e1732a31e7d99cd59284be8e51bacc",
+      "bytes": 164627
+    },
+    {
+      "filename": "a002_a003_top5_selector_r1_r3_variability_config_snapshot.json",
+      "sha256": "2df308d5b8047ed9ec21ab4fc8dd8b9ecf9005bdc2f75bf4eec8c32639da3256",
+      "bytes": 2819
+    }
+  ]
+}

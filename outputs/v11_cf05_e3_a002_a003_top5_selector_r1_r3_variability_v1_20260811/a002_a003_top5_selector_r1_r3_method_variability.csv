@@ -1,0 +1,4 @@
+﻿method,n,stable_correct_count,stable_failure_count,variable_correctness_count,variable_correctness_rate,exact_outcome_stable_count,exact_outcome_stable_rate
+lexical_top5,64,62,2,0,0.0,64,1.0
+dense_top5,64,62,0,2,0.03125,62,0.96875
+hierarchical,64,62,0,2,0.03125,62,0.96875

@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "repeat_left": "R1",
+      "repeat_right": "R2",
+      "n": 192,
+      "primary_end_to_end_agreement_count": 189,
+      "primary_end_to_end_agreement_rate": 0.984375,
+      "both_correct_count": 186,
+      "left_only_correct_count": 2,
+      "right_only_correct_count": 1,
+      "both_incorrect_count": 3
+    },
+    {
+      "repeat_left": "R1",
+      "repeat_right": "R3",
+      "n": 192,
+      "primary_end_to_end_agreement_count": 190,
+      "primary_end_to_end_agreement_rate": 0.989583,
+      "both_correct_count": 188,
+      "left_only_correct_count": 0,
+      "right_only_correct_count": 2,
+      "both_incorrect_count": 2
+    },
+    {
+      "repeat_left": "R2",
+      "repeat_right": "R3",
+      "n": 192,
+      "primary_end_to_end_agreement_count": 189,
+      "primary_end_to_end_agreement_rate": 0.984375,
+      "both_correct_count": 187,
+      "left_only_correct_count": 0,
+      "right_only_correct_count": 3,
+      "both_incorrect_count": 2
+    }
+  ]
+}

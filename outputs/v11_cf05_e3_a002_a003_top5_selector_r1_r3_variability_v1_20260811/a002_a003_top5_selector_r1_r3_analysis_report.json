@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R1-R3-VARIABILITY-V1-20260811",
+  "status": "development_three_repeat_variability_scored",
+  "denominator_policy": "intention_to_treat_all_576_scheduled_cells",
+  "result_count": 576,
+  "matched_unit_count": 192,
+  "repeat_primary_end_to_end": {
+    "R1": 0.979167,
+    "R2": 0.973958,
+    "R3": 0.989583
+  },
+  "repeat_exactly_one_tool_call": {
+    "R1": 0.979167,
+    "R2": 0.973958,
+    "R3": 0.989583
+  },
+  "repeat_scale_difference_120_minus_17": {
+    "R1": -0.041667,
+    "R2": -0.052083,
+    "R3": -0.020833
+  },
+  "stable_correct_count": 186,
+  "stable_failure_count": 2,
+  "variable_correctness_count": 4,
+  "variable_correctness_rate": 0.020833,
+  "exact_outcome_stable_count": 188,
+  "exact_outcome_stable_rate": 0.979167,
+  "error_counts_by_repeat": {
+    "R1": {
+      "multiple_tool_calls": 3,
+      "none": 188,
+      "provider_error_terminal": 1
+    },
+    "R2": {
+      "multiple_tool_calls": 5,
+      "none": 187
+    },
+    "R3": {
+      "multiple_tool_calls": 2,
+      "none": 190
+    }
+  },
+  "external_api_calls_in_source_runs": 576,
+  "external_api_calls_in_analysis": 0,
+  "tool_calls_executed": 0,
+  "retries_executed": 0,
+  "independent_validation_split_accessed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "interpretation": "Development-only three-repeat variability evidence; non-single calls and provider failures remain intention-to-treat errors. This analysis does not access the independent validation split and cannot support confirmatory inference.",
+  "next_gate": "review the three-repeat failure localization and decide whether the frozen Top-5 candidate definitions are sufficiently stable for CF-05 development closure"
+}
