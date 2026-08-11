@@ -1,0 +1,498 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "case_id": "BPG-001",
+      "category": "valid_fraction_no_component",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "required_parameters": {
+            "overall_composition": 0.4,
+            "phase1_composition": 0.2,
+            "phase2_composition": 0.7,
+            "composition_basis": "fraction"
+          },
+          "explicit_component": null,
+          "physical_boundary_valid": true,
+          "physical_vetoes": []
+        },
+        "tool_id": "B019",
+        "original_arguments": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "candidate_arguments": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "optional_parameters_elided": [],
+        "reasons": [
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [],
+        "decision": "candidate_pass_original_parameters",
+        "original_execution_blocked": true,
+        "runtime_default_component_risk": true,
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "BPG-002",
+      "category": "valid_percent_no_component",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "required_parameters": {
+            "overall_composition": 40.0,
+            "phase1_composition": 20.0,
+            "phase2_composition": 70.0,
+            "composition_basis": "percent"
+          },
+          "explicit_component": null,
+          "physical_boundary_valid": true,
+          "physical_vetoes": []
+        },
+        "tool_id": "B019",
+        "original_arguments": {
+          "overall_composition": 40,
+          "phase1_composition": 20,
+          "phase2_composition": 70,
+          "composition_basis": "percent"
+        },
+        "candidate_arguments": {
+          "overall_composition": 40,
+          "phase1_composition": 20,
+          "phase2_composition": 70,
+          "composition_basis": "percent"
+        },
+        "optional_parameters_elided": [],
+        "reasons": [
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [],
+        "decision": "candidate_pass_original_parameters",
+        "original_execution_blocked": true,
+        "runtime_default_component_risk": true,
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "BPG-003",
+      "category": "ungrounded_optional_elision",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "required_parameters": {
+            "overall_composition": 0.4,
+            "phase1_composition": 0.2,
+            "phase2_composition": 0.7,
+            "composition_basis": "fraction"
+          },
+          "explicit_component": null,
+          "physical_boundary_valid": true,
+          "physical_vetoes": []
+        },
+        "tool_id": "B019",
+        "original_arguments": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction",
+          "component": "B"
+        },
+        "candidate_arguments": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "optional_parameters_elided": [
+          "component"
+        ],
+        "reasons": [
+          "all_required_arguments_grounded_in_request",
+          "ungrounded_optional_component_elided"
+        ],
+        "vetoes": [],
+        "decision": "candidate_pass_after_optional_elision",
+        "original_execution_blocked": true,
+        "runtime_default_component_risk": true,
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "BPG-004",
+      "category": "explicit_component",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "required_parameters": {
+            "overall_composition": 0.4,
+            "phase1_composition": 0.2,
+            "phase2_composition": 0.7,
+            "composition_basis": "fraction"
+          },
+          "explicit_component": "Fe",
+          "physical_boundary_valid": true,
+          "physical_vetoes": []
+        },
+        "tool_id": "B019",
+        "original_arguments": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction",
+          "component": "Fe"
+        },
+        "candidate_arguments": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction",
+          "component": "Fe"
+        },
+        "optional_parameters_elided": [],
+        "reasons": [
+          "all_required_arguments_grounded_in_request",
+          "component_grounded_in_request"
+        ],
+        "vetoes": [],
+        "decision": "candidate_pass_original_parameters",
+        "original_execution_blocked": false,
+        "runtime_default_component_risk": false,
+        "execution_ready": true,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "BPG-005",
+      "category": "component_mismatch",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "required_parameters": {
+            "overall_composition": 0.4,
+            "phase1_composition": 0.2,
+            "phase2_composition": 0.7,
+            "composition_basis": "fraction"
+          },
+          "explicit_component": "Fe",
+          "physical_boundary_valid": true,
+          "physical_vetoes": []
+        },
+        "tool_id": "B019",
+        "original_arguments": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction",
+          "component": "B"
+        },
+        "candidate_arguments": null,
+        "optional_parameters_elided": [],
+        "reasons": [
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [
+          "component_not_grounded_in_request"
+        ],
+        "decision": "review_required",
+        "original_execution_blocked": true,
+        "runtime_default_component_risk": false,
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "BPG-006",
+      "category": "missing_basis",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "required_parameters": {
+            "overall_composition": 0.4,
+            "phase1_composition": 0.2,
+            "phase2_composition": 0.7,
+            "composition_basis": "fraction"
+          },
+          "explicit_component": null,
+          "physical_boundary_valid": true,
+          "physical_vetoes": []
+        },
+        "tool_id": "B019",
+        "original_arguments": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7
+        },
+        "candidate_arguments": null,
+        "optional_parameters_elided": [],
+        "reasons": [],
+        "vetoes": [
+          "missing_required:composition_basis"
+        ],
+        "decision": "review_required",
+        "original_execution_blocked": true,
+        "runtime_default_component_risk": true,
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "BPG-007",
+      "category": "auto_basis",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "required_parameters": {
+            "overall_composition": 0.4,
+            "phase1_composition": 0.2,
+            "phase2_composition": 0.7,
+            "composition_basis": "fraction"
+          },
+          "explicit_component": null,
+          "physical_boundary_valid": true,
+          "physical_vetoes": []
+        },
+        "tool_id": "B019",
+        "original_arguments": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "auto"
+        },
+        "candidate_arguments": null,
+        "optional_parameters_elided": [],
+        "reasons": [],
+        "vetoes": [
+          "composition_basis_not_explicit_or_mismatch"
+        ],
+        "decision": "review_required",
+        "original_execution_blocked": true,
+        "runtime_default_component_risk": true,
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "BPG-008",
+      "category": "numeric_mismatch",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "required_parameters": {
+            "overall_composition": 0.4,
+            "phase1_composition": 0.2,
+            "phase2_composition": 0.7,
+            "composition_basis": "fraction"
+          },
+          "explicit_component": null,
+          "physical_boundary_valid": true,
+          "physical_vetoes": []
+        },
+        "tool_id": "B019",
+        "original_arguments": {
+          "overall_composition": 0.5,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "candidate_arguments": null,
+        "optional_parameters_elided": [],
+        "reasons": [],
+        "vetoes": [
+          "request_argument_mismatch:overall_composition"
+        ],
+        "decision": "review_required",
+        "original_execution_blocked": true,
+        "runtime_default_component_risk": true,
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "BPG-009",
+      "category": "equal_phase_endpoints",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "required_parameters": {
+            "overall_composition": 0.4,
+            "phase1_composition": 0.4,
+            "phase2_composition": 0.4,
+            "composition_basis": "fraction"
+          },
+          "explicit_component": null,
+          "physical_boundary_valid": false,
+          "physical_vetoes": [
+            "phase_endpoints_not_distinct"
+          ]
+        },
+        "tool_id": "B019",
+        "original_arguments": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.4,
+          "phase2_composition": 0.4,
+          "composition_basis": "fraction"
+        },
+        "candidate_arguments": null,
+        "optional_parameters_elided": [],
+        "reasons": [
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [
+          "phase_endpoints_not_distinct"
+        ],
+        "decision": "review_required",
+        "original_execution_blocked": true,
+        "runtime_default_component_risk": true,
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "BPG-010",
+      "category": "overall_outside_tieline",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "required_parameters": {
+            "overall_composition": 0.9,
+            "phase1_composition": 0.2,
+            "phase2_composition": 0.7,
+            "composition_basis": "fraction"
+          },
+          "explicit_component": null,
+          "physical_boundary_valid": false,
+          "physical_vetoes": [
+            "overall_composition_outside_tieline"
+          ]
+        },
+        "tool_id": "B019",
+        "original_arguments": {
+          "overall_composition": 0.9,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "candidate_arguments": null,
+        "optional_parameters_elided": [],
+        "reasons": [
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [
+          "overall_composition_outside_tieline"
+        ],
+        "decision": "review_required",
+        "original_execution_blocked": true,
+        "runtime_default_component_risk": true,
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "BPG-011",
+      "category": "unknown_parameter",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": true,
+          "required_parameters": {
+            "overall_composition": 0.4,
+            "phase1_composition": 0.2,
+            "phase2_composition": 0.7,
+            "composition_basis": "fraction"
+          },
+          "explicit_component": null,
+          "physical_boundary_valid": true,
+          "physical_vetoes": []
+        },
+        "tool_id": "B019",
+        "original_arguments": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction",
+          "temperature": 1200
+        },
+        "candidate_arguments": null,
+        "optional_parameters_elided": [],
+        "reasons": [
+          "all_required_arguments_grounded_in_request"
+        ],
+        "vetoes": [
+          "unknown_parameter:temperature"
+        ],
+        "decision": "review_required",
+        "original_execution_blocked": true,
+        "runtime_default_component_risk": true,
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "BPG-012",
+      "category": "unparseable_request",
+      "decision": {
+        "request_evidence": {
+          "parse_complete": false,
+          "required_parameters": null,
+          "explicit_component": null,
+          "physical_boundary_valid": false,
+          "physical_vetoes": [
+            "request_not_deterministically_parseable"
+          ]
+        },
+        "tool_id": "B019",
+        "original_arguments": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "candidate_arguments": null,
+        "optional_parameters_elided": [],
+        "reasons": [],
+        "vetoes": [
+          "request_not_deterministically_parseable"
+        ],
+        "decision": "review_required",
+        "original_execution_blocked": true,
+        "runtime_default_component_risk": true,
+        "execution_ready": false,
+        "tool_executed": false,
+        "external_api_calls": 0
+      },
+      "passed": true
+    }
+  ]
+}

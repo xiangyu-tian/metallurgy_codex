@@ -1,0 +1,753 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "full_schema",
+      "tool_pool_size": 17,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "candidate_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "optional_parameters_elided": [],
+      "reasons": [
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_original_parameters",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "lexical_top5",
+      "tool_pool_size": 17,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "B"
+      },
+      "candidate_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "optional_parameters_elided": [
+        "component"
+      ],
+      "reasons": [
+        "all_required_arguments_grounded_in_request",
+        "ungrounded_optional_component_elided"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_after_optional_elision",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "dense_top5",
+      "tool_pool_size": 17,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "B"
+      },
+      "candidate_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "optional_parameters_elided": [
+        "component"
+      ],
+      "reasons": [
+        "all_required_arguments_grounded_in_request",
+        "ungrounded_optional_component_elided"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_after_optional_elision",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "hierarchical",
+      "tool_pool_size": 17,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "B"
+      },
+      "candidate_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "optional_parameters_elided": [
+        "component"
+      ],
+      "reasons": [
+        "all_required_arguments_grounded_in_request",
+        "ungrounded_optional_component_elided"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_after_optional_elision",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "full_schema",
+      "tool_pool_size": 120,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "B"
+      },
+      "candidate_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "optional_parameters_elided": [
+        "component"
+      ],
+      "reasons": [
+        "all_required_arguments_grounded_in_request",
+        "ungrounded_optional_component_elided"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_after_optional_elision",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "lexical_top5",
+      "tool_pool_size": 120,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "B"
+      },
+      "candidate_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "optional_parameters_elided": [
+        "component"
+      ],
+      "reasons": [
+        "all_required_arguments_grounded_in_request",
+        "ungrounded_optional_component_elided"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_after_optional_elision",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "dense_top5",
+      "tool_pool_size": 120,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "candidate_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "optional_parameters_elided": [],
+      "reasons": [
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_original_parameters",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "hierarchical",
+      "tool_pool_size": 120,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 0.4,
+          "phase1_composition": 0.2,
+          "phase2_composition": 0.7,
+          "composition_basis": "fraction"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "B"
+      },
+      "candidate_arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "optional_parameters_elided": [
+        "component"
+      ],
+      "reasons": [
+        "all_required_arguments_grounded_in_request",
+        "ungrounded_optional_component_elided"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_after_optional_elision",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "full_schema",
+      "tool_pool_size": 17,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 40.0,
+          "phase1_composition": 20.0,
+          "phase2_composition": 70.0,
+          "composition_basis": "percent"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "candidate_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "optional_parameters_elided": [],
+      "reasons": [
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_original_parameters",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "lexical_top5",
+      "tool_pool_size": 17,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 40.0,
+          "phase1_composition": 20.0,
+          "phase2_composition": 70.0,
+          "composition_basis": "percent"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent",
+        "component": "B"
+      },
+      "candidate_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "optional_parameters_elided": [
+        "component"
+      ],
+      "reasons": [
+        "all_required_arguments_grounded_in_request",
+        "ungrounded_optional_component_elided"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_after_optional_elision",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "dense_top5",
+      "tool_pool_size": 17,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 40.0,
+          "phase1_composition": 20.0,
+          "phase2_composition": 70.0,
+          "composition_basis": "percent"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "candidate_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "optional_parameters_elided": [],
+      "reasons": [
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_original_parameters",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "hierarchical",
+      "tool_pool_size": 17,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 40.0,
+          "phase1_composition": 20.0,
+          "phase2_composition": 70.0,
+          "composition_basis": "percent"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent",
+        "component": "B"
+      },
+      "candidate_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "optional_parameters_elided": [
+        "component"
+      ],
+      "reasons": [
+        "all_required_arguments_grounded_in_request",
+        "ungrounded_optional_component_elided"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_after_optional_elision",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "full_schema",
+      "tool_pool_size": 120,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 40.0,
+          "phase1_composition": 20.0,
+          "phase2_composition": 70.0,
+          "composition_basis": "percent"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent",
+        "component": "B"
+      },
+      "candidate_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "optional_parameters_elided": [
+        "component"
+      ],
+      "reasons": [
+        "all_required_arguments_grounded_in_request",
+        "ungrounded_optional_component_elided"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_after_optional_elision",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "lexical_top5",
+      "tool_pool_size": 120,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 40.0,
+          "phase1_composition": 20.0,
+          "phase2_composition": 70.0,
+          "composition_basis": "percent"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent",
+        "component": "B"
+      },
+      "candidate_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "optional_parameters_elided": [
+        "component"
+      ],
+      "reasons": [
+        "all_required_arguments_grounded_in_request",
+        "ungrounded_optional_component_elided"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_after_optional_elision",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "dense_top5",
+      "tool_pool_size": 120,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 40.0,
+          "phase1_composition": 20.0,
+          "phase2_composition": 70.0,
+          "composition_basis": "percent"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "candidate_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "optional_parameters_elided": [],
+      "reasons": [
+        "all_required_arguments_grounded_in_request"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_original_parameters",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "hierarchical",
+      "tool_pool_size": 120,
+      "request_evidence": {
+        "parse_complete": true,
+        "required_parameters": {
+          "overall_composition": 40.0,
+          "phase1_composition": 20.0,
+          "phase2_composition": 70.0,
+          "composition_basis": "percent"
+        },
+        "explicit_component": null,
+        "physical_boundary_valid": true,
+        "physical_vetoes": []
+      },
+      "tool_id": "B019",
+      "original_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent",
+        "component": "B"
+      },
+      "candidate_arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "optional_parameters_elided": [
+        "component"
+      ],
+      "reasons": [
+        "all_required_arguments_grounded_in_request",
+        "ungrounded_optional_component_elided"
+      ],
+      "vetoes": [],
+      "decision": "candidate_pass_after_optional_elision",
+      "original_execution_blocked": true,
+      "runtime_default_component_risk": true,
+      "execution_ready": false,
+      "tool_executed": false,
+      "external_api_calls": 0,
+      "offline_candidate_parameter_faithful": true,
+      "gold_used_during_decision": false
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "V11-CF05-E3-B019-STRICT-PARAMETER-GATE-V1-20260811",
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "filename": "b019_parameter_gate_challenge_results.json",
+      "sha256": "a4f8413c26532039bb922887d9c36e89bf01651f506f75e7c229e87091229623",
+      "bytes": 15762
+    },
+    {
+      "filename": "b019_parameter_gate_challenge_snapshot.json",
+      "sha256": "94a80ca38a0a97227464af0368948a73733ce08d619f33a20edd3c14e38e9c14",
+      "bytes": 7016
+    },
+    {
+      "filename": "b019_parameter_gate_config_snapshot.json",
+      "sha256": "dc42a608ce6c5fc9749f02f7eb16df6b5d07d979a1e5a2fad5f7ce2cb5964c4b",
+      "bytes": 1683
+    },
+    {
+      "filename": "b019_parameter_gate_replay_decisions.json",
+      "sha256": "64565bb435bf66928a4fbfc93ab996b6f52f5936792b4e0fd7c1077df9d7bc59",
+      "bytes": 24415
+    },
+    {
+      "filename": "b019_parameter_gate_report.json",
+      "sha256": "c434d099eb66185ee397361b2ad4c441bd434d05284087c83e2ded49151f7c13",
+      "bytes": 991
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "V11-CF05-E3-B019-STRICT-PARAMETER-GATE-V1-20260811",
+  "development_only": true,
+  "required_parameters": [
+    "overall_composition",
+    "phase1_composition",
+    "phase2_composition",
+    "composition_basis"
+  ],
+  "allowed_basis_values": [
+    "fraction",
+    "percent"
+  ],
+  "grounded_optional_parameters": [
+    "component"
+  ],
+  "unresolved_action": "review_required",
+  "tool_execution_allowed": false,
+  "external_api_calls_allowed": false,
+  "automatic_retry_allowed": false,
+  "runtime_default_component_remediated": false,
+  "confirmatory_inference_allowed": false,
+  "formal_catalog_mutation_allowed": false,
+  "core_frozen": false,
+  "bindings": {
+    "scored_cells": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_r2_analysis_20260810/multitarget_scored_cells.json",
+      "sha256": "4e7204b111b71ffed9c4d96a2783898e0fc5b34286fd5a38ed60fb2a24738a34"
+    },
+    "task_registry": {
+      "path": "outputs/v11_cf05_e3_multitarget_task_gold_candidate_v1_20260810/multitarget_task_acceptable_tools_registry.json",
+      "sha256": "a31d2f1fb7599a01c6cf178db4397119f21c737a6256fde03f46142d51dd367b"
+    },
+    "formal_schema_candidate": {
+      "path": "outputs/v11_cf05_e3_b019_parameter_fidelity_audit_v1_20260811/b019_formal_schema_candidate.json",
+      "sha256": "e68a42b7be7df4e9374bb61ab6e79b4c5662e9b52eb86a6d375323a19dd9ae87"
+    },
+    "parameter_audit_manifest": {
+      "path": "outputs/v11_cf05_e3_b019_parameter_fidelity_audit_v1_20260811/artifact_manifest.json",
+      "sha256": "0410c874341bd734dfeb6c1c6832d01172361de318ee0c760e380cb7a17a6b22"
+    }
+  }
+}

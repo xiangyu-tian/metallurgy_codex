@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "V11-CF05-E3-B019-STRICT-PARAMETER-GATE-V1-20260811",
+  "analysis_status": "offline_replay_and_boundary_challenge_complete",
+  "replay_cell_count": 16,
+  "original_parameter_faithful_count": 5,
+  "optional_elision_count": 11,
+  "review_required_count": 0,
+  "candidate_parameter_faithful_count": 16,
+  "execution_ready_count": 0,
+  "runtime_default_component_risk_count": 16,
+  "challenge_case_count": 12,
+  "challenge_passed_count": 12,
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "gold_used_during_decision": false,
+  "gold_used_after_decision_for_offline_evaluation": true,
+  "formal_catalog_mutated": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "interpretation": "parameter candidates become request-faithful after optional elision, but execution remains blocked because the current B019 runtime still defaults an omitted component to B"
+}

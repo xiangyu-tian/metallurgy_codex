@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "challenge_id": "V11-CF05-E3-B019-STRICT-PARAMETER-GATE-CHALLENGE-V1-20260811",
+  "cases": [
+    {
+      "case_id": "BPG-001",
+      "category": "valid_fraction_no_component",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.4，相1边界成分为 0.2，相2边界成分为 0.7，三者均使用 fraction 标度。",
+      "tool_id": "B019",
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "expected_decision": "candidate_pass_original_parameters",
+      "expected_execution_ready": false
+    },
+    {
+      "case_id": "BPG-002",
+      "category": "valid_percent_no_component",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 40，相1边界成分为 20，相2边界成分为 70，三者均使用 percent 标度。",
+      "tool_id": "B019",
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "expected_decision": "candidate_pass_original_parameters",
+      "expected_execution_ready": false
+    },
+    {
+      "case_id": "BPG-003",
+      "category": "ungrounded_optional_elision",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.4，相1边界成分为 0.2，相2边界成分为 0.7，三者均使用 fraction 标度。",
+      "tool_id": "B019",
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "B"
+      },
+      "expected_decision": "candidate_pass_after_optional_elision",
+      "expected_execution_ready": false
+    },
+    {
+      "case_id": "BPG-004",
+      "category": "explicit_component",
+      "problem_text": "指定组元为 Fe。在二元两相区同一条已知等温连线上，总体成分为 0.4，相1边界成分为 0.2，相2边界成分为 0.7，三者均使用 fraction 标度。",
+      "tool_id": "B019",
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "Fe"
+      },
+      "expected_decision": "candidate_pass_original_parameters",
+      "expected_execution_ready": true
+    },
+    {
+      "case_id": "BPG-005",
+      "category": "component_mismatch",
+      "problem_text": "指定组元为 Fe。在二元两相区同一条已知等温连线上，总体成分为 0.4，相1边界成分为 0.2，相2边界成分为 0.7，三者均使用 fraction 标度。",
+      "tool_id": "B019",
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "B"
+      },
+      "expected_decision": "review_required",
+      "expected_execution_ready": false
+    },
+    {
+      "case_id": "BPG-006",
+      "category": "missing_basis",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.4，相1边界成分为 0.2，相2边界成分为 0.7，三者均使用 fraction 标度。",
+      "tool_id": "B019",
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7
+      },
+      "expected_decision": "review_required",
+      "expected_execution_ready": false
+    },
+    {
+      "case_id": "BPG-007",
+      "category": "auto_basis",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.4，相1边界成分为 0.2，相2边界成分为 0.7，三者均使用 fraction 标度。",
+      "tool_id": "B019",
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "auto"
+      },
+      "expected_decision": "review_required",
+      "expected_execution_ready": false
+    },
+    {
+      "case_id": "BPG-008",
+      "category": "numeric_mismatch",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.4，相1边界成分为 0.2，相2边界成分为 0.7，三者均使用 fraction 标度。",
+      "tool_id": "B019",
+      "arguments": {
+        "overall_composition": 0.5,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "expected_decision": "review_required",
+      "expected_execution_ready": false
+    },
+    {
+      "case_id": "BPG-009",
+      "category": "equal_phase_endpoints",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.4，相1边界成分为 0.4，相2边界成分为 0.4，三者均使用 fraction 标度。",
+      "tool_id": "B019",
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.4,
+        "phase2_composition": 0.4,
+        "composition_basis": "fraction"
+      },
+      "expected_decision": "review_required",
+      "expected_execution_ready": false
+    },
+    {
+      "case_id": "BPG-010",
+      "category": "overall_outside_tieline",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.9，相1边界成分为 0.2，相2边界成分为 0.7，三者均使用 fraction 标度。",
+      "tool_id": "B019",
+      "arguments": {
+        "overall_composition": 0.9,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "expected_decision": "review_required",
+      "expected_execution_ready": false
+    },
+    {
+      "case_id": "BPG-011",
+      "category": "unknown_parameter",
+      "problem_text": "在二元两相区同一条已知等温连线上，总体成分为 0.4，相1边界成分为 0.2，相2边界成分为 0.7，三者均使用 fraction 标度。",
+      "tool_id": "B019",
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "temperature": 1200
+      },
+      "expected_decision": "review_required",
+      "expected_execution_ready": false
+    },
+    {
+      "case_id": "BPG-012",
+      "category": "unparseable_request",
+      "problem_text": "请用杠杆规则算一下相分数。",
+      "tool_id": "B019",
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "expected_decision": "review_required",
+      "expected_execution_ready": false
+    }
+  ]
+}
