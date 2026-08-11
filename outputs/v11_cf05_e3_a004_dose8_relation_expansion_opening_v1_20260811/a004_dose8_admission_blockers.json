@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "candidate_id": "E3C024",
+      "required_before_admission": [
+        "target_specific_relation_review",
+        "target_valid_candidate_invalid_fixture"
+      ],
+      "blocked": true
+    },
+    {
+      "candidate_id": "SRC-PANDAS-A004-001",
+      "required_before_admission": [
+        "freeze_official_source_snapshot",
+        "freeze_package_version",
+        "approve_nonformal_tool_identity",
+        "implement_callable_adapter",
+        "pass_normal_boundary_failure_runtime_cases",
+        "pass_independence_review",
+        "exclude_acceptable_equivalence",
+        "pass_target_valid_candidate_invalid_fixture"
+      ],
+      "blocked": true
+    },
+    {
+      "candidate_id": "SRC-NUMPY-A004-001",
+      "required_before_admission": [
+        "freeze_official_source_snapshot",
+        "freeze_package_version",
+        "approve_nonformal_tool_identity",
+        "implement_callable_adapter",
+        "pass_normal_boundary_failure_runtime_cases",
+        "pass_independence_review",
+        "exclude_acceptable_equivalence",
+        "pass_target_valid_candidate_invalid_fixture"
+      ],
+      "blocked": true
+    },
+    {
+      "candidate_id": "SRC-SKLEARN-A004-001",
+      "required_before_admission": [
+        "freeze_official_source_snapshot",
+        "freeze_package_version",
+        "approve_nonformal_tool_identity",
+        "implement_callable_adapter",
+        "pass_normal_boundary_failure_runtime_cases",
+        "pass_independence_review",
+        "exclude_acceptable_equivalence",
+        "pass_target_valid_candidate_invalid_fixture"
+      ],
+      "blocked": true
+    },
+    {
+      "candidate_id": "SRC-SCIPY-A004-002",
+      "required_before_admission": [
+        "freeze_official_source_snapshot",
+        "freeze_package_version",
+        "approve_nonformal_tool_identity",
+        "implement_callable_adapter",
+        "pass_normal_boundary_failure_runtime_cases",
+        "pass_independence_review",
+        "exclude_acceptable_equivalence",
+        "pass_target_valid_candidate_invalid_fixture"
+      ],
+      "blocked": true
+    },
+    {
+      "candidate_id": "SRC-SCIPY-A004-003",
+      "required_before_admission": [
+        "freeze_official_source_snapshot",
+        "freeze_package_version",
+        "approve_nonformal_tool_identity",
+        "implement_callable_adapter",
+        "pass_normal_boundary_failure_runtime_cases",
+        "pass_independence_review",
+        "exclude_acceptable_equivalence",
+        "pass_target_valid_candidate_invalid_fixture"
+      ],
+      "blocked": true
+    },
+    {
+      "candidate_id": "SRC-SKBIO-A004-001",
+      "required_before_admission": [
+        "freeze_official_source_snapshot",
+        "freeze_package_version",
+        "approve_nonformal_tool_identity",
+        "implement_callable_adapter",
+        "pass_normal_boundary_failure_runtime_cases",
+        "pass_independence_review",
+        "exclude_acceptable_equivalence",
+        "pass_target_valid_candidate_invalid_fixture"
+      ],
+      "blocked": true
+    },
+    {
+      "candidate_id": "SRC-SKBIO-A004-002",
+      "required_before_admission": [
+        "freeze_official_source_snapshot",
+        "freeze_package_version",
+        "approve_nonformal_tool_identity",
+        "implement_callable_adapter",
+        "pass_normal_boundary_failure_runtime_cases",
+        "pass_independence_review",
+        "exclude_acceptable_equivalence",
+        "pass_target_valid_candidate_invalid_fixture"
+      ],
+      "blocked": true
+    }
+  ]
+}

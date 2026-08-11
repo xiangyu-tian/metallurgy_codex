@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-DOSE8-RELATION-EXPANSION-OPENING-V1-20260811",
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "filename": "a004_dose8_admission_blockers.json",
+      "sha256": "bf623f98de10ef77d5dafa15ef1ee38e4ff1dabb3f4b341fd2c9e8ca8b29dfbb",
+      "bytes": 3648
+    },
+    {
+      "filename": "a004_dose8_expansion_config_snapshot.json",
+      "sha256": "0adcab4fe8b6625c71bcf86cfc0bce804ba2a0c68c6709745bc81c02e16c1b03",
+      "bytes": 10305
+    },
+    {
+      "filename": "a004_dose8_expansion_report.json",
+      "sha256": "72c49d8b37c9b0226c894d86283ed5b49164b9de59f611cc30bd37d52fb5be00",
+      "bytes": 1236
+    },
+    {
+      "filename": "a004_dose8_source_screening.json",
+      "sha256": "16ab2954fd6d49753e049628e455a975b78455f2575bdb34fb4fed3bc17aee51",
+      "bytes": 16380
+    },
+    {
+      "filename": "implementation_authorization_request.json",
+      "sha256": "a4f35088dd56e73d1bb5caf20ac3b3275fb4b7e15876b088765f31b4310de473",
+      "bytes": 611
+    }
+  ]
+}

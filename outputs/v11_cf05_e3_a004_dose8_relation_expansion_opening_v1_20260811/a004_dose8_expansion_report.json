@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-DOSE8-RELATION-EXPANSION-OPENING-V1-20260811",
+  "status": "balanced_source_capacity_found_implementation_not_authorized",
+  "starting_relation_counts": {
+    "lexical": 4,
+    "functional_overlap": 4
+  },
+  "target_relation_counts": {
+    "lexical": 8,
+    "functional_overlap": 8
+  },
+  "screened_candidate_count": 8,
+  "existing_identity_reuse_candidate_count": 1,
+  "new_source_candidate_count": 7,
+  "intended_lexical_addition_count": 4,
+  "intended_functional_addition_count": 4,
+  "algorithmic_screen_pass_count": 8,
+  "independence_review_group_count": 2,
+  "relation_admission_count": 0,
+  "new_tool_identities_created": 0,
+  "dependencies_installed": 0,
+  "local_candidate_executions": 0,
+  "external_api_calls": 0,
+  "dose8_pools_generated": 0,
+  "independent_validation_split_accessed": false,
+  "formal_pool_generation_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "next_gate": "approve source snapshot and staged nonformal implementation; review E3C024 first, then implement available-dependency candidates before installing scikit-learn or scikit-bio"
+}

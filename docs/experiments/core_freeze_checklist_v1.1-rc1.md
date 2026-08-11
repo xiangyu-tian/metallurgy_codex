@@ -784,3 +784,38 @@ coverage_audit_manifest_sha256: e4098958ba1a63f1e1b923045417d399cba18ec16cc704f4
 ```
 
 本轮只完成确定性的开发工具池复制与扩展，没有修改冻结的 Full Schema、Lexical Top-5、Dense Top-5、Hierarchical 或传输策略。A004 已具备完整的剂量0/4四规模五重复开发网格；下一门槛是新增并验证4个词法近邻和4个契约错配近邻，再生成40个剂量8池。该候选不得替代正式确认性工具池。
+
+## 11.6 CF-05 A004 剂量8关系扩展来源开启包
+
+```yaml
+opening_id: V11-CF05-E3-A004-DOSE8-RELATION-EXPANSION-OPENING-V1-20260811
+status: balanced_source_capacity_found_implementation_not_authorized
+starting_relation_counts:
+  lexical: 4
+  functional_overlap: 4
+target_relation_counts:
+  lexical: 8
+  functional_overlap: 8
+screened_candidate_count: 8
+existing_identity_reuse_candidate_count: 1
+new_source_candidate_count: 7
+intended_lexical_addition_count: 4
+intended_functional_addition_count: 4
+algorithmic_screen_pass_count: 8
+relation_admission_count: 0
+mandatory_independence_review_groups:
+  - scipy_standard_score_family
+  - skbio_log_ratio_family
+new_tool_identities_created: 0
+dependencies_installed: 0
+local_candidate_executions: 0
+external_api_calls: 0
+dose8_pools_generated: 0
+formal_pool_generation_allowed: false
+confirmatory_inference_allowed: false
+cf05_status: in_progress
+core_frozen: false
+artifact_manifest_sha256: 34791ed85a8b7b881deb9f84e3ed731b1d98a9cfedf4d7fceb8c0ce5c18339e2
+```
+
+该开启包只证明存在“若全部通过则可达到8+8”的来源容量，不证明8个候选已经成为近邻。`E3C024`必须新增A004目标特异关系夹具；7个新来源必须依次完成官方来源快照、版本冻结、非正式工具身份审批、调用适配器、正常/边界/失败测试、独立性审查、可接受等价排除及目标有效/候选无效夹具。SciPy两种Z分数和scikit-bio两种对数比变换必须分别证明不是同一工具的参数变体。实施仍需单独授权。

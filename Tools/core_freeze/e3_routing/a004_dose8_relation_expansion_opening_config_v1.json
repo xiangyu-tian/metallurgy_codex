@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-DOSE8-RELATION-EXPANSION-OPENING-V1-20260811",
+  "target_tool_id": "A004",
+  "starting_relation_counts": {
+    "lexical": 4,
+    "functional_overlap": 4
+  },
+  "target_relation_counts": {
+    "lexical": 8,
+    "functional_overlap": 8
+  },
+  "relation_assignment_policy": "one_target_relation_per_candidate_with_disjoint_lexical_and_functional_sets",
+  "existing_cross_target_candidates": [
+    {
+      "candidate_tool_id": "E3C024",
+      "intended_relation_type": "lexical",
+      "reuse_policy": "target_specific_relation_review_required",
+      "new_tool_identity": false
+    }
+  ],
+  "new_source_candidates": [
+    {
+      "provisional_candidate_id": "SRC-PANDAS-A004-001",
+      "package": "pandas",
+      "callable_identity": "pandas.DataFrame.value_counts(normalize=True)",
+      "source_reference": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.value_counts.html",
+      "documented_capability": "Return proportions rather than frequencies for distinct rows.",
+      "tool_name": "Pandas分类频数归一化占比",
+      "core_method": "分类观测频数统计与归一化",
+      "main_input": "分类观测序列",
+      "main_output": "各类别出现频率占比",
+      "supported_systems": ["categorical_observation_rows"],
+      "intended_relation_type": "lexical",
+      "target_invalid_reason": "A004 accepts named numeric component weights; this callable counts repeated observations instead of normalizing supplied component amounts.",
+      "dependency_status": "available_locally"
+    },
+    {
+      "provisional_candidate_id": "SRC-NUMPY-A004-001",
+      "package": "numpy",
+      "callable_identity": "numpy.histogram(density=True)",
+      "source_reference": "https://numpy.org/doc/stable/reference/generated/numpy.histogram.html",
+      "documented_capability": "Compute a histogram and optionally return probability density values.",
+      "tool_name": "NumPy直方图密度归一化",
+      "core_method": "直方图频数与密度归一化",
+      "main_input": "观测数据、分箱和权重",
+      "main_output": "分箱密度与边界",
+      "supported_systems": ["numeric_samples_with_histogram_bins"],
+      "intended_relation_type": "lexical",
+      "target_invalid_reason": "The output is bin density over observations and is not a named component-weight mapping divided by its sum.",
+      "dependency_status": "available_locally"
+    },
+    {
+      "provisional_candidate_id": "SRC-SKLEARN-A004-001",
+      "package": "scikit-learn",
+      "callable_identity": "sklearn.preprocessing.MinMaxScaler.fit_transform",
+      "source_reference": "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html",
+      "documented_capability": "Scale each feature independently to a specified range.",
+      "tool_name": "scikit-learn成分最小最大归一化",
+      "core_method": "特征最小最大区间缩放",
+      "main_input": "组成样本矩阵、基准范围和裁剪选项",
+      "main_output": "区间缩放组成、最小值与范围偏差",
+      "supported_systems": ["sample_by_feature_matrices_under_featurewise_range_scaling"],
+      "intended_relation_type": "lexical",
+      "target_invalid_reason": "Featurewise min-max scaling across samples does not produce a unit-sum composition for one supplied component vector.",
+      "dependency_status": "installation_pending"
+    },
+    {
+      "provisional_candidate_id": "SRC-SCIPY-A004-002",
+      "package": "scipy",
+      "callable_identity": "scipy.stats.zscore",
+      "source_reference": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.zscore.html",
+      "documented_capability": "Standardize values relative to their arithmetic mean and standard deviation.",
+      "tool_name": "SciPy Z分数标准化",
+      "core_method": "算术均值与标准差Z分数变换",
+      "main_input": "组成、基准轴、自由度和缺失值策略",
+      "main_output": "标准化组成、均值和标准差偏差",
+      "supported_systems": ["finite_numeric_arrays_under_arithmetic_zscore"],
+      "intended_relation_type": "functional_overlap",
+      "target_invalid_reason": "Z-scores are centered around zero and may be negative; they are not nonnegative unit-sum fractions.",
+      "dependency_status": "available_locally"
+    },
+    {
+      "provisional_candidate_id": "SRC-SCIPY-A004-003",
+      "package": "scipy",
+      "callable_identity": "scipy.stats.gzscore",
+      "source_reference": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.gzscore.html",
+      "documented_capability": "Standardize strictly positive values relative to geometric mean and geometric standard deviation.",
+      "tool_name": "SciPy几何Z分数标准化",
+      "core_method": "几何均值与几何标准差Z分数变换",
+      "main_input": "正值组成、基准轴、自由度和缺失值策略",
+      "main_output": "几何标准化组成、均值和标准差偏差",
+      "supported_systems": ["strictly_positive_numeric_arrays_under_geometric_zscore"],
+      "intended_relation_type": "functional_overlap",
+      "target_invalid_reason": "Geometric Z-scores are log-standardized coordinates rather than nonnegative unit-sum fractions.",
+      "dependency_status": "available_locally"
+    },
+    {
+      "provisional_candidate_id": "SRC-SKBIO-A004-001",
+      "package": "scikit-bio",
+      "callable_identity": "skbio.stats.composition.clr",
+      "source_reference": "https://scikit.bio/docs/latest/generated/skbio.stats.composition.clr.html",
+      "documented_capability": "Transform a strictly positive composition into centered log-ratio coordinates whose sum is zero.",
+      "tool_name": "scikit-bio成分中心对数比变换",
+      "core_method": "成分中心对数比变换与Aitchison几何映射",
+      "main_input": "组成、基准轴和正值校验",
+      "main_output": "中心对数比组成、几何均值偏差",
+      "supported_systems": ["strictly_positive_compositions_in_aitchison_geometry"],
+      "intended_relation_type": "functional_overlap",
+      "target_invalid_reason": "CLR returns real-space log-ratio coordinates summing to zero, not the original components rescaled to sum to one.",
+      "dependency_status": "installation_pending"
+    },
+    {
+      "provisional_candidate_id": "SRC-SKBIO-A004-002",
+      "package": "scikit-bio",
+      "callable_identity": "skbio.stats.composition.alr",
+      "source_reference": "https://scikit.bio/docs/latest/generated/skbio.stats.composition.alr.html",
+      "documented_capability": "Transform a composition into additive log-ratio coordinates relative to one reference component.",
+      "tool_name": "scikit-bio成分加性对数比变换",
+      "core_method": "成分加性对数比变换与参考组分映射",
+      "main_input": "组成、基准轴、参考组分和正值校验",
+      "main_output": "加性对数比组成、参考分量偏差",
+      "supported_systems": ["strictly_positive_compositions_with_reference_component"],
+      "intended_relation_type": "functional_overlap",
+      "target_invalid_reason": "ALR drops one dimension and returns log ratios relative to a reference component, not unit-sum fractions.",
+      "dependency_status": "installation_pending"
+    }
+  ],
+  "mandatory_independence_review_groups": [
+    {
+      "group_id": "scipy_standard_score_family",
+      "candidate_ids": ["SRC-SCIPY-A004-002", "SRC-SCIPY-A004-003"],
+      "required_decision": "prove arithmetic and geometric standard scores are independently reportable scientific tools rather than parameter variants"
+    },
+    {
+      "group_id": "skbio_log_ratio_family",
+      "candidate_ids": ["SRC-SKBIO-A004-001", "SRC-SKBIO-A004-002"],
+      "required_decision": "prove CLR and ALR are independently reportable transforms rather than aliases or parameter variants"
+    }
+  ],
+  "development_only": true,
+  "new_tool_identity_creation_authorized": false,
+  "dependency_installation_authorized": false,
+  "local_candidate_execution_authorized": false,
+  "external_api_calls_authorized": false,
+  "independent_validation_split_access_allowed": false,
+  "formal_catalog_mutation_allowed": false,
+  "formal_pool_generation_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "bindings": {
+    "method_freeze_adoption": {"path": "Tools/core_freeze/e3_routing/cf05_development_method_freeze_adoption_v1.json", "sha256": "7ac657ff069f768933d9014f2f61d5f799ac7ba60ad748597d227881ae03a8f7"},
+    "coverage_audit_manifest": {"path": "outputs/v11_cf05_e3_five_target_pool_coverage_audit_v1_1_20260811/artifact_manifest.json", "sha256": "e4098958ba1a63f1e1b923045417d399cba18ec16cc704f4de3475560f8505ce"},
+    "schema_catalog": {"path": "outputs/v11_cf05_cf06_e3_catalog_candidate_v1_20260803/e3_schema_catalog_v1_candidate.json", "sha256": "78de613f974d1ee48d5e2afa8a379b534a1e28a5b6749d9fc75f015aff6dd4f6"},
+    "verified_contracts": {"path": "Tools/core_freeze/verified_core/contracts_v1.json", "sha256": "9df57db7836dbcb24d5b5d7f5b487003ade3a33955d01e2a827633aaa14fc0ec"},
+    "neighbor_audit_config": {"path": "Tools/core_freeze/e3_routing/neighbor_audit_config_v1_1.json", "sha256": "9ba29726f3e38b2701133e19445f58b9797e6de92e20d1dfeb203c986242bfa3"},
+    "combined_relation_registry": {"path": "outputs/v11_cf05_e3_candidate_admission_batch4_v1_20260810/combined_relation_evidence_registry.json", "sha256": "09a807239a55a2baddc6f712812534bb9c3153ab80721df6e3ae93d4657ce171"},
+    "batch3_candidate_registry": {"path": "outputs/v11_cf05_e3_registration_candidates_batch3_v1_20260803/candidate_registration_registry.json", "sha256": "4324d69f795f3c590792af1a9b8f5543a699b3ec1344262f395270d9164c4b0f"}
+  }
+}

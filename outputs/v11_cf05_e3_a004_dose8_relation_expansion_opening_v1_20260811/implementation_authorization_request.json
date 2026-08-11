@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A004-DOSE8-RELATION-EXPANSION-OPENING-V1-20260811",
+  "decision": "pending_user_authorization",
+  "authorized": false,
+  "proposed_stage_1": [
+    "E3C024 target-specific review",
+    "SRC-PANDAS-A004-001",
+    "SRC-NUMPY-A004-001",
+    "SRC-SCIPY-A004-002",
+    "SRC-SCIPY-A004-003"
+  ],
+  "proposed_stage_2": [
+    "SRC-SKLEARN-A004-001",
+    "SRC-SKBIO-A004-001",
+    "SRC-SKBIO-A004-002"
+  ],
+  "stage_2_requires_dependency_installation": true,
+  "external_api_calls_requested": 0,
+  "formal_pool_generation_requested": false
+}
