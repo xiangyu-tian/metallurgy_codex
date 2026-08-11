@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R2-R3-OPENING-V1-20260811",
+  "artifact_count": 8,
+  "artifacts": [
+    {
+      "filename": "a002_a003_top5_selector_r2_r3_results.json",
+      "sha256": "d07bee2502c00014d07a018ca11f1f2a90a53313d4a6dd2f121a5d29f8289188",
+      "bytes": 1298572
+    },
+    {
+      "filename": "a002_a003_top5_selector_r2_r3_runtime_report.json",
+      "sha256": "212bd0de04103d8385dd2313543041924932d98118ad83bf129f4bd6920c57ab",
+      "bytes": 840
+    },
+    {
+      "filename": "execution_authorization_snapshot.json",
+      "sha256": "18bfdcaca382c79552b4964d3e8b503b3b8bfd7ec2d9b5ea0c16935db125fb81",
+      "bytes": 2453
+    },
+    {
+      "filename": "opening_config_snapshot.json",
+      "sha256": "75bc260159c39335df5036df40e6fdd30480e57e9189e3246c14b09f7e45e936",
+      "bytes": 2801
+    },
+    {
+      "filename": "opening_manifest_snapshot.json",
+      "sha256": "c5f51f31420418e2ce5dade287454b5428d08b6706acad1cf3d8cee472c25810",
+      "bytes": 1509
+    },
+    {
+      "filename": "opening_prompt_snapshot.json",
+      "sha256": "6ece25e251b4c0d6e43bf45c6962aa1f97bf3ec954c4a04f2d3ae8e9155f156a",
+      "bytes": 1056
+    },
+    {
+      "filename": "opening_run_cells_snapshot.json",
+      "sha256": "c8b50e7cda56b82f2710be7d73829f1a8f1197c3c1c921e9681c2d229fb165ab",
+      "bytes": 378112
+    },
+    {
+      "filename": "runner_source_snapshot.py",
+      "sha256": "5a09a23413de08902d5f2d6a84180e75d1a4ae3bab216c4fe51e5af21c189244",
+      "bytes": 16492
+    }
+  ]
+}

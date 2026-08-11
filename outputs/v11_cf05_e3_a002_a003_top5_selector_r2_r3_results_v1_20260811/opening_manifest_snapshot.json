@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-TOP5-SELECTOR-R2-R3-OPENING-V1-20260811",
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "filename": "a002_a003_top5_selector_r2_r3_config_snapshot.json",
+      "sha256": "75bc260159c39335df5036df40e6fdd30480e57e9189e3246c14b09f7e45e936",
+      "bytes": 2801
+    },
+    {
+      "filename": "a002_a003_top5_selector_r2_r3_opening_report.json",
+      "sha256": "fc20bb279e6d8e8774eeb5cfc2ca27b94394b286b2e82325a2b7ff2e8ca7c11e",
+      "bytes": 1298
+    },
+    {
+      "filename": "a002_a003_top5_selector_r2_r3_prompt_snapshot.json",
+      "sha256": "6ece25e251b4c0d6e43bf45c6962aa1f97bf3ec954c4a04f2d3ae8e9155f156a",
+      "bytes": 1056
+    },
+    {
+      "filename": "a002_a003_top5_selector_r2_r3_request_payloads.json",
+      "sha256": "00b526048a6135bcc7a6f5be9bc89d2382cc5e4cce8af01389c549adb646dd81",
+      "bytes": 2169803
+    },
+    {
+      "filename": "a002_a003_top5_selector_r2_r3_run_cells.json",
+      "sha256": "c8b50e7cda56b82f2710be7d73829f1a8f1197c3c1c921e9681c2d229fb165ab",
+      "bytes": 378112
+    },
+    {
+      "filename": "a002_a003_top5_selector_r2_r3_single_axis_audit.json",
+      "sha256": "4f83961803ec83e6da29e6475c40d8630fd22172b2e6733d86946c9ecde24f5b",
+      "bytes": 252403
+    },
+    {
+      "filename": "execution_authorization_request.json",
+      "sha256": "6a2136e0591ae4c735928c384aae0a72b793605935f34aac2e652bb38e86b75b",
+      "bytes": 1056
+    }
+  ]
+}

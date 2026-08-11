@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "prompt_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-SELECTOR-PROMPT-V1-20260811",
+  "system": "你是冶金计算工具路由器。只根据用户问题和本轮可见的函数Schema选择能够直接满足所请求输出的工具并生成参数。若某个可见工具能够直接满足问题，则只返回一次该工具的原生函数调用；不要执行工具，不要自行计算最终数值，不要解释选择过程，不要调用需要额外未给定输入或只能间接完成任务的工具。不得假设存在未展示的工具。",
+  "user_template": "{problem_text}",
+  "selector_policy": {
+    "tool_choice": "auto",
+    "maximum_tool_calls": 1,
+    "tool_execution_allowed": false,
+    "plain_text_answer_scored_as_selection": false,
+    "multiple_tool_calls_scored_as_selection": false
+  },
+  "gold_fields_forbidden": [
+    "primary_acceptable_tools",
+    "alternative_success_tools",
+    "family_hit_tools",
+    "scientific_success_tools",
+    "scoring_rule",
+    "target_tool_id"
+  ]
+}
