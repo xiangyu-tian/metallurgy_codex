@@ -14,6 +14,8 @@ from typing import Any
 
 WORKSPACE = Path(__file__).resolve().parents[3]
 TOOLS_DIR = WORKSPACE / "Tools"
+if str(WORKSPACE) not in sys.path:
+    sys.path.insert(0, str(WORKSPACE))
 if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
