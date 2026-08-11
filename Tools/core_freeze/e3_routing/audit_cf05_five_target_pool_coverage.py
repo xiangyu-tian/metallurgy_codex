@@ -147,7 +147,34 @@ def build(config: dict[str, Any]) -> dict[str, Any]:
     effective_counts["A003"] = {"lexical": 8, "functional_overlap": 8}
     effective_counts["A004"] = {"lexical": 4, "functional_overlap": 4}
 
-    existing_pool_records = {"A001": 0, "A002": 0, "A003": 100, "A004": 6, "B019": 0}
+    a004_record_count = 6
+    if "a004_dose4_complete_manifest" in sources:
+        complete_rows = sources["a004_dose4_complete_manifest"]["records"]
+        complete_combinations = {
+            (
+                int(row["tool_pool_size"]),
+                row["pool_repeat"],
+                *_condition_key(row),
+            )
+            for row in complete_rows
+        }
+        expected_dose4_combinations = {
+            (size, repeat, neighbor_type, count)
+            for size in config["required_pool_sizes"]
+            for repeat in config["required_pool_repeats"]
+            for neighbor_type, count in (
+                ("none", 0),
+                ("lexical", 4),
+                ("functional_overlap", 4),
+            )
+        }
+        if len(complete_rows) != 60 or complete_combinations != expected_dose4_combinations:
+            raise ValueError("A004 complete dose-4 pool evidence changed")
+        if sources["a004_dose4_pool_audit"].get("all_pool_invariants_passed") is not True:
+            raise ValueError("A004 complete dose-4 pool audit is not passed")
+        a004_record_count = 60
+
+    existing_pool_records = {"A001": 0, "A002": 0, "A003": 100, "A004": a004_record_count, "B019": 0}
     rows = []
     for target in config["target_tool_ids"]:
         lexical = effective_counts[target]["lexical"]
@@ -224,7 +251,14 @@ def build(config: dict[str, Any]) -> dict[str, Any]:
         "confirmatory_inference_allowed": False,
         "cf05_status": "in_progress",
         "core_frozen": False,
-        "conclusion": "A003 is the only target with the complete strict 0/4/8 grid. A004 has dose-4 neighbor evidence and six partial 17/120 pools. A001, A002, and B019 require additional relation evidence before deterministic full pool construction.",
+        "conclusion": (
+            "A003 is the only target with the complete strict 0/4/8 grid. "
+            "A004 has the complete 17/50/100/120 by A-E dose-0/4 development grid "
+            "and still lacks dose-8 relation evidence and pools. A001, A002, and B019 "
+            "require additional relation evidence before deterministic full pool construction."
+            if a004_record_count == 60
+            else "A003 is the only target with the complete strict 0/4/8 grid. A004 has dose-4 neighbor evidence and six partial 17/120 pools. A001, A002, and B019 require additional relation evidence before deterministic full pool construction."
+        ),
         "next_gate": "freeze a staged relation-evidence expansion plan; do not construct formal pools from weak or invented neighbors",
     }
     expansion_queue = [
@@ -239,8 +273,16 @@ def build(config: dict[str, Any]) -> dict[str, Any]:
             [
                 (
                     "A004",
-                    "complete 17/50/100/120 A-E dose-0/4 pool replication, then add four lexical and four functional neighbors for dose 8",
-                    "reuse existing dose-4 evidence for deterministic pool replication; separately source and validate dose-8 relations",
+                    (
+                        "add four lexical and four functional neighbors for dose 8"
+                        if a004_record_count == 60
+                        else "complete 17/50/100/120 A-E dose-0/4 pool replication, then add four lexical and four functional neighbors for dose 8"
+                    ),
+                    (
+                        "source and validate dose-8 relations without modifying the completed dose-4 grid"
+                        if a004_record_count == 60
+                        else "reuse existing dose-4 evidence for deterministic pool replication; separately source and validate dose-8 relations"
+                    ),
                 ),
                 (
                     "B019",
@@ -271,8 +313,8 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
         writer.writerows(rows)
 
 
-def build_outputs(output_dir: Path) -> dict[str, Any]:
-    config = common.load_json(CONFIG_PATH)
+def build_outputs(output_dir: Path, config_path: Path = CONFIG_PATH) -> dict[str, Any]:
+    config = common.load_json(config_path)
     result = build(config)
     output_dir.mkdir(parents=True, exist_ok=False)
     artifacts = {
@@ -313,9 +355,11 @@ def build_outputs(output_dir: Path) -> dict[str, Any]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument("--config", type=Path, default=CONFIG_PATH)
     args = parser.parse_args()
     output_dir = args.output_dir if args.output_dir.is_absolute() else WORKSPACE / args.output_dir
-    print(json.dumps(build_outputs(output_dir), ensure_ascii=False, indent=2))
+    config_path = args.config if args.config.is_absolute() else WORKSPACE / args.config
+    print(json.dumps(build_outputs(output_dir, config_path), ensure_ascii=False, indent=2))
     return 0
 
 

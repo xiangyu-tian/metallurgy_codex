@@ -40,7 +40,7 @@ v1.1 的 CF 编号重新绑定到可执行真值冻结门槛：
 | CF-02 | `verified_core`工具及独立参考 | 至少3个工具；契约字段、来源、适用域、限制、哈希、正常/边界案例和独立参考均通过 | `passed` | A001、A002、A003、A004、B019共5工具；27/27参考案例通过；11项审计检查通过 |
 | CF-03 | E1b基础任务与收益先导 | 基础任务、独立参考、No Tool/Forced Tool对照、重复和防循环划分可复现 | `passed` | 候选证据审计通过；E1b的120基础任务组、240任务和3次重复设计已审批冻结 |
 | CF-04 | E2契约边界变换 | 缺参、歧义、契约超域、不支持、不可用和版本错配可由规则复算；多标签与动作优先级测试通过 | `passed` | 40条锁定独立任务、两个冻结条件共80单元全部完成；双层门控flags 39/40、动作40/40、提前调用0；波动与样本量转入CF-08/CF-09 |
-| CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 四种方法及统一传输策略已由项目负责人批准冻结，禁止继续针对已消费开发任务调参。A001/A002/A004/B019混合现实切片64/64端到端正确；A004难例三重复47/48配对单元稳定正确，1个稳定多调用失败；A002/A003 Top-5三重复186/192配对单元稳定正确、2个稳定失败、4个波动，所有异常按ITT保留。五目标覆盖审计确认开发金标5/5已准备，但严格0/4/8网格仅A003完整（100池）；A004为6个17/120、0/4部分池，A001/A002/B019尚未构造。当前共有106/500个严格或部分池记录，剂量4关系证据缺15槽、剂量8缺47槽；不得用弱近邻、可接受等价工具或虚构工具填槽，仍不允许确认性H3/H4推断 |
+| CF-05 | E3参数、可接受工具与契约近邻 | 参数规范化、单一/等价可接受工具、0/4/8契约近邻和嵌套池测试通过 | `in_progress` | 四种方法及统一传输策略已由项目负责人批准冻结，禁止继续针对已消费开发任务调参。A001/A002/A004/B019混合现实切片64/64端到端正确；A004难例三重复47/48配对单元稳定正确，1个稳定多调用失败；A002/A003 Top-5三重复186/192配对单元稳定正确、2个稳定失败、4个波动，所有异常按ITT保留。五目标覆盖审计确认开发金标5/5已准备，但严格0/4/8网格仅A003完整（100池）；A004的17/50/100/120 × A—E剂量0/4开发网格已补齐（60池），原6个17/120池作为重复A锚点原样保留，剂量8仍缺40池；A001/A002/B019尚未构造。当前共有160/500个严格或部分池记录，剂量4关系证据仍缺15槽、剂量8仍缺47槽；不得用弱近邻、可接受等价工具或虚构工具填槽，仍不允许确认性H3/H4推断 |
 | CF-06 | 17/50/100/120 Schema API可行性 | 实测函数数量、Token、上下文、延迟、错误、`tool_choice=none`和供应商限制 | `passed` | 冻结的10个DeepSeek请求全部成功；17/50/100/120 Schema均被接受，最大实测20,602 Prompt Token，0次重试、0次工具执行；`tool_choice=none`实测不向模型暴露Schema，因此不得作为“Schema可见但禁止调用”条件 |
 | CF-07 | 数据层级与泄漏审计 | `controlled_confirmatory`、`naturalistic_validation`、`exploratory_domain_cases`分层；家族划分和收益校准/评价隔离通过 | `in_progress` | E1b/E1c受控集已分区；自然验证层和探索层尚未冻结 |
 | CF-08 | 先导波动与功效分析 | 估计任务家族、工具家族、重复波动和主要效应；固定正式重复次数 | `in_progress` | E1b组件已批准；E2已完成R1并形成R2/R3未授权开启包，执行后合并三次重复估计波动；E1a/E3仍待先导 |
@@ -754,3 +754,33 @@ core_frozen: false
 ```
 
 `E3C006`至`E3C015`已经形成真实调用包装器，并各自通过正常、边界和失败契约；其中`E3C007`的真实名称和契约文本未达到冻结Dice阈值，故只保留运行实现、不准入关系证据，且禁止通过拼接目标名称制造词法相似度。`E3C016`和`E3C017`只保留稳定编号，因为pycalphad相稳定性和相图映射必须绑定可再分发、哈希冻结且有独立参考结果的TDB，不能仅凭包已安装宣称可执行。两批关系合并后仍无目标同时达到8个词法近邻和8个契约错配近邻，因此CF-05保持`in_progress`，不得生成正式确认性工具池。
+
+## 11.5 CF-05 A004 剂量4开发工具池补齐
+
+```yaml
+candidate_id: V11-CF05-E3-A004-DOSE4-COMPLETE-POOLS-CANDIDATE-V1-20260811
+status: a004_dose4_development_pool_grid_complete
+target_tool_id: A004
+pool_sizes: [17, 50, 100, 120]
+pool_repeats: [A, B, C, D, E]
+conditions: [none_0, lexical_4, functional_overlap_4]
+pool_count: 60
+legacy_anchor_count: 6
+legacy_anchors_preserved: true
+functional_overlap_evidence_relation_type: contract_mismatch
+expert_validated_functional_overlap: false
+external_api_calls: 0
+new_tool_identities_created: 0
+confirmatory_inference_allowed: false
+formal_pool_generation_allowed: false
+cf05_status: in_progress
+core_frozen: false
+artifact_manifest_sha256: d9aee63481f0f01de4f9e6bb67ef72c264edec190a31175d31b6c3575362a66f
+coverage_audit_id: V11-CF05-E3-FIVE-TARGET-POOL-COVERAGE-AUDIT-V1.1-20260811
+coverage_existing_pool_records: 160
+coverage_required_pool_records: 500
+coverage_missing_pool_records: 340
+coverage_audit_manifest_sha256: e4098958ba1a63f1e1b923045417d399cba18ec16cc704f4de3475560f8505ce
+```
+
+本轮只完成确定性的开发工具池复制与扩展，没有修改冻结的 Full Schema、Lexical Top-5、Dense Top-5、Hierarchical 或传输策略。A004 已具备完整的剂量0/4四规模五重复开发网格；下一门槛是新增并验证4个词法近邻和4个契约错配近邻，再生成40个剂量8池。该候选不得替代正式确认性工具池。

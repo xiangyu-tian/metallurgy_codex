@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF05-E3-FIVE-TARGET-POOL-COVERAGE-AUDIT-V1.1-20260811",
+  "target_tool_ids": [
+    "A001",
+    "A002",
+    "A003",
+    "A004",
+    "B019"
+  ],
+  "required_pool_sizes": [
+    17,
+    50,
+    100,
+    120
+  ],
+  "required_pool_repeats": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "required_conditions": [
+    {
+      "near_neighbor_type": "none",
+      "near_neighbor_count": 0
+    },
+    {
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 4
+    },
+    {
+      "near_neighbor_type": "lexical",
+      "near_neighbor_count": 8
+    },
+    {
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 4
+    },
+    {
+      "near_neighbor_type": "functional_overlap",
+      "near_neighbor_count": 8
+    }
+  ],
+  "effective_neighbor_count_policy": "latest_constructed_pool_evidence_overrides_older_readiness_lower_bound",
+  "external_api_calls_authorized": false,
+  "new_tool_identity_creation_allowed": false,
+  "independent_validation_split_access_allowed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "bindings": {
+    "method_freeze_adoption": {
+      "path": "Tools/core_freeze/e3_routing/cf05_development_method_freeze_adoption_v1.json",
+      "sha256": "7ac657ff069f768933d9014f2f61d5f799ac7ba60ad748597d227881ae03a8f7"
+    },
+    "a003_controlled_pool_manifest": {
+      "path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_controlled_pool_manifest.json",
+      "sha256": "4053401bce5175ea66c38bad85a81c2e227e50bb5a36162c47d96e4c6fc1337f"
+    },
+    "a003_pool_audit": {
+      "path": "outputs/v11_cf05_e3_a003_controlled_pools_candidate_v1_20260809/a003_pool_audit.json",
+      "sha256": "820a14c0e6d39bc9837a4b0120d2ba548826b962c85e6c120d759dd2143ff09a"
+    },
+    "a004_controlled_pools": {
+      "path": "outputs/v11_cf05_e3_a004_hardcase_opening_v1_20260810/a004_controlled_selected_pools.json",
+      "sha256": "651d85f0b0bb90d64453fcf602c075d4c8c99e866d53114c4ca5fc50fd5f8899"
+    },
+    "a004_dose4_complete_manifest": {
+      "path": "outputs/v11_cf05_e3_a004_dose4_complete_pools_candidate_v1_20260811/a004_dose4_controlled_pool_manifest.json",
+      "sha256": "e41f0012e39ce4a2d67b617cd8fc859de0079764029de1e3e68194e671fecf26"
+    },
+    "a004_dose4_pool_audit": {
+      "path": "outputs/v11_cf05_e3_a004_dose4_complete_pools_candidate_v1_20260811/a004_dose4_pool_audit.json",
+      "sha256": "09503d3c517924e86c7acebd8eE6fbf8660a57802eebda526b0f520792618da3"
+    },
+    "older_readiness_matrix": {
+      "path": "outputs/v11_cf05_e3_multitarget_readiness_v1_20260810/target_readiness_matrix.json",
+      "sha256": "cf8c62a226831d7ac6e42e177d792cad7711e106262b0f088451b9fd8d29cf98"
+    },
+    "multitarget_task_gold_report": {
+      "path": "outputs/v11_cf05_e3_multitarget_task_gold_candidate_v1_20260810/multitarget_task_gold_report.json",
+      "sha256": "5cfc4c8ce94401267695c0cb449af316c30dea38f7a8c33ff1542b4f41816bc7"
+    },
+    "combined_relation_registry": {
+      "path": "outputs/v11_cf05_e3_candidate_admission_batch4_v1_20260810/combined_relation_evidence_registry.json",
+      "sha256": "09a807239a55a2baddc6f712812534bb9c3153ab80721df6e3ae93d4657ce171"
+    },
+    "a002_a003_development_views": {
+      "path": "outputs/v11_cf05_e3_a002_a003_pool_views_v1_20260811/a002_a003_pool_view_report.json",
+      "sha256": "a97b4d7de6b2a0430fda881de258b5ca928149279645f828ebbda45c7a92f753"
+    },
+    "multitarget_mixed_pools": {
+      "path": "outputs/v11_cf05_e3_multitarget_mixed_opening_v1_20260810/multitarget_mixed_selected_pools.json",
+      "sha256": "32c09eee059d2c62b01fdfcedcfcb8f0d9a6183f63d4f079ed429d9502ce54c5"
+    }
+  }
+}

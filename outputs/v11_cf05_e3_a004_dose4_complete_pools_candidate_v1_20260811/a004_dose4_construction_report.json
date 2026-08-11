@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "V11-CF05-E3-A004-DOSE4-COMPLETE-POOLS-CANDIDATE-V1-20260811",
+  "status": "a004_dose4_development_pool_grid_complete",
+  "pool_count": 60,
+  "strict_a004_0_4_8_required_pool_count": 100,
+  "remaining_a004_dose8_pool_count": 40,
+  "relation_evidence_count": 8,
+  "legacy_anchor_count": 6,
+  "legacy_anchors_preserved": true,
+  "methods_changed": false,
+  "external_api_calls": 0,
+  "tool_calls_executed": 0,
+  "new_tool_identities_created": 0,
+  "independent_validation_split_accessed": false,
+  "confirmatory_inference_allowed": false,
+  "formal_pool_generation_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "next_gate": "source and validate four additional lexical and four additional functional-neighbor relations before constructing A004 dose-8 pools"
+}

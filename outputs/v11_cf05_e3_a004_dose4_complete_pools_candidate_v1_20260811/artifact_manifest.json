@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "V11-CF05-E3-A004-DOSE4-COMPLETE-POOLS-CANDIDATE-V1-20260811",
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "filename": "a004_dose4_config_snapshot.json",
+      "sha256": "53078b88c39e61d45722727fc33c844753c6fa6fa3d1711b035a94c49a7730ae",
+      "bytes": 3748
+    },
+    {
+      "filename": "a004_dose4_construction_report.json",
+      "sha256": "77f30dab3735be8fb4b4a58946f0276863a1bd902a87644c6343f0aceaf78b06",
+      "bytes": 855
+    },
+    {
+      "filename": "a004_dose4_controlled_pool_manifest.json",
+      "sha256": "e41f0012e39ce4a2d67b617cd8fc859de0079764029de1e3e68194e671fecf26",
+      "bytes": 123193
+    },
+    {
+      "filename": "a004_dose4_legacy_compatibility_report.json",
+      "sha256": "c23c43944cc58c13a0e6c5c47c9fdfceba622d2ed0ff9b7364d1c11d609ee933",
+      "bytes": 1872
+    },
+    {
+      "filename": "a004_dose4_pool_audit.json",
+      "sha256": "09503d3c517924e86c7acebd8ee6fbf8660a57802eebda526b0f520792618da3",
+      "bytes": 7780
+    },
+    {
+      "filename": "a004_dose4_pool_schema_registry.json",
+      "sha256": "309c6ed0f6dc50409fe48e39c94e5ff2dd1a7226ecb7857a43c4650452e5a06a",
+      "bytes": 283680
+    },
+    {
+      "filename": "a004_dose4_relation_evidence_snapshot.json",
+      "sha256": "f67ed191deb8249bda9a5553e3efed75e98143596ad97f19844bbc753529a207",
+      "bytes": 2258
+    }
+  ]
+}

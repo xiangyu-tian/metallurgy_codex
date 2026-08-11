@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "priority_rank": 1,
+      "target_tool_id": "A004",
+      "immediate_goal": "add four lexical and four functional neighbors for dose 8",
+      "required_action": "source and validate dose-8 relations without modifying the completed dose-4 grid",
+      "external_api_required": false
+    },
+    {
+      "priority_rank": 2,
+      "target_tool_id": "B019",
+      "immediate_goal": "add four functional neighbors for paired dose 4 before dose 8",
+      "required_action": "source contract-mismatch candidates with executable negative applicability evidence",
+      "external_api_required": false
+    },
+    {
+      "priority_rank": 3,
+      "target_tool_id": "A002",
+      "immediate_goal": "add one lexical and three functional neighbors for paired dose 4",
+      "required_action": "extend relation evidence without treating acceptable equivalent E3C002 as a distractor",
+      "external_api_required": false
+    },
+    {
+      "priority_rank": 4,
+      "target_tool_id": "A001",
+      "immediate_goal": "add four lexical and three functional neighbors for paired dose 4",
+      "required_action": "source independent conversion-related candidates and validate target/candidate boundary fixtures",
+      "external_api_required": false
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "V11-CF05-E3-A004-DOSE4-COMPLETE-POOLS-CANDIDATE-V1-20260811",
+  "all_pool_invariants_passed": true,
+  "pool_count": 60,
+  "legacy_anchor_check_count": 6,
+  "legacy_anchor_checks_passed": true,
+  "paired_dose4_neutral_bases_equal": true,
+  "nested_size_chains_checked": 15,
+  "checks": [
+    {
+      "pool_id": "A004-NONE_0-17-RA",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-50-RA",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-100-RA",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-120-RA",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-17-RA",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-50-RA",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-100-RA",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-120-RA",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-17-RA",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-50-RA",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-100-RA",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-120-RA",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-17-RB",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-50-RB",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-100-RB",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-120-RB",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-17-RB",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-50-RB",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-100-RB",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-120-RB",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-17-RB",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-50-RB",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-100-RB",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-120-RB",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-17-RC",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-50-RC",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-100-RC",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-120-RC",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-17-RC",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-50-RC",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-100-RC",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-120-RC",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-17-RC",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-50-RC",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-100-RC",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-120-RC",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-17-RD",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-50-RD",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-100-RD",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-120-RD",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-17-RD",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-50-RD",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-100-RD",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-120-RD",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-17-RD",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-50-RD",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-100-RD",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-120-RD",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-17-RE",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-50-RE",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-100-RE",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-NONE_0-120-RE",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-17-RE",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-50-RE",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-100-RE",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-LEXICAL_4-120-RE",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-17-RE",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-50-RE",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-100-RE",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    },
+    {
+      "pool_id": "A004-FUNCTIONAL_OVERLAP_4-120-RE",
+      "exact_size_target_dose_no_leakage_and_nested": true
+    }
+  ],
+  "external_api_calls": 0,
+  "new_tool_identities_created": 0,
+  "independent_validation_split_accessed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false
+}

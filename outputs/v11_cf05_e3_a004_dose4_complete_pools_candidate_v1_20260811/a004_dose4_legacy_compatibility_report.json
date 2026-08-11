@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "V11-CF05-E3-A004-DOSE4-COMPLETE-POOLS-CANDIDATE-V1-20260811",
+  "policy": "preserve_existing_a004_repeat_A_17_and_120_pool_orders_exactly",
+  "all_six_legacy_anchors_preserved": true,
+  "rows": [
+    {
+      "condition_id": "none_0",
+      "tool_pool_size": 17,
+      "legacy_pool_id": "A004-NONE_0-17",
+      "current_pool_id": "A004-NONE_0-17-RA",
+      "tool_order_exact_match": true,
+      "tool_order_sha256_exact_match": true
+    },
+    {
+      "condition_id": "none_0",
+      "tool_pool_size": 120,
+      "legacy_pool_id": "A004-NONE_0-120",
+      "current_pool_id": "A004-NONE_0-120-RA",
+      "tool_order_exact_match": true,
+      "tool_order_sha256_exact_match": true
+    },
+    {
+      "condition_id": "lexical_4",
+      "tool_pool_size": 17,
+      "legacy_pool_id": "A004-LEXICAL_4-17",
+      "current_pool_id": "A004-LEXICAL_4-17-RA",
+      "tool_order_exact_match": true,
+      "tool_order_sha256_exact_match": true
+    },
+    {
+      "condition_id": "lexical_4",
+      "tool_pool_size": 120,
+      "legacy_pool_id": "A004-LEXICAL_4-120",
+      "current_pool_id": "A004-LEXICAL_4-120-RA",
+      "tool_order_exact_match": true,
+      "tool_order_sha256_exact_match": true
+    },
+    {
+      "condition_id": "functional_overlap_4",
+      "tool_pool_size": 17,
+      "legacy_pool_id": "A004-CONTRACT_MISMATCH_4-17",
+      "current_pool_id": "A004-FUNCTIONAL_OVERLAP_4-17-RA",
+      "tool_order_exact_match": true,
+      "tool_order_sha256_exact_match": true
+    },
+    {
+      "condition_id": "functional_overlap_4",
+      "tool_pool_size": 120,
+      "legacy_pool_id": "A004-CONTRACT_MISMATCH_4-120",
+      "current_pool_id": "A004-FUNCTIONAL_OVERLAP_4-120-RA",
+      "tool_order_exact_match": true,
+      "tool_order_sha256_exact_match": true
+    }
+  ]
+}

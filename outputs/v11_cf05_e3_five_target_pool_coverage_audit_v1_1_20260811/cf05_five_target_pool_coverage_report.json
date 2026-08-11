@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF05-E3-FIVE-TARGET-POOL-COVERAGE-AUDIT-V1.1-20260811",
+  "status": "five_target_coverage_audited_incomplete",
+  "target_count": 5,
+  "strict_grid_complete_target_count": 1,
+  "strict_grid_complete_target_ids": [
+    "A003"
+  ],
+  "dose_4_neighbor_ready_target_ids": [
+    "A003",
+    "A004"
+  ],
+  "dose_8_neighbor_ready_target_ids": [
+    "A003"
+  ],
+  "existing_controlled_pool_record_count": 160,
+  "required_strict_pool_record_count": 500,
+  "missing_strict_pool_record_count": 340,
+  "neighbor_slot_gap_to_paired_4": 15,
+  "neighbor_slot_gap_to_paired_8": 47,
+  "task_gold_ready_target_count": 5,
+  "external_api_calls": 0,
+  "new_tool_identities_created": 0,
+  "independent_validation_split_accessed": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "conclusion": "A003 is the only target with the complete strict 0/4/8 grid. A004 has the complete 17/50/100/120 by A-E dose-0/4 development grid and still lacks dose-8 relation evidence and pools. A001, A002, and B019 require additional relation evidence before deterministic full pool construction.",
+  "next_gate": "freeze a staged relation-evidence expansion plan; do not construct formal pools from weak or invented neighbors"
+}
