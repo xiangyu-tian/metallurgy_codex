@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "V11-CF05-E3-FIVE-TARGET-POOL-COVERAGE-AUDIT-V1-20260811",
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "filename": "cf05_five_target_pool_coverage_config_snapshot.json",
+      "sha256": "8d53144d312b84b07049c259cda6d4bde8c24744b421733edb42818cbbe362df",
+      "bytes": 3343
+    },
+    {
+      "filename": "cf05_five_target_pool_coverage_matrix.csv",
+      "sha256": "6d90bb8f65dd3bbcd36d9d672e777c574b1dd0ee43fb931c0d1b9dc536b03125",
+      "bytes": 809
+    },
+    {
+      "filename": "cf05_five_target_pool_coverage_matrix.json",
+      "sha256": "37389c711501ebbc073d3cc7643adaf20714f7ec811cda55b8f69d0081ce3a5e",
+      "bytes": 3756
+    },
+    {
+      "filename": "cf05_five_target_pool_coverage_report.json",
+      "sha256": "1bd5a0111a768cd4f714f1884919b0ef2d5a777867c62fb2170ef89d0e7c6f1d",
+      "bytes": 1270
+    },
+    {
+      "filename": "cf05_relation_expansion_queue.json",
+      "sha256": "b9ef4139645d442e42a7171a7677f779bfccb3b7a890f2c33e7b4b4fa81e8908",
+      "bytes": 1424
+    }
+  ]
+}
