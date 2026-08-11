@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-R11-OPENING-V1-20260811",
+  "source_opening_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-R1-OPENING-V1-20260811",
+  "correction_axis": "explicit_thinking_disable_only",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "thinking": {
+    "type": "disabled"
+  },
+  "max_tokens": 256,
+  "task_count": 16,
+  "view_count": 4,
+  "scheduled_cell_count": 64,
+  "request_attempts_per_cell": 1,
+  "source_r1_responses_may_be_reused": false,
+  "automatic_retry_allowed": false,
+  "tool_execution_allowed": false,
+  "external_api_calls_authorized": false,
+  "gold_visible_to_router": false,
+  "confirmatory_inference_allowed": false,
+  "independent_validation_split_access_allowed": false,
+  "core_frozen": false,
+  "execution_authorization_file": "a002_a003_full_schema_r11_execution_authorization_v1.json",
+  "bindings": {
+    "r1_request_payloads": {
+      "path": "outputs/v11_cf05_e3_a002_a003_full_schema_r1_opening_v1_20260811/a002_a003_full_schema_r1_request_payloads.json",
+      "sha256": "2bd5d607c488f5543c4e6404214f09048c56b3f1cf5ab7502fb0da825a3eb60e"
+    },
+    "r1_run_cells": {
+      "path": "outputs/v11_cf05_e3_a002_a003_full_schema_r1_opening_v1_20260811/a002_a003_full_schema_r1_run_cells.json",
+      "sha256": "342677344908f97bc42d683ef5bd51c39815bbc87607ae926879c20377c147ab"
+    },
+    "r1_prompt": {
+      "path": "outputs/v11_cf05_e3_a002_a003_full_schema_r1_opening_v1_20260811/a002_a003_full_schema_r1_prompt_snapshot.json",
+      "sha256": "6ece25e251b4c0d6e43bf45c6962aa1f97bf3ec954c4a04f2d3ae8e9155f156a"
+    },
+    "r1_analysis_report": {
+      "path": "outputs/v11_cf05_e3_a002_a003_full_schema_r1_analysis_v1_20260811/a002_a003_full_schema_r1_analysis_report.json",
+      "sha256": "8f3742fe99cbd545f2f2abf7e5f24d8f85287416bbd6fa71b177f004add0bbf6"
+    }
+  }
+}

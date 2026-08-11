@@ -1,0 +1,965 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "bc592e452883989782f50a2e2453225b8d6de59523a8553b4629ce9c384507ef",
+      "r11_payload_sha256": "e091e59587448cffbfdb66a0943c5623a974958432bcd39bfa5106f8433c5136",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "3ee7e7132e9751cf4a046ca5e448419b437988f6d67e83e6beddb561fa85a056",
+      "r11_payload_sha256": "c7e890c8b31c6c10674b32a78383138d7a18f26fbe977271587047f902564463",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "cecfaaad5c7c7baf32353e2d63cddbe1735131cfade0e34d7ff955ecb4cfa41a",
+      "r11_payload_sha256": "1cc1d847f6ece18b1ba0df9af0c208ac69e7a9df762b82c1f8a8a70509e32eac",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "8e309823ce3ca1f5c0429dc0a677d9acf24a0da73205eb07957a740b7887e124",
+      "r11_payload_sha256": "c28887f68a070c805bb1dddc1633a8558dcc9958142d026cf5b07f7af5b01eb5",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "deac31d8773eef694ca0fa7972b874d9f4f02e772638b2311475ea0be5f8239c",
+      "r11_payload_sha256": "c40b48448c1fe3e9aaf81ada34902b4277b1fd37580aecb53054f7f56dd7cbb7",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "4e0e40af900bd7d8c6f42111d82c536933dcef4747b7ec589a3f5af8626d39ac",
+      "r11_payload_sha256": "51b2d5a89fcaa7822b9c7b5d5698bcb5daf14aac0bb7261b1c727a6340299432",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "23df11e8f130a063b9815d838ba22b915f35bc02b41ceae203fed8ff076d8c45",
+      "r11_payload_sha256": "1d2ee03a92d4346bed5380909fc060e21594bcfa7581ed84896b6f89ff9704b0",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FE2O3-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FE2O3-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "0fd7348e95c140b11f26f159ac5dc823bf2828b45813f7cd471229c679bfb62a",
+      "r11_payload_sha256": "d5413a50bcc298eabe02886ad98e231e244935588eb4487be61568917a69d438",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "e2224a4fadb57c07d19a0ec6d94fdf9a1b5be03b978fd33969fea03b3e4a8932",
+      "r11_payload_sha256": "80403800e387efd74cd80d0e513047109010501de41af8e84cfa86c1ff6eda62",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "62b7415d8437f04636c8f822508961000c4aba80af22a43bd92d083b8b1d816b",
+      "r11_payload_sha256": "9fcc19cd8b36bf536fc57e01c93c5df28c88ceba5c7cff2a7b34cfc415137628",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "ae3a8136ee2137cb85cc94fba42ea2bb68500ea63f8e8309a74fe141aa73cb03",
+      "r11_payload_sha256": "abf220eef630fd2e89dd02114fe4f9edc2e0bed314375006d0a1044602cab216",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "7c5e40e2ad2ccc2d4c6f98f48398f488c304099cec76725de0bbf153c3d7afcc",
+      "r11_payload_sha256": "83dc742d525f78a240782818bb9bb150785060cbac3e0e1ad4c3a54dbd2cc5f6",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "4894423ff7203164208281ee070e477c82a6d8ab51dd48de51408f16c8520a14",
+      "r11_payload_sha256": "09a09280fe6b91dcb2636f1b7ad81701b4472947da7db801cdb59ad00d1c86f2",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "50f2a2644ff533c6aa811f8277db5ed529b111f88ad7574e47663872efa92b8c",
+      "r11_payload_sha256": "37a6905917bd7d891dc2c3a82bb0cc15c6adc2137248cc73b69e6138e62c5171",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "8f979d96e7a4b828f0381f5fc32dfa75131a10a00912f12ca6118f47b1650d98",
+      "r11_payload_sha256": "f295500cecccb750fe743c5856baa434708c323963fe1ae5c784cd1c27b53d39",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-H2SO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-H2SO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "04bab8032d157d90f7af3b3a04bf652a5ffde6e3c5f217bd173b813fbad69a7c",
+      "r11_payload_sha256": "c1c01b540629402fc989208dcddb562d26101b777e3f0bd0f3901ac12b26877c",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "a28d4b9b32b7dc406cd52accbea866909637826e5c936a88eb25b531d3156cb7",
+      "r11_payload_sha256": "d6c34ddc5451e133c293fc5c83299b6d854d2272cdbb1dc22b603eb22c6377e7",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "cf6fdafd887ee850e008ac45f7ad3f17ac6106bc53ad26ee166eb8dbeef99f5d",
+      "r11_payload_sha256": "449b8022dffa100d426970d6e2b6aaffe18427143b8588b0f2b10ba97c806214",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "cc40586091dd2f9a7f7c4579ae09d00f016126921fc58cf86ecab223bdc720fe",
+      "r11_payload_sha256": "4c832208fbc5ebb46f8e9fdf1c0e222fa3e434822ed0601f9c9b69d0c9bf732f",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "3f19630d1ca00da32fc760b3df72fef30fe2d6323e02e84f50f82a407d32dbb7",
+      "r11_payload_sha256": "f8395c0f09bbce3297b0de95d92ea9aef266649971e295e04c8ee30e68f83e5d",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "3f02f7ff5ee0a7c1b69131d2e1e816c14f35cfa1eddeb8536b3ff94fd70134c6",
+      "r11_payload_sha256": "1ab6256dae29650b0ee766dc116cb68ee7ca97fa8fc9feb42e596ded154a323d",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "1d8cc3af945c2b192e49efbe75efa3226835d3e2857df808c719dd1d5596ab94",
+      "r11_payload_sha256": "d336850190282702759153de890688fe0042adc5510617f1650f2f1264591297",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "36c9893d51f7600fd5bce4ed90ac0d933ba9a78437298bf0c29e0a11fdcaa274",
+      "r11_payload_sha256": "d97fade4178cc88d47cd30028dca1691ffa840cbc889c575149f3e3c34d423bc",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CACO3-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CACO3-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "d7bdcfd8981a0a62ff3940b9f96ce8c2ff4a72454a831969b305a02b121ad19b",
+      "r11_payload_sha256": "e52670901b3c6dfda56d22b6a6e0af531269868bff6563516edde3b0218e33e5",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "3c9e4b844af01b904fa37c4cf081fe7d1123893fa00a4205175a48f080090e48",
+      "r11_payload_sha256": "41426596174d8c29e72520c7e436676d5ba8b2659c9d5d3486f97686b11dcf8b",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "45898c4f5b623e7b5412d4371ba1d492c1059d614156b1bc6ca3f0baf88fb927",
+      "r11_payload_sha256": "6d50a9fd255fa62fe6033acf6e655ec53566cdb68f24e44ea424e5dd22e6ff89",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "215c4314f08450afe334caadb7f1706a4ac3a02df90046c669a8c493ea81a49d",
+      "r11_payload_sha256": "521b42f4da17e66971cd4d7cade7b3820bbf353b286fd863986f00604766612c",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "35c5789f0e500944399199379a4afc2e41b778a01f57885afcb3664fca1b89f1",
+      "r11_payload_sha256": "2aa54d4ac2cde27f751136e041146f41c2e6f0a7aaaec5a9e81e7fc048166934",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "9a22b89b2674110b1c26f279a146add0e809d2b16bae0a96c0abd901358793e3",
+      "r11_payload_sha256": "36115fa40659665601b07302e3eb02dabb3331908ad0b65f3ac6b32becda0a6b",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "0049e632f6795b3b6e889ee3636d8f7776af0f40aa4db09e80650b3783d8578d",
+      "r11_payload_sha256": "632a602d29a938bdfecba0c7b1199f82f5541c7e4eb9907a5581d0a80e279a4e",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "430c7effb08fbfa7343fb5bfe8410ba52828258a62a1fe22bb183c03af8193a0",
+      "r11_payload_sha256": "62690d0bacf0b1e6d346109a9648ec269b2b1ab7df41b5feb67a9eff189e0b2d",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CUSO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CUSO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "bbc5000ba1517a1d32cd194a9a4a940ab177859376938e3d2740e9197ea0c1bc",
+      "r11_payload_sha256": "b369b502ef87c4e8eecf08bd45051d734c142dc35d2712bd04ed370a3bc7faa4",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "cdb85458f7f1adbe290eafd88cef8f8242de09f93fd390eb51df87d0bf3a60b9",
+      "r11_payload_sha256": "b3bfae3abeae1ea9e5af1a90a4a2f8177211346ec6ef06d44960899d3f9fca9e",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "2d04305d5fc81bc4dc311b546d8bc68473c74559c1b7fa0fdbb54fbb180c2a21",
+      "r11_payload_sha256": "2c8abf2c3c828ed5cd3f70cedb8ec4b98dd66a37a9a22e6eb859be609915fd36",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "40a947ffc9509827710a99d636ef0a6bc96ecb73c042490602de12fbafb22dba",
+      "r11_payload_sha256": "027275e3cf704023bf5f18908e8057076102de557ce9ea01dac2bd26d8b2c4cd",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "11c67f14917be83eff97e6e76bfe82437fa1521ba02b4e10e1ce2fa75379656b",
+      "r11_payload_sha256": "a5de9465dc5b769c959ffa202142d5de9ce7740cd5dd5bbca0a387ae044f1c05",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "1d9bfae51d29e06383a2e60a84eee40d0f464cce08a32e9dcbe6cbb10812af94",
+      "r11_payload_sha256": "f0c6ff2d740cebd0fdac082768488d47a0ad8d4482f1f36cd5d7d6eaebfdd477",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "1951927c3cc560cfcd36369e18eae279026fc7b5f58524c30653eaaf9cad7a90",
+      "r11_payload_sha256": "3581c89b4ba63831167af6c17bb1e949d1b7eb213579c56add77fab94721e934",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "da37752a0b663c12bcd090e308c7bc063254788ca6167177044671d972d6b52f",
+      "r11_payload_sha256": "744903223297245b54b11a49c8edcb8406e4e974ef99e62eca5a5c326e5477ed",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-NH4_2SO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "d6b93c15ab4595fc1ccf9ba81a082fd56bb35b900ed85cccfe0438634e4a1d7c",
+      "r11_payload_sha256": "1b4e009513bd029ec1b903c06ea549ccd4c215d5836f8d07aac762c25cca731c",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "000c6857b279b96941e05e5219325c2d72d6ef9aaeb4406e972f56b8f36ec518",
+      "r11_payload_sha256": "4e150d3abc3410d8e57a60adb8ffe3445e58b57c6f1ff06dc4663390800e7da1",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "16a8b91be4c452ee589d9eb43438bebd8e2f4b82c60b7b94a5014922284cc4ec",
+      "r11_payload_sha256": "b5c6951b2a64fabe97eb7a7469b215db3c7729e38938fc1f7a4e929a2158b8a6",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "c72f4b984462959b801d5bbb28ca49dc7f6100fff890c77a96a38c6414a83751",
+      "r11_payload_sha256": "1b3228326c723fa39a70d597de7fc4740aa8620aa2e469664037d3778c11cd6c",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "c78690647b8340af0bd1714e8ee55c269de5c7b1526376b3cc63747d99f8f7a4",
+      "r11_payload_sha256": "96b48f91169bb0886b055869cb522e1e4727131ae7e1705477a5d1640b0a168a",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "bb5e8ff01cf021207bbfef2a77e93a64c1bb24221d85a00e2d4707c2b07f73f2",
+      "r11_payload_sha256": "db50e5291732f811ab88fc535affae9b9e3cc6487c9759118a7a30d1470037b3",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "4f8218f2b57e896b4304ac2ea52daa1e3dc7828efc844a61a854b5059a52b403",
+      "r11_payload_sha256": "65a1fdc9ff83fddd9196653d9383567d932fd13e51e91e6ca0894463001fdc53",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "3bf0395b028ab3b5b1e41cfa55dbb79fa2e917ef842a4e6cce32bc00963397fe",
+      "r11_payload_sha256": "8143fe62b9859d2637b9e08ac18ea48a6722c2cc039f003f35adc4bac8e00ec3",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CA_OH_2-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "23f63cb8231b0de08e91da4b1b060d8617db2bde75e58eae265424b421c40858",
+      "r11_payload_sha256": "bea23a1d867f059367f4e64ddd99e32b817349172e87bf8219b189db5960ce27",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "752cacd5c4260bf5c16d4ca3df6ac7461666ac93a5a0a963a1514495cc00069e",
+      "r11_payload_sha256": "328bd640da73145742d0a6c0620792b83b661a2bc388a4f5cc0b46bc79f6e3a3",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "d608428e7d7c67bfe01a9a76006bf76dde11ee833ae97b13cbc129a5c7c40dc1",
+      "r11_payload_sha256": "e02be3a28105746acd784a03f59d11a6455bb4aa19f0b1afb1091092d5786b34",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "5495d82d48cecacd9a3f37138c9e85f66daad6a4a6ead83abbbff95737a82c11",
+      "r11_payload_sha256": "6427eaf7f477eb0e551e8106453617898f5ca3c9dcfd43257e67c186a7bc4b1e",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "88e1c85bb5bac4741c8822a58cc7bb72fa033a4f10e5cb1c575c321309ac2049",
+      "r11_payload_sha256": "5ad227a38c8eadbf50b27211212313ef357f5651762325e7d7f23ea2e7a50694",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "889c194db912c96cdc174614f83dc8486cfed178efcd37bbc941811ffb97e854",
+      "r11_payload_sha256": "e56da84b8d91a1e0cfe84c38ee6e298939b0b87201f9fd9b919d35408ddb6d96",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "44dfa557495c856647665e909a8d01e402641a456b482b23170ce8369e412f56",
+      "r11_payload_sha256": "9e907199c325b2965e9696bfe4ebf59e4c20e98388ce31587ff0d0eecf134795",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "47a2635186921ffadd16ede85513384555bb7ea04215efc1d1f4b700dfac288a",
+      "r11_payload_sha256": "16c187e8f22e7b49c29db526999150954277f5a96c8ce0a72168620739e2b7fd",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-CU_NH3_4_SO4-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "2cb36c5298007719ca9249a643ee175aae6ab20ec6f427eab9149e780dc0b5df",
+      "r11_payload_sha256": "31f8bad3af031ef36d9a11751ead7fb438fc8baf26f5a7584a788fa9afbd6c7d",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-ELEMENTS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "4fb845f3ec45688cf093bd0101112c76544c212ed52f034dbf6a07384cb75e8f",
+      "r11_payload_sha256": "e846fd290a4625d40d6134342b3a95588273e38b80f6ec1eb2a658a5cdd86421",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-ELEMENTS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "bb94c726570dbc670ff4ef24cbabd40eaccfdcf34cad124fafe575c3641c0590",
+      "r11_payload_sha256": "346a395bf77a60fbb2e7cb5e3b41e7b44168f8fd8efd5be3cfecb438df2ea251",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-ELEMENTS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "46825850ec002b254daedc8fab2709d06a6f874ead1bd9f573d08eecc8fa1d36",
+      "r11_payload_sha256": "713cbbbb75e7d1418d9465c1a0e7de8a47b7946037b56e64b004c76f8b8b19e5",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-ELEMENTS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "711a67304ca5f2b8217005857f7ece3fe846a4230c0433e0e0a89e4cd1c8d176",
+      "r11_payload_sha256": "83c12695b753483d788c84b88643d31a1a695ceebd58ffeae564c06e91baea7f",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-MOLAR-MASS-A002-A003-17-A-LEXICAL8-V1",
+      "source_payload_sha256": "d5143b2191ef490e619daadec323fafb4b6dd3a54fe356aead05468d5fc92e79",
+      "r11_payload_sha256": "620f66046a51270a5944a142db202309e2a8f5d985afaf6ae6319d129f253a1d",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-MOLAR-MASS-A002-A003-17-B-LEXICAL8-V1",
+      "source_payload_sha256": "8d3fe790c5288ed184a8211bf32630b2794957339682d477d3a7dab0c9c89395",
+      "r11_payload_sha256": "30c56290d6ff5e3c37253fcb44bd3b769f2a834f84f275bd326abb8f56336d06",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-MOLAR-MASS-A002-A003-120-A-LEXICAL8-V1",
+      "source_payload_sha256": "16a865339a878c0d831b1b6558b802c5496f90615343bd97f787f3b99549b2dd",
+      "r11_payload_sha256": "b725131b2412afe57bc461cba83d714ce810bccd357f609bda1f8d7b0aeedd85",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    },
+    {
+      "cell_id": "A002-A003-FS-R11-E3-MP-FES-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_r1_cell_id": "A002-A003-FS-R1-E3-MP-FES-MOLAR-MASS-A002-A003-120-B-LEXICAL8-V1",
+      "source_payload_sha256": "b4b5b1e1dc13914866d4e00fb84f89c7369dc0e74b23cf3db51778e9533caa09",
+      "r11_payload_sha256": "21a85f16bcf9a0a3636e96a56f5d5e666b6cb00f2aea2ff4ed28ac86555bbadc",
+      "changed_top_level_keys": [
+        "thinking"
+      ],
+      "source_max_tokens": 256,
+      "r11_max_tokens": 256,
+      "thinking": {
+        "type": "disabled"
+      },
+      "single_axis_check_passed": true
+    }
+  ]
+}

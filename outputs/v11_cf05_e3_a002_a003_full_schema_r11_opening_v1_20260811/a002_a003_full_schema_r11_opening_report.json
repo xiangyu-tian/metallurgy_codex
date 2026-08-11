@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "opening_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-R11-OPENING-V1-20260811",
+  "source_opening_id": "V11-CF05-E3-A002-A003-FULL-SCHEMA-R1-OPENING-V1-20260811",
+  "status": "transport_corrected_execution_ready_but_unauthorized",
+  "task_count": 16,
+  "view_count": 4,
+  "scheduled_cell_count": 64,
+  "correction_axis": "explicit_thinking_disable_only",
+  "single_axis_audit_passed_count": 64,
+  "explicit_thinking_disabled_count": 64,
+  "max_tokens_unchanged_count": 64,
+  "request_payloads_materialized": true,
+  "source_r1_responses_reused": false,
+  "external_api_calls": 0,
+  "tool_execution_allowed": false,
+  "external_api_execution_authorized": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "next_gate": "obtain separate explicit authorization for the exact 64 R1.1 requests; execute each once without retry or tool execution"
+}
