@@ -1,0 +1,485 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "full_schema",
+      "tool_pool_size": 17,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "overall_composition": 0.4,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "fraction",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "lexical_top5",
+      "tool_pool_size": 17,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "overall_composition": 0.4,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "fraction",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "dense_top5",
+      "tool_pool_size": 17,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "overall_composition": 0.4,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "fraction",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "hierarchical",
+      "tool_pool_size": 17,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "overall_composition": 0.4,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "fraction",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "full_schema",
+      "tool_pool_size": 120,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "overall_composition": 0.4,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "fraction",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "lexical_top5",
+      "tool_pool_size": 120,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "overall_composition": 0.4,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "fraction",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "dense_top5",
+      "tool_pool_size": 120,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "overall_composition": 0.4,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "fraction",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-001-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-B019-001",
+      "method": "hierarchical",
+      "tool_pool_size": 120,
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "overall_composition": 0.4,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "fraction",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-17-FULL_SCHEMA-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "full_schema",
+      "tool_pool_size": 17,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "overall_composition": 40.0,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "percent",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-17-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "lexical_top5",
+      "tool_pool_size": 17,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "overall_composition": 40.0,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "percent",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-17-DENSE_TOP5-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "dense_top5",
+      "tool_pool_size": 17,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "overall_composition": 40.0,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "percent",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-17-HIERARCHICAL-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "hierarchical",
+      "tool_pool_size": 17,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "overall_composition": 40.0,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "percent",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-120-FULL_SCHEMA-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "full_schema",
+      "tool_pool_size": 120,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "overall_composition": 40.0,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "percent",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-120-LEXICAL_TOP5-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "lexical_top5",
+      "tool_pool_size": 120,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "overall_composition": 40.0,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "percent",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-120-DENSE_TOP5-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "dense_top5",
+      "tool_pool_size": 120,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "overall_composition": 40.0,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "percent",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    },
+    {
+      "cell_id": "MT-MIX-E1B2-B019-002-120-HIERARCHICAL-R1",
+      "task_id": "E1B2-B019-002",
+      "method": "hierarchical",
+      "tool_pool_size": 120,
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "success": true,
+      "error_code": null,
+      "result": {
+        "phase1_fraction": 0.6,
+        "phase2_fraction": 0.4,
+        "phase1_composition": 20.0,
+        "phase2_composition": 70.0,
+        "overall_composition": 40.0,
+        "conservation_residual": 0.0,
+        "conservation_passed": true,
+        "composition_basis": "percent",
+        "component": null,
+        "component_grounding_status": "unspecified",
+        "method": "杠杆规则 (Lever Rule)"
+      },
+      "numeric_invariants_passed": true,
+      "component_grounding_passed": true,
+      "passed": true
+    }
+  ]
+}

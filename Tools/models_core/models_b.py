@@ -708,8 +708,13 @@ class B019_LeverRule(BaseModelTool):
                 "auto 仅为历史调用兼容，确认性实验必须显式指定"
             ),
         ),
-        InputField("component", "组元", type="string", required=False, default="B",
-                    description="组元名称"),
+        InputField(
+            "component",
+            "组元",
+            type="string",
+            required=False,
+            description="组元名称；省略表示未指定，不隐式假定为 B",
+        ),
     ]
 
     output_fields = [
@@ -774,7 +779,10 @@ class B019_LeverRule(BaseModelTool):
                 "conservation_residual": round(residual, 10),
                 "conservation_passed": residual < 1e-8,
                 "composition_basis": params.get("composition_basis", "auto"),
-                "component": params.get("component", "B"),
+                "component": params.get("component"),
+                "component_grounding_status": (
+                    "explicit" if params.get("component") not in (None, "") else "unspecified"
+                ),
                 "method": "杠杆规则 (Lever Rule)",
             },
         )

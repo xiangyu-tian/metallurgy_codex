@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "validation_id": "V11-CF05-E3-B019-RUNTIME-REMEDIATION-V1-20260811",
+  "validation_status": "passed",
+  "runtime_version": "1.0.0",
+  "component_schema_default_absent": true,
+  "replay_cell_count": 16,
+  "replay_passed_count": 16,
+  "implicit_component_output_count": 0,
+  "unspecified_component_output_count": 16,
+  "boundary_case_count": 4,
+  "boundary_passed_count": 4,
+  "local_tool_calls_executed": 20,
+  "external_api_calls": 0,
+  "formal_catalog_mutated": false,
+  "confirmatory_inference_allowed": false,
+  "cf05_status": "in_progress",
+  "core_frozen": false,
+  "interpretation": "The runtime no longer invents component B when the request omits a component; the strict formal overlay still requires an explicit fraction or percent basis."
+}

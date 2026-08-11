@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "validation_id": "V11-CF05-E3-B019-RUNTIME-REMEDIATION-V1-20260811",
+  "artifact_count": 4,
+  "artifacts": [
+    {
+      "filename": "b019_runtime_remediation_boundary_results.json",
+      "sha256": "5e80e2d4519d0d89cf6adec139355075076e52ef325b2602b77b5b65e8f7b126",
+      "bytes": 1533
+    },
+    {
+      "filename": "b019_runtime_remediation_config_snapshot.json",
+      "sha256": "8ed322b446302fa6f1f7612b40cd753b07e3abc33bc00eed016cd49ded72b551",
+      "bytes": 1259
+    },
+    {
+      "filename": "b019_runtime_remediation_replay.json",
+      "sha256": "fafe96217bacfca1aaf08ee164b8ce13f038344e3e74c25c94f715d57145230e",
+      "bytes": 15467
+    },
+    {
+      "filename": "b019_runtime_remediation_report.json",
+      "sha256": "fa86e6725aa4ad1a23efeed209268a4739a33c5b78f8c82428bde22a8530a170",
+      "bytes": 802
+    }
+  ]
+}

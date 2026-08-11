@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "rows": [
+    {
+      "case_id": "B019-RUNTIME-OMITTED-COMPONENT",
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "expected_success": true,
+      "observed_success": true,
+      "error_code": null,
+      "passed": true
+    },
+    {
+      "case_id": "B019-RUNTIME-EXPLICIT-COMPONENT",
+      "arguments": {
+        "overall_composition": 0.4,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction",
+        "component": "Fe"
+      },
+      "expected_success": true,
+      "observed_success": true,
+      "error_code": null,
+      "passed": true
+    },
+    {
+      "case_id": "B019-RUNTIME-PERCENT",
+      "arguments": {
+        "overall_composition": 40,
+        "phase1_composition": 20,
+        "phase2_composition": 70,
+        "composition_basis": "percent"
+      },
+      "expected_success": true,
+      "observed_success": true,
+      "error_code": null,
+      "passed": true
+    },
+    {
+      "case_id": "B019-RUNTIME-OUTSIDE-TIELINE",
+      "arguments": {
+        "overall_composition": 0.9,
+        "phase1_composition": 0.2,
+        "phase2_composition": 0.7,
+        "composition_basis": "fraction"
+      },
+      "expected_success": false,
+      "observed_success": false,
+      "error_code": "OUT_OF_DOMAIN",
+      "passed": true
+    }
+  ]
+}
